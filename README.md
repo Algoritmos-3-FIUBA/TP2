@@ -10,7 +10,7 @@ Verificamos que se hayan instalado correctamente:
 
 ```console
 $ javac -version
-javac 1.8.0_181
+javac 11.0.7
 $ mvn --version
 Apache Maven 3.6.0
 $ git --version
