@@ -6,4 +6,5 @@ public class Respuesta {
     public void responderPregunta(Opcion opcion){
         return(puntosRespuesta);
     }
+
 }

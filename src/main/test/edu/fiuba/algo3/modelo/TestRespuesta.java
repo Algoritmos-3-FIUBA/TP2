@@ -5,6 +5,7 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class TestRespuesta {
- //A implementar
+@Test
+public void prueba(){
+    //A implementar
 }
