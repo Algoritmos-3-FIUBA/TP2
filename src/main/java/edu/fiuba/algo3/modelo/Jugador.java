@@ -17,6 +17,10 @@ public class Jugador {
 
 //    }
 
+    public void sumarPuntos(int puntosRecibidos){
+        this.puntos += puntosRecibidos;
+    }
+
     public String getNombre() {
         return nombre;
     }

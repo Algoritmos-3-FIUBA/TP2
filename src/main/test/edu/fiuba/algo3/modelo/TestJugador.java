@@ -13,8 +13,20 @@ public class TestJugador {
     }
     @Test
     public void CreoJugadorLlamadoPedroNoTienePuntosInicialesObtengo0Puntos(){
-        Jugador jugadorPedro = new Jugador("Pedro");
-        assertEquals(jugadorPedro.getPuntos(), 0);
+        Jugador jugador2 = new Jugador("Pedro");
+        assertEquals(jugador2.getPuntos(), 0);
+    }
+    @Test
+    public void CreoJugadorLlamadoPedroNoTienePuntosInicialesLeSumo20PuntosObtengo20Puntos(){
+        Jugador jugador3 = new Jugador("Lionel");
+        jugador3.sumarPuntos(20);
+        assertEquals(jugador3.getPuntos(), 20);
+    }
+    @Test
+    public void CreoJugadorLlamadoPedroNoTienePuntosInicialesLeSumo0PuntosObtengo0Puntos(){
+        Jugador jugador3 = new Jugador("Lionel");
+        jugador3.sumarPuntos(0);
+        assertEquals(jugador3.getPuntos(), 0);
     }
 
 }
