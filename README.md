@@ -8,7 +8,7 @@
 
 Trabajo Práctico número 2 de la materia Algoritmos y Programación III de FIUBA
 
-## Grupo {N}
+## Grupo 3
 
 * **Giardina, Fernando** - [FerGiardina](https://github.com/FerGiardina)
 * **Panaccio, Guido** - [Guido-Panaccio](https://github.com/Guido-Panaccio)
@@ -16,7 +16,7 @@ Trabajo Práctico número 2 de la materia Algoritmos y Programación III de FIUB
 * **Stenghele, Juan** - [JuanStenghele](https://github.com/JuanStenghele)
 * **Waisten, Lucas** - [LucasWaisten](https://github.com/LucasWaisten)
 
-Corrector: **{Pablo Suárez}**
+Corrector: **Pablo Suárez**
 
 ### Pre-requisitos
 
