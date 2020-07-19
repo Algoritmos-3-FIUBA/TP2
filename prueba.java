@@ -1,4 +1,0 @@
-TESTING
-H
-F
-A
