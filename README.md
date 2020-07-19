@@ -8,7 +8,7 @@
 
 Trabajo Práctico número 2 de la materia Algoritmos y Programación III de FIUBA
 
-## Grupo 3
+## Grupo 4
 
 * **Giardina, Fernando** - [FerGiardina](https://github.com/FerGiardina)
 * **Panaccio, Guido** - [Guido-Panaccio](https://github.com/Guido-Panaccio)
