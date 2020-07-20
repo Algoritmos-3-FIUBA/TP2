@@ -1,5 +1,6 @@
 package edu.fiuba.algo3.modelo;
 
-public interface Opcion {
+public abstract class Opcion {
 
+    public abstract int puntosASumar();
 }

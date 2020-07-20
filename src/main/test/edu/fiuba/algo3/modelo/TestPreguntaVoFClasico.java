@@ -1,62 +1,56 @@
 package edu.fiuba.algo3.modelo;
 
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
+import java.util.ArrayList;
+
 public class TestPreguntaVoFClasico {
+
     @Test
     public void CreoPreguntaVoFClasicoIndicoRespuestaCorrecta(){
+
         Jugador lucas = new Jugador("Lucas");
 
-        Pregunta pregunta = new Pregunta("¿1+1 no es 3?",true);
+        PreguntaVoF pregunta = new PreguntaVoF("¿1+1 no es 3?");
 
-        Opcion opcion = new Opcion(false);
-       // Opcion opcionCorrecta = pregunta.getOpcionCorrecta();
+        pregunta.verdaderoOpcionCorrecta();
+        // Opcion 1 -> Verdadero -> Opcion Correcta
+        // Opcion 2 -> Falso
 
-        Respuesta respuestaJugador1 = lucas.responderPregunta(pregunta,opcion);
+        ArrayList respuestasDeJugadores = new ArrayList();
 
-        ArrayList listasRespuestas = new ArrayList();
+        //Respuesta de Jugadores -> Lista con los jugadores que han respondido.
+        respuestasDeJugadores.add(lucas.responderPregunta(2));
 
-        listasRespuestas.add( respuestaJugador1 );
+        pregunta.evaluarRespuestasFinales(respuestasDeJugadores);
 
-        pregunta.recibirRespuestas(listasRespuestas);
-
-        assertEquals(lucas.getPuntos,0);
+        Assertions.assertEquals(lucas.getPuntos(),0);
     }
 
     @Test
-    public void CreoPreguntaVoFClasicoIndicoRespuestaCorrecta(){
-        Jugador jugador1 = new Jugador("Pepito");
-        Jugador jugador2 = new Jugador("Fonso");
+    public void CreoPreguntaVoFClasicoIndicoRespuestaCorrectayAsignoLosPuntos(){
 
-        PreguntaVoFClasico pregunta = new PreguntaVoFClasicoConVCorrecto("¿El radio de la tierra es 2m?");
+        Jugador lucas = new Jugador("Lucas");
+        Jugador mati = new Jugador("Mati");
 
-        //Solo para probar (luego lo enviará el panel)
-        Opcion opcion1 = pregunta.getOpcionVerdadera();
-        Opcion opcion2 = pregunta.getOpcionFalsa();
-        //
+        PreguntaVoF pregunta = new PreguntaVoF("¿2+2 no es 3?");
 
-        Opcion opcionCorrecta = pregunta.getOpcionCorrecta();
+        pregunta.falsoOpcionCorrecta();
+        // Opcion 1 -> Verdadero
+        // Opcion 2 -> Falso    -> Opcion Correcta
 
-        Respuesta respuestaJugador1 = jugador1.responderPregunta(pregunta,opcion1);
-        Respuesta respuestaJugador2 = jugador2.responderPregunta(pregunta,opcion2);
+        ArrayList respuestasDeJugadores = new ArrayList();
 
-        ArrayList listasRespuestas = new ArrayList();
+        //Respuesta de Jugadores -> Lista con los jugadores que han respondido.
+        respuestasDeJugadores.add(lucas.responderPregunta(1));
+        respuestasDeJugadores.add(mati.responderPregunta(2));
 
-        listasRespuestas.add( respuestaJugador1 );
+        pregunta.evaluarRespuestasFinales(respuestasDeJugadores);
 
-        pregunta.recibirRespuestas(listasRespuestas);
+        Assertions.assertEquals(lucas.getPuntos(),0);
+        Assertions.assertEquals(mati.getPuntos(),1);
 
-
-        /*Respuesta respuestaJugador1 = jugador1.responder(pregunta, opcion1);
-        Respuesta respuestaJugador2 = jugador2.responder(pregunta, opcion2);
-
-        ArrayList<Respuesta> listaRespuestas =  new ArrayList<>();
-        listaRespuestas.add(respuestaJugador1);
-        listaRespuestas.add(respuestaJugador2);
-        pregunta.enviarRespuesta(listaRespuestas);*/
-
-        assertEquals(1, jugador1.getCantidadPuntos());
-        assertEquals(0, jugador2.getCantidadPuntos());
 
     }
 }
