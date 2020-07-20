@@ -1,12 +1,15 @@
 package edu.fiuba.algo3.modelo;
 
-public class Respuesta {
-    Jugador jugadorActual;
-    Opcion opcionElegida;
+import java.util.ArrayList;
 
-    public void responderPregunta(Jugador jugador, Opcion opcion){
+public class Respuesta {
+    private final Jugador jugadorActual;
+    private final Opcion opcionElegida;
+
+    public Respuesta(Jugador jugador, Opcion opcion) {
         this.jugadorActual = jugador;
         this.opcionElegida = opcion;
+        return(Respuesta);
     }
 
     public Jugador getJugador() { return jugadorActual;}
