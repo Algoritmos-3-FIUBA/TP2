@@ -12,4 +12,8 @@ public class Respuesta {
     public Jugador getJugador() { return jugadorActual;}
     public Opcion getElegida() {return opcionElegida;}
 
+    public void otorgarPuntos(int puntosRecibidos){
+        jugadorActual.sumarPuntos(puntosRecibidos);
+    }
+
 }
