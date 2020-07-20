@@ -4,8 +4,8 @@ import java.util.ArrayList;
 
 public class Jugador {
 
-    String nombre;
-    int puntos;
+    private String nombre;
+    private int puntos;
     //ArrayList<Respuesta> listaRespuestas;
 
     public Jugador(String unNombre) {

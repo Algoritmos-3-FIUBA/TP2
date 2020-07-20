@@ -1,5 +1,5 @@
 package edu.fiuba.algo3.modelo;
 
-public class Opcion {
+public interface Opcion {
 
 }
