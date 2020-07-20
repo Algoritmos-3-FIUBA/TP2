@@ -7,7 +7,7 @@ public class TestPreguntaVoFClasico {
     public void CreoPreguntaVoFClasicoIndicoRespuestaCorrecta(){
         Jugador lucas = new Jugador("Lucas");
 
-       // Pregunta pregunta = new Pregunta("¿1+1 no es 3?",true);
+        Pregunta pregunta = new Pregunta("¿1+1 no es 3?",true);
 
         Opcion opcion = new Opcion(false);
        // Opcion opcionCorrecta = pregunta.getOpcionCorrecta();
