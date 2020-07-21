@@ -70,6 +70,7 @@ public class TestPreguntaVoF {
     public void PreguntaVoFClasicoTieneDosOpciones(){
 
         PreguntaVoF preguntaPrueba = new PreguntaVoF("Pregunta");
+        preguntaPrueba.verdaderoOpcionCorrecta();
 
         ArrayList opcionesDisponibles = preguntaPrueba.getOpcionesDisponibles();
 
