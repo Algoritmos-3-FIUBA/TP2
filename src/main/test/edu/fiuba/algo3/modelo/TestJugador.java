@@ -6,7 +6,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static  org.junit.jupiter.api.Assertions.assertArrayEquals;
 
 public class TestJugador {
-    /*@Test
+    @Test
    public void CreoJugadorLlamadoJuanObtengoNombreJuan(){
         Jugador jugador1 = new Jugador("Juan");
         assertEquals(jugador1.getNombre(), "Juan");
@@ -33,5 +33,5 @@ public class TestJugador {
         //       falso = new OpcionCorrecta();
 //        verdadero = new OpcionIncorrecta();
  //       opcionesDisponibles
-    }*/
+    }
 }
