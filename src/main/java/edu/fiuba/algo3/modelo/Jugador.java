@@ -5,7 +5,6 @@ import java.util.ArrayList;
 public class Jugador {
     private final String nombre;
     private int puntos = 0;
-    private final Respuesta respuestaJugador = new Respuesta(this);
 
     //  private ArrayList opcionesPregunta;
 
@@ -16,6 +15,7 @@ public class Jugador {
     }
 
     public Respuesta responderPregunta(int opcionSeleccionada) {
+        Respuesta respuestaJugador = new Respuesta(this);
         respuestaJugador.opcionSeleccionada(opcionSeleccionada-1);
         return respuestaJugador;
     }
