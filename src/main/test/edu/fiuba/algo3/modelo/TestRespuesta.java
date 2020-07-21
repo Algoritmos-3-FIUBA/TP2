@@ -11,15 +11,16 @@ public class TestRespuesta {
     private Opcion verdadero;
     private Opcion falso;
     private ArrayList opcionesDisponibles = new ArrayList();
+
+    private Jugador jugador = new Jugador("Guido");
+    private Respuesta respuestaJugador = new Respuesta(jugador);
+
     @Test
-    public void JugadorRealizaUnaRespuestaCorrectaYObtienePuntaje(){
+    public void JugadorRealizaUnaRespuestaCorrectaSeleccionandoLaSegundaOpcionYObtienePuntaje(){
         falso = new OpcionCorrecta();
         verdadero = new OpcionIncorrecta();
         opcionesDisponibles.add(verdadero);
         opcionesDisponibles.add(falso);
-
-        Jugador jugador = new Jugador("Guido");
-        Respuesta respuestaJugador = new Respuesta(jugador);
 
         respuestaJugador.opcionSeleccionada(1);
         respuestaJugador.otorgarPuntos(opcionesDisponibles);
@@ -28,16 +29,39 @@ public class TestRespuesta {
     }
 
     @Test
-    public void JugadorRealizaUnaRespuestaIncorrectaYObtienePuntaje(){
+    public void JugadorRealizaUnaRespuestaIncorrectaSeleccionandoLaPrimeraOpcionYNoObtienePuntaje(){
         falso = new OpcionCorrecta();
         verdadero = new OpcionIncorrecta();
         opcionesDisponibles.add(verdadero);
         opcionesDisponibles.add(falso);
 
-        Jugador jugador = new Jugador("Guido");
-        Respuesta respuestaJugador = new Respuesta(jugador);
+        respuestaJugador.opcionSeleccionada(0);
+        respuestaJugador.otorgarPuntos(opcionesDisponibles);
+
+        Assertions.assertEquals(jugador.getPuntos(),0);
+    }
+
+    @Test
+    public void JugadorRealizaUnaRespuestaCorrectaSeleccionandoLaPrimeraOpcionYObtienePuntaje(){
+        falso = new OpcionIncorrecta();
+        verdadero = new OpcionCorrecta();
+        opcionesDisponibles.add(verdadero);
+        opcionesDisponibles.add(falso);
 
         respuestaJugador.opcionSeleccionada(0);
+        respuestaJugador.otorgarPuntos(opcionesDisponibles);
+
+        Assertions.assertEquals(jugador.getPuntos(),1);
+    }
+
+    @Test
+    public void JugadorRealizaUnaRespuestaIncorrectaSeleccionandoLaSegundaOpcionYNoObtienePuntaje(){
+        falso = new OpcionIncorrecta();
+        verdadero = new OpcionCorrecta();
+        opcionesDisponibles.add(verdadero);
+        opcionesDisponibles.add(falso);
+
+        respuestaJugador.opcionSeleccionada(1);
         respuestaJugador.otorgarPuntos(opcionesDisponibles);
 
         Assertions.assertEquals(jugador.getPuntos(),0);

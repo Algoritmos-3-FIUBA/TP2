@@ -20,6 +20,5 @@ public class Respuesta {
         opcion = (Opcion) opcionesDisponibles.get(idOpcion);
         jugador.sumarPuntos((Opcion) opcion);
     }
-
 }
 
