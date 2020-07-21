@@ -3,20 +3,23 @@ package edu.fiuba.algo3.modelo;
 import java.util.ArrayList;
 
 public class Respuesta {
-    private final Jugador jugadorActual;
-    private final Opcion opcionElegida;
 
-    public Respuesta(Jugador jugador, Opcion opcion) {
-        this.jugadorActual = jugador;
-        this.opcionElegida = opcion;
-        return(Respuesta);
+    private Jugador jugador;
+    private int idOpcion;
+    private Opcion opcion;
+
+    public Respuesta(Jugador jugador) {
+        this.jugador = jugador;
     }
 
-    public Jugador getJugador() { return jugadorActual;}
-    public Opcion getElegida() {return opcionElegida;}
+    public void opcionSeleccionada(int i) {
+        this.idOpcion = i;
+    }
 
-    public void otorgarPuntos(int puntosRecibidos){
-        jugadorActual.sumarPuntos(puntosRecibidos);
+    public void otorgarPuntos(ArrayList opcionesDisponibles) {
+        opcion = (Opcion) opcionesDisponibles.get(idOpcion);
+        jugador.sumarPuntos((Opcion) opcion);
     }
 
 }
+
