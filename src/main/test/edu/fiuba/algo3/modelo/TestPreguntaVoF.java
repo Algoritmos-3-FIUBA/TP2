@@ -13,6 +13,8 @@ public class TestPreguntaVoF {
     public void CreoPreguntaVoFClasicoConNombrePregunta1YObtengoNombrePregunta1(){
 
         PreguntaVoF preguntaPrueba = new PreguntaVoF("Pregunta1");
+        preguntaPrueba.verdaderoOpcionCorrecta();
+
         assertEquals(preguntaPrueba.getNombrePregunta(), "Pregunta1");
 
     }
@@ -64,7 +66,6 @@ public class TestPreguntaVoF {
         assertEquals(opcionFalsoCorrecta.puntosASumar(), 0);
 
     }
-
 
     @Test
     public void PreguntaVoFClasicoTieneDosOpciones(){
