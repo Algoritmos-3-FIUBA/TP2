@@ -38,5 +38,14 @@ public class PreguntaVoF {
             respuesta.otorgarPuntos(opcionesDisponibles);
         }
     }
+
+    public String getNombrePregunta() { return nombre; }
+
+    public Opcion getOpcionVerdadero() { return verdadero; }
+
+    public Opcion getOpcionFalso() { return falso; }
+
+    public ArrayList getOpcionesDisponibles() { return opcionesDisponibles; }
+
 }
 
