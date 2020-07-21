@@ -2,6 +2,8 @@ package edu.fiuba.algo3.modelo;
 
 import org.junit.jupiter.api.Test;
 
+import java.util.ArrayList;
+
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static  org.junit.jupiter.api.Assertions.assertArrayEquals;
 
@@ -18,45 +20,48 @@ public class TestJugador {
         Jugador jugador2 = new Jugador("Pedro");
         assertEquals(jugador2.getPuntos(), 0);
     }
-
     @Test
-    public void CreoJugadorLlamadoPedroNoTienePuntosInicialesAciertaUnaRespuestaTiene1Punto(){
-/*
-        Jugador jugador3 = new Jugador("Lionel");
+    public void CreoJugadorLlamadoJulianLePreguntoYEligeOpcion2FalsoEsCorrectaSuma1Punto(){
 
-                PreguntaVoF pregunta = new PreguntaVoF("¿2+2 no es 3?");
+        Jugador jugador3 = new Jugador("Julian");
+
+        PreguntaVoF pregunta = new PreguntaVoF("¿2+2 no es 3?");
 
         pregunta.falsoOpcionCorrecta();
         // Opcion 1 -> Verdadero
         // Opcion 2 -> Falso    -> Opcion Correcta
 
-        ArrayList respuestasDeJugadores = new ArrayList();
+
+        ArrayList respuestasDeJugador = new ArrayList();
 
         //Respuesta de Jugadores -> Lista con los jugadores que han respondido.
-        respuestasDeJugadores.add(lucas.responderPregunta(1));
+        respuestasDeJugador.add(jugador3.responderPregunta(2));
 
-        pregunta.evaluarRespuestasFinales(respuestasDeJugadores);
+        pregunta.evaluarRespuestasFinales(respuestasDeJugador);
 
+        assertEquals(jugador3.getPuntos(), 1);
 
-
-
-        jugador3.sumarPuntos(2);
-        assertEquals(jugador3.getPuntos(), 20);
- */
-    }
-    /*
-    @Test
-    public void CreoJugadorLlamadoPedroNoTienePuntosInicialesLeSumo0PuntosObtengo0Puntos(){
-        Jugador jugador3 = new Jugador("Lionel");
-        //jugador3.sumarPuntos(0);
-        //    assertEquals(jugador3.getPuntos(), 0);
     }
     @Test
-    public void CreoJugadorLlamadoPedroNoTienePuntosInicialesLeSumo0PuntosObtengo0Puntos(){
-        //       falso = new OpcionCorrecta();
-//        verdadero = new OpcionIncorrecta();
- //       opcionesDisponibles
-    }
+    public void CreoJugadorLlamadoFrancoLePreguntoYEligeOpcion1VerdaderoEsCorrectaSuma0Puntos(){
 
-     */
+        Jugador jugador3 = new Jugador("Franco");
+
+        PreguntaVoF pregunta = new PreguntaVoF("¿2+2 no es 3?");
+
+        pregunta.falsoOpcionCorrecta();
+        // Opcion 1 -> Verdadero
+        // Opcion 2 -> Falso    -> Opcion Correcta
+
+
+        ArrayList respuestasDeJugador = new ArrayList();
+
+        //Respuesta de Jugadores -> Lista con los jugadores que han respondido.
+        respuestasDeJugador.add(jugador3.responderPregunta(1));
+
+        pregunta.evaluarRespuestasFinales(respuestasDeJugador);
+
+        assertEquals(jugador3.getPuntos(), 0);
+
+    }
 }
