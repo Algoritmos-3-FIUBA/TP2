@@ -8,8 +8,8 @@ import java.util.ArrayList;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class TestRespuesta {
-    private Opcion verdadero;
-    private Opcion falso;
+    private Opcion opcionVerdadero;
+    private Opcion opcionFalso;
     private ArrayList opcionesDisponibles = new ArrayList();
 
     private Jugador jugador = new Jugador("Guido");
@@ -17,10 +17,10 @@ public class TestRespuesta {
 
     @Test
     public void JugadorRealizaUnaRespuestaCorrectaSeleccionandoLaSegundaOpcionYObtienePuntaje(){
-        falso = new OpcionCorrecta();
-        verdadero = new OpcionIncorrecta();
-        opcionesDisponibles.add(verdadero);
-        opcionesDisponibles.add(falso);
+        opcionFalso = new OpcionCorrecta();
+        opcionVerdadero = new OpcionIncorrecta();
+        opcionesDisponibles.add(opcionVerdadero);
+        opcionesDisponibles.add(opcionFalso);
 
         respuestaJugador.opcionSeleccionada(1);
         respuestaJugador.otorgarPuntos(opcionesDisponibles);
@@ -30,10 +30,10 @@ public class TestRespuesta {
 
     @Test
     public void JugadorRealizaUnaRespuestaIncorrectaSeleccionandoLaPrimeraOpcionYNoObtienePuntaje(){
-        falso = new OpcionCorrecta();
-        verdadero = new OpcionIncorrecta();
-        opcionesDisponibles.add(verdadero);
-        opcionesDisponibles.add(falso);
+        opcionFalso = new OpcionCorrecta();
+        opcionVerdadero = new OpcionIncorrecta();
+        opcionesDisponibles.add(opcionVerdadero);
+        opcionesDisponibles.add(opcionFalso);
 
         respuestaJugador.opcionSeleccionada(0);
         respuestaJugador.otorgarPuntos(opcionesDisponibles);
@@ -43,10 +43,10 @@ public class TestRespuesta {
 
     @Test
     public void JugadorRealizaUnaRespuestaCorrectaSeleccionandoLaPrimeraOpcionYObtienePuntaje(){
-        falso = new OpcionIncorrecta();
-        verdadero = new OpcionCorrecta();
-        opcionesDisponibles.add(verdadero);
-        opcionesDisponibles.add(falso);
+        opcionFalso = new OpcionIncorrecta();
+        opcionVerdadero = new OpcionCorrecta();
+        opcionesDisponibles.add(opcionVerdadero);
+        opcionesDisponibles.add(opcionFalso);
 
         respuestaJugador.opcionSeleccionada(0);
         respuestaJugador.otorgarPuntos(opcionesDisponibles);
@@ -56,10 +56,10 @@ public class TestRespuesta {
 
     @Test
     public void JugadorRealizaUnaRespuestaIncorrectaSeleccionandoLaSegundaOpcionYNoObtienePuntaje(){
-        falso = new OpcionIncorrecta();
-        verdadero = new OpcionCorrecta();
-        opcionesDisponibles.add(verdadero);
-        opcionesDisponibles.add(falso);
+        opcionFalso = new OpcionIncorrecta();
+        opcionVerdadero = new OpcionCorrecta();
+        opcionesDisponibles.add(opcionVerdadero);
+        opcionesDisponibles.add(opcionFalso);
 
         respuestaJugador.opcionSeleccionada(1);
         respuestaJugador.otorgarPuntos(opcionesDisponibles);
