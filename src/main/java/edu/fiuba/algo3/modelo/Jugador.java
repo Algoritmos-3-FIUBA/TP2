@@ -7,7 +7,6 @@ public class Jugador {
     private int puntos = 0;
 
     //  private ArrayList opcionesPregunta;
-
     //  private OpcionVoF opcionSeleccionada;
 
     public Jugador(String name) {
