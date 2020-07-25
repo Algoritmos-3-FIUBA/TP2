@@ -10,60 +10,28 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 public class TestRespuesta {
     private Opcion opcionVerdadero;
     private Opcion opcionFalso;
-    private ArrayList opcionesDisponibles = new ArrayList();
-
-    private Jugador jugador = new Jugador("Guido");
-    private Respuesta respuestaJugador = new Respuesta(jugador);
 
     @Test
-    public void JugadorRealizaUnaRespuestaCorrectaSeleccionandoLaSegundaOpcionYObtienePuntaje(){
-        opcionFalso = new OpcionCorrecta();
-        opcionVerdadero = new OpcionIncorrecta();
-        opcionesDisponibles.add(opcionVerdadero);
-        opcionesDisponibles.add(opcionFalso);
+    public void JugadorRealizaUnaRespuestaCorrectaYObtienePuntaje(){
+        opcionVerdadero = new OpcionCorrecta();
 
-        respuestaJugador.opcionSeleccionada(1);
-        respuestaJugador.otorgarPuntos(opcionesDisponibles);
+        private Jugador jugador = new Jugador("Guido");
+        private Respuesta respuestaJugador = new Respuesta(opcionVerdadero, jugador);
+
+        respuestaJugador.otorgarPuntos();
 
         Assertions.assertEquals(jugador.getPuntos(),1);
     }
 
     @Test
-    public void JugadorRealizaUnaRespuestaIncorrectaSeleccionandoLaPrimeraOpcionYNoObtienePuntaje(){
-        opcionFalso = new OpcionCorrecta();
-        opcionVerdadero = new OpcionIncorrecta();
-        opcionesDisponibles.add(opcionVerdadero);
-        opcionesDisponibles.add(opcionFalso);
-
-        respuestaJugador.opcionSeleccionada(0);
-        respuestaJugador.otorgarPuntos(opcionesDisponibles);
-
-        Assertions.assertEquals(jugador.getPuntos(),0);
-    }
-
-    @Test
-    public void JugadorRealizaUnaRespuestaCorrectaSeleccionandoLaPrimeraOpcionYObtienePuntaje(){
+    public void JugadorRealizaUnaRespuestaIncorrectaYNoObtienePuntaje(){
         opcionFalso = new OpcionIncorrecta();
-        opcionVerdadero = new OpcionCorrecta();
-        opcionesDisponibles.add(opcionVerdadero);
-        opcionesDisponibles.add(opcionFalso);
 
-        respuestaJugador.opcionSeleccionada(0);
-        respuestaJugador.otorgarPuntos(opcionesDisponibles);
+        private Jugador jugador = new Jugador("Guido");
+        private Respuesta respuestaJugador = new Respuesta(opcionFalso, jugador);
+
+        respuestaJugador.otorgarPuntos();
 
         Assertions.assertEquals(jugador.getPuntos(),1);
-    }
-
-    @Test
-    public void JugadorRealizaUnaRespuestaIncorrectaSeleccionandoLaSegundaOpcionYNoObtienePuntaje(){
-        opcionFalso = new OpcionIncorrecta();
-        opcionVerdadero = new OpcionCorrecta();
-        opcionesDisponibles.add(opcionVerdadero);
-        opcionesDisponibles.add(opcionFalso);
-
-        respuestaJugador.opcionSeleccionada(1);
-        respuestaJugador.otorgarPuntos(opcionesDisponibles);
-
-        Assertions.assertEquals(jugador.getPuntos(),0);
     }
 }

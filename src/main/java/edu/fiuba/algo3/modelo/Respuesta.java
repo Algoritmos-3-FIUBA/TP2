@@ -4,21 +4,23 @@ import java.util.ArrayList;
 
 public class Respuesta {
 
-    private Jugador jugador;
-    private int idOpcion;
     private Opcion opcion;
+    private Jugador jugador;
 
-    public Respuesta(Jugador jugador) {
+    public Respuesta (Opcion opcion, Jugador jugador) {
+        this.opcion = opcion;
         this.jugador = jugador;
     }
 
-    public void opcionSeleccionada(int i) {
-        this.idOpcion = i;
+    public Jugador getJugador() {
+        return jugador;
     }
 
-    public void otorgarPuntos(ArrayList opcionesDisponibles) {
-        opcion = (Opcion) opcionesDisponibles.get(idOpcion);
-        jugador.sumarPuntos((Opcion) opcion);
+    public Opcion getOpcion() {
+        return opcion;
+    }
+
+    public void otorgarPuntos() {
+        jugador.sumarPuntos((int) opcion.puntosASumar());
     }
 }
-
