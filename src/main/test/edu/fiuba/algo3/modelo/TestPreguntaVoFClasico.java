@@ -2,55 +2,49 @@ package edu.fiuba.algo3.modelo;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
+import java.util.LinkedList;
 
-import java.util.ArrayList;
-
-public class TestPreguntaVoFClasico {
+public class TestPreguntaVoFClasico{
 
     @Test
     public void CreoPreguntaVoFClasicoIndicoRespuestaCorrecta(){
 
-        Jugador lucas = new Jugador("Lucas");
+        Jugador Lucas = new Jugador("Lucas");
 
-        PreguntaVoF pregunta = new PreguntaVoF("¿1+1 no es 3?");
+        PreguntaVerdaderoFalso pregunta = new PreguntaVerdaderoFalso("¿1+1 no es 3?");
 
-        pregunta.verdaderoOpcionCorrecta();
-        // Opcion 1 -> Verdadero -> Opcion Correcta
-        // Opcion 2 -> Falso
+        pregunta.setVerdaderoOpcionCorrecta();
 
-        ArrayList respuestasDeJugadores = new ArrayList();
+        LinkedList<Respuesta> respuestasDeJugadores = new LinkedList<Respuesta>();
 
         //Respuesta de Jugadores -> Lista con los jugadores que han respondido.
-        respuestasDeJugadores.add(lucas.responderPregunta(2));
+        respuestasDeJugadores.add(new Respuesta(pregunta.getOpcionVerdadera(),Lucas));
 
-        pregunta.evaluarRespuestasFinales(respuestasDeJugadores);
+        pregunta.evaluarRespuestas(respuestasDeJugadores);
 
-        Assertions.assertEquals(lucas.getPuntos(),0);
+        Assertions.assertEquals(Lucas.getPuntos(),1);
     }
 
     @Test
     public void CreoPreguntaVoFClasicoIndicoRespuestaCorrectayAsignoLosPuntos(){
 
-        Jugador lucas = new Jugador("Lucas");
-        Jugador mati = new Jugador("Mati");
+        Jugador Lucas = new Jugador("Lucas");
+        Jugador Mati = new Jugador("Mati");
 
-        PreguntaVoF pregunta = new PreguntaVoF("¿2+2 no es 3?");
+        PreguntaVerdaderoFalso pregunta = new PreguntaVerdaderoFalso("¿2+2 no es 3?");
 
-        pregunta.falsoOpcionCorrecta();
-        // Opcion 1 -> Verdadero
-        // Opcion 2 -> Falso    -> Opcion Correcta
+        pregunta.setVerdaderoOpcionCorrecta();
 
-        ArrayList respuestasDeJugadores = new ArrayList();
+        LinkedList<Respuesta> respuestasDeJugadores = new LinkedList<Respuesta>();
 
         //Respuesta de Jugadores -> Lista con los jugadores que han respondido.
-        respuestasDeJugadores.add(lucas.responderPregunta(1));
-        respuestasDeJugadores.add(mati.responderPregunta(2));
+        respuestasDeJugadores.add(new Respuesta(pregunta.getOpcionFalsa(),Lucas));
+        respuestasDeJugadores.add(new Respuesta(pregunta.getOpcionVerdadera(),Mati));
 
-        pregunta.evaluarRespuestasFinales(respuestasDeJugadores);
+        pregunta.evaluarRespuestas(respuestasDeJugadores);
 
-        Assertions.assertEquals(lucas.getPuntos(),0);
-        Assertions.assertEquals(mati.getPuntos(),1);
-
+        Assertions.assertEquals(Lucas.getPuntos(),0);
+        Assertions.assertEquals(Mati.getPuntos(),1);
 
     }
 }
