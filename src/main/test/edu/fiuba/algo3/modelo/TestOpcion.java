@@ -6,14 +6,20 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 public class TestOpcion {
 
     @Test
-    public void OpcionCorrectaDevuelve1Punto(){
-        OpcionCorrecta opcionCorrecta = new OpcionCorrecta();
-        assertEquals(1,opcionCorrecta.puntosASumar());
+    public void OpcionCorrectaDevuelveLaCantidadDePuntosEsperados(){
+        OpcionCorrecta opcionCorrecta = new OpcionCorrecta("Cristobal Colón",1);
+        assertEquals(1,opcionCorrecta.puntosObtenidos());
     }
 
     @Test
-    public void OpcionIncorrectaNoDevuelvePuntos(){
-        OpcionIncorrecta opcionIncorrecta = new OpcionIncorrecta();
-        assertEquals(0,opcionIncorrecta.puntosASumar());
+    public void OtraOpcionCorrectaDevuelveLaCantidadDePuntosEsperados(){
+        OpcionCorrecta opcionCorrecta = new OpcionCorrecta("1969",5);
+        assertEquals(5,opcionCorrecta.puntosObtenidos());
+    }
+
+    @Test
+    public void OpcionIncorrectaDevuelveLaCantidadDePuntosEsperados(){
+        OpcionIncorrecta opcionIncorrecta = new OpcionIncorrecta("Kent Beck",0);
+        assertEquals(0,opcionIncorrecta.puntosObtenidos());
     }
 }

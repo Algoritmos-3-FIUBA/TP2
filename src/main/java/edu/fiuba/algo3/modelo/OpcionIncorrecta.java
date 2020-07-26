@@ -2,9 +2,8 @@ package edu.fiuba.algo3.modelo;
 
 public class OpcionIncorrecta extends Opcion {
 
-    @Override
-    public int puntosASumar(){
-        return 0;
+    public OpcionIncorrecta(String NombreOpcion, int Puntos) {
+        super(NombreOpcion, 0);
     }
 
 }
