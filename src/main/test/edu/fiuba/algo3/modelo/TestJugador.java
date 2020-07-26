@@ -10,58 +10,21 @@ import static  org.junit.jupiter.api.Assertions.assertArrayEquals;
 public class TestJugador {
 
     @Test
-   public void CreoJugadorLlamadoJuanObtengoNombreJuan(){
-        Jugador jugador1 = new Jugador("Juan");
-        assertEquals(jugador1.getNombre(), "Juan");
+    public void CreoJugadorLlamadoJuanObtengoNombreJuan(){
+        Jugador Juan = new Jugador("Juan");
+        assertEquals(Juan.getNombre(), "Juan");
     }
 
     @Test
     public void CreoJugadorLlamadoPedroNoTienePuntosInicialesObtengo0Puntos(){
-        Jugador jugador2 = new Jugador("Pedro");
-        assertEquals(jugador2.getPuntos(), 0);
+        Jugador Pedro = new Jugador("Pedro");
+        assertEquals(Pedro.getPuntos(), 0);
     }
     @Test
-    public void CreoJugadorLlamadoJulianLePreguntoYEligeOpcion2FalsoEsCorrectaSuma1Punto(){
-
-        Jugador jugador3 = new Jugador("Julian");
-
-        PreguntaVerdaderoFalso pregunta = new PreguntaVerdaderoFalso("¿2+2 no es 3?");
-
-        pregunta.falsoOpcionCorrecta();
-        // Opcion 1 -> Verdadero
-        // Opcion 2 -> Falso    -> Opcion Correcta
-
-
-        ArrayList respuestasDeJugador = new ArrayList();
-
-        //Respuesta de Jugadores -> Lista con los jugadores que han respondido.
-        respuestasDeJugador.add(jugador3.responderPregunta(2));
-
-        pregunta.evaluarRespuestasFinales(respuestasDeJugador);
-
-        assertEquals(jugador3.getPuntos(), 1);
-
+    public void CreoJugadorLlamadoPedroNoTienePuntosInicialesLeSumo1PuntoTiene1Punto() {
+        Jugador Lionel = new Jugador("Lionel");
+        jugador3.sumarPuntos(1);
+        assertEquals(Lionel.getPuntos(), 1);
     }
-    @Test
-    public void CreoJugadorLlamadoFrancoLePreguntoYEligeOpcion1VerdaderoEsCorrectaSuma0Puntos(){
 
-        Jugador jugador3 = new Jugador("Franco");
-
-        PreguntaVerdaderoFalso pregunta = new PreguntaVerdaderoFalso("¿2+2 no es 3?");
-
-        pregunta.falsoOpcionCorrecta();
-        // Opcion 1 -> Verdadero
-        // Opcion 2 -> Falso    -> Opcion Correcta
-
-
-        ArrayList respuestasDeJugador = new ArrayList();
-
-        //Respuesta de Jugadores -> Lista con los jugadores que han respondido.
-        respuestasDeJugador.add(jugador3.responderPregunta(1));
-
-        pregunta.evaluarRespuestasFinales(respuestasDeJugador);
-
-        assertEquals(jugador3.getPuntos(), 0);
-
-    }
 }
