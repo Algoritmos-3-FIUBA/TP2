@@ -6,8 +6,8 @@ public class Jugador {
     private final String nombre;
     private int puntos = 0;
 
-    public Jugador(String name) {
-        this.nombre = name;
+    public Jugador(String unNombre) {
+        this.nombre = unNombre;
     }
 
     public String getNombre() {
@@ -21,4 +21,4 @@ public class Jugador {
     public void sumarPuntos(int cantidadDePuntos) {
         puntos = puntos + cantidadDePuntos;
     }
-}
+}   
