@@ -10,15 +10,21 @@ import static  org.junit.jupiter.api.Assertions.assertArrayEquals;
 public class TestJugador {
 
     @Test
-   public void CreoJugadorLlamadoJuanObtengoNombreJuan(){
-        Jugador jugador1 = new Jugador("Juan");
-        assertEquals(jugador1.getNombre(), "Juan");
+    public void CreoJugadorLlamadoJuanObtengoNombreJuan(){
+        Jugador Juan = new Jugador("Juan");
+        assertEquals(Juan.getNombre(), "Juan");
     }
 
     @Test
     public void CreoJugadorLlamadoPedroNoTienePuntosInicialesObtengo0Puntos(){
-        Jugador jugador2 = new Jugador("Pedro");
-        assertEquals(jugador2.getPuntos(), 0);
+        Jugador Pedro = new Jugador("Pedro");
+        assertEquals(Pedro.getPuntos(), 0);
+    }
+    @Test
+    public void CreoJugadorLlamadoPedroNoTienePuntosInicialesLeSumo1PuntoTiene1Punto() {
+        Jugador Lionel = new Jugador("Lionel");
+        Lionel.sumarPuntos(1);
+        assertEquals(Lionel.getPuntos(), 1);
     }
 
 }
