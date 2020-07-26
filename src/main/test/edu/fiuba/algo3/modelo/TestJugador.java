@@ -1,11 +1,8 @@
 package edu.fiuba.algo3.modelo;
 
-import org.junit.jupiter.api.Test;
-
-import java.util.ArrayList;
+import org.junit.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import static  org.junit.jupiter.api.Assertions.assertArrayEquals;
 
 public class TestJugador {
 
