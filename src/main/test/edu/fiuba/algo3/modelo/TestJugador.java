@@ -23,7 +23,7 @@ public class TestJugador {
     @Test
     public void CreoJugadorLlamadoPedroNoTienePuntosInicialesLeSumo1PuntoTiene1Punto() {
         Jugador Lionel = new Jugador("Lionel");
-        jugador3.sumarPuntos(1);
+        Lionel.sumarPuntos(1);
         assertEquals(Lionel.getPuntos(), 1);
     }
 
