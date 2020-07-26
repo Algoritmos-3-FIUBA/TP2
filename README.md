@@ -1,5 +1,5 @@
-[![Build Status](https://travis-ci.org/fiuba/algo3_proyecto_base_tp2.svg?branch=master)](https://travis-ci.org/fiuba/algo3_proyecto_base_tp2)
-[![codecov](https://codecov.io/gh/fiuba/algo3_proyecto_base_tp2/branch/master/graph/badge.svg)](https://codecov.io/gh/fiuba/algo3_proyecto_base_tp2)
+[![Build Status](https://travis-ci.org/Algoritmos-3-FIUBA/TP2.svg?branch=master)](https://travis-ci.org/Algoritmos-3-FIUBA/TP2)
+[![codecov](https://codecov.io/gh/Algoritmos-3-FIUBA/TP2/branch/master/graph/badge.svg)](https://codecov.io/gh/Algoritmos-3-FIUBA/TP2)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 
