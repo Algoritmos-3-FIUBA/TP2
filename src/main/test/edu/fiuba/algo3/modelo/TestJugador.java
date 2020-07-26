@@ -25,7 +25,7 @@ public class TestJugador {
 
         Jugador jugador3 = new Jugador("Julian");
 
-        PreguntaVoF pregunta = new PreguntaVoF("¿2+2 no es 3?");
+        PreguntaVerdaderoFalso pregunta = new PreguntaVerdaderoFalso("¿2+2 no es 3?");
 
         pregunta.falsoOpcionCorrecta();
         // Opcion 1 -> Verdadero
@@ -47,7 +47,7 @@ public class TestJugador {
 
         Jugador jugador3 = new Jugador("Franco");
 
-        PreguntaVoF pregunta = new PreguntaVoF("¿2+2 no es 3?");
+        PreguntaVerdaderoFalso pregunta = new PreguntaVerdaderoFalso("¿2+2 no es 3?");
 
         pregunta.falsoOpcionCorrecta();
         // Opcion 1 -> Verdadero
