@@ -13,7 +13,7 @@ public class TestRespuesta {
 
     @Test
     public void JugadorRealizaUnaRespuestaCorrectaYObtienePuntaje(){
-        opcionVerdadero = new OpcionCorrecta();
+        opcionVerdadero = new OpcionCorrecta("Euler",1);
 
         private Jugador jugador = new Jugador("Guido");
         private Respuesta respuestaJugador = new Respuesta(opcionVerdadero, jugador);
@@ -25,13 +25,13 @@ public class TestRespuesta {
 
     @Test
     public void JugadorRealizaUnaRespuestaIncorrectaYNoObtienePuntaje(){
-        opcionFalso = new OpcionIncorrecta();
+        opcionFalso = new OpcionCorrecta("Gauss",0);
 
         private Jugador jugador = new Jugador("Guido");
         private Respuesta respuestaJugador = new Respuesta(opcionFalso, jugador);
 
         respuestaJugador.otorgarPuntos();
 
-        Assertions.assertEquals(jugador.getPuntos(),1);
+        Assertions.assertEquals(jugador.getPuntos(),0);
     }
 }

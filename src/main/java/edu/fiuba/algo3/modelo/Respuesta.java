@@ -21,6 +21,6 @@ public class Respuesta {
     }
 
     public void otorgarPuntos() {
-        jugador.sumarPuntos((int) opcion.puntosASumar());
+        jugador.sumarPuntos(opcion.puntosObtenidos());
     }
 }
