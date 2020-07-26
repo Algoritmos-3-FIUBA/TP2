@@ -1,6 +1,7 @@
 package edu.fiuba.algo3.modelo;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
 
 public class PreguntaVerdaderoFalso {
 
@@ -12,19 +13,19 @@ public class PreguntaVerdaderoFalso {
 
     public void setVerdaderoOpcionCorrecta() {
 
-        opcionFalso = new OpcionIncorrecta();
-        opcionVerdadero = new OpcionCorrecta();
+        opcionFalso = new OpcionIncorrecta("Falso",0);
+        opcionVerdadero = new OpcionCorrecta("Verdadero",1);
 
     }
 
     public void falsoOpcionCorrecta() {
 
-        opcionFalso = new OpcionCorrecta();
-        opcionVerdadero = new OpcionIncorrecta();
+        opcionFalso = new OpcionCorrecta("Falso",1);
+        opcionVerdadero = new OpcionIncorrecta("Verdadero",0);
 
     }
 
-    public void evaluarRespuestas(ArrayList respuestasDeJugadores) {
+    public void evaluarRespuestas(LinkedList<Respuesta> respuestasDeJugadores) {
 
         Respuesta respuesta;
         for (Object respuestaDeJugador : respuestasDeJugadores) {
