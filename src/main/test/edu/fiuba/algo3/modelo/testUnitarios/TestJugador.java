@@ -1,5 +1,6 @@
-package edu.fiuba.algo3.modelo;
+package edu.fiuba.algo3.modelo.testUnitarios;
 
+import edu.fiuba.algo3.modelo.Jugador;
 import org.junit.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;

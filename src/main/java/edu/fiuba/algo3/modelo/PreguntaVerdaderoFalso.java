@@ -2,28 +2,20 @@ package edu.fiuba.algo3.modelo;
 
 import java.util.LinkedList;
 
-public class PreguntaVerdaderoFalso {
+public abstract class PreguntaVerdaderoFalso {
 
     private String nombre;
-    private Opcion opcionVerdadero;
-    private Opcion opcionFalso;
+    //private Opcion opcionVerdadero;
+   // private Opcion opcionFalso;
 
     public PreguntaVerdaderoFalso(String nombrePregunta) { this.nombre = nombrePregunta; }
 
-    public void setVerdaderoOpcionCorrecta() {
+    //@Override
+    public abstract void setVerdaderoOpcionCorrecta();
+  //  @Override
+    public abstract void setfalsoOpcionCorrecta();
 
-        opcionFalso = new OpcionIncorrecta("Falso",0);
-        opcionVerdadero = new OpcionCorrecta("Verdadero",1);
-
-    }
-
-    public void falsoOpcionCorrecta() {
-
-        opcionFalso = new OpcionCorrecta("Falso",1);
-        opcionVerdadero = new OpcionIncorrecta("Verdadero",0);
-
-    }
-
+  //  @Override
     public void evaluarRespuestas(LinkedList<Respuesta> respuestasDeJugadores) {
 
         Respuesta respuesta;
@@ -36,9 +28,9 @@ public class PreguntaVerdaderoFalso {
 
     public String getNombrePregunta() { return nombre; }
 
-    public Opcion getOpcionVerdadera() { return opcionVerdadero; }
+  //  public Opcion getOpcionVerdadera() { return opcionVerdadero; }
 
-    public Opcion getOpcionFalsa() { return opcionFalso; }
+  //  public Opcion getOpcionFalsa() { return opcionFalso; }
 
 }
 
