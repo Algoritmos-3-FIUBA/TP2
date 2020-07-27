@@ -18,7 +18,7 @@ public class PreguntaVerdaderoFalsoClasico extends PreguntaVerdaderoFalso {
     }
 
     @Override
-    public void setfalsoOpcionCorrecta() {
+    public void setFalsoOpcionCorrecta() {
 
         opcionFalso = new OpcionCorrecta("Falso",1);
         opcionVerdadero = new OpcionIncorrecta("Verdadero",0);

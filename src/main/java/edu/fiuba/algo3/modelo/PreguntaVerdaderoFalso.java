@@ -13,7 +13,7 @@ public abstract class PreguntaVerdaderoFalso {
     //@Override
     public abstract void setVerdaderoOpcionCorrecta();
   //  @Override
-    public abstract void setfalsoOpcionCorrecta();
+    public abstract void setFalsoOpcionCorrecta();
 
   //  @Override
     public void evaluarRespuestas(LinkedList<Respuesta> respuestasDeJugadores) {

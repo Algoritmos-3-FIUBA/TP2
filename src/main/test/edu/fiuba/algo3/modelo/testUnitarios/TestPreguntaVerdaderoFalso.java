@@ -38,7 +38,7 @@ public class TestPreguntaVerdaderoFalso {
     public void CreoPreguntaVerdaderoFalsoClasicoConFalsoCorrectaYFalsoSumaUnPunto(){
 
         PreguntaVerdaderoFalsoClasico preguntaPrueba = new PreguntaVerdaderoFalsoClasico("Pregunta");
-        preguntaPrueba.setfalsoOpcionCorrecta();
+        preguntaPrueba.setFalsoOpcionCorrecta();
 
         Opcion opcionFalsoCorrecta = preguntaPrueba.getOpcionFalsa();
 
@@ -62,7 +62,7 @@ public class TestPreguntaVerdaderoFalso {
     public void CreoPreguntaVerdaderoFalsoClasicoConVerdaderoIncorrectoYVerdaderoSumaCeroPuntos(){
 
         PreguntaVerdaderoFalsoClasico preguntaPrueba = new PreguntaVerdaderoFalsoClasico("Pregunta");
-        preguntaPrueba.setfalsoOpcionCorrecta();
+        preguntaPrueba.setFalsoOpcionCorrecta();
 
         Opcion opcionFalsoCorrecta = preguntaPrueba.getOpcionVerdadera();
 
