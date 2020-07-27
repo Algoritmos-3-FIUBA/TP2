@@ -24,7 +24,7 @@ public class TestPreguntaVerdaderoFalsoPenalidad {
 
         PreguntaVerdaderoFalsoPenalidad pregunta = new PreguntaVerdaderoFalsoPenalidad("Negro es un color");
 
-        pregunta.setfalsoOpcionCorrecta();
+        pregunta.setFalsoOpcionCorrecta();
 
         Respuesta respuesta = new Respuesta(pregunta.getOpcionVerdadera(),jugador);
 

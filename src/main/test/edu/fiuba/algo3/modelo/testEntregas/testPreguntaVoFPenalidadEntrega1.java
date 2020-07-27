@@ -1,7 +1,6 @@
 package edu.fiuba.algo3.modelo.testEntregas;
 
 import edu.fiuba.algo3.modelo.Jugador;
-import edu.fiuba.algo3.modelo.OpcionCorrecta;
 import edu.fiuba.algo3.modelo.PreguntaVerdaderoFalsoPenalidad;
 import edu.fiuba.algo3.modelo.Respuesta;
 import org.junit.jupiter.api.Assertions;
@@ -17,7 +16,7 @@ public class testPreguntaVoFPenalidadEntrega1 {
 
         PreguntaVerdaderoFalsoPenalidad pregunta = new PreguntaVerdaderoFalsoPenalidad("El caballo blanco de San Martin es rojo");
 
-        pregunta.setfalsoOpcionCorrecta();
+        pregunta.setFalsoOpcionCorrecta();
 
         Respuesta respuesta = new Respuesta(pregunta.getOpcionFalsa(),jugador);
 
@@ -38,7 +37,7 @@ public class testPreguntaVoFPenalidadEntrega1 {
 
         PreguntaVerdaderoFalsoPenalidad pregunta = new PreguntaVerdaderoFalsoPenalidad("Messi no es Argetino");
 
-        pregunta.setfalsoOpcionCorrecta();
+        pregunta.setFalsoOpcionCorrecta();
 
         Respuesta respuesta1 = new Respuesta(pregunta.getOpcionFalsa(),jugador1);
         Respuesta respuesta2 = new Respuesta(pregunta.getOpcionVerdadera(),jugador2);
