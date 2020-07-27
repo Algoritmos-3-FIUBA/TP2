@@ -1,17 +1,20 @@
-package edu.fiuba.algo3.modelo;
+package edu.fiuba.algo3.modelo.testEntregas;
 
+import edu.fiuba.algo3.modelo.Jugador;
+import edu.fiuba.algo3.modelo.PreguntaVerdaderoFalsoClasico;
+import edu.fiuba.algo3.modelo.Respuesta;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import java.util.LinkedList;
 
-public class TestPreguntaVoFClasico{
+public class TestPreguntaVoFClasicoEntrega0 {
 
     @Test
     public void CreoPreguntaVoFClasicoIndicoRespuestaCorrecta(){
 
         Jugador Lucas = new Jugador("Lucas");
 
-        PreguntaVerdaderoFalso pregunta = new PreguntaVerdaderoFalso("¿1+1 no es 3?");
+        PreguntaVerdaderoFalsoClasico pregunta = new PreguntaVerdaderoFalsoClasico("¿1+1 no es 3?");
 
         pregunta.setVerdaderoOpcionCorrecta();
 
@@ -31,7 +34,7 @@ public class TestPreguntaVoFClasico{
         Jugador Lucas = new Jugador("Lucas");
         Jugador Mati = new Jugador("Mati");
 
-        PreguntaVerdaderoFalso pregunta = new PreguntaVerdaderoFalso("¿2+2 no es 3?");
+        PreguntaVerdaderoFalsoClasico pregunta = new PreguntaVerdaderoFalsoClasico("¿2+2 no es 3?");
 
         pregunta.setVerdaderoOpcionCorrecta();
 
@@ -45,6 +48,5 @@ public class TestPreguntaVoFClasico{
 
         Assertions.assertEquals(Lucas.getPuntos(),0);
         Assertions.assertEquals(Mati.getPuntos(),1);
-
     }
 }

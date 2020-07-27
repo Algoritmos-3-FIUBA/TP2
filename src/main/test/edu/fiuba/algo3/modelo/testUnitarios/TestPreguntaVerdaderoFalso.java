@@ -1,5 +1,9 @@
-package edu.fiuba.algo3.modelo;
+package edu.fiuba.algo3.modelo.testUnitarios;
 
+import edu.fiuba.algo3.modelo.Jugador;
+import edu.fiuba.algo3.modelo.Opcion;
+import edu.fiuba.algo3.modelo.PreguntaVerdaderoFalsoClasico;
+import edu.fiuba.algo3.modelo.Respuesta;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import java.util.LinkedList;
@@ -11,7 +15,7 @@ public class TestPreguntaVerdaderoFalso {
     @Test
     public void CreoPreguntaVerdaderoFalsoClasicoConNombrePregunta1YObtengoNombrePregunta1(){
 
-        PreguntaVerdaderoFalso preguntaPrueba = new PreguntaVerdaderoFalso("Pregunta1");
+        PreguntaVerdaderoFalsoClasico preguntaPrueba = new PreguntaVerdaderoFalsoClasico("Pregunta1");
         preguntaPrueba.setVerdaderoOpcionCorrecta();
 
         assertEquals(preguntaPrueba.getNombrePregunta(), "Pregunta1");
@@ -21,7 +25,7 @@ public class TestPreguntaVerdaderoFalso {
     @Test
     public void CreoPreguntaVerdaderoFalsoClasicoConVerdaderoCorrectaYVerdaderoSumaUnPunto(){
 
-        PreguntaVerdaderoFalso preguntaPrueba = new PreguntaVerdaderoFalso("Pregunta");
+        PreguntaVerdaderoFalsoClasico preguntaPrueba = new PreguntaVerdaderoFalsoClasico("Pregunta");
         preguntaPrueba.setVerdaderoOpcionCorrecta();
 
         Opcion opcionVerdaderoCorrecta = preguntaPrueba.getOpcionVerdadera();
@@ -33,8 +37,8 @@ public class TestPreguntaVerdaderoFalso {
     @Test
     public void CreoPreguntaVerdaderoFalsoClasicoConFalsoCorrectaYFalsoSumaUnPunto(){
 
-        PreguntaVerdaderoFalso preguntaPrueba = new PreguntaVerdaderoFalso("Pregunta");
-        preguntaPrueba.falsoOpcionCorrecta();
+        PreguntaVerdaderoFalsoClasico preguntaPrueba = new PreguntaVerdaderoFalsoClasico("Pregunta");
+        preguntaPrueba.setfalsoOpcionCorrecta();
 
         Opcion opcionFalsoCorrecta = preguntaPrueba.getOpcionFalsa();
 
@@ -45,7 +49,7 @@ public class TestPreguntaVerdaderoFalso {
     @Test
     public void CreoPreguntaVerdaderoFalsoClasicoConFalsoIncorrectoYFalsoSumaCeroPuntos(){
 
-        PreguntaVerdaderoFalso preguntaPrueba = new PreguntaVerdaderoFalso("Pregunta");
+        PreguntaVerdaderoFalsoClasico preguntaPrueba = new PreguntaVerdaderoFalsoClasico("Pregunta");
         preguntaPrueba.setVerdaderoOpcionCorrecta();
 
         Opcion opcionVerdaderoCorrecta = preguntaPrueba.getOpcionFalsa();
@@ -57,8 +61,8 @@ public class TestPreguntaVerdaderoFalso {
     @Test
     public void CreoPreguntaVerdaderoFalsoClasicoConVerdaderoIncorrectoYVerdaderoSumaCeroPuntos(){
 
-        PreguntaVerdaderoFalso preguntaPrueba = new PreguntaVerdaderoFalso("Pregunta");
-        preguntaPrueba.falsoOpcionCorrecta();
+        PreguntaVerdaderoFalsoClasico preguntaPrueba = new PreguntaVerdaderoFalsoClasico("Pregunta");
+        preguntaPrueba.setfalsoOpcionCorrecta();
 
         Opcion opcionFalsoCorrecta = preguntaPrueba.getOpcionVerdadera();
 
@@ -70,7 +74,7 @@ public class TestPreguntaVerdaderoFalso {
     public void CreoPreguntaVerdaderoFalsoYJugadorRespondeMalAsignaPuntosCorrectamente(){
 
         Jugador Lucas = new Jugador("Lucas");
-        PreguntaVerdaderoFalso pregunta = new PreguntaVerdaderoFalso("¿1+1 no es 3?");
+        PreguntaVerdaderoFalsoClasico pregunta = new PreguntaVerdaderoFalsoClasico("¿1+1 no es 3?");
         pregunta.setVerdaderoOpcionCorrecta();
 
         LinkedList<Respuesta> respuestasDeJugadores = new LinkedList<Respuesta>();
@@ -86,7 +90,7 @@ public class TestPreguntaVerdaderoFalso {
     public void CreoPreguntaVerdaderoFalsoYJugadorRespondeBienAsignaPuntosCorrectamente(){
 
         Jugador Lucas = new Jugador("Lucas");
-        PreguntaVerdaderoFalso pregunta = new PreguntaVerdaderoFalso("¿1+1 no es 3?");
+        PreguntaVerdaderoFalsoClasico pregunta = new PreguntaVerdaderoFalsoClasico("¿1+1 no es 3?");
         pregunta.setVerdaderoOpcionCorrecta();
 
         LinkedList<Respuesta> respuestasDeJugadores = new LinkedList<Respuesta>();

@@ -1,14 +1,12 @@
-package edu.fiuba.algo3.modelo;
+package edu.fiuba.algo3.modelo.testUnitarios;
 
+import edu.fiuba.algo3.modelo.Jugador;
+import edu.fiuba.algo3.modelo.Opcion;
+import edu.fiuba.algo3.modelo.OpcionCorrecta;
+import edu.fiuba.algo3.modelo.Respuesta;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Collections;
-import java.util.LinkedList;
-
-import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class TestRespuesta {
     private Opcion opcionVerdadero;
@@ -16,7 +14,7 @@ public class TestRespuesta {
 
     @Test
     public void JugadorRealizaUnaRespuestaCorrectaYObtienePuntaje(){
-        opcionVerdadero = new OpcionCorrecta("Verdadero",1);
+        opcionVerdadero = new OpcionCorrecta("Euler",1);
 
         Jugador jugador = new Jugador("Guido");
         Respuesta respuestaJugador = new Respuesta(opcionVerdadero, jugador);
@@ -28,7 +26,7 @@ public class TestRespuesta {
 
     @Test
     public void JugadorRealizaUnaRespuestaIncorrectaYNoObtienePuntaje(){
-        opcionFalso = new OpcionCorrecta("Falso",0);
+        opcionFalso = new OpcionCorrecta("Gauss",0);
 
         Jugador jugador = new Jugador("Guido");
         Respuesta respuestaJugador = new Respuesta(opcionFalso, jugador);
