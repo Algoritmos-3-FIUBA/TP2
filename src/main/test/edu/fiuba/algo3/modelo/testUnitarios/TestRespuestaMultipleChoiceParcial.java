@@ -32,6 +32,8 @@ public class TestRespuestaMultipleChoiceParcial {
         //Opciones Correctas
         HashSet<Opcion> opcionesCorrectas = new HashSet<Opcion>();
         opcionesCorrectas.add(primeraOpcion);
+
+        //Opciones Incorrectas
         HashSet<Opcion> opcionesIncorrectas = new HashSet<Opcion>();
         opcionesCorrectas.add(sextaOpcion);
 
@@ -57,6 +59,7 @@ public class TestRespuestaMultipleChoiceParcial {
         opcionesCorrectas.add(primeraOpcion);
         opcionesCorrectas.add(segundaOpcion);
 
+        //Opciones Incorrectas
         HashSet<Opcion> opcionesIncorrectas = new HashSet<Opcion>();
         opcionesIncorrectas.add(sextaOpcion);
 
@@ -66,7 +69,7 @@ public class TestRespuestaMultipleChoiceParcial {
     }
 
     @Test
-    public void JugadorRealizaUnaRespuestaCorrectaEligiendoTresOpcionesYObtienePuntaje(){
+    public void JugadorRealizaUnaRespuestaCorrectaEligiendoTresOpcionesYObtienePuntaje() {
         Jugador jugador = new Jugador("Fernando");
 
         //Opciones que son eligidas
@@ -84,6 +87,7 @@ public class TestRespuestaMultipleChoiceParcial {
         opcionesCorrectas.add(segundaOpcion);
         opcionesCorrectas.add(terceraOpcion);
 
+        //Opciones Incorrectas
         HashSet<Opcion> opcionesIncorrectas = new HashSet<Opcion>();
         opcionesIncorrectas.add(sextaOpcion);
 
@@ -113,6 +117,7 @@ public class TestRespuestaMultipleChoiceParcial {
         opcionesCorrectas.add(terceraOpcion);
         opcionesCorrectas.add(cuartaOpcion);
 
+        //Opciones Incorrectas
         HashSet<Opcion> opcionesIncorrectas = new HashSet<Opcion>();
         opcionesIncorrectas.add(sextaOpcion);
 
@@ -144,6 +149,7 @@ public class TestRespuestaMultipleChoiceParcial {
         opcionesCorrectas.add(cuartaOpcion);
         opcionesCorrectas.add(quintaOpcion);
 
+        //Opciones Incorrectas
         HashSet<Opcion> opcionesIncorrectas = new HashSet<Opcion>();
         opcionesIncorrectas.add(sextaOpcion);
 
@@ -166,6 +172,7 @@ public class TestRespuestaMultipleChoiceParcial {
         HashSet<Opcion> opcionesCorrectas = new HashSet<Opcion>();
         opcionesCorrectas.add(segundaOpcion);
 
+        //Opciones Incorrectas
         HashSet<Opcion> opcionesIncorrectas = new HashSet<Opcion>();
         opcionesIncorrectas.add(sextaOpcion);
 
@@ -189,6 +196,7 @@ public class TestRespuestaMultipleChoiceParcial {
         opcionesCorrectas.add(primeraOpcion);
         opcionesCorrectas.add(segundaOpcion);
 
+        //Opciones Incorrectas
         HashSet<Opcion> opcionesIncorrectas = new HashSet<Opcion>();
         opcionesIncorrectas.add(sextaOpcion);
 
@@ -214,6 +222,7 @@ public class TestRespuestaMultipleChoiceParcial {
         opcionesCorrectas.add(primeraOpcion);
         opcionesCorrectas.add(segundaOpcion);
 
+        //Opciones Incorrectas
         HashSet<Opcion> opcionesIncorrectas = new HashSet<Opcion>();
         opcionesIncorrectas.add(sextaOpcion);
 
@@ -241,6 +250,7 @@ public class TestRespuestaMultipleChoiceParcial {
         opcionesCorrectas.add(cuartaOpcion);
         opcionesCorrectas.add(quintaOpcion);
 
+        //Opciones Incorrectas
         HashSet<Opcion> opcionesIncorrectas = new HashSet<Opcion>();
         opcionesIncorrectas.add(sextaOpcion);
         opcionesIncorrectas.add(septimaOpcion);
