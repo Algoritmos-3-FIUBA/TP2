@@ -18,13 +18,13 @@ public class TestRespuestaMultipleChoice {
         Jugador jugador = new Jugador("Guido");
 
         //Opciones que son eligidas
-        Set<Opcion> opcionesElegidas = new HashSet<Opcion>();
+        HashSet<Opcion> opcionesElegidas = new HashSet<Opcion>();
         opcionesElegidas.add(primeraOpcion);
 
         RespuestaMultipleChoice respuestaJugador = new RespuestaMultipleChoice(opcionesElegidas, jugador);
 
         //Opciones Correctas
-        Set<Opcion> opcionesCorrectas = new HashSet<Opcion>();
+        HashSet<Opcion> opcionesCorrectas = new HashSet<Opcion>();
         opcionesCorrectas.add(primeraOpcion);
 
         respuestaJugador.otorgarPuntos(opcionesCorrectas, 1);
@@ -37,7 +37,7 @@ public class TestRespuestaMultipleChoice {
         Jugador jugador = new Jugador("Guido");
 
         //Opciones que son eligidas
-        Set<Opcion> opcionesElegidas = new HashSet<Opcion>();
+        HashSet<Opcion> opcionesElegidas = new HashSet<Opcion>();
         //No importa el orden de opciones elegidas, siempre que sean correctas se asignará el puntaje
         opcionesElegidas.add(segundaOpcion);
         opcionesElegidas.add(primeraOpcion);
@@ -45,7 +45,7 @@ public class TestRespuestaMultipleChoice {
         RespuestaMultipleChoice respuestaJugador = new RespuestaMultipleChoice(opcionesElegidas, jugador);
 
         //Opciones Correctas
-        Set<Opcion> opcionesCorrectas = new HashSet<Opcion>();
+        HashSet<Opcion> opcionesCorrectas = new HashSet<Opcion>();
         opcionesCorrectas.add(primeraOpcion);
         opcionesCorrectas.add(segundaOpcion);
 
@@ -59,7 +59,7 @@ public class TestRespuestaMultipleChoice {
         Jugador jugador = new Jugador("Guido");
 
         //Opciones que son eligidas
-        Set<Opcion> opcionesElegidas = new HashSet<Opcion>();
+        HashSet<Opcion> opcionesElegidas = new HashSet<Opcion>();
         //No importa el orden de opciones elegidas, siempre que sean correctas se asignará el puntaje
         opcionesElegidas.add(terceraOpcion);
         opcionesElegidas.add(primeraOpcion);
@@ -68,7 +68,7 @@ public class TestRespuestaMultipleChoice {
         RespuestaMultipleChoice respuestaJugador = new RespuestaMultipleChoice(opcionesElegidas, jugador);
 
         //Opciones Correctas
-        Set<Opcion> opcionesCorrectas = new HashSet<Opcion>();
+        HashSet<Opcion> opcionesCorrectas = new HashSet<Opcion>();
         opcionesCorrectas.add(primeraOpcion);
         opcionesCorrectas.add(segundaOpcion);
         opcionesCorrectas.add(terceraOpcion);
@@ -83,7 +83,7 @@ public class TestRespuestaMultipleChoice {
         Jugador jugador = new Jugador("Guido");
 
         //Opciones que son eligidas
-        Set<Opcion> opcionesElegidas = new HashSet<Opcion>();
+        HashSet<Opcion> opcionesElegidas = new HashSet<Opcion>();
         //No importa el orden de opciones elegidas, siempre que sean correctas se asignará el puntaje
         opcionesElegidas.add(terceraOpcion);
         opcionesElegidas.add(primeraOpcion);
@@ -93,7 +93,7 @@ public class TestRespuestaMultipleChoice {
         RespuestaMultipleChoice respuestaJugador = new RespuestaMultipleChoice(opcionesElegidas, jugador);
 
         //Opciones Correctas
-        Set<Opcion> opcionesCorrectas = new HashSet<Opcion>();
+        HashSet<Opcion> opcionesCorrectas = new HashSet<Opcion>();
         opcionesCorrectas.add(primeraOpcion);
         opcionesCorrectas.add(segundaOpcion);
         opcionesCorrectas.add(terceraOpcion);
@@ -109,7 +109,7 @@ public class TestRespuestaMultipleChoice {
         Jugador jugador = new Jugador("Guido");
 
         //Opciones que son eligidas
-        Set<Opcion> opcionesElegidas = new HashSet<Opcion>();
+        HashSet<Opcion> opcionesElegidas = new HashSet<Opcion>();
         //No importa el orden de opciones elegidas, siempre que sean correctas se asignará el puntaje
         opcionesElegidas.add(terceraOpcion);
         opcionesElegidas.add(primeraOpcion);
@@ -120,7 +120,7 @@ public class TestRespuestaMultipleChoice {
         RespuestaMultipleChoice respuestaJugador = new RespuestaMultipleChoice(opcionesElegidas, jugador);
 
         //Opciones Correctas
-        Set<Opcion> opcionesCorrectas = new HashSet<Opcion>();
+        HashSet<Opcion> opcionesCorrectas = new HashSet<Opcion>();
         opcionesCorrectas.add(primeraOpcion);
         opcionesCorrectas.add(segundaOpcion);
         opcionesCorrectas.add(terceraOpcion);
@@ -137,13 +137,13 @@ public class TestRespuestaMultipleChoice {
         Jugador jugador = new Jugador("Guido");
 
         //Opciones que son eligidas
-        Set<Opcion> opcionesElegidas = new HashSet<Opcion>();
+        HashSet<Opcion> opcionesElegidas = new HashSet<Opcion>();
         opcionesElegidas.add(primeraOpcion);
 
         RespuestaMultipleChoice respuestaJugador = new RespuestaMultipleChoice(opcionesElegidas, jugador);
 
         //Opciones Correctas
-        Set<Opcion> opcionesCorrectas = new HashSet<Opcion>();
+        HashSet<Opcion> opcionesCorrectas = new HashSet<Opcion>();
         opcionesCorrectas.add(segundaOpcion);
 
         respuestaJugador.otorgarPuntos(opcionesCorrectas, 1);
@@ -156,13 +156,13 @@ public class TestRespuestaMultipleChoice {
         Jugador jugador = new Jugador("Guido");
 
         //Opciones que son eligidas
-        Set<Opcion> opcionesElegidas = new HashSet<Opcion>();
+        HashSet<Opcion> opcionesElegidas = new HashSet<Opcion>();
         opcionesElegidas.add(segundaOpcion);
 
         RespuestaMultipleChoice respuestaJugador = new RespuestaMultipleChoice(opcionesElegidas, jugador);
 
         //Opciones Correctas
-        Set<Opcion> opcionesCorrectas = new HashSet<Opcion>();
+        HashSet<Opcion> opcionesCorrectas = new HashSet<Opcion>();
         opcionesCorrectas.add(primeraOpcion);
         opcionesCorrectas.add(segundaOpcion);
 
@@ -176,7 +176,7 @@ public class TestRespuestaMultipleChoice {
         Jugador jugador = new Jugador("Guido");
 
         //Opciones que son eligidas
-        Set<Opcion> opcionesElegidas = new HashSet<Opcion>();
+        HashSet<Opcion> opcionesElegidas = new HashSet<Opcion>();
         opcionesElegidas.add(segundaOpcion);
         opcionesElegidas.add(primeraOpcion);
         opcionesElegidas.add(quintaOpcion);
@@ -184,7 +184,7 @@ public class TestRespuestaMultipleChoice {
         RespuestaMultipleChoice respuestaJugador = new RespuestaMultipleChoice(opcionesElegidas, jugador);
 
         //Opciones Correctas
-        Set<Opcion> opcionesCorrectas = new HashSet<Opcion>();
+        HashSet<Opcion> opcionesCorrectas = new HashSet<Opcion>();
         opcionesCorrectas.add(primeraOpcion);
         opcionesCorrectas.add(segundaOpcion);
 
@@ -198,7 +198,7 @@ public class TestRespuestaMultipleChoice {
         Jugador jugador = new Jugador("Guido");
 
         //Opciones que son eligidas
-        Set<Opcion> opcionesElegidas = new HashSet<Opcion>();
+        HashSet<Opcion> opcionesElegidas = new HashSet<Opcion>();
         opcionesElegidas.add(cuartaOpcion);
         opcionesElegidas.add(terceraOpcion);
         opcionesElegidas.add(quintaOpcion);
@@ -206,7 +206,7 @@ public class TestRespuestaMultipleChoice {
         RespuestaMultipleChoice respuestaJugador = new RespuestaMultipleChoice(opcionesElegidas, jugador);
 
         //Opciones Correctas
-        Set<Opcion> opcionesCorrectas = new HashSet<Opcion>();
+        HashSet<Opcion> opcionesCorrectas = new HashSet<Opcion>();
         opcionesCorrectas.add(primeraOpcion);
         opcionesCorrectas.add(segundaOpcion);
 
