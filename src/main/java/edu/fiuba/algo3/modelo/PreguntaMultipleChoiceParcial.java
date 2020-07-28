@@ -6,14 +6,15 @@ import java.util.LinkedList;
 public class PreguntaMultipleChoiceParcial {
 
     private String Nombre;
-    private int PuntosOtorgados;
     HashSet<OpcionCorrecta> opcionesCorrectas;
     HashSet<OpcionIncorrecta> opcionesIncorrectas;
 
-    public PreguntaMultipleChoiceParcial(String nombre, int puntos, HashSet<Opcion> opciones){
+    public PreguntaMultipleChoiceParcial(String nombre, HashSet<Opcion> opciones){
 
         Nombre = nombre;
-        PuntosOtorgados = puntos;
+
+        opcionesCorrectas = new HashSet<OpcionCorrecta>();
+        opcionesIncorrectas = new HashSet<OpcionIncorrecta>();
 
         for (Opcion opcion : opciones) {
             opcion.agregarseALaListaCorrespondiente(opcionesCorrectas,opcionesIncorrectas);
@@ -25,6 +26,5 @@ public class PreguntaMultipleChoiceParcial {
 
         for (RespuestaMultipleChoiceParcial respuesta : respuestas)
             respuesta.otorgarPuntos(opcionesCorrectas, opcionesIncorrectas);
-
     }
 }

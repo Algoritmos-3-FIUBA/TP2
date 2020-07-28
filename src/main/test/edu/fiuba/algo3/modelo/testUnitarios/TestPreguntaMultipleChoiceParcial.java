@@ -15,13 +15,13 @@ public class TestPreguntaMultipleChoiceParcial {
 
         HashSet<Opcion> opciones = new HashSet<Opcion>();
 
-        OpcionCorrecta primeraOpcion = new OpcionCorrecta("1969",0);
+        OpcionCorrecta primeraOpcion = new OpcionCorrecta("1969",5);
         OpcionIncorrecta segundaOpcion = new OpcionIncorrecta("1974",0);
 
         opciones.add(primeraOpcion);
         opciones.add(segundaOpcion);
 
-        PreguntaMultipleChoiceParcial pregunta = new PreguntaMultipleChoiceParcial("¿En que año llego el hombre a la luna?",5,opciones);
+        PreguntaMultipleChoiceParcial pregunta = new PreguntaMultipleChoiceParcial("¿En que año llego el hombre a la luna?",opciones);
 
         LinkedList<RespuestaMultipleChoiceParcial> respuestas = new LinkedList<RespuestaMultipleChoiceParcial>();
 
@@ -44,13 +44,13 @@ public class TestPreguntaMultipleChoiceParcial {
 
         HashSet<Opcion> opciones = new HashSet<Opcion>();
 
-        OpcionCorrecta primeraOpcion = new OpcionCorrecta("1969",0);
+        OpcionCorrecta primeraOpcion = new OpcionCorrecta("1969",5);
         OpcionIncorrecta segundaOpcion = new OpcionIncorrecta("1974",0);
 
         opciones.add(primeraOpcion);
         opciones.add(segundaOpcion);
 
-        PreguntaMultipleChoiceParcial pregunta = new PreguntaMultipleChoiceParcial("¿En que año llego el hombre a la luna?",5,opciones);
+        PreguntaMultipleChoiceParcial pregunta = new PreguntaMultipleChoiceParcial("¿En que año llego el hombre a la luna?",opciones);
 
         LinkedList<RespuestaMultipleChoiceParcial> respuestas = new LinkedList<RespuestaMultipleChoiceParcial>();
 
@@ -73,9 +73,9 @@ public class TestPreguntaMultipleChoiceParcial {
 
         HashSet<Opcion> opciones = new HashSet<Opcion>();
 
-        OpcionCorrecta primeraOpcion = new OpcionCorrecta("Paris",0);
-        OpcionCorrecta segundaOpcion = new OpcionCorrecta("Francia",0);
-        OpcionCorrecta terceraOpcion = new OpcionCorrecta("Europa",0);
+        OpcionCorrecta primeraOpcion = new OpcionCorrecta("Paris",1);
+        OpcionCorrecta segundaOpcion = new OpcionCorrecta("Francia",1);
+        OpcionCorrecta terceraOpcion = new OpcionCorrecta("Europa",1);
         OpcionIncorrecta cuartaOpcion = new OpcionIncorrecta("Argentina",0);
 
         opciones.add(primeraOpcion);
@@ -83,7 +83,7 @@ public class TestPreguntaMultipleChoiceParcial {
         opciones.add(terceraOpcion);
         opciones.add(cuartaOpcion);
 
-        PreguntaMultipleChoiceParcial pregunta = new PreguntaMultipleChoiceParcial("¿Donde se encuentra la torre Eiffel?",3,opciones);
+        PreguntaMultipleChoiceParcial pregunta = new PreguntaMultipleChoiceParcial("¿Donde se encuentra la torre Eiffel?",opciones);
 
         LinkedList<RespuestaMultipleChoiceParcial> respuestas = new LinkedList<RespuestaMultipleChoiceParcial>();
 
@@ -107,7 +107,7 @@ public class TestPreguntaMultipleChoiceParcial {
 
         HashSet<Opcion> opciones = new HashSet<Opcion>();
 
-        OpcionCorrecta primeraOpcion = new OpcionCorrecta("C",0);
+        OpcionCorrecta primeraOpcion = new OpcionCorrecta("C",1);
         OpcionIncorrecta segundaOpcion = new OpcionIncorrecta("Java",0);
         OpcionIncorrecta terceraOpcion = new OpcionIncorrecta("Smalltalk",0);
 
@@ -115,7 +115,7 @@ public class TestPreguntaMultipleChoiceParcial {
         opciones.add(segundaOpcion);
         opciones.add(terceraOpcion);
 
-        PreguntaMultipleChoiceParcial pregunta = new PreguntaMultipleChoiceParcial("¿Cuales de los siguientes lenguajes no son orientados a objetos?",1,opciones);
+        PreguntaMultipleChoiceParcial pregunta = new PreguntaMultipleChoiceParcial("¿Cuales de los siguientes lenguajes no son orientados a objetos?",opciones);
 
         LinkedList<RespuestaMultipleChoiceParcial> respuestas = new LinkedList<RespuestaMultipleChoiceParcial>();
 
@@ -139,17 +139,17 @@ public class TestPreguntaMultipleChoiceParcial {
 
         HashSet<Opcion> opciones = new HashSet<Opcion>();
 
-        OpcionCorrecta primeraOpcion = new OpcionCorrecta("Encapsulamiento",0);
-        OpcionCorrecta segundaOpcion = new OpcionCorrecta("Polimorfismo",0);
-        OpcionCorrecta terceraOpcion = new OpcionCorrecta("Ocultamiento de la informacio",0);
-        OpcionCorrecta cuartaOpcion = new OpcionCorrecta("Herencia",0);
+        OpcionCorrecta primeraOpcion = new OpcionCorrecta("Encapsulamiento",1);
+        OpcionCorrecta segundaOpcion = new OpcionCorrecta("Polimorfismo",1);
+        OpcionCorrecta terceraOpcion = new OpcionCorrecta("Ocultamiento de la informacio",1);
+        OpcionCorrecta cuartaOpcion = new OpcionCorrecta("Herencia",1);
 
         opciones.add(primeraOpcion);
         opciones.add(segundaOpcion);
         opciones.add(terceraOpcion);
         opciones.add(cuartaOpcion);
 
-        PreguntaMultipleChoiceParcial pregunta = new PreguntaMultipleChoiceParcial("¿Cuales de los siguientes conceptos son importantes en POO?",4,opciones);
+        PreguntaMultipleChoiceParcial pregunta = new PreguntaMultipleChoiceParcial("¿Cuales de los siguientes conceptos son importantes en POO?",opciones);
 
         LinkedList<RespuestaMultipleChoiceParcial> respuestas = new LinkedList<RespuestaMultipleChoiceParcial>();
 
@@ -177,8 +177,8 @@ public class TestPreguntaMultipleChoiceParcial {
 
         HashSet<Opcion> opciones = new HashSet<Opcion>();
 
-        OpcionCorrecta primeraOpcion = new OpcionCorrecta("Sarmiento",0);
-        OpcionCorrecta segundaOpcion = new OpcionCorrecta("Belgrano",0);
+        OpcionCorrecta primeraOpcion = new OpcionCorrecta("Sarmiento",5);
+        OpcionCorrecta segundaOpcion = new OpcionCorrecta("Belgrano",5);
         OpcionIncorrecta terceraOpcion = new OpcionIncorrecta("Saavedra",0);
         OpcionIncorrecta cuartaOpcion = new OpcionIncorrecta("Liniers",0);
 
@@ -187,7 +187,7 @@ public class TestPreguntaMultipleChoiceParcial {
         opciones.add(terceraOpcion);
         opciones.add(cuartaOpcion);
 
-        PreguntaMultipleChoiceParcial pregunta = new PreguntaMultipleChoiceParcial("¿Quien de los siguientes proceres aparece en un billete?",10,opciones);
+        PreguntaMultipleChoiceParcial pregunta = new PreguntaMultipleChoiceParcial("¿Quien de los siguientes proceres aparece en un billete?",opciones);
 
         LinkedList <RespuestaMultipleChoiceParcial> respuestas = new LinkedList <RespuestaMultipleChoiceParcial>();
 
@@ -215,6 +215,6 @@ public class TestPreguntaMultipleChoiceParcial {
 
         assertEquals(Juan.getPuntos(),0);
         assertEquals(Mati.getPuntos(),5);
-        assertEquals(Juan.getPuntos(),10);
+        assertEquals(Lucas.getPuntos(),10);
     }
 }
