@@ -18,7 +18,7 @@ public abstract class Opcion {
         return Nombre;
     }
 
-
+/*
     //Reimplementación del equals.
     public boolean equals(Object obj) {
         if (obj == this) { return true; }
@@ -29,12 +29,7 @@ public abstract class Opcion {
         } else{ return false; }
     }
 
-
-
-
-
-
-
+*/
 
 }
 
