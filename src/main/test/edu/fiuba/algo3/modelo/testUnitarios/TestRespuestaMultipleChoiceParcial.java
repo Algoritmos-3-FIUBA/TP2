@@ -30,12 +30,12 @@ public class TestRespuestaMultipleChoiceParcial {
         RespuestaMultipleChoiceParcial respuestaJugador = new RespuestaMultipleChoiceParcial(opcionesElegidas, jugador);
 
         //Opciones Correctas
-        HashSet<Opcion> opcionesCorrectas = new HashSet<Opcion>();
-        opcionesCorrectas.add(primeraOpcion);
+        HashSet<OpcionCorrecta> opcionesCorrectas = new HashSet<OpcionCorrecta>();
+        opcionesCorrectas.add((OpcionCorrecta) primeraOpcion);
 
         //Opciones Incorrectas
-        HashSet<Opcion> opcionesIncorrectas = new HashSet<Opcion>();
-        opcionesCorrectas.add(sextaOpcion);
+        HashSet<OpcionIncorrecta> opcionesIncorrectas = new HashSet<OpcionIncorrecta>();
+        opcionesIncorrectas.add((OpcionIncorrecta)sextaOpcion);
 
         respuestaJugador.otorgarPuntos(opcionesCorrectas, opcionesIncorrectas);
 
@@ -55,13 +55,13 @@ public class TestRespuestaMultipleChoiceParcial {
         RespuestaMultipleChoiceParcial respuestaJugador = new RespuestaMultipleChoiceParcial(opcionesElegidas, jugador);
 
         //Opciones Correctas
-        HashSet<Opcion> opcionesCorrectas = new HashSet<Opcion>();
-        opcionesCorrectas.add(primeraOpcion);
-        opcionesCorrectas.add(segundaOpcion);
+        HashSet<OpcionCorrecta> opcionesCorrectas = new HashSet<OpcionCorrecta>();
+        opcionesCorrectas.add((OpcionCorrecta)primeraOpcion);
+        opcionesCorrectas.add((OpcionCorrecta)segundaOpcion);
 
         //Opciones Incorrectas
-        HashSet<Opcion> opcionesIncorrectas = new HashSet<Opcion>();
-        opcionesIncorrectas.add(sextaOpcion);
+        HashSet<OpcionIncorrecta> opcionesIncorrectas = new HashSet<OpcionIncorrecta>();
+        opcionesIncorrectas.add((OpcionIncorrecta)sextaOpcion);
 
         respuestaJugador.otorgarPuntos(opcionesCorrectas, opcionesIncorrectas);
 
@@ -82,14 +82,14 @@ public class TestRespuestaMultipleChoiceParcial {
         RespuestaMultipleChoiceParcial respuestaJugador = new RespuestaMultipleChoiceParcial(opcionesElegidas, jugador);
 
         //Opciones Correctas
-        HashSet<Opcion> opcionesCorrectas = new HashSet<Opcion>();
-        opcionesCorrectas.add(primeraOpcion);
-        opcionesCorrectas.add(segundaOpcion);
-        opcionesCorrectas.add(terceraOpcion);
+        HashSet<OpcionCorrecta> opcionesCorrectas = new HashSet<OpcionCorrecta>();
+        opcionesCorrectas.add((OpcionCorrecta)primeraOpcion);
+        opcionesCorrectas.add((OpcionCorrecta)segundaOpcion);
+        opcionesCorrectas.add((OpcionCorrecta)terceraOpcion);
 
         //Opciones Incorrectas
-        HashSet<Opcion> opcionesIncorrectas = new HashSet<Opcion>();
-        opcionesIncorrectas.add(sextaOpcion);
+        HashSet<OpcionIncorrecta> opcionesIncorrectas = new HashSet<OpcionIncorrecta>();
+        opcionesIncorrectas.add((OpcionIncorrecta)sextaOpcion);
 
         respuestaJugador.otorgarPuntos(opcionesCorrectas, opcionesIncorrectas);
 
@@ -98,7 +98,7 @@ public class TestRespuestaMultipleChoiceParcial {
 
     @Test
     public void JugadorRealizaUnaRespuestaCorrectaEligiendoCuatroOpcionesYObtienePuntaje(){
-        Jugador jugador = new Jugador("Fernand");
+        Jugador jugador = new Jugador("Fernando");
 
         //Opciones que son eligidas
         HashSet<Opcion> opcionesElegidas = new HashSet<Opcion>();
@@ -111,15 +111,15 @@ public class TestRespuestaMultipleChoiceParcial {
         RespuestaMultipleChoiceParcial respuestaJugador = new RespuestaMultipleChoiceParcial(opcionesElegidas, jugador);
 
         //Opciones Correctas
-        HashSet<Opcion> opcionesCorrectas = new HashSet<Opcion>();
-        opcionesCorrectas.add(primeraOpcion);
-        opcionesCorrectas.add(segundaOpcion);
-        opcionesCorrectas.add(terceraOpcion);
-        opcionesCorrectas.add(cuartaOpcion);
+        HashSet<OpcionCorrecta> opcionesCorrectas = new HashSet<OpcionCorrecta>();
+        opcionesCorrectas.add((OpcionCorrecta)primeraOpcion);
+        opcionesCorrectas.add((OpcionCorrecta)segundaOpcion);
+        opcionesCorrectas.add((OpcionCorrecta)terceraOpcion);
+        opcionesCorrectas.add((OpcionCorrecta)cuartaOpcion);
 
         //Opciones Incorrectas
-        HashSet<Opcion> opcionesIncorrectas = new HashSet<Opcion>();
-        opcionesIncorrectas.add(sextaOpcion);
+        HashSet<OpcionIncorrecta> opcionesIncorrectas = new HashSet<OpcionIncorrecta>();
+        opcionesIncorrectas.add((OpcionIncorrecta)sextaOpcion);
 
         respuestaJugador.otorgarPuntos(opcionesCorrectas, opcionesIncorrectas);
 
@@ -142,16 +142,16 @@ public class TestRespuestaMultipleChoiceParcial {
         RespuestaMultipleChoiceParcial respuestaJugador = new RespuestaMultipleChoiceParcial(opcionesElegidas, jugador);
 
         //Opciones Correctas
-        HashSet<Opcion> opcionesCorrectas = new HashSet<Opcion>();
-        opcionesCorrectas.add(primeraOpcion);
-        opcionesCorrectas.add(segundaOpcion);
-        opcionesCorrectas.add(terceraOpcion);
-        opcionesCorrectas.add(cuartaOpcion);
-        opcionesCorrectas.add(quintaOpcion);
+        HashSet<OpcionCorrecta> opcionesCorrectas = new HashSet<OpcionCorrecta>();
+        opcionesCorrectas.add((OpcionCorrecta)primeraOpcion);
+        opcionesCorrectas.add((OpcionCorrecta)segundaOpcion);
+        opcionesCorrectas.add((OpcionCorrecta)terceraOpcion);
+        opcionesCorrectas.add((OpcionCorrecta)cuartaOpcion);
+        opcionesCorrectas.add((OpcionCorrecta)quintaOpcion);
 
         //Opciones Incorrectas
-        HashSet<Opcion> opcionesIncorrectas = new HashSet<Opcion>();
-        opcionesIncorrectas.add(sextaOpcion);
+        HashSet<OpcionIncorrecta> opcionesIncorrectas = new HashSet<OpcionIncorrecta>();
+        opcionesIncorrectas.add((OpcionIncorrecta)sextaOpcion);
 
         respuestaJugador.otorgarPuntos(opcionesCorrectas, opcionesIncorrectas);
 
@@ -169,12 +169,12 @@ public class TestRespuestaMultipleChoiceParcial {
         RespuestaMultipleChoiceParcial respuestaJugador = new RespuestaMultipleChoiceParcial(opcionesElegidas, jugador);
 
         //Opciones Correctas
-        HashSet<Opcion> opcionesCorrectas = new HashSet<Opcion>();
-        opcionesCorrectas.add(segundaOpcion);
+        HashSet<OpcionCorrecta> opcionesCorrectas = new HashSet<OpcionCorrecta>();
+        opcionesCorrectas.add((OpcionCorrecta)segundaOpcion);
 
         //Opciones Incorrectas
-        HashSet<Opcion> opcionesIncorrectas = new HashSet<Opcion>();
-        opcionesIncorrectas.add(sextaOpcion);
+        HashSet<OpcionIncorrecta> opcionesIncorrectas = new HashSet<OpcionIncorrecta>();
+        opcionesIncorrectas.add((OpcionIncorrecta)sextaOpcion);
 
         respuestaJugador.otorgarPuntos(opcionesCorrectas, opcionesIncorrectas);
 
@@ -192,13 +192,13 @@ public class TestRespuestaMultipleChoiceParcial {
         RespuestaMultipleChoiceParcial respuestaJugador = new RespuestaMultipleChoiceParcial(opcionesElegidas, jugador);
 
         //Opciones Correctas
-        HashSet<Opcion> opcionesCorrectas = new HashSet<Opcion>();
-        opcionesCorrectas.add(primeraOpcion);
-        opcionesCorrectas.add(segundaOpcion);
+        HashSet<OpcionCorrecta> opcionesCorrectas = new HashSet<OpcionCorrecta>();
+        opcionesCorrectas.add((OpcionCorrecta)primeraOpcion);
+        opcionesCorrectas.add((OpcionCorrecta)segundaOpcion);
 
         //Opciones Incorrectas
-        HashSet<Opcion> opcionesIncorrectas = new HashSet<Opcion>();
-        opcionesIncorrectas.add(sextaOpcion);
+        HashSet<OpcionIncorrecta> opcionesIncorrectas = new HashSet<OpcionIncorrecta>();
+        opcionesIncorrectas.add((OpcionIncorrecta)sextaOpcion);
 
         respuestaJugador.otorgarPuntos(opcionesCorrectas, opcionesIncorrectas);
 
@@ -218,13 +218,13 @@ public class TestRespuestaMultipleChoiceParcial {
         RespuestaMultipleChoiceParcial respuestaJugador = new RespuestaMultipleChoiceParcial(opcionesElegidas, jugador);
 
         //Opciones Correctas
-        HashSet<Opcion> opcionesCorrectas = new HashSet<Opcion>();
-        opcionesCorrectas.add(primeraOpcion);
-        opcionesCorrectas.add(segundaOpcion);
+        HashSet<OpcionCorrecta> opcionesCorrectas = new HashSet<OpcionCorrecta>();
+        opcionesCorrectas.add((OpcionCorrecta)primeraOpcion);
+        opcionesCorrectas.add((OpcionCorrecta)segundaOpcion);
 
         //Opciones Incorrectas
-        HashSet<Opcion> opcionesIncorrectas = new HashSet<Opcion>();
-        opcionesIncorrectas.add(sextaOpcion);
+        HashSet<OpcionIncorrecta> opcionesIncorrectas = new HashSet<OpcionIncorrecta>();
+        opcionesIncorrectas.add((OpcionIncorrecta)sextaOpcion);
 
         respuestaJugador.otorgarPuntos(opcionesCorrectas, opcionesIncorrectas);
 
@@ -245,16 +245,16 @@ public class TestRespuestaMultipleChoiceParcial {
         RespuestaMultipleChoiceParcial respuestaJugador = new RespuestaMultipleChoiceParcial(opcionesElegidas, jugador);
 
         //Opciones Correctas
-        HashSet<Opcion> opcionesCorrectas = new HashSet<Opcion>();
-        opcionesCorrectas.add(terceraOpcion);
-        opcionesCorrectas.add(cuartaOpcion);
-        opcionesCorrectas.add(quintaOpcion);
+        HashSet<OpcionCorrecta> opcionesCorrectas = new HashSet<OpcionCorrecta>();
+        opcionesCorrectas.add((OpcionCorrecta)terceraOpcion);
+        opcionesCorrectas.add((OpcionCorrecta)cuartaOpcion);
+        opcionesCorrectas.add((OpcionCorrecta)quintaOpcion);
 
         //Opciones Incorrectas
-        HashSet<Opcion> opcionesIncorrectas = new HashSet<Opcion>();
-        opcionesIncorrectas.add(sextaOpcion);
-        opcionesIncorrectas.add(septimaOpcion);
-        opcionesIncorrectas.add(octavaOpcion);
+        HashSet<OpcionIncorrecta> opcionesIncorrectas = new HashSet<OpcionIncorrecta>();
+        opcionesIncorrectas.add((OpcionIncorrecta)sextaOpcion);
+        opcionesIncorrectas.add((OpcionIncorrecta)septimaOpcion);
+        opcionesIncorrectas.add((OpcionIncorrecta)octavaOpcion);
 
         respuestaJugador.otorgarPuntos(opcionesCorrectas, opcionesIncorrectas);
 
