@@ -1,5 +1,7 @@
 package edu.fiuba.algo3.modelo;
 
+import java.util.HashSet;
+
 public abstract class Opcion {
 
     protected String Nombre;
@@ -13,6 +15,8 @@ public abstract class Opcion {
     public int puntosObtenidos(){
         return PuntosOtorgados;
     }
+
+    public abstract void agregarseALaListaCorrespondiente(HashSet<OpcionCorrecta> opcionesCorrectas,HashSet<OpcionIncorrecta> opcionesIncorrectas);
 
     public String getNombre(){
         return Nombre;

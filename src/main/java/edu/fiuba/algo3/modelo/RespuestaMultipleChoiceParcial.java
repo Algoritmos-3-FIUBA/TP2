@@ -12,7 +12,7 @@ public class RespuestaMultipleChoiceParcial {
         this.jugador = jugador;
     }
 
-    public void otorgarPuntos(HashSet<Opcion> opcionesCorrectas, HashSet<Opcion> opcionesIncorrectas) {
+    public void otorgarPuntos(HashSet<OpcionCorrecta> opcionesCorrectas, HashSet<OpcionIncorrecta> opcionesIncorrectas) {
 
         HashSet<Opcion> interseccion = new HashSet<Opcion>(opcionesEligidas);
         interseccion.retainAll(opcionesIncorrectas);
