@@ -14,5 +14,22 @@ public abstract class Opcion {
         return PuntosOtorgados;
     }
 
+    public String getNombre(){
+        return Nombre;
+    }
+
+/*
+    //Reimplementación del equals.
+    public boolean equals(Object obj) {
+        if (obj == this) { return true; }
+        if (obj == null) { return false; }
+        if (obj instanceof Opcion) {
+            Opcion otraOpcion = (Opcion)obj;
+            return otraOpcion.getNombre().equals(getNombre());
+        } else{ return false; }
+    }
+
+*/
+
 }
 
