@@ -24,8 +24,8 @@ public class TestRespuestaMultipleChoice {
         RespuestaMultipleChoice respuestaJugador = new RespuestaMultipleChoice(opcionesElegidas, jugador);
 
         //Opciones Correctas
-        HashSet<Opcion> opcionesCorrectas = new HashSet<Opcion>();
-        opcionesCorrectas.add(primeraOpcion);
+        HashSet<OpcionCorrecta> opcionesCorrectas = new HashSet<OpcionCorrecta>();
+        opcionesCorrectas.add((OpcionCorrecta)primeraOpcion);
 
         respuestaJugador.otorgarPuntos(opcionesCorrectas, 1);
 
@@ -45,9 +45,9 @@ public class TestRespuestaMultipleChoice {
         RespuestaMultipleChoice respuestaJugador = new RespuestaMultipleChoice(opcionesElegidas, jugador);
 
         //Opciones Correctas
-        HashSet<Opcion> opcionesCorrectas = new HashSet<Opcion>();
-        opcionesCorrectas.add(primeraOpcion);
-        opcionesCorrectas.add(segundaOpcion);
+        HashSet<OpcionCorrecta> opcionesCorrectas = new HashSet<OpcionCorrecta>();
+        opcionesCorrectas.add((OpcionCorrecta)primeraOpcion);
+        opcionesCorrectas.add((OpcionCorrecta)segundaOpcion);
 
         respuestaJugador.otorgarPuntos(opcionesCorrectas, 1);
 
@@ -68,10 +68,10 @@ public class TestRespuestaMultipleChoice {
         RespuestaMultipleChoice respuestaJugador = new RespuestaMultipleChoice(opcionesElegidas, jugador);
 
         //Opciones Correctas
-        HashSet<Opcion> opcionesCorrectas = new HashSet<Opcion>();
-        opcionesCorrectas.add(primeraOpcion);
-        opcionesCorrectas.add(segundaOpcion);
-        opcionesCorrectas.add(terceraOpcion);
+        HashSet<OpcionCorrecta> opcionesCorrectas = new HashSet<OpcionCorrecta>();
+        opcionesCorrectas.add((OpcionCorrecta)primeraOpcion);
+        opcionesCorrectas.add((OpcionCorrecta)segundaOpcion);
+        opcionesCorrectas.add((OpcionCorrecta)terceraOpcion);
 
         respuestaJugador.otorgarPuntos(opcionesCorrectas, 1);
 
@@ -93,11 +93,11 @@ public class TestRespuestaMultipleChoice {
         RespuestaMultipleChoice respuestaJugador = new RespuestaMultipleChoice(opcionesElegidas, jugador);
 
         //Opciones Correctas
-        HashSet<Opcion> opcionesCorrectas = new HashSet<Opcion>();
-        opcionesCorrectas.add(primeraOpcion);
-        opcionesCorrectas.add(segundaOpcion);
-        opcionesCorrectas.add(terceraOpcion);
-        opcionesCorrectas.add(cuartaOpcion);
+        HashSet<OpcionCorrecta> opcionesCorrectas = new HashSet<OpcionCorrecta>();
+        opcionesCorrectas.add((OpcionCorrecta)primeraOpcion);
+        opcionesCorrectas.add((OpcionCorrecta)segundaOpcion);
+        opcionesCorrectas.add((OpcionCorrecta)terceraOpcion);
+        opcionesCorrectas.add((OpcionCorrecta)cuartaOpcion);
 
         respuestaJugador.otorgarPuntos(opcionesCorrectas, 1);
 
@@ -120,12 +120,12 @@ public class TestRespuestaMultipleChoice {
         RespuestaMultipleChoice respuestaJugador = new RespuestaMultipleChoice(opcionesElegidas, jugador);
 
         //Opciones Correctas
-        HashSet<Opcion> opcionesCorrectas = new HashSet<Opcion>();
-        opcionesCorrectas.add(primeraOpcion);
-        opcionesCorrectas.add(segundaOpcion);
-        opcionesCorrectas.add(terceraOpcion);
-        opcionesCorrectas.add(cuartaOpcion);
-        opcionesCorrectas.add(quintaOpcion);
+        HashSet<OpcionCorrecta> opcionesCorrectas = new HashSet<OpcionCorrecta>();
+        opcionesCorrectas.add((OpcionCorrecta)primeraOpcion);
+        opcionesCorrectas.add((OpcionCorrecta)segundaOpcion);
+        opcionesCorrectas.add((OpcionCorrecta)terceraOpcion);
+        opcionesCorrectas.add((OpcionCorrecta)cuartaOpcion);
+        opcionesCorrectas.add((OpcionCorrecta)quintaOpcion);
 
         respuestaJugador.otorgarPuntos(opcionesCorrectas, 1);
 
@@ -143,8 +143,8 @@ public class TestRespuestaMultipleChoice {
         RespuestaMultipleChoice respuestaJugador = new RespuestaMultipleChoice(opcionesElegidas, jugador);
 
         //Opciones Correctas
-        HashSet<Opcion> opcionesCorrectas = new HashSet<Opcion>();
-        opcionesCorrectas.add(segundaOpcion);
+        HashSet<OpcionCorrecta> opcionesCorrectas = new HashSet<OpcionCorrecta>();
+        opcionesCorrectas.add((OpcionCorrecta)segundaOpcion);
 
         respuestaJugador.otorgarPuntos(opcionesCorrectas, 1);
 
@@ -162,9 +162,9 @@ public class TestRespuestaMultipleChoice {
         RespuestaMultipleChoice respuestaJugador = new RespuestaMultipleChoice(opcionesElegidas, jugador);
 
         //Opciones Correctas
-        HashSet<Opcion> opcionesCorrectas = new HashSet<Opcion>();
-        opcionesCorrectas.add(primeraOpcion);
-        opcionesCorrectas.add(segundaOpcion);
+        HashSet<OpcionCorrecta> opcionesCorrectas = new HashSet<OpcionCorrecta>();
+        opcionesCorrectas.add((OpcionCorrecta)primeraOpcion);
+        opcionesCorrectas.add((OpcionCorrecta)segundaOpcion);
 
         respuestaJugador.otorgarPuntos(opcionesCorrectas, 1);
 
@@ -184,9 +184,9 @@ public class TestRespuestaMultipleChoice {
         RespuestaMultipleChoice respuestaJugador = new RespuestaMultipleChoice(opcionesElegidas, jugador);
 
         //Opciones Correctas
-        HashSet<Opcion> opcionesCorrectas = new HashSet<Opcion>();
-        opcionesCorrectas.add(primeraOpcion);
-        opcionesCorrectas.add(segundaOpcion);
+        HashSet<OpcionCorrecta> opcionesCorrectas = new HashSet<OpcionCorrecta>();
+        opcionesCorrectas.add((OpcionCorrecta)primeraOpcion);
+        opcionesCorrectas.add((OpcionCorrecta)segundaOpcion);
 
         respuestaJugador.otorgarPuntos(opcionesCorrectas, 1);
 
@@ -206,9 +206,9 @@ public class TestRespuestaMultipleChoice {
         RespuestaMultipleChoice respuestaJugador = new RespuestaMultipleChoice(opcionesElegidas, jugador);
 
         //Opciones Correctas
-        HashSet<Opcion> opcionesCorrectas = new HashSet<Opcion>();
-        opcionesCorrectas.add(primeraOpcion);
-        opcionesCorrectas.add(segundaOpcion);
+        HashSet<OpcionCorrecta> opcionesCorrectas = new HashSet<OpcionCorrecta>();
+        opcionesCorrectas.add((OpcionCorrecta)primeraOpcion);
+        opcionesCorrectas.add((OpcionCorrecta)segundaOpcion);
 
         respuestaJugador.otorgarPuntos(opcionesCorrectas, 1);
 
