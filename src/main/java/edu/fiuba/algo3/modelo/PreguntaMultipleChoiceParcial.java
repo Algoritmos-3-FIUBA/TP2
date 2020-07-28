@@ -1,6 +1,7 @@
 package edu.fiuba.algo3.modelo;
 
 import java.util.HashSet;
+import java.util.LinkedList;
 
 public class PreguntaMultipleChoiceParcial {
 
@@ -23,7 +24,7 @@ public class PreguntaMultipleChoiceParcial {
     public void evaluarRespuestas(LinkedList <RespuestaMultipleChoiceParcial> respuestas){
 
         for (RespuestaMultipleChoiceParcial respuesta : respuestas)
-            respuesta.otorgarPuntos(opcionesCorrectas, opcionesIncorrectas, PuntosOtorgados);
+            respuesta.otorgarPuntos(opcionesCorrectas, opcionesIncorrectas);
 
     }
 }

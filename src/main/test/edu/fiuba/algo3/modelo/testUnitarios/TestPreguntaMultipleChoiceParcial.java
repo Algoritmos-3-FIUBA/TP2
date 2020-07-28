@@ -28,7 +28,7 @@ public class TestPreguntaMultipleChoiceParcial {
         HashSet<Opcion> opcionesSeleccionadas = new HashSet<Opcion>();
         opcionesSeleccionadas.add(primeraOpcion);
 
-        RespuestaMultipleChoiceParcial respuesta = new RespuestaMultipleChoiceParcial(Juan,opcionesSeleccionadas);
+        RespuestaMultipleChoiceParcial respuesta = new RespuestaMultipleChoiceParcial(opcionesSeleccionadas, Juan);
 
         respuestas.add(respuesta);
 
@@ -57,7 +57,7 @@ public class TestPreguntaMultipleChoiceParcial {
         HashSet<Opcion> opcionesSeleccionadas = new HashSet<Opcion>();
         opcionesSeleccionadas.add(segundaOpcion);
 
-        RespuestaMultipleChoiceParcial respuesta = new RespuestaMultipleChoiceParcial(Juan,opcionesSeleccionadas);
+        RespuestaMultipleChoiceParcial respuesta = new RespuestaMultipleChoiceParcial(opcionesSeleccionadas, Juan);
 
         respuestas.add(respuesta);
 
@@ -91,7 +91,7 @@ public class TestPreguntaMultipleChoiceParcial {
         opcionesSeleccionadas.add(primeraOpcion);
         opcionesSeleccionadas.add(segundaOpcion);
 
-        RespuestaMultipleChoiceParcial respuesta = new RespuestaMultipleChoiceParcial(Juan,opcionesSeleccionadas);
+        RespuestaMultipleChoiceParcial respuesta = new RespuestaMultipleChoiceParcial(opcionesSeleccionadas, Juan);
 
         respuestas.add(respuesta);
 
@@ -123,7 +123,7 @@ public class TestPreguntaMultipleChoiceParcial {
         opcionesSeleccionadas.add(primeraOpcion);
         opcionesSeleccionadas.add(terceraOpcion);
 
-        RespuestaMultipleChoiceParcial respuesta = new RespuestaMultipleChoiceParcial(Juan,opcionesSeleccionadas);
+        RespuestaMultipleChoiceParcial respuesta = new RespuestaMultipleChoiceParcial(opcionesSeleccionadas, Juan);
 
         respuestas.add(respuesta);
 
@@ -159,7 +159,7 @@ public class TestPreguntaMultipleChoiceParcial {
         opcionesSeleccionadas.add(terceraOpcion);
         opcionesSeleccionadas.add(cuartaOpcion);
 
-        RespuestaMultipleChoiceParcial respuesta = new RespuestaMultipleChoiceParcial(Juan,opcionesSeleccionadas);
+        RespuestaMultipleChoiceParcial respuesta = new RespuestaMultipleChoiceParcial(opcionesSeleccionadas, Juan);
 
         respuestas.add(respuesta);
 
@@ -203,9 +203,9 @@ public class TestPreguntaMultipleChoiceParcial {
         opcionesSeleccionadasLucas.add(primeraOpcion);
         opcionesSeleccionadasLucas.add(segundaOpcion);
 
-        RespuestaMultipleChoiceParcial respuestaJuan = new RespuestaMultipleChoiceParcial(Juan,opcionesSeleccionadasJuan);
-        RespuestaMultipleChoiceParcial respuestaMati = new RespuestaMultipleChoiceParcial(Juan,opcionesSeleccionadasMati);
-        RespuestaMultipleChoiceParcial respuestaLucas = new RespuestaMultipleChoiceParcial(Juan,opcionesSeleccionadasLucas);
+        RespuestaMultipleChoiceParcial respuestaJuan = new RespuestaMultipleChoiceParcial(opcionesSeleccionadasJuan, Juan);
+        RespuestaMultipleChoiceParcial respuestaMati = new RespuestaMultipleChoiceParcial(opcionesSeleccionadasMati, Mati);
+        RespuestaMultipleChoiceParcial respuestaLucas = new RespuestaMultipleChoiceParcial(opcionesSeleccionadasLucas, Lucas);
 
         respuestas.add(respuestaJuan);
         respuestas.add(respuestaMati);
