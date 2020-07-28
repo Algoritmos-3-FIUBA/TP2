@@ -1,5 +1,6 @@
 package edu.fiuba.algo3.modelo;
 
+import java.util.HashSet;
 import java.util.Set;
 
 public class RespuestaMultipleChoice {
@@ -11,7 +12,7 @@ public class RespuestaMultipleChoice {
         this.jugador = jugador;
     }
 
-    public void otorgarPuntos(Set<Opcion> opcionesCorrectas, int cantidadDePuntos) {
+    public void otorgarPuntos(HashSet<OpcionCorrecta> opcionesCorrectas, int cantidadDePuntos) {
         if (opcionesEligidas.equals(opcionesCorrectas)){
             jugador.sumarPuntos(cantidadDePuntos);
         }
