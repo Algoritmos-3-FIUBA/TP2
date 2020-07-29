@@ -22,6 +22,14 @@ public class PreguntaMultipleChoice {
             opcion.agregarseALaListaCorrespondiente(opcionesCorrectas, opcionesIncorrectas);
     }
 
+    public HashSet getOpcionesCorrectas(){
+        return opcionesCorrectas;
+    }
+
+    public HashSet getOpcionesIncorrectas(){
+        return opcionesIncorrectas;
+    }
+
     public void evaluarRespuestas(LinkedList<RespuestaMultipleChoice> respuestas) {
 
         for (RespuestaMultipleChoice respuesta : respuestas)
