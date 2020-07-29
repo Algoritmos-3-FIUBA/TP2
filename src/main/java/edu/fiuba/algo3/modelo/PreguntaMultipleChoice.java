@@ -22,11 +22,11 @@ public class PreguntaMultipleChoice {
             opcion.agregarseALaListaCorrespondiente(opcionesCorrectas, opcionesIncorrectas);
     }
 
-    public HashSet getOpcionesCorrectas(){
+    public HashSet<OpcionCorrecta> getOpcionesCorrectas(){
         return opcionesCorrectas;
     }
 
-    public HashSet getOpcionesIncorrectas(){
+    public HashSet<OpcionIncorrecta> getOpcionesIncorrectas(){
         return opcionesIncorrectas;
     }
 
