@@ -12,6 +12,61 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 public class testPreguntaMultiChoiceParcialEntrega1 {
 
     @Test
+    public void PreguntaMultipleChoiceParcialSeCreaIndicandoleCualesSonSusOpcionesCorrectas(){
+
+        Jugador Juan = new Jugador("Juan");
+        Jugador Fer = new Jugador("Fer");
+        Jugador Guido = new Jugador("Guido");
+
+        HashSet<Opcion> opciones = new HashSet<>();
+
+        OpcionCorrecta primeraOpcion = new OpcionCorrecta("Europa",5);
+        OpcionCorrecta segundaOpcion = new OpcionCorrecta("Asia",5);
+        OpcionIncorrecta terceraOpcion = new OpcionIncorrecta("America",0);
+        OpcionIncorrecta cuartaOpcion = new OpcionIncorrecta("Marte",0);
+
+        opciones.add(primeraOpcion);
+        opciones.add(segundaOpcion);
+        opciones.add(terceraOpcion);
+        opciones.add(cuartaOpcion);
+
+        PreguntaMultipleChoiceParcial pregunta = new PreguntaMultipleChoiceParcial("¿En qué lugar ocurrió la segunda guerra mundial?",opciones);
+
+        HashSet<Opcion> opcionesJuan = new HashSet<>();
+
+        opcionesJuan.add(primeraOpcion);
+        opcionesJuan.add(segundaOpcion);
+
+        RespuestaMultipleChoiceParcial respuestaJuan = new RespuestaMultipleChoiceParcial(opcionesJuan,Juan);
+
+        HashSet<Opcion> opcionesFer = new HashSet<>();
+
+        opcionesFer.add(primeraOpcion);
+
+        RespuestaMultipleChoiceParcial respuestaFer = new RespuestaMultipleChoiceParcial(opcionesFer,Fer);
+
+        HashSet<Opcion> opcionesGuido = new HashSet<>();
+
+        opcionesGuido.add(segundaOpcion);
+
+        RespuestaMultipleChoiceParcial respuestaGuido = new RespuestaMultipleChoiceParcial(opcionesGuido,Guido);
+
+        LinkedList<RespuestaMultipleChoiceParcial> respuestas = new LinkedList<>();
+
+        respuestas.add(respuestaJuan);
+        respuestas.add(respuestaGuido);
+        respuestas.add(respuestaFer);
+
+        pregunta.evaluarRespuestas(respuestas);
+
+        assertEquals(Juan.getPuntos(),10);
+        assertEquals(Guido.getPuntos(),5);
+        assertEquals(Fer.getPuntos(),5);
+
+    }
+
+
+    @Test
     public void PreguntaMultipleChoiceParcialRecibeListaDeRespuestasYAsignaPuntosCorrectamenteALosJugadores(){
 
 
