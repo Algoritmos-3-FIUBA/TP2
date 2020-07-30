@@ -83,7 +83,7 @@ public class TestPreguntaVerdaderoFalso {
 
         pregunta.evaluarRespuestas(respuestasDeJugadores);
 
-        Assertions.assertEquals(Lucas.getPuntos(),0);
+        assertEquals(Lucas.getPuntos(),0);
     }
 
     @Test

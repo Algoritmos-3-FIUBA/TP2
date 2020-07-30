@@ -5,7 +5,6 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 import java.util.HashSet;
-import java.util.Set;
 
 public class TestRespuestaMultipleChoiceParcial {
     private Opcion primeraOpcion = new OpcionCorrecta("Euler",1);

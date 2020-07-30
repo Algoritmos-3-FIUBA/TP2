@@ -6,8 +6,8 @@ import java.util.LinkedList;
 public class PreguntaMultipleChoiceParcial {
 
     private String Nombre;
-    HashSet<OpcionCorrecta> opcionesCorrectas;
-    HashSet<OpcionIncorrecta> opcionesIncorrectas;
+    private HashSet<OpcionCorrecta> opcionesCorrectas;
+    private HashSet<OpcionIncorrecta> opcionesIncorrectas;
 
     public PreguntaMultipleChoiceParcial(String nombre, HashSet<Opcion> opciones){
 
