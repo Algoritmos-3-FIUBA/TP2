@@ -10,7 +10,47 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class TestPreguntaMultipleChoice {
 
-        @Test
+    @Test
+    public void CreoPreguntaMultipleChoiceConDosRespuestasCorrectasYSeAsignanCorrectamente() {
+
+        HashSet<Opcion> opciones = new HashSet<Opcion>();
+
+        OpcionIncorrecta primeraOpcion = new OpcionIncorrecta("1 + 1", 0);
+        OpcionIncorrecta segundaOpcion = new OpcionIncorrecta("3 - 1", 0);
+        OpcionCorrecta terceraOpcion = new OpcionCorrecta("2 + 2", 1);
+        OpcionCorrecta cuartaOpcion = new OpcionCorrecta("2 * 2", 1);
+
+        opciones.add(primeraOpcion);
+        opciones.add(segundaOpcion);
+        opciones.add(terceraOpcion);
+        opciones.add(cuartaOpcion);
+
+        PreguntaMultipleChoice pregunta = new PreguntaMultipleChoice("¿Cuales de las siguientes cuentas tiene resultado 4?", 1, opciones);
+
+        assertEquals((pregunta.getOpcionesCorrectas()).size(), 2);
+    }
+
+    @Test
+    public void CreoPreguntaMultipleChoiceConDosRespuestasIncorrectasYSeAsignanCorrectamente() {
+
+        HashSet<Opcion> opciones = new HashSet<Opcion>();
+
+        OpcionIncorrecta primeraOpcion = new OpcionIncorrecta("1 + 1", 0);
+        OpcionIncorrecta segundaOpcion = new OpcionIncorrecta("3 - 1", 0);
+        OpcionCorrecta terceraOpcion = new OpcionCorrecta("2 + 2", 1);
+        OpcionCorrecta cuartaOpcion = new OpcionCorrecta("2 * 2", 1);
+
+        opciones.add(primeraOpcion);
+        opciones.add(segundaOpcion);
+        opciones.add(terceraOpcion);
+        opciones.add(cuartaOpcion);
+
+        PreguntaMultipleChoice pregunta = new PreguntaMultipleChoice("¿Cuales de las siguientes cuentas tiene resultado 4?", 1, opciones);
+
+        assertEquals((pregunta.getOpcionesIncorrectas()).size(), 2);
+    }
+
+    @Test
         public void CreoPreguntaMultipleChoiceConDosRespuestasCorrectasYJugadorEligeDosCorrectas() {
 
             Jugador Mati = new Jugador("Mati");

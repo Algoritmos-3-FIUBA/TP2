@@ -22,17 +22,17 @@ public class PreguntaMultipleChoice {
             opcion.agregarseALaListaCorrespondiente(opcionesCorrectas, opcionesIncorrectas);
     }
 
+    public void evaluarRespuestas(LinkedList<RespuestaMultipleChoice> respuestas) {
+
+        for (RespuestaMultipleChoice respuesta : respuestas)
+            respuesta.otorgarPuntos(opcionesCorrectas, PuntosOtorgados);
+    }
+
     public HashSet<OpcionCorrecta> getOpcionesCorrectas(){
         return opcionesCorrectas;
     }
 
     public HashSet<OpcionIncorrecta> getOpcionesIncorrectas(){
         return opcionesIncorrectas;
-    }
-
-    public void evaluarRespuestas(LinkedList<RespuestaMultipleChoice> respuestas) {
-
-        for (RespuestaMultipleChoice respuesta : respuestas)
-            respuesta.otorgarPuntos(opcionesCorrectas, PuntosOtorgados);
     }
 }
