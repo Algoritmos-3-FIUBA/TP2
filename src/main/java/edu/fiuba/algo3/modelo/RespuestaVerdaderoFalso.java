@@ -1,7 +1,7 @@
 package edu.fiuba.algo3.modelo;
 
 
-public class RespuestaVerdaderoFalso {
+public class RespuestaVerdaderoFalso implements Respuesta{
 
     private Opcion opcion;
     private Jugador jugador;

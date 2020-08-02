@@ -2,7 +2,7 @@ package edu.fiuba.algo3.modelo;
 
 import java.util.HashSet;
 
-public class RespuestaMultipleChoice {
+public class RespuestaMultipleChoice implements  Respuesta {
     private HashSet<Opcion> opcionesEligidas;
     private Jugador jugador;
 
