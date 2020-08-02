@@ -16,9 +16,9 @@ public class testPreguntaVoFPenalidadEntrega1 {
 
         pregunta.setFalsoOpcionCorrecta();
 
-        Respuesta respuesta = new Respuesta(pregunta.getOpcionFalsa(),jugador);
+        RespuestaVerdaderoFalso respuesta = new RespuestaVerdaderoFalso(pregunta.getOpcionFalsa(),jugador);
 
-        LinkedList <Respuesta> listaRespuesta= new LinkedList<Respuesta>();
+        LinkedList <RespuestaVerdaderoFalso> listaRespuesta= new LinkedList<RespuestaVerdaderoFalso>();
 
         listaRespuesta.add(respuesta);
 
@@ -37,11 +37,11 @@ public class testPreguntaVoFPenalidadEntrega1 {
 
         pregunta.setFalsoOpcionCorrecta();
 
-        Respuesta respuesta1 = new Respuesta(pregunta.getOpcionFalsa(),jugador1);
-        Respuesta respuesta2 = new Respuesta(pregunta.getOpcionVerdadera(),jugador2);
-        Respuesta respuesta3 = new Respuesta(pregunta.getOpcionFalsa(),jugador3);
+        RespuestaVerdaderoFalso respuesta1 = new RespuestaVerdaderoFalso(pregunta.getOpcionFalsa(),jugador1);
+        RespuestaVerdaderoFalso respuesta2 = new RespuestaVerdaderoFalso(pregunta.getOpcionVerdadera(),jugador2);
+        RespuestaVerdaderoFalso respuesta3 = new RespuestaVerdaderoFalso(pregunta.getOpcionFalsa(),jugador3);
 
-        LinkedList <Respuesta> listaRespuesta= new LinkedList<Respuesta>();
+        LinkedList <RespuestaVerdaderoFalso> listaRespuesta= new LinkedList<RespuestaVerdaderoFalso>();
 
         listaRespuesta.add(respuesta1);listaRespuesta.add(respuesta2);listaRespuesta.add(respuesta3);
 

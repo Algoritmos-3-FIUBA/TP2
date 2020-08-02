@@ -2,7 +2,7 @@ package edu.fiuba.algo3.modelo.testEntregas;
 
 import edu.fiuba.algo3.modelo.Jugador;
 import edu.fiuba.algo3.modelo.PreguntaVerdaderoFalsoClasico;
-import edu.fiuba.algo3.modelo.Respuesta;
+import edu.fiuba.algo3.modelo.RespuestaVerdaderoFalso;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import java.util.LinkedList;
@@ -18,10 +18,10 @@ public class TestPreguntaVoFClasicoEntrega0 {
 
         pregunta.setVerdaderoOpcionCorrecta();
 
-        LinkedList<Respuesta> respuestasDeJugadores = new LinkedList<Respuesta>();
+        LinkedList<RespuestaVerdaderoFalso> respuestasDeJugadores = new LinkedList<RespuestaVerdaderoFalso>();
 
         //Respuesta de Jugadores -> Lista con los jugadores que han respondido.
-        respuestasDeJugadores.add(new Respuesta(pregunta.getOpcionVerdadera(),Lucas));
+        respuestasDeJugadores.add(new RespuestaVerdaderoFalso(pregunta.getOpcionVerdadera(),Lucas));
 
         pregunta.evaluarRespuestas(respuestasDeJugadores);
 
@@ -38,11 +38,11 @@ public class TestPreguntaVoFClasicoEntrega0 {
 
         pregunta.setVerdaderoOpcionCorrecta();
 
-        LinkedList<Respuesta> respuestasDeJugadores = new LinkedList<Respuesta>();
+        LinkedList<RespuestaVerdaderoFalso> respuestasDeJugadores = new LinkedList<RespuestaVerdaderoFalso>();
 
         //Respuesta de Jugadores -> Lista con los jugadores que han respondido.
-        respuestasDeJugadores.add(new Respuesta(pregunta.getOpcionFalsa(),Lucas));
-        respuestasDeJugadores.add(new Respuesta(pregunta.getOpcionVerdadera(),Mati));
+        respuestasDeJugadores.add(new RespuestaVerdaderoFalso(pregunta.getOpcionFalsa(),Lucas));
+        respuestasDeJugadores.add(new RespuestaVerdaderoFalso(pregunta.getOpcionVerdadera(),Mati));
 
         pregunta.evaluarRespuestas(respuestasDeJugadores);
 

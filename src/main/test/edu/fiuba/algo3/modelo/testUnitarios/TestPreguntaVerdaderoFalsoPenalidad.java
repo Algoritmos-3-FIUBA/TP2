@@ -2,7 +2,7 @@ package edu.fiuba.algo3.modelo.testUnitarios;
 
 import edu.fiuba.algo3.modelo.Jugador;
 import edu.fiuba.algo3.modelo.PreguntaVerdaderoFalsoPenalidad;
-import edu.fiuba.algo3.modelo.Respuesta;
+import edu.fiuba.algo3.modelo.RespuestaVerdaderoFalso;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
@@ -26,9 +26,9 @@ public class TestPreguntaVerdaderoFalsoPenalidad {
 
         pregunta.setFalsoOpcionCorrecta();
 
-        Respuesta respuesta = new Respuesta(pregunta.getOpcionVerdadera(),jugador);
+        RespuestaVerdaderoFalso respuesta = new RespuestaVerdaderoFalso(pregunta.getOpcionVerdadera(),jugador);
 
-        LinkedList <Respuesta> listaRespuetas= new LinkedList<Respuesta>();
+        LinkedList <RespuestaVerdaderoFalso> listaRespuetas= new LinkedList<RespuestaVerdaderoFalso>();
 
         listaRespuetas.add(respuesta);
 
@@ -46,9 +46,9 @@ public class TestPreguntaVerdaderoFalsoPenalidad {
 
         pregunta.setVerdaderoOpcionCorrecta();
 
-        Respuesta respuesta = new Respuesta(pregunta.getOpcionVerdadera(),jugador);
+        RespuestaVerdaderoFalso respuesta = new RespuestaVerdaderoFalso(pregunta.getOpcionVerdadera(),jugador);
 
-        LinkedList <Respuesta> listaRespuetas= new LinkedList<Respuesta>();
+        LinkedList <RespuestaVerdaderoFalso> listaRespuetas= new LinkedList<RespuestaVerdaderoFalso>();
 
         listaRespuetas.add(respuesta);
 

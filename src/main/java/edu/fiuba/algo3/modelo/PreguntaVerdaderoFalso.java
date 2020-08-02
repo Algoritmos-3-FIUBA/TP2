@@ -16,11 +16,11 @@ public abstract class PreguntaVerdaderoFalso {
     public abstract void setFalsoOpcionCorrecta();
 
   //  @Override
-    public void evaluarRespuestas(LinkedList<Respuesta> respuestasDeJugadores) {
+    public void evaluarRespuestas(LinkedList<RespuestaVerdaderoFalso> respuestasDeJugadores) {
 
-        Respuesta respuesta;
+        RespuestaVerdaderoFalso respuesta;
         for (Object respuestaDeJugador : respuestasDeJugadores) {
-            respuesta = (Respuesta) respuestaDeJugador;
+            respuesta = (RespuestaVerdaderoFalso) respuestaDeJugador;
             respuesta.otorgarPuntos();
         }
 

@@ -1,12 +1,12 @@
 package edu.fiuba.algo3.modelo;
 
 
-public class Respuesta {
+public class RespuestaVerdaderoFalso {
 
     private Opcion opcion;
     private Jugador jugador;
 
-    public Respuesta (Opcion opcion, Jugador jugador) {
+    public RespuestaVerdaderoFalso (Opcion opcion, Jugador jugador) {
         this.opcion = opcion;
         this.jugador = jugador;
     }

@@ -3,12 +3,12 @@ package edu.fiuba.algo3.modelo.testUnitarios;
 import edu.fiuba.algo3.modelo.Jugador;
 import edu.fiuba.algo3.modelo.Opcion;
 import edu.fiuba.algo3.modelo.OpcionCorrecta;
-import edu.fiuba.algo3.modelo.Respuesta;
+import edu.fiuba.algo3.modelo.RespuestaVerdaderoFalso;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 
-public class TestRespuesta {
+public class TestRespuestaVerdaderoFalso {
     private Opcion opcionVerdadero;
     private Opcion opcionFalso;
 
@@ -17,7 +17,7 @@ public class TestRespuesta {
         opcionVerdadero = new OpcionCorrecta("Euler",1);
 
         Jugador jugador = new Jugador("Guido");
-        Respuesta respuestaJugador = new Respuesta(opcionVerdadero, jugador);
+        RespuestaVerdaderoFalso respuestaJugador = new RespuestaVerdaderoFalso(opcionVerdadero, jugador);
 
         respuestaJugador.otorgarPuntos();
 
@@ -29,7 +29,7 @@ public class TestRespuesta {
         opcionFalso = new OpcionCorrecta("Gauss",0);
 
         Jugador jugador = new Jugador("Guido");
-        Respuesta respuestaJugador = new Respuesta(opcionFalso, jugador);
+        RespuestaVerdaderoFalso respuestaJugador = new RespuestaVerdaderoFalso(opcionFalso, jugador);
 
         respuestaJugador.otorgarPuntos();
 
