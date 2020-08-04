@@ -2,7 +2,7 @@ package edu.fiuba.algo3.modelo.testEntregas;
 
 import edu.fiuba.algo3.modelo.Jugador;
 import edu.fiuba.algo3.modelo.pregunta.PreguntaVerdaderoFalsoClasico;
-import edu.fiuba.algo3.modelo.respuesta.RespuestaVerdaderoFalso;
+import edu.fiuba.algo3.modelo.respuesta.RespuestaVerdaderoFalsoClasico;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import java.util.LinkedList;
@@ -18,10 +18,10 @@ public class TestPreguntaVoFClasicoEntrega0 {
 
         pregunta.setVerdaderoOpcionCorrecta();
 
-        LinkedList<RespuestaVerdaderoFalso> respuestasDeJugadores = new LinkedList<RespuestaVerdaderoFalso>();
+        LinkedList<RespuestaVerdaderoFalsoClasico> respuestasDeJugadores = new LinkedList<RespuestaVerdaderoFalsoClasico>();
 
         //Respuesta de Jugadores -> Lista con los jugadores que han respondido.
-        respuestasDeJugadores.add(new RespuestaVerdaderoFalso(pregunta.getOpcionVerdadera(),Lucas));
+        respuestasDeJugadores.add(new RespuestaVerdaderoFalsoClasico(pregunta.getOpcionVerdadera(),Lucas));
 
         pregunta.evaluarRespuestas(respuestasDeJugadores);
 
@@ -38,15 +38,16 @@ public class TestPreguntaVoFClasicoEntrega0 {
 
         pregunta.setVerdaderoOpcionCorrecta();
 
-        LinkedList<RespuestaVerdaderoFalso> respuestasDeJugadores = new LinkedList<RespuestaVerdaderoFalso>();
+        LinkedList<RespuestaVerdaderoFalsoClasico> respuestasDeJugadores = new LinkedList<RespuestaVerdaderoFalsoClasico>();
 
         //Respuesta de Jugadores -> Lista con los jugadores que han respondido.
-        respuestasDeJugadores.add(new RespuestaVerdaderoFalso(pregunta.getOpcionFalsa(),Lucas));
-        respuestasDeJugadores.add(new RespuestaVerdaderoFalso(pregunta.getOpcionVerdadera(),Mati));
+        respuestasDeJugadores.add(new RespuestaVerdaderoFalsoClasico(pregunta.getOpcionFalsa(),Lucas));
+        respuestasDeJugadores.add(new RespuestaVerdaderoFalsoClasico(pregunta.getOpcionVerdadera(),Mati));
 
         pregunta.evaluarRespuestas(respuestasDeJugadores);
 
         Assertions.assertEquals(Lucas.getPuntos().getCantidad(),0);
         Assertions.assertEquals(Mati.getPuntos().getCantidad(),1);
     }
+
 }

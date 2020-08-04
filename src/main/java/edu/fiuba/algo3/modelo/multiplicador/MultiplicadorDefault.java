@@ -4,11 +4,11 @@ import edu.fiuba.algo3.modelo.Jugador;
 import edu.fiuba.algo3.modelo.Multiplicable;
 import edu.fiuba.algo3.modelo.Puntos;
 
-public class MutiplicadorPorDos extends Multiplicador {
+public class MultiplicadorDefault extends Multiplicador {
 
-    private int factor = 2;
+    private int factor = 1;
 
-    public MutiplicadorPorDos(Jugador jugador){
+    public MultiplicadorDefault(Jugador jugador){
         super(jugador);
         this.estadoMultiplicable = new Multiplicable();
     }
@@ -18,7 +18,6 @@ public class MutiplicadorPorDos extends Multiplicador {
     @Override
     public void utilizarBeneficio(Puntos puntos) {
         jugador.sumarPuntos(estadoMultiplicable.multiplicarPuntos(puntos, this));
-        this.inutilizarMultiplicador();
     }
 
 }

@@ -1,6 +1,7 @@
 package edu.fiuba.algo3.modelo.multiplicador;
 
 import edu.fiuba.algo3.modelo.Jugador;
+import edu.fiuba.algo3.modelo.Multiplicable;
 import edu.fiuba.algo3.modelo.Puntos;
 
 public class MultiplicadorPorTres extends Multiplicador {
@@ -9,6 +10,7 @@ public class MultiplicadorPorTres extends Multiplicador {
 
     public MultiplicadorPorTres(Jugador jugador){
         super(jugador);
+        this.estadoMultiplicable = new Multiplicable();
     }
 
     @Override

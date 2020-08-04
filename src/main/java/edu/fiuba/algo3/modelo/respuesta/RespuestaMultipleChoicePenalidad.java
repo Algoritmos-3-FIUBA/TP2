@@ -26,6 +26,5 @@ public class RespuestaMultipleChoicePenalidad implements Respuesta {
 
     /*public void otorgarPuntos(HashSet<OpcionCorrecta> opcionesCorrectas, HashSet<OpcionIncorrecta> opcionesIncorrectas) {
 
-    } */
-
+    }*/
 }

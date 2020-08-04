@@ -2,7 +2,8 @@ package edu.fiuba.algo3.modelo.testUnitarios;
 
 import edu.fiuba.algo3.modelo.Jugador;
 import edu.fiuba.algo3.modelo.pregunta.PreguntaVerdaderoFalsoPenalidad;
-import edu.fiuba.algo3.modelo.respuesta.RespuestaVerdaderoFalso;
+import edu.fiuba.algo3.modelo.respuesta.RespuestaVerdaderoFalsoClasico;
+import edu.fiuba.algo3.modelo.respuesta.RespuestaVerdaderoFalsoPenalidad;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
@@ -26,9 +27,9 @@ public class TestPreguntaVerdaderoFalsoPenalidad {
 
         pregunta.setFalsoOpcionCorrecta();
 
-        RespuestaVerdaderoFalso respuesta = new RespuestaVerdaderoFalso(pregunta.getOpcionVerdadera(),jugador);
+        RespuestaVerdaderoFalsoPenalidad respuesta = new RespuestaVerdaderoFalsoPenalidad(pregunta.getOpcionVerdadera(),jugador);
 
-        LinkedList <RespuestaVerdaderoFalso> listaRespuetas= new LinkedList<RespuestaVerdaderoFalso>();
+        LinkedList <RespuestaVerdaderoFalsoPenalidad> listaRespuetas= new LinkedList<RespuestaVerdaderoFalsoPenalidad>();
 
         listaRespuetas.add(respuesta);
 
@@ -46,9 +47,9 @@ public class TestPreguntaVerdaderoFalsoPenalidad {
 
         pregunta.setVerdaderoOpcionCorrecta();
 
-        RespuestaVerdaderoFalso respuesta = new RespuestaVerdaderoFalso(pregunta.getOpcionVerdadera(),jugador);
+        RespuestaVerdaderoFalsoPenalidad respuesta = new RespuestaVerdaderoFalsoPenalidad(pregunta.getOpcionVerdadera(),jugador);
 
-        LinkedList <RespuestaVerdaderoFalso> listaRespuetas= new LinkedList<RespuestaVerdaderoFalso>();
+        LinkedList <RespuestaVerdaderoFalsoPenalidad> listaRespuetas= new LinkedList<RespuestaVerdaderoFalsoPenalidad>();
 
         listaRespuetas.add(respuesta);
 

@@ -4,13 +4,15 @@ import edu.fiuba.algo3.modelo.Jugador;
 import edu.fiuba.algo3.modelo.Puntos;
 import edu.fiuba.algo3.modelo.pregunta.PreguntaVerdaderoFalsoClasico;
 import edu.fiuba.algo3.modelo.pregunta.PreguntaVerdaderoFalsoPenalidad;
-import edu.fiuba.algo3.modelo.respuesta.RespuestaVerdaderoFalso;
+import edu.fiuba.algo3.modelo.respuesta.RespuestaVerdaderoFalsoClasico;
+import edu.fiuba.algo3.modelo.respuesta.RespuestaVerdaderoFalsoPenalidad;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 import java.util.LinkedList;
 
 public class TestIntegracionClasesVerdaderoFalso {
+
     @Test
     public void JugadorRespondeDiferentesTiposDePreguntasDeFormaCorrecta(){
         // Creacion de Jugador
@@ -22,11 +24,11 @@ public class TestIntegracionClasesVerdaderoFalso {
         PreguntaVerdaderoFalsoPenalidad preguntaPenalidad = new PreguntaVerdaderoFalsoPenalidad("10+2 no es 20");
         preguntaPenalidad.setVerdaderoOpcionCorrecta();
         // Jugador Responde.
-        RespuestaVerdaderoFalso respuestaPrimerPregunta = new RespuestaVerdaderoFalso(preguntaClasica.getOpcionVerdadera(),juan);
-        RespuestaVerdaderoFalso respuestaSegundaPregunta = new RespuestaVerdaderoFalso(preguntaClasica.getOpcionVerdadera(),juan);
+        RespuestaVerdaderoFalsoClasico respuestaPrimerPregunta = new RespuestaVerdaderoFalsoClasico(preguntaClasica.getOpcionVerdadera(),juan);
+        RespuestaVerdaderoFalsoPenalidad respuestaSegundaPregunta = new RespuestaVerdaderoFalsoPenalidad(preguntaClasica.getOpcionVerdadera(),juan);
 
-        LinkedList<RespuestaVerdaderoFalso> listaRespuestaPrimerPregunta = new LinkedList<RespuestaVerdaderoFalso>();
-        LinkedList<RespuestaVerdaderoFalso> listaRespuestaSegundaPregunta = new LinkedList<RespuestaVerdaderoFalso>();
+        LinkedList<RespuestaVerdaderoFalsoClasico> listaRespuestaPrimerPregunta = new LinkedList<RespuestaVerdaderoFalsoClasico>();
+        LinkedList<RespuestaVerdaderoFalsoPenalidad> listaRespuestaSegundaPregunta = new LinkedList<RespuestaVerdaderoFalsoPenalidad>();
 
         listaRespuestaPrimerPregunta.add(respuestaPrimerPregunta);
         listaRespuestaSegundaPregunta.add(respuestaSegundaPregunta);
@@ -51,11 +53,11 @@ public class TestIntegracionClasesVerdaderoFalso {
         PreguntaVerdaderoFalsoPenalidad preguntaPenalidad = new PreguntaVerdaderoFalsoPenalidad("10+2 no es 20");
         preguntaPenalidad.setVerdaderoOpcionCorrecta();
         // Jugador Responde.
-        RespuestaVerdaderoFalso respuestaPrimerPregunta = new RespuestaVerdaderoFalso(preguntaClasica.getOpcionVerdadera(),juan);
-        RespuestaVerdaderoFalso respuestaSegundaPregunta = new RespuestaVerdaderoFalso(preguntaPenalidad.getOpcionFalsa(),juan);
+        RespuestaVerdaderoFalsoClasico respuestaPrimerPregunta = new RespuestaVerdaderoFalsoClasico(preguntaClasica.getOpcionVerdadera(),juan);
+        RespuestaVerdaderoFalsoPenalidad respuestaSegundaPregunta = new RespuestaVerdaderoFalsoPenalidad(preguntaPenalidad.getOpcionFalsa(),juan);
 
-        LinkedList<RespuestaVerdaderoFalso> listaRespuestaPrimerPregunta = new LinkedList<RespuestaVerdaderoFalso>();
-        LinkedList<RespuestaVerdaderoFalso> listaRespuestaSegundaPregunta = new LinkedList<RespuestaVerdaderoFalso>();
+        LinkedList<RespuestaVerdaderoFalsoClasico> listaRespuestaPrimerPregunta = new LinkedList<RespuestaVerdaderoFalsoClasico>();
+        LinkedList<RespuestaVerdaderoFalsoPenalidad> listaRespuestaSegundaPregunta = new LinkedList<RespuestaVerdaderoFalsoPenalidad>();
 
         listaRespuestaPrimerPregunta.add(respuestaPrimerPregunta);
         listaRespuestaSegundaPregunta.add(respuestaSegundaPregunta);
@@ -80,11 +82,11 @@ public class TestIntegracionClasesVerdaderoFalso {
         PreguntaVerdaderoFalsoPenalidad preguntaPenalidad = new PreguntaVerdaderoFalsoPenalidad("10+2 no es 20");
         preguntaPenalidad.setVerdaderoOpcionCorrecta();
         // Jugador Responde.
-        RespuestaVerdaderoFalso respuestaPrimerPregunta = new RespuestaVerdaderoFalso(preguntaClasica.getOpcionFalsa(),juan);
-        RespuestaVerdaderoFalso respuestaSegundaPregunta = new RespuestaVerdaderoFalso(preguntaPenalidad.getOpcionVerdadera(),juan);
+        RespuestaVerdaderoFalsoClasico respuestaPrimerPregunta = new RespuestaVerdaderoFalsoClasico(preguntaClasica.getOpcionFalsa(),juan);
+        RespuestaVerdaderoFalsoPenalidad respuestaSegundaPregunta = new RespuestaVerdaderoFalsoPenalidad(preguntaPenalidad.getOpcionVerdadera(),juan);
 
-        LinkedList<RespuestaVerdaderoFalso> listaRespuestaPrimerPregunta = new LinkedList<RespuestaVerdaderoFalso>();
-        LinkedList<RespuestaVerdaderoFalso> listaRespuestaSegundaPregunta = new LinkedList<RespuestaVerdaderoFalso>();
+        LinkedList<RespuestaVerdaderoFalsoClasico> listaRespuestaPrimerPregunta = new LinkedList<RespuestaVerdaderoFalsoClasico>();
+        LinkedList<RespuestaVerdaderoFalsoPenalidad> listaRespuestaSegundaPregunta = new LinkedList<RespuestaVerdaderoFalsoPenalidad>();
 
         listaRespuestaPrimerPregunta.add(respuestaPrimerPregunta);
         listaRespuestaSegundaPregunta.add(respuestaSegundaPregunta);

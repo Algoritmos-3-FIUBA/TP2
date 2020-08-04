@@ -3,11 +3,12 @@ package edu.fiuba.algo3.modelo.pregunta;
 import edu.fiuba.algo3.modelo.opcion.Opcion;
 import edu.fiuba.algo3.modelo.opcion.OpcionCorrecta;
 import edu.fiuba.algo3.modelo.opcion.OpcionIncorrecta;
+import edu.fiuba.algo3.modelo.respuesta.Respuesta;
+import edu.fiuba.algo3.modelo.respuesta.RespuestaVerdaderoFalsoPenalidad;
+
+import java.util.LinkedList;
 
 public class PreguntaVerdaderoFalsoPenalidad extends PreguntaVerdaderoFalso {
-
-    private Opcion opcionVerdadero;
-    private Opcion opcionFalso;
 
     public PreguntaVerdaderoFalsoPenalidad(String nombrePregunta){ super(nombrePregunta); }
 
@@ -27,9 +28,14 @@ public class PreguntaVerdaderoFalsoPenalidad extends PreguntaVerdaderoFalso {
 
     }
 
-    public Opcion getOpcionVerdadera() { return opcionVerdadero; }
+    public void evaluarRespuestas(LinkedList<RespuestaVerdaderoFalsoPenalidad> respuestasDeJugadores) {
 
-    public Opcion getOpcionFalsa() { return opcionFalso; }
+        RespuestaVerdaderoFalsoPenalidad respuesta;
+        for (Object respuestaDeJugador : respuestasDeJugadores) {
+            respuesta = (RespuestaVerdaderoFalsoPenalidad) respuestaDeJugador;
+            respuesta.otorgarPuntos();
+        }
 
+    }
 
 }

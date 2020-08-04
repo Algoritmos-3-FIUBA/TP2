@@ -2,7 +2,9 @@ package edu.fiuba.algo3.modelo.testEntregas;
 
 import edu.fiuba.algo3.modelo.*;
 import edu.fiuba.algo3.modelo.pregunta.PreguntaVerdaderoFalsoPenalidad;
-import edu.fiuba.algo3.modelo.respuesta.RespuestaVerdaderoFalso;
+import edu.fiuba.algo3.modelo.respuesta.Respuesta;
+import edu.fiuba.algo3.modelo.respuesta.RespuestaVerdaderoFalsoClasico;
+import edu.fiuba.algo3.modelo.respuesta.RespuestaVerdaderoFalsoPenalidad;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
@@ -10,17 +12,18 @@ import java.util.LinkedList;
 
 public class testPreguntaVoFPenalidadEntrega1 {
 
-        @Test
+    @Test
         public void CreoPreguntaVerdaderoFalsoConPenalidadIndicandoRespuestCorrecta(){
+
         Jugador jugador = new Jugador("Fernando");
 
         PreguntaVerdaderoFalsoPenalidad pregunta = new PreguntaVerdaderoFalsoPenalidad("El caballo blanco de San Martin es rojo");
 
         pregunta.setFalsoOpcionCorrecta();
 
-        RespuestaVerdaderoFalso respuesta = new RespuestaVerdaderoFalso(pregunta.getOpcionFalsa(),jugador);
+        RespuestaVerdaderoFalsoPenalidad respuesta =  new RespuestaVerdaderoFalsoPenalidad(pregunta.getOpcionFalsa(), jugador);
 
-        LinkedList <RespuestaVerdaderoFalso> listaRespuesta= new LinkedList<RespuestaVerdaderoFalso>();
+        LinkedList<RespuestaVerdaderoFalsoPenalidad> listaRespuesta = new LinkedList<RespuestaVerdaderoFalsoPenalidad>();
 
         listaRespuesta.add(respuesta);
 
@@ -29,6 +32,7 @@ public class testPreguntaVoFPenalidadEntrega1 {
         Assertions.assertEquals(jugador.getPuntos().getCantidad(),1);
 
     }
+
     @Test
     public void PreguntaVerdaderoFalsoConPenalidadAsignaCorrectamenteLosPuntosALosJugadores(){
         Jugador jugador1 = new Jugador("Fernando");
@@ -39,11 +43,11 @@ public class testPreguntaVoFPenalidadEntrega1 {
 
         pregunta.setFalsoOpcionCorrecta();
 
-        RespuestaVerdaderoFalso respuesta1 = new RespuestaVerdaderoFalso(pregunta.getOpcionFalsa(),jugador1);
-        RespuestaVerdaderoFalso respuesta2 = new RespuestaVerdaderoFalso(pregunta.getOpcionVerdadera(),jugador2);
-        RespuestaVerdaderoFalso respuesta3 = new RespuestaVerdaderoFalso(pregunta.getOpcionFalsa(),jugador3);
+        RespuestaVerdaderoFalsoPenalidad respuesta1 = new RespuestaVerdaderoFalsoPenalidad(pregunta.getOpcionFalsa(),jugador1);
+        RespuestaVerdaderoFalsoPenalidad respuesta2 = new RespuestaVerdaderoFalsoPenalidad(pregunta.getOpcionVerdadera(),jugador2);
+        RespuestaVerdaderoFalsoPenalidad respuesta3 = new RespuestaVerdaderoFalsoPenalidad(pregunta.getOpcionFalsa(),jugador3);
 
-        LinkedList <RespuestaVerdaderoFalso> listaRespuesta= new LinkedList<RespuestaVerdaderoFalso>();
+        LinkedList <RespuestaVerdaderoFalsoPenalidad> listaRespuesta= new LinkedList<RespuestaVerdaderoFalsoPenalidad>();
 
         listaRespuesta.add(respuesta1);listaRespuesta.add(respuesta2);listaRespuesta.add(respuesta3);
 
@@ -53,4 +57,5 @@ public class testPreguntaVoFPenalidadEntrega1 {
         Assertions.assertEquals(jugador2.getPuntos().getCantidad(),-1);
         Assertions.assertEquals(jugador3.getPuntos().getCantidad(),1);
     }
+
 }

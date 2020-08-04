@@ -9,7 +9,6 @@ public abstract class Multiplicador {
 
     public Multiplicador(Jugador jugador) {
         this.jugador = jugador;
-        this.estadoMultiplicable = new Multiplicable();
     }
 
     public void inutilizarMultiplicador() {
