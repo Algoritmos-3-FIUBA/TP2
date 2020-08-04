@@ -40,7 +40,7 @@ public class TestPreguntaMultipleChoiceParcial {
 
         pregunta.evaluarRespuestas(respuestas);
 
-        assertEquals(Juan.getPuntos(),5);
+        assertEquals(Juan.getPuntos().getCantidad(),5);
     }
 
     @Test
@@ -69,7 +69,7 @@ public class TestPreguntaMultipleChoiceParcial {
 
         pregunta.evaluarRespuestas(respuestas);
 
-        assertEquals(Juan.getPuntos(),0);
+        assertEquals(Juan.getPuntos().getCantidad(),0);
     }
 
     @Test
@@ -103,7 +103,7 @@ public class TestPreguntaMultipleChoiceParcial {
 
         pregunta.evaluarRespuestas(respuestas);
 
-        assertEquals(Juan.getPuntos(),2);
+        assertEquals(Juan.getPuntos().getCantidad(),2);
     }
 
     @Test
@@ -135,7 +135,7 @@ public class TestPreguntaMultipleChoiceParcial {
 
         pregunta.evaluarRespuestas(respuestas);
 
-        assertEquals(Juan.getPuntos(),0);
+        assertEquals(Juan.getPuntos().getCantidad(),0);
     }
 
     @Test
@@ -171,7 +171,7 @@ public class TestPreguntaMultipleChoiceParcial {
 
         pregunta.evaluarRespuestas(respuestas);
 
-        assertEquals(Juan.getPuntos(),4);
+        assertEquals(Juan.getPuntos().getCantidad(),4);
     }
 
     @Test
@@ -219,8 +219,8 @@ public class TestPreguntaMultipleChoiceParcial {
 
         pregunta.evaluarRespuestas(respuestas);
 
-        assertEquals(Juan.getPuntos(),0);
-        assertEquals(Mati.getPuntos(),5);
-        assertEquals(Lucas.getPuntos(),10);
+        assertEquals(Juan.getPuntos().getCantidad(),0);
+        assertEquals(Mati.getPuntos().getCantidad(),5);
+        assertEquals(Lucas.getPuntos().getCantidad(),10);
     }
 }

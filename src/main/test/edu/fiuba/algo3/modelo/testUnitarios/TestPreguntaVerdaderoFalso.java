@@ -29,7 +29,7 @@ public class TestPreguntaVerdaderoFalso {
 
         Opcion opcionVerdaderoCorrecta = preguntaPrueba.getOpcionVerdadera();
 
-        assertEquals(opcionVerdaderoCorrecta.puntosObtenidos(), 1);
+        assertEquals(opcionVerdaderoCorrecta.puntosObtenidos().getCantidad(), 1);
 
     }
 
@@ -41,7 +41,7 @@ public class TestPreguntaVerdaderoFalso {
 
         Opcion opcionFalsoCorrecta = preguntaPrueba.getOpcionFalsa();
 
-        assertEquals(opcionFalsoCorrecta.puntosObtenidos(), 1);
+        assertEquals(opcionFalsoCorrecta.puntosObtenidos().getCantidad(), 1);
 
     }
 
@@ -53,7 +53,7 @@ public class TestPreguntaVerdaderoFalso {
 
         Opcion opcionVerdaderoCorrecta = preguntaPrueba.getOpcionFalsa();
 
-        assertEquals(opcionVerdaderoCorrecta.puntosObtenidos(), 0);
+        assertEquals(opcionVerdaderoCorrecta.puntosObtenidos().getCantidad(), 0);
 
     }
 
@@ -65,7 +65,7 @@ public class TestPreguntaVerdaderoFalso {
 
         Opcion opcionFalsoCorrecta = preguntaPrueba.getOpcionVerdadera();
 
-        assertEquals(opcionFalsoCorrecta.puntosObtenidos(), 0);
+        assertEquals(opcionFalsoCorrecta.puntosObtenidos().getCantidad(), 0);
 
     }
 
@@ -82,7 +82,7 @@ public class TestPreguntaVerdaderoFalso {
 
         pregunta.evaluarRespuestas(respuestasDeJugadores);
 
-        assertEquals(Lucas.getPuntos(),0);
+        assertEquals(Lucas.getPuntos().getCantidad(),0);
     }
 
     @Test
@@ -98,7 +98,7 @@ public class TestPreguntaVerdaderoFalso {
 
         pregunta.evaluarRespuestas(respuestasDeJugadores);
 
-        Assertions.assertEquals(Lucas.getPuntos(),1);
+        Assertions.assertEquals(Lucas.getPuntos().getCantidad(),1);
     }
 
 }

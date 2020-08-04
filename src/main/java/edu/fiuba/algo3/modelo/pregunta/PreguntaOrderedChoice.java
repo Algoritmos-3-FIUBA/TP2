@@ -1,5 +1,6 @@
 package edu.fiuba.algo3.modelo.pregunta;
 
+import edu.fiuba.algo3.modelo.Puntos;
 import edu.fiuba.algo3.modelo.opcion.Opcion;
 import edu.fiuba.algo3.modelo.opcion.OpcionCorrecta;
 import edu.fiuba.algo3.modelo.opcion.OpcionIncorrecta;
@@ -9,14 +10,14 @@ import java.util.LinkedList;
 
 public class PreguntaOrderedChoice {
     private String Nombre;
-    private int PuntosOtorgados;
+    private Puntos PuntosOtorgados;
     LinkedList<OpcionCorrecta> opcionesCorrectas;
     LinkedList<OpcionIncorrecta> opcionesIncorrectas;
 
     public PreguntaOrderedChoice(String nombre, int puntos, LinkedList<Opcion> opciones) {
 
         Nombre = nombre;
-        PuntosOtorgados = puntos;
+        PuntosOtorgados = new Puntos(puntos);
 
         opcionesCorrectas = new LinkedList<OpcionCorrecta>();
         opcionesIncorrectas = new LinkedList<OpcionIncorrecta>();

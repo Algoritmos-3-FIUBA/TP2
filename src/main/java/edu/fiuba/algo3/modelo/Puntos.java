@@ -19,4 +19,8 @@ public class Puntos {
     private int sumarCantidad(int cantidadASumar){
         return (this.cantidad + cantidadASumar);
     }
+
+    public void multiplicar(int multiplicando){
+        cantidad *= multiplicando;
+    }
 }

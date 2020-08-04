@@ -42,7 +42,7 @@ public class TestRespuestaMultipleChoiceParcial {
 
         respuestaJugador.otorgarPuntos(opcionesCorrectas, opcionesIncorrectas);
 
-        Assertions.assertEquals(jugador.getPuntos(),1);
+        Assertions.assertEquals(jugador.getPuntos().getCantidad(),1);
     }
 
     @Test
@@ -68,7 +68,7 @@ public class TestRespuestaMultipleChoiceParcial {
 
         respuestaJugador.otorgarPuntos(opcionesCorrectas, opcionesIncorrectas);
 
-        Assertions.assertEquals(jugador.getPuntos(),2);
+        Assertions.assertEquals(jugador.getPuntos().getCantidad(),2);
     }
 
     @Test
@@ -96,7 +96,7 @@ public class TestRespuestaMultipleChoiceParcial {
 
         respuestaJugador.otorgarPuntos(opcionesCorrectas, opcionesIncorrectas);
 
-        Assertions.assertEquals(jugador.getPuntos(),3);
+        Assertions.assertEquals(jugador.getPuntos().getCantidad(),3);
     }
 
     @Test
@@ -126,7 +126,7 @@ public class TestRespuestaMultipleChoiceParcial {
 
         respuestaJugador.otorgarPuntos(opcionesCorrectas, opcionesIncorrectas);
 
-        Assertions.assertEquals(jugador.getPuntos(),4);
+        Assertions.assertEquals(jugador.getPuntos().getCantidad(),4);
     }
 
     @Test
@@ -158,7 +158,7 @@ public class TestRespuestaMultipleChoiceParcial {
 
         respuestaJugador.otorgarPuntos(opcionesCorrectas, opcionesIncorrectas);
 
-        Assertions.assertEquals(jugador.getPuntos(),5);
+        Assertions.assertEquals(jugador.getPuntos().getCantidad(),5);
     }
 
     @Test
@@ -181,7 +181,7 @@ public class TestRespuestaMultipleChoiceParcial {
 
         respuestaJugador.otorgarPuntos(opcionesCorrectas, opcionesIncorrectas);
 
-        Assertions.assertEquals(jugador.getPuntos(),0);
+        Assertions.assertEquals(jugador.getPuntos().getCantidad(),0);
     }
 
     @Test
@@ -205,7 +205,7 @@ public class TestRespuestaMultipleChoiceParcial {
 
         respuestaJugador.otorgarPuntos(opcionesCorrectas, opcionesIncorrectas);
 
-        Assertions.assertEquals(jugador.getPuntos(),1);
+        Assertions.assertEquals(jugador.getPuntos().getCantidad(),1);
     }
 
     @Test
@@ -231,7 +231,7 @@ public class TestRespuestaMultipleChoiceParcial {
 
         respuestaJugador.otorgarPuntos(opcionesCorrectas, opcionesIncorrectas);
 
-        Assertions.assertEquals(jugador.getPuntos(),0);
+        Assertions.assertEquals(jugador.getPuntos().getCantidad(),0);
     }
 
     @Test
@@ -261,7 +261,7 @@ public class TestRespuestaMultipleChoiceParcial {
 
         respuestaJugador.otorgarPuntos(opcionesCorrectas, opcionesIncorrectas);
 
-        Assertions.assertEquals(jugador.getPuntos(),0);
+        Assertions.assertEquals(jugador.getPuntos().getCantidad(),0);
     }
 
 }

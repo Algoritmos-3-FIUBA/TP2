@@ -1,6 +1,7 @@
 package edu.fiuba.algo3.modelo.testUnitarios;
 
 import edu.fiuba.algo3.modelo.Jugador;
+import edu.fiuba.algo3.modelo.Puntos;
 import org.junit.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -16,13 +17,16 @@ public class TestJugador {
     @Test
     public void CreoJugadorLlamadoPedroNoTienePuntosInicialesObtengo0Puntos(){
         Jugador Pedro = new Jugador("Pedro");
-        assertEquals(Pedro.getPuntos(), 0);
+        Puntos puntos = Pedro.getPuntos();
+        assertEquals(puntos.getCantidad(), 0);
     }
     @Test
     public void CreoJugadorLlamadoPedroNoTienePuntosInicialesLeSumo1PuntoTiene1Punto() {
         Jugador Lionel = new Jugador("Lionel");
-        Lionel.sumarPuntos(1);
-        assertEquals(Lionel.getPuntos(), 1);
+        Puntos puntos = new Puntos(1);
+        Lionel.sumarPuntos(puntos);
+        Puntos puntosLionel = Lionel.getPuntos();
+        assertEquals(puntosLionel.getCantidad(), 1);
     }
 
 }

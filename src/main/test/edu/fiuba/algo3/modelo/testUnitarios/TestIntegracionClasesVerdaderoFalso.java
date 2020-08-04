@@ -1,6 +1,7 @@
 package edu.fiuba.algo3.modelo.testUnitarios;
 
 import edu.fiuba.algo3.modelo.Jugador;
+import edu.fiuba.algo3.modelo.Puntos;
 import edu.fiuba.algo3.modelo.pregunta.PreguntaVerdaderoFalsoClasico;
 import edu.fiuba.algo3.modelo.pregunta.PreguntaVerdaderoFalsoPenalidad;
 import edu.fiuba.algo3.modelo.respuesta.RespuestaVerdaderoFalso;
@@ -34,7 +35,9 @@ public class TestIntegracionClasesVerdaderoFalso {
         preguntaClasica.evaluarRespuestas(listaRespuestaPrimerPregunta);
         preguntaPenalidad.evaluarRespuestas(listaRespuestaSegundaPregunta);
 
-        Assertions.assertEquals(juan.getPuntos(),2);
+        Puntos puntosJuan = juan.getPuntos();
+
+        Assertions.assertEquals(puntosJuan.getCantidad(),2);
 
     }
     @Test
@@ -61,8 +64,9 @@ public class TestIntegracionClasesVerdaderoFalso {
         preguntaClasica.evaluarRespuestas(listaRespuestaPrimerPregunta);
         preguntaPenalidad.evaluarRespuestas(listaRespuestaSegundaPregunta);
 
-        Assertions.assertEquals(juan.getPuntos(),0);
+        Puntos puntosJuan = juan.getPuntos();
 
+        Assertions.assertEquals(puntosJuan.getCantidad(),0);
     }
 
     @Test
@@ -89,7 +93,9 @@ public class TestIntegracionClasesVerdaderoFalso {
         preguntaClasica.evaluarRespuestas(listaRespuestaPrimerPregunta);
         preguntaPenalidad.evaluarRespuestas(listaRespuestaSegundaPregunta);
 
-        Assertions.assertEquals(juan.getPuntos(),1);
+        Puntos puntosJuan = juan.getPuntos();
+
+        Assertions.assertEquals(puntosJuan.getCantidad(),1);
 
     }
 }

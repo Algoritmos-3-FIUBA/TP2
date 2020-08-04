@@ -50,7 +50,7 @@ public class testPreguntaMultiChoiceEntrega1 {
 
         pregunta.evaluarRespuestas(respuestas);
 
-        assertEquals(Mati.getPuntos(), 0);
+        assertEquals(Mati.getPuntos().getCantidad(), 0);
         assertTrue(pregunta.getOpcionesIncorrectas().contains(primeraOpcion));
         assertTrue(pregunta.getOpcionesIncorrectas().contains(segundaOpcion));
         assertTrue(pregunta.getOpcionesCorrectas().contains(terceraOpcion));
@@ -96,8 +96,8 @@ public class testPreguntaMultiChoiceEntrega1 {
 
         pregunta.evaluarRespuestas(respuestas);
 
-        assertEquals(Guido.getPuntos(), 0);
-        assertEquals(Mati.getPuntos(), 1);
+        assertEquals(Guido.getPuntos().getCantidad(), 0);
+        assertEquals(Mati.getPuntos().getCantidad(), 1);
         assertTrue(pregunta.getOpcionesIncorrectas().contains(primeraOpcion));
         assertTrue(pregunta.getOpcionesIncorrectas().contains(segundaOpcion));
         assertTrue(pregunta.getOpcionesCorrectas().contains(terceraOpcion));

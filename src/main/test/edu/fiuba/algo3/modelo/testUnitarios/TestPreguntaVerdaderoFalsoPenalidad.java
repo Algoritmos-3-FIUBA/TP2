@@ -34,7 +34,7 @@ public class TestPreguntaVerdaderoFalsoPenalidad {
 
         pregunta.evaluarRespuestas(listaRespuetas);
 
-        Assertions.assertEquals(jugador.getPuntos(),-1);
+        Assertions.assertEquals(jugador.getPuntos().getCantidad(),-1);
 
     }
 
@@ -54,7 +54,7 @@ public class TestPreguntaVerdaderoFalsoPenalidad {
 
         pregunta.evaluarRespuestas(listaRespuetas);
 
-        Assertions.assertEquals(jugador.getPuntos(),1);
+        Assertions.assertEquals(jugador.getPuntos().getCantidad(),1);
 
     }
 }

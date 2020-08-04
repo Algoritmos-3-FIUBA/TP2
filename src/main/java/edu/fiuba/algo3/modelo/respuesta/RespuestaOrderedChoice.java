@@ -1,6 +1,7 @@
 package edu.fiuba.algo3.modelo.respuesta;
 
 import edu.fiuba.algo3.modelo.Jugador;
+import edu.fiuba.algo3.modelo.Puntos;
 import edu.fiuba.algo3.modelo.opcion.Opcion;
 import edu.fiuba.algo3.modelo.opcion.OpcionCorrecta;
 
@@ -16,7 +17,7 @@ public class RespuestaOrderedChoice {
         this.jugador = jugador;
     }
 
-    public void otorgarPuntos(LinkedList<OpcionCorrecta> opcionesCorrectas, int cantidadDePuntos) {
+    public void otorgarPuntos(LinkedList<OpcionCorrecta> opcionesCorrectas, Puntos cantidadDePuntos) {
         if (opcionesEligidas.equals(opcionesCorrectas)){
             jugador.sumarPuntos(cantidadDePuntos);
         }

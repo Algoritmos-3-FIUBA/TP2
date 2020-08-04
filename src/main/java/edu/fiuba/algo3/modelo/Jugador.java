@@ -2,21 +2,22 @@ package edu.fiuba.algo3.modelo;
 
 public class Jugador {
     private final String nombre;
-    private int puntos = 0;
+    private Puntos puntos;
 
     public Jugador(String name) {
         this.nombre = name;
+        puntos = new Puntos(0);
     }
 
     public String getNombre() {
         return nombre;
     }
 
-    public int getPuntos() {
+    public Puntos getPuntos() {
         return puntos;
     }
 
-    public void sumarPuntos(int cantidadDePuntos) {
-        puntos = puntos + cantidadDePuntos;
+    public void sumarPuntos(Puntos puntosASumar) {
+        puntos.sumarPuntos(puntosASumar);
     }
 }

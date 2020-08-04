@@ -1,23 +1,17 @@
 package edu.fiuba.algo3.modelo.respuesta;
 
-import edu.fiuba.algo3.modelo.Jugador;
 import edu.fiuba.algo3.modelo.multiplicador.Multiplicador;
 import edu.fiuba.algo3.modelo.opcion.Opcion;
+import edu.fiuba.algo3.modelo.pregunta.PreguntaMultipleChoice;
 
-public class RespuestaVerdaderoFalsoPenalidad implements Respuesta {
+public class RespuestaVerdaderoFalsoPenalidad{
 
     private Opcion opcion;
     private Multiplicador multiplicador;
-    private Jugador jugador;
 
     public RespuestaVerdaderoFalsoPenalidad (Opcion opcion, Multiplicador multiplicador) {
         this.opcion = opcion;
         this.multiplicador = multiplicador;
-    }
-
-    public RespuestaVerdaderoFalsoPenalidad (Opcion opcion, Jugador jugador) {
-        this.opcion = opcion;
-        this.jugador = jugador;
     }
 
     public void otorgarPuntos() {

@@ -4,7 +4,7 @@ import edu.fiuba.algo3.modelo.multiplicador.Multiplicador;
 
 public interface EstadoMultiplicable {
 
-    int multiplicarPuntos(int cantidadDePuntos, Multiplicador multiplicador);
+    Puntos multiplicarPuntos(Puntos cantidadDePuntos, Multiplicador multiplicador);
 
 }
 

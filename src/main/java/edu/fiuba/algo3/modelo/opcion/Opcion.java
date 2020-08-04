@@ -1,19 +1,21 @@
 package edu.fiuba.algo3.modelo.opcion;
 
+import edu.fiuba.algo3.modelo.Puntos;
+
 import java.util.HashSet;
 import java.util.LinkedList;
 
 public abstract class Opcion {
 
     protected String Nombre;
-    protected int PuntosOtorgados;
+    protected Puntos PuntosOtorgados;
 
-    public Opcion(String NombreOpcion, int Puntos){
+    public Opcion(String NombreOpcion, int puntos){
         Nombre = NombreOpcion;
-        PuntosOtorgados = Puntos;
+        PuntosOtorgados = new Puntos(puntos);
     }
 
-    public int puntosObtenidos(){
+    public Puntos puntosObtenidos(){
         return PuntosOtorgados;
     }
 
@@ -24,19 +26,6 @@ public abstract class Opcion {
     public String getNombre(){
         return Nombre;
     }
-
-/*
-    //Reimplementación del equals.
-    public boolean equals(Object obj) {
-        if (obj == this) { return true; }
-        if (obj == null) { return false; }
-        if (obj instanceof Opcion) {
-            Opcion otraOpcion = (Opcion)obj;
-            return otraOpcion.getNombre().equals(getNombre());
-        } else{ return false; }
-    }
-
-*/
 
 }
 
