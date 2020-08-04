@@ -1,10 +1,11 @@
 package edu.fiuba.algo3.modelo;
 
-public class Multiplicable {
-    /*
+public class Multiplicable implements EstadoMultiplicable {
+
+    @Override
+
     int multiplicarPuntos(int cantidadDePuntos, Multiplicador multiplicador){
-        ^(multiplicador.multiplicarPuntos(cantidadDePuntos));
+        return multiplicador.utilizarBeneficio(cantidadDePuntos);
     }
 
-     */
 }
