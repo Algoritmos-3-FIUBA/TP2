@@ -6,7 +6,6 @@ public class Jugador {
 
     public Jugador(String name) {
         this.nombre = name;
-        Multiplicador multiplicador()
     }
 
     public String getNombre() {
