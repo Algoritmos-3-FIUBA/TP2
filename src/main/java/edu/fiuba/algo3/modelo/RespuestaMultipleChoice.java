@@ -6,7 +6,6 @@ public class RespuestaMultipleChoice implements  Respuesta {
     private HashSet<Opcion> opcionesEligidas;
     private Jugador jugador;
 
-
     public RespuestaMultipleChoice (HashSet<Opcion> opcionesEligidas, Jugador jugador) {
         this.opcionesEligidas = opcionesEligidas;
         this.jugador = jugador;

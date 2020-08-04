@@ -29,6 +29,8 @@ public class testPreguntaMultiChoiceEntrega1 {
 
         PreguntaMultipleChoice pregunta = new PreguntaMultipleChoice("¿Cuales de las siguientes cuentas tiene resultado 4?", 1, opciones);
 
+        PreguntaMultipleChoice pregunta2 = new PreguntaMultipleChoice("¿Cuales de las siguientes cuentas tiene resultado 4?", 1, opciones);
+
         LinkedList<RespuestaMultipleChoice> respuestas = new LinkedList<RespuestaMultipleChoice>();
 
         HashSet<Opcion> opcionesSeleccionadas = new HashSet<Opcion>();
@@ -36,11 +38,14 @@ public class testPreguntaMultiChoiceEntrega1 {
         opcionesSeleccionadas.add(cuartaOpcion);
         opcionesSeleccionadas.add(primeraOpcion);
 
-        RespuestaMultipleChoice respuesta = new RespuestaMultipleChoice(opcionesSeleccionadas, Mati);
+        RespuestaMultipleChoice respuesta = new RespuestaMultipleChoice(opcionesSeleccionadas, Mati,);
+
 
         respuestas.add(respuesta);
 
         pregunta.evaluarRespuestas(respuestas);
+
+        pregunta2.evaluarRespuestas(respuestas2);
 
         assertEquals(Mati.getPuntos(), 0);
         assertTrue(pregunta.getOpcionesIncorrectas().contains(primeraOpcion));

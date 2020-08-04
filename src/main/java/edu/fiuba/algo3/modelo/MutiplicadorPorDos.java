@@ -4,10 +4,8 @@ public class MutiplicadorPorDos extends Multiplicador {
 
     private int factor = 2;
 
-    public MutiplicadorPorDos(Jugador jugador, EstadoMultiplicable estado) {
-
-        this.jugador = jugador;
-        this.estadoMultiplicable = estado;
+    public MutiplicadorPorDos(Jugador jugador){
+        super(jugador);
     }
 
     @Override
