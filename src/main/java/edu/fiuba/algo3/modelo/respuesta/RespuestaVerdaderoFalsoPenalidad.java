@@ -1,12 +1,13 @@
 package edu.fiuba.algo3.modelo.respuesta;
 
+import edu.fiuba.algo3.modelo.Jugador;
 import edu.fiuba.algo3.modelo.multiplicador.Multiplicador;
 import edu.fiuba.algo3.modelo.opcion.Opcion;
-import edu.fiuba.algo3.modelo.pregunta.PreguntaMultipleChoice;
 
 public class RespuestaVerdaderoFalsoPenalidad{
 
     private Opcion opcion;
+    private Jugador jugador;
     private Multiplicador multiplicador;
 
     public RespuestaVerdaderoFalsoPenalidad (Opcion opcion, Multiplicador multiplicador) {
@@ -14,6 +15,12 @@ public class RespuestaVerdaderoFalsoPenalidad{
         this.multiplicador = multiplicador;
     }
 
+    public RespuestaVerdaderoFalsoPenalidad (Opcion opcion, Jugador jugador) {
+        this.opcion = opcion;
+        this.jugador = jugador;
+    }
+
+    //Con Penalidad
     public void otorgarPuntos() {
         multiplicador.utilizarBeneficio(opcion.puntosObtenidos());
     }
