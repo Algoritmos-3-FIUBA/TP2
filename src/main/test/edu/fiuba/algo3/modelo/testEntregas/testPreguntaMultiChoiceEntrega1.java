@@ -5,6 +5,7 @@ import edu.fiuba.algo3.modelo.opcion.Opcion;
 import edu.fiuba.algo3.modelo.opcion.OpcionCorrecta;
 import edu.fiuba.algo3.modelo.opcion.OpcionIncorrecta;
 import edu.fiuba.algo3.modelo.pregunta.PreguntaMultipleChoice;
+import edu.fiuba.algo3.modelo.respuesta.RespuestaMultipleChoice;
 import org.junit.jupiter.api.Test;
 
 import java.util.HashSet;
@@ -42,14 +43,12 @@ public class testPreguntaMultiChoiceEntrega1 {
         opcionesSeleccionadas.add(cuartaOpcion);
         opcionesSeleccionadas.add(primeraOpcion);
 
-        RespuestaMultipleChoice respuesta = new RespuestaMultipleChoice(opcionesSeleccionadas, Mati,);
+        RespuestaMultipleChoice respuesta = new RespuestaMultipleChoice(opcionesSeleccionadas, Mati);
 
 
         respuestas.add(respuesta);
 
         pregunta.evaluarRespuestas(respuestas);
-
-        pregunta2.evaluarRespuestas(respuestas2);
 
         assertEquals(Mati.getPuntos(), 0);
         assertTrue(pregunta.getOpcionesIncorrectas().contains(primeraOpcion));
