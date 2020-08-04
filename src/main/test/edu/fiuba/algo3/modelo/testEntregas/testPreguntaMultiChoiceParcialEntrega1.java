@@ -63,9 +63,9 @@ public class testPreguntaMultiChoiceParcialEntrega1 {
 
         pregunta.evaluarRespuestas(respuestas);
 
-        assertEquals(Juan.getPuntos(),10);
-        assertEquals(Guido.getPuntos(),5);
-        assertEquals(Fer.getPuntos(),5);
+        assertEquals(Juan.getPuntos().getCantidad(),10);
+        assertEquals(Guido.getPuntos().getCantidad(),5);
+        assertEquals(Fer.getPuntos().getCantidad(),5);
 
     }
 
@@ -114,8 +114,8 @@ public class testPreguntaMultiChoiceParcialEntrega1 {
 
         pregunta.evaluarRespuestas(respuestas);
 
-        assertEquals(Mati.getPuntos(),0);
-        assertEquals(Lucas.getPuntos(),2);
+        assertEquals(Mati.getPuntos().getCantidad(),0);
+        assertEquals(Lucas.getPuntos().getCantidad(),2);
 
     }
 }

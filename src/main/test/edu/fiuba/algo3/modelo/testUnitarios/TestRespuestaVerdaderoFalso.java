@@ -21,7 +21,7 @@ public class TestRespuestaVerdaderoFalso {
 
         respuestaJugador.otorgarPuntos();
 
-        Assertions.assertEquals(jugador.getPuntos(),1);
+        Assertions.assertEquals(jugador.getPuntos().getCantidad(),1);
     }
 
     @Test
@@ -33,6 +33,6 @@ public class TestRespuestaVerdaderoFalso {
 
         respuestaJugador.otorgarPuntos();
 
-        Assertions.assertEquals(jugador.getPuntos(),0);
+        Assertions.assertEquals(jugador.getPuntos().getCantidad(),0);
     }
 }

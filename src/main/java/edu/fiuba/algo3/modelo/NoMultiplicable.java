@@ -6,8 +6,7 @@ public class NoMultiplicable implements EstadoMultiplicable {
 
     @Override
 
-   public int multiplicarPuntos(int cantidadDePuntos, Multiplicador multiplicador){
-
+   public Puntos multiplicarPuntos(Puntos cantidadDePuntos, Multiplicador multiplicador){
         return cantidadDePuntos;
     }
 

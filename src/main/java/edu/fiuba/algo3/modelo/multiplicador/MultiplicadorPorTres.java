@@ -1,6 +1,7 @@
 package edu.fiuba.algo3.modelo.multiplicador;
 
 import edu.fiuba.algo3.modelo.Jugador;
+import edu.fiuba.algo3.modelo.Puntos;
 
 public class MultiplicadorPorTres extends Multiplicador {
 
@@ -11,9 +12,9 @@ public class MultiplicadorPorTres extends Multiplicador {
     }
 
     @Override
-    public int utilizarBeneficio(int puntos) {
-
-        jugador.sumarPuntos(puntos * factor);
+    public Puntos utilizarBeneficio(Puntos puntos) {
+        puntos.multiplicar(factor);
+        jugador.sumarPuntos(puntos);
         this.inutilizarMultiplicador();
 
         return puntos;

@@ -30,9 +30,9 @@ public class TestRespuestaMultipleChoice {
         HashSet<OpcionCorrecta> opcionesCorrectas = new HashSet<OpcionCorrecta>();
         opcionesCorrectas.add((OpcionCorrecta)primeraOpcion);
 
-        respuestaJugador.otorgarPuntos(opcionesCorrectas, 1);
+        respuestaJugador.otorgarPuntos(opcionesCorrectas, new Puntos(1));
 
-        Assertions.assertEquals(jugador.getPuntos(),1);
+        Assertions.assertEquals(jugador.getPuntos().getCantidad(),1);
     }
 
     @Test
@@ -52,9 +52,9 @@ public class TestRespuestaMultipleChoice {
         opcionesCorrectas.add((OpcionCorrecta)primeraOpcion);
         opcionesCorrectas.add((OpcionCorrecta)segundaOpcion);
 
-        respuestaJugador.otorgarPuntos(opcionesCorrectas, 1);
+        respuestaJugador.otorgarPuntos(opcionesCorrectas, new Puntos(1));
 
-        Assertions.assertEquals(jugador.getPuntos(),1);
+        Assertions.assertEquals(jugador.getPuntos().getCantidad(),1);
     }
 
     @Test
@@ -76,9 +76,9 @@ public class TestRespuestaMultipleChoice {
         opcionesCorrectas.add((OpcionCorrecta)segundaOpcion);
         opcionesCorrectas.add((OpcionCorrecta)terceraOpcion);
 
-        respuestaJugador.otorgarPuntos(opcionesCorrectas, 1);
+        respuestaJugador.otorgarPuntos(opcionesCorrectas, new Puntos(1));
 
-        Assertions.assertEquals(jugador.getPuntos(),1);
+        Assertions.assertEquals(jugador.getPuntos().getCantidad(),1);
     }
 
     @Test
@@ -102,9 +102,9 @@ public class TestRespuestaMultipleChoice {
         opcionesCorrectas.add((OpcionCorrecta)terceraOpcion);
         opcionesCorrectas.add((OpcionCorrecta)cuartaOpcion);
 
-        respuestaJugador.otorgarPuntos(opcionesCorrectas, 1);
+        respuestaJugador.otorgarPuntos(opcionesCorrectas, new Puntos(1));
 
-        Assertions.assertEquals(jugador.getPuntos(),1);
+        Assertions.assertEquals(jugador.getPuntos().getCantidad(),1);
     }
 
     @Test
@@ -130,9 +130,9 @@ public class TestRespuestaMultipleChoice {
         opcionesCorrectas.add((OpcionCorrecta)cuartaOpcion);
         opcionesCorrectas.add((OpcionCorrecta)quintaOpcion);
 
-        respuestaJugador.otorgarPuntos(opcionesCorrectas, 1);
+        respuestaJugador.otorgarPuntos(opcionesCorrectas, new Puntos(1));
 
-        Assertions.assertEquals(jugador.getPuntos(),1);
+        Assertions.assertEquals(jugador.getPuntos().getCantidad(),1);
     }
 
     @Test
@@ -149,9 +149,9 @@ public class TestRespuestaMultipleChoice {
         HashSet<OpcionCorrecta> opcionesCorrectas = new HashSet<OpcionCorrecta>();
         opcionesCorrectas.add((OpcionCorrecta)segundaOpcion);
 
-        respuestaJugador.otorgarPuntos(opcionesCorrectas, 1);
+        respuestaJugador.otorgarPuntos(opcionesCorrectas, new Puntos(1));
 
-        Assertions.assertEquals(jugador.getPuntos(),0);
+        Assertions.assertEquals(jugador.getPuntos().getCantidad(),0);
     }
 
     @Test
@@ -169,9 +169,9 @@ public class TestRespuestaMultipleChoice {
         opcionesCorrectas.add((OpcionCorrecta)primeraOpcion);
         opcionesCorrectas.add((OpcionCorrecta)segundaOpcion);
 
-        respuestaJugador.otorgarPuntos(opcionesCorrectas, 1);
+        respuestaJugador.otorgarPuntos(opcionesCorrectas, new Puntos(1));
 
-        Assertions.assertEquals(jugador.getPuntos(),0);
+        Assertions.assertEquals(jugador.getPuntos().getCantidad(),0);
     }
 
     @Test
@@ -191,9 +191,9 @@ public class TestRespuestaMultipleChoice {
         opcionesCorrectas.add((OpcionCorrecta)primeraOpcion);
         opcionesCorrectas.add((OpcionCorrecta)segundaOpcion);
 
-        respuestaJugador.otorgarPuntos(opcionesCorrectas, 1);
+        respuestaJugador.otorgarPuntos(opcionesCorrectas, new Puntos(1));
 
-        Assertions.assertEquals(jugador.getPuntos(),0);
+        Assertions.assertEquals(jugador.getPuntos().getCantidad(),0);
     }
 
     @Test
@@ -213,8 +213,8 @@ public class TestRespuestaMultipleChoice {
         opcionesCorrectas.add((OpcionCorrecta)primeraOpcion);
         opcionesCorrectas.add((OpcionCorrecta)segundaOpcion);
 
-        respuestaJugador.otorgarPuntos(opcionesCorrectas, 1);
+        respuestaJugador.otorgarPuntos(opcionesCorrectas, new Puntos(1));
 
-        Assertions.assertEquals(jugador.getPuntos(),0);
+        Assertions.assertEquals(jugador.getPuntos().getCantidad(),0);
     }
 }

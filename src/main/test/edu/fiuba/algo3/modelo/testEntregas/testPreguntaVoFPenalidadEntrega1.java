@@ -26,7 +26,7 @@ public class testPreguntaVoFPenalidadEntrega1 {
 
         pregunta.evaluarRespuestas(listaRespuesta);
 
-        Assertions.assertEquals(jugador.getPuntos(),1);
+        Assertions.assertEquals(jugador.getPuntos().getCantidad(),1);
 
     }
     @Test
@@ -49,8 +49,8 @@ public class testPreguntaVoFPenalidadEntrega1 {
 
         pregunta.evaluarRespuestas(listaRespuesta);
 
-        Assertions.assertEquals(jugador1.getPuntos(),1);
-        Assertions.assertEquals(jugador2.getPuntos(),-1);
-        Assertions.assertEquals(jugador3.getPuntos(),1);
+        Assertions.assertEquals(jugador1.getPuntos().getCantidad(),1);
+        Assertions.assertEquals(jugador2.getPuntos().getCantidad(),-1);
+        Assertions.assertEquals(jugador3.getPuntos().getCantidad(),1);
     }
 }

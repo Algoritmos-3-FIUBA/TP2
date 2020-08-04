@@ -55,4 +55,22 @@ public class TestPuntos {
 
         assertEquals(puntos.getCantidad(), 0);
     }
+
+    @Test
+    public void AlMultiplicarUnosPuntosDevuelveElValorEsperado(){
+        Puntos puntos = new Puntos(1);
+
+        puntos.multiplicar(5);
+
+        assertEquals(puntos.getCantidad(), 5);
+    }
+
+    @Test
+    public void AlMultiplicarOtrosPuntosDevuelveElValorEsperado(){
+        Puntos puntos = new Puntos(5);
+
+        puntos.multiplicar(7);
+
+        assertEquals(puntos.getCantidad(), 35);
+    }
 }

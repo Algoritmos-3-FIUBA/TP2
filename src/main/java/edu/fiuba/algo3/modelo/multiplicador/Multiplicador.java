@@ -1,9 +1,6 @@
 package edu.fiuba.algo3.modelo.multiplicador;
 
-import edu.fiuba.algo3.modelo.EstadoMultiplicable;
-import edu.fiuba.algo3.modelo.Jugador;
-import edu.fiuba.algo3.modelo.Multiplicable;
-import edu.fiuba.algo3.modelo.NoMultiplicable;
+import edu.fiuba.algo3.modelo.*;
 
 public abstract class Multiplicador {
 
@@ -23,7 +20,7 @@ public abstract class Multiplicador {
 
     }
 
-    public abstract int utilizarBeneficio(int puntos);
+    public abstract Puntos utilizarBeneficio(Puntos puntos);
 
 }
 

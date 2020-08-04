@@ -25,7 +25,7 @@ public class TestPreguntaVoFClasicoEntrega0 {
 
         pregunta.evaluarRespuestas(respuestasDeJugadores);
 
-        Assertions.assertEquals(Lucas.getPuntos(),1);
+        Assertions.assertEquals(Lucas.getPuntos().getCantidad(),1);
     }
 
     @Test
@@ -46,7 +46,7 @@ public class TestPreguntaVoFClasicoEntrega0 {
 
         pregunta.evaluarRespuestas(respuestasDeJugadores);
 
-        Assertions.assertEquals(Lucas.getPuntos(),0);
-        Assertions.assertEquals(Mati.getPuntos(),1);
+        Assertions.assertEquals(Lucas.getPuntos().getCantidad(),0);
+        Assertions.assertEquals(Mati.getPuntos().getCantidad(),1);
     }
 }
