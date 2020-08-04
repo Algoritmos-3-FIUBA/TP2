@@ -25,4 +25,5 @@ public class RespuestaVerdaderoFalso implements Respuesta{
     public void otorgarPuntos() {
         jugador.sumarPuntos(opcion.puntosObtenidos());
     }
+
 }

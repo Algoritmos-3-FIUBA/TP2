@@ -11,13 +11,12 @@ public class MutiplicadorPorDos extends Multiplicador {
         super(jugador);
     }
 
-    @Override
-    public Puntos utilizarBeneficio(Puntos puntos) {
-        puntos.multiplicar(factor);
-        jugador.sumarPuntos(puntos);
-        this.inutilizarMultiplicador();
+    public int getFactor() {return factor;}
 
-        return puntos;
+    @Override
+    public void utilizarBeneficio(Puntos puntos) {
+        jugador.sumarPuntos(estadoMultiplicable.multiplicarPuntos(puntos, this));
+        this.inutilizarMultiplicador();
     }
 
 }

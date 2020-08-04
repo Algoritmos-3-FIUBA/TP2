@@ -8,19 +8,17 @@ public abstract class Multiplicador {
     protected EstadoMultiplicable estadoMultiplicable;
 
     public Multiplicador(Jugador jugador) {
-
         this.jugador = jugador;
         this.estadoMultiplicable = new Multiplicable();
-
     }
 
     public void inutilizarMultiplicador() {
-
         this.estadoMultiplicable = new NoMultiplicable();
-
     }
 
-    public abstract Puntos utilizarBeneficio(Puntos puntos);
+    public abstract void utilizarBeneficio(Puntos puntos);
+
+    public abstract int getFactor();
 
 }
 

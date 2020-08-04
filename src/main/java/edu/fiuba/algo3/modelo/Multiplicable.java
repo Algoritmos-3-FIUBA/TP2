@@ -6,7 +6,8 @@ public class Multiplicable implements EstadoMultiplicable {
 
     @Override
     public Puntos multiplicarPuntos(Puntos cantidadDePuntos, Multiplicador multiplicador){
-        return multiplicador.utilizarBeneficio(cantidadDePuntos);
+        cantidadDePuntos.multiplicar(multiplicador.getFactor());
+        return (cantidadDePuntos);
     }
 
 }
