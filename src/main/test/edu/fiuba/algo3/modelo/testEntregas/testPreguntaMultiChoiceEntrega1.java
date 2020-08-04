@@ -1,6 +1,10 @@
 package edu.fiuba.algo3.modelo.testEntregas;
 
 import edu.fiuba.algo3.modelo.*;
+import edu.fiuba.algo3.modelo.opcion.Opcion;
+import edu.fiuba.algo3.modelo.opcion.OpcionCorrecta;
+import edu.fiuba.algo3.modelo.opcion.OpcionIncorrecta;
+import edu.fiuba.algo3.modelo.pregunta.PreguntaMultipleChoice;
 import org.junit.jupiter.api.Test;
 
 import java.util.HashSet;

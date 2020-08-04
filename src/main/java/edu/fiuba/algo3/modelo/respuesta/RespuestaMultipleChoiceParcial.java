@@ -1,4 +1,9 @@
-package edu.fiuba.algo3.modelo;
+package edu.fiuba.algo3.modelo.respuesta;
+
+import edu.fiuba.algo3.modelo.Jugador;
+import edu.fiuba.algo3.modelo.opcion.Opcion;
+import edu.fiuba.algo3.modelo.opcion.OpcionCorrecta;
+import edu.fiuba.algo3.modelo.opcion.OpcionIncorrecta;
 
 import java.util.HashSet;
 

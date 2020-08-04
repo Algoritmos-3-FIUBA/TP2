@@ -1,6 +1,10 @@
-package edu.fiuba.algo3.modelo;
+package edu.fiuba.algo3.modelo.pregunta;
 
-public class PreguntaVerdaderoFalsoPenalidad extends PreguntaVerdaderoFalso{
+import edu.fiuba.algo3.modelo.opcion.Opcion;
+import edu.fiuba.algo3.modelo.opcion.OpcionCorrecta;
+import edu.fiuba.algo3.modelo.opcion.OpcionIncorrecta;
+
+public class PreguntaVerdaderoFalsoPenalidad extends PreguntaVerdaderoFalso {
 
     private Opcion opcionVerdadero;
     private Opcion opcionFalso;

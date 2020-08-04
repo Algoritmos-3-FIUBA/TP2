@@ -1,9 +1,9 @@
 package edu.fiuba.algo3.modelo.testUnitarios;
 
 import edu.fiuba.algo3.modelo.Jugador;
-import edu.fiuba.algo3.modelo.Opcion;
-import edu.fiuba.algo3.modelo.OpcionCorrecta;
-import edu.fiuba.algo3.modelo.RespuestaVerdaderoFalso;
+import edu.fiuba.algo3.modelo.opcion.Opcion;
+import edu.fiuba.algo3.modelo.opcion.OpcionCorrecta;
+import edu.fiuba.algo3.modelo.respuesta.RespuestaVerdaderoFalso;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 

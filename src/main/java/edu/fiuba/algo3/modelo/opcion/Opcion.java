@@ -1,4 +1,4 @@
-package edu.fiuba.algo3.modelo;
+package edu.fiuba.algo3.modelo.opcion;
 
 import java.util.HashSet;
 import java.util.LinkedList;
@@ -17,7 +17,7 @@ public abstract class Opcion {
         return PuntosOtorgados;
     }
 
-    public abstract void agregarseALaListaCorrespondiente(HashSet<OpcionCorrecta> opcionesCorrectas,HashSet<OpcionIncorrecta> opcionesIncorrectas);
+    public abstract void agregarseALaListaCorrespondiente(HashSet<OpcionCorrecta> opcionesCorrectas, HashSet<OpcionIncorrecta> opcionesIncorrectas);
 
     public abstract void agregarseALaListaCorrespondienteOrdenada(LinkedList<OpcionCorrecta> opcionesCorrectas, LinkedList<OpcionIncorrecta> opcionesIncorrectas);
 

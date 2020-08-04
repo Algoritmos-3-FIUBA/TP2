@@ -1,6 +1,8 @@
 package edu.fiuba.algo3.modelo.testEntregas;
 
 import edu.fiuba.algo3.modelo.*;
+import edu.fiuba.algo3.modelo.pregunta.PreguntaVerdaderoFalsoPenalidad;
+import edu.fiuba.algo3.modelo.respuesta.RespuestaVerdaderoFalso;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 

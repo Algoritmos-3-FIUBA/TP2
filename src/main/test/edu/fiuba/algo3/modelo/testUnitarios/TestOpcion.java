@@ -1,7 +1,7 @@
 package edu.fiuba.algo3.modelo.testUnitarios;
 
-import edu.fiuba.algo3.modelo.OpcionCorrecta;
-import edu.fiuba.algo3.modelo.OpcionIncorrecta;
+import edu.fiuba.algo3.modelo.opcion.OpcionCorrecta;
+import edu.fiuba.algo3.modelo.opcion.OpcionIncorrecta;
 import org.junit.jupiter.api.Test;
 import java.util.HashSet;
 import static org.junit.jupiter.api.Assertions.assertEquals;

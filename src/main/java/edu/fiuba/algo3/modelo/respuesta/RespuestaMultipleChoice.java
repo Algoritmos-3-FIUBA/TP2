@@ -1,6 +1,8 @@
-package edu.fiuba.algo3.modelo;
+package edu.fiuba.algo3.modelo.respuesta;
 
 import java.util.HashSet;
+import edu.fiuba.algo3.modelo.Jugador;
+import edu.fiuba.algo3.modelo.opcion.*;
 
 public class RespuestaMultipleChoice implements  Respuesta {
     private HashSet<Opcion> opcionesEligidas;
