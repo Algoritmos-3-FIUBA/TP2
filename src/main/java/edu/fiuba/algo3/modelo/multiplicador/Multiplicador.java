@@ -23,7 +23,9 @@ public abstract class Multiplicador {
 
     }
 
-    public abstract int utilizarBeneficio(int puntos);
+    public abstract void utilizarBeneficio(int puntos);
+
+    public abstract int getFactor();
 
 }
 

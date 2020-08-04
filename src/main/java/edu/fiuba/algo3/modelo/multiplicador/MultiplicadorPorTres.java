@@ -11,12 +11,10 @@ public class MultiplicadorPorTres extends Multiplicador {
     }
 
     @Override
-    public int utilizarBeneficio(int puntos) {
+    public void utilizarBeneficio(int puntos) {
 
-        jugador.sumarPuntos(puntos * factor);
+        jugador.sumarPuntos(estadoMultiplicable.multiplicarPuntos(puntos, this));
         this.inutilizarMultiplicador();
-
-        return puntos;
     }
 
 }
