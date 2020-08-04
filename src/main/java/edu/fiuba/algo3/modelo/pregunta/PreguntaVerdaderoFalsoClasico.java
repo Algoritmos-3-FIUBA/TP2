@@ -6,9 +6,6 @@ import edu.fiuba.algo3.modelo.opcion.OpcionIncorrecta;
 
 public class PreguntaVerdaderoFalsoClasico extends PreguntaVerdaderoFalso {
 
-    private Opcion opcionVerdadero;
-    private Opcion opcionFalso;
-
     public PreguntaVerdaderoFalsoClasico(String nombrePregunta) {
         super(nombrePregunta);
     }
@@ -28,10 +25,4 @@ public class PreguntaVerdaderoFalsoClasico extends PreguntaVerdaderoFalso {
         opcionVerdadero = new OpcionIncorrecta("Verdadero",0);
 
     }
-
-    public Opcion getOpcionVerdadera() { return opcionVerdadero; }
-
-    public Opcion getOpcionFalsa() { return opcionFalso; }
-
-
 }

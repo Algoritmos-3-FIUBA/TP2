@@ -6,9 +6,6 @@ import edu.fiuba.algo3.modelo.opcion.OpcionIncorrecta;
 
 public class PreguntaVerdaderoFalsoPenalidad extends PreguntaVerdaderoFalso {
 
-    private Opcion opcionVerdadero;
-    private Opcion opcionFalso;
-
     public PreguntaVerdaderoFalsoPenalidad(String nombrePregunta){ super(nombrePregunta); }
 
     @Override
@@ -26,10 +23,4 @@ public class PreguntaVerdaderoFalsoPenalidad extends PreguntaVerdaderoFalso {
         opcionVerdadero = new OpcionIncorrecta("Verdadero",-1);
 
     }
-
-    public Opcion getOpcionVerdadera() { return opcionVerdadero; }
-
-    public Opcion getOpcionFalsa() { return opcionFalso; }
-
-
 }
