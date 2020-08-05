@@ -2,13 +2,8 @@ package edu.fiuba.algo3.modelo.pregunta;
 
 import edu.fiuba.algo3.modelo.Grupo;
 import edu.fiuba.algo3.modelo.Puntos;
-import edu.fiuba.algo3.modelo.opcion.Opcion;
-import edu.fiuba.algo3.modelo.opcion.OpcionCorrecta;
-import edu.fiuba.algo3.modelo.opcion.OpcionIncorrecta;
 import edu.fiuba.algo3.modelo.respuesta.RespuestaGroupChoice;
-import edu.fiuba.algo3.modelo.respuesta.RespuestaMultipleChoice;
 
-import java.util.HashSet;
 import java.util.LinkedList;
 
 public class PreguntaGroupChoice {
@@ -25,8 +20,23 @@ public class PreguntaGroupChoice {
     }
 
     public void evaluarRespuestas(LinkedList<RespuestaGroupChoice> respuestas) {
+        for (RespuestaGroupChoice respuesta : respuestas) {
+            verificarlosGruposDeLaRespuesta(respuesta);
+        }
+    }
 
-        for (RespuestaGroupChoice respuesta : respuestas)
-            respuesta.otorgarPuntos(gruposCorrectos, PuntosOtorgados);
+    public void verificarlosGruposDeLaRespuesta(RespuestaGroupChoice respuesta){
+        Puntos puntosAsignar;
+        LinkedList<Grupo> gruposElegidos;
+        gruposElegidos = respuesta.getGruposElegidos();
+        for (int i=0; i<gruposCorrectos.size(); i++){
+            //Pregunta le delega a cada grupo correcto que se evalue, antes esa delegación la hacia Respuesta
+
+
+            puntosAsignar = gruposCorrectos.get(i).evaluarGrupo(gruposElegidos.get(i).getOpcionesDelGrupo(), PuntosOtorgados);
+
+            // puntosAsignar = gruposElegidos.get(i).evaluarGrupo(gruposCorrectos.get(i).getOpcionesDelGrupo(), PuntosOtorgados);
+            respuesta.otorgarPuntos(puntosAsignar);
+        }
     }
 }
