@@ -13,8 +13,9 @@ public class RespuestaUnica extends Respuesta {
         this.opcion = opcion;
     }
 
-    public RespuestaUnica(Jugador jugador, Multiplicador multiplicador) {
+    public RespuestaUnica(Opcion opcion,Jugador jugador, Multiplicador multiplicador) {
         super(jugador, multiplicador);
+        this.opcion = opcion;
     }
 
     public Opcion getOpcion() {
