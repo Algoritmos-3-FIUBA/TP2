@@ -1,0 +1,27 @@
+package edu.fiuba.algo3.modelo.respuesta;
+
+import edu.fiuba.algo3.modelo.Jugador;
+import edu.fiuba.algo3.modelo.multiplicador.Multiplicador;
+import edu.fiuba.algo3.modelo.opcion.Opcion;
+
+import java.util.LinkedList;
+
+public class RespuestaMultiple extends Respuesta {
+
+    private LinkedList<Opcion> opcionesElegidas;
+
+    public RespuestaMultiple (LinkedList<Opcion> opciones, Jugador jugador) {
+        super(jugador);
+        this.opcionesElegidas = opciones;
+    }
+
+    public RespuestaMultiple (LinkedList<Opcion> opciones,Jugador jugador, Multiplicador multiplicador) {
+        super(jugador, multiplicador);
+        this.opcionesElegidas = opciones;
+    }
+
+    public LinkedList<Opcion> getOpciones() {
+        return opcionesElegidas;
+    }
+
+}
