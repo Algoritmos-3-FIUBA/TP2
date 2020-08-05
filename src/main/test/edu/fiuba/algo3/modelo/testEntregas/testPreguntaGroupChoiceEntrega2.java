@@ -4,7 +4,7 @@ import edu.fiuba.algo3.modelo.Grupo;
 import edu.fiuba.algo3.modelo.Jugador;
 import edu.fiuba.algo3.modelo.opcion.OpcionCorrecta;
 import edu.fiuba.algo3.modelo.pregunta.PreguntaGroupChoice;
-import edu.fiuba.algo3.modelo.respuesta.RespuestaGroupChoice;
+import edu.fiuba.algo3.modelo.respuesta.RespuestaGrupos;
 import org.junit.jupiter.api.Test;
 
 import java.util.LinkedList;
@@ -12,7 +12,7 @@ import java.util.LinkedList;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class testPreguntaGroupChoiceEntrega2 {
-/*    OpcionCorrecta primeraOpcion = new OpcionCorrecta("1 + 1", 0);
+    OpcionCorrecta primeraOpcion = new OpcionCorrecta("1 + 1", 0);
     OpcionCorrecta segundaOpcion = new OpcionCorrecta("3 - 1", 0);
     OpcionCorrecta terceraOpcion = new OpcionCorrecta("2 + 2", 0);
     OpcionCorrecta cuartaOpcion = new OpcionCorrecta("2 * 2", 0);
@@ -37,7 +37,7 @@ public class testPreguntaGroupChoiceEntrega2 {
         PreguntaGroupChoice pregunta = new PreguntaGroupChoice("¿Cuales de las siguientes cuentas tiene resultado 4?", 1, gruposCorrectos);
 
         //Jugador selecciona coloca las opciones en los grupos
-        LinkedList<RespuestaGroupChoice> respuestas = new LinkedList<RespuestaGroupChoice>();
+        LinkedList<RespuestaGrupos> respuestas = new LinkedList<RespuestaGrupos>();
 
         LinkedList<Grupo> gruposElegidos = new LinkedList<Grupo>();
 
@@ -52,7 +52,7 @@ public class testPreguntaGroupChoiceEntrega2 {
         gruposElegidos.add(grupo1Elegidos);
         gruposElegidos.add(grupo2Elegidos);
 
-        RespuestaGroupChoice respuesta = new RespuestaGroupChoice(gruposElegidos, Guido);
+        RespuestaGrupos respuesta = new RespuestaGrupos(gruposElegidos, Guido);
 
         respuestas.add(respuesta);
 
@@ -83,7 +83,7 @@ public class testPreguntaGroupChoiceEntrega2 {
         PreguntaGroupChoice pregunta = new PreguntaGroupChoice("¿Cuales de las siguientes cuentas tiene resultado 4?", 1, gruposCorrectos);
 
         //Jugador Guido selecciona coloca las opciones en los grupos
-        LinkedList<RespuestaGroupChoice> respuestas = new LinkedList<RespuestaGroupChoice>();
+        LinkedList<RespuestaGrupos> respuestas = new LinkedList<RespuestaGrupos>();
 
         LinkedList<Grupo> gruposElegidosGuido = new LinkedList<Grupo>();
 
@@ -98,7 +98,7 @@ public class testPreguntaGroupChoiceEntrega2 {
         gruposElegidosGuido.add(grupo1ElegidosGuido);
         gruposElegidosGuido.add(grupo2ElegidosGuido);
 
-        RespuestaGroupChoice respuestaGuido = new RespuestaGroupChoice(gruposElegidosGuido, Guido);
+        RespuestaGrupos respuestaGuido = new RespuestaGrupos(gruposElegidosGuido, Guido);
 
         //Jugador Lucas selecciona coloca las opciones en los grupos
         LinkedList<Grupo> gruposElegidosLucas = new LinkedList<Grupo>();
@@ -114,7 +114,7 @@ public class testPreguntaGroupChoiceEntrega2 {
         gruposElegidosLucas.add(grupo1ElegidosLucas);
         gruposElegidosLucas.add(grupo2ElegidosLucas);
 
-        RespuestaGroupChoice respuestaLucas = new RespuestaGroupChoice(gruposElegidosLucas, Lucas);
+        RespuestaGrupos respuestaLucas = new RespuestaGrupos(gruposElegidosLucas, Lucas);
 
 
         respuestas.add(respuestaGuido);
@@ -147,7 +147,7 @@ public class testPreguntaGroupChoiceEntrega2 {
         PreguntaGroupChoice pregunta = new PreguntaGroupChoice("¿Cuales de las siguientes cuentas tiene resultado 4?", 1, gruposCorrectos);
 
         //Jugador Guido selecciona coloca las opciones en los grupos
-        LinkedList<RespuestaGroupChoice> respuestas = new LinkedList<RespuestaGroupChoice>();
+        LinkedList<RespuestaGrupos> respuestas = new LinkedList<RespuestaGrupos>();
 
         LinkedList<Grupo> gruposElegidosGuido = new LinkedList<Grupo>();
 
@@ -162,7 +162,7 @@ public class testPreguntaGroupChoiceEntrega2 {
         gruposElegidosGuido.add(grupo1ElegidosGuido);
         gruposElegidosGuido.add(grupo2ElegidosGuido);
 
-        RespuestaGroupChoice respuestaGuido = new RespuestaGroupChoice(gruposElegidosGuido, Guido);
+        RespuestaGrupos respuestaGuido = new RespuestaGrupos(gruposElegidosGuido, Guido);
 
         //Jugador Lucas selecciona coloca las opciones en los grupos
         LinkedList<Grupo> gruposElegidosLucas = new LinkedList<Grupo>();
@@ -177,7 +177,7 @@ public class testPreguntaGroupChoiceEntrega2 {
         gruposElegidosLucas.add(grupo1ElegidosLucas);
         gruposElegidosLucas.add(grupo2ElegidosLucas);
 
-        RespuestaGroupChoice respuestaLucas = new RespuestaGroupChoice(gruposElegidosLucas, Lucas);
+        RespuestaGrupos respuestaLucas = new RespuestaGrupos(gruposElegidosLucas, Lucas);
 
 
         respuestas.add(respuestaGuido);
@@ -187,5 +187,5 @@ public class testPreguntaGroupChoiceEntrega2 {
         //Por cada grupo correcto se otorga un punto. Dos grupos correctos son dos puntos. Un grupo correcto es un punto.
         assertEquals(Guido.getPuntos().getCantidad(), 2);
         assertEquals(Lucas.getPuntos().getCantidad(), 1);
-    }*/
+    }
 }

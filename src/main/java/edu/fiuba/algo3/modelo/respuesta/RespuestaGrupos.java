@@ -2,17 +2,17 @@ package edu.fiuba.algo3.modelo.respuesta;
 
 import edu.fiuba.algo3.modelo.Grupo;
 import edu.fiuba.algo3.modelo.Jugador;
-import edu.fiuba.algo3.modelo.Puntos;
 
 import java.util.LinkedList;
 
-public class RespuestaGroupChoice {
+public class RespuestaGrupos extends Respuesta{
     private LinkedList<Grupo> gruposElegidos;
-    private Jugador jugador;
+    //private Jugador jugador;
 
-    public RespuestaGroupChoice (LinkedList<Grupo> gruposElegidos, Jugador jugador) {
+    public RespuestaGrupos (LinkedList<Grupo> gruposElegidos, Jugador jugador) {
+        super(jugador);
         this.gruposElegidos = gruposElegidos;
-        this.jugador = jugador;
+        //this.jugador = jugador;
     }
 /*
     public void otorgarPuntos(LinkedList<Grupo> gruposCorrectos, Puntos cantidadDePuntos) {
@@ -21,11 +21,11 @@ public class RespuestaGroupChoice {
             jugador.sumarPuntos(puntosAsignar);
         }
     }
-*/
+
     public void otorgarPuntos(Puntos cantidadDePuntos) {
         jugador.sumarPuntos(cantidadDePuntos);
     }
-
+*/
     public LinkedList<Grupo> getGruposElegidos(){
         return gruposElegidos;
     }

@@ -4,7 +4,7 @@ import edu.fiuba.algo3.modelo.Grupo;
 import edu.fiuba.algo3.modelo.Jugador;
 import edu.fiuba.algo3.modelo.opcion.OpcionCorrecta;
 import edu.fiuba.algo3.modelo.pregunta.PreguntaGroupChoice;
-import edu.fiuba.algo3.modelo.respuesta.RespuestaGroupChoice;
+import edu.fiuba.algo3.modelo.respuesta.RespuestaGrupos;
 import org.junit.jupiter.api.Test;
 
 import java.util.LinkedList;
@@ -37,7 +37,7 @@ public class TestPreguntaGroupChoice {
         PreguntaGroupChoice pregunta = new PreguntaGroupChoice("Colocar en cada grupo según corresponda", 1, gruposCorrectos);
 
 
-        LinkedList<RespuestaGroupChoice> respuestas = new LinkedList<RespuestaGroupChoice>();
+        LinkedList<RespuestaGrupos> respuestas = new LinkedList<RespuestaGrupos>();
 
         LinkedList<Grupo> gruposElegidos = new LinkedList<Grupo>();
 
@@ -52,7 +52,7 @@ public class TestPreguntaGroupChoice {
         gruposElegidos.add(grupo1Elegidos);
         gruposElegidos.add(grupo2Elegidos);
 
-        RespuestaGroupChoice respuesta = new RespuestaGroupChoice(gruposElegidos, Guido);
+        RespuestaGrupos respuesta = new RespuestaGrupos(gruposElegidos, Guido);
 
         respuestas.add(respuesta);
 
@@ -82,7 +82,7 @@ public class TestPreguntaGroupChoice {
         PreguntaGroupChoice pregunta = new PreguntaGroupChoice("Colocar en cada grupo según corresponda", 1, gruposCorrectos);
 
 
-        LinkedList<RespuestaGroupChoice> respuestas = new LinkedList<RespuestaGroupChoice>();
+        LinkedList<RespuestaGrupos> respuestas = new LinkedList<RespuestaGrupos>();
 
         LinkedList<Grupo> gruposElegidos = new LinkedList<Grupo>();
 
@@ -96,7 +96,7 @@ public class TestPreguntaGroupChoice {
         gruposElegidos.add(grupo1Elegidos);
         gruposElegidos.add(grupo2Elegidos);
 
-        RespuestaGroupChoice respuesta = new RespuestaGroupChoice(gruposElegidos, Guido);
+        RespuestaGrupos respuesta = new RespuestaGrupos(gruposElegidos, Guido);
 
         respuestas.add(respuesta);
 
@@ -126,7 +126,7 @@ public class TestPreguntaGroupChoice {
         PreguntaGroupChoice pregunta = new PreguntaGroupChoice("Colocar en cada grupo según corresponda", 1, gruposCorrectos);
 
 
-        LinkedList<RespuestaGroupChoice> respuestas = new LinkedList<RespuestaGroupChoice>();
+        LinkedList<RespuestaGrupos> respuestas = new LinkedList<RespuestaGrupos>();
 
         LinkedList<Grupo> gruposElegidos = new LinkedList<Grupo>();
 
@@ -139,7 +139,7 @@ public class TestPreguntaGroupChoice {
         gruposElegidos.add(grupo1Elegidos);
         gruposElegidos.add(grupo2Elegidos);
 
-        RespuestaGroupChoice respuesta = new RespuestaGroupChoice(gruposElegidos, Guido);
+        RespuestaGrupos respuesta = new RespuestaGrupos(gruposElegidos, Guido);
 
         respuestas.add(respuesta);
 
@@ -180,7 +180,7 @@ public class TestPreguntaGroupChoice {
         gruposElegidos.add(grupo1Elegidos);
         gruposElegidos.add(grupo2Elegidos);
 
-        RespuestaGroupChoice respuesta = new RespuestaGroupChoice(gruposElegidos, Guido);
+        RespuestaGrupos respuesta = new RespuestaGrupos(gruposElegidos, Guido);
 
         pregunta.verificarlosGruposDeLaRespuesta(respuesta);//Comprobamos este métedo
 
@@ -220,7 +220,7 @@ public class TestPreguntaGroupChoice {
         gruposElegidos.add(grupo1Elegidos);
         gruposElegidos.add(grupo2Elegidos);
 
-        RespuestaGroupChoice respuesta = new RespuestaGroupChoice(gruposElegidos, Guido);
+        RespuestaGrupos respuesta = new RespuestaGrupos(gruposElegidos, Guido);
 
         pregunta.verificarlosGruposDeLaRespuesta(respuesta);//Comprobamos este métedo
 
@@ -261,7 +261,7 @@ public class TestPreguntaGroupChoice {
         gruposElegidos.add(grupo1Elegidos);
         gruposElegidos.add(grupo2Elegidos);
 
-        RespuestaGroupChoice respuesta = new RespuestaGroupChoice(gruposElegidos, Guido);
+        RespuestaGrupos respuesta = new RespuestaGrupos(gruposElegidos, Guido);
 
         pregunta.verificarlosGruposDeLaRespuesta(respuesta);//Comprobamos este métedo
 

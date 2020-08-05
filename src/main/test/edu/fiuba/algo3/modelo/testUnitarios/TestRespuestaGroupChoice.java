@@ -5,7 +5,7 @@ import edu.fiuba.algo3.modelo.Jugador;
 import edu.fiuba.algo3.modelo.Puntos;
 import edu.fiuba.algo3.modelo.opcion.Opcion;
 import edu.fiuba.algo3.modelo.opcion.OpcionCorrecta;
-import edu.fiuba.algo3.modelo.respuesta.RespuestaGroupChoice;
+import edu.fiuba.algo3.modelo.respuesta.RespuestaGrupos;
 import org.junit.jupiter.api.Test;
 
 import java.util.HashSet;
@@ -41,7 +41,7 @@ public class TestRespuestaGroupChoice {
 
         gruposElegidos.add(grupo);
 
-        RespuestaGroupChoice respuesta = new RespuestaGroupChoice(gruposElegidos, jugador);
+        RespuestaGrupos respuesta = new RespuestaGrupos(gruposElegidos, jugador);
 
         assertEquals(respuesta.getGruposElegidos(), gruposElegidos);
     }
@@ -66,7 +66,7 @@ public class TestRespuestaGroupChoice {
 
         gruposElegidos.add(grupo);
 
-        RespuestaGroupChoice respuesta = new RespuestaGroupChoice(gruposElegidos, jugador);
+        RespuestaGrupos respuesta = new RespuestaGrupos(gruposElegidos, jugador);
 
         assertEquals(respuesta.getGruposElegidos(), gruposElegidos);
     }
@@ -95,7 +95,7 @@ public class TestRespuestaGroupChoice {
 
         gruposElegidos.add(grupo);
 
-        RespuestaGroupChoice respuesta = new RespuestaGroupChoice(gruposElegidos, jugador);
+        RespuestaGrupos respuesta = new RespuestaGrupos(gruposElegidos, jugador);
 
         respuesta.otorgarPuntos(puntos);
 

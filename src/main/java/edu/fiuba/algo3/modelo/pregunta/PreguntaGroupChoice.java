@@ -2,7 +2,7 @@ package edu.fiuba.algo3.modelo.pregunta;
 
 import edu.fiuba.algo3.modelo.Grupo;
 import edu.fiuba.algo3.modelo.Puntos;
-import edu.fiuba.algo3.modelo.respuesta.RespuestaGroupChoice;
+import edu.fiuba.algo3.modelo.respuesta.RespuestaGrupos;
 
 import java.util.LinkedList;
 
@@ -19,13 +19,13 @@ public class PreguntaGroupChoice {
         this.gruposCorrectos = gruposCorrectos;
     }
 
-    public void evaluarRespuestas(LinkedList<RespuestaGroupChoice> respuestas) {
-        for (RespuestaGroupChoice respuesta : respuestas) {
+    public void evaluarRespuestas(LinkedList<RespuestaGrupos> respuestas) {
+        for (RespuestaGrupos respuesta : respuestas) {
             verificarlosGruposDeLaRespuesta(respuesta);
         }
     }
 
-    public void verificarlosGruposDeLaRespuesta(RespuestaGroupChoice respuesta){
+    public void verificarlosGruposDeLaRespuesta(RespuestaGrupos respuesta){
         Puntos puntosAsignar;
         LinkedList<Grupo> gruposElegidos;
         gruposElegidos = respuesta.getGruposElegidos();
