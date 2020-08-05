@@ -1,5 +1,27 @@
 package edu.fiuba.algo3.modelo.respuesta;
 
-public interface Respuesta {
+import edu.fiuba.algo3.modelo.Jugador;
+import edu.fiuba.algo3.modelo.Puntos;
+import edu.fiuba.algo3.modelo.multiplicador.Multiplicador;
+import edu.fiuba.algo3.modelo.multiplicador.MultiplicadorDefault;
+
+public abstract class Respuesta {
+
+    protected Jugador jugador;
+    protected Multiplicador multiplicador;
+
+    public Respuesta(Jugador jugador) {
+        this.jugador = jugador;
+        multiplicador = new MultiplicadorDefault();
+    }
+
+    public Respuesta(Jugador jugador, Multiplicador multiplicador){
+        this.jugador = jugador;
+        this.multiplicador = multiplicador;
+    }
+
+    public void otorgarPuntos(Puntos puntos){
+        multiplicador.utilizarBeneficio(puntos, jugador);
+    };
 
 }

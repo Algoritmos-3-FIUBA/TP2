@@ -8,18 +8,13 @@ public class MultiplicadorPorTres extends Multiplicador {
 
     private int factor = 2;
 
-    public MultiplicadorPorTres(Jugador jugador){
-        super(jugador);
-        this.estadoMultiplicable = new Multiplicable();
-    }
-
     @Override
     public int getFactor() {
         return 0;
     }
 
     @Override
-    public void utilizarBeneficio(Puntos puntos) {
+    public void utilizarBeneficio(Puntos puntos, Jugador jugador) {
         jugador.sumarPuntos(estadoMultiplicable.multiplicarPuntos(puntos, this));
         this.inutilizarMultiplicador();
     }

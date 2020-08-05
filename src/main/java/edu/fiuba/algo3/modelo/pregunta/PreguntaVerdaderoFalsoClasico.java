@@ -4,10 +4,9 @@ import edu.fiuba.algo3.modelo.opcion.Opcion;
 import edu.fiuba.algo3.modelo.opcion.OpcionCorrecta;
 import edu.fiuba.algo3.modelo.opcion.OpcionIncorrecta;
 import edu.fiuba.algo3.modelo.respuesta.Respuesta;
+import edu.fiuba.algo3.modelo.respuesta.RespuestaUnica;
 import edu.fiuba.algo3.modelo.respuesta.RespuestaVerdaderoFalsoClasico;
-import edu.fiuba.algo3.modelo.respuesta.RespuestaVerdaderoFalsoPenalidad;
 
-import java.util.HashSet;
 import java.util.LinkedList;
 
 public class PreguntaVerdaderoFalsoClasico extends PreguntaVerdaderoFalso {
@@ -29,16 +28,6 @@ public class PreguntaVerdaderoFalsoClasico extends PreguntaVerdaderoFalso {
 
         opcionFalso = new OpcionCorrecta("Falso",1);
         opcionVerdadero = new OpcionIncorrecta("Verdadero",0);
-
-    }
-
-    public void evaluarRespuestas(LinkedList<RespuestaVerdaderoFalsoClasico> respuestasDeJugadores) {
-
-        RespuestaVerdaderoFalsoClasico respuesta;
-        for (Object respuestaDeJugador : respuestasDeJugadores) {
-            respuesta = (RespuestaVerdaderoFalsoClasico) respuestaDeJugador;
-            respuesta.otorgarPuntos();
-        }
 
     }
 

@@ -8,15 +8,10 @@ public class MultiplicadorDefault extends Multiplicador {
 
     private int factor = 1;
 
-    public MultiplicadorDefault(Jugador jugador){
-        super(jugador);
-        this.estadoMultiplicable = new Multiplicable();
-    }
-
     public int getFactor() {return factor;}
 
     @Override
-    public void utilizarBeneficio(Puntos puntos) {
+    public void utilizarBeneficio(Puntos puntos, Jugador jugador) {
         jugador.sumarPuntos(estadoMultiplicable.multiplicarPuntos(puntos, this));
     }
 
