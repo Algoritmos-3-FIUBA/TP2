@@ -8,8 +8,9 @@ public class RespuestaUnica extends Respuesta {
 
     private Opcion opcion;
 
-    public RespuestaUnica(Jugador jugador) {
+    public RespuestaUnica(Opcion opcion,Jugador jugador) {
         super(jugador);
+        this.opcion = opcion;
     }
 
     public RespuestaUnica(Jugador jugador, Multiplicador multiplicador) {

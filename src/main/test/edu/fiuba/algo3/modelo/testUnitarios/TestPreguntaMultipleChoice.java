@@ -14,7 +14,7 @@ import java.util.LinkedList;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class TestPreguntaMultipleChoice {
-
+/*
     @Test
     public void CreoPreguntaMultipleChoiceConDosRespuestasCorrectasYSeAsignanCorrectamente() {
 
@@ -239,5 +239,5 @@ public class TestPreguntaMultipleChoice {
             assertEquals(Mati.getPuntos().getCantidad(), 0);
             assertEquals(Guido.getPuntos().getCantidad(), 0);
             assertEquals(Juan.getPuntos().getCantidad(), 1);
-        }
+        }*/
 }

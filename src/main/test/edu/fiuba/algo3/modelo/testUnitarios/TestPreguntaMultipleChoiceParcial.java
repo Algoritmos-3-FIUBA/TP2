@@ -13,7 +13,7 @@ import java.util.HashSet;
 import java.util.LinkedList;
 
 public class TestPreguntaMultipleChoiceParcial {
-
+/*
     @Test
     public void CreoPreguntaMultipleChoiceParcialYTieneRespuestasCorrectas(){
 
@@ -222,5 +222,5 @@ public class TestPreguntaMultipleChoiceParcial {
         assertEquals(Juan.getPuntos().getCantidad(),0);
         assertEquals(Mati.getPuntos().getCantidad(),5);
         assertEquals(Lucas.getPuntos().getCantidad(),10);
-    }
+    }*/
 }

@@ -10,7 +10,7 @@ import org.junit.jupiter.api.Test;
 import java.util.*;
 
 public class TestRespuestaMultipleChoice {
-    private Opcion primeraOpcion = new OpcionCorrecta("Euler",0);
+/*    private Opcion primeraOpcion = new OpcionCorrecta("Euler",0);
     private Opcion segundaOpcion = new OpcionCorrecta("Gauss",0);
     private Opcion terceraOpcion  = new OpcionCorrecta("Faraday",0);
     private Opcion cuartaOpcion = new OpcionCorrecta("Newton",0);
@@ -216,5 +216,5 @@ public class TestRespuestaMultipleChoice {
         respuestaJugador.otorgarPuntos(opcionesCorrectas, new Puntos(1));
 
         Assertions.assertEquals(jugador.getPuntos().getCantidad(),0);
-    }
+    }*/
 }

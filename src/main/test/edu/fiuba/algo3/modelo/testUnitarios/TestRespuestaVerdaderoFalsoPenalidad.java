@@ -10,7 +10,7 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 public class TestRespuestaVerdaderoFalsoPenalidad {
-
+/*
     @Test
     public void JugadorRealizaUnaRespuestaCorrectaSinMultiplicadorPorDosYObtienePuntaje(){
 
@@ -40,5 +40,5 @@ public class TestRespuestaVerdaderoFalsoPenalidad {
 
         Assertions.assertEquals(jugador.getPuntos().getCantidad(),2);
     }
-
+*/
 }

@@ -6,7 +6,7 @@ import edu.fiuba.algo3.modelo.multiplicador.MultiplicadorDefault;
 import edu.fiuba.algo3.modelo.opcion.Opcion;
 
 public class RespuestaVerdaderoFalsoPenalidad{
-
+/*
     private Opcion opcion;
     private Jugador jugador;
     private Multiplicador multiplicador;
@@ -25,5 +25,5 @@ public class RespuestaVerdaderoFalsoPenalidad{
     public void otorgarPuntos() {
         multiplicador.utilizarBeneficio(opcion.puntosObtenidos());
     }
-
+*/
 }

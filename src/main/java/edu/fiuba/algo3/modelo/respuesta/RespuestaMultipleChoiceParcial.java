@@ -7,7 +7,7 @@ import edu.fiuba.algo3.modelo.opcion.OpcionIncorrecta;
 
 import java.util.HashSet;
 
-public class RespuestaMultipleChoiceParcial implements  Respuesta{
+public class RespuestaMultipleChoiceParcial{
     private HashSet<Opcion> opcionesEligidas;
     private Jugador jugador;
 

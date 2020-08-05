@@ -11,7 +11,7 @@ import org.junit.jupiter.api.Test;
 import java.util.HashSet;
 
 public class TestRespuestaMultipleChoiceParcial {
-    private Opcion primeraOpcion = new OpcionCorrecta("Euler",1);
+/*    private Opcion primeraOpcion = new OpcionCorrecta("Euler",1);
     private Opcion segundaOpcion = new OpcionCorrecta("Gauss",1);
     private Opcion terceraOpcion  = new OpcionCorrecta("Faraday",1);
     private Opcion cuartaOpcion = new OpcionCorrecta("Newton",1);
@@ -263,5 +263,5 @@ public class TestRespuestaMultipleChoiceParcial {
 
         Assertions.assertEquals(jugador.getPuntos().getCantidad(),0);
     }
-
+*/
 }

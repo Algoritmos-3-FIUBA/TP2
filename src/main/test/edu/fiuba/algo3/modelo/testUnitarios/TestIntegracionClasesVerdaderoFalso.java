@@ -12,7 +12,7 @@ import org.junit.jupiter.api.Test;
 import java.util.LinkedList;
 
 public class TestIntegracionClasesVerdaderoFalso {
-
+/*
     @Test
     public void JugadorRespondeDiferentesTiposDePreguntasDeFormaCorrecta(){
         // Creacion de Jugador
@@ -99,5 +99,5 @@ public class TestIntegracionClasesVerdaderoFalso {
 
         Assertions.assertEquals(puntosJuan.getCantidad(),1);
 
-    }
+    }*/
 }

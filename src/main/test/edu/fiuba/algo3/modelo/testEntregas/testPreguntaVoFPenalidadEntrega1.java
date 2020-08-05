@@ -11,7 +11,7 @@ import org.junit.jupiter.api.Test;
 import java.util.LinkedList;
 
 public class testPreguntaVoFPenalidadEntrega1 {
-
+/*
     @Test
         public void CreoPreguntaVerdaderoFalsoConPenalidadIndicandoRespuestCorrecta(){
 
@@ -57,5 +57,5 @@ public class testPreguntaVoFPenalidadEntrega1 {
         Assertions.assertEquals(jugador2.getPuntos().getCantidad(),-1);
         Assertions.assertEquals(jugador3.getPuntos().getCantidad(),1);
     }
-
+*/
 }

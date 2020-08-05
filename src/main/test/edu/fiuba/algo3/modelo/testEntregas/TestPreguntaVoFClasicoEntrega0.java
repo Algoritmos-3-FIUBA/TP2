@@ -8,7 +8,7 @@ import org.junit.jupiter.api.Test;
 import java.util.LinkedList;
 
 public class TestPreguntaVoFClasicoEntrega0 {
-
+/*
     @Test
     public void CreoPreguntaVoFClasicoIndicoRespuestaCorrecta(){
 
@@ -49,5 +49,5 @@ public class TestPreguntaVoFClasicoEntrega0 {
         Assertions.assertEquals(Lucas.getPuntos().getCantidad(),0);
         Assertions.assertEquals(Mati.getPuntos().getCantidad(),1);
     }
-
+*/
 }

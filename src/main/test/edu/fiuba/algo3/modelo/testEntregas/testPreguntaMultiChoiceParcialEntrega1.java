@@ -14,7 +14,7 @@ import java.util.LinkedList;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class testPreguntaMultiChoiceParcialEntrega1 {
-
+/*
     @Test
     public void PreguntaMultipleChoiceParcialSeCreaIndicandoleCualesSonSusOpcionesCorrectas(){
 
@@ -117,5 +117,5 @@ public class testPreguntaMultiChoiceParcialEntrega1 {
         assertEquals(Mati.getPuntos().getCantidad(),0);
         assertEquals(Lucas.getPuntos().getCantidad(),2);
 
-    }
+    }*/
 }

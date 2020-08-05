@@ -12,7 +12,7 @@ import java.util.LinkedList;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class testPreguntaGroupChoiceEntrega2 {
-    OpcionCorrecta primeraOpcion = new OpcionCorrecta("1 + 1", 0);
+/*    OpcionCorrecta primeraOpcion = new OpcionCorrecta("1 + 1", 0);
     OpcionCorrecta segundaOpcion = new OpcionCorrecta("3 - 1", 0);
     OpcionCorrecta terceraOpcion = new OpcionCorrecta("2 + 2", 0);
     OpcionCorrecta cuartaOpcion = new OpcionCorrecta("2 * 2", 0);
@@ -187,5 +187,5 @@ public class testPreguntaGroupChoiceEntrega2 {
         //Por cada grupo correcto se otorga un punto. Dos grupos correctos son dos puntos. Un grupo correcto es un punto.
         assertEquals(Guido.getPuntos().getCantidad(), 2);
         assertEquals(Lucas.getPuntos().getCantidad(), 1);
-    }
+    }*/
 }

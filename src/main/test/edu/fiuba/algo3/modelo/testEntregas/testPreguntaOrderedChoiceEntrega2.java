@@ -14,7 +14,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class testPreguntaOrderedChoiceEntrega2 {
-    @Test
+/*    @Test
     public void CreoPreguntaOrderedChoiceConDosRespuestasCorrectasYJugadorRespondeCorrectamente() {
 
         Jugador Guido = new Jugador("Guido");
@@ -137,5 +137,5 @@ public class testPreguntaOrderedChoiceEntrega2 {
         assertTrue(pregunta.getOpcionesIncorrectas().contains(segundaOpcion));
         assertTrue(pregunta.getOpcionesCorrectas().contains(terceraOpcion));
         assertTrue(pregunta.getOpcionesCorrectas().contains(cuartaOpcion));
-    }
+    }*/
 }

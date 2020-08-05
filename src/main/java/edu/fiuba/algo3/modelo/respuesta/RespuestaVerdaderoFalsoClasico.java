@@ -4,7 +4,7 @@ package edu.fiuba.algo3.modelo.respuesta;
 import edu.fiuba.algo3.modelo.Jugador;
 import edu.fiuba.algo3.modelo.opcion.Opcion;
 
-public class RespuestaVerdaderoFalsoClasico implements Respuesta{
+public class RespuestaVerdaderoFalsoClasico{
 
     private Opcion opcion;
     private Jugador jugador;

@@ -9,7 +9,7 @@ import org.junit.jupiter.api.Test;
 
 
 public class TestRespuestaVerdaderoFalso {
-    private Opcion opcionVerdadero;
+/*    private Opcion opcionVerdadero;
     private Opcion opcionFalso;
 
     @Test
@@ -34,5 +34,5 @@ public class TestRespuestaVerdaderoFalso {
         respuestaJugador.otorgarPuntos();
 
         Assertions.assertEquals(jugador.getPuntos().getCantidad(),0);
-    }
+    }*/
 }

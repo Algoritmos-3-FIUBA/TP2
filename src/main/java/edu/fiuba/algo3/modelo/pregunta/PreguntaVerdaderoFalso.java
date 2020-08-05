@@ -23,10 +23,8 @@ public abstract class PreguntaVerdaderoFalso extends Pregunta {
     public Opcion getOpcionFalsa() { return opcionFalso; }
 
     public void evaluarRespuestas(LinkedList<Respuesta> respuestasDeJugadores) {
-
         for (Respuesta respuestaDeJugador : respuestasDeJugadores)
             respuestaDeJugador.otorgarPuntos((((RespuestaUnica) respuestaDeJugador).getOpcion()).puntosObtenidos());
-
     }
 
 }

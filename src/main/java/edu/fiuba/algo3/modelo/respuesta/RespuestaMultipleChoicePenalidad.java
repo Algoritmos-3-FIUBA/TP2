@@ -8,7 +8,7 @@ import edu.fiuba.algo3.modelo.opcion.OpcionIncorrecta;
 
 import java.util.HashSet;
 
-public class RespuestaMultipleChoicePenalidad implements Respuesta {
+public class RespuestaMultipleChoicePenalidad {
 
     private HashSet<Opcion> opcionesEligidas;
     private Multiplicador multiplicador;
