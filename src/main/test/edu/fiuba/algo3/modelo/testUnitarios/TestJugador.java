@@ -7,7 +7,7 @@ import org.junit.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class TestJugador {
-/*
+
     @Test
     public void CreoJugadorLlamadoJuanObtengoNombreJuan(){
         Jugador Juan = new Jugador("Juan");
@@ -23,10 +23,8 @@ public class TestJugador {
     @Test
     public void CreoJugadorLlamadoPedroNoTienePuntosInicialesLeSumo1PuntoTiene1Punto() {
         Jugador Lionel = new Jugador("Lionel");
-        Puntos puntos = new Puntos(1);
-        Lionel.sumarPuntos(puntos);
-        Puntos puntosLionel = Lionel.getPuntos();
-        assertEquals(puntosLionel.getCantidad(), 1);
+        Lionel.sumarPuntos(new Puntos(1));
+        assertEquals(Lionel.getPuntos().getCantidad(), 1);
     }
-*/
+
 }

@@ -7,7 +7,7 @@ import java.util.HashSet;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class TestOpcion {
-/*
+
     @Test
     public void OpcionCorrectaDevuelveLaCantidadDePuntosEsperados(){
         OpcionCorrecta opcionCorrecta = new OpcionCorrecta("Cristobal Colón",1);
@@ -52,5 +52,5 @@ public class TestOpcion {
         assert(opcionesIncorrectas.contains(opcionIncorrecta));
         assertEquals(opcionesCorrectas.size(),0);
         assertEquals(opcionesIncorrectas.size(),1);
-    }*/
+    }
 }
