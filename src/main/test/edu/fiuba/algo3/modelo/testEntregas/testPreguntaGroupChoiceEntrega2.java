@@ -21,7 +21,7 @@ public class testPreguntaGroupChoiceEntrega2 {
     //Pregunta sabe los grupos correctos
         Jugador Guido = new Jugador("Guido");
 
-        LinkedList<Grupo> gruposCorrectos = new LinkedList<Grupo>();
+        LinkedList<Grupo> gruposCorrectos = new LinkedList<>();
 
         Grupo grupo1Correcto = new Grupo("Grupo1Correcto");
         grupo1Correcto.agregarOpcion(primeraOpcion);
@@ -37,9 +37,9 @@ public class testPreguntaGroupChoiceEntrega2 {
         PreguntaGroupChoice pregunta = new PreguntaGroupChoice("¿Cuales de las siguientes cuentas tiene resultado 4?", 1, gruposCorrectos);
 
         //Jugador selecciona coloca las opciones en los grupos
-        LinkedList<RespuestaGrupos> respuestas = new LinkedList<RespuestaGrupos>();
+        LinkedList<RespuestaGrupos> respuestas = new LinkedList<>();
 
-        LinkedList<Grupo> gruposElegidos = new LinkedList<Grupo>();
+        LinkedList<Grupo> gruposElegidos = new LinkedList<>();
 
         Grupo grupo1Elegidos = new Grupo("Grupo1Elegido");
         grupo1Elegidos.agregarOpcion(primeraOpcion);
@@ -67,7 +67,7 @@ public class testPreguntaGroupChoiceEntrega2 {
         Jugador Guido = new Jugador("Guido");
         Jugador Lucas = new Jugador("Lucas");
 
-        LinkedList<Grupo> gruposCorrectos = new LinkedList<Grupo>();
+        LinkedList<Grupo> gruposCorrectos = new LinkedList<>();
 
         Grupo grupo1Correcto = new Grupo("Grupo1Correcto");
         grupo1Correcto.agregarOpcion(primeraOpcion);
@@ -83,9 +83,9 @@ public class testPreguntaGroupChoiceEntrega2 {
         PreguntaGroupChoice pregunta = new PreguntaGroupChoice("¿Cuales de las siguientes cuentas tiene resultado 4?", 1, gruposCorrectos);
 
         //Jugador Guido selecciona coloca las opciones en los grupos
-        LinkedList<RespuestaGrupos> respuestas = new LinkedList<RespuestaGrupos>();
+        LinkedList<RespuestaGrupos> respuestas = new LinkedList<>();
 
-        LinkedList<Grupo> gruposElegidosGuido = new LinkedList<Grupo>();
+        LinkedList<Grupo> gruposElegidosGuido = new LinkedList<>();
 
         Grupo grupo1ElegidosGuido = new Grupo("Grupo1Elegido");
         grupo1ElegidosGuido.agregarOpcion(primeraOpcion);
@@ -101,7 +101,7 @@ public class testPreguntaGroupChoiceEntrega2 {
         RespuestaGrupos respuestaGuido = new RespuestaGrupos(gruposElegidosGuido, Guido);
 
         //Jugador Lucas selecciona coloca las opciones en los grupos
-        LinkedList<Grupo> gruposElegidosLucas = new LinkedList<Grupo>();
+        LinkedList<Grupo> gruposElegidosLucas = new LinkedList<>();
 
         Grupo grupo1ElegidosLucas = new Grupo("Grupo1Elegido");
         grupo1ElegidosLucas.agregarOpcion(terceraOpcion);
@@ -131,7 +131,7 @@ public class testPreguntaGroupChoiceEntrega2 {
         Jugador Guido = new Jugador("Guido");
         Jugador Lucas = new Jugador("Lucas");
 
-        LinkedList<Grupo> gruposCorrectos = new LinkedList<Grupo>();
+        LinkedList<Grupo> gruposCorrectos = new LinkedList<>();
 
         Grupo grupo1Correcto = new Grupo("Grupo1Correcto");
         grupo1Correcto.agregarOpcion(primeraOpcion);
@@ -147,9 +147,9 @@ public class testPreguntaGroupChoiceEntrega2 {
         PreguntaGroupChoice pregunta = new PreguntaGroupChoice("¿Cuales de las siguientes cuentas tiene resultado 4?", 1, gruposCorrectos);
 
         //Jugador Guido selecciona coloca las opciones en los grupos
-        LinkedList<RespuestaGrupos> respuestas = new LinkedList<RespuestaGrupos>();
+        LinkedList<RespuestaGrupos> respuestas = new LinkedList<>();
 
-        LinkedList<Grupo> gruposElegidosGuido = new LinkedList<Grupo>();
+        LinkedList<Grupo> gruposElegidosGuido = new LinkedList<>();
 
         Grupo grupo1ElegidosGuido = new Grupo("Grupo1Elegido");
         grupo1ElegidosGuido.agregarOpcion(primeraOpcion);
@@ -165,7 +165,7 @@ public class testPreguntaGroupChoiceEntrega2 {
         RespuestaGrupos respuestaGuido = new RespuestaGrupos(gruposElegidosGuido, Guido);
 
         //Jugador Lucas selecciona coloca las opciones en los grupos
-        LinkedList<Grupo> gruposElegidosLucas = new LinkedList<Grupo>();
+        LinkedList<Grupo> gruposElegidosLucas = new LinkedList<>();
 
         Grupo grupo1ElegidosLucas = new Grupo("Grupo1Elegido");
         grupo1ElegidosLucas.agregarOpcion(primeraOpcion);

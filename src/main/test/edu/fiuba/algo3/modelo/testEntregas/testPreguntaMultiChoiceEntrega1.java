@@ -21,7 +21,7 @@ public class testPreguntaMultiChoiceEntrega1 {
 
         Jugador Mati = new Jugador("Mati");
 
-        HashSet<Opcion> opciones = new HashSet<Opcion>();
+        HashSet<Opcion> opciones = new HashSet<>();
 
         OpcionIncorrecta primeraOpcion = new OpcionIncorrecta("1 + 1", 0);
         OpcionIncorrecta segundaOpcion = new OpcionIncorrecta("3 - 1", 0);
@@ -37,9 +37,9 @@ public class testPreguntaMultiChoiceEntrega1 {
 
         //PreguntaMultipleChoice pregunta2 = new PreguntaMultipleChoice("¿Cuales de las siguientes cuentas tiene resultado 4?", 1, opciones);
 
-        LinkedList<Respuesta> respuestas = new LinkedList<Respuesta>();
+        LinkedList<Respuesta> respuestas = new LinkedList<>();
 
-        LinkedList<Opcion> opcionesSeleccionadas = new LinkedList<Opcion>();
+        LinkedList<Opcion> opcionesSeleccionadas = new LinkedList<>();
         opcionesSeleccionadas.add(terceraOpcion);
         opcionesSeleccionadas.add(cuartaOpcion);
         opcionesSeleccionadas.add(primeraOpcion);
@@ -63,7 +63,7 @@ public class testPreguntaMultiChoiceEntrega1 {
         Jugador Mati = new Jugador("Mati");
         Jugador Guido = new Jugador("Guido");
 
-        HashSet<Opcion> opciones = new HashSet<Opcion>();
+        HashSet<Opcion> opciones = new HashSet<>();
 
         OpcionIncorrecta primeraOpcion = new OpcionIncorrecta("1 + 1", 0);
         OpcionIncorrecta segundaOpcion = new OpcionIncorrecta("3 - 1", 0);
@@ -77,16 +77,16 @@ public class testPreguntaMultiChoiceEntrega1 {
 
         PreguntaMultipleChoice pregunta = new PreguntaMultipleChoice("¿Cuales de las siguientes cuentas tiene resultado 4?", 1, opciones);
 
-        LinkedList<Respuesta> respuestas = new LinkedList<Respuesta>();
+        LinkedList<Respuesta> respuestas = new LinkedList<>();
 
-       LinkedList<Opcion> opcionesSeleccionadasGuido = new LinkedList<Opcion>();
+       LinkedList<Opcion> opcionesSeleccionadasGuido = new LinkedList<>();
         opcionesSeleccionadasGuido.add(terceraOpcion);
         opcionesSeleccionadasGuido.add(cuartaOpcion);
         opcionesSeleccionadasGuido.add(primeraOpcion);
 
         RespuestaMultiple respuestaGuido = new RespuestaMultiple(opcionesSeleccionadasGuido, Guido);
 
-       LinkedList<Opcion> opcionesSeleccionadasMati = new LinkedList<Opcion>();
+       LinkedList<Opcion> opcionesSeleccionadasMati = new LinkedList<>();
         opcionesSeleccionadasMati.add(terceraOpcion);
         opcionesSeleccionadasMati.add(cuartaOpcion);
 

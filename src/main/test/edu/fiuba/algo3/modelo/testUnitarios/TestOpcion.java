@@ -39,8 +39,8 @@ public class TestOpcion {
 
     @Test
     public void OpcionCorrectaSeAgregaALaListaCorrecta(){
-        HashSet<OpcionCorrecta> opcionesCorrectas = new HashSet<OpcionCorrecta>();
-        HashSet<OpcionIncorrecta> opcionesIncorrectas = new HashSet<OpcionIncorrecta>();
+        HashSet<OpcionCorrecta> opcionesCorrectas = new HashSet<>();
+        HashSet<OpcionIncorrecta> opcionesIncorrectas = new HashSet<>();
 
         OpcionCorrecta opcionCorrecta = new OpcionCorrecta("28",5);
 
@@ -53,8 +53,8 @@ public class TestOpcion {
 
     @Test
     public void OpcionIncorrectaSeAgregaALaListaCorrecta(){
-        HashSet<OpcionCorrecta> opcionesCorrectas = new HashSet<OpcionCorrecta>();
-        HashSet<OpcionIncorrecta> opcionesIncorrectas = new HashSet<OpcionIncorrecta>();
+        HashSet<OpcionCorrecta> opcionesCorrectas = new HashSet<>();
+        HashSet<OpcionIncorrecta> opcionesIncorrectas = new HashSet<>();
 
         OpcionIncorrecta opcionIncorrecta = new OpcionIncorrecta("La cordillera de los Andes",2);
 
