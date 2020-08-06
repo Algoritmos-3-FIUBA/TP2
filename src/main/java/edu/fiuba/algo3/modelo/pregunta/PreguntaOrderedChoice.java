@@ -27,10 +27,10 @@ public class PreguntaOrderedChoice {
 
     public void evaluarRespuestas(LinkedList<RespuestaMultiple> respuestas) {
         for (Respuesta respuesta : respuestas){
-            Respuesta respuestaActual = ((RespuestaMultiple) respuesta).getOpciones();
-            LinkedList<Respuesta> listaRespuestaActual = new LinkedList<Respuesta>(respuestaActual);
+            HashSet<Opcion> respuestaActual = ((RespuestaMultiple) respuesta).getOpciones();
+            LinkedList<Opcion> listaRespuestaActual = new LinkedList<Opcion>(respuestaActual);
 
-            if((listaRespuestaActual.equals(opcionesCorrectas))
+            if((listaRespuestaActual.equals(opcionesCorrectas)))
                 respuesta.otorgarPuntos(PuntosOtorgados);
         }
     }
@@ -61,5 +61,6 @@ public class PreguntaOrderedChoice {
         }
     }
 
-    /*
+
 }
+     */
