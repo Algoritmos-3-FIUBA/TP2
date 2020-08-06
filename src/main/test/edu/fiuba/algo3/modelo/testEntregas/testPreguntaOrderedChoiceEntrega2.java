@@ -53,4 +53,40 @@ public class testPreguntaOrderedChoiceEntrega2 {
 
         assertEquals(Guido.getPuntos().getCantidad(), 1);
     }
+    @Test
+    public void CreoPreguntaOrderedChoiceConDosRespuestasCorrectasYJugadorRespondeEnOrdenIncorrecto() {
+
+        Jugador Fernando = new Jugador("Fernando");
+
+        LinkedList<OpcionCorrecta> opcionesCorrectas = new LinkedList<OpcionCorrecta>();
+        LinkedList<OpcionIncorrecta> opcionesIncorrectas = new LinkedList<OpcionIncorrecta>();
+
+
+        OpcionIncorrecta primeraOpcion = new OpcionIncorrecta("1 + 1", 0);
+        OpcionIncorrecta segundaOpcion = new OpcionIncorrecta("3 - 1", 0);
+        OpcionCorrecta terceraOpcion = new OpcionCorrecta("2 + 2", 1);
+        OpcionCorrecta cuartaOpcion = new OpcionCorrecta("2 * 2", 1);
+
+        opcionesIncorrectas.add(primeraOpcion);
+        opcionesIncorrectas.add(segundaOpcion);
+        opcionesCorrectas.add(terceraOpcion);
+        opcionesCorrectas.add(cuartaOpcion);
+
+        PreguntaOrderedChoice pregunta = new PreguntaOrderedChoice("¿Cuales de las siguientes cuentas tiene resultado 4?", 1, opcionesCorrectas ,opcionesIncorrectas);
+
+        LinkedList<RespuestaMultiple> respuestas = new LinkedList<RespuestaMultiple>();
+
+        LinkedList<Opcion> opcionesSeleccionadas = new LinkedList<Opcion>();
+
+        opcionesSeleccionadas.add(cuartaOpcion);
+        opcionesSeleccionadas.add(terceraOpcion);
+
+        RespuestaMultiple respuesta = new RespuestaMultiple(opcionesSeleccionadas, Fernando);
+
+        respuestas.add(respuesta);
+
+        pregunta.evaluarRespuestas(respuestas);
+
+        assertEquals(Fernando.getPuntos().getCantidad(), 0);
+    }
 }
