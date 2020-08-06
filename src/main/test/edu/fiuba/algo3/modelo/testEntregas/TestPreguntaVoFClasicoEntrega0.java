@@ -1,12 +1,5 @@
 package edu.fiuba.algo3.modelo.testEntregas;
 
-import edu.fiuba.algo3.modelo.Jugador;
-import edu.fiuba.algo3.modelo.pregunta.PreguntaVerdaderoFalsoClasico;
-import edu.fiuba.algo3.modelo.respuesta.RespuestaVerdaderoFalsoClasico;
-import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.Test;
-import java.util.LinkedList;
-
 public class TestPreguntaVoFClasicoEntrega0 {
 /*
     @Test

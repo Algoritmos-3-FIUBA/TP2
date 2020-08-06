@@ -3,7 +3,6 @@ package edu.fiuba.algo3.modelo.pregunta;
 import edu.fiuba.algo3.modelo.opcion.Opcion;
 import edu.fiuba.algo3.modelo.respuesta.Respuesta;
 import edu.fiuba.algo3.modelo.respuesta.RespuestaUnica;
-import edu.fiuba.algo3.modelo.respuesta.RespuestaVerdaderoFalsoClasico;
 
 import java.util.LinkedList;
 

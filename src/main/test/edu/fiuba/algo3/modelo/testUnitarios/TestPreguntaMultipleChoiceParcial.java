@@ -9,7 +9,6 @@ import edu.fiuba.algo3.modelo.opcion.OpcionIncorrecta;
 import edu.fiuba.algo3.modelo.pregunta.PreguntaMultipleChoiceParcial;
 import edu.fiuba.algo3.modelo.respuesta.Respuesta;
 import edu.fiuba.algo3.modelo.respuesta.RespuestaMultiple;
-import edu.fiuba.algo3.modelo.respuesta.RespuestaMultipleChoiceParcial;
 import org.junit.jupiter.api.Test;
 import java.util.HashSet;
 import java.util.LinkedList;

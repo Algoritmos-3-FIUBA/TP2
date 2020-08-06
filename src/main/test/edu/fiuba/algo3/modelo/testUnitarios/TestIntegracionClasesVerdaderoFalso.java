@@ -1,16 +1,5 @@
 package edu.fiuba.algo3.modelo.testUnitarios;
 
-import edu.fiuba.algo3.modelo.Jugador;
-import edu.fiuba.algo3.modelo.Puntos;
-import edu.fiuba.algo3.modelo.pregunta.PreguntaVerdaderoFalsoClasico;
-import edu.fiuba.algo3.modelo.pregunta.PreguntaVerdaderoFalsoPenalidad;
-import edu.fiuba.algo3.modelo.respuesta.RespuestaVerdaderoFalsoClasico;
-import edu.fiuba.algo3.modelo.respuesta.RespuestaVerdaderoFalsoPenalidad;
-import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.Test;
-
-import java.util.LinkedList;
-
 public class TestIntegracionClasesVerdaderoFalso {
 /*
     @Test

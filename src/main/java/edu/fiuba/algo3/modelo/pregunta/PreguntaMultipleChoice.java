@@ -4,13 +4,12 @@ import edu.fiuba.algo3.modelo.Puntos;
 import edu.fiuba.algo3.modelo.opcion.Opcion;
 import edu.fiuba.algo3.modelo.opcion.OpcionCorrecta;
 import edu.fiuba.algo3.modelo.opcion.OpcionIncorrecta;
-import edu.fiuba.algo3.modelo.respuesta.RespuestaMultipleChoice;
 
 import java.util.HashSet;
 import java.util.LinkedList;
 
 public class PreguntaMultipleChoice {
-
+/*
     private String Nombre;
     private Puntos PuntosOtorgados;
     HashSet<OpcionCorrecta> opcionesCorrectas;
@@ -40,5 +39,5 @@ public class PreguntaMultipleChoice {
 
     public HashSet<OpcionIncorrecta> getOpcionesIncorrectas(){
         return opcionesIncorrectas;
-    }
+    }*/
 }
