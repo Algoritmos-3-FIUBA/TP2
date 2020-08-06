@@ -2,7 +2,7 @@ package edu.fiuba.algo3.modelo.testUnitarios;
 
 import edu.fiuba.algo3.modelo.Jugador;
 import edu.fiuba.algo3.modelo.multiplicador.MultiplicadorPorTres;
-import edu.fiuba.algo3.modelo.multiplicador.MutiplicadorPorDos;
+import edu.fiuba.algo3.modelo.multiplicador.MultiplicadorPorDos;
 import edu.fiuba.algo3.modelo.pregunta.PreguntaVerdaderoFalsoPenalidad;
 import edu.fiuba.algo3.modelo.respuesta.Respuesta;
 import edu.fiuba.algo3.modelo.respuesta.RespuestaUnica;
@@ -45,7 +45,7 @@ public class TestPreguntaVerdaderoFalsoPenalidad {
     public void PreguntaRecibeRespuestaCorrectaYAsignaLosPuntajesCorrespondientes(){
         Jugador jugador = new Jugador("Pedro");
 
-        MutiplicadorPorDos multiplicador = new MutiplicadorPorDos();
+        MultiplicadorPorDos multiplicador = new MultiplicadorPorDos();
 
         PreguntaVerdaderoFalsoPenalidad pregunta = new PreguntaVerdaderoFalsoPenalidad("1+1 es 2");
 
@@ -88,6 +88,6 @@ public class TestPreguntaVerdaderoFalsoPenalidad {
 
         pregunta.evaluarRespuestas(listaRespuetas2);
 
-        Assertions.assertEquals(jugador.getPuntos().getCantidad(),3);
+        Assertions.assertEquals(jugador.getPuntos().getCantidad(),4);
     }
 }

@@ -3,7 +3,7 @@ package edu.fiuba.algo3.modelo.testEntregas;
 import edu.fiuba.algo3.modelo.Jugador;
 import edu.fiuba.algo3.modelo.multiplicador.Multiplicador;
 import edu.fiuba.algo3.modelo.multiplicador.MultiplicadorPorTres;
-import edu.fiuba.algo3.modelo.multiplicador.MutiplicadorPorDos;
+import edu.fiuba.algo3.modelo.multiplicador.MultiplicadorPorDos;
 import edu.fiuba.algo3.modelo.opcion.Opcion;
 import edu.fiuba.algo3.modelo.opcion.OpcionCorrecta;
 import edu.fiuba.algo3.modelo.opcion.OpcionIncorrecta;
@@ -71,7 +71,7 @@ public class testPreguntaMultipleChoicePenalidadEntrega2 {
         Jugador jugadorUno = new Jugador("Pedro");
         Jugador jugadorDos = new Jugador("Carlos");
 
-        Multiplicador multiplicador = new MutiplicadorPorDos();
+        Multiplicador multiplicador = new MultiplicadorPorDos();
 
         HashSet<Opcion> opciones = new HashSet<Opcion>();
 
@@ -145,7 +145,7 @@ public class testPreguntaMultipleChoicePenalidadEntrega2 {
         Jugador jugadorUno = new Jugador("Pedro");
         Jugador jugadorDos = new Jugador("Carlos");
 
-        Multiplicador multiplicador = new MutiplicadorPorDos();
+        Multiplicador multiplicador = new MultiplicadorPorDos();
 
         HashSet<Opcion> opcionesPreguntaUno = new HashSet<Opcion>();
 

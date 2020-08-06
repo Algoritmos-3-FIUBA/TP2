@@ -4,7 +4,7 @@ package edu.fiuba.algo3.modelo.testUnitarios;
 import edu.fiuba.algo3.modelo.Jugador;
 import edu.fiuba.algo3.modelo.Puntos;
 import edu.fiuba.algo3.modelo.multiplicador.MultiplicadorPorTres;
-import edu.fiuba.algo3.modelo.multiplicador.MutiplicadorPorDos;
+import edu.fiuba.algo3.modelo.multiplicador.MultiplicadorPorDos;
 import edu.fiuba.algo3.modelo.opcion.Opcion;
 import edu.fiuba.algo3.modelo.opcion.OpcionCorrecta;
 import edu.fiuba.algo3.modelo.respuesta.RespuestaUnica;
@@ -44,7 +44,7 @@ public class TestRespuestaUnica {
     public void JugadorRealizaUnaRespuestaCorrectaConMultiplicador(){
         opcionFalso = new OpcionCorrecta("Gauss",0);
 
-        MutiplicadorPorDos multiplicadorPorDos = new MutiplicadorPorDos();
+        MultiplicadorPorDos multiplicadorPorDos = new MultiplicadorPorDos();
 
         Jugador jugador = new Jugador("Guido");
         RespuestaUnica respuestaJugador = new RespuestaUnica(opcionFalso, jugador,multiplicadorPorDos);
@@ -58,7 +58,7 @@ public class TestRespuestaUnica {
     public void JugadorRespondeDosCorrectaIntentaUtilizarElMultiplicadorUnaVesUsado(){
         opcionFalso = new OpcionCorrecta("Gauss",0);
 
-        MutiplicadorPorDos multiplicadorPorDos = new MutiplicadorPorDos();
+        MultiplicadorPorDos multiplicadorPorDos = new MultiplicadorPorDos();
 
         Jugador jugador = new Jugador("Guido");
 
@@ -75,7 +75,7 @@ public class TestRespuestaUnica {
     public void JugadorRespondeCorrectaEIncorrectaIntentaUtilizarElMultiplicadorUnaVesUsado(){
         opcionFalso = new OpcionCorrecta("Gauss",0);
 
-        MutiplicadorPorDos multiplicadorPorDos = new MutiplicadorPorDos();
+        MultiplicadorPorDos multiplicadorPorDos = new MultiplicadorPorDos();
 
         Jugador jugador = new Jugador("Guido");
 
@@ -92,7 +92,7 @@ public class TestRespuestaUnica {
     public void JugadorUtilizarSusDosMultiplicadores(){
         opcionFalso = new OpcionCorrecta("Gauss",0);
 
-        MutiplicadorPorDos multiplicadorPorDos = new MutiplicadorPorDos();
+        MultiplicadorPorDos multiplicadorPorDos = new MultiplicadorPorDos();
         MultiplicadorPorTres multiplicadorPorTres = new MultiplicadorPorTres();
 
         Jugador jugador = new Jugador("Guido");

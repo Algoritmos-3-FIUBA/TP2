@@ -4,7 +4,7 @@ import edu.fiuba.algo3.modelo.Jugador;
 import edu.fiuba.algo3.modelo.Multiplicable;
 import edu.fiuba.algo3.modelo.Puntos;
 
-public class MutiplicadorPorDos extends Multiplicador {
+public class MultiplicadorPorDos extends Multiplicador {
 
     private int factor = 2;
 
