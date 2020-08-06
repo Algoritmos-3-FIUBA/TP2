@@ -9,6 +9,17 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 public class TestOpcion {
 
     @Test
+    public void OpcionCorrectaLePreguntoElNombre(){
+        OpcionCorrecta opcionCorrecta = new OpcionCorrecta("Cristobal Colon",1);
+        assertEquals(opcionCorrecta.getNombre(),"Cristobal Colon");
+    }
+    @Test
+    public void OpcionIncorrectaLePreguntoElNombre(){
+        OpcionIncorrecta opcionIncorrecta = new OpcionIncorrecta("America",1);
+        assertEquals(opcionIncorrecta.getNombre(),"America");
+    }
+
+    @Test
     public void OpcionCorrectaDevuelveLaCantidadDePuntosEsperados(){
         OpcionCorrecta opcionCorrecta = new OpcionCorrecta("Cristobal Colón",1);
         assertEquals(1,opcionCorrecta.puntosObtenidos().getCantidad());
