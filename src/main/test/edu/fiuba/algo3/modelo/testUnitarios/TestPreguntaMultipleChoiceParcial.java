@@ -7,13 +7,14 @@ import edu.fiuba.algo3.modelo.opcion.Opcion;
 import edu.fiuba.algo3.modelo.opcion.OpcionCorrecta;
 import edu.fiuba.algo3.modelo.opcion.OpcionIncorrecta;
 import edu.fiuba.algo3.modelo.pregunta.PreguntaMultipleChoiceParcial;
+import edu.fiuba.algo3.modelo.respuesta.Respuesta;
+import edu.fiuba.algo3.modelo.respuesta.RespuestaMultiple;
 import edu.fiuba.algo3.modelo.respuesta.RespuestaMultipleChoiceParcial;
 import org.junit.jupiter.api.Test;
 import java.util.HashSet;
 import java.util.LinkedList;
 
 public class TestPreguntaMultipleChoiceParcial {
-/*
     @Test
     public void CreoPreguntaMultipleChoiceParcialYTieneRespuestasCorrectas(){
 
@@ -29,12 +30,12 @@ public class TestPreguntaMultipleChoiceParcial {
 
         PreguntaMultipleChoiceParcial pregunta = new PreguntaMultipleChoiceParcial("¿En que año llego el hombre a la luna?",opciones);
 
-        LinkedList<RespuestaMultipleChoiceParcial> respuestas = new LinkedList<RespuestaMultipleChoiceParcial>();
+        LinkedList<Respuesta> respuestas = new LinkedList<Respuesta>();
 
-        HashSet<Opcion> opcionesSeleccionadas = new HashSet<Opcion>();
+        LinkedList<Opcion> opcionesSeleccionadas = new LinkedList<>();
         opcionesSeleccionadas.add(primeraOpcion);
 
-        RespuestaMultipleChoiceParcial respuesta = new RespuestaMultipleChoiceParcial(opcionesSeleccionadas, Juan);
+        RespuestaMultiple respuesta = new RespuestaMultiple(opcionesSeleccionadas, Juan);
 
         respuestas.add(respuesta);
 
@@ -58,12 +59,12 @@ public class TestPreguntaMultipleChoiceParcial {
 
         PreguntaMultipleChoiceParcial pregunta = new PreguntaMultipleChoiceParcial("¿En que año llego el hombre a la luna?",opciones);
 
-        LinkedList<RespuestaMultipleChoiceParcial> respuestas = new LinkedList<RespuestaMultipleChoiceParcial>();
+        LinkedList<Respuesta> respuestas = new LinkedList<>();
 
-        HashSet<Opcion> opcionesSeleccionadas = new HashSet<Opcion>();
+        LinkedList<Opcion> opcionesSeleccionadas = new LinkedList<>();
         opcionesSeleccionadas.add(segundaOpcion);
 
-        RespuestaMultipleChoiceParcial respuesta = new RespuestaMultipleChoiceParcial(opcionesSeleccionadas, Juan);
+        RespuestaMultiple respuesta = new RespuestaMultiple(opcionesSeleccionadas, Juan);
 
         respuestas.add(respuesta);
 
@@ -91,13 +92,13 @@ public class TestPreguntaMultipleChoiceParcial {
 
         PreguntaMultipleChoiceParcial pregunta = new PreguntaMultipleChoiceParcial("¿Donde se encuentra la torre Eiffel?",opciones);
 
-        LinkedList<RespuestaMultipleChoiceParcial> respuestas = new LinkedList<RespuestaMultipleChoiceParcial>();
+        LinkedList<Respuesta> respuestas = new LinkedList<Respuesta>();
 
-        HashSet<Opcion> opcionesSeleccionadas = new HashSet<Opcion>();
+        LinkedList<Opcion> opcionesSeleccionadas = new LinkedList<Opcion>();
         opcionesSeleccionadas.add(primeraOpcion);
         opcionesSeleccionadas.add(segundaOpcion);
 
-        RespuestaMultipleChoiceParcial respuesta = new RespuestaMultipleChoiceParcial(opcionesSeleccionadas, Juan);
+        RespuestaMultiple respuesta = new RespuestaMultiple(opcionesSeleccionadas, Juan);
 
         respuestas.add(respuesta);
 
@@ -123,13 +124,13 @@ public class TestPreguntaMultipleChoiceParcial {
 
         PreguntaMultipleChoiceParcial pregunta = new PreguntaMultipleChoiceParcial("¿Cuales de los siguientes lenguajes no son orientados a objetos?",opciones);
 
-        LinkedList<RespuestaMultipleChoiceParcial> respuestas = new LinkedList<RespuestaMultipleChoiceParcial>();
+        LinkedList<Respuesta> respuestas = new LinkedList<Respuesta>();
 
-        HashSet<Opcion> opcionesSeleccionadas = new HashSet<Opcion>();
+        LinkedList<Opcion> opcionesSeleccionadas = new LinkedList<Opcion>();
         opcionesSeleccionadas.add(primeraOpcion);
         opcionesSeleccionadas.add(terceraOpcion);
 
-        RespuestaMultipleChoiceParcial respuesta = new RespuestaMultipleChoiceParcial(opcionesSeleccionadas, Juan);
+        RespuestaMultiple respuesta = new RespuestaMultiple(opcionesSeleccionadas, Juan);
 
         respuestas.add(respuesta);
 
@@ -157,15 +158,15 @@ public class TestPreguntaMultipleChoiceParcial {
 
         PreguntaMultipleChoiceParcial pregunta = new PreguntaMultipleChoiceParcial("¿Cuales de los siguientes conceptos son importantes en POO?",opciones);
 
-        LinkedList<RespuestaMultipleChoiceParcial> respuestas = new LinkedList<RespuestaMultipleChoiceParcial>();
+        LinkedList<Respuesta> respuestas = new LinkedList<Respuesta>();
 
-        HashSet<Opcion> opcionesSeleccionadas = new HashSet<Opcion>();
+        LinkedList<Opcion> opcionesSeleccionadas = new LinkedList<Opcion>();
         opcionesSeleccionadas.add(primeraOpcion);
         opcionesSeleccionadas.add(segundaOpcion);
         opcionesSeleccionadas.add(terceraOpcion);
         opcionesSeleccionadas.add(cuartaOpcion);
 
-        RespuestaMultipleChoiceParcial respuesta = new RespuestaMultipleChoiceParcial(opcionesSeleccionadas, Juan);
+        RespuestaMultiple respuesta = new RespuestaMultiple(opcionesSeleccionadas, Juan);
 
         respuestas.add(respuesta);
 
@@ -195,23 +196,23 @@ public class TestPreguntaMultipleChoiceParcial {
 
         PreguntaMultipleChoiceParcial pregunta = new PreguntaMultipleChoiceParcial("¿Quien de los siguientes proceres aparece en un billete?",opciones);
 
-        LinkedList <RespuestaMultipleChoiceParcial> respuestas = new LinkedList <RespuestaMultipleChoiceParcial>();
+        LinkedList <Respuesta> respuestas = new LinkedList <Respuesta>();
 
-        HashSet<Opcion> opcionesSeleccionadasJuan = new HashSet<Opcion>();
+        LinkedList<Opcion> opcionesSeleccionadasJuan = new LinkedList<Opcion>();
         opcionesSeleccionadasJuan.add(primeraOpcion);
         opcionesSeleccionadasJuan.add(segundaOpcion);
         opcionesSeleccionadasJuan.add(terceraOpcion);
 
-        HashSet<Opcion> opcionesSeleccionadasMati = new HashSet<Opcion>();
+        LinkedList<Opcion> opcionesSeleccionadasMati = new LinkedList<Opcion>();
         opcionesSeleccionadasMati.add(primeraOpcion);
 
-        HashSet<Opcion> opcionesSeleccionadasLucas = new HashSet<Opcion>();
+        LinkedList<Opcion> opcionesSeleccionadasLucas = new LinkedList<Opcion>();
         opcionesSeleccionadasLucas.add(primeraOpcion);
         opcionesSeleccionadasLucas.add(segundaOpcion);
 
-        RespuestaMultipleChoiceParcial respuestaJuan = new RespuestaMultipleChoiceParcial(opcionesSeleccionadasJuan, Juan);
-        RespuestaMultipleChoiceParcial respuestaMati = new RespuestaMultipleChoiceParcial(opcionesSeleccionadasMati, Mati);
-        RespuestaMultipleChoiceParcial respuestaLucas = new RespuestaMultipleChoiceParcial(opcionesSeleccionadasLucas, Lucas);
+        RespuestaMultiple respuestaJuan = new RespuestaMultiple(opcionesSeleccionadasJuan, Juan);
+        RespuestaMultiple respuestaMati = new RespuestaMultiple(opcionesSeleccionadasMati, Mati);
+        RespuestaMultiple respuestaLucas = new RespuestaMultiple(opcionesSeleccionadasLucas, Lucas);
 
         respuestas.add(respuestaJuan);
         respuestas.add(respuestaMati);
@@ -222,5 +223,5 @@ public class TestPreguntaMultipleChoiceParcial {
         assertEquals(Juan.getPuntos().getCantidad(),0);
         assertEquals(Mati.getPuntos().getCantidad(),5);
         assertEquals(Lucas.getPuntos().getCantidad(),10);
-    }*/
+    }
 }
