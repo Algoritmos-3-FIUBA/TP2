@@ -15,6 +15,13 @@ public class TestJugador {
     }
 
     @Test
+    public void CreoJugadorLlamadoJuanObtengoNombreLucas(){
+        Jugador Juan = new Jugador("Lucas");
+        assertEquals(Juan.getNombre(), "Lucas");
+    }
+
+
+    @Test
     public void CreoJugadorLlamadoPedroNoTienePuntosInicialesObtengo0Puntos(){
         Jugador Pedro = new Jugador("Pedro");
         Puntos puntos = Pedro.getPuntos();
@@ -22,9 +29,18 @@ public class TestJugador {
     }
     @Test
     public void CreoJugadorLlamadoPedroNoTienePuntosInicialesLeSumo1PuntoTiene1Punto() {
-        Jugador Lionel = new Jugador("Lionel");
-        Lionel.sumarPuntos(new Puntos(1));
-        assertEquals(Lionel.getPuntos().getCantidad(), 1);
+        Jugador Pedro = new Jugador("Pedro");
+        Pedro.sumarPuntos(new Puntos(1));
+        assertEquals(Pedro.getPuntos().getCantidad(), 1);
     }
 
+    @Test
+    public void CreoJugadorLlamadoLucasSumaPuntos() {
+        Jugador Lucas = new Jugador("Lucas");
+        Lucas.sumarPuntos(new Puntos(1));
+        Lucas.sumarPuntos(new Puntos(3));
+        assertEquals(Lucas.getPuntos().getCantidad(), 4);
+        Lucas.sumarPuntos(new Puntos(-1));
+        assertEquals(Lucas.getPuntos().getCantidad(), 3);
+    }
 }
