@@ -31,7 +31,7 @@ public class TestPreguntaMultipleChoiceParcial {
 
         LinkedList<Respuesta> respuestas = new LinkedList<Respuesta>();
 
-        HashSet<Opcion> opcionesSeleccionadas = new HashSet<>();
+       LinkedList<Opcion> opcionesSeleccionadas = new LinkedList<>();
         opcionesSeleccionadas.add(primeraOpcion);
 
         RespuestaMultiple respuesta = new RespuestaMultiple(opcionesSeleccionadas, Juan);
@@ -60,7 +60,7 @@ public class TestPreguntaMultipleChoiceParcial {
 
         LinkedList<Respuesta> respuestas = new LinkedList<>();
 
-        HashSet<Opcion> opcionesSeleccionadas = new HashSet<>();
+        LinkedList<Opcion> opcionesSeleccionadas = new LinkedList<>();
         opcionesSeleccionadas.add(segundaOpcion);
 
         RespuestaMultiple respuesta = new RespuestaMultiple(opcionesSeleccionadas, Juan);
@@ -93,7 +93,7 @@ public class TestPreguntaMultipleChoiceParcial {
 
         LinkedList<Respuesta> respuestas = new LinkedList<Respuesta>();
 
-        HashSet<Opcion> opcionesSeleccionadas = new HashSet<>();
+        LinkedList<Opcion> opcionesSeleccionadas = new LinkedList<>();
         opcionesSeleccionadas.add(primeraOpcion);
         opcionesSeleccionadas.add(segundaOpcion);
 
@@ -125,7 +125,7 @@ public class TestPreguntaMultipleChoiceParcial {
 
         LinkedList<Respuesta> respuestas = new LinkedList<Respuesta>();
 
-        HashSet<Opcion> opcionesSeleccionadas = new HashSet<>();
+        LinkedList<Opcion> opcionesSeleccionadas = new LinkedList<>();
         opcionesSeleccionadas.add(primeraOpcion);
         opcionesSeleccionadas.add(terceraOpcion);
 
@@ -159,7 +159,7 @@ public class TestPreguntaMultipleChoiceParcial {
 
         LinkedList<Respuesta> respuestas = new LinkedList<Respuesta>();
 
-        HashSet<Opcion> opcionesSeleccionadas = new HashSet<>();
+        LinkedList<Opcion> opcionesSeleccionadas = new LinkedList<>();
         opcionesSeleccionadas.add(primeraOpcion);
         opcionesSeleccionadas.add(segundaOpcion);
         opcionesSeleccionadas.add(terceraOpcion);
@@ -197,15 +197,15 @@ public class TestPreguntaMultipleChoiceParcial {
 
         LinkedList <Respuesta> respuestas = new LinkedList <Respuesta>();
 
-        HashSet<Opcion> opcionesSeleccionadasJuan = new HashSet<>();
+        LinkedList<Opcion> opcionesSeleccionadasJuan = new LinkedList<>();
         opcionesSeleccionadasJuan.add(primeraOpcion);
         opcionesSeleccionadasJuan.add(segundaOpcion);
         opcionesSeleccionadasJuan.add(terceraOpcion);
 
-        HashSet<Opcion> opcionesSeleccionadasMati = new HashSet<>();
+        LinkedList<Opcion> opcionesSeleccionadasMati = new LinkedList<>();
         opcionesSeleccionadasMati.add(primeraOpcion);
 
-        HashSet<Opcion> opcionesSeleccionadasLucas = new HashSet<>();
+        LinkedList<Opcion> opcionesSeleccionadasLucas = new LinkedList<>();
         opcionesSeleccionadasLucas.add(primeraOpcion);
         opcionesSeleccionadasLucas.add(segundaOpcion);
 

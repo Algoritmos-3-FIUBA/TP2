@@ -29,13 +29,13 @@ public class PreguntaMultipleChoicePenalidad extends Pregunta {
     }
 
     public void evaluarRespuestas (LinkedList<Respuesta> listaRespuestas) {
-
+        HashSet<Opcion> opcionesJugador;
         for (Respuesta respuesta : listaRespuestas) {
 
-            HashSet<Opcion> opcionesElegidas = ((RespuestaMultiple) respuesta).getOpciones();
+            opcionesJugador = new HashSet<Opcion>(((RespuestaMultiple) respuesta).getOpciones());
 
             Puntos puntosParciales = new Puntos(0);
-            for (Opcion opcion : opcionesElegidas){
+            for (Opcion opcion : opcionesJugador){
                 puntosParciales.sumarPuntos(opcion.puntosObtenidos());
             }
 

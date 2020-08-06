@@ -37,20 +37,20 @@ public class testPreguntaMultiChoiceParcialEntrega1 {
 
         PreguntaMultipleChoiceParcial pregunta = new PreguntaMultipleChoiceParcial("¿En qué lugar ocurrió la segunda guerra mundial?",opciones);
 
-        HashSet<Opcion> opcionesJuan = new HashSet<>();
+        LinkedList<Opcion> opcionesJuan = new LinkedList<>();
 
         opcionesJuan.add(primeraOpcion);
         opcionesJuan.add(segundaOpcion);
 
         RespuestaMultiple respuestaJuan = new RespuestaMultiple(opcionesJuan,Juan);
 
-        HashSet<Opcion> opcionesFer = new HashSet<>();
+        LinkedList<Opcion> opcionesFer = new LinkedList<>();
 
         opcionesFer.add(primeraOpcion);
 
         RespuestaMultiple respuestaFer = new RespuestaMultiple(opcionesFer,Fer);
 
-        HashSet<Opcion> opcionesGuido = new HashSet<>();
+        LinkedList<Opcion> opcionesGuido = new LinkedList<>();
 
         opcionesGuido.add(segundaOpcion);
 
@@ -97,13 +97,13 @@ public class testPreguntaMultiChoiceParcialEntrega1 {
 
         LinkedList<Respuesta> respuestas = new LinkedList <Respuesta>();
 
-        HashSet<Opcion> opcionesSeleccionadasMati = new HashSet<Opcion>();
+        LinkedList<Opcion> opcionesSeleccionadasMati = new LinkedList<Opcion>();
         opcionesSeleccionadasMati.add(primeraOpcion);
         opcionesSeleccionadasMati.add(segundaOpcion);
         opcionesSeleccionadasMati.add(terceraOpcion);
         opcionesSeleccionadasMati.add(cuartaOpcion);
 
-        HashSet<Opcion> opcionesSeleccionadasLucas = new HashSet<Opcion>();
+        LinkedList<Opcion> opcionesSeleccionadasLucas = new LinkedList<Opcion>();
         opcionesSeleccionadasLucas.add(primeraOpcion);
         opcionesSeleccionadasLucas.add(segundaOpcion);
 

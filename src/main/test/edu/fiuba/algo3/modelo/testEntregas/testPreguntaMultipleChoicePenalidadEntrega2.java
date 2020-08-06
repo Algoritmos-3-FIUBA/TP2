@@ -46,10 +46,10 @@ public class testPreguntaMultipleChoicePenalidadEntrega2 {
 
         LinkedList<Respuesta> respuestas = new LinkedList<Respuesta>();
 
-        HashSet<Opcion> opcionesSeleccionadasJugadorUno = new HashSet<>();
+        LinkedList<Opcion> opcionesSeleccionadasJugadorUno = new LinkedList<>();
         opcionesSeleccionadasJugadorUno.add(primeraOpcion);
 
-        HashSet<Opcion> opcionesSeleccionadasJugadorDos = new HashSet<>();
+        LinkedList<Opcion> opcionesSeleccionadasJugadorDos = new LinkedList<>();
         opcionesSeleccionadasJugadorDos.add(terceraOpcion);
         opcionesSeleccionadasJugadorDos.add(cuartaOpcion);
 
@@ -84,10 +84,10 @@ public class testPreguntaMultipleChoicePenalidadEntrega2 {
 
         LinkedList<Respuesta> respuestas = new LinkedList<Respuesta>();
 
-        HashSet<Opcion> opcionesSeleccionadasJugadorUno = new HashSet<>();
+        LinkedList<Opcion> opcionesSeleccionadasJugadorUno = new LinkedList<>();
         opcionesSeleccionadasJugadorUno.add(primeraOpcion);
 
-        HashSet<Opcion> opcionesSeleccionadasJugadorDos = new HashSet<>();
+        LinkedList<Opcion> opcionesSeleccionadasJugadorDos = new LinkedList<>();
         opcionesSeleccionadasJugadorDos.add(primeraOpcion);
 
         RespuestaMultiple respuestaJugadorUno = new RespuestaMultiple(opcionesSeleccionadasJugadorUno, jugadorUno, multiplicador);
@@ -121,10 +121,10 @@ public class testPreguntaMultipleChoicePenalidadEntrega2 {
 
         LinkedList<Respuesta> respuestas = new LinkedList<Respuesta>();
 
-        HashSet<Opcion> opcionesSeleccionadasJugadorUno = new HashSet<>();
+        LinkedList<Opcion> opcionesSeleccionadasJugadorUno = new LinkedList<>();
         opcionesSeleccionadasJugadorUno.add(primeraOpcion);
 
-        HashSet<Opcion> opcionesSeleccionadasJugadorDos = new HashSet<>();
+        LinkedList<Opcion> opcionesSeleccionadasJugadorDos = new LinkedList<>();
         opcionesSeleccionadasJugadorDos.add(cuartaOpcion);
 
         RespuestaMultiple respuestaJugadorUno = new RespuestaMultiple(opcionesSeleccionadasJugadorUno, jugadorUno);
@@ -166,10 +166,10 @@ public class testPreguntaMultipleChoicePenalidadEntrega2 {
 
         LinkedList<Respuesta> respuestas = new LinkedList<Respuesta>();
 
-        HashSet<Opcion> opcionesSeleccionadasJugadorUno = new HashSet<>();
+        LinkedList<Opcion> opcionesSeleccionadasJugadorUno = new LinkedList<>();
         opcionesSeleccionadasJugadorUno.add(primeraOpcion);
 
-        HashSet<Opcion> opcionesSeleccionadasJugadorDos = new HashSet<>();
+        LinkedList<Opcion> opcionesSeleccionadasJugadorDos = new LinkedList<>();
         opcionesSeleccionadasJugadorDos.add(cuartaOpcion);
 
         RespuestaMultiple respuestaJugadorUno = new RespuestaMultiple(opcionesSeleccionadasJugadorUno, jugadorUno, multiplicador);
@@ -185,10 +185,10 @@ public class testPreguntaMultipleChoicePenalidadEntrega2 {
 
         LinkedList<Respuesta> respuestasDos = new LinkedList<Respuesta>();
 
-        HashSet<Opcion> opcionesSeleccionadasJugadorUnoPreguntaDos = new HashSet<>();
+        LinkedList<Opcion> opcionesSeleccionadasJugadorUnoPreguntaDos = new LinkedList<>();
         opcionesSeleccionadasJugadorUnoPreguntaDos.add(terceraOpcionDos);
 
-        HashSet<Opcion> opcionesSeleccionadasJugadorDosPreguntaDos = new HashSet<>();
+        LinkedList<Opcion> opcionesSeleccionadasJugadorDosPreguntaDos = new LinkedList<>();
         opcionesSeleccionadasJugadorDosPreguntaDos.add(primeraOpcionDos);
 
         RespuestaMultiple respuestaJugadorUnoPreguntaDos = new RespuestaMultiple(opcionesSeleccionadasJugadorUnoPreguntaDos, jugadorUno, multiplicador);

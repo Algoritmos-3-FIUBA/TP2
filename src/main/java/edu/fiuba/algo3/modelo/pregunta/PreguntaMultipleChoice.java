@@ -31,8 +31,13 @@ public class PreguntaMultipleChoice extends Pregunta {
 
     public void evaluarRespuestas(LinkedList<Respuesta> respuestas) {
 
+        HashSet<Opcion> opcionesJugador;
+
         for (Respuesta respuesta : respuestas){
-            if(((RespuestaMultiple) respuesta).getOpciones().equals(opcionesCorrectas))
+
+            opcionesJugador = new HashSet<Opcion>(((RespuestaMultiple) respuesta).getOpciones());
+
+            if(opcionesJugador.equals(opcionesCorrectas))
                 respuesta.otorgarPuntos(puntosOtorgados);
         }
     }

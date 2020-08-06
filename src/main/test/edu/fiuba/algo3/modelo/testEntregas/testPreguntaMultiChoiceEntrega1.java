@@ -39,7 +39,7 @@ public class testPreguntaMultiChoiceEntrega1 {
 
         LinkedList<Respuesta> respuestas = new LinkedList<Respuesta>();
 
-        HashSet<Opcion> opcionesSeleccionadas = new HashSet<Opcion>();
+        LinkedList<Opcion> opcionesSeleccionadas = new LinkedList<Opcion>();
         opcionesSeleccionadas.add(terceraOpcion);
         opcionesSeleccionadas.add(cuartaOpcion);
         opcionesSeleccionadas.add(primeraOpcion);
@@ -79,14 +79,14 @@ public class testPreguntaMultiChoiceEntrega1 {
 
         LinkedList<Respuesta> respuestas = new LinkedList<Respuesta>();
 
-        HashSet<Opcion> opcionesSeleccionadasGuido = new HashSet<Opcion>();
+       LinkedList<Opcion> opcionesSeleccionadasGuido = new LinkedList<Opcion>();
         opcionesSeleccionadasGuido.add(terceraOpcion);
         opcionesSeleccionadasGuido.add(cuartaOpcion);
         opcionesSeleccionadasGuido.add(primeraOpcion);
 
         RespuestaMultiple respuestaGuido = new RespuestaMultiple(opcionesSeleccionadasGuido, Guido);
 
-        HashSet<Opcion> opcionesSeleccionadasMati = new HashSet<Opcion>();
+       LinkedList<Opcion> opcionesSeleccionadasMati = new LinkedList<Opcion>();
         opcionesSeleccionadasMati.add(terceraOpcion);
         opcionesSeleccionadasMati.add(cuartaOpcion);
 

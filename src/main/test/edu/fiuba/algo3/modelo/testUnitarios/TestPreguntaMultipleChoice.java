@@ -77,7 +77,7 @@ public class TestPreguntaMultipleChoice {
 
             LinkedList<Respuesta> respuestas = new LinkedList<Respuesta>();
 
-            HashSet<Opcion> opcionesSeleccionadas = new HashSet<>();
+            LinkedList<Opcion> opcionesSeleccionadas = new LinkedList<>();
             opcionesSeleccionadas.add(terceraOpcion);
             opcionesSeleccionadas.add(cuartaOpcion);
 
@@ -111,7 +111,7 @@ public class TestPreguntaMultipleChoice {
 
             LinkedList<Respuesta> respuestas = new LinkedList<Respuesta>();
 
-            HashSet<Opcion> opcionesSeleccionadas = new HashSet<Opcion>();
+            LinkedList<Opcion> opcionesSeleccionadas = new LinkedList<Opcion>();
             opcionesSeleccionadas.add(terceraOpcion);
 
             RespuestaMultiple respuesta = new RespuestaMultiple(opcionesSeleccionadas, Mati);
@@ -144,7 +144,7 @@ public class TestPreguntaMultipleChoice {
 
             LinkedList<Respuesta> respuestas = new LinkedList<Respuesta>();
 
-            HashSet<Opcion> opcionesSeleccionadas = new HashSet<Opcion>();
+            LinkedList<Opcion> opcionesSeleccionadas = new LinkedList<Opcion>();
             opcionesSeleccionadas.add(terceraOpcion);
             opcionesSeleccionadas.add(cuartaOpcion);
             opcionesSeleccionadas.add(primeraOpcion);
@@ -179,7 +179,7 @@ public class TestPreguntaMultipleChoice {
 
             LinkedList<Respuesta> respuestas = new LinkedList<Respuesta>();
 
-            HashSet<Opcion> opcionesSeleccionadas = new HashSet<Opcion>();
+            LinkedList<Opcion> opcionesSeleccionadas = new LinkedList<Opcion>();
             opcionesSeleccionadas.add(primeraOpcion);
             opcionesSeleccionadas.add(segundaOpcion);
 
@@ -215,15 +215,15 @@ public class TestPreguntaMultipleChoice {
 
             LinkedList<Respuesta> respuestas = new LinkedList<Respuesta>();
 
-            HashSet<Opcion> opcionesSeleccionadasMati = new HashSet<Opcion>();
+            LinkedList<Opcion> opcionesSeleccionadasMati = new LinkedList<Opcion>();
             opcionesSeleccionadasMati.add(primeraOpcion);
             opcionesSeleccionadasMati.add(segundaOpcion);
 
-            HashSet<Opcion> opcionesSeleccionadasGuido = new HashSet<Opcion>();
+            LinkedList<Opcion> opcionesSeleccionadasGuido = new LinkedList<Opcion>();
             opcionesSeleccionadasGuido.add(segundaOpcion);
             opcionesSeleccionadasGuido.add(cuartaOpcion);
 
-            HashSet<Opcion> opcionesSeleccionadasJuan = new HashSet<Opcion>();
+            LinkedList<Opcion> opcionesSeleccionadasJuan = new LinkedList<Opcion>();
             opcionesSeleccionadasJuan.add(terceraOpcion);
             opcionesSeleccionadasJuan.add(cuartaOpcion);
 

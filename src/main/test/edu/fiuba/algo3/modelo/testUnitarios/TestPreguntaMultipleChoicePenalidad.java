@@ -40,7 +40,7 @@ public class TestPreguntaMultipleChoicePenalidad {
 
         LinkedList<Respuesta> respuestas = new LinkedList<Respuesta>();
 
-        HashSet<Opcion> opcionesSeleccionadas = new HashSet<>();
+        LinkedList<Opcion> opcionesSeleccionadas = new LinkedList<>();
         opcionesSeleccionadas.add(primeraOpcion);
 
         RespuestaMultiple respuesta = new RespuestaMultiple(opcionesSeleccionadas, jugador);
@@ -73,7 +73,7 @@ public class TestPreguntaMultipleChoicePenalidad {
 
         LinkedList<Respuesta> respuestas = new LinkedList<Respuesta>();
 
-        HashSet<Opcion> opcionesSeleccionadas = new HashSet<>();
+        LinkedList<Opcion> opcionesSeleccionadas = new LinkedList<>();
         opcionesSeleccionadas.add(primeraOpcion);
         opcionesSeleccionadas.add(segundaOpcion);
 
@@ -107,7 +107,7 @@ public class TestPreguntaMultipleChoicePenalidad {
 
         LinkedList<Respuesta> respuestas = new LinkedList<Respuesta>();
 
-        HashSet<Opcion> opcionesSeleccionadas = new HashSet<>();
+        LinkedList<Opcion> opcionesSeleccionadas = new LinkedList<>();
         opcionesSeleccionadas.add(primeraOpcion);
         opcionesSeleccionadas.add(segundaOpcion);
         opcionesSeleccionadas.add(terceraOpcion);
@@ -142,7 +142,7 @@ public class TestPreguntaMultipleChoicePenalidad {
 
         LinkedList<Respuesta> respuestas = new LinkedList<Respuesta>();
 
-        HashSet<Opcion> opcionesSeleccionadas = new HashSet<>();
+        LinkedList<Opcion> opcionesSeleccionadas = new LinkedList<>();
         opcionesSeleccionadas.add(terceraOpcion);
         opcionesSeleccionadas.add(cuartaOpcion);
 
@@ -177,7 +177,7 @@ public class TestPreguntaMultipleChoicePenalidad {
 
         LinkedList<Respuesta> respuestas = new LinkedList<Respuesta>();
 
-        HashSet<Opcion> opcionesSeleccionadas = new HashSet<>();
+        LinkedList<Opcion> opcionesSeleccionadas = new LinkedList<>();
         opcionesSeleccionadas.add(primeraOpcion);
         opcionesSeleccionadas.add(segundaOpcion);
 
@@ -212,7 +212,7 @@ public class TestPreguntaMultipleChoicePenalidad {
 
         LinkedList<Respuesta> respuestas = new LinkedList<Respuesta>();
 
-        HashSet<Opcion> opcionesSeleccionadas = new HashSet<>();
+        LinkedList<Opcion> opcionesSeleccionadas = new LinkedList<>();
         opcionesSeleccionadas.add(primeraOpcion);
         opcionesSeleccionadas.add(segundaOpcion);
         opcionesSeleccionadas.add(terceraOpcion);
@@ -248,7 +248,7 @@ public class TestPreguntaMultipleChoicePenalidad {
 
         LinkedList<Respuesta> respuestas = new LinkedList<Respuesta>();
 
-        HashSet<Opcion> opcionesSeleccionadas = new HashSet<>();
+        LinkedList<Opcion> opcionesSeleccionadas = new LinkedList<>();
         opcionesSeleccionadas.add(terceraOpcion);
         opcionesSeleccionadas.add(cuartaOpcion);
 
@@ -283,7 +283,7 @@ public class TestPreguntaMultipleChoicePenalidad {
 
         LinkedList<Respuesta> respuestas = new LinkedList<Respuesta>();
 
-        HashSet<Opcion> opcionesSeleccionadas = new HashSet<>();
+        LinkedList<Opcion> opcionesSeleccionadas = new LinkedList<>();
         opcionesSeleccionadas.add(terceraOpcion);
         opcionesSeleccionadas.add(cuartaOpcion);
 
@@ -318,7 +318,7 @@ public class TestPreguntaMultipleChoicePenalidad {
 
         LinkedList<Respuesta> respuestas = new LinkedList<Respuesta>();
 
-        HashSet<Opcion> opcionesSeleccionadas = new HashSet<>();
+        LinkedList<Opcion> opcionesSeleccionadas = new LinkedList<>();
         opcionesSeleccionadas.add(primeraOpcion);
         opcionesSeleccionadas.add(terceraOpcion);
         opcionesSeleccionadas.add(cuartaOpcion);

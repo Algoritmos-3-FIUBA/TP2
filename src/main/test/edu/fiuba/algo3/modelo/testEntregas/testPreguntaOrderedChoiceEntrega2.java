@@ -40,7 +40,7 @@ public class testPreguntaOrderedChoiceEntrega2 {
 
         LinkedList<RespuestaMultiple> respuestas = new LinkedList<RespuestaMultiple>();
 
-        HashSet<Opcion> opcionesSeleccionadas = new HashSet<Opcion>();
+        LinkedList<Opcion> opcionesSeleccionadas = new LinkedList<Opcion>();
         opcionesSeleccionadas.add(terceraOpcion);
         opcionesSeleccionadas.add(cuartaOpcion);
 
