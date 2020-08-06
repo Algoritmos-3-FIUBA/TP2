@@ -13,8 +13,8 @@ public class OpcionCorrecta extends Opcion {
         opcionesCorrectas.add(this);
     }
 
-    public void agregarseALaListaCorrespondienteOrdenada(LinkedList<OpcionCorrecta> opcionesCorrectas, LinkedList<OpcionIncorrecta> opcionesIncorrectas){
+  /*  public void agregarseALaListaCorrespondienteOrdenada(LinkedList<OpcionCorrecta> opcionesCorrectas, LinkedList<OpcionIncorrecta> opcionesIncorrectas){
         opcionesCorrectas.add(this);
-    }
+    }*/
 
 }
