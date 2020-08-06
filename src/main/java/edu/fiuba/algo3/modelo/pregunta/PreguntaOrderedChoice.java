@@ -12,7 +12,7 @@ import edu.fiuba.algo3.modelo.respuesta.RespuestaMultiple;
 import java.util.HashSet;
 import java.util.LinkedList;
 
-public class PreguntaOrderedChoice extends Pregunta {
+public class PreguntaOrderedChoice {
     private String Nombre;
     private Puntos PuntosOtorgados;
     LinkedList<Grupo> grupoCorrecto;
