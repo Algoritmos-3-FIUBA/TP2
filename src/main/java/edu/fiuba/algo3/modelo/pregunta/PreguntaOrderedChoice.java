@@ -15,6 +15,30 @@ import java.util.LinkedList;
 public class PreguntaOrderedChoice {
     private String Nombre;
     private Puntos PuntosOtorgados;
+    LinkedList<OpcionCorrecta> opcionesCorrectas;
+    LinkedList<OpcionIncorrecta> opcionesIncorrectas;
+
+    public PreguntaOrderedChoice(String nombre, int puntos, LinkedList<OpcionCorrecta> opcionesCorrectas, LinkedList<OpcionIncorrecta> opcionesIncorrectas) {
+        Nombre = nombre;
+        PuntosOtorgados = new Puntos(puntos);
+        this.opcionesCorrectas = opcionesCorrectas;
+        this.opcionesIncorrectas = opcionesIncorrectas;
+    }
+
+    public void evaluarRespuestas(LinkedList<RespuestaMultiple> respuestas) {
+        for (Respuesta respuesta : respuestas){
+            Respuesta respuestaActual = ((RespuestaMultiple) respuesta).getOpciones();
+            LinkedList<Respuesta> listaRespuestaActual = new LinkedList<Respuesta>(respuestaActual);
+
+            if((listaRespuestaActual.equals(opcionesCorrectas))
+                respuesta.otorgarPuntos(PuntosOtorgados);
+        }
+    }
+
+}
+    /*
+    private String Nombre;
+    private Puntos PuntosOtorgados;
     LinkedList<Grupo> grupoCorrecto;
 
     public PreguntaOrderedChoice(String nombre, int puntos, LinkedList<Grupo> grupoCorrecto) {
@@ -26,7 +50,6 @@ public class PreguntaOrderedChoice {
     }
 
     public void evaluarRespuestas(LinkedList<RespuestaGrupos> respuestas) {
-
         for (RespuestaGrupos respuesta : respuestas) {
             Puntos puntosAsignar;
             LinkedList<Grupo> gruposElegidos;
@@ -37,4 +60,6 @@ public class PreguntaOrderedChoice {
 
         }
     }
+
+    /*
 }
