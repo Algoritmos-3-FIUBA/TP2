@@ -3,7 +3,7 @@ package edu.fiuba.algo3.modelo.testUnitarios;
 import edu.fiuba.algo3.modelo.Jugador;
 import edu.fiuba.algo3.modelo.multiplicador.Multiplicador;
 import edu.fiuba.algo3.modelo.multiplicador.MultiplicadorPorTres;
-import edu.fiuba.algo3.modelo.multiplicador.MutiplicadorPorDos;
+import edu.fiuba.algo3.modelo.multiplicador.MultiplicadorPorDos;
 import edu.fiuba.algo3.modelo.opcion.Opcion;
 import edu.fiuba.algo3.modelo.opcion.OpcionCorrecta;
 import edu.fiuba.algo3.modelo.opcion.OpcionIncorrecta;
@@ -159,7 +159,7 @@ public class TestPreguntaMultipleChoicePenalidad {
     public void CreoPreguntaMultipleChoicePenalidadConMultiplicadorPorDosYRespondoDosOpcionesCorrectas(){
 
         Jugador jugador = new Jugador("Pedro");
-        Multiplicador multiplicador = new MutiplicadorPorDos();
+        Multiplicador multiplicador = new MultiplicadorPorDos();
 
         HashSet<Opcion> opciones = new HashSet<Opcion>();
 
@@ -194,7 +194,7 @@ public class TestPreguntaMultipleChoicePenalidad {
     public void CreoPreguntaMultipleChoicePenalidadConMultiplicadorPorDosYRespondoDosOpcionesCorrectasYUnaIncorrecta(){
 
         Jugador jugador = new Jugador("Pedro");
-        Multiplicador multiplicador = new MutiplicadorPorDos();
+        Multiplicador multiplicador = new MultiplicadorPorDos();
 
         HashSet<Opcion> opciones = new HashSet<Opcion>();
 
@@ -230,7 +230,7 @@ public class TestPreguntaMultipleChoicePenalidad {
     public void CreoPreguntaMultipleChoicePenalidadConMultiplicadorPorDosYRespondoDosOpcionesIncorrectas(){
 
         Jugador jugador = new Jugador("Pedro");
-        Multiplicador multiplicador = new MutiplicadorPorDos();
+        Multiplicador multiplicador = new MultiplicadorPorDos();
 
         HashSet<Opcion> opciones = new HashSet<Opcion>();
 
