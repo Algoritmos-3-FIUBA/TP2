@@ -2,7 +2,8 @@ package edu.fiuba.algo3.modelo.multiplicador;
 
 import edu.fiuba.algo3.modelo.*;
 
-public abstract class Multiplicador {
+public abstract class
+Multiplicador {
 
     protected EstadoMultiplicable estadoMultiplicable;
 
