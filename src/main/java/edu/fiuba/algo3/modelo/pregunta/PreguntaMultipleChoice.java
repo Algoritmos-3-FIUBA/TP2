@@ -4,21 +4,23 @@ import edu.fiuba.algo3.modelo.Puntos;
 import edu.fiuba.algo3.modelo.opcion.Opcion;
 import edu.fiuba.algo3.modelo.opcion.OpcionCorrecta;
 import edu.fiuba.algo3.modelo.opcion.OpcionIncorrecta;
+import edu.fiuba.algo3.modelo.respuesta.Respuesta;
+import edu.fiuba.algo3.modelo.respuesta.RespuestaMultiple;
 
 import java.util.HashSet;
 import java.util.LinkedList;
 
-public class PreguntaMultipleChoice {
-/*
-    private String Nombre;
-    private Puntos PuntosOtorgados;
+public class PreguntaMultipleChoice extends Pregunta {
+
+    //private String Nombre;
+    private Puntos puntosOtorgados;
     HashSet<OpcionCorrecta> opcionesCorrectas;
     HashSet<OpcionIncorrecta> opcionesIncorrectas;
 
     public PreguntaMultipleChoice(String nombre, int puntos, HashSet<Opcion> opciones) {
 
-        Nombre = nombre;
-        PuntosOtorgados = new Puntos(puntos);
+        this.nombre = nombre;
+        puntosOtorgados = new Puntos(puntos);
 
         opcionesCorrectas = new HashSet<OpcionCorrecta>();
         opcionesIncorrectas = new HashSet<OpcionIncorrecta>();
@@ -27,10 +29,12 @@ public class PreguntaMultipleChoice {
             opcion.agregarseALaListaCorrespondiente(opcionesCorrectas, opcionesIncorrectas);
     }
 
-    public void evaluarRespuestas(LinkedList<RespuestaMultipleChoice> respuestas) {
+    public void evaluarRespuestas(LinkedList<Respuesta> respuestas) {
 
-        for (RespuestaMultipleChoice respuesta : respuestas)
-            respuesta.otorgarPuntos(opcionesCorrectas, PuntosOtorgados);
+        for (Respuesta respuesta : respuestas){
+            if(((RespuestaMultiple) respuesta).getOpciones().equals(opcionesCorrectas))
+                respuesta.otorgarPuntos(puntosOtorgados);
+        }
     }
 
     public HashSet<OpcionCorrecta> getOpcionesCorrectas(){
@@ -39,5 +43,5 @@ public class PreguntaMultipleChoice {
 
     public HashSet<OpcionIncorrecta> getOpcionesIncorrectas(){
         return opcionesIncorrectas;
-    }*/
+    }
 }

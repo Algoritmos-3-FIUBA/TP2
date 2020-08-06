@@ -1,9 +1,21 @@
 package edu.fiuba.algo3.modelo.testUnitarios;
 
+import edu.fiuba.algo3.modelo.Jugador;
+import edu.fiuba.algo3.modelo.opcion.Opcion;
+import edu.fiuba.algo3.modelo.opcion.OpcionCorrecta;
+import edu.fiuba.algo3.modelo.opcion.OpcionIncorrecta;
+import edu.fiuba.algo3.modelo.pregunta.PreguntaMultipleChoice;
+import edu.fiuba.algo3.modelo.respuesta.Respuesta;
+import edu.fiuba.algo3.modelo.respuesta.RespuestaMultiple;
+import org.junit.Test;
+
+import java.util.HashSet;
+import java.util.LinkedList;
+
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class TestPreguntaMultipleChoice {
-/*
+
     @Test
     public void CreoPreguntaMultipleChoiceConDosRespuestasCorrectasYSeAsignanCorrectamente() {
 
@@ -63,13 +75,13 @@ public class TestPreguntaMultipleChoice {
 
             PreguntaMultipleChoice pregunta = new PreguntaMultipleChoice("¿Cuales de las siguientes cuentas tiene resultado 4?", 1, opciones);
 
-            LinkedList<RespuestaMultipleChoice> respuestas = new LinkedList<RespuestaMultipleChoice>();
+            LinkedList<Respuesta> respuestas = new LinkedList<Respuesta>();
 
-            HashSet<Opcion> opcionesSeleccionadas = new HashSet<Opcion>();
+            HashSet<Opcion> opcionesSeleccionadas = new HashSet<>();
             opcionesSeleccionadas.add(terceraOpcion);
             opcionesSeleccionadas.add(cuartaOpcion);
 
-            RespuestaMultipleChoice respuesta = new RespuestaMultipleChoice(opcionesSeleccionadas, Mati);
+            RespuestaMultiple respuesta = new RespuestaMultiple(opcionesSeleccionadas, Mati);
 
             respuestas.add(respuesta);
 
@@ -97,12 +109,12 @@ public class TestPreguntaMultipleChoice {
 
             PreguntaMultipleChoice pregunta = new PreguntaMultipleChoice("¿Cuales de las siguientes cuentas tiene resultado 4?", 1, opciones);
 
-            LinkedList<RespuestaMultipleChoice> respuestas = new LinkedList<RespuestaMultipleChoice>();
+            LinkedList<Respuesta> respuestas = new LinkedList<Respuesta>();
 
             HashSet<Opcion> opcionesSeleccionadas = new HashSet<Opcion>();
             opcionesSeleccionadas.add(terceraOpcion);
 
-            RespuestaMultipleChoice respuesta = new RespuestaMultipleChoice(opcionesSeleccionadas, Mati);
+            RespuestaMultiple respuesta = new RespuestaMultiple(opcionesSeleccionadas, Mati);
 
             respuestas.add(respuesta);
 
@@ -130,14 +142,14 @@ public class TestPreguntaMultipleChoice {
 
             PreguntaMultipleChoice pregunta = new PreguntaMultipleChoice("¿Cuales de las siguientes cuentas tiene resultado 4?", 1, opciones);
 
-            LinkedList<RespuestaMultipleChoice> respuestas = new LinkedList<RespuestaMultipleChoice>();
+            LinkedList<Respuesta> respuestas = new LinkedList<Respuesta>();
 
             HashSet<Opcion> opcionesSeleccionadas = new HashSet<Opcion>();
             opcionesSeleccionadas.add(terceraOpcion);
             opcionesSeleccionadas.add(cuartaOpcion);
             opcionesSeleccionadas.add(primeraOpcion);
 
-            RespuestaMultipleChoice respuesta = new RespuestaMultipleChoice(opcionesSeleccionadas, Mati);
+            RespuestaMultiple respuesta = new RespuestaMultiple(opcionesSeleccionadas, Mati);
 
             respuestas.add(respuesta);
 
@@ -165,13 +177,13 @@ public class TestPreguntaMultipleChoice {
 
             PreguntaMultipleChoice pregunta = new PreguntaMultipleChoice("¿Cuales de las siguientes cuentas tiene resultado 4?", 1, opciones);
 
-            LinkedList<RespuestaMultipleChoice> respuestas = new LinkedList<RespuestaMultipleChoice>();
+            LinkedList<Respuesta> respuestas = new LinkedList<Respuesta>();
 
             HashSet<Opcion> opcionesSeleccionadas = new HashSet<Opcion>();
             opcionesSeleccionadas.add(primeraOpcion);
             opcionesSeleccionadas.add(segundaOpcion);
 
-            RespuestaMultipleChoice respuesta = new RespuestaMultipleChoice(opcionesSeleccionadas, Mati);
+            RespuestaMultiple respuesta = new RespuestaMultiple(opcionesSeleccionadas, Mati);
 
             respuestas.add(respuesta);
 
@@ -201,7 +213,7 @@ public class TestPreguntaMultipleChoice {
 
             PreguntaMultipleChoice pregunta = new PreguntaMultipleChoice("¿Cuales de las siguientes cuentas tiene resultado 4?", 1, opciones);
 
-            LinkedList<RespuestaMultipleChoice> respuestas = new LinkedList<RespuestaMultipleChoice>();
+            LinkedList<Respuesta> respuestas = new LinkedList<Respuesta>();
 
             HashSet<Opcion> opcionesSeleccionadasMati = new HashSet<Opcion>();
             opcionesSeleccionadasMati.add(primeraOpcion);
@@ -215,9 +227,9 @@ public class TestPreguntaMultipleChoice {
             opcionesSeleccionadasJuan.add(terceraOpcion);
             opcionesSeleccionadasJuan.add(cuartaOpcion);
 
-            RespuestaMultipleChoice respuestaMati = new RespuestaMultipleChoice(opcionesSeleccionadasMati, Mati);
-            RespuestaMultipleChoice respuestaGuido = new RespuestaMultipleChoice(opcionesSeleccionadasGuido, Guido);
-            RespuestaMultipleChoice respuestaJuan = new RespuestaMultipleChoice(opcionesSeleccionadasJuan, Juan);
+            RespuestaMultiple respuestaMati = new RespuestaMultiple(opcionesSeleccionadasMati, Mati);
+            RespuestaMultiple respuestaGuido = new RespuestaMultiple(opcionesSeleccionadasGuido, Guido);
+            RespuestaMultiple respuestaJuan = new RespuestaMultiple(opcionesSeleccionadasJuan, Juan);
 
             respuestas.add(respuestaMati);
             respuestas.add(respuestaGuido);
@@ -228,5 +240,5 @@ public class TestPreguntaMultipleChoice {
             assertEquals(Mati.getPuntos().getCantidad(), 0);
             assertEquals(Guido.getPuntos().getCantidad(), 0);
             assertEquals(Juan.getPuntos().getCantidad(), 1);
-        }*/
+        }
 }
