@@ -1,7 +1,8 @@
 package edu.fiuba.algo3.modelo.testUnitarios;
 
 import edu.fiuba.algo3.modelo.Jugador;
-import edu.fiuba.algo3.modelo.multiplicador.MutiplicadorPorDos;
+import edu.fiuba.algo3.modelo.multiplicador.MultiplicadorPorTres;
+import edu.fiuba.algo3.modelo.multiplicador.MultiplicadorPorDos;
 import edu.fiuba.algo3.modelo.pregunta.PreguntaVerdaderoFalsoPenalidad;
 import edu.fiuba.algo3.modelo.respuesta.Respuesta;
 import edu.fiuba.algo3.modelo.respuesta.RespuestaUnica;
@@ -44,7 +45,7 @@ public class TestPreguntaVerdaderoFalsoPenalidad {
     public void PreguntaRecibeRespuestaCorrectaYAsignaLosPuntajesCorrespondientes(){
         Jugador jugador = new Jugador("Pedro");
 
-        MutiplicadorPorDos multiplicador = new MutiplicadorPorDos();
+        MultiplicadorPorDos multiplicador = new MultiplicadorPorDos();
 
         PreguntaVerdaderoFalsoPenalidad pregunta = new PreguntaVerdaderoFalsoPenalidad("1+1 es 2");
 
@@ -59,6 +60,34 @@ public class TestPreguntaVerdaderoFalsoPenalidad {
         pregunta.evaluarRespuestas(listaRespuetas);
 
         Assertions.assertEquals(jugador.getPuntos().getCantidad(),2);
+    }
+    @Test
+    public void PreguntaRecibeRespuestaCorrectaYAsignaLosPuntajesCorrespondientes2(){
+        Jugador jugador = new Jugador("Pedro");
 
+        MultiplicadorPorTres multiplicador = new MultiplicadorPorTres();
+
+        PreguntaVerdaderoFalsoPenalidad pregunta = new PreguntaVerdaderoFalsoPenalidad("1+1 es 2");
+        PreguntaVerdaderoFalsoPenalidad pregunta2 = new PreguntaVerdaderoFalsoPenalidad("1+1 es 2");
+
+        pregunta.setVerdaderoOpcionCorrecta();
+        pregunta2.setVerdaderoOpcionCorrecta();
+
+        RespuestaUnica respuesta = new RespuestaUnica(pregunta.getOpcionVerdadera(),jugador,multiplicador);
+        RespuestaUnica respuesta2 = new RespuestaUnica(pregunta2.getOpcionVerdadera(),jugador,multiplicador);
+
+        LinkedList <Respuesta> listaRespuetas= new LinkedList<Respuesta>();
+
+        listaRespuetas.add(respuesta);
+
+        LinkedList <Respuesta> listaRespuetas2= new LinkedList<Respuesta>();
+
+        listaRespuetas.add(respuesta2);
+
+        pregunta.evaluarRespuestas(listaRespuetas);
+
+        pregunta.evaluarRespuestas(listaRespuetas2);
+
+        Assertions.assertEquals(jugador.getPuntos().getCantidad(),4);
     }
 }
