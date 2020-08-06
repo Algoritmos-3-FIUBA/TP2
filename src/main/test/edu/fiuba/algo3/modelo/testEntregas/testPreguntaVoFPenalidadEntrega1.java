@@ -1,7 +1,16 @@
 package edu.fiuba.algo3.modelo.testEntregas;
 
+import edu.fiuba.algo3.modelo.Jugador;
+import edu.fiuba.algo3.modelo.pregunta.PreguntaVerdaderoFalsoPenalidad;
+import edu.fiuba.algo3.modelo.respuesta.Respuesta;
+import edu.fiuba.algo3.modelo.respuesta.RespuestaUnica;
+import org.junit.Test;
+import org.junit.jupiter.api.Assertions;
+
+import java.util.LinkedList;
+
 public class testPreguntaVoFPenalidadEntrega1 {
-/*
+
     @Test
         public void CreoPreguntaVerdaderoFalsoConPenalidadIndicandoRespuestCorrecta(){
 
@@ -11,9 +20,9 @@ public class testPreguntaVoFPenalidadEntrega1 {
 
         pregunta.setFalsoOpcionCorrecta();
 
-        RespuestaVerdaderoFalsoPenalidad respuesta =  new RespuestaVerdaderoFalsoPenalidad(pregunta.getOpcionFalsa(), jugador);
+        RespuestaUnica respuesta =  new RespuestaUnica(pregunta.getOpcionFalsa(), jugador);
 
-        LinkedList<RespuestaVerdaderoFalsoPenalidad> listaRespuesta = new LinkedList<RespuestaVerdaderoFalsoPenalidad>();
+        LinkedList<Respuesta> listaRespuesta = new LinkedList<>();
 
         listaRespuesta.add(respuesta);
 
@@ -33,11 +42,11 @@ public class testPreguntaVoFPenalidadEntrega1 {
 
         pregunta.setFalsoOpcionCorrecta();
 
-        RespuestaVerdaderoFalsoPenalidad respuesta1 = new RespuestaVerdaderoFalsoPenalidad(pregunta.getOpcionFalsa(),jugador1);
-        RespuestaVerdaderoFalsoPenalidad respuesta2 = new RespuestaVerdaderoFalsoPenalidad(pregunta.getOpcionVerdadera(),jugador2);
-        RespuestaVerdaderoFalsoPenalidad respuesta3 = new RespuestaVerdaderoFalsoPenalidad(pregunta.getOpcionFalsa(),jugador3);
+        RespuestaUnica respuesta1 = new RespuestaUnica(pregunta.getOpcionFalsa(),jugador1);
+        RespuestaUnica respuesta2 = new RespuestaUnica(pregunta.getOpcionVerdadera(),jugador2);
+        RespuestaUnica respuesta3 = new RespuestaUnica(pregunta.getOpcionFalsa(),jugador3);
 
-        LinkedList <RespuestaVerdaderoFalsoPenalidad> listaRespuesta= new LinkedList<RespuestaVerdaderoFalsoPenalidad>();
+        LinkedList<Respuesta> listaRespuesta= new LinkedList<>();
 
         listaRespuesta.add(respuesta1);listaRespuesta.add(respuesta2);listaRespuesta.add(respuesta3);
 
@@ -47,5 +56,4 @@ public class testPreguntaVoFPenalidadEntrega1 {
         Assertions.assertEquals(jugador2.getPuntos().getCantidad(),-1);
         Assertions.assertEquals(jugador3.getPuntos().getCantidad(),1);
     }
-*/
 }

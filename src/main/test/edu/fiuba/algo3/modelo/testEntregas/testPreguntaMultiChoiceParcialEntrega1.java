@@ -1,9 +1,21 @@
 package edu.fiuba.algo3.modelo.testEntregas;
 
+import edu.fiuba.algo3.modelo.Jugador;
+import edu.fiuba.algo3.modelo.opcion.Opcion;
+import edu.fiuba.algo3.modelo.opcion.OpcionCorrecta;
+import edu.fiuba.algo3.modelo.opcion.OpcionIncorrecta;
+import edu.fiuba.algo3.modelo.pregunta.PreguntaMultipleChoiceParcial;
+import edu.fiuba.algo3.modelo.respuesta.Respuesta;
+import edu.fiuba.algo3.modelo.respuesta.RespuestaMultiple;
+import org.junit.Test;
+
+import java.util.HashSet;
+import java.util.LinkedList;
+
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class testPreguntaMultiChoiceParcialEntrega1 {
-/*
+
     @Test
     public void PreguntaMultipleChoiceParcialSeCreaIndicandoleCualesSonSusOpcionesCorrectas(){
 
@@ -30,21 +42,21 @@ public class testPreguntaMultiChoiceParcialEntrega1 {
         opcionesJuan.add(primeraOpcion);
         opcionesJuan.add(segundaOpcion);
 
-        RespuestaMultipleChoiceParcial respuestaJuan = new RespuestaMultipleChoiceParcial(opcionesJuan,Juan);
+        RespuestaMultiple respuestaJuan = new RespuestaMultiple(opcionesJuan,Juan);
 
         HashSet<Opcion> opcionesFer = new HashSet<>();
 
         opcionesFer.add(primeraOpcion);
 
-        RespuestaMultipleChoiceParcial respuestaFer = new RespuestaMultipleChoiceParcial(opcionesFer,Fer);
+        RespuestaMultiple respuestaFer = new RespuestaMultiple(opcionesFer,Fer);
 
         HashSet<Opcion> opcionesGuido = new HashSet<>();
 
         opcionesGuido.add(segundaOpcion);
 
-        RespuestaMultipleChoiceParcial respuestaGuido = new RespuestaMultipleChoiceParcial(opcionesGuido,Guido);
+        RespuestaMultiple respuestaGuido = new RespuestaMultiple(opcionesGuido,Guido);
 
-        LinkedList<RespuestaMultipleChoiceParcial> respuestas = new LinkedList<>();
+        LinkedList<Respuesta> respuestas = new LinkedList<Respuesta>();
 
         respuestas.add(respuestaJuan);
         respuestas.add(respuestaGuido);
@@ -83,7 +95,7 @@ public class testPreguntaMultiChoiceParcialEntrega1 {
 
         PreguntaMultipleChoiceParcial pregunta = new PreguntaMultipleChoiceParcial("¿Cuales de los siguientes meses tienen 31 dias?",opciones);
 
-        LinkedList<RespuestaMultipleChoiceParcial> respuestas = new LinkedList <RespuestaMultipleChoiceParcial>();
+        LinkedList<Respuesta> respuestas = new LinkedList <Respuesta>();
 
         HashSet<Opcion> opcionesSeleccionadasMati = new HashSet<Opcion>();
         opcionesSeleccionadasMati.add(primeraOpcion);
@@ -95,8 +107,8 @@ public class testPreguntaMultiChoiceParcialEntrega1 {
         opcionesSeleccionadasLucas.add(primeraOpcion);
         opcionesSeleccionadasLucas.add(segundaOpcion);
 
-        RespuestaMultipleChoiceParcial respuestaMati = new RespuestaMultipleChoiceParcial(opcionesSeleccionadasMati, Mati);
-        RespuestaMultipleChoiceParcial respuestaLucas = new RespuestaMultipleChoiceParcial(opcionesSeleccionadasLucas, Lucas);
+        RespuestaMultiple respuestaMati = new RespuestaMultiple(opcionesSeleccionadasMati, Mati);
+        RespuestaMultiple respuestaLucas = new RespuestaMultiple(opcionesSeleccionadasLucas, Lucas);
 
         respuestas.add(respuestaMati);
         respuestas.add(respuestaLucas);
@@ -106,5 +118,5 @@ public class testPreguntaMultiChoiceParcialEntrega1 {
         assertEquals(Mati.getPuntos().getCantidad(),0);
         assertEquals(Lucas.getPuntos().getCantidad(),2);
 
-    }*/
+    }
 }
