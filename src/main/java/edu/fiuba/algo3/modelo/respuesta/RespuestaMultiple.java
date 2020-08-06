@@ -11,7 +11,6 @@ import java.util.LinkedList;
 public class RespuestaMultiple extends Respuesta {
 
     private HashSet<Opcion> opcionesElegidas;
-  //  private LinkedList<Opcion> opcionesElegidas;
 
     public RespuestaMultiple(HashSet<Opcion> opcions, Jugador jugador){
         super(jugador);
@@ -22,7 +21,6 @@ public class RespuestaMultiple extends Respuesta {
         super(jugador, multiplicador);
         this.opcionesElegidas = opciones;
     }
-
 
     public HashSet<Opcion> getOpciones() {
         return opcionesElegidas;

@@ -6,11 +6,11 @@ import edu.fiuba.algo3.modelo.Puntos;
 
 public class MultiplicadorPorTres extends Multiplicador {
 
-    private int factor = 2;
+    private int factor = 3;
 
     @Override
     public int getFactor() {
-        return 0;
+        return factor;
     }
 
     @Override
