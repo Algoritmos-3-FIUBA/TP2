@@ -1,5 +1,6 @@
 package edu.fiuba.algo3.modelo.testEntregas;
 
+import edu.fiuba.algo3.modelo.ColeccionOpciones;
 import edu.fiuba.algo3.modelo.Jugador;
 import edu.fiuba.algo3.modelo.opcion.Opcion;
 import edu.fiuba.algo3.modelo.opcion.OpcionCorrecta;
@@ -9,7 +10,6 @@ import edu.fiuba.algo3.modelo.respuesta.Respuesta;
 import edu.fiuba.algo3.modelo.respuesta.RespuestaMultiple;
 import org.junit.Test;
 
-import java.util.HashSet;
 import java.util.LinkedList;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -21,17 +21,17 @@ public class testPreguntaMultiChoiceEntrega1 {
 
         Jugador Mati = new Jugador("Mati");
 
-        HashSet<Opcion> opciones = new HashSet<Opcion>();
+        ColeccionOpciones opciones = new ColeccionOpciones();
 
         OpcionIncorrecta primeraOpcion = new OpcionIncorrecta("1 + 1", 0);
         OpcionIncorrecta segundaOpcion = new OpcionIncorrecta("3 - 1", 0);
         OpcionCorrecta terceraOpcion = new OpcionCorrecta("2 + 2", 1);
         OpcionCorrecta cuartaOpcion = new OpcionCorrecta("2 * 2", 1);
 
-        opciones.add(primeraOpcion);
-        opciones.add(segundaOpcion);
-        opciones.add(terceraOpcion);
-        opciones.add(cuartaOpcion);
+        opciones.agregarOpcion(primeraOpcion);
+        opciones.agregarOpcion(segundaOpcion);
+        opciones.agregarOpcion(terceraOpcion);
+        opciones.agregarOpcion(cuartaOpcion);
 
         PreguntaMultipleChoice pregunta = new PreguntaMultipleChoice("¿Cuales de las siguientes cuentas tiene resultado 4?", 1, opciones);
 
@@ -52,10 +52,10 @@ public class testPreguntaMultiChoiceEntrega1 {
         pregunta.evaluarRespuestas(respuestas);
 
         assertEquals(Mati.getPuntos().getCantidad(), 0);
-        assertTrue(pregunta.getOpcionesIncorrectas().contains(primeraOpcion));
-        assertTrue(pregunta.getOpcionesIncorrectas().contains(segundaOpcion));
-        assertTrue(pregunta.getOpcionesCorrectas().contains(terceraOpcion));
-        assertTrue(pregunta.getOpcionesCorrectas().contains(cuartaOpcion));
+        assertTrue(pregunta.getOpcionesIncorrectas().contiene(primeraOpcion));
+        assertTrue(pregunta.getOpcionesIncorrectas().contiene(segundaOpcion));
+        assertTrue(pregunta.getOpcionesCorrectas().contiene(terceraOpcion));
+        assertTrue(pregunta.getOpcionesCorrectas().contiene(cuartaOpcion));
     }
    @Test
     public void CreoPreguntaMultipleChoiceConDosJugadoreUnoSoloObtienePuntaje() {
@@ -63,17 +63,17 @@ public class testPreguntaMultiChoiceEntrega1 {
         Jugador Mati = new Jugador("Mati");
         Jugador Guido = new Jugador("Guido");
 
-        HashSet<Opcion> opciones = new HashSet<Opcion>();
+        ColeccionOpciones opciones = new ColeccionOpciones();
 
         OpcionIncorrecta primeraOpcion = new OpcionIncorrecta("1 + 1", 0);
         OpcionIncorrecta segundaOpcion = new OpcionIncorrecta("3 - 1", 0);
         OpcionCorrecta terceraOpcion = new OpcionCorrecta("2 + 2", 1);
         OpcionCorrecta cuartaOpcion = new OpcionCorrecta("2 * 2", 1);
 
-        opciones.add(primeraOpcion);
-        opciones.add(segundaOpcion);
-        opciones.add(terceraOpcion);
-        opciones.add(cuartaOpcion);
+        opciones.agregarOpcion(primeraOpcion);
+        opciones.agregarOpcion(segundaOpcion);
+        opciones.agregarOpcion(terceraOpcion);
+        opciones.agregarOpcion(cuartaOpcion);
 
         PreguntaMultipleChoice pregunta = new PreguntaMultipleChoice("¿Cuales de las siguientes cuentas tiene resultado 4?", 1, opciones);
 
@@ -99,9 +99,9 @@ public class testPreguntaMultiChoiceEntrega1 {
 
         assertEquals(Guido.getPuntos().getCantidad(), 0);
         assertEquals(Mati.getPuntos().getCantidad(), 1);
-        assertTrue(pregunta.getOpcionesIncorrectas().contains(primeraOpcion));
-        assertTrue(pregunta.getOpcionesIncorrectas().contains(segundaOpcion));
-        assertTrue(pregunta.getOpcionesCorrectas().contains(terceraOpcion));
-        assertTrue(pregunta.getOpcionesCorrectas().contains(cuartaOpcion));
+        assertTrue(pregunta.getOpcionesIncorrectas().contiene(primeraOpcion));
+        assertTrue(pregunta.getOpcionesIncorrectas().contiene(segundaOpcion));
+        assertTrue(pregunta.getOpcionesCorrectas().contiene(terceraOpcion));
+        assertTrue(pregunta.getOpcionesCorrectas().contiene(cuartaOpcion));
     }
 }

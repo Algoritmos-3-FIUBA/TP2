@@ -1,5 +1,6 @@
 package edu.fiuba.algo3.modelo.testEntregas;
 
+import edu.fiuba.algo3.modelo.ColeccionOpciones;
 import edu.fiuba.algo3.modelo.Jugador;
 import edu.fiuba.algo3.modelo.multiplicador.Multiplicador;
 import edu.fiuba.algo3.modelo.multiplicador.MultiplicadorPorTres;
@@ -12,7 +13,6 @@ import edu.fiuba.algo3.modelo.respuesta.Respuesta;
 import edu.fiuba.algo3.modelo.respuesta.RespuestaMultiple;
 import org.junit.jupiter.api.Test;
 
-import java.util.HashSet;
 import java.util.LinkedList;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -35,12 +35,12 @@ public class testPreguntaMultipleChoicePenalidadEntrega2 {
         Jugador jugadorUno = new Jugador("Pedro");
         Jugador jugadorDos = new Jugador("Carlos");
 
-        HashSet<Opcion> opciones = new HashSet<Opcion>();
+        ColeccionOpciones opciones = new ColeccionOpciones();
 
-        opciones.add(primeraOpcion);
-        opciones.add(segundaOpcion);
-        opciones.add(terceraOpcion);
-        opciones.add(cuartaOpcion);
+        opciones.agregarOpcion(primeraOpcion);
+        opciones.agregarOpcion(segundaOpcion);
+        opciones.agregarOpcion(terceraOpcion);
+        opciones.agregarOpcion(cuartaOpcion);
 
         PreguntaMultipleChoicePenalidad pregunta = new PreguntaMultipleChoicePenalidad("¿En que años se jugaron juegos olimpicos de verano?", opciones);
 
@@ -73,12 +73,12 @@ public class testPreguntaMultipleChoicePenalidadEntrega2 {
 
         Multiplicador multiplicador = new MultiplicadorPorDos();
 
-        HashSet<Opcion> opciones = new HashSet<Opcion>();
+        ColeccionOpciones opciones = new ColeccionOpciones();
 
-        opciones.add(primeraOpcion);
-        opciones.add(segundaOpcion);
-        opciones.add(terceraOpcion);
-        opciones.add(cuartaOpcion);
+        opciones.agregarOpcion(primeraOpcion);
+        opciones.agregarOpcion(segundaOpcion);
+        opciones.agregarOpcion(terceraOpcion);
+        opciones.agregarOpcion(cuartaOpcion);
 
         PreguntaMultipleChoicePenalidad pregunta = new PreguntaMultipleChoicePenalidad("¿En que años se jugaron juegos olimpicos de verano?", opciones);
 
@@ -110,12 +110,12 @@ public class testPreguntaMultipleChoicePenalidadEntrega2 {
 
         Multiplicador multiplicador = new MultiplicadorPorTres();
 
-        HashSet<Opcion> opciones = new HashSet<Opcion>();
+        ColeccionOpciones opciones = new ColeccionOpciones();
 
-        opciones.add(primeraOpcion);
-        opciones.add(segundaOpcion);
-        opciones.add(terceraOpcion);
-        opciones.add(cuartaOpcion);
+        opciones.agregarOpcion(primeraOpcion);
+        opciones.agregarOpcion(segundaOpcion);
+        opciones.agregarOpcion(terceraOpcion);
+        opciones.agregarOpcion(cuartaOpcion);
 
         PreguntaMultipleChoicePenalidad pregunta = new PreguntaMultipleChoicePenalidad("¿En que años se jugaron juegos olimpicos de verano?", opciones);
 
@@ -147,19 +147,19 @@ public class testPreguntaMultipleChoicePenalidadEntrega2 {
 
         Multiplicador multiplicador = new MultiplicadorPorDos();
 
-        HashSet<Opcion> opcionesPreguntaUno = new HashSet<Opcion>();
+        ColeccionOpciones opcionesPreguntaUno = new ColeccionOpciones();
 
-        opcionesPreguntaUno.add(primeraOpcion);
-        opcionesPreguntaUno.add(segundaOpcion);
-        opcionesPreguntaUno.add(terceraOpcion);
-        opcionesPreguntaUno.add(cuartaOpcion);
+        opcionesPreguntaUno.agregarOpcion(primeraOpcion);
+        opcionesPreguntaUno.agregarOpcion(segundaOpcion);
+        opcionesPreguntaUno.agregarOpcion(terceraOpcion);
+        opcionesPreguntaUno.agregarOpcion(cuartaOpcion);
 
-        HashSet<Opcion> opcionesPreguntaDos = new HashSet<Opcion>();
+        ColeccionOpciones opcionesPreguntaDos = new ColeccionOpciones();
 
-        opcionesPreguntaDos.add(primeraOpcionDos);
-        opcionesPreguntaDos.add(segundaOpcionDos);
-        opcionesPreguntaDos.add(terceraOpcionDos);
-        opcionesPreguntaDos.add(cuartaOpcionDos);
+        opcionesPreguntaDos.agregarOpcion(primeraOpcionDos);
+        opcionesPreguntaDos.agregarOpcion(segundaOpcionDos);
+        opcionesPreguntaDos.agregarOpcion(terceraOpcionDos);
+        opcionesPreguntaDos.agregarOpcion(cuartaOpcionDos);
 
         PreguntaMultipleChoicePenalidad preguntaUno = new PreguntaMultipleChoicePenalidad("¿En que años se jugaron juegos olimpicos de verano?", opcionesPreguntaUno);
         PreguntaMultipleChoicePenalidad preguntaDos = new PreguntaMultipleChoicePenalidad("¿En que años NO se jugaron juegos olimpicos de verano?", opcionesPreguntaDos);

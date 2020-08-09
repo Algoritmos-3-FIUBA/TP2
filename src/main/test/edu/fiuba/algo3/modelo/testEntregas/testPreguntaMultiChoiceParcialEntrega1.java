@@ -1,5 +1,6 @@
 package edu.fiuba.algo3.modelo.testEntregas;
 
+import edu.fiuba.algo3.modelo.ColeccionOpciones;
 import edu.fiuba.algo3.modelo.Jugador;
 import edu.fiuba.algo3.modelo.opcion.Opcion;
 import edu.fiuba.algo3.modelo.opcion.OpcionCorrecta;
@@ -9,7 +10,6 @@ import edu.fiuba.algo3.modelo.respuesta.Respuesta;
 import edu.fiuba.algo3.modelo.respuesta.RespuestaMultiple;
 import org.junit.Test;
 
-import java.util.HashSet;
 import java.util.LinkedList;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -23,17 +23,17 @@ public class testPreguntaMultiChoiceParcialEntrega1 {
         Jugador Fer = new Jugador("Fer");
         Jugador Guido = new Jugador("Guido");
 
-        HashSet<Opcion> opciones = new HashSet<>();
+        ColeccionOpciones opciones = new ColeccionOpciones();
 
         OpcionCorrecta primeraOpcion = new OpcionCorrecta("Europa",5);
         OpcionCorrecta segundaOpcion = new OpcionCorrecta("Asia",5);
         OpcionIncorrecta terceraOpcion = new OpcionIncorrecta("America",0);
         OpcionIncorrecta cuartaOpcion = new OpcionIncorrecta("Marte",0);
 
-        opciones.add(primeraOpcion);
-        opciones.add(segundaOpcion);
-        opciones.add(terceraOpcion);
-        opciones.add(cuartaOpcion);
+        opciones.agregarOpcion(primeraOpcion);
+        opciones.agregarOpcion(segundaOpcion);
+        opciones.agregarOpcion(terceraOpcion);
+        opciones.agregarOpcion(cuartaOpcion);
 
         PreguntaMultipleChoiceParcial pregunta = new PreguntaMultipleChoiceParcial("¿En qué lugar ocurrió la segunda guerra mundial?",opciones);
 
@@ -78,7 +78,7 @@ public class testPreguntaMultiChoiceParcialEntrega1 {
         Jugador Mati = new Jugador("Mati");
         Jugador Lucas = new Jugador("Lucas");
 
-        HashSet<Opcion> opciones = new HashSet<Opcion>();
+        ColeccionOpciones opciones = new ColeccionOpciones();
 
         OpcionCorrecta primeraOpcion = new OpcionCorrecta("Enero",1);
         OpcionCorrecta segundaOpcion = new OpcionCorrecta("Octubre",1);
@@ -87,11 +87,11 @@ public class testPreguntaMultiChoiceParcialEntrega1 {
         OpcionIncorrecta cuartaOpcion = new OpcionIncorrecta("Febrero",0);
         OpcionIncorrecta quintaOpcion = new OpcionIncorrecta("Noviembre",0);
 
-        opciones.add(primeraOpcion);
-        opciones.add(segundaOpcion);
-        opciones.add(terceraOpcion);
-        opciones.add(cuartaOpcion);
-        opciones.add(quintaOpcion);
+        opciones.agregarOpcion(primeraOpcion);
+        opciones.agregarOpcion(segundaOpcion);
+        opciones.agregarOpcion(terceraOpcion);
+        opciones.agregarOpcion(cuartaOpcion);
+        opciones.agregarOpcion(quintaOpcion);
 
         PreguntaMultipleChoiceParcial pregunta = new PreguntaMultipleChoiceParcial("¿Cuales de los siguientes meses tienen 31 dias?",opciones);
 

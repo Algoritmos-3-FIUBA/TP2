@@ -1,16 +1,15 @@
 package edu.fiuba.algo3.modelo.testEntregas;
 
+import edu.fiuba.algo3.modelo.ColeccionOpciones;
 import edu.fiuba.algo3.modelo.Jugador;
 import edu.fiuba.algo3.modelo.opcion.Opcion;
 import edu.fiuba.algo3.modelo.opcion.OpcionCorrecta;
 import edu.fiuba.algo3.modelo.opcion.OpcionIncorrecta;
-import edu.fiuba.algo3.modelo.pregunta.PreguntaMultipleChoice;
 import edu.fiuba.algo3.modelo.pregunta.PreguntaOrderedChoice;
 import edu.fiuba.algo3.modelo.respuesta.Respuesta;
 import edu.fiuba.algo3.modelo.respuesta.RespuestaMultiple;
 import org.junit.Test;
 
-import java.util.HashSet;
 import java.util.LinkedList;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -22,28 +21,25 @@ public class testPreguntaOrderedChoiceEntrega2 {
 
         Jugador Guido = new Jugador("Guido");
 
-        LinkedList<OpcionCorrecta> opcionesCorrectas = new LinkedList<OpcionCorrecta>();
-        LinkedList<OpcionIncorrecta> opcionesIncorrectas = new LinkedList<OpcionIncorrecta>();
-
+        ColeccionOpciones opciones = new ColeccionOpciones();
 
         OpcionIncorrecta primeraOpcion = new OpcionIncorrecta("1 + 1", 0);
         OpcionIncorrecta segundaOpcion = new OpcionIncorrecta("3 - 1", 0);
         OpcionCorrecta terceraOpcion = new OpcionCorrecta("2 + 2", 1);
         OpcionCorrecta cuartaOpcion = new OpcionCorrecta("2 * 2", 1);
 
-        opcionesIncorrectas.add(primeraOpcion);
-        opcionesIncorrectas.add(segundaOpcion);
-        opcionesCorrectas.add(terceraOpcion);
-        opcionesCorrectas.add(cuartaOpcion);
+        opciones.agregarOpcion(primeraOpcion);
+        opciones.agregarOpcion(segundaOpcion);
+        opciones.agregarOpcion(terceraOpcion);
+        opciones.agregarOpcion(cuartaOpcion);
 
-        PreguntaOrderedChoice pregunta = new PreguntaOrderedChoice("¿Cuales de las siguientes cuentas tiene resultado 4?", 1, opcionesCorrectas ,opcionesIncorrectas);
+        PreguntaOrderedChoice pregunta = new PreguntaOrderedChoice("¿Cuales de las siguientes cuentas tiene resultado 4?", 1, opciones);
 
-        LinkedList<RespuestaMultiple> respuestas = new LinkedList<RespuestaMultiple>();
+        LinkedList<Respuesta> respuestas = new LinkedList<>();
 
         LinkedList<Opcion> opcionesSeleccionadas = new LinkedList<Opcion>();
         opcionesSeleccionadas.add(terceraOpcion);
         opcionesSeleccionadas.add(cuartaOpcion);
-
 
         RespuestaMultiple respuesta = new RespuestaMultiple(opcionesSeleccionadas, Guido);
 
@@ -58,23 +54,21 @@ public class testPreguntaOrderedChoiceEntrega2 {
 
         Jugador Fernando = new Jugador("Fernando");
 
-        LinkedList<OpcionCorrecta> opcionesCorrectas = new LinkedList<OpcionCorrecta>();
-        LinkedList<OpcionIncorrecta> opcionesIncorrectas = new LinkedList<OpcionIncorrecta>();
-
+        ColeccionOpciones opciones = new ColeccionOpciones();
 
         OpcionIncorrecta primeraOpcion = new OpcionIncorrecta("1 + 1", 0);
         OpcionIncorrecta segundaOpcion = new OpcionIncorrecta("3 - 1", 0);
         OpcionCorrecta terceraOpcion = new OpcionCorrecta("2 + 2", 1);
         OpcionCorrecta cuartaOpcion = new OpcionCorrecta("2 * 2", 1);
 
-        opcionesIncorrectas.add(primeraOpcion);
-        opcionesIncorrectas.add(segundaOpcion);
-        opcionesCorrectas.add(terceraOpcion);
-        opcionesCorrectas.add(cuartaOpcion);
+        opciones.agregarOpcion(primeraOpcion);
+        opciones.agregarOpcion(segundaOpcion);
+        opciones.agregarOpcion(terceraOpcion);
+        opciones.agregarOpcion(cuartaOpcion);
 
-        PreguntaOrderedChoice pregunta = new PreguntaOrderedChoice("¿Cuales de las siguientes cuentas tiene resultado 4?", 1, opcionesCorrectas ,opcionesIncorrectas);
+        PreguntaOrderedChoice pregunta = new PreguntaOrderedChoice("¿Cuales de las siguientes cuentas tiene resultado 4?", 1, opciones);
 
-        LinkedList<RespuestaMultiple> respuestas = new LinkedList<RespuestaMultiple>();
+        LinkedList<Respuesta> respuestas = new LinkedList<Respuesta>();
 
         LinkedList<Opcion> opcionesSeleccionadas = new LinkedList<Opcion>();
 

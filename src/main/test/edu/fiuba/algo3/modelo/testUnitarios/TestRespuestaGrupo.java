@@ -1,6 +1,6 @@
 package edu.fiuba.algo3.modelo.testUnitarios;
 
-import edu.fiuba.algo3.modelo.Grupo;
+import edu.fiuba.algo3.modelo.ColeccionOpciones;
 import edu.fiuba.algo3.modelo.Jugador;
 import edu.fiuba.algo3.modelo.Puntos;
 import edu.fiuba.algo3.modelo.opcion.Opcion;
@@ -13,7 +13,7 @@ import java.util.LinkedList;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class TestRespuestaGroupChoice {
+public class TestRespuestaGrupo {
 
     OpcionCorrecta primeraOpcion = new OpcionCorrecta("Opcion1", 0);
     OpcionCorrecta segundaOpcion = new OpcionCorrecta("Opcion2", 0);
@@ -23,9 +23,9 @@ public class TestRespuestaGroupChoice {
     public void CreoLaRespuestaGroupChoiceDelJugadorYVerificoSiSonLasElegidas() {
         Jugador jugador = new Jugador("Guido");
 
-        Grupo grupo = new Grupo("Grupo");
+        ColeccionOpciones grupo = new ColeccionOpciones();
 
-        LinkedList<Grupo> gruposElegidos = new LinkedList<Grupo>();
+        LinkedList<ColeccionOpciones> gruposElegidos = new LinkedList<ColeccionOpciones>();
 
         HashSet<Opcion> opciones = new HashSet<Opcion>();
 
@@ -50,9 +50,9 @@ public class TestRespuestaGroupChoice {
     public void CreoLaRespuestaGroupChoiceDelJugadorYVerificoSiSonLasElegidasElJugadorNoEligeTodasLasOpciones() {
         Jugador jugador = new Jugador("Guido");
 
-        Grupo grupo = new Grupo("Grupo");
+        ColeccionOpciones grupo = new ColeccionOpciones();
 
-        LinkedList<Grupo> gruposElegidos = new LinkedList<Grupo>();
+        LinkedList<ColeccionOpciones> gruposElegidos = new LinkedList<ColeccionOpciones>();
 
         HashSet<Opcion> opciones = new HashSet<Opcion>();
 
@@ -77,9 +77,9 @@ public class TestRespuestaGroupChoice {
 
         Puntos puntos = new Puntos(1);
 
-        Grupo grupo = new Grupo("Grupo");
+        ColeccionOpciones grupo = new ColeccionOpciones();
 
-        LinkedList<Grupo> gruposElegidos = new LinkedList<Grupo>();
+        LinkedList<ColeccionOpciones> gruposElegidos = new LinkedList<ColeccionOpciones>();
 
         HashSet<Opcion> opciones = new HashSet<Opcion>();
 

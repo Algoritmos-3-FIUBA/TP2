@@ -1,9 +1,10 @@
 package edu.fiuba.algo3.modelo.testUnitarios;
 
+import edu.fiuba.algo3.modelo.ColeccionOpciones;
 import edu.fiuba.algo3.modelo.opcion.OpcionCorrecta;
 import edu.fiuba.algo3.modelo.opcion.OpcionIncorrecta;
 import org.junit.jupiter.api.Test;
-import java.util.HashSet;
+
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class TestOpcion {
@@ -28,29 +29,29 @@ public class TestOpcion {
 
     @Test
     public void OpcionCorrectaSeAgregaALaListaCorrecta(){
-        HashSet<OpcionCorrecta> opcionesCorrectas = new HashSet<OpcionCorrecta>();
-        HashSet<OpcionIncorrecta> opcionesIncorrectas = new HashSet<OpcionIncorrecta>();
+        ColeccionOpciones opcionesCorrectas = new ColeccionOpciones();
+        ColeccionOpciones opcionesIncorrectas = new ColeccionOpciones();
 
         OpcionCorrecta opcionCorrecta = new OpcionCorrecta("28",5);
 
-        opcionCorrecta.agregarseALaListaCorrespondiente(opcionesCorrectas,opcionesIncorrectas);
+        opcionCorrecta.agregarseAlGrupoCorrespondiente(opcionesCorrectas,opcionesIncorrectas);
 
-        assert(opcionesCorrectas.contains(opcionCorrecta));
-        assertEquals(opcionesIncorrectas.size(),0);
-        assertEquals(opcionesCorrectas.size(),1);
+        assert(opcionesCorrectas.contiene(opcionCorrecta));
+        assertEquals(opcionesIncorrectas.cantidadElementos(),0);
+        assertEquals(opcionesCorrectas.cantidadElementos(),1);
     }
 
     @Test
     public void OpcionIncorrectaSeAgregaALaListaCorrecta(){
-        HashSet<OpcionCorrecta> opcionesCorrectas = new HashSet<OpcionCorrecta>();
-        HashSet<OpcionIncorrecta> opcionesIncorrectas = new HashSet<OpcionIncorrecta>();
+        ColeccionOpciones opcionesCorrectas = new ColeccionOpciones();
+        ColeccionOpciones opcionesIncorrectas = new ColeccionOpciones();
 
         OpcionIncorrecta opcionIncorrecta = new OpcionIncorrecta("La cordillera de los Andes",2);
 
-        opcionIncorrecta.agregarseALaListaCorrespondiente(opcionesCorrectas,opcionesIncorrectas);
+        opcionIncorrecta.agregarseAlGrupoCorrespondiente(opcionesCorrectas,opcionesIncorrectas);
 
-        assert(opcionesIncorrectas.contains(opcionIncorrecta));
-        assertEquals(opcionesCorrectas.size(),0);
-        assertEquals(opcionesIncorrectas.size(),1);
+        assert(opcionesIncorrectas.contiene(opcionIncorrecta));
+        assertEquals(opcionesCorrectas.cantidadElementos(),0);
+        assertEquals(opcionesIncorrectas.cantidadElementos(),1);
     }
 }

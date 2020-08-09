@@ -10,7 +10,7 @@ import edu.fiuba.algo3.modelo.pregunta.PreguntaMultipleChoiceParcial;
 import edu.fiuba.algo3.modelo.respuesta.Respuesta;
 import edu.fiuba.algo3.modelo.respuesta.RespuestaMultiple;
 import org.junit.jupiter.api.Test;
-import java.util.HashSet;
+
 import java.util.LinkedList;
 
 public class TestPreguntaMultipleChoiceParcial {
@@ -19,19 +19,19 @@ public class TestPreguntaMultipleChoiceParcial {
 
         Jugador Juan = new Jugador("Juan");
 
-        HashSet<Opcion> opciones = new HashSet<Opcion>();
+        ColeccionOpciones opciones = new ColeccionOpciones();
 
         OpcionCorrecta primeraOpcion = new OpcionCorrecta("1969",5);
         OpcionIncorrecta segundaOpcion = new OpcionIncorrecta("1974",0);
 
-        opciones.add(primeraOpcion);
-        opciones.add(segundaOpcion);
+        opciones.agregarOpcion(primeraOpcion);
+        opciones.agregarOpcion(segundaOpcion);
 
         PreguntaMultipleChoiceParcial pregunta = new PreguntaMultipleChoiceParcial("¿En que año llego el hombre a la luna?",opciones);
 
         LinkedList<Respuesta> respuestas = new LinkedList<Respuesta>();
 
-       LinkedList<Opcion> opcionesSeleccionadas = new LinkedList<>();
+        LinkedList<Opcion> opcionesSeleccionadas = new LinkedList<>();
         opcionesSeleccionadas.add(primeraOpcion);
 
         RespuestaMultiple respuesta = new RespuestaMultiple(opcionesSeleccionadas, Juan);
@@ -48,13 +48,13 @@ public class TestPreguntaMultipleChoiceParcial {
 
         Jugador Juan = new Jugador("Juan");
 
-        HashSet<Opcion> opciones = new HashSet<Opcion>();
+        ColeccionOpciones opciones = new ColeccionOpciones();
 
         OpcionCorrecta primeraOpcion = new OpcionCorrecta("1969",5);
         OpcionIncorrecta segundaOpcion = new OpcionIncorrecta("1974",0);
 
-        opciones.add(primeraOpcion);
-        opciones.add(segundaOpcion);
+        opciones.agregarOpcion(primeraOpcion);
+        opciones.agregarOpcion(segundaOpcion);
 
         PreguntaMultipleChoiceParcial pregunta = new PreguntaMultipleChoiceParcial("¿En que año llego el hombre a la luna?",opciones);
 
@@ -77,17 +77,17 @@ public class TestPreguntaMultipleChoiceParcial {
 
         Jugador Juan = new Jugador("Juan");
 
-        HashSet<Opcion> opciones = new HashSet<Opcion>();
+        ColeccionOpciones opciones = new ColeccionOpciones();
 
         OpcionCorrecta primeraOpcion = new OpcionCorrecta("Paris",1);
         OpcionCorrecta segundaOpcion = new OpcionCorrecta("Francia",1);
         OpcionCorrecta terceraOpcion = new OpcionCorrecta("Europa",1);
         OpcionIncorrecta cuartaOpcion = new OpcionIncorrecta("Argentina",0);
 
-        opciones.add(primeraOpcion);
-        opciones.add(segundaOpcion);
-        opciones.add(terceraOpcion);
-        opciones.add(cuartaOpcion);
+        opciones.agregarOpcion(primeraOpcion);
+        opciones.agregarOpcion(segundaOpcion);
+        opciones.agregarOpcion(terceraOpcion);
+        opciones.agregarOpcion(cuartaOpcion);
 
         PreguntaMultipleChoiceParcial pregunta = new PreguntaMultipleChoiceParcial("¿Donde se encuentra la torre Eiffel?",opciones);
 
@@ -111,15 +111,15 @@ public class TestPreguntaMultipleChoiceParcial {
 
         Jugador Juan = new Jugador("Juan");
 
-        HashSet<Opcion> opciones = new HashSet<Opcion>();
+        ColeccionOpciones opciones = new ColeccionOpciones();
 
         OpcionCorrecta primeraOpcion = new OpcionCorrecta("C",1);
         OpcionIncorrecta segundaOpcion = new OpcionIncorrecta("Java",0);
         OpcionIncorrecta terceraOpcion = new OpcionIncorrecta("Smalltalk",0);
 
-        opciones.add(primeraOpcion);
-        opciones.add(segundaOpcion);
-        opciones.add(terceraOpcion);
+        opciones.agregarOpcion(primeraOpcion);
+        opciones.agregarOpcion(segundaOpcion);
+        opciones.agregarOpcion(terceraOpcion);
 
         PreguntaMultipleChoiceParcial pregunta = new PreguntaMultipleChoiceParcial("¿Cuales de los siguientes lenguajes no son orientados a objetos?",opciones);
 
@@ -143,17 +143,17 @@ public class TestPreguntaMultipleChoiceParcial {
 
         Jugador Juan = new Jugador("Juan");
 
-        HashSet<Opcion> opciones = new HashSet<Opcion>();
+        ColeccionOpciones opciones = new ColeccionOpciones();
 
         OpcionCorrecta primeraOpcion = new OpcionCorrecta("Encapsulamiento",1);
         OpcionCorrecta segundaOpcion = new OpcionCorrecta("Polimorfismo",1);
         OpcionCorrecta terceraOpcion = new OpcionCorrecta("Ocultamiento de la informacio",1);
         OpcionCorrecta cuartaOpcion = new OpcionCorrecta("Herencia",1);
 
-        opciones.add(primeraOpcion);
-        opciones.add(segundaOpcion);
-        opciones.add(terceraOpcion);
-        opciones.add(cuartaOpcion);
+        opciones.agregarOpcion(primeraOpcion);
+        opciones.agregarOpcion(segundaOpcion);
+        opciones.agregarOpcion(terceraOpcion);
+        opciones.agregarOpcion(cuartaOpcion);
 
         PreguntaMultipleChoiceParcial pregunta = new PreguntaMultipleChoiceParcial("¿Cuales de los siguientes conceptos son importantes en POO?",opciones);
 
@@ -181,17 +181,17 @@ public class TestPreguntaMultipleChoiceParcial {
         Jugador Mati = new Jugador("Mati");
         Jugador Lucas = new Jugador("Lucas");
 
-        HashSet<Opcion> opciones = new HashSet<Opcion>();
+        ColeccionOpciones opciones = new ColeccionOpciones();
 
         OpcionCorrecta primeraOpcion = new OpcionCorrecta("Sarmiento",5);
         OpcionCorrecta segundaOpcion = new OpcionCorrecta("Belgrano",5);
         OpcionIncorrecta terceraOpcion = new OpcionIncorrecta("Saavedra",0);
         OpcionIncorrecta cuartaOpcion = new OpcionIncorrecta("Liniers",0);
 
-        opciones.add(primeraOpcion);
-        opciones.add(segundaOpcion);
-        opciones.add(terceraOpcion);
-        opciones.add(cuartaOpcion);
+        opciones.agregarOpcion(primeraOpcion);
+        opciones.agregarOpcion(segundaOpcion);
+        opciones.agregarOpcion(terceraOpcion);
+        opciones.agregarOpcion(cuartaOpcion);
 
         PreguntaMultipleChoiceParcial pregunta = new PreguntaMultipleChoiceParcial("¿Quien de los siguientes proceres aparece en un billete?",opciones);
 
