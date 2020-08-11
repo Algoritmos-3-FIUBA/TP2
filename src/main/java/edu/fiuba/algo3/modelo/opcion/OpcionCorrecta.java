@@ -1,7 +1,6 @@
 package edu.fiuba.algo3.modelo.opcion;
 
-import java.util.HashSet;
-import java.util.LinkedList;
+import edu.fiuba.algo3.modelo.ColeccionOpciones;
 
 public class OpcionCorrecta extends Opcion {
 
@@ -9,12 +8,8 @@ public class OpcionCorrecta extends Opcion {
         super(NombreOpcion, puntos);
     }
 
-    public void agregarseALaListaCorrespondiente(HashSet<OpcionCorrecta> opcionesCorrectas, HashSet<OpcionIncorrecta> opcionesIncorrectas){
-        opcionesCorrectas.add(this);
+    public void agregarseAlGrupoCorrespondiente(ColeccionOpciones opcionesCorrectas, ColeccionOpciones opcionesIncorrectas){
+        opcionesCorrectas.agregarOpcion(this);
     }
-
-  /*  public void agregarseALaListaCorrespondienteOrdenada(LinkedList<OpcionCorrecta> opcionesCorrectas, LinkedList<OpcionIncorrecta> opcionesIncorrectas){
-        opcionesCorrectas.add(this);
-    }*/
 
 }

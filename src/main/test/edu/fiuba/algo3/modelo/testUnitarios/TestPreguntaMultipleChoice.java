@@ -1,5 +1,6 @@
 package edu.fiuba.algo3.modelo.testUnitarios;
 
+import edu.fiuba.algo3.modelo.ColeccionOpciones;
 import edu.fiuba.algo3.modelo.Jugador;
 import edu.fiuba.algo3.modelo.opcion.Opcion;
 import edu.fiuba.algo3.modelo.opcion.OpcionCorrecta;
@@ -9,7 +10,6 @@ import edu.fiuba.algo3.modelo.respuesta.Respuesta;
 import edu.fiuba.algo3.modelo.respuesta.RespuestaMultiple;
 import org.junit.Test;
 
-import java.util.HashSet;
 import java.util.LinkedList;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -19,41 +19,31 @@ public class TestPreguntaMultipleChoice {
     @Test
     public void CreoPreguntaMultipleChoiceConDosRespuestasCorrectasYSeAsignanCorrectamente() {
 
-        HashSet<Opcion> opciones = new HashSet<Opcion>();
+        ColeccionOpciones opciones = new ColeccionOpciones();
 
-        OpcionIncorrecta primeraOpcion = new OpcionIncorrecta("1 + 1", 0);
-        OpcionIncorrecta segundaOpcion = new OpcionIncorrecta("3 - 1", 0);
-        OpcionCorrecta terceraOpcion = new OpcionCorrecta("2 + 2", 1);
-        OpcionCorrecta cuartaOpcion = new OpcionCorrecta("2 * 2", 1);
-
-        opciones.add(primeraOpcion);
-        opciones.add(segundaOpcion);
-        opciones.add(terceraOpcion);
-        opciones.add(cuartaOpcion);
+        opciones.agregarOpcion(new OpcionIncorrecta("1 + 1", 0));
+        opciones.agregarOpcion(new OpcionIncorrecta("3 - 1", 0));
+        opciones.agregarOpcion(new OpcionCorrecta("2 + 2", 1));
+        opciones.agregarOpcion(new OpcionCorrecta("2 * 2", 1));
 
         PreguntaMultipleChoice pregunta = new PreguntaMultipleChoice("¿Cuales de las siguientes cuentas tiene resultado 4?", 1, opciones);
 
-        assertEquals((pregunta.getOpcionesCorrectas()).size(), 2);
+        assertEquals((pregunta.getOpcionesCorrectas()).cantidadElementos(), 2);
     }
 
     @Test
     public void CreoPreguntaMultipleChoiceConDosRespuestasIncorrectasYSeAsignanCorrectamente() {
 
-        HashSet<Opcion> opciones = new HashSet<Opcion>();
+        ColeccionOpciones opciones = new ColeccionOpciones();
 
-        OpcionIncorrecta primeraOpcion = new OpcionIncorrecta("1 + 1", 0);
-        OpcionIncorrecta segundaOpcion = new OpcionIncorrecta("3 - 1", 0);
-        OpcionCorrecta terceraOpcion = new OpcionCorrecta("2 + 2", 1);
-        OpcionCorrecta cuartaOpcion = new OpcionCorrecta("2 * 2", 1);
-
-        opciones.add(primeraOpcion);
-        opciones.add(segundaOpcion);
-        opciones.add(terceraOpcion);
-        opciones.add(cuartaOpcion);
+        opciones.agregarOpcion(new OpcionIncorrecta("1 + 1", 0));
+        opciones.agregarOpcion(new OpcionIncorrecta("3 - 1", 0));
+        opciones.agregarOpcion(new OpcionCorrecta("2 + 2", 1));
+        opciones.agregarOpcion(new OpcionCorrecta("2 * 2", 1));
 
         PreguntaMultipleChoice pregunta = new PreguntaMultipleChoice("¿Cuales de las siguientes cuentas tiene resultado 4?", 1, opciones);
 
-        assertEquals((pregunta.getOpcionesIncorrectas()).size(), 2);
+        assertEquals((pregunta.getOpcionesIncorrectas()).cantidadElementos(), 2);
     }
 
     @Test
@@ -61,17 +51,17 @@ public class TestPreguntaMultipleChoice {
 
             Jugador Mati = new Jugador("Mati");
 
-            HashSet<Opcion> opciones = new HashSet<Opcion>();
+            ColeccionOpciones opciones = new ColeccionOpciones();
 
             OpcionIncorrecta primeraOpcion = new OpcionIncorrecta("1 + 1", 0);
             OpcionIncorrecta segundaOpcion = new OpcionIncorrecta("3 - 1", 0);
             OpcionCorrecta terceraOpcion = new OpcionCorrecta("2 + 2", 1);
             OpcionCorrecta cuartaOpcion = new OpcionCorrecta("2 * 2", 1);
 
-            opciones.add(primeraOpcion);
-            opciones.add(segundaOpcion);
-            opciones.add(terceraOpcion);
-            opciones.add(cuartaOpcion);
+            opciones.agregarOpcion(primeraOpcion);
+            opciones.agregarOpcion(segundaOpcion);
+            opciones.agregarOpcion(terceraOpcion);
+            opciones.agregarOpcion(cuartaOpcion);
 
             PreguntaMultipleChoice pregunta = new PreguntaMultipleChoice("¿Cuales de las siguientes cuentas tiene resultado 4?", 1, opciones);
 
@@ -95,17 +85,17 @@ public class TestPreguntaMultipleChoice {
 
             Jugador Mati = new Jugador("Mati");
 
-            HashSet<Opcion> opciones = new HashSet<Opcion>();
+            ColeccionOpciones opciones = new ColeccionOpciones();
 
             OpcionIncorrecta primeraOpcion = new OpcionIncorrecta("1 + 1", 0);
             OpcionIncorrecta segundaOpcion = new OpcionIncorrecta("3 - 1", 0);
             OpcionCorrecta terceraOpcion = new OpcionCorrecta("2 + 2", 1);
             OpcionCorrecta cuartaOpcion = new OpcionCorrecta("2 * 2", 1);
 
-            opciones.add(primeraOpcion);
-            opciones.add(segundaOpcion);
-            opciones.add(terceraOpcion);
-            opciones.add(cuartaOpcion);
+            opciones.agregarOpcion(primeraOpcion);
+            opciones.agregarOpcion(segundaOpcion);
+            opciones.agregarOpcion(terceraOpcion);
+            opciones.agregarOpcion(cuartaOpcion);
 
             PreguntaMultipleChoice pregunta = new PreguntaMultipleChoice("¿Cuales de las siguientes cuentas tiene resultado 4?", 1, opciones);
 
@@ -128,17 +118,17 @@ public class TestPreguntaMultipleChoice {
 
             Jugador Mati = new Jugador("Mati");
 
-            HashSet<Opcion> opciones = new HashSet<Opcion>();
+            ColeccionOpciones opciones = new ColeccionOpciones();
 
             OpcionIncorrecta primeraOpcion = new OpcionIncorrecta("1 + 1", 0);
             OpcionIncorrecta segundaOpcion = new OpcionIncorrecta("3 - 1", 0);
             OpcionCorrecta terceraOpcion = new OpcionCorrecta("2 + 2", 1);
             OpcionCorrecta cuartaOpcion = new OpcionCorrecta("2 * 2", 1);
 
-            opciones.add(primeraOpcion);
-            opciones.add(segundaOpcion);
-            opciones.add(terceraOpcion);
-            opciones.add(cuartaOpcion);
+            opciones.agregarOpcion(primeraOpcion);
+            opciones.agregarOpcion(segundaOpcion);
+            opciones.agregarOpcion(terceraOpcion);
+            opciones.agregarOpcion(cuartaOpcion);
 
             PreguntaMultipleChoice pregunta = new PreguntaMultipleChoice("¿Cuales de las siguientes cuentas tiene resultado 4?", 1, opciones);
 
@@ -163,17 +153,17 @@ public class TestPreguntaMultipleChoice {
 
             Jugador Mati = new Jugador("Mati");
 
-            HashSet<Opcion> opciones = new HashSet<Opcion>();
+            ColeccionOpciones opciones = new ColeccionOpciones();
 
             OpcionIncorrecta primeraOpcion = new OpcionIncorrecta("1 + 1", 0);
             OpcionIncorrecta segundaOpcion = new OpcionIncorrecta("3 - 1", 0);
             OpcionCorrecta terceraOpcion = new OpcionCorrecta("2 + 2", 1);
             OpcionCorrecta cuartaOpcion = new OpcionCorrecta("2 * 2", 1);
 
-            opciones.add(primeraOpcion);
-            opciones.add(segundaOpcion);
-            opciones.add(terceraOpcion);
-            opciones.add(cuartaOpcion);
+            opciones.agregarOpcion(primeraOpcion);
+            opciones.agregarOpcion(segundaOpcion);
+            opciones.agregarOpcion(terceraOpcion);
+            opciones.agregarOpcion(cuartaOpcion);
 
             PreguntaMultipleChoice pregunta = new PreguntaMultipleChoice("¿Cuales de las siguientes cuentas tiene resultado 4?", 1, opciones);
 
@@ -199,17 +189,17 @@ public class TestPreguntaMultipleChoice {
             Jugador Juan = new Jugador("Juan");
             Jugador Guido = new Jugador("Guido");
 
-            HashSet<Opcion> opciones = new HashSet<Opcion>();
+            ColeccionOpciones opciones = new ColeccionOpciones();
 
             OpcionIncorrecta primeraOpcion = new OpcionIncorrecta("1 + 1", 0);
             OpcionIncorrecta segundaOpcion = new OpcionIncorrecta("3 - 1", 0);
             OpcionCorrecta terceraOpcion = new OpcionCorrecta("2 + 2", 1);
             OpcionCorrecta cuartaOpcion = new OpcionCorrecta("2 * 2", 1);
 
-            opciones.add(primeraOpcion);
-            opciones.add(segundaOpcion);
-            opciones.add(terceraOpcion);
-            opciones.add(cuartaOpcion);
+            opciones.agregarOpcion(primeraOpcion);
+            opciones.agregarOpcion(segundaOpcion);
+            opciones.agregarOpcion(terceraOpcion);
+            opciones.agregarOpcion(cuartaOpcion);
 
             PreguntaMultipleChoice pregunta = new PreguntaMultipleChoice("¿Cuales de las siguientes cuentas tiene resultado 4?", 1, opciones);
 

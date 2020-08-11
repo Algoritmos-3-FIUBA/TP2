@@ -4,9 +4,6 @@ import edu.fiuba.algo3.modelo.Jugador;
 import edu.fiuba.algo3.modelo.Puntos;
 import edu.fiuba.algo3.modelo.multiplicador.Multiplicador;
 import edu.fiuba.algo3.modelo.multiplicador.MultiplicadorDefault;
-import edu.fiuba.algo3.modelo.opcion.Opcion;
-
-import java.util.Collection;
 
 public abstract class Respuesta {
 
@@ -26,6 +23,5 @@ public abstract class Respuesta {
     public void otorgarPuntos(Puntos puntos){
         multiplicador.utilizarBeneficio(puntos, jugador);
     };
-
 
 }

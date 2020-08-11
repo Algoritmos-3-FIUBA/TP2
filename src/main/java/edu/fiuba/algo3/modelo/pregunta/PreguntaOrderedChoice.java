@@ -1,36 +1,33 @@
 package edu.fiuba.algo3.modelo.pregunta;
 
-import edu.fiuba.algo3.modelo.Grupo;
+import edu.fiuba.algo3.modelo.ColeccionOpciones;
 import edu.fiuba.algo3.modelo.Puntos;
-import edu.fiuba.algo3.modelo.opcion.Opcion;
-import edu.fiuba.algo3.modelo.opcion.OpcionCorrecta;
-import edu.fiuba.algo3.modelo.opcion.OpcionIncorrecta;
 import edu.fiuba.algo3.modelo.respuesta.Respuesta;
-import edu.fiuba.algo3.modelo.respuesta.RespuestaGrupos;
 import edu.fiuba.algo3.modelo.respuesta.RespuestaMultiple;
-
-import java.util.HashSet;
 import java.util.LinkedList;
 
-public class PreguntaOrderedChoice {
-    private String Nombre;
-    private Puntos PuntosOtorgados;
-    LinkedList<OpcionCorrecta> opcionesCorrectas;
-    LinkedList<OpcionIncorrecta> opcionesIncorrectas;
+public class PreguntaOrderedChoice extends Pregunta{
 
-    public PreguntaOrderedChoice(String nombre, int puntos, LinkedList<OpcionCorrecta> opcionesCorrectas, LinkedList<OpcionIncorrecta> opcionesIncorrectas) {
-        Nombre = nombre;
+    private Puntos PuntosOtorgados;
+    private ColeccionOpciones opcionesCorrectas;
+    private ColeccionOpciones opcionesIncorrectas;
+
+    public PreguntaOrderedChoice(String nombre, int puntos, ColeccionOpciones opciones) {
+
+        this.nombre = nombre;
+
         PuntosOtorgados = new Puntos(puntos);
-        this.opcionesCorrectas = opcionesCorrectas;
-        this.opcionesIncorrectas = opcionesIncorrectas;
+
+        opcionesCorrectas = new ColeccionOpciones();
+        opcionesIncorrectas = new ColeccionOpciones();
+
+        opciones.separarEnGruposCorrespondientes(opcionesCorrectas,opcionesIncorrectas);
     }
 
-    public void evaluarRespuestas(LinkedList<RespuestaMultiple> respuestas) {
+    public void evaluarRespuestas(LinkedList<Respuesta> respuestas) {
+
         for (Respuesta respuesta : respuestas){
-
-
-
-            if((((RespuestaMultiple) respuesta).getOpciones().equals(opcionesCorrectas)))
+            if(((RespuestaMultiple) respuesta).getOpciones().esIgual(opcionesCorrectas))
                 respuesta.otorgarPuntos(PuntosOtorgados);
         }
     }

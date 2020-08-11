@@ -1,5 +1,6 @@
 package edu.fiuba.algo3.modelo.testUnitarios;
 
+import edu.fiuba.algo3.modelo.ColeccionOpciones;
 import edu.fiuba.algo3.modelo.Jugador;
 import edu.fiuba.algo3.modelo.multiplicador.Multiplicador;
 import edu.fiuba.algo3.modelo.multiplicador.MultiplicadorPorTres;
@@ -12,7 +13,6 @@ import edu.fiuba.algo3.modelo.respuesta.Respuesta;
 import edu.fiuba.algo3.modelo.respuesta.RespuestaMultiple;
 import org.junit.jupiter.api.Test;
 
-import java.util.HashSet;
 import java.util.LinkedList;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -24,17 +24,17 @@ public class TestPreguntaMultipleChoicePenalidad {
 
         Jugador jugador = new Jugador("Pedro");
 
-        HashSet<Opcion> opciones = new HashSet<Opcion>();
+        ColeccionOpciones opciones = new ColeccionOpciones();
 
         OpcionCorrecta primeraOpcion = new OpcionCorrecta("2014",1);
         OpcionCorrecta segundaOpcion = new OpcionCorrecta("2010",1);
         OpcionIncorrecta terceraOpcion = new OpcionIncorrecta("1902",-1);
         OpcionIncorrecta cuartaOpcion = new OpcionIncorrecta("El año pasado",-1);
 
-        opciones.add(primeraOpcion);
-        opciones.add(segundaOpcion);
-        opciones.add(terceraOpcion);
-        opciones.add(cuartaOpcion);
+        opciones.agregarOpcion(primeraOpcion);
+        opciones.agregarOpcion(segundaOpcion);
+        opciones.agregarOpcion(terceraOpcion);
+        opciones.agregarOpcion(cuartaOpcion);
 
         PreguntaMultipleChoicePenalidad pregunta = new PreguntaMultipleChoicePenalidad("¿En que años se jugó mundial de futbol?", opciones);
 
@@ -57,17 +57,17 @@ public class TestPreguntaMultipleChoicePenalidad {
 
         Jugador jugador = new Jugador("Pedro");
 
-        HashSet<Opcion> opciones = new HashSet<Opcion>();
+        ColeccionOpciones opciones = new ColeccionOpciones();
 
         OpcionCorrecta primeraOpcion = new OpcionCorrecta("2014",1);
         OpcionCorrecta segundaOpcion = new OpcionCorrecta("2010",1);
         OpcionIncorrecta terceraOpcion = new OpcionIncorrecta("1902",-1);
         OpcionIncorrecta cuartaOpcion = new OpcionIncorrecta("El año pasado",-1);
 
-        opciones.add(primeraOpcion);
-        opciones.add(segundaOpcion);
-        opciones.add(terceraOpcion);
-        opciones.add(cuartaOpcion);
+        opciones.agregarOpcion(primeraOpcion);
+        opciones.agregarOpcion(segundaOpcion);
+        opciones.agregarOpcion(terceraOpcion);
+        opciones.agregarOpcion(cuartaOpcion);
 
         PreguntaMultipleChoicePenalidad pregunta = new PreguntaMultipleChoicePenalidad("¿En que años se jugó mundial de futbol?", opciones);
 
@@ -91,17 +91,17 @@ public class TestPreguntaMultipleChoicePenalidad {
 
         Jugador jugador = new Jugador("Pedro");
 
-        HashSet<Opcion> opciones = new HashSet<Opcion>();
+        ColeccionOpciones opciones = new ColeccionOpciones();
 
         OpcionCorrecta primeraOpcion = new OpcionCorrecta("2014",1);
         OpcionCorrecta segundaOpcion = new OpcionCorrecta("2010",1);
         OpcionIncorrecta terceraOpcion = new OpcionIncorrecta("1902",-1);
         OpcionIncorrecta cuartaOpcion = new OpcionIncorrecta("El año pasado",-1);
 
-        opciones.add(primeraOpcion);
-        opciones.add(segundaOpcion);
-        opciones.add(terceraOpcion);
-        opciones.add(cuartaOpcion);
+        opciones.agregarOpcion(primeraOpcion);
+        opciones.agregarOpcion(segundaOpcion);
+        opciones.agregarOpcion(terceraOpcion);
+        opciones.agregarOpcion(cuartaOpcion);
 
         PreguntaMultipleChoicePenalidad pregunta = new PreguntaMultipleChoicePenalidad("¿En que años se jugó mundial de futbol?", opciones);
 
@@ -126,17 +126,17 @@ public class TestPreguntaMultipleChoicePenalidad {
 
         Jugador jugador = new Jugador("Pedro");
 
-        HashSet<Opcion> opciones = new HashSet<Opcion>();
+        ColeccionOpciones opciones = new ColeccionOpciones();
 
         OpcionCorrecta primeraOpcion = new OpcionCorrecta("2014",1);
         OpcionCorrecta segundaOpcion = new OpcionCorrecta("2010",1);
         OpcionIncorrecta terceraOpcion = new OpcionIncorrecta("1902",-1);
         OpcionIncorrecta cuartaOpcion = new OpcionIncorrecta("El año pasado",-1);
 
-        opciones.add(primeraOpcion);
-        opciones.add(segundaOpcion);
-        opciones.add(terceraOpcion);
-        opciones.add(cuartaOpcion);
+        opciones.agregarOpcion(primeraOpcion);
+        opciones.agregarOpcion(segundaOpcion);
+        opciones.agregarOpcion(terceraOpcion);
+        opciones.agregarOpcion(cuartaOpcion);
 
         PreguntaMultipleChoicePenalidad pregunta = new PreguntaMultipleChoicePenalidad("¿En que años se jugó mundial de futbol?", opciones);
 
@@ -161,17 +161,17 @@ public class TestPreguntaMultipleChoicePenalidad {
         Jugador jugador = new Jugador("Pedro");
         Multiplicador multiplicador = new MultiplicadorPorDos();
 
-        HashSet<Opcion> opciones = new HashSet<Opcion>();
+        ColeccionOpciones opciones = new ColeccionOpciones();
 
         OpcionCorrecta primeraOpcion = new OpcionCorrecta("2014",1);
         OpcionCorrecta segundaOpcion = new OpcionCorrecta("2010",1);
         OpcionIncorrecta terceraOpcion = new OpcionIncorrecta("1902",-1);
         OpcionIncorrecta cuartaOpcion = new OpcionIncorrecta("El año pasado",-1);
 
-        opciones.add(primeraOpcion);
-        opciones.add(segundaOpcion);
-        opciones.add(terceraOpcion);
-        opciones.add(cuartaOpcion);
+        opciones.agregarOpcion(primeraOpcion);
+        opciones.agregarOpcion(segundaOpcion);
+        opciones.agregarOpcion(terceraOpcion);
+        opciones.agregarOpcion(cuartaOpcion);
 
         PreguntaMultipleChoicePenalidad pregunta = new PreguntaMultipleChoicePenalidad("¿En que años se jugó mundial de futbol?", opciones);
 
@@ -196,17 +196,17 @@ public class TestPreguntaMultipleChoicePenalidad {
         Jugador jugador = new Jugador("Pedro");
         Multiplicador multiplicador = new MultiplicadorPorDos();
 
-        HashSet<Opcion> opciones = new HashSet<Opcion>();
+        ColeccionOpciones opciones = new ColeccionOpciones();
 
         OpcionCorrecta primeraOpcion = new OpcionCorrecta("2014",1);
         OpcionCorrecta segundaOpcion = new OpcionCorrecta("2010",1);
         OpcionIncorrecta terceraOpcion = new OpcionIncorrecta("1902",-1);
         OpcionIncorrecta cuartaOpcion = new OpcionIncorrecta("El año pasado",-1);
 
-        opciones.add(primeraOpcion);
-        opciones.add(segundaOpcion);
-        opciones.add(terceraOpcion);
-        opciones.add(cuartaOpcion);
+        opciones.agregarOpcion(primeraOpcion);
+        opciones.agregarOpcion(segundaOpcion);
+        opciones.agregarOpcion(terceraOpcion);
+        opciones.agregarOpcion(cuartaOpcion);
 
         PreguntaMultipleChoicePenalidad pregunta = new PreguntaMultipleChoicePenalidad("¿En que años se jugó mundial de futbol?", opciones);
 
@@ -232,17 +232,17 @@ public class TestPreguntaMultipleChoicePenalidad {
         Jugador jugador = new Jugador("Pedro");
         Multiplicador multiplicador = new MultiplicadorPorDos();
 
-        HashSet<Opcion> opciones = new HashSet<Opcion>();
+        ColeccionOpciones opciones = new ColeccionOpciones();
 
         OpcionCorrecta primeraOpcion = new OpcionCorrecta("2014",1);
         OpcionCorrecta segundaOpcion = new OpcionCorrecta("2010",1);
         OpcionIncorrecta terceraOpcion = new OpcionIncorrecta("1902",-1);
         OpcionIncorrecta cuartaOpcion = new OpcionIncorrecta("El año pasado",-1);
 
-        opciones.add(primeraOpcion);
-        opciones.add(segundaOpcion);
-        opciones.add(terceraOpcion);
-        opciones.add(cuartaOpcion);
+        opciones.agregarOpcion(primeraOpcion);
+        opciones.agregarOpcion(segundaOpcion);
+        opciones.agregarOpcion(terceraOpcion);
+        opciones.agregarOpcion(cuartaOpcion);
 
         PreguntaMultipleChoicePenalidad pregunta = new PreguntaMultipleChoicePenalidad("¿En que años se jugó mundial de futbol?", opciones);
 
@@ -267,17 +267,17 @@ public class TestPreguntaMultipleChoicePenalidad {
         Jugador jugador = new Jugador("Pedro");
         Multiplicador multiplicador = new MultiplicadorPorTres();
 
-        HashSet<Opcion> opciones = new HashSet<Opcion>();
+        ColeccionOpciones opciones = new ColeccionOpciones();
 
         OpcionCorrecta primeraOpcion = new OpcionCorrecta("2014",1);
         OpcionCorrecta segundaOpcion = new OpcionCorrecta("2010",1);
         OpcionIncorrecta terceraOpcion = new OpcionIncorrecta("1902",-1);
         OpcionIncorrecta cuartaOpcion = new OpcionIncorrecta("El año pasado",-1);
 
-        opciones.add(primeraOpcion);
-        opciones.add(segundaOpcion);
-        opciones.add(terceraOpcion);
-        opciones.add(cuartaOpcion);
+        opciones.agregarOpcion(primeraOpcion);
+        opciones.agregarOpcion(segundaOpcion);
+        opciones.agregarOpcion(terceraOpcion);
+        opciones.agregarOpcion(cuartaOpcion);
 
         PreguntaMultipleChoicePenalidad pregunta = new PreguntaMultipleChoicePenalidad("¿En que años se jugó mundial de futbol?", opciones);
 
@@ -302,17 +302,17 @@ public class TestPreguntaMultipleChoicePenalidad {
         Jugador jugador = new Jugador("Pedro");
         Multiplicador multiplicador = new MultiplicadorPorTres();
 
-        HashSet<Opcion> opciones = new HashSet<Opcion>();
+        ColeccionOpciones opciones = new ColeccionOpciones();
 
         OpcionCorrecta primeraOpcion = new OpcionCorrecta("2014",1);
         OpcionCorrecta segundaOpcion = new OpcionCorrecta("2010",1);
         OpcionIncorrecta terceraOpcion = new OpcionIncorrecta("1902",-1);
         OpcionIncorrecta cuartaOpcion = new OpcionIncorrecta("El año pasado",-1);
 
-        opciones.add(primeraOpcion);
-        opciones.add(segundaOpcion);
-        opciones.add(terceraOpcion);
-        opciones.add(cuartaOpcion);
+        opciones.agregarOpcion(primeraOpcion);
+        opciones.agregarOpcion(segundaOpcion);
+        opciones.agregarOpcion(terceraOpcion);
+        opciones.agregarOpcion(cuartaOpcion);
 
         PreguntaMultipleChoicePenalidad pregunta = new PreguntaMultipleChoicePenalidad("¿En que años se jugó mundial de futbol?", opciones);
 
