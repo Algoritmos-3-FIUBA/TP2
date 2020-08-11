@@ -9,9 +9,9 @@ import java.util.LinkedList;
 
 public class PreguntaMultipleChoice extends Pregunta {
 
-    private Puntos puntosOtorgados;
-    private ColeccionOpciones opcionesCorrectas;
-    private ColeccionOpciones opcionesIncorrectas;
+    private final Puntos puntosOtorgados;
+    private final ColeccionOpciones opcionesCorrectas;
+    private final ColeccionOpciones opcionesIncorrectas;
 
     public PreguntaMultipleChoice(String nombre, int puntos, ColeccionOpciones opciones) {
 

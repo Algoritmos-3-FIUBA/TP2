@@ -9,8 +9,8 @@ import java.util.LinkedList;
 
 public class PreguntaMultipleChoiceParcial extends Pregunta{
 
-    private ColeccionOpciones opcionesCorrectas;
-    private ColeccionOpciones opcionesIncorrectas;
+    private final ColeccionOpciones opcionesCorrectas;
+    private final ColeccionOpciones opcionesIncorrectas;
 
     public PreguntaMultipleChoiceParcial(String nombre, ColeccionOpciones opciones){
 
