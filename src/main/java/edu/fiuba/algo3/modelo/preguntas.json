@@ -1,0 +1,20 @@
+{
+  "PreguntaVerdaderoFalso": {
+    "pregunta1": {
+      "nombre": "¿207 es un número primo?",
+      "textoOpcion1": "Verdadero",
+      "opcion1": false,
+      "textoOpcion2": "Falso",
+      "opcion2": true,
+      "opcionCorrecta": "Falso"
+    },
+    "pregunta2": {
+      "nombre":"¿507 es un número primo?",
+      "textoOpcion1": "Verdadero",
+      "opcion1": true,
+      "textoOpcion2": "Falso",
+      "opcion2": false,
+      "opcionCorrecta": "Falso"
+    }
+  }
+}
