@@ -1,8 +1,12 @@
 package edu.fiuba.algo3.modelo.respuesta;
 
+import edu.fiuba.algo3.modelo.ColeccionOpciones;
+import edu.fiuba.algo3.modelo.Exclusividad;
 import edu.fiuba.algo3.modelo.Jugador;
 import edu.fiuba.algo3.modelo.multiplicador.Multiplicador;
 import edu.fiuba.algo3.modelo.opcion.Opcion;
+
+import java.util.LinkedList;
 
 public class RespuestaUnica extends Respuesta {
 
@@ -15,6 +19,11 @@ public class RespuestaUnica extends Respuesta {
 
     public RespuestaUnica(Opcion opcion,Jugador jugador, Multiplicador multiplicador) {
         super(jugador, multiplicador);
+        this.opcion = opcion;
+    }
+
+    public RespuestaUnica (Opcion opcion, Jugador jugador, Exclusividad exclusividad) {
+        super(jugador, exclusividad);
         this.opcion = opcion;
     }
 
