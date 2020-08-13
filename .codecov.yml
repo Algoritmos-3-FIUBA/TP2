@@ -1,6 +1,6 @@
 ignore:
-  - "src/main/java/edu/fiuba/algo3/vista/*" #Ignorar test Vista
-  - "src/main/java/edu/fiuba/algo3/controlador/*" #Ignorar test Controlador
+  - "src/main/java/edu/fiuba/algo3/vista" #Ignorar test Vista
+  - "src/main/java/edu/fiuba/algo3/controlador" #Ignorar test Controlador
   - */controlador/.*
   - */vista/.*
   - "App.java" #Ignorar test Interfaz
