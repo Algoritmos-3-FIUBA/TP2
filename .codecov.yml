@@ -1,3 +1,5 @@
 ignore:
-  - "src/main/java/edu/fiuba/algo3/App.java" #Ignorar test Interfaz
+  - "src/main/java/edu/fiuba/algo3/vista" #Ignorar test Vista
+  - "src/main/java/edu/fiuba/algo3/Controlador" #Ignorar test Controlador
+
   - "App.java" #Ignorar test Interfaz
