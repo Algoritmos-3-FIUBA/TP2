@@ -1,13 +1,6 @@
-ignore:
-  - "src/main/java/edu/fiuba/algo3/vista" #Ignorar test Vista
-  - "src/main/java/edu/fiuba/algo3/controlador" #Ignorar test Controlador
-  - "src/main/java/edu/fiuba/algo3/vista/" #Ignorar test Vista
-  - "src/main/java/edu/fiuba/algo3/controlador/" #Ignorar test Controlador
-  - "src/main/java/edu/fiuba/algo3/vista/.*" #Ignorar test Vista
-  - "src/main/java/edu/fiuba/algo3/controlador/.*" #Ignorar test Controlador
-  - "/src/main/java/edu/fiuba/algo3/vista/" #Ignorar test Vista
-  - "/src/main/java/edu/fiuba/algo3/controlador/" #Ignorar test Controlador
-  - "/src/main/java/edu/fiuba/algo3/vista/App.java" #Ignorar test Vista
-  - "*/controlador/.*"
-  - "*/vista/.*"
-  - "App.java" #Ignorar test Interfaz
+coverage:
+  ignore:
+    # Ignorar Interfaz en cobertura
+    - */controlador/.*
+    - */vista/.*
+    
