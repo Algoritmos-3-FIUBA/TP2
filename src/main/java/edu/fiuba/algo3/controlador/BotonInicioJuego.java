@@ -1,5 +1,7 @@
 package edu.fiuba.algo3.controlador;
 
+import edu.fiuba.algo3.modelo.pregunta.PreguntaVerdaderoFalso;
+import edu.fiuba.algo3.modelo.pregunta.PreguntaVerdaderoFalsoClasico;
 import edu.fiuba.algo3.vista.App;
 import edu.fiuba.algo3.vista.PreguntaVoF;
 import javafx.event.ActionEvent;
@@ -8,6 +10,8 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.GridPane;
 import javafx.stage.Window;
+
+import java.util.LinkedList;
 
 public class BotonInicioJuego implements EventHandler<ActionEvent>  {
     private TextField jugador1;
@@ -33,7 +37,19 @@ public class BotonInicioJuego implements EventHandler<ActionEvent>  {
 
 
         //aplicacion.mostrarPantallaJuego();
-        new PreguntaVoF();
+
+        LinkedList<PreguntaVerdaderoFalso> listaPreguntas = new LinkedList<>();
+        this.ingresarPreguntas(listaPreguntas);
+        new PreguntaVoF(listaPreguntas);
+    }
+
+    private void ingresarPreguntas(LinkedList<PreguntaVerdaderoFalso> listaPreguntas) {
+        PreguntaVerdaderoFalsoClasico preg1 = new PreguntaVerdaderoFalsoClasico("1 + 1 = 2");
+        preg1.setVerdaderoOpcionCorrecta();
+        listaPreguntas.add(preg1);
+        PreguntaVerdaderoFalsoClasico preg2 =  new PreguntaVerdaderoFalsoClasico("Existe el Sol");
+        preg2.setVerdaderoOpcionCorrecta();
+        listaPreguntas.add(preg2);
     }
 
     private void showAlert(Alert.AlertType alertType, Window owner, String title, String message) {
