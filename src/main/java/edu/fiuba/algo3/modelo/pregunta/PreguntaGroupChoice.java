@@ -2,8 +2,10 @@ package edu.fiuba.algo3.modelo.pregunta;
 
 import edu.fiuba.algo3.modelo.ColeccionOpciones;
 import edu.fiuba.algo3.modelo.Puntos;
+import edu.fiuba.algo3.modelo.amplificador.Amplificador;
 import edu.fiuba.algo3.modelo.respuesta.Respuesta;
 import edu.fiuba.algo3.modelo.respuesta.RespuestaGrupos;
+import edu.fiuba.algo3.modelo.respuesta.RespuestaMultiple;
 
 import java.util.LinkedList;
 
@@ -22,10 +24,33 @@ public class PreguntaGroupChoice extends Pregunta{
     }
 
     public void evaluarRespuestas(LinkedList<Respuesta> respuestas) {
+        corregirRespuestas(respuestas);
+
+        Amplificador amplificadorFinal = new Amplificador(1);
+
+        for (Respuesta respuesta : respuestas) {
+            respuesta.actualizarEstadoAmplificador(amplificadorFinal);
+            respuesta.calcularAmplificacionExclusividad(amplificadorFinal,respuestas);
+        }
+
+        for (Respuesta respuesta : respuestas) {
+            respuesta.otorgarPuntos(puntosAOtorgar(respuesta));
+        }
+    }
+
+    private Puntos puntosAOtorgar(Respuesta respuesta){
+        Puntos puntosParciales = new Puntos(0);
+        for (int i = 0; i < gruposCorrectos.size(); i++)
+            if (((RespuestaGrupos) respuesta).getGruposElegidos().get(i).tieneMismosElementos(gruposCorrectos.get(i)))
+                puntosParciales.sumarPuntos(PuntosOtorgados);
+        return puntosParciales;
+    }
+
+    private void corregirRespuestas(LinkedList<Respuesta> respuestas){
         for (Respuesta respuesta : respuestas)
-            for(int i = 0; i < gruposCorrectos.size(); i++)
-                if(((RespuestaGrupos)respuesta).getGruposElegidos().get(i).tieneMismosElementos(gruposCorrectos.get(i)))
-                    respuesta.otorgarPuntos(PuntosOtorgados);
+            for (int i = 0; i < gruposCorrectos.size(); i++)
+                if (((RespuestaGrupos) respuesta).getGruposElegidos().get(i).tieneMismosElementos(gruposCorrectos.get(i)))
+                    respuesta.setCorrecta();
     }
 
     //Version anterior

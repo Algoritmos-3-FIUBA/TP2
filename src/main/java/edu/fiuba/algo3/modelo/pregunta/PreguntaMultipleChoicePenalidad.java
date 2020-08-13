@@ -24,20 +24,11 @@ public class PreguntaMultipleChoicePenalidad extends Pregunta {
     }
 
     public void evaluarRespuestas (LinkedList<Respuesta> listaRespuestas) {
-        HashSet<Opcion> opcionesJugador;
         for (Respuesta respuesta : listaRespuestas) {
-
-            opcionesJugador = new HashSet<>(((RespuestaMultiple) respuesta).getOpciones().getOpciones());
-
             Puntos puntosParciales = new Puntos(0);
-            for (Opcion opcion : opcionesJugador){
+            for (Opcion opcion : ((RespuestaMultiple) respuesta).getOpciones().getOpciones())
                 puntosParciales.sumarPuntos(opcion.puntosObtenidos());
-            }
-
             respuesta.otorgarPuntos(puntosParciales);
-
         }
-
-    };
-
+    }
 }

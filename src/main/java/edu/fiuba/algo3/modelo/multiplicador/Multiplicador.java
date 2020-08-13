@@ -1,24 +1,29 @@
 package edu.fiuba.algo3.modelo.multiplicador;
 
 import edu.fiuba.algo3.modelo.*;
+import edu.fiuba.algo3.modelo.amplificador.Amplificador;
 
-public abstract class
-Multiplicador {
+public abstract class Multiplicador {
 
-    protected EstadoMultiplicable estadoMultiplicable;
-
-    public Multiplicador(){
-        this.estadoMultiplicable = new Multiplicable();
-    }
+    protected Amplificador amplificador;
 
     public void inutilizarMultiplicador() {
-        this.estadoMultiplicable = new NoMultiplicable();
+        amplificador = new Amplificador(1);
     }
 
-    public abstract void utilizarBeneficio(Puntos puntos, Jugador jugador);
+    public void utilizarBeneficio(Puntos puntos, Jugador jugador) {
+        amplificador.amplificarPuntos(puntos);
+        jugador.sumarPuntos(puntos);
+        this.inutilizarMultiplicador();
+    }
 
-    public abstract int getFactor();
+    public int getFactor() {
+        return amplificador.getFactor();
+    }
 
+    public Amplificador getAmplificador(){
+        return amplificador;
+    }
 }
 
 

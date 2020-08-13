@@ -8,7 +8,6 @@ import java.util.LinkedList;
 
 public abstract class PreguntaVerdaderoFalso extends Pregunta {
 
-    private String nombre;
     protected Opcion opcionVerdadero;
     protected Opcion opcionFalso;
 

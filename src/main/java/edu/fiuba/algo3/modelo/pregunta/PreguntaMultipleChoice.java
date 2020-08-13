@@ -2,6 +2,7 @@ package edu.fiuba.algo3.modelo.pregunta;
 
 import edu.fiuba.algo3.modelo.ColeccionOpciones;
 import edu.fiuba.algo3.modelo.Puntos;
+import edu.fiuba.algo3.modelo.amplificador.Amplificador;
 import edu.fiuba.algo3.modelo.respuesta.Respuesta;
 import edu.fiuba.algo3.modelo.respuesta.RespuestaMultiple;
 
@@ -25,11 +26,24 @@ public class PreguntaMultipleChoice extends Pregunta {
     }
 
     public void evaluarRespuestas(LinkedList<Respuesta> respuestas) {
+        corregirRespuestas(respuestas);
 
-        for (Respuesta respuesta : respuestas){
-            if(((RespuestaMultiple) respuesta).getOpciones().tieneMismosElementos(opcionesCorrectas))
-                respuesta.otorgarPuntos(puntosOtorgados);
+        Amplificador amplificadorFinal = new Amplificador(1);
+
+        for (Respuesta respuesta : respuestas) {
+            respuesta.actualizarEstadoAmplificador(amplificadorFinal);
+            respuesta.calcularAmplificacionExclusividad(amplificadorFinal,respuestas);
         }
+
+        for (Respuesta respuesta : respuestas) {
+            respuesta.otorgarPuntos(puntosOtorgados);
+        }
+    }
+
+    private void corregirRespuestas(LinkedList<Respuesta> respuestas){
+        for (Respuesta respuesta : respuestas)
+            if(((RespuestaMultiple) respuesta).getOpciones().tieneMismosElementos(opcionesCorrectas))
+                respuesta.setCorrecta();
     }
 
     public ColeccionOpciones getOpcionesCorrectas(){

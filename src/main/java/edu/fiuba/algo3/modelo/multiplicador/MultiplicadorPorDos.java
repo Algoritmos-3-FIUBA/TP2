@@ -1,19 +1,12 @@
 package edu.fiuba.algo3.modelo.multiplicador;
 
 import edu.fiuba.algo3.modelo.Jugador;
-import edu.fiuba.algo3.modelo.Multiplicable;
 import edu.fiuba.algo3.modelo.Puntos;
+import edu.fiuba.algo3.modelo.amplificador.Amplificador;
 
 public class MultiplicadorPorDos extends Multiplicador {
 
-    private int factor = 2;
-
-    public int getFactor() {return factor;}
-
-    @Override
-    public void utilizarBeneficio(Puntos puntos, Jugador jugador) {
-        jugador.sumarPuntos(estadoMultiplicable.multiplicarPuntos(puntos, this));
-        this.inutilizarMultiplicador();
+    public MultiplicadorPorDos(){
+        this.amplificador = new Amplificador(2);
     }
-
 }
