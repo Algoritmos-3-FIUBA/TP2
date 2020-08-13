@@ -6,6 +6,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import edu.fiuba.algo3.modelo.opcion.Opcion;
 import edu.fiuba.algo3.modelo.opcion.OpcionCorrecta;
 import edu.fiuba.algo3.modelo.opcion.OpcionIncorrecta;
+import edu.fiuba.algo3.modelo.pregunta.PreguntaMultipleChoice;
 import edu.fiuba.algo3.modelo.pregunta.PreguntaMultipleChoiceParcial;
 import edu.fiuba.algo3.modelo.respuesta.Respuesta;
 import edu.fiuba.algo3.modelo.respuesta.RespuestaMultiple;
@@ -223,4 +224,244 @@ public class TestPreguntaMultipleChoiceParcial {
         assertEquals(Mati.getPuntos().getCantidad(),5);
         assertEquals(Lucas.getPuntos().getCantidad(),10);
     }
+
+    @Test
+    public void CreoPreguntaMultipleChoiceParcialYRespondeSoloUnJugadorCorrectamenteConExclusividad() {
+
+        Jugador Juan = new Jugador("Juan");
+
+        ColeccionOpciones opciones = new ColeccionOpciones();
+
+        OpcionIncorrecta primeraOpcion = new OpcionIncorrecta("1874", 0);
+        OpcionIncorrecta segundaOpcion = new OpcionIncorrecta("2020", 0);
+        OpcionCorrecta terceraOpcion = new OpcionCorrecta("1912", 1);
+        OpcionCorrecta cuartaOpcion = new OpcionCorrecta("1989", 1);
+
+        opciones.agregarOpcion(primeraOpcion);
+        opciones.agregarOpcion(segundaOpcion);
+        opciones.agregarOpcion(terceraOpcion);
+        opciones.agregarOpcion(cuartaOpcion);
+
+        PreguntaMultipleChoiceParcial pregunta = new PreguntaMultipleChoiceParcial("¿Cual de los siguientes años pertenece al siglo XX?", opciones);
+
+        LinkedList<Respuesta> respuestas = new LinkedList<Respuesta>();
+
+        LinkedList<Opcion> opcionesSeleccionadasJuan = new LinkedList<Opcion>();
+        opcionesSeleccionadasJuan.add(terceraOpcion);
+        opcionesSeleccionadasJuan.add(cuartaOpcion);
+
+        RespuestaMultiple respuestaJuan = new RespuestaMultiple(opcionesSeleccionadasJuan, Juan,new Exclusividad());
+
+        respuestas.add(respuestaJuan);
+
+        pregunta.evaluarRespuestas(respuestas);
+
+        assertEquals(Juan.getPuntos().getCantidad(), 4);
+    }
+
+    @Test
+    public void CreoPreguntaMultipleChoiceParcialYRespondenDosJugadoresCorrectamenteConUnaExclusividad() {
+
+        Jugador Juan = new Jugador("Juan");
+        Jugador Mati = new Jugador("Mati");
+
+        ColeccionOpciones opciones = new ColeccionOpciones();
+
+        OpcionIncorrecta primeraOpcion = new OpcionIncorrecta("1874", 0);
+        OpcionIncorrecta segundaOpcion = new OpcionIncorrecta("2020", 0);
+        OpcionCorrecta terceraOpcion = new OpcionCorrecta("1912", 1);
+        OpcionCorrecta cuartaOpcion = new OpcionCorrecta("1989", 1);
+
+        opciones.agregarOpcion(primeraOpcion);
+        opciones.agregarOpcion(segundaOpcion);
+        opciones.agregarOpcion(terceraOpcion);
+        opciones.agregarOpcion(cuartaOpcion);
+
+        PreguntaMultipleChoiceParcial pregunta = new PreguntaMultipleChoiceParcial("¿Cual de los siguientes años pertenece al siglo XX?", opciones);
+
+        LinkedList<Respuesta> respuestas = new LinkedList<Respuesta>();
+
+        LinkedList<Opcion> opcionesSeleccionadasJuan = new LinkedList<Opcion>();
+        opcionesSeleccionadasJuan.add(terceraOpcion);
+        opcionesSeleccionadasJuan.add(cuartaOpcion);
+
+        LinkedList<Opcion> opcionesSeleccionadasMati = new LinkedList<Opcion>();
+        opcionesSeleccionadasJuan.add(cuartaOpcion);
+
+        RespuestaMultiple respuestaJuan = new RespuestaMultiple(opcionesSeleccionadasJuan, Juan,new Exclusividad());
+        RespuestaMultiple respuestaMati = new RespuestaMultiple(opcionesSeleccionadasMati, Mati);
+
+        respuestas.add(respuestaJuan);
+        respuestas.add(respuestaMati);
+
+        pregunta.evaluarRespuestas(respuestas);
+
+        assertEquals(Juan.getPuntos().getCantidad(), 0);
+        assertEquals(Mati.getPuntos().getCantidad(), 0);
+    }
+
+    @Test
+    public void CreoPreguntaMultipleChoiceParcialYRespondenCorrectamenteElJugadorQueNoSeleccionoExclusividad() {
+
+        Jugador Juan = new Jugador("Juan");
+        Jugador Mati = new Jugador("Mati");
+
+        ColeccionOpciones opciones = new ColeccionOpciones();
+
+        OpcionIncorrecta primeraOpcion = new OpcionIncorrecta("1874", 0);
+        OpcionIncorrecta segundaOpcion = new OpcionIncorrecta("2020", 0);
+        OpcionCorrecta terceraOpcion = new OpcionCorrecta("1912", 1);
+        OpcionCorrecta cuartaOpcion = new OpcionCorrecta("1989", 1);
+
+        opciones.agregarOpcion(primeraOpcion);
+        opciones.agregarOpcion(segundaOpcion);
+        opciones.agregarOpcion(terceraOpcion);
+        opciones.agregarOpcion(cuartaOpcion);
+
+        PreguntaMultipleChoiceParcial pregunta = new PreguntaMultipleChoiceParcial("¿Cual de los siguientes años pertenece al siglo XX?", opciones);
+
+        LinkedList<Respuesta> respuestas = new LinkedList<Respuesta>();
+
+        LinkedList<Opcion> opcionesSeleccionadasJuan = new LinkedList<Opcion>();
+        opcionesSeleccionadasJuan.add(primeraOpcion);
+
+        LinkedList<Opcion> opcionesSeleccionadasMati = new LinkedList<Opcion>();
+        opcionesSeleccionadasMati.add(cuartaOpcion);
+
+        RespuestaMultiple respuestaJuan = new RespuestaMultiple(opcionesSeleccionadasJuan, Juan, new Exclusividad());
+        RespuestaMultiple respuestaMati = new RespuestaMultiple(opcionesSeleccionadasMati, Mati);
+
+        respuestas.add(respuestaJuan);
+        respuestas.add(respuestaMati);
+
+        pregunta.evaluarRespuestas(respuestas);
+
+        assertEquals(Juan.getPuntos().getCantidad(), 0);
+        assertEquals(Mati.getPuntos().getCantidad(), 2);
+    }
+
+    @Test
+    public void CreoPreguntaMultipleChoiceParcialYRespondenDosJugadoresBienConDosExclusividades() {
+
+        Jugador Juan = new Jugador("Juan");
+        Jugador Mati = new Jugador("Mati");
+
+        ColeccionOpciones opciones = new ColeccionOpciones();
+
+        OpcionIncorrecta primeraOpcion = new OpcionIncorrecta("1874", 0);
+        OpcionIncorrecta segundaOpcion = new OpcionIncorrecta("2020", 0);
+        OpcionCorrecta terceraOpcion = new OpcionCorrecta("1912", 1);
+        OpcionCorrecta cuartaOpcion = new OpcionCorrecta("1989", 1);
+
+        opciones.agregarOpcion(primeraOpcion);
+        opciones.agregarOpcion(segundaOpcion);
+        opciones.agregarOpcion(terceraOpcion);
+        opciones.agregarOpcion(cuartaOpcion);
+
+        PreguntaMultipleChoiceParcial pregunta = new PreguntaMultipleChoiceParcial("¿Cual de los siguientes años pertenece al siglo XX?", opciones);
+
+        LinkedList<Respuesta> respuestas = new LinkedList<Respuesta>();
+
+        LinkedList<Opcion> opcionesSeleccionadasJuan = new LinkedList<Opcion>();
+        opcionesSeleccionadasJuan.add(terceraOpcion);
+
+        LinkedList<Opcion> opcionesSeleccionadasMati = new LinkedList<Opcion>();
+        opcionesSeleccionadasMati.add(cuartaOpcion);
+
+        RespuestaMultiple respuestaJuan = new RespuestaMultiple(opcionesSeleccionadasJuan, Juan, new Exclusividad());
+        RespuestaMultiple respuestaMati = new RespuestaMultiple(opcionesSeleccionadasMati, Mati, new Exclusividad());
+
+        respuestas.add(respuestaJuan);
+        respuestas.add(respuestaMati);
+
+        pregunta.evaluarRespuestas(respuestas);
+
+        assertEquals(Juan.getPuntos().getCantidad(), 0);
+        assertEquals(Mati.getPuntos().getCantidad(), 0);
+    }
+
+    @Test
+    public void CreoPreguntaMultipleChoiceParcialYRespondenDosJugadoresMalConDosExclusividades() {
+
+        Jugador Juan = new Jugador("Juan");
+        Jugador Mati = new Jugador("Mati");
+
+        ColeccionOpciones opciones = new ColeccionOpciones();
+
+        OpcionIncorrecta primeraOpcion = new OpcionIncorrecta("1874", 0);
+        OpcionIncorrecta segundaOpcion = new OpcionIncorrecta("2020", 0);
+        OpcionCorrecta terceraOpcion = new OpcionCorrecta("1912", 1);
+        OpcionCorrecta cuartaOpcion = new OpcionCorrecta("1989", 1);
+
+        opciones.agregarOpcion(primeraOpcion);
+        opciones.agregarOpcion(segundaOpcion);
+        opciones.agregarOpcion(terceraOpcion);
+        opciones.agregarOpcion(cuartaOpcion);
+
+        PreguntaMultipleChoiceParcial pregunta = new PreguntaMultipleChoiceParcial("¿Cual de los siguientes años pertenece al siglo XX?", opciones);
+
+        LinkedList<Respuesta> respuestas = new LinkedList<Respuesta>();
+
+        LinkedList<Opcion> opcionesSeleccionadasJuan = new LinkedList<Opcion>();
+        opcionesSeleccionadasJuan.add(primeraOpcion);
+        opcionesSeleccionadasJuan.add(segundaOpcion);
+
+        LinkedList<Opcion> opcionesSeleccionadasMati = new LinkedList<Opcion>();
+        opcionesSeleccionadasMati.add(primeraOpcion);
+
+        RespuestaMultiple respuestaJuan = new RespuestaMultiple(opcionesSeleccionadasJuan, Juan, new Exclusividad());
+        RespuestaMultiple respuestaMati = new RespuestaMultiple(opcionesSeleccionadasMati, Mati, new Exclusividad());
+
+        respuestas.add(respuestaJuan);
+        respuestas.add(respuestaMati);
+
+        pregunta.evaluarRespuestas(respuestas);
+
+        assertEquals(Juan.getPuntos().getCantidad(), 0);
+        assertEquals(Mati.getPuntos().getCantidad(), 0);
+    }
+
+    @Test
+    public void CreoPreguntaMultipleChoiceParcialYUnJugadorRespondeBienConDosExclusividades() {
+
+        Jugador Juan = new Jugador("Juan");
+        Jugador Mati = new Jugador("Mati");
+
+        ColeccionOpciones opciones = new ColeccionOpciones();
+
+        OpcionIncorrecta primeraOpcion = new OpcionIncorrecta("1874", 0);
+        OpcionIncorrecta segundaOpcion = new OpcionIncorrecta("2020", 0);
+        OpcionCorrecta terceraOpcion = new OpcionCorrecta("1912", 1);
+        OpcionCorrecta cuartaOpcion = new OpcionCorrecta("1989", 1);
+
+        opciones.agregarOpcion(primeraOpcion);
+        opciones.agregarOpcion(segundaOpcion);
+        opciones.agregarOpcion(terceraOpcion);
+        opciones.agregarOpcion(cuartaOpcion);
+
+        PreguntaMultipleChoiceParcial pregunta = new PreguntaMultipleChoiceParcial("¿Cual de los siguientes años pertenece al siglo XX?", opciones);
+
+        LinkedList<Respuesta> respuestas = new LinkedList<Respuesta>();
+
+        LinkedList<Opcion> opcionesSeleccionadasJuan = new LinkedList<Opcion>();
+        opcionesSeleccionadasJuan.add(primeraOpcion);
+        opcionesSeleccionadasJuan.add(segundaOpcion);
+
+        LinkedList<Opcion> opcionesSeleccionadasMati = new LinkedList<Opcion>();
+        opcionesSeleccionadasMati.add(terceraOpcion);
+        opcionesSeleccionadasMati.add(cuartaOpcion);
+
+        RespuestaMultiple respuestaJuan = new RespuestaMultiple(opcionesSeleccionadasJuan, Juan, new Exclusividad());
+        RespuestaMultiple respuestaMati = new RespuestaMultiple(opcionesSeleccionadasMati, Mati, new Exclusividad());
+
+        respuestas.add(respuestaJuan);
+        respuestas.add(respuestaMati);
+
+        pregunta.evaluarRespuestas(respuestas);
+
+        assertEquals(Juan.getPuntos().getCantidad(), 0);
+        assertEquals(Mati.getPuntos().getCantidad(), 8);
+    }
+
+
 }

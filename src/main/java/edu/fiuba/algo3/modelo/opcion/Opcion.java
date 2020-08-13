@@ -2,6 +2,7 @@ package edu.fiuba.algo3.modelo.opcion;
 
 import edu.fiuba.algo3.modelo.ColeccionOpciones;
 import edu.fiuba.algo3.modelo.Puntos;
+import edu.fiuba.algo3.modelo.respuesta.EstadoRespuesta;
 
 public abstract class Opcion {
 
@@ -23,5 +24,10 @@ public abstract class Opcion {
         return Nombre;
     }
 
+    public abstract EstadoRespuesta asignarEstado();
+
+    public Puntos getPuntos() {
+        return PuntosOtorgados;
+    }
 }
 

@@ -21,8 +21,8 @@ public abstract class Respuesta {
     public Respuesta(Jugador jugador) {
         this.jugador = jugador;
         this.estado = new EstadoIncorrecto();
-        multiplicador = new MultiplicadorDefault();
-        exclusividad = new ExclusividadDefault();
+        this.multiplicador = new MultiplicadorDefault();
+        this.exclusividad = new ExclusividadDefault();
         this.amplificador = new Amplificador(1);
     }
 
@@ -30,6 +30,7 @@ public abstract class Respuesta {
         this.jugador = jugador;
         this.estado = new EstadoIncorrecto();
         this.multiplicador = multiplicador;
+        this.exclusividad = new ExclusividadDefault();
         this.amplificador = multiplicador.getAmplificador();
     }
 
@@ -37,6 +38,7 @@ public abstract class Respuesta {
         this.jugador = jugador;
         this.estado = new EstadoIncorrecto();
         this.exclusividad = exclusividad;
+        this.multiplicador = new MultiplicadorDefault();
         this.amplificador = new Amplificador(1);
     }
     //Test
@@ -59,6 +61,7 @@ public abstract class Respuesta {
 
     public void otorgarPuntos(Puntos puntos){
         amplificador.amplificarPuntos(puntos);
+        multiplicador.inutilizarMultiplicador();
         estado.otorgarPuntos(puntos,jugador);
     }
 }

@@ -22,4 +22,7 @@ public class RespuestaUnica extends Respuesta {
         return opcion;
     }
 
+    public void corregir() {
+        this.estado = opcion.asignarEstado();
+    }
 }

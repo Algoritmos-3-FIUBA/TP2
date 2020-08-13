@@ -29,6 +29,7 @@ public class PreguntaMultipleChoice extends Pregunta {
         corregirRespuestas(respuestas);
 
         Amplificador amplificadorFinal = new Amplificador(1);
+        amplificadorFinal.inutilizar();
 
         for (Respuesta respuesta : respuestas) {
             respuesta.actualizarEstadoAmplificador(amplificadorFinal);
@@ -36,7 +37,7 @@ public class PreguntaMultipleChoice extends Pregunta {
         }
 
         for (Respuesta respuesta : respuestas) {
-            respuesta.otorgarPuntos(puntosOtorgados);
+            respuesta.otorgarPuntos(new Puntos(puntosOtorgados.getCantidad()));
         }
     }
 

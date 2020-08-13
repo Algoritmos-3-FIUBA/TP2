@@ -1,6 +1,7 @@
 package edu.fiuba.algo3.modelo.respuesta;
 
 import edu.fiuba.algo3.modelo.ColeccionOpciones;
+import edu.fiuba.algo3.modelo.Exclusividad;
 import edu.fiuba.algo3.modelo.Jugador;
 import edu.fiuba.algo3.modelo.multiplicador.Multiplicador;
 import edu.fiuba.algo3.modelo.opcion.Opcion;
@@ -17,6 +18,11 @@ public class RespuestaMultiple extends Respuesta {
 
     public RespuestaMultiple (LinkedList<Opcion> opciones,Jugador jugador, Multiplicador multiplicador) {
         super(jugador, multiplicador);
+        opcionesElegidas = new ColeccionOpciones(opciones);
+    }
+
+    public RespuestaMultiple (LinkedList<Opcion> opciones, Jugador jugador, Exclusividad exclusividad) {
+        super(jugador, exclusividad);
         opcionesElegidas = new ColeccionOpciones(opciones);
     }
 
