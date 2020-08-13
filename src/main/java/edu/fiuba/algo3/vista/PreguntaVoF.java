@@ -78,7 +78,7 @@ public class PreguntaVoF {
     }
 
 
-    public PreguntaVoF(LinkedList<PreguntaVerdaderoFalso> listaPreguntas) {
+    public PreguntaVoF(LinkedList<PreguntaVerdaderoFalso> listaPreguntas,int i) {
         for(PreguntaVerdaderoFalso pregunta : listaPreguntas) {
 
             Stage stage = new Stage();
@@ -87,7 +87,7 @@ public class PreguntaVoF {
             box.setPadding(new Insets(10));
             box.setAlignment(Pos.CENTER);
 //        for(PreguntaVerdaderoFalso pregunta : listaPreguntas){
-            Label jugadorlabel = new Label("Jugador: 1");
+            Label jugadorlabel = new Label("Jugador:" + i);
             jugadorlabel.setTextFill(Color.web("#FFF"));
 
 
@@ -117,7 +117,7 @@ public class PreguntaVoF {
 
 
             BotonResponderFalso botonResponderFalso = new BotonResponderFalso(stage);
-            verdadero.setOnAction(botonResponderFalso);
+            falso.setOnAction(botonResponderFalso);
 
             box.getChildren().add(jugadorlabel);
             box.getChildren().add(label);

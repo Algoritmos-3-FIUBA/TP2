@@ -40,7 +40,8 @@ public class BotonInicioJuego implements EventHandler<ActionEvent>  {
 
         LinkedList<PreguntaVerdaderoFalso> listaPreguntas = new LinkedList<>();
         this.ingresarPreguntas(listaPreguntas);
-        new PreguntaVoF(listaPreguntas);
+        for(int i = 2 ; i > 0 ; i--)
+            new PreguntaVoF(listaPreguntas,i);
     }
 
     private void ingresarPreguntas(LinkedList<PreguntaVerdaderoFalso> listaPreguntas) {
