@@ -9,8 +9,13 @@ import java.util.LinkedList;
 public class Exclusividad {
     protected Amplificador amplificador;
 
+    public Exclusividad(){
+        this.amplificador = new Amplificador(2);
+        this.amplificador.inutilizar();
+    }
+
     public void actualizarAmplificador(Amplificador amplificador, LinkedList<Respuesta> respuestas) {
-        amplificador.multiplicarFactor(amplificador.getFactor());
+        amplificador.multiplicarFactor(this.amplificador.getFactor());
         for (Respuesta respuesta : respuestas)
             respuesta.setAmplificador(amplificador);
     }
