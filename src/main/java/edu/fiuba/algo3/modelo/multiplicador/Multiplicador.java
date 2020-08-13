@@ -8,7 +8,7 @@ public abstract class Multiplicador {
     protected Amplificador amplificador;
 
     public void inutilizarMultiplicador() {
-        amplificador = new Amplificador(1);
+        amplificador.setFactor(1);
     }
 
     public void utilizarBeneficio(Puntos puntos, Jugador jugador) {

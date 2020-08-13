@@ -35,4 +35,8 @@ public class Amplificador {
     public void asignaSiempre() {
         this.estado = new EstadoAsignaSiempre();
     }
+
+    public void setFactor(int factor) {
+        this.factor = factor;
+    }
 }

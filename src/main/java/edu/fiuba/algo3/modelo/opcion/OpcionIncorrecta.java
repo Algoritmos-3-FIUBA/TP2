@@ -1,6 +1,8 @@
 package edu.fiuba.algo3.modelo.opcion;
 
 import edu.fiuba.algo3.modelo.ColeccionOpciones;
+import edu.fiuba.algo3.modelo.respuesta.EstadoIncorrecto;
+import edu.fiuba.algo3.modelo.respuesta.EstadoRespuesta;
 
 public class OpcionIncorrecta extends Opcion {
 
@@ -10,6 +12,11 @@ public class OpcionIncorrecta extends Opcion {
 
     public void agregarseAlGrupoCorrespondiente(ColeccionOpciones opcionesCorrectas, ColeccionOpciones opcionesIncorrectas){
         opcionesIncorrectas.agregarOpcion(this);
+    }
+
+    @Override
+    public EstadoRespuesta asignarEstado() {
+        return new EstadoIncorrecto();
     }
 
 }

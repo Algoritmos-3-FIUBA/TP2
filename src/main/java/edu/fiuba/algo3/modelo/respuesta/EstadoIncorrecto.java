@@ -10,6 +10,7 @@ public class EstadoIncorrecto extends EstadoRespuesta{
 
     @Override
     public void otorgarPuntos(Puntos puntosOtorgados, Jugador jugador) {
-        jugador.sumarPuntos(new Puntos(0));
+        if(puntosOtorgados.getCantidad() < 0)
+            jugador.sumarPuntos(puntosOtorgados);
     }
 }
