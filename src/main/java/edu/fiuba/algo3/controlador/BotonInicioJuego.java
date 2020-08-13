@@ -1,6 +1,7 @@
 package edu.fiuba.algo3.controlador;
 
 import edu.fiuba.algo3.vista.App;
+import edu.fiuba.algo3.vista.PreguntaVoF;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.scene.control.Alert;
@@ -12,13 +13,11 @@ public class BotonInicioJuego implements EventHandler<ActionEvent>  {
     private TextField jugador1;
     private TextField jugador2;
     private GridPane gridPane;
-    private App aplicacion;
 
-    public BotonInicioJuego(TextField jugador1, TextField jugador2, GridPane gridPane, App aplicacion) {
+    public BotonInicioJuego(TextField jugador1, TextField jugador2, GridPane gridPane) {
         this.jugador1 = jugador1;
         this.jugador2 = jugador2;
         this.gridPane = gridPane;
-        this.aplicacion = aplicacion;
     }
 
     @Override
@@ -32,8 +31,9 @@ public class BotonInicioJuego implements EventHandler<ActionEvent>  {
             return;
         }
 
-        aplicacion.showLoginScreen();
-        //     showAlert(Alert.AlertType.CONFIRMATION, gridPane.getScene().getWindow(), "Bienvenidos!", "Bienvenidos " + jugador1.getText() + " y " + jugador2.getText() );
+
+        //aplicacion.mostrarPantallaJuego();
+        new PreguntaVoF();
     }
 
     private void showAlert(Alert.AlertType alertType, Window owner, String title, String message) {
