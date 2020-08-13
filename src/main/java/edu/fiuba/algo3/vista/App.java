@@ -1,5 +1,6 @@
 package edu.fiuba.algo3.vista;
 
+import edu.fiuba.algo3.controlador.botonInicioJuego;
 import javafx.application.Application;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
@@ -99,7 +100,8 @@ public class App extends Application {
         GridPane.setHalignment(submitButton, HPos.CENTER);
         GridPane.setMargin(submitButton, new Insets(20, 0,20,0));
 
-        submitButton.setOnAction(new EventHandler<ActionEvent>() {
+        //submitButton.setOnAction(new botonInicioJuego(jugador1,jugador2,gridPane));
+       /* submitButton.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
                 if(jugador1.getText().isEmpty()) {
@@ -117,6 +119,7 @@ public class App extends Application {
            //     showAlert(Alert.AlertType.CONFIRMATION, gridPane.getScene().getWindow(), "Bienvenidos!", "Bienvenidos " + jugador1.getText() + " y " + jugador2.getText() );
             }
         });
+        */showLoginScreen();
     }
 
     public void showLoginScreen() {
