@@ -1,5 +1,6 @@
-package edu.fiuba.algo3;
+package edu.fiuba.algo3.vista;
 
+import edu.fiuba.algo3.controlador.BotonInicioJuego;
 import javafx.application.Application;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
@@ -11,8 +12,10 @@ import javafx.scene.control.*;
 import javafx.scene.layout.*;
 import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;
+
 import javafx.stage.Stage;
 import javafx.stage.Window;
+import java.nio.file.Paths;
 
 public class App extends Application {
 
@@ -99,7 +102,11 @@ public class App extends Application {
         GridPane.setHalignment(submitButton, HPos.CENTER);
         GridPane.setMargin(submitButton, new Insets(20, 0,20,0));
 
-        submitButton.setOnAction(new EventHandler<ActionEvent>() {
+        BotonInicioJuego botonInicioJuego = new BotonInicioJuego(jugador1,jugador2,gridPane, this); // no deberia ir App es solo para probar. Nuevo
+
+        submitButton.setOnAction(botonInicioJuego);//Nuevo
+
+        /*submitButton.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
                 if(jugador1.getText().isEmpty()) {
@@ -112,11 +119,9 @@ public class App extends Application {
                 }
 
                 showLoginScreen();
-
-
            //     showAlert(Alert.AlertType.CONFIRMATION, gridPane.getScene().getWindow(), "Bienvenidos!", "Bienvenidos " + jugador1.getText() + " y " + jugador2.getText() );
             }
-        });
+        });*/
     }
 
     public void showLoginScreen() {
@@ -167,14 +172,15 @@ public class App extends Application {
         stage.setScene(scene);
         stage.show();
     }
-    private void showAlert(Alert.AlertType alertType, Window owner, String title, String message) {
+
+   /* private void showAlert(Alert.AlertType alertType, Window owner, String title, String message) {
         Alert alert = new Alert(alertType);
         alert.setTitle(title);
         alert.setHeaderText(null);
         alert.setContentText(message);
         alert.initOwner(owner);
         alert.show();
-    }
+    }*/
 
     public static void main(String[] args) {
         launch(args);
