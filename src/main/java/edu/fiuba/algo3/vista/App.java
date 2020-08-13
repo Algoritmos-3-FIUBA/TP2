@@ -1,27 +1,8 @@
 package edu.fiuba.algo3.vista;
 
-import edu.fiuba.algo3.controlador.BotonInicioJuego;
-import edu.fiuba.algo3.controlador.BotonResponderVerdadero;
 import javafx.application.Application;
-import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
-import javafx.geometry.HPos;
-import javafx.geometry.Insets;
-import javafx.geometry.Pos;
 import javafx.scene.Scene;
-import javafx.scene.control.*;
-import javafx.scene.image.Image;
-import javafx.scene.layout.*;
-import javafx.scene.paint.Color;
-import javafx.scene.text.Font;
-import javafx.scene.text.FontWeight;
 import javafx.stage.Stage;
-import javafx.stage.Window;
-
-import java.io.FileInputStream;
-import java.nio.file.Paths;
-
-import static jdk.xml.internal.SecuritySupport.getResourceAsStream;
 
 public class App extends Application {
 

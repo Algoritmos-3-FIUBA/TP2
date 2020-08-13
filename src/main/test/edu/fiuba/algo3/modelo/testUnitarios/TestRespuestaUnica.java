@@ -22,6 +22,7 @@ public class TestRespuestaUnica {
         Jugador jugador = new Jugador("Guido");
         RespuestaUnica respuestaJugador = new RespuestaUnica(opcionVerdadero, jugador);
 
+        respuestaJugador.setCorrecta();
         respuestaJugador.otorgarPuntos(new Puntos(1));
 
         Assertions.assertEquals(jugador.getPuntos().getCantidad(),1);
@@ -49,6 +50,7 @@ public class TestRespuestaUnica {
         Jugador jugador = new Jugador("Guido");
         RespuestaUnica respuestaJugador = new RespuestaUnica(opcionFalso, jugador,multiplicadorPorDos);
 
+        respuestaJugador.setCorrecta();
         respuestaJugador.otorgarPuntos(new Puntos(1));
 
         Assertions.assertEquals(jugador.getPuntos().getCantidad(),2);
@@ -65,8 +67,9 @@ public class TestRespuestaUnica {
         RespuestaUnica respuestaJugador = new RespuestaUnica(opcionFalso, jugador,multiplicadorPorDos);
         RespuestaUnica respuestaJugador2 = new RespuestaUnica(opcionFalso, jugador,multiplicadorPorDos);
 
-
+        respuestaJugador.setCorrecta();
         respuestaJugador.otorgarPuntos(new Puntos(1));
+        respuestaJugador2.setCorrecta();
         respuestaJugador2.otorgarPuntos(new Puntos(1));
 
         Assertions.assertEquals(jugador.getPuntos().getCantidad(),3);
@@ -82,8 +85,9 @@ public class TestRespuestaUnica {
         RespuestaUnica respuestaJugador = new RespuestaUnica(opcionFalso, jugador,multiplicadorPorDos);
         RespuestaUnica respuestaJugador2 = new RespuestaUnica(opcionFalso, jugador,multiplicadorPorDos);
 
-
+        respuestaJugador.setCorrecta();
         respuestaJugador.otorgarPuntos(new Puntos(1));
+        respuestaJugador2.setCorrecta();
         respuestaJugador2.otorgarPuntos(new Puntos(-1));
 
         Assertions.assertEquals(jugador.getPuntos().getCantidad(),1);
@@ -100,8 +104,9 @@ public class TestRespuestaUnica {
         RespuestaUnica respuestaJugador = new RespuestaUnica(opcionFalso, jugador,multiplicadorPorDos);
         RespuestaUnica respuestaJugador2 = new RespuestaUnica(opcionFalso, jugador,multiplicadorPorTres);
 
-
+        respuestaJugador.setCorrecta();
         respuestaJugador.otorgarPuntos(new Puntos(1));
+        respuestaJugador2.setCorrecta();
         respuestaJugador2.otorgarPuntos(new Puntos(1));
 
         Assertions.assertEquals(jugador.getPuntos().getCantidad(),5);
