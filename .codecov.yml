@@ -1,6 +1,6 @@
-coverage:
-  ignore:
-    # Ignorar Interfaz en cobertura
-    - */controlador/.*
-    - */vista/.*
-    
+ignore:
+  # Ignorar Interfaz en cobertura
+  - "src/main/java/edu/fiuba/algo3/vista/.java"
+  - "src/main/java/edu/fiuba/algo3/controlador/*.java"
+#  - */controlador/.*
+#  - */vista/.*
