@@ -1,7 +1,7 @@
 package edu.fiuba.algo3.modelo.respuesta;
 
 import edu.fiuba.algo3.modelo.ColeccionOpciones;
-import edu.fiuba.algo3.modelo.Exclusividad;
+import edu.fiuba.algo3.modelo.exclusividad.Exclusividad;
 import edu.fiuba.algo3.modelo.Jugador;
 import edu.fiuba.algo3.modelo.multiplicador.Multiplicador;
 import edu.fiuba.algo3.modelo.opcion.Opcion;

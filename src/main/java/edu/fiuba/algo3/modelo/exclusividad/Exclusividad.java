@@ -1,4 +1,4 @@
-package edu.fiuba.algo3.modelo;
+package edu.fiuba.algo3.modelo.exclusividad;
 
 import edu.fiuba.algo3.modelo.amplificador.Amplificador;
 import edu.fiuba.algo3.modelo.pregunta.Pregunta;

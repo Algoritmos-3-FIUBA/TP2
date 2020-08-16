@@ -3,10 +3,10 @@ package edu.fiuba.algo3.modelo.testUnitarios;
 import edu.fiuba.algo3.modelo.*;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
+import edu.fiuba.algo3.modelo.exclusividad.Exclusividad;
 import edu.fiuba.algo3.modelo.opcion.Opcion;
 import edu.fiuba.algo3.modelo.opcion.OpcionCorrecta;
 import edu.fiuba.algo3.modelo.opcion.OpcionIncorrecta;
-import edu.fiuba.algo3.modelo.pregunta.PreguntaMultipleChoice;
 import edu.fiuba.algo3.modelo.pregunta.PreguntaMultipleChoiceParcial;
 import edu.fiuba.algo3.modelo.respuesta.Respuesta;
 import edu.fiuba.algo3.modelo.respuesta.RespuestaMultiple;
