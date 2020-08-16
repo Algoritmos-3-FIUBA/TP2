@@ -25,13 +25,13 @@ public abstract class PreguntaVerdaderoFalso extends Pregunta {
     public void evaluarRespuestas(LinkedList<Respuesta> respuestas) {
         corregirRespuestas(respuestas);
 
-        Amplificador amplificadorFinal = new Amplificador(1);
-        amplificadorFinal.inutilizar();
-
         for (Respuesta respuesta : respuestas) {
-            respuesta.actualizarEstadoAmplificador(amplificadorFinal);
-            respuesta.calcularAmplificacionExclusividad(amplificadorFinal,respuestas);
+            respuesta.actualizarCondicionDeUsoExclusividad(respuestas);
+            respuesta.calcularAmplificacionExclusividad(respuestas);
         }
+
+        for (Respuesta respuesta : respuestas)
+            respuesta.establecerAmplificadorAdecuado();
 
         for (Respuesta respuesta : respuestas) {
             respuesta.otorgarPuntos(new Puntos(((RespuestaUnica)respuesta).getOpcion().getPuntos().getCantidad()));

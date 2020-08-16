@@ -1,42 +1,34 @@
 package edu.fiuba.algo3.modelo.amplificador;
 
 import edu.fiuba.algo3.modelo.Puntos;
+import edu.fiuba.algo3.modelo.exclusividad.EstadoAsigna;
+import edu.fiuba.algo3.modelo.exclusividad.EstadoNoAsigna;
 
 public class Amplificador {
 
-    private int factor;
-    private EstadoAmplificable estado;
+    private Factor factor;
 
-    public Amplificador(int factor){
-        this.estado = new EstadoAsigna();
+    public Amplificador(Factor factor){
         this.factor = factor;
-    }
-
-    public void inutilizar(){
-        this.estado = new EstadoNoAsigna();
     }
 
     public void amplificarPuntos(Puntos puntos){
-        estado.amplificarPuntos(puntos,this.factor);
+        puntos.multiplicar(this.factor.getFactor());
     }
 
-    public int getFactor(){
-        return factor;
+    public Factor getFactor(){
+        return this.factor;
     }
 
-    public void multiplicarFactor(int factor) {
-        this.factor *= factor;
-    }
-
-    public void hayRespuestaCorrecta() {
-        estado = estado.estadoSiguiente();
-    }
-
-    public void asignaSiempre() {
-        this.estado = new EstadoAsignaSiempre();
-    }
-
-    public void setFactor(int factor) {
+    public void setFactor(Factor factor) {
         this.factor = factor;
+    }
+
+    private void multiplicarFactor(Factor factor) {
+        this.factor.multiplicar(factor);
+    }
+
+    public void multiplicarFactor(Amplificador amplificador) {
+        this.multiplicarFactor(amplificador.getFactor());
     }
 }

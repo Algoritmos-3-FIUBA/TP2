@@ -2,11 +2,12 @@ package edu.fiuba.algo3.modelo.respuesta;
 
 import edu.fiuba.algo3.modelo.Jugador;
 import edu.fiuba.algo3.modelo.Puntos;
-import edu.fiuba.algo3.modelo.amplificador.Amplificador;
+
+import java.util.LinkedList;
 
 public class EstadoIncorrecto extends EstadoRespuesta{
     @Override
-    public void actualizarEstadoAmplificador(Amplificador amplificadorFinal){   }
+    public void actualizarCondicionDeUsoExclusividad(LinkedList<Respuesta> respuestas){   }
 
     @Override
     public void otorgarPuntos(Puntos puntosOtorgados, Jugador jugador) {

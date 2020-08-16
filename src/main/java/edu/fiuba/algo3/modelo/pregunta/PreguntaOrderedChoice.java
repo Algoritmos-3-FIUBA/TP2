@@ -3,7 +3,6 @@ package edu.fiuba.algo3.modelo.pregunta;
 import edu.fiuba.algo3.modelo.ColeccionOpciones;
 import edu.fiuba.algo3.modelo.Puntos;
 import edu.fiuba.algo3.modelo.amplificador.Amplificador;
-import edu.fiuba.algo3.modelo.opcion.Opcion;
 import edu.fiuba.algo3.modelo.respuesta.Respuesta;
 import edu.fiuba.algo3.modelo.respuesta.RespuestaMultiple;
 import java.util.LinkedList;
@@ -29,13 +28,13 @@ public class PreguntaOrderedChoice extends Pregunta{
     public void evaluarRespuestas(LinkedList<Respuesta> respuestas) {
         corregirRespuestas(respuestas);
 
-        Amplificador amplificadorFinal = new Amplificador(1);
-        amplificadorFinal.inutilizar();
-
         for (Respuesta respuesta : respuestas) {
-            respuesta.actualizarEstadoAmplificador(amplificadorFinal);
-            respuesta.calcularAmplificacionExclusividad(amplificadorFinal,respuestas);
+            respuesta.actualizarCondicionDeUsoExclusividad(respuestas);
+            respuesta.calcularAmplificacionExclusividad(respuestas);
         }
+
+        for (Respuesta respuesta : respuestas)
+            respuesta.establecerAmplificadorAdecuado();
 
         for (Respuesta respuesta : respuestas) {
             respuesta.otorgarPuntos(new Puntos(puntosOtorgados.getCantidad()));

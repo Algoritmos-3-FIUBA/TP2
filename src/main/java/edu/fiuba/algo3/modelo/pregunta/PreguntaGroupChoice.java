@@ -5,7 +5,6 @@ import edu.fiuba.algo3.modelo.Puntos;
 import edu.fiuba.algo3.modelo.amplificador.Amplificador;
 import edu.fiuba.algo3.modelo.respuesta.Respuesta;
 import edu.fiuba.algo3.modelo.respuesta.RespuestaGrupos;
-import edu.fiuba.algo3.modelo.respuesta.RespuestaMultiple;
 
 import java.util.LinkedList;
 
@@ -26,12 +25,13 @@ public class PreguntaGroupChoice extends Pregunta{
     public void evaluarRespuestas(LinkedList<Respuesta> respuestas) {
         corregirRespuestas(respuestas);
 
-        Amplificador amplificadorFinal = new Amplificador(1);
-
         for (Respuesta respuesta : respuestas) {
-            respuesta.actualizarEstadoAmplificador(amplificadorFinal);
-            respuesta.calcularAmplificacionExclusividad(amplificadorFinal,respuestas);
+            respuesta.actualizarCondicionDeUsoExclusividad(respuestas);
+            respuesta.calcularAmplificacionExclusividad(respuestas);
         }
+
+        for (Respuesta respuesta : respuestas)
+            respuesta.establecerAmplificadorAdecuado();
 
         for (Respuesta respuesta : respuestas) {
             respuesta.otorgarPuntos(puntosAOtorgar(respuesta));

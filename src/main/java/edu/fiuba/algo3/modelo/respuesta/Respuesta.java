@@ -1,5 +1,6 @@
 package edu.fiuba.algo3.modelo.respuesta;
 
+import edu.fiuba.algo3.modelo.amplificador.FactorDefault;
 import edu.fiuba.algo3.modelo.exclusividad.Exclusividad;
 import edu.fiuba.algo3.modelo.exclusividad.ExclusividadDefault;
 import edu.fiuba.algo3.modelo.Jugador;
@@ -23,7 +24,7 @@ public abstract class Respuesta {
         this.estado = new EstadoIncorrecto();
         this.multiplicador = new MultiplicadorDefault();
         this.exclusividad = new ExclusividadDefault();
-        this.amplificador = new Amplificador(1);
+        this.amplificador = new Amplificador(new FactorDefault(1));
     }
 
     public Respuesta(Jugador jugador, Multiplicador multiplicador){
@@ -39,7 +40,7 @@ public abstract class Respuesta {
         this.estado = new EstadoIncorrecto();
         this.exclusividad = exclusividad;
         this.multiplicador = new MultiplicadorDefault();
-        this.amplificador = new Amplificador(1);
+        this.amplificador = new Amplificador(new FactorDefault(1));
     }
     //Test
     public void setAmplificador(Amplificador amplificador) {
@@ -51,17 +52,33 @@ public abstract class Respuesta {
         this.estado = new EstadoCorrecto();
     }
     //Test
-    public void calcularAmplificacionExclusividad(Amplificador amplificador, LinkedList<Respuesta> respuestas){
-        exclusividad.actualizarAmplificador(amplificador,respuestas);
+    public void calcularAmplificacionExclusividad(LinkedList<Respuesta> respuestas){
+        exclusividad.actualizarAmplificador(respuestas,this);
     }
 
-    public void actualizarEstadoAmplificador(Amplificador amplificadorFinal){
-        estado.actualizarEstadoAmplificador(amplificadorFinal);
+    public void actualizarCondicionDeUsoExclusividad(LinkedList<Respuesta> respuestas){
+        estado.actualizarCondicionDeUsoExclusividad(respuestas);
     }
 
     public void otorgarPuntos(Puntos puntos){
         amplificador.amplificarPuntos(puntos);
         multiplicador.inutilizarMultiplicador();
         estado.otorgarPuntos(puntos,jugador);
+    }
+
+    public void notificarExclusividadQueHayRespuestaCorrecta() {
+        exclusividad.hayRespuestaCorrecta();
+    }
+
+    public Amplificador getAmplificadorExclusividad() {
+        return exclusividad.getAmplificador();
+    }
+
+    public void establecerAmplificadorAdecuado() {
+        this.exclusividad.establecerAmplificadorRequerido();
+    }
+
+    public void setAmplificadorExclusividad() {
+        this.amplificador = this.exclusividad.getAmplificador();
     }
 }
