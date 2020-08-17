@@ -54,6 +54,11 @@
             <version>4.12</version>
             <scope>test</scope>
         </dependency>
+        <dependency>
+            <groupId>org.openjfx</groupId>
+            <artifactId>javafx-media</artifactId>
+            <version>11.0.2</version>
+        </dependency>
     </dependencies>
     <build>
         <testSourceDirectory>src/main/test</testSourceDirectory>

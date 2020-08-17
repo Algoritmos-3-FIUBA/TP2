@@ -2,21 +2,24 @@ package edu.fiuba.algo3.controlador;
 
 import edu.fiuba.algo3.modelo.pregunta.PreguntaVerdaderoFalso;
 import edu.fiuba.algo3.modelo.pregunta.PreguntaVerdaderoFalsoClasico;
-import edu.fiuba.algo3.vista.App;
 import edu.fiuba.algo3.vista.PreguntaVoF;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.scene.control.Alert;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.GridPane;
+import javafx.scene.media.AudioClip;
 import javafx.stage.Window;
 
+import java.nio.file.Paths;
 import java.util.LinkedList;
 
 public class BotonInicioJuego implements EventHandler<ActionEvent>  {
     private TextField jugador1;
     private TextField jugador2;
     private GridPane gridPane;
+    private static final String SONIDO_JUEGO = "src/main/java/edu/fiuba/algo3/vista/sonidos/kahoot-lobby-music.mp3";
+    private static final String SONIDO_JUEGO_PREGUNTAS = "src/main/java/edu/fiuba/algo3/vista/sonidos/musica-preguntas.mp3";
 
     public BotonInicioJuego(TextField jugador1, TextField jugador2, GridPane gridPane) {
         this.jugador1 = jugador1;
@@ -35,8 +38,12 @@ public class BotonInicioJuego implements EventHandler<ActionEvent>  {
             return;
         }
 
+        AudioClip audio = new AudioClip(Paths.get(SONIDO_JUEGO).toUri().toString());
+        audio.stop();
 
-        //aplicacion.mostrarPantallaJuego();
+        AudioClip audioPreguntas = new AudioClip(Paths.get(SONIDO_JUEGO_PREGUNTAS).toUri().toString());
+        audioPreguntas.play();
+        audioPreguntas.setVolume(0.85);
 
         LinkedList<PreguntaVerdaderoFalso> listaPreguntas = new LinkedList<>();
         this.ingresarPreguntas(listaPreguntas);
