@@ -14,5 +14,6 @@ public class ExclusividadDefault extends Exclusividad {
     }
 
     public void actualizarAmplificador(LinkedList<Respuesta> respuestas,Respuesta respuestaActual) {
+        return;
     }
 }

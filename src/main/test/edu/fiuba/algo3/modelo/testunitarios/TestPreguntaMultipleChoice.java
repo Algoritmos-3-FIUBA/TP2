@@ -1,4 +1,4 @@
-package edu.fiuba.algo3.modelo.testUnitarios;
+package edu.fiuba.algo3.modelo.testunitarios;
 
 import edu.fiuba.algo3.modelo.ColeccionOpciones;
 import edu.fiuba.algo3.modelo.exclusividad.Exclusividad;
@@ -10,15 +10,13 @@ import edu.fiuba.algo3.modelo.pregunta.PreguntaMultipleChoice;
 import edu.fiuba.algo3.modelo.respuesta.Respuesta;
 import edu.fiuba.algo3.modelo.respuesta.RespuestaMultiple;
 import org.junit.Test;
-
 import java.util.LinkedList;
-
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class TestPreguntaMultipleChoice {
 
     @Test
-    public void CreoPreguntaMultipleChoiceConDosRespuestasCorrectasYSeAsignanCorrectamente() {
+    public void testCreoPreguntaMultipleChoiceConDosRespuestasCorrectasYSeAsignanCorrectamente01() {
 
         ColeccionOpciones opciones = new ColeccionOpciones();
 
@@ -33,7 +31,7 @@ public class TestPreguntaMultipleChoice {
     }
 
     @Test
-    public void CreoPreguntaMultipleChoiceConDosRespuestasIncorrectasYSeAsignanCorrectamente() {
+    public void testCreoPreguntaMultipleChoiceConDosRespuestasIncorrectasYSeAsignanCorrectamente02() {
 
         ColeccionOpciones opciones = new ColeccionOpciones();
 
@@ -48,7 +46,7 @@ public class TestPreguntaMultipleChoice {
     }
 
     @Test
-        public void CreoPreguntaMultipleChoiceConDosRespuestasCorrectasYJugadorEligeDosCorrectas() {
+        public void testCreoPreguntaMultipleChoiceConDosRespuestasCorrectasYJugadorEligeDosCorrectas03() {
 
             Jugador Mati = new Jugador("Mati");
 
@@ -82,7 +80,7 @@ public class TestPreguntaMultipleChoice {
         }
 
     @Test
-    public void CreoPreguntaMultipleChoiceConDosRespuestasCorrectasYJugadorRespondeUnaCorrecta() {
+    public void testCreoPreguntaMultipleChoiceConDosRespuestasCorrectasYJugadorRespondeUnaCorrecta04() {
 
         Jugador Mati = new Jugador("Mati");
 
@@ -115,7 +113,7 @@ public class TestPreguntaMultipleChoice {
     }
 
     @Test
-    public void CreoPreguntaMultipleChoiceConDosRespuestasCorrectasYJugadorRespondeDosCorrectasYUnaIncorrecta() {
+    public void testCreoPreguntaMultipleChoiceConDosRespuestasCorrectasYJugadorRespondeDosCorrectasYUnaIncorrecta05() {
 
         Jugador Mati = new Jugador("Mati");
 
@@ -150,7 +148,7 @@ public class TestPreguntaMultipleChoice {
     }
 
     @Test
-    public void CreoPreguntaMultipleChoiceConDosRespuestasCorrectasYJugadorRespondeDosIncorrectas() {
+    public void testCreoPreguntaMultipleChoiceConDosRespuestasCorrectasYJugadorRespondeDosIncorrectas06() {
 
         Jugador Mati = new Jugador("Mati");
 
@@ -184,7 +182,7 @@ public class TestPreguntaMultipleChoice {
     }
 
     @Test
-    public void CreoPreguntaMultipleChoiceConDosRespuestasCorrectasYEvaluaVariasRespuestas() {
+    public void testCreoPreguntaMultipleChoiceConDosRespuestasCorrectasYEvaluaVariasRespuestas07() {
 
         Jugador Mati = new Jugador("Mati");
         Jugador Juan = new Jugador("Juan");
@@ -234,7 +232,7 @@ public class TestPreguntaMultipleChoice {
     }
 
     @Test
-    public void CreoPreguntaMultipleChoiceYRespondeSoloUnJugadorCorrectamenteConExclusividad() {
+    public void testCreoPreguntaMultipleChoiceYRespondeSoloUnJugadorCorrectamenteConExclusividad08() {
 
         Jugador Mati = new Jugador("Mati");
         Jugador Juan = new Jugador("Juan");
@@ -284,7 +282,7 @@ public class TestPreguntaMultipleChoice {
     }
 
     @Test
-    public void CreoPreguntaMultipleChoiceYRespondeSoloUnJugadorCorrectamenteConLaExclusividadDeOtro() {
+    public void testCreoPreguntaMultipleChoiceYRespondeSoloUnJugadorCorrectamenteConLaExclusividadDeOtro09() {
 
         Jugador Mati = new Jugador("Mati");
         Jugador Juan = new Jugador("Juan");
@@ -334,7 +332,7 @@ public class TestPreguntaMultipleChoice {
     }
 
     @Test
-    public void CreoPreguntaMultipleChoiceYRespondenDosJugadoresCorrectamenteConUnaExclusividad() {
+    public void testCreoPreguntaMultipleChoiceYRespondenDosJugadoresCorrectamenteConUnaExclusividad10() {
 
         Jugador Mati = new Jugador("Mati");
         Jugador Juan = new Jugador("Juan");
@@ -384,7 +382,7 @@ public class TestPreguntaMultipleChoice {
     }
 
     @Test
-    public void CreoPreguntaMultipleChoiceYRespondenUnJugadorCorrectamenteConDosExclusividades() {
+    public void testCreoPreguntaMultipleChoiceYRespondenUnJugadorCorrectamenteConDosExclusividades11() {
 
         Jugador Mati = new Jugador("Mati");
         Jugador Juan = new Jugador("Juan");
@@ -434,7 +432,7 @@ public class TestPreguntaMultipleChoice {
     }
 
     @Test
-    public void CreoPreguntaMultipleChoiceYRespondenVariosJugadorCorrectamenteConVariasExclusividades() {
+    public void testCreoPreguntaMultipleChoiceYRespondenVariosJugadorCorrectamenteConVariasExclusividades12() {
 
         Jugador Mati = new Jugador("Mati");
         Jugador Juan = new Jugador("Juan");
@@ -500,7 +498,7 @@ public class TestPreguntaMultipleChoice {
     }
 
     @Test
-    public void CreoPreguntaMultipleChoiceYRespondeUnJugadorCorrectamenteConVariasExclusividades() {
+    public void testCreoPreguntaMultipleChoiceYRespondeUnJugadorCorrectamenteConVariasExclusividades13() {
 
         Jugador Mati = new Jugador("Mati");
         Jugador Juan = new Jugador("Juan");

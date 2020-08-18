@@ -1,4 +1,4 @@
-package edu.fiuba.algo3.modelo.testUnitarios;
+package edu.fiuba.algo3.modelo.testunitarios;
 
 import edu.fiuba.algo3.modelo.Jugador;
 import edu.fiuba.algo3.modelo.Puntos;
@@ -6,38 +6,30 @@ import edu.fiuba.algo3.modelo.multiplicador.MultiplicadorDefault;
 import edu.fiuba.algo3.modelo.multiplicador.MultiplicadorPorDos;
 import edu.fiuba.algo3.modelo.multiplicador.MultiplicadorPorTres;
 import org.junit.jupiter.api.Test;
-
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class TestMultiplicador {
 
     @Test
-    public void CreoMultiplicadorDefaultYSuFactorEsUno() {
-
+    public void testCreoMultiplicadorDefaultYSuFactorEsUno01() {
         MultiplicadorDefault multiplicador = new MultiplicadorDefault();
         assertEquals(multiplicador.getFactor(),1);
-
     }
 
     @Test
-    public void CreoMultiplicadorPorDostYSuFactorEsDos() {
-
+    public void testCreoMultiplicadorPorDostYSuFactorEsDos02() {
         MultiplicadorPorDos multiplicador = new MultiplicadorPorDos();
         assertEquals(multiplicador.getFactor(),2);
-
     }
 
     @Test
-    public void CreoMultiplicadorPorTrestYSuFactorEsTres() {
-
+    public void testCreoMultiplicadorPorTrestYSuFactorEsTres03() {
         MultiplicadorPorTres multiplicador = new MultiplicadorPorTres();
         assertEquals(multiplicador.getFactor(),3);
-
     }
 
     @Test
-    public void CreoMultiplicadorPorDosConEstadoMultiplicableYDevuelveLosPuntosMultiplicados() {
-
+    public void testCreoMultiplicadorPorDosConEstadoMultiplicableYDevuelveLosPuntosMultiplicados04() {
         MultiplicadorPorDos multiplicador = new MultiplicadorPorDos();
 
         Jugador jugador = new Jugador("Carlos");
@@ -46,12 +38,10 @@ public class TestMultiplicador {
         multiplicador.utilizarBeneficio(puntosAux, jugador);
 
         assertEquals((jugador.getPuntos()).getCantidad(), 10);
-
     }
 
     @Test
-    public void CreoMultiplicadorPorTresConEstadoMultiplicableYDevuelveLosPuntosMultiplicados() {
-
+    public void testCreoMultiplicadorPorTresConEstadoMultiplicableYDevuelveLosPuntosMultiplicados05() {
         MultiplicadorPorTres multiplicador = new MultiplicadorPorTres();
 
         Jugador jugador = new Jugador("Carlos");
@@ -60,12 +50,10 @@ public class TestMultiplicador {
         multiplicador.utilizarBeneficio(puntosAux, jugador);
 
         assertEquals((jugador.getPuntos()).getCantidad(), 15);
-
     }
 
     @Test
-    public void CreoMultiplicadorPorDefaultYDevuelveLosPuntosDelJugador() {
-
+    public void testCreoMultiplicadorPorDefaultYDevuelveLosPuntosDelJugador06() {
         MultiplicadorDefault multiplicador = new MultiplicadorDefault();
 
         Jugador jugador = new Jugador("Carlos");
@@ -74,12 +62,10 @@ public class TestMultiplicador {
         multiplicador.utilizarBeneficio(puntosAux, jugador);
 
         assertEquals((jugador.getPuntos()).getCantidad(), 5);
-
     }
 
     @Test
-    public void CreoMultiplicadorPorDosYLoPuedoUtilizarUnaSolaVez() {
-
+    public void testCreoMultiplicadorPorDosYLoPuedoUtilizarUnaSolaVez07() {
         MultiplicadorPorDos multiplicador = new MultiplicadorPorDos();
 
         Jugador jugador = new Jugador("Carlos");
@@ -92,7 +78,5 @@ public class TestMultiplicador {
         multiplicador.utilizarBeneficio(puntosAux, jugador);
 
         assertEquals((jugador.getPuntos()).getCantidad(), 20);
-
     }
-
 }

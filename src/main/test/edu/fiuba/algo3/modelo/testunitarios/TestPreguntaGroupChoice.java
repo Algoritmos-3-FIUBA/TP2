@@ -1,4 +1,4 @@
-package edu.fiuba.algo3.modelo.testUnitarios;
+package edu.fiuba.algo3.modelo.testunitarios;
 
 import edu.fiuba.algo3.modelo.ColeccionOpciones;
 import edu.fiuba.algo3.modelo.Jugador;
@@ -7,20 +7,18 @@ import edu.fiuba.algo3.modelo.pregunta.PreguntaGroupChoice;
 import edu.fiuba.algo3.modelo.respuesta.Respuesta;
 import edu.fiuba.algo3.modelo.respuesta.RespuestaGrupos;
 import org.junit.jupiter.api.Test;
-
 import java.util.LinkedList;
-
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class TestPreguntaGroupChoice {
 
-    OpcionCorrecta primeraOpcion = new OpcionCorrecta("Newton");
-    OpcionCorrecta segundaOpcion = new OpcionCorrecta("Faraday");
-    OpcionCorrecta terceraOpcion = new OpcionCorrecta("Gauss");
-    OpcionCorrecta cuartaOpcion = new OpcionCorrecta("Euler");
+    private final OpcionCorrecta primeraOpcion = new OpcionCorrecta("Newton");
+    private final OpcionCorrecta segundaOpcion = new OpcionCorrecta("Faraday");
+    private final OpcionCorrecta terceraOpcion = new OpcionCorrecta("Gauss");
+    private final OpcionCorrecta cuartaOpcion = new OpcionCorrecta("Euler");
 
     @Test
-    public void CreoPreguntaGroupChoiceYJugadorRespondeCorrectamenteVerificoQueLaAsignacionDePuntosSeaCorrecta() {
+    public void testCreoPreguntaGroupChoiceYJugadorRespondeCorrectamenteVerificoQueLaAsignacionDePuntosSeaCorrecta01() {
 
         Jugador Guido = new Jugador("Guido");
 
@@ -64,7 +62,7 @@ public class TestPreguntaGroupChoice {
     }
 
     @Test
-    public void CreoPreguntaGroupChoiceYJugadorRespondeParcialmenteVerificoQueLaAsignacionDePuntosSeaCorrecta() {
+    public void testCreoPreguntaGroupChoiceYJugadorRespondeParcialmenteVerificoQueLaAsignacionDePuntosSeaCorrecta02() {
 
         Jugador Guido = new Jugador("Guido");
 
@@ -108,7 +106,7 @@ public class TestPreguntaGroupChoice {
     }
 
     @Test
-    public void CreoPreguntaGroupChoiceYJugadorRespondeIncorrectamenteVerificoQueLaAsignacionDePuntosSeaCorrecta() {
+    public void testCreoPreguntaGroupChoiceYJugadorRespondeIncorrectamenteVerificoQueLaAsignacionDePuntosSeaCorrecta03() {
 
         Jugador Guido = new Jugador("Guido");
 

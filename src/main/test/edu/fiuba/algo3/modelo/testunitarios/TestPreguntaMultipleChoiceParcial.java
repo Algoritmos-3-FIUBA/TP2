@@ -1,8 +1,8 @@
-package edu.fiuba.algo3.modelo.testUnitarios;
+package edu.fiuba.algo3.modelo.testunitarios;
 
-import edu.fiuba.algo3.modelo.*;
 import static org.junit.jupiter.api.Assertions.assertEquals;
-
+import edu.fiuba.algo3.modelo.ColeccionOpciones;
+import edu.fiuba.algo3.modelo.Jugador;
 import edu.fiuba.algo3.modelo.exclusividad.Exclusividad;
 import edu.fiuba.algo3.modelo.opcion.Opcion;
 import edu.fiuba.algo3.modelo.opcion.OpcionCorrecta;
@@ -11,12 +11,12 @@ import edu.fiuba.algo3.modelo.pregunta.PreguntaMultipleChoiceParcial;
 import edu.fiuba.algo3.modelo.respuesta.Respuesta;
 import edu.fiuba.algo3.modelo.respuesta.RespuestaMultiple;
 import org.junit.jupiter.api.Test;
-
 import java.util.LinkedList;
 
 public class TestPreguntaMultipleChoiceParcial {
+
    @Test
-    public void CreoPreguntaMultipleChoiceParcialYTieneRespuestasCorrectas(){
+    public void testCreoPreguntaMultipleChoiceParcialYTieneRespuestasCorrectas01(){
 
         Jugador Juan = new Jugador("Juan");
 
@@ -45,7 +45,7 @@ public class TestPreguntaMultipleChoiceParcial {
     }
 
     @Test
-    public void CreoPreguntaMultipleChoiceParcialYTieneRespuestasIncorrectas(){
+    public void testCreoPreguntaMultipleChoiceParcialYTieneRespuestasIncorrectas02(){
 
         Jugador Juan = new Jugador("Juan");
 
@@ -74,7 +74,7 @@ public class TestPreguntaMultipleChoiceParcial {
     }
 
     @Test
-    public void PreguntaEvaluaUnaRespuestaParcialmenteCorrectaYOtorgaLosPuntosEsperados(){
+    public void testPreguntaEvaluaUnaRespuestaParcialmenteCorrectaYOtorgaLosPuntosEsperados03(){
 
         Jugador Juan = new Jugador("Juan");
 
@@ -108,7 +108,7 @@ public class TestPreguntaMultipleChoiceParcial {
     }
 
     @Test
-    public void PreguntaEvaluaUnaRespuestaQueTieneOpcionesCorrectasYUnaIncorrectaYNoOtorgaPuntos(){
+    public void testPreguntaEvaluaUnaRespuestaQueTieneOpcionesCorrectasYUnaIncorrectaYNoOtorgaPuntos04(){
 
         Jugador Juan = new Jugador("Juan");
 
@@ -140,7 +140,7 @@ public class TestPreguntaMultipleChoiceParcial {
     }
 
     @Test
-    public void PreguntaEvaluaUnaRespuestaQueTieneTodasOpcionesCorrectasYDevuelveLosPuntosEsperados(){
+    public void testPreguntaEvaluaUnaRespuestaQueTieneTodasOpcionesCorrectasYDevuelveLosPuntosEsperados05(){
 
         Jugador Juan = new Jugador("Juan");
 
@@ -176,7 +176,7 @@ public class TestPreguntaMultipleChoiceParcial {
     }
 
     @Test
-    public void PreguntaEvaluaLasRespuestasDeVariosJugadoresYOtorgaLosPuntosAdecuados(){
+    public void testPreguntaEvaluaLasRespuestasDeVariosJugadoresYOtorgaLosPuntosAdecuados06(){
 
         Jugador Juan = new Jugador("Juan");
         Jugador Mati = new Jugador("Mati");
@@ -226,7 +226,7 @@ public class TestPreguntaMultipleChoiceParcial {
     }
 
     @Test
-    public void CreoPreguntaMultipleChoiceParcialYRespondeSoloUnJugadorCorrectamenteConExclusividad() {
+    public void testCreoPreguntaMultipleChoiceParcialYRespondeSoloUnJugadorCorrectamenteConExclusividad07() {
 
         Jugador Juan = new Jugador("Juan");
 
@@ -260,7 +260,7 @@ public class TestPreguntaMultipleChoiceParcial {
     }
 
     @Test
-    public void CreoPreguntaMultipleChoiceParcialYRespondenDosJugadoresCorrectamenteConUnaExclusividad() {
+    public void testCreoPreguntaMultipleChoiceParcialYRespondenDosJugadoresCorrectamenteConUnaExclusividad08() {
 
         Jugador Juan = new Jugador("Juan");
         Jugador Mati = new Jugador("Mati");
@@ -301,7 +301,7 @@ public class TestPreguntaMultipleChoiceParcial {
     }
 
     @Test
-    public void CreoPreguntaMultipleChoiceParcialYRespondenCorrectamenteElJugadorQueNoSeleccionoExclusividad() {
+    public void testCreoPreguntaMultipleChoiceParcialYRespondenCorrectamenteElJugadorQueNoSeleccionoExclusividad09() {
 
         Jugador Juan = new Jugador("Juan");
         Jugador Mati = new Jugador("Mati");
@@ -341,7 +341,7 @@ public class TestPreguntaMultipleChoiceParcial {
     }
 
     @Test
-    public void CreoPreguntaMultipleChoiceParcialYRespondenDosJugadoresBienConDosExclusividades() {
+    public void testCreoPreguntaMultipleChoiceParcialYRespondenDosJugadoresBienConDosExclusividades10() {
 
         Jugador Juan = new Jugador("Juan");
         Jugador Mati = new Jugador("Mati");
@@ -381,7 +381,7 @@ public class TestPreguntaMultipleChoiceParcial {
     }
 
     @Test
-    public void CreoPreguntaMultipleChoiceParcialYRespondenDosJugadoresMalConDosExclusividades() {
+    public void testCreoPreguntaMultipleChoiceParcialYRespondenDosJugadoresMalConDosExclusividades12() {
 
         Jugador Juan = new Jugador("Juan");
         Jugador Mati = new Jugador("Mati");
@@ -422,7 +422,7 @@ public class TestPreguntaMultipleChoiceParcial {
     }
 
     @Test
-    public void CreoPreguntaMultipleChoiceParcialYUnJugadorRespondeBienConDosExclusividades() {
+    public void testCreoPreguntaMultipleChoiceParcialYUnJugadorRespondeBienConDosExclusividades13() {
 
         Jugador Juan = new Jugador("Juan");
         Jugador Mati = new Jugador("Mati");
@@ -462,6 +462,4 @@ public class TestPreguntaMultipleChoiceParcial {
         assertEquals(Juan.getPuntos().getCantidad(), 0);
         assertEquals(Mati.getPuntos().getCantidad(), 8);
     }
-
-
 }
