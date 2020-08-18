@@ -7,16 +7,15 @@ import edu.fiuba.algo3.modelo.pregunta.PreguntaGroupChoice;
 import edu.fiuba.algo3.modelo.respuesta.Respuesta;
 import edu.fiuba.algo3.modelo.respuesta.RespuestaGrupos;
 import org.junit.jupiter.api.Test;
-
 import java.util.LinkedList;
-
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class testPreguntaGroupChoiceEntrega2 {
-    OpcionCorrecta primeraOpcion = new OpcionCorrecta("1 + 1", 0);
-    OpcionCorrecta segundaOpcion = new OpcionCorrecta("3 - 1", 0);
-    OpcionCorrecta terceraOpcion = new OpcionCorrecta("2 + 2", 0);
-    OpcionCorrecta cuartaOpcion = new OpcionCorrecta("2 * 2", 0);
+    OpcionCorrecta primeraOpcion = new OpcionCorrecta("1 + 1");
+    OpcionCorrecta segundaOpcion = new OpcionCorrecta("3 - 1");
+    OpcionCorrecta terceraOpcion = new OpcionCorrecta("2 + 2");
+    OpcionCorrecta cuartaOpcion = new OpcionCorrecta("2 * 2");
+
     @Test
     public void CreoPreguntaGroupChoiceYJugadorRespondeCorrectamente() {
     //Pregunta sabe los grupos correctos
@@ -117,7 +116,6 @@ public class testPreguntaGroupChoiceEntrega2 {
 
         RespuestaGrupos respuestaLucas = new RespuestaGrupos(gruposElegidosLucas, Lucas);
 
-
         respuestas.add(respuestaGuido);
         respuestas.add(respuestaLucas);
 
@@ -179,7 +177,6 @@ public class testPreguntaGroupChoiceEntrega2 {
         gruposElegidosLucas.add(grupo2ElegidosLucas);
 
         RespuestaGrupos respuestaLucas = new RespuestaGrupos(gruposElegidosLucas, Lucas);
-
 
         respuestas.add(respuestaGuido);
         respuestas.add(respuestaLucas);

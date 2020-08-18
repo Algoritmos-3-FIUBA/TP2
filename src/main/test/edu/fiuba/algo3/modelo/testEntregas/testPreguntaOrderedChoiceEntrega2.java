@@ -9,24 +9,21 @@ import edu.fiuba.algo3.modelo.pregunta.PreguntaOrderedChoice;
 import edu.fiuba.algo3.modelo.respuesta.Respuesta;
 import edu.fiuba.algo3.modelo.respuesta.RespuestaMultiple;
 import org.junit.Test;
-
 import java.util.LinkedList;
-
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class testPreguntaOrderedChoiceEntrega2 {
+    OpcionIncorrecta primeraOpcion = new OpcionIncorrecta("1 + 1");
+    OpcionIncorrecta segundaOpcion = new OpcionIncorrecta("3 - 1");
+    OpcionCorrecta terceraOpcion = new OpcionCorrecta("2 + 2");
+    OpcionCorrecta cuartaOpcion = new OpcionCorrecta("2 * 2");
+
     @Test
     public void CreoPreguntaOrderedChoiceConDosRespuestasCorrectasYJugadorRespondeCorrectamente() {
 
         Jugador Guido = new Jugador("Guido");
 
         ColeccionOpciones opciones = new ColeccionOpciones();
-
-        OpcionIncorrecta primeraOpcion = new OpcionIncorrecta("1 + 1", 0);
-        OpcionIncorrecta segundaOpcion = new OpcionIncorrecta("3 - 1", 0);
-        OpcionCorrecta terceraOpcion = new OpcionCorrecta("2 + 2", 1);
-        OpcionCorrecta cuartaOpcion = new OpcionCorrecta("2 * 2", 1);
 
         opciones.agregarOpcion(primeraOpcion);
         opciones.agregarOpcion(segundaOpcion);
@@ -55,11 +52,6 @@ public class testPreguntaOrderedChoiceEntrega2 {
         Jugador Fernando = new Jugador("Fernando");
 
         ColeccionOpciones opciones = new ColeccionOpciones();
-
-        OpcionIncorrecta primeraOpcion = new OpcionIncorrecta("1 + 1", 0);
-        OpcionIncorrecta segundaOpcion = new OpcionIncorrecta("3 - 1", 0);
-        OpcionCorrecta terceraOpcion = new OpcionCorrecta("2 + 2", 1);
-        OpcionCorrecta cuartaOpcion = new OpcionCorrecta("2 * 2", 1);
 
         opciones.agregarOpcion(primeraOpcion);
         opciones.agregarOpcion(segundaOpcion);

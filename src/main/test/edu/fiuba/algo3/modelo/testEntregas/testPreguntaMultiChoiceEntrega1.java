@@ -9,13 +9,16 @@ import edu.fiuba.algo3.modelo.pregunta.PreguntaMultipleChoice;
 import edu.fiuba.algo3.modelo.respuesta.Respuesta;
 import edu.fiuba.algo3.modelo.respuesta.RespuestaMultiple;
 import org.junit.Test;
-
 import java.util.LinkedList;
-
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class testPreguntaMultiChoiceEntrega1 {
+    OpcionIncorrecta primeraOpcion = new OpcionIncorrecta("1 + 1");
+    OpcionIncorrecta segundaOpcion = new OpcionIncorrecta("3 - 1");
+    OpcionCorrecta terceraOpcion = new OpcionCorrecta("2 + 2");
+    OpcionCorrecta cuartaOpcion = new OpcionCorrecta("2 * 2");
+
     @Test
     public void CreoPreguntaMultipleChoiceConDosRespuestasCorrectasYJugadorRespondeDosCorrectasYUnaIncorrecta() {
 
@@ -23,19 +26,12 @@ public class testPreguntaMultiChoiceEntrega1 {
 
         ColeccionOpciones opciones = new ColeccionOpciones();
 
-        OpcionIncorrecta primeraOpcion = new OpcionIncorrecta("1 + 1", 0);
-        OpcionIncorrecta segundaOpcion = new OpcionIncorrecta("3 - 1", 0);
-        OpcionCorrecta terceraOpcion = new OpcionCorrecta("2 + 2", 1);
-        OpcionCorrecta cuartaOpcion = new OpcionCorrecta("2 * 2", 1);
-
         opciones.agregarOpcion(primeraOpcion);
         opciones.agregarOpcion(segundaOpcion);
         opciones.agregarOpcion(terceraOpcion);
         opciones.agregarOpcion(cuartaOpcion);
 
         PreguntaMultipleChoice pregunta = new PreguntaMultipleChoice("¿Cuales de las siguientes cuentas tiene resultado 4?", 1, opciones);
-
-        //PreguntaMultipleChoice pregunta2 = new PreguntaMultipleChoice("¿Cuales de las siguientes cuentas tiene resultado 4?", 1, opciones);
 
         LinkedList<Respuesta> respuestas = new LinkedList<Respuesta>();
 
@@ -45,7 +41,6 @@ public class testPreguntaMultiChoiceEntrega1 {
         opcionesSeleccionadas.add(primeraOpcion);
 
         RespuestaMultiple respuesta = new RespuestaMultiple(opcionesSeleccionadas, Mati);
-
 
         respuestas.add(respuesta);
 
@@ -57,18 +52,14 @@ public class testPreguntaMultiChoiceEntrega1 {
         assertTrue(pregunta.getOpcionesCorrectas().contiene(terceraOpcion));
         assertTrue(pregunta.getOpcionesCorrectas().contiene(cuartaOpcion));
     }
-   @Test
+
+    @Test
     public void CreoPreguntaMultipleChoiceConDosJugadoreUnoSoloObtienePuntaje() {
 
         Jugador Mati = new Jugador("Mati");
         Jugador Guido = new Jugador("Guido");
 
         ColeccionOpciones opciones = new ColeccionOpciones();
-
-        OpcionIncorrecta primeraOpcion = new OpcionIncorrecta("1 + 1", 0);
-        OpcionIncorrecta segundaOpcion = new OpcionIncorrecta("3 - 1", 0);
-        OpcionCorrecta terceraOpcion = new OpcionCorrecta("2 + 2", 1);
-        OpcionCorrecta cuartaOpcion = new OpcionCorrecta("2 * 2", 1);
 
         opciones.agregarOpcion(primeraOpcion);
         opciones.agregarOpcion(segundaOpcion);
@@ -79,14 +70,14 @@ public class testPreguntaMultiChoiceEntrega1 {
 
         LinkedList<Respuesta> respuestas = new LinkedList<Respuesta>();
 
-       LinkedList<Opcion> opcionesSeleccionadasGuido = new LinkedList<Opcion>();
+        LinkedList<Opcion> opcionesSeleccionadasGuido = new LinkedList<Opcion>();
         opcionesSeleccionadasGuido.add(terceraOpcion);
         opcionesSeleccionadasGuido.add(cuartaOpcion);
         opcionesSeleccionadasGuido.add(primeraOpcion);
 
         RespuestaMultiple respuestaGuido = new RespuestaMultiple(opcionesSeleccionadasGuido, Guido);
 
-       LinkedList<Opcion> opcionesSeleccionadasMati = new LinkedList<Opcion>();
+        LinkedList<Opcion> opcionesSeleccionadasMati = new LinkedList<Opcion>();
         opcionesSeleccionadasMati.add(terceraOpcion);
         opcionesSeleccionadasMati.add(cuartaOpcion);
 
