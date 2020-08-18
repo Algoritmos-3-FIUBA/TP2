@@ -5,7 +5,6 @@ import edu.fiuba.algo3.modelo.Puntos;
 import edu.fiuba.algo3.modelo.opcion.Opcion;
 import edu.fiuba.algo3.modelo.opcion.OpcionCorrecta;
 import edu.fiuba.algo3.modelo.respuesta.RespuestaMultiple;
-import net.bytebuddy.dynamic.scaffold.MethodGraph;
 import org.junit.Test;
 import org.junit.jupiter.api.Assertions;
 

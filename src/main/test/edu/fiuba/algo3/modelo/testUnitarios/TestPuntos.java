@@ -1,6 +1,5 @@
 package edu.fiuba.algo3.modelo.testUnitarios;
 
-import edu.fiuba.algo3.modelo.Jugador;
 import edu.fiuba.algo3.modelo.Puntos;
 import org.junit.Test;
 

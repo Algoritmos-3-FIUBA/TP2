@@ -12,7 +12,7 @@ import java.util.LinkedList;
 public class TestPreguntaVoFClasicoEntrega0 {
 
     @Test
-    public void CreoPreguntaVoFClasicoIndicoRespuestaCorrecta(){
+    public void testCreoPreguntaVoFClasicoIndicoRespuestaCorrecta01(){
 
         Jugador Lucas = new Jugador("Lucas");
 
@@ -31,7 +31,7 @@ public class TestPreguntaVoFClasicoEntrega0 {
     }
 
     @Test
-    public void CreoPreguntaVoFClasicoIndicoRespuestaCorrectayAsignoLosPuntos(){
+    public void testCreoPreguntaVoFClasicoIndicoRespuestaCorrectayAsignoLosPuntos02(){
 
         Jugador Lucas = new Jugador("Lucas");
         Jugador Mati = new Jugador("Mati");
@@ -51,5 +51,4 @@ public class TestPreguntaVoFClasicoEntrega0 {
         Assertions.assertEquals(Lucas.getPuntos().getCantidad(),0);
         Assertions.assertEquals(Mati.getPuntos().getCantidad(),1);
     }
-
 }

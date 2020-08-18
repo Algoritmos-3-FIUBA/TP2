@@ -1,8 +1,6 @@
 package edu.fiuba.algo3.modelo.amplificador;
 
 import edu.fiuba.algo3.modelo.Puntos;
-import edu.fiuba.algo3.modelo.exclusividad.EstadoAsigna;
-import edu.fiuba.algo3.modelo.exclusividad.EstadoNoAsigna;
 
 public class Amplificador {
 

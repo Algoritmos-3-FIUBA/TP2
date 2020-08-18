@@ -14,13 +14,13 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class testPreguntaMultiChoiceEntrega1 {
-    OpcionIncorrecta primeraOpcion = new OpcionIncorrecta("1 + 1");
-    OpcionIncorrecta segundaOpcion = new OpcionIncorrecta("3 - 1");
-    OpcionCorrecta terceraOpcion = new OpcionCorrecta("2 + 2");
-    OpcionCorrecta cuartaOpcion = new OpcionCorrecta("2 * 2");
+    private final OpcionIncorrecta primeraOpcion = new OpcionIncorrecta("1 + 1");
+    private final OpcionIncorrecta segundaOpcion = new OpcionIncorrecta("3 - 1");
+    private final OpcionCorrecta terceraOpcion = new OpcionCorrecta("2 + 2");
+    private final OpcionCorrecta cuartaOpcion = new OpcionCorrecta("2 * 2");
 
     @Test
-    public void CreoPreguntaMultipleChoiceConDosRespuestasCorrectasYJugadorRespondeDosCorrectasYUnaIncorrecta() {
+    public void testCreoPreguntaMultipleChoiceConDosRespuestasCorrectasYJugadorRespondeDosCorrectasYUnaIncorrecta01() {
 
         Jugador Mati = new Jugador("Mati");
 
@@ -54,7 +54,7 @@ public class testPreguntaMultiChoiceEntrega1 {
     }
 
     @Test
-    public void CreoPreguntaMultipleChoiceConDosJugadoreUnoSoloObtienePuntaje() {
+    public void testCreoPreguntaMultipleChoiceConDosJugadoreUnoSoloObtienePuntaje02() {
 
         Jugador Mati = new Jugador("Mati");
         Jugador Guido = new Jugador("Guido");
