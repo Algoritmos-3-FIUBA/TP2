@@ -2,6 +2,7 @@ package edu.fiuba.algo3.modelo.testunitarios;
 
 import edu.fiuba.algo3.modelo.Jugador;
 import edu.fiuba.algo3.modelo.Puntos;
+import edu.fiuba.algo3.modelo.multiplicador.Multiplicador;
 import org.junit.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
@@ -42,4 +43,25 @@ public class TestJugador {
         Lucas.sumarPuntos(new Puntos(-1));
         assertEquals(Lucas.getPuntos().getCantidad(), 3);
     }
+
+    @Test
+    public void testCreoJugadorYTieneDosMultiplicadorPorDos() {
+
+        Jugador Lucas = new Jugador("Lucas");
+
+        Multiplicador multiplicadorPorDos = Lucas.usarMultiplicadorPorDos();
+
+        assertEquals(multiplicadorPorDos.getFactor(), 2);
+    }
+
+    @Test
+    public void testCreoJugadorYTieneDosMultiplicadorPorTres() {
+
+        Jugador Lucas = new Jugador("Lucas");
+
+        Multiplicador multiplicadorPorTres = Lucas.usarMultiplicadorPorTres();
+
+        assertEquals(multiplicadorPorTres.getFactor(), 3);
+    }
+
 }
