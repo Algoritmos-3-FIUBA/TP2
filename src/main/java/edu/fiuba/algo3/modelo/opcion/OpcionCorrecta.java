@@ -6,6 +6,10 @@ import edu.fiuba.algo3.modelo.respuesta.EstadoRespuesta;
 
 public class OpcionCorrecta extends Opcion {
 
+    public OpcionCorrecta(String NombreOpcion) {
+        super(NombreOpcion);
+    }
+
     public OpcionCorrecta(String NombreOpcion, int puntos) {
         super(NombreOpcion, puntos);
     }
@@ -18,6 +22,4 @@ public class OpcionCorrecta extends Opcion {
     public EstadoRespuesta asignarEstado() {
         return new EstadoCorrecto();
     }
-
-
 }

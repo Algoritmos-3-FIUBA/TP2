@@ -9,6 +9,10 @@ public abstract class Opcion {
     protected String Nombre;
     protected Puntos PuntosOtorgados;
 
+    public Opcion(String NombreOpcion){
+        Nombre = NombreOpcion;
+    }
+
     public Opcion(String NombreOpcion, int puntos){
         Nombre = NombreOpcion;
         PuntosOtorgados = new Puntos(puntos);
@@ -30,4 +34,3 @@ public abstract class Opcion {
         return PuntosOtorgados;
     }
 }
-
