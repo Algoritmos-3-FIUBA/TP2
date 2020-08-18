@@ -1,5 +1,6 @@
 package edu.fiuba.algo3.vista;
 
+import edu.fiuba.algo3.modelo.pregunta.Pregunta;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
@@ -8,14 +9,15 @@ import org.json.simple.parser.ParseException;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
-
+import java.lang.invoke.SwitchPoint;
+import java.util.LinkedList;
 
 
 public class LecturaDeArchivo {
    // private final LinkedList<Pregunta> preguntas;
     private final String ARCHIVO = "src/main/java/edu/fiuba/algo3/vista/cuestionario.json";
 
-   public LecturaDeArchivo() {
+   public LecturaDeArchivo(LinkedList<Pregunta> preguntas) {
        //JSON parser object to parse read file
        JSONParser jsonParser = new JSONParser();
 
@@ -24,11 +26,11 @@ public class LecturaDeArchivo {
            //Read JSON file
            Object obj = jsonParser.parse(reader);
 
-           JSONArray employeeList = (JSONArray) obj;
-           System.out.println(employeeList);
+           JSONArray preguntasList = (JSONArray) obj;
+           //System.out.println(employeeList);
 
            //Iterate over employee array
-           employeeList.forEach( emp -> parseEmployeeObject( (JSONObject) emp ) );
+           preguntasList.forEach( emp -> parseEmployeeObject( (JSONObject) emp,preguntas ) );
 
        } catch (FileNotFoundException e) {
            e.printStackTrace();
@@ -39,28 +41,44 @@ public class LecturaDeArchivo {
        }
    }
 
-    private static void parseEmployeeObject(JSONObject employee)
+    public void parseEmployeeObject(JSONObject oPregunta,LinkedList<Pregunta> preguntas)
     {
         //Get employee object within list
-        JSONObject employeeObject = (JSONObject) employee.get("Pregunta");
-       // System.out.println(employeeObject.toString());
-
-        String first = (String) employeeObject.get("tipo");
+        JSONObject pregunta = (JSONObject) oPregunta.get("Pregunta");
+        String tipo = (String) pregunta.get("tipo");
+        switch(tipo) {
+            case "VerdaderoFalso":
+                this.instanciar(pregunta,preguntas);
+            case MULTIPLE_CHOICE_WITH_PENALTY:
+                return QuestionTypeLiteral.MULTIPLE_CHOICE_PENALTY;
+            case MULTIPLE_CHOICE_PARTIAL:
+                return QuestionTypeLiteral.MULTIPLE_CHOICE_PARTIAL;
+            case TRUE_FALSE:
+                return QuestionTypeLiteral.TRUE_FALSE;
+            case TRUE_FALSE_WITH_PENALTY:
+                return QuestionTypeLiteral.TRUE_FALSE_PENALTY;
+            case ORDERED_QUESTION:
+                return QuestionTypeLit
         System.out.println(first);
 
         //Get employee first name
-        String firstName = (String) employeeObject.get("nombre");
+        String firstName = (String) pregunta.get("nombre");
         System.out.println(firstName);
 
         //Get employee last name
-        String lastName = (String) employeeObject.get("textoOpcion1");
+        String lastName = (String) pregunta.get("textoOpcion1");
         System.out.println(lastName);
 
         //Get employee website name
-        String website = (String) employeeObject.get("textoOpcion2");
+        String website = (String) pregunta.get("textoOpcion2");
         System.out.println(website);
 
-        String correct = (String) employeeObject.get("opcionCorrecta");
+        String correct = (String) pregunta.get("opcionCorrecta");
         System.out.println(correct);
     }
 }
+
+    private void instanciar(JSONObject pregunta, LinkedList<Pregunta> preguntas) {
+
+    }
+    }
