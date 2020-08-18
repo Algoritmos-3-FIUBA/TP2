@@ -8,9 +8,9 @@ import java.util.LinkedList;
 
 public class PreguntaOrderedChoice extends Pregunta{
 
-    private Puntos puntosOtorgados;
-    private ColeccionOpciones opcionesCorrectas;
-    private ColeccionOpciones opcionesIncorrectas;
+    private final Puntos puntosOtorgados;
+    private final ColeccionOpciones opcionesCorrectas;
+    private final ColeccionOpciones opcionesIncorrectas;
 
     public PreguntaOrderedChoice(String nombre, int puntos, ColeccionOpciones opciones) {
 
@@ -46,45 +46,4 @@ public class PreguntaOrderedChoice extends Pregunta{
             if(((RespuestaMultiple) respuesta).getOpciones().esIgual(opcionesCorrectas))
                 respuesta.setCorrecta();
     }
-
 }
-
-
-
-
-
-
-
-
-
-
-
-
-    /*
-    private String Nombre;
-    private Puntos PuntosOtorgados;
-    LinkedList<Grupo> grupoCorrecto;
-
-    public PreguntaOrderedChoice(String nombre, int puntos, LinkedList<Grupo> grupoCorrecto) {
-
-        Nombre = nombre;
-        PuntosOtorgados = new Puntos(puntos);
-
-        this.grupoCorrecto = grupoCorrecto;
-    }
-
-    public void evaluarRespuestas(LinkedList<RespuestaGrupos> respuestas) {
-        for (RespuestaGrupos respuesta : respuestas) {
-            Puntos puntosAsignar;
-            LinkedList<Grupo> gruposElegidos;
-            gruposElegidos = respuesta.getGruposElegidos();
-            //Pregunta le delega a cada grupo correcto que se evalue, antes esa delegación la hacia Respuesta
-            puntosAsignar = grupoCorrecto.get(1).evaluarGrupo(gruposElegidos.get(1).getOpcionesDelGrupo(), PuntosOtorgados);
-            respuesta.otorgarPuntos(puntosAsignar);
-
-        }
-    }
-
-
-}
-     */
