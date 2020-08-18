@@ -17,17 +17,17 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class TestPreguntaMultipleChoicePenalidad {
 
+    private final OpcionCorrecta primeraOpcion = new OpcionCorrecta("2014",1);
+    private final OpcionCorrecta segundaOpcion = new OpcionCorrecta("2010",1);
+    private final OpcionIncorrecta terceraOpcion = new OpcionIncorrecta("1902",-1);
+    private final OpcionIncorrecta cuartaOpcion = new OpcionIncorrecta("El año pasado",-1);
+
     @Test
     public void testCreoPreguntaMultipleChoicePenalidadSinMultiplicadorYRespondoUnaOpcionesCorrecta01(){
 
         Jugador jugador = new Jugador("Pedro");
 
         ColeccionOpciones opciones = new ColeccionOpciones();
-
-        OpcionCorrecta primeraOpcion = new OpcionCorrecta("2014",1);
-        OpcionCorrecta segundaOpcion = new OpcionCorrecta("2010",1);
-        OpcionIncorrecta terceraOpcion = new OpcionIncorrecta("1902",-1);
-        OpcionIncorrecta cuartaOpcion = new OpcionIncorrecta("El año pasado",-1);
 
         opciones.agregarOpcion(primeraOpcion);
         opciones.agregarOpcion(segundaOpcion);
@@ -57,11 +57,6 @@ public class TestPreguntaMultipleChoicePenalidad {
 
         ColeccionOpciones opciones = new ColeccionOpciones();
 
-        OpcionCorrecta primeraOpcion = new OpcionCorrecta("2014",1);
-        OpcionCorrecta segundaOpcion = new OpcionCorrecta("2010",1);
-        OpcionIncorrecta terceraOpcion = new OpcionIncorrecta("1902",-1);
-        OpcionIncorrecta cuartaOpcion = new OpcionIncorrecta("El año pasado",-1);
-
         opciones.agregarOpcion(primeraOpcion);
         opciones.agregarOpcion(segundaOpcion);
         opciones.agregarOpcion(terceraOpcion);
@@ -90,11 +85,6 @@ public class TestPreguntaMultipleChoicePenalidad {
         Jugador jugador = new Jugador("Pedro");
 
         ColeccionOpciones opciones = new ColeccionOpciones();
-
-        OpcionCorrecta primeraOpcion = new OpcionCorrecta("2014",1);
-        OpcionCorrecta segundaOpcion = new OpcionCorrecta("2010",1);
-        OpcionIncorrecta terceraOpcion = new OpcionIncorrecta("1902",-1);
-        OpcionIncorrecta cuartaOpcion = new OpcionIncorrecta("El año pasado",-1);
 
         opciones.agregarOpcion(primeraOpcion);
         opciones.agregarOpcion(segundaOpcion);
@@ -126,11 +116,6 @@ public class TestPreguntaMultipleChoicePenalidad {
 
         ColeccionOpciones opciones = new ColeccionOpciones();
 
-        OpcionCorrecta primeraOpcion = new OpcionCorrecta("2014",1);
-        OpcionCorrecta segundaOpcion = new OpcionCorrecta("2010",1);
-        OpcionIncorrecta terceraOpcion = new OpcionIncorrecta("1902",-1);
-        OpcionIncorrecta cuartaOpcion = new OpcionIncorrecta("El año pasado",-1);
-
         opciones.agregarOpcion(primeraOpcion);
         opciones.agregarOpcion(segundaOpcion);
         opciones.agregarOpcion(terceraOpcion);
@@ -161,11 +146,6 @@ public class TestPreguntaMultipleChoicePenalidad {
 
         ColeccionOpciones opciones = new ColeccionOpciones();
 
-        OpcionCorrecta primeraOpcion = new OpcionCorrecta("2014",1);
-        OpcionCorrecta segundaOpcion = new OpcionCorrecta("2010",1);
-        OpcionIncorrecta terceraOpcion = new OpcionIncorrecta("1902",-1);
-        OpcionIncorrecta cuartaOpcion = new OpcionIncorrecta("El año pasado",-1);
-
         opciones.agregarOpcion(primeraOpcion);
         opciones.agregarOpcion(segundaOpcion);
         opciones.agregarOpcion(terceraOpcion);
@@ -195,11 +175,6 @@ public class TestPreguntaMultipleChoicePenalidad {
         Multiplicador multiplicador = new MultiplicadorPorDos();
 
         ColeccionOpciones opciones = new ColeccionOpciones();
-
-        OpcionCorrecta primeraOpcion = new OpcionCorrecta("2014",1);
-        OpcionCorrecta segundaOpcion = new OpcionCorrecta("2010",1);
-        OpcionIncorrecta terceraOpcion = new OpcionIncorrecta("1902",-1);
-        OpcionIncorrecta cuartaOpcion = new OpcionIncorrecta("El año pasado",-1);
 
         opciones.agregarOpcion(primeraOpcion);
         opciones.agregarOpcion(segundaOpcion);
@@ -232,11 +207,6 @@ public class TestPreguntaMultipleChoicePenalidad {
 
         ColeccionOpciones opciones = new ColeccionOpciones();
 
-        OpcionCorrecta primeraOpcion = new OpcionCorrecta("2014",1);
-        OpcionCorrecta segundaOpcion = new OpcionCorrecta("2010",1);
-        OpcionIncorrecta terceraOpcion = new OpcionIncorrecta("1902",-1);
-        OpcionIncorrecta cuartaOpcion = new OpcionIncorrecta("El año pasado",-1);
-
         opciones.agregarOpcion(primeraOpcion);
         opciones.agregarOpcion(segundaOpcion);
         opciones.agregarOpcion(terceraOpcion);
@@ -267,11 +237,6 @@ public class TestPreguntaMultipleChoicePenalidad {
 
         ColeccionOpciones opciones = new ColeccionOpciones();
 
-        OpcionCorrecta primeraOpcion = new OpcionCorrecta("2014",1);
-        OpcionCorrecta segundaOpcion = new OpcionCorrecta("2010",1);
-        OpcionIncorrecta terceraOpcion = new OpcionIncorrecta("1902",-1);
-        OpcionIncorrecta cuartaOpcion = new OpcionIncorrecta("El año pasado",-1);
-
         opciones.agregarOpcion(primeraOpcion);
         opciones.agregarOpcion(segundaOpcion);
         opciones.agregarOpcion(terceraOpcion);
@@ -301,11 +266,6 @@ public class TestPreguntaMultipleChoicePenalidad {
         Multiplicador multiplicador = new MultiplicadorPorTres();
 
         ColeccionOpciones opciones = new ColeccionOpciones();
-
-        OpcionCorrecta primeraOpcion = new OpcionCorrecta("2014",1);
-        OpcionCorrecta segundaOpcion = new OpcionCorrecta("2010",1);
-        OpcionIncorrecta terceraOpcion = new OpcionIncorrecta("1902",-1);
-        OpcionIncorrecta cuartaOpcion = new OpcionIncorrecta("El año pasado",-1);
 
         opciones.agregarOpcion(primeraOpcion);
         opciones.agregarOpcion(segundaOpcion);
