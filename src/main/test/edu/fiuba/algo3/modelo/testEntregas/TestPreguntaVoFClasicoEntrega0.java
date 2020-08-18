@@ -5,9 +5,8 @@ import edu.fiuba.algo3.modelo.pregunta.PreguntaVerdaderoFalsoClasico;
 import edu.fiuba.algo3.modelo.respuesta.Respuesta;
 import edu.fiuba.algo3.modelo.respuesta.RespuestaUnica;
 import org.junit.Test;
-import org.junit.jupiter.api.Assertions;
-
 import java.util.LinkedList;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class TestPreguntaVoFClasicoEntrega0 {
 
@@ -27,7 +26,7 @@ public class TestPreguntaVoFClasicoEntrega0 {
 
         pregunta.evaluarRespuestas(respuestasDeJugadores);
 
-        Assertions.assertEquals(Lucas.getPuntos().getCantidad(),1);
+        assertEquals(Lucas.getPuntos().getCantidad(),1);
     }
 
     @Test
@@ -48,7 +47,7 @@ public class TestPreguntaVoFClasicoEntrega0 {
 
         pregunta.evaluarRespuestas(respuestasDeJugadores);
 
-        Assertions.assertEquals(Lucas.getPuntos().getCantidad(),0);
-        Assertions.assertEquals(Mati.getPuntos().getCantidad(),1);
+        assertEquals(Lucas.getPuntos().getCantidad(),0);
+        assertEquals(Mati.getPuntos().getCantidad(),1);
     }
 }

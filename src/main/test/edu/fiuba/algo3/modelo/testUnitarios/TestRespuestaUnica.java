@@ -8,7 +8,7 @@ import edu.fiuba.algo3.modelo.opcion.Opcion;
 import edu.fiuba.algo3.modelo.opcion.OpcionCorrecta;
 import edu.fiuba.algo3.modelo.respuesta.RespuestaUnica;
 import org.junit.Test;
-import org.junit.jupiter.api.Assertions;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class TestRespuestaUnica {
 
@@ -22,7 +22,7 @@ public class TestRespuestaUnica {
         respuestaJugador.setCorrecta();
         respuestaJugador.otorgarPuntos(new Puntos(1));
 
-        Assertions.assertEquals(jugador.getPuntos().getCantidad(),1);
+        assertEquals(jugador.getPuntos().getCantidad(),1);
     }
 
     @Test
@@ -34,7 +34,7 @@ public class TestRespuestaUnica {
 
         respuestaJugador.otorgarPuntos(new Puntos(0));
 
-        Assertions.assertEquals(jugador.getPuntos().getCantidad(),0);
+        assertEquals(jugador.getPuntos().getCantidad(),0);
     }
 
     @Test
@@ -49,7 +49,7 @@ public class TestRespuestaUnica {
         respuestaJugador.setCorrecta();
         respuestaJugador.otorgarPuntos(new Puntos(1));
 
-        Assertions.assertEquals(jugador.getPuntos().getCantidad(),2);
+        assertEquals(jugador.getPuntos().getCantidad(),2);
     }
 
     @Test
@@ -68,7 +68,7 @@ public class TestRespuestaUnica {
         respuestaJugador2.setCorrecta();
         respuestaJugador2.otorgarPuntos(new Puntos(1));
 
-        Assertions.assertEquals(jugador.getPuntos().getCantidad(),3);
+        assertEquals(jugador.getPuntos().getCantidad(),3);
     }
 
     @Test
@@ -87,7 +87,7 @@ public class TestRespuestaUnica {
         respuestaJugador2.setCorrecta();
         respuestaJugador2.otorgarPuntos(new Puntos(-1));
 
-        Assertions.assertEquals(jugador.getPuntos().getCantidad(),1);
+        assertEquals(jugador.getPuntos().getCantidad(),1);
     }
 
     @Test
@@ -107,6 +107,6 @@ public class TestRespuestaUnica {
         respuestaJugador2.setCorrecta();
         respuestaJugador2.otorgarPuntos(new Puntos(1));
 
-        Assertions.assertEquals(jugador.getPuntos().getCantidad(),5);
+        assertEquals(jugador.getPuntos().getCantidad(),5);
     }
 }
