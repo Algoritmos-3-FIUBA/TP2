@@ -250,7 +250,7 @@ public class TestPreguntaMultipleChoiceParcial {
         opcionesSeleccionadasJuan.add(terceraOpcion);
         opcionesSeleccionadasJuan.add(cuartaOpcion);
 
-        RespuestaMultiple respuestaJuan = new RespuestaMultiple(opcionesSeleccionadasJuan, Juan,new Exclusividad());
+        RespuestaMultiple respuestaJuan = new RespuestaMultiple(opcionesSeleccionadasJuan, Juan, Juan.usarExclusividad());
 
         respuestas.add(respuestaJuan);
 
@@ -288,7 +288,7 @@ public class TestPreguntaMultipleChoiceParcial {
         LinkedList<Opcion> opcionesSeleccionadasMati = new LinkedList<Opcion>();
         opcionesSeleccionadasJuan.add(cuartaOpcion);
 
-        RespuestaMultiple respuestaJuan = new RespuestaMultiple(opcionesSeleccionadasJuan, Juan,new Exclusividad());
+        RespuestaMultiple respuestaJuan = new RespuestaMultiple(opcionesSeleccionadasJuan, Juan, Juan.usarExclusividad());
         RespuestaMultiple respuestaMati = new RespuestaMultiple(opcionesSeleccionadasMati, Mati);
 
         respuestas.add(respuestaJuan);
@@ -328,7 +328,7 @@ public class TestPreguntaMultipleChoiceParcial {
         LinkedList<Opcion> opcionesSeleccionadasMati = new LinkedList<Opcion>();
         opcionesSeleccionadasMati.add(cuartaOpcion);
 
-        RespuestaMultiple respuestaJuan = new RespuestaMultiple(opcionesSeleccionadasJuan, Juan, new Exclusividad());
+        RespuestaMultiple respuestaJuan = new RespuestaMultiple(opcionesSeleccionadasJuan, Juan, Juan.usarExclusividad());
         RespuestaMultiple respuestaMati = new RespuestaMultiple(opcionesSeleccionadasMati, Mati);
 
         respuestas.add(respuestaJuan);
@@ -368,8 +368,8 @@ public class TestPreguntaMultipleChoiceParcial {
         LinkedList<Opcion> opcionesSeleccionadasMati = new LinkedList<Opcion>();
         opcionesSeleccionadasMati.add(cuartaOpcion);
 
-        RespuestaMultiple respuestaJuan = new RespuestaMultiple(opcionesSeleccionadasJuan, Juan, new Exclusividad());
-        RespuestaMultiple respuestaMati = new RespuestaMultiple(opcionesSeleccionadasMati, Mati, new Exclusividad());
+        RespuestaMultiple respuestaJuan = new RespuestaMultiple(opcionesSeleccionadasJuan, Juan, Juan.usarExclusividad());
+        RespuestaMultiple respuestaMati = new RespuestaMultiple(opcionesSeleccionadasMati, Mati, Mati.usarExclusividad());
 
         respuestas.add(respuestaJuan);
         respuestas.add(respuestaMati);
@@ -409,8 +409,8 @@ public class TestPreguntaMultipleChoiceParcial {
         LinkedList<Opcion> opcionesSeleccionadasMati = new LinkedList<Opcion>();
         opcionesSeleccionadasMati.add(primeraOpcion);
 
-        RespuestaMultiple respuestaJuan = new RespuestaMultiple(opcionesSeleccionadasJuan, Juan, new Exclusividad());
-        RespuestaMultiple respuestaMati = new RespuestaMultiple(opcionesSeleccionadasMati, Mati, new Exclusividad());
+        RespuestaMultiple respuestaJuan = new RespuestaMultiple(opcionesSeleccionadasJuan, Juan, Juan.usarExclusividad());
+        RespuestaMultiple respuestaMati = new RespuestaMultiple(opcionesSeleccionadasMati, Mati, Mati.usarExclusividad());
 
         respuestas.add(respuestaJuan);
         respuestas.add(respuestaMati);
@@ -451,8 +451,8 @@ public class TestPreguntaMultipleChoiceParcial {
         opcionesSeleccionadasMati.add(terceraOpcion);
         opcionesSeleccionadasMati.add(cuartaOpcion);
 
-        RespuestaMultiple respuestaJuan = new RespuestaMultiple(opcionesSeleccionadasJuan, Juan, new Exclusividad());
-        RespuestaMultiple respuestaMati = new RespuestaMultiple(opcionesSeleccionadasMati, Mati, new Exclusividad());
+        RespuestaMultiple respuestaJuan = new RespuestaMultiple(opcionesSeleccionadasJuan, Juan, Juan.usarExclusividad());
+        RespuestaMultiple respuestaMati = new RespuestaMultiple(opcionesSeleccionadasMati, Mati, Mati.usarExclusividad());
 
         respuestas.add(respuestaJuan);
         respuestas.add(respuestaMati);
