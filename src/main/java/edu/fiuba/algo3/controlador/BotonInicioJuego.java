@@ -52,6 +52,9 @@ public class BotonInicioJuego implements EventHandler<ActionEvent>  {
     }
 
     private void ingresarPreguntas(LinkedList<PreguntaVerdaderoFalso> listaPreguntas) {
+
+       // Kahoot kahoot = new Kahoot(jugador1, jugador2);
+
         PreguntaVerdaderoFalsoClasico preg1 = new PreguntaVerdaderoFalsoClasico("1 + 1 = 2");
         preg1.setVerdaderoOpcionCorrecta();
         listaPreguntas.add(preg1);

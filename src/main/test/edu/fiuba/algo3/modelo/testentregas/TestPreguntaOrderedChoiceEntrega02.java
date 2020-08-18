@@ -1,4 +1,4 @@
-package edu.fiuba.algo3.modelo.testEntregas;
+package edu.fiuba.algo3.modelo.testentregas;
 
 import edu.fiuba.algo3.modelo.ColeccionOpciones;
 import edu.fiuba.algo3.modelo.Jugador;
@@ -12,11 +12,11 @@ import org.junit.Test;
 import java.util.LinkedList;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class testPreguntaOrderedChoiceEntrega2 {
-    OpcionIncorrecta primeraOpcion = new OpcionIncorrecta("1 + 1");
-    OpcionIncorrecta segundaOpcion = new OpcionIncorrecta("3 - 1");
-    OpcionCorrecta terceraOpcion = new OpcionCorrecta("2 + 2");
-    OpcionCorrecta cuartaOpcion = new OpcionCorrecta("2 * 2");
+public class TestPreguntaOrderedChoiceEntrega02 {
+    private final OpcionIncorrecta primeraOpcion = new OpcionIncorrecta("1 + 1");
+    private final OpcionIncorrecta segundaOpcion = new OpcionIncorrecta("3 - 1");
+    private final OpcionCorrecta terceraOpcion = new OpcionCorrecta("2 + 2");
+    private final OpcionCorrecta cuartaOpcion = new OpcionCorrecta("2 * 2");
 
     @Test
     public void testCreoPreguntaOrderedChoiceConDosRespuestasCorrectasYJugadorRespondeCorrectamente01() {

@@ -7,7 +7,9 @@ import java.util.LinkedList;
 
 public class EstadoIncorrecto extends EstadoRespuesta{
     @Override
-    public void actualizarCondicionDeUsoExclusividad(LinkedList<Respuesta> respuestas){   }
+    public void actualizarCondicionDeUsoExclusividad(LinkedList<Respuesta> respuestas){
+        return;
+    }
 
     @Override
     public void otorgarPuntos(Puntos puntosOtorgados, Jugador jugador) {

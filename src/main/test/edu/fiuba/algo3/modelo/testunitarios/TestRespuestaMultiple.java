@@ -1,4 +1,4 @@
-package edu.fiuba.algo3.modelo.testUnitarios;
+package edu.fiuba.algo3.modelo.testunitarios;
 
 import edu.fiuba.algo3.modelo.Jugador;
 import edu.fiuba.algo3.modelo.Puntos;
@@ -6,22 +6,21 @@ import edu.fiuba.algo3.modelo.opcion.Opcion;
 import edu.fiuba.algo3.modelo.opcion.OpcionCorrecta;
 import edu.fiuba.algo3.modelo.respuesta.RespuestaMultiple;
 import org.junit.Test;
-import org.junit.jupiter.api.Assertions;
-
 import java.util.LinkedList;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class TestRespuestaMultiple {
 
     //Actualizar a la nueva version en la que pregunta evalua la respuesta
 
-    private Opcion primeraOpcion = new OpcionCorrecta("Euler",0);
-    private Opcion segundaOpcion = new OpcionCorrecta("Gauss",0);
-    private Opcion terceraOpcion  = new OpcionCorrecta("Faraday",0);
-    private Opcion cuartaOpcion = new OpcionCorrecta("Newton",0);
-    private Opcion quintaOpcion = new OpcionCorrecta("Einstein",0);
+    private final Opcion primeraOpcion = new OpcionCorrecta("Euler");
+    private final Opcion segundaOpcion = new OpcionCorrecta("Gauss");
+    private final Opcion terceraOpcion  = new OpcionCorrecta("Faraday");
+    private final Opcion cuartaOpcion = new OpcionCorrecta("Newton");
+    private final Opcion quintaOpcion = new OpcionCorrecta("Einstein");
 
     @Test
-    public void JugadorRealizaUnaRespuestaCorrectaEligiendoUnaOpcionYObtienePuntaje(){
+    public void testJugadorRealizaUnaRespuestaCorrectaEligiendoUnaOpcionYObtienePuntaje01(){
         Jugador jugador = new Jugador("Guido");
 
         //Opciones que son eligidas
@@ -33,11 +32,11 @@ public class TestRespuestaMultiple {
 
         respuestaJugador.otorgarPuntos(new Puntos(1));
 
-        Assertions.assertEquals(jugador.getPuntos().getCantidad(),1);
+        assertEquals(jugador.getPuntos().getCantidad(),1);
     }
 
     @Test
-    public void JugadorRealizaUnaRespuestaCorrectaEligiendoDosOpcionesYObtienePuntaje(){
+    public void testJugadorRealizaUnaRespuestaCorrectaEligiendoDosOpcionesYObtienePuntaje02(){
         Jugador jugador = new Jugador("Guido");
 
         //Opciones que son eligidas
@@ -51,11 +50,11 @@ public class TestRespuestaMultiple {
 
         respuestaJugador.otorgarPuntos(new Puntos(1));
 
-        Assertions.assertEquals(jugador.getPuntos().getCantidad(),1);
+        assertEquals(jugador.getPuntos().getCantidad(),1);
     }
 
     @Test
-    public void JugadorRealizaUnaRespuestaCorrectaEligiendoTresOpcionesYObtienePuntaje(){
+    public void testJugadorRealizaUnaRespuestaCorrectaEligiendoTresOpcionesYObtienePuntaje03(){
         Jugador jugador = new Jugador("Guido");
 
         //Opciones que son eligidas
@@ -70,11 +69,11 @@ public class TestRespuestaMultiple {
 
         respuestaJugador.otorgarPuntos(new Puntos(1));
 
-        Assertions.assertEquals(jugador.getPuntos().getCantidad(),1);
+        assertEquals(jugador.getPuntos().getCantidad(),1);
     }
 
     @Test
-    public void JugadorRealizaUnaRespuestaCorrectaEligiendoCuatroOpcionesYObtienePuntaje(){
+    public void testJugadorRealizaUnaRespuestaCorrectaEligiendoCuatroOpcionesYObtienePuntaje04(){
         Jugador jugador = new Jugador("Guido");
 
         //Opciones que son eligidas
@@ -90,11 +89,11 @@ public class TestRespuestaMultiple {
 
         respuestaJugador.otorgarPuntos(new Puntos(1));
 
-        Assertions.assertEquals(jugador.getPuntos().getCantidad(),1);
+        assertEquals(jugador.getPuntos().getCantidad(),1);
     }
 
     @Test
-    public void JugadorRealizaUnaRespuestaCorrectaEligiendoCincoOpcionesYObtienePuntaje(){
+    public void testJugadorRealizaUnaRespuestaCorrectaEligiendoCincoOpcionesYObtienePuntaje05(){
         Jugador jugador = new Jugador("Guido");
 
         //Opciones que son eligidas
@@ -111,11 +110,11 @@ public class TestRespuestaMultiple {
 
         respuestaJugador.otorgarPuntos(new Puntos(1));
 
-        Assertions.assertEquals(jugador.getPuntos().getCantidad(),1);
+        assertEquals(jugador.getPuntos().getCantidad(),1);
     }
 
     @Test
-    public void JugadorRealizaUnaRespuestaIncorrectaEligiendoUnaOpcionYNoObtienePuntaje(){
+    public void testJugadorRealizaUnaRespuestaIncorrectaEligiendoUnaOpcionYNoObtienePuntaje06(){
         Jugador jugador = new Jugador("Guido");
 
         //Opciones que son eligidas
@@ -126,11 +125,11 @@ public class TestRespuestaMultiple {
 
         respuestaJugador.otorgarPuntos(new Puntos(1));
 
-        Assertions.assertEquals(jugador.getPuntos().getCantidad(),0);
+        assertEquals(jugador.getPuntos().getCantidad(),0);
     }
 
     @Test
-    public void JugadorRealizaUnaRespuestaIncorrectaEligiendoOpcionesDeMenosYNoObtienePuntaje(){
+    public void testJugadorRealizaUnaRespuestaIncorrectaEligiendoOpcionesDeMenosYNoObtienePuntaje07(){
         Jugador jugador = new Jugador("Guido");
 
         //Opciones que son eligidas
@@ -141,11 +140,11 @@ public class TestRespuestaMultiple {
 
         respuestaJugador.otorgarPuntos(new Puntos(1));
 
-        Assertions.assertEquals(jugador.getPuntos().getCantidad(),0);
+        assertEquals(jugador.getPuntos().getCantidad(),0);
     }
 
     @Test
-    public void JugadorRealizaUnaRespuestaIncorrectaEligiendoOpcionesDeMasYNoObtienePuntaje(){
+    public void testJugadorRealizaUnaRespuestaIncorrectaEligiendoOpcionesDeMasYNoObtienePuntaje08(){
         Jugador jugador = new Jugador("Guido");
 
         //Opciones que son eligidas
@@ -158,11 +157,11 @@ public class TestRespuestaMultiple {
 
         respuestaJugador.otorgarPuntos(new Puntos(1));
 
-        Assertions.assertEquals(jugador.getPuntos().getCantidad(),0);
+        assertEquals(jugador.getPuntos().getCantidad(),0);
     }
 
     @Test
-    public void JugadorRealizaUnaRespuestaIncorrectaEligiendoTodasLasOpcionesIncorrectasYNoObtienePuntaje(){
+    public void testJugadorRealizaUnaRespuestaIncorrectaEligiendoTodasLasOpcionesIncorrectasYNoObtienePuntaje09(){
         Jugador jugador = new Jugador("Guido");
 
         //Opciones que son eligidas
@@ -175,6 +174,6 @@ public class TestRespuestaMultiple {
 
         respuestaJugador.otorgarPuntos(new Puntos(1));
 
-        Assertions.assertEquals(jugador.getPuntos().getCantidad(),0);
+        assertEquals(jugador.getPuntos().getCantidad(),0);
     }
 }

@@ -1,4 +1,4 @@
-package edu.fiuba.algo3.modelo.testEntregas;
+package edu.fiuba.algo3.modelo.testentregas;
 
 import edu.fiuba.algo3.modelo.ColeccionOpciones;
 import edu.fiuba.algo3.modelo.Jugador;
@@ -12,22 +12,20 @@ import edu.fiuba.algo3.modelo.pregunta.PreguntaMultipleChoicePenalidad;
 import edu.fiuba.algo3.modelo.respuesta.Respuesta;
 import edu.fiuba.algo3.modelo.respuesta.RespuestaMultiple;
 import org.junit.jupiter.api.Test;
-
 import java.util.LinkedList;
-
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class testPreguntaMultipleChoicePenalidadEntrega2 {
+public class TestPreguntaMultipleChoicePenalidadEntrega02 {
 
-    OpcionCorrecta primeraOpcion = new OpcionCorrecta("1896", 1);
-    OpcionCorrecta segundaOpcion = new OpcionCorrecta("1936", 1);
-    OpcionIncorrecta terceraOpcion = new OpcionIncorrecta("1950", -1);
-    OpcionIncorrecta cuartaOpcion = new OpcionIncorrecta("2002", -1);
+    private final OpcionCorrecta primeraOpcion = new OpcionCorrecta("1896", 1);
+    private final OpcionCorrecta segundaOpcion = new OpcionCorrecta("1936", 1);
+    private final OpcionIncorrecta terceraOpcion = new OpcionIncorrecta("1950", -1);
+    private final OpcionIncorrecta cuartaOpcion = new OpcionIncorrecta("2002", -1);
 
-    OpcionIncorrecta primeraOpcionDos = new OpcionIncorrecta("1896", -1);
-    OpcionIncorrecta segundaOpcionDos = new OpcionIncorrecta("1936", -1);
-    OpcionCorrecta terceraOpcionDos = new OpcionCorrecta("1950", 1);
-    OpcionCorrecta cuartaOpcionDos = new OpcionCorrecta("2002", 1);
+    private final OpcionIncorrecta primeraOpcionDos = new OpcionIncorrecta("1896", -1);
+    private final OpcionIncorrecta segundaOpcionDos = new OpcionIncorrecta("1936", -1);
+    private final OpcionCorrecta terceraOpcionDos = new OpcionCorrecta("1950", 1);
+    private final OpcionCorrecta cuartaOpcionDos = new OpcionCorrecta("2002", 1);
 
     @Test
     public void testCreoPreguntaMultipleChoicePenalidadSinMultiplicadorYJugadorUnoGana01(){

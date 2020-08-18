@@ -7,7 +7,7 @@ import java.util.LinkedList;
 
 public class ColeccionOpciones {
 
-    LinkedList<Opcion> opciones;
+    private final LinkedList<Opcion> opciones;
 
     public ColeccionOpciones() {
         this.opciones = new LinkedList<>();

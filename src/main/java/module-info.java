@@ -4,5 +4,6 @@ module edu.fiuba.algo3 {
     requires java.xml;
     requires org.json;
     requires json.simple;
+    requires javafx.fxml;
     exports edu.fiuba.algo3.vista;
 }

@@ -1,4 +1,4 @@
-package edu.fiuba.algo3.modelo.testUnitarios;
+package edu.fiuba.algo3.modelo.testunitarios;
 
 import edu.fiuba.algo3.modelo.ColeccionOpciones;
 import edu.fiuba.algo3.modelo.Jugador;
@@ -12,24 +12,22 @@ import edu.fiuba.algo3.modelo.pregunta.PreguntaMultipleChoicePenalidad;
 import edu.fiuba.algo3.modelo.respuesta.Respuesta;
 import edu.fiuba.algo3.modelo.respuesta.RespuestaMultiple;
 import org.junit.jupiter.api.Test;
-
 import java.util.LinkedList;
-
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class TestPreguntaMultipleChoicePenalidad {
 
+    private final OpcionCorrecta primeraOpcion = new OpcionCorrecta("2014",1);
+    private final OpcionCorrecta segundaOpcion = new OpcionCorrecta("2010",1);
+    private final OpcionIncorrecta terceraOpcion = new OpcionIncorrecta("1902",-1);
+    private final OpcionIncorrecta cuartaOpcion = new OpcionIncorrecta("El año pasado",-1);
+
     @Test
-    public void CreoPreguntaMultipleChoicePenalidadSinMultiplicadorYRespondoUnaOpcionesCorrecta(){
+    public void testCreoPreguntaMultipleChoicePenalidadSinMultiplicadorYRespondoUnaOpcionesCorrecta01(){
 
         Jugador jugador = new Jugador("Pedro");
 
         ColeccionOpciones opciones = new ColeccionOpciones();
-
-        OpcionCorrecta primeraOpcion = new OpcionCorrecta("2014",1);
-        OpcionCorrecta segundaOpcion = new OpcionCorrecta("2010",1);
-        OpcionIncorrecta terceraOpcion = new OpcionIncorrecta("1902",-1);
-        OpcionIncorrecta cuartaOpcion = new OpcionIncorrecta("El año pasado",-1);
 
         opciones.agregarOpcion(primeraOpcion);
         opciones.agregarOpcion(segundaOpcion);
@@ -53,16 +51,11 @@ public class TestPreguntaMultipleChoicePenalidad {
     }
 
     @Test
-    public void CreoPreguntaMultipleChoicePenalidadSinMultiplicadorYRespondoDosOpcionesCorrectas(){
+    public void testCreoPreguntaMultipleChoicePenalidadSinMultiplicadorYRespondoDosOpcionesCorrectas02(){
 
         Jugador jugador = new Jugador("Pedro");
 
         ColeccionOpciones opciones = new ColeccionOpciones();
-
-        OpcionCorrecta primeraOpcion = new OpcionCorrecta("2014",1);
-        OpcionCorrecta segundaOpcion = new OpcionCorrecta("2010",1);
-        OpcionIncorrecta terceraOpcion = new OpcionIncorrecta("1902",-1);
-        OpcionIncorrecta cuartaOpcion = new OpcionIncorrecta("El año pasado",-1);
 
         opciones.agregarOpcion(primeraOpcion);
         opciones.agregarOpcion(segundaOpcion);
@@ -87,16 +80,11 @@ public class TestPreguntaMultipleChoicePenalidad {
     }
 
     @Test
-    public void CreoPreguntaMultipleChoicePenalidadSinMultiplicadorYRespondoDosOpcionesCorrectasYUnaIncorrecta(){
+    public void testCreoPreguntaMultipleChoicePenalidadSinMultiplicadorYRespondoDosOpcionesCorrectasYUnaIncorrecta03(){
 
         Jugador jugador = new Jugador("Pedro");
 
         ColeccionOpciones opciones = new ColeccionOpciones();
-
-        OpcionCorrecta primeraOpcion = new OpcionCorrecta("2014",1);
-        OpcionCorrecta segundaOpcion = new OpcionCorrecta("2010",1);
-        OpcionIncorrecta terceraOpcion = new OpcionIncorrecta("1902",-1);
-        OpcionIncorrecta cuartaOpcion = new OpcionIncorrecta("El año pasado",-1);
 
         opciones.agregarOpcion(primeraOpcion);
         opciones.agregarOpcion(segundaOpcion);
@@ -122,16 +110,11 @@ public class TestPreguntaMultipleChoicePenalidad {
     }
 
     @Test
-    public void CreoPreguntaMultipleChoicePenalidadSinMultiplicadorYRespondoDosOpcionesIncorrectas(){
+    public void testCreoPreguntaMultipleChoicePenalidadSinMultiplicadorYRespondoDosOpcionesIncorrectas04(){
 
         Jugador jugador = new Jugador("Pedro");
 
         ColeccionOpciones opciones = new ColeccionOpciones();
-
-        OpcionCorrecta primeraOpcion = new OpcionCorrecta("2014",1);
-        OpcionCorrecta segundaOpcion = new OpcionCorrecta("2010",1);
-        OpcionIncorrecta terceraOpcion = new OpcionIncorrecta("1902",-1);
-        OpcionIncorrecta cuartaOpcion = new OpcionIncorrecta("El año pasado",-1);
 
         opciones.agregarOpcion(primeraOpcion);
         opciones.agregarOpcion(segundaOpcion);
@@ -156,17 +139,12 @@ public class TestPreguntaMultipleChoicePenalidad {
     }
 
     @Test
-    public void CreoPreguntaMultipleChoicePenalidadConMultiplicadorPorDosYRespondoDosOpcionesCorrectas(){
+    public void testCreoPreguntaMultipleChoicePenalidadConMultiplicadorPorDosYRespondoDosOpcionesCorrectas05(){
 
         Jugador jugador = new Jugador("Pedro");
         Multiplicador multiplicador = new MultiplicadorPorDos();
 
         ColeccionOpciones opciones = new ColeccionOpciones();
-
-        OpcionCorrecta primeraOpcion = new OpcionCorrecta("2014",1);
-        OpcionCorrecta segundaOpcion = new OpcionCorrecta("2010",1);
-        OpcionIncorrecta terceraOpcion = new OpcionIncorrecta("1902",-1);
-        OpcionIncorrecta cuartaOpcion = new OpcionIncorrecta("El año pasado",-1);
 
         opciones.agregarOpcion(primeraOpcion);
         opciones.agregarOpcion(segundaOpcion);
@@ -191,17 +169,12 @@ public class TestPreguntaMultipleChoicePenalidad {
     }
 
     @Test
-    public void CreoPreguntaMultipleChoicePenalidadConMultiplicadorPorDosYRespondoDosOpcionesCorrectasYUnaIncorrecta(){
+    public void testCreoPreguntaMultipleChoicePenalidadConMultiplicadorPorDosYRespondoDosOpcionesCorrectasYUnaIncorrecta06(){
 
         Jugador jugador = new Jugador("Pedro");
         Multiplicador multiplicador = new MultiplicadorPorDos();
 
         ColeccionOpciones opciones = new ColeccionOpciones();
-
-        OpcionCorrecta primeraOpcion = new OpcionCorrecta("2014",1);
-        OpcionCorrecta segundaOpcion = new OpcionCorrecta("2010",1);
-        OpcionIncorrecta terceraOpcion = new OpcionIncorrecta("1902",-1);
-        OpcionIncorrecta cuartaOpcion = new OpcionIncorrecta("El año pasado",-1);
 
         opciones.agregarOpcion(primeraOpcion);
         opciones.agregarOpcion(segundaOpcion);
@@ -227,17 +200,12 @@ public class TestPreguntaMultipleChoicePenalidad {
     }
 
     @Test
-    public void CreoPreguntaMultipleChoicePenalidadConMultiplicadorPorDosYRespondoDosOpcionesIncorrectas(){
+    public void testCreoPreguntaMultipleChoicePenalidadConMultiplicadorPorDosYRespondoDosOpcionesIncorrectas07(){
 
         Jugador jugador = new Jugador("Pedro");
         Multiplicador multiplicador = new MultiplicadorPorDos();
 
         ColeccionOpciones opciones = new ColeccionOpciones();
-
-        OpcionCorrecta primeraOpcion = new OpcionCorrecta("2014",1);
-        OpcionCorrecta segundaOpcion = new OpcionCorrecta("2010",1);
-        OpcionIncorrecta terceraOpcion = new OpcionIncorrecta("1902",-1);
-        OpcionIncorrecta cuartaOpcion = new OpcionIncorrecta("El año pasado",-1);
 
         opciones.agregarOpcion(primeraOpcion);
         opciones.agregarOpcion(segundaOpcion);
@@ -262,17 +230,12 @@ public class TestPreguntaMultipleChoicePenalidad {
     }
 
     @Test
-    public void CreoPreguntaMultipleChoicePenalidadConMultiplicadorPorTresYRespondoDosOpcionesIncorrectas(){
+    public void testCreoPreguntaMultipleChoicePenalidadConMultiplicadorPorTresYRespondoDosOpcionesIncorrectas08(){
 
         Jugador jugador = new Jugador("Pedro");
         Multiplicador multiplicador = new MultiplicadorPorTres();
 
         ColeccionOpciones opciones = new ColeccionOpciones();
-
-        OpcionCorrecta primeraOpcion = new OpcionCorrecta("2014",1);
-        OpcionCorrecta segundaOpcion = new OpcionCorrecta("2010",1);
-        OpcionIncorrecta terceraOpcion = new OpcionIncorrecta("1902",-1);
-        OpcionIncorrecta cuartaOpcion = new OpcionIncorrecta("El año pasado",-1);
 
         opciones.agregarOpcion(primeraOpcion);
         opciones.agregarOpcion(segundaOpcion);
@@ -297,17 +260,12 @@ public class TestPreguntaMultipleChoicePenalidad {
     }
 
     @Test
-    public void CreoPreguntaMultipleChoicePenalidadConMultiplicadorPorTresYRespondoDosOpcionesIncorrectasYUnaCorrecta(){
+    public void testCreoPreguntaMultipleChoicePenalidadConMultiplicadorPorTresYRespondoDosOpcionesIncorrectasYUnaCorrecta09(){
 
         Jugador jugador = new Jugador("Pedro");
         Multiplicador multiplicador = new MultiplicadorPorTres();
 
         ColeccionOpciones opciones = new ColeccionOpciones();
-
-        OpcionCorrecta primeraOpcion = new OpcionCorrecta("2014",1);
-        OpcionCorrecta segundaOpcion = new OpcionCorrecta("2010",1);
-        OpcionIncorrecta terceraOpcion = new OpcionIncorrecta("1902",-1);
-        OpcionIncorrecta cuartaOpcion = new OpcionIncorrecta("El año pasado",-1);
 
         opciones.agregarOpcion(primeraOpcion);
         opciones.agregarOpcion(segundaOpcion);
@@ -331,5 +289,4 @@ public class TestPreguntaMultipleChoicePenalidad {
 
         assertEquals(jugador.getPuntos().getCantidad(),-3);
     }
-
 }
