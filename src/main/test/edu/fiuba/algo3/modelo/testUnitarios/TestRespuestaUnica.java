@@ -1,6 +1,5 @@
 package edu.fiuba.algo3.modelo.testUnitarios;
 
-
 import edu.fiuba.algo3.modelo.Jugador;
 import edu.fiuba.algo3.modelo.Puntos;
 import edu.fiuba.algo3.modelo.multiplicador.MultiplicadorPorTres;
@@ -12,12 +11,10 @@ import org.junit.Test;
 import org.junit.jupiter.api.Assertions;
 
 public class TestRespuestaUnica {
-   private Opcion opcionVerdadero;
-    private Opcion opcionFalso;
 
     @Test
-    public void JugadorRealizaUnaRespuestaCorrectaYObtienePuntaje(){
-        opcionVerdadero = new OpcionCorrecta("Euler",1);
+    public void testJugadorRealizaUnaRespuestaCorrectaYObtienePuntaje01(){
+        Opcion opcionVerdadero = new OpcionCorrecta("Euler");
 
         Jugador jugador = new Jugador("Guido");
         RespuestaUnica respuestaJugador = new RespuestaUnica(opcionVerdadero, jugador);
@@ -29,8 +26,8 @@ public class TestRespuestaUnica {
     }
 
     @Test
-    public void JugadorRealizaUnaRespuestaIncorrectaYNoObtienePuntaje(){
-        opcionFalso = new OpcionCorrecta("Gauss",0);
+    public void testJugadorRealizaUnaRespuestaIncorrectaYNoObtienePuntaje02(){
+        Opcion opcionFalso = new OpcionCorrecta("Gauss");
 
         Jugador jugador = new Jugador("Guido");
         RespuestaUnica respuestaJugador = new RespuestaUnica(opcionFalso, jugador);
@@ -40,10 +37,9 @@ public class TestRespuestaUnica {
         Assertions.assertEquals(jugador.getPuntos().getCantidad(),0);
     }
 
-
     @Test
-    public void JugadorRealizaUnaRespuestaCorrectaConMultiplicador(){
-        opcionFalso = new OpcionCorrecta("Gauss",0);
+    public void testJugadorRealizaUnaRespuestaCorrectaConMultiplicador03(){
+        Opcion opcionFalso = new OpcionCorrecta("Gauss");
 
         MultiplicadorPorDos multiplicadorPorDos = new MultiplicadorPorDos();
 
@@ -57,8 +53,8 @@ public class TestRespuestaUnica {
     }
 
     @Test
-    public void JugadorRespondeDosCorrectaIntentaUtilizarElMultiplicadorUnaVesUsado(){
-        opcionFalso = new OpcionCorrecta("Gauss",0);
+    public void testJugadorRespondeDosCorrectaIntentaUtilizarElMultiplicadorUnaVezUsado04(){
+        Opcion opcionFalso = new OpcionCorrecta("Gauss");
 
         MultiplicadorPorDos multiplicadorPorDos = new MultiplicadorPorDos();
 
@@ -74,9 +70,10 @@ public class TestRespuestaUnica {
 
         Assertions.assertEquals(jugador.getPuntos().getCantidad(),3);
     }
+
     @Test
-    public void JugadorRespondeCorrectaEIncorrectaIntentaUtilizarElMultiplicadorUnaVesUsado(){
-        opcionFalso = new OpcionCorrecta("Gauss",0);
+    public void testJugadorRespondeCorrectaEIncorrectaIntentaUtilizarElMultiplicadorUnaVezUsado05(){
+        Opcion opcionFalso = new OpcionCorrecta("Gauss");
 
         MultiplicadorPorDos multiplicadorPorDos = new MultiplicadorPorDos();
 
@@ -92,9 +89,10 @@ public class TestRespuestaUnica {
 
         Assertions.assertEquals(jugador.getPuntos().getCantidad(),1);
     }
+
     @Test
-    public void JugadorUtilizarSusDosMultiplicadores(){
-        opcionFalso = new OpcionCorrecta("Gauss",0);
+    public void testJugadorUtilizarSusDosMultiplicadores06(){
+        Opcion opcionFalso = new OpcionCorrecta("Gauss");
 
         MultiplicadorPorDos multiplicadorPorDos = new MultiplicadorPorDos();
         MultiplicadorPorTres multiplicadorPorTres = new MultiplicadorPorTres();

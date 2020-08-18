@@ -12,15 +12,13 @@ import edu.fiuba.algo3.modelo.pregunta.PreguntaMultipleChoicePenalidad;
 import edu.fiuba.algo3.modelo.respuesta.Respuesta;
 import edu.fiuba.algo3.modelo.respuesta.RespuestaMultiple;
 import org.junit.jupiter.api.Test;
-
 import java.util.LinkedList;
-
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class TestPreguntaMultipleChoicePenalidad {
 
     @Test
-    public void CreoPreguntaMultipleChoicePenalidadSinMultiplicadorYRespondoUnaOpcionesCorrecta(){
+    public void testCreoPreguntaMultipleChoicePenalidadSinMultiplicadorYRespondoUnaOpcionesCorrecta01(){
 
         Jugador jugador = new Jugador("Pedro");
 
@@ -53,7 +51,7 @@ public class TestPreguntaMultipleChoicePenalidad {
     }
 
     @Test
-    public void CreoPreguntaMultipleChoicePenalidadSinMultiplicadorYRespondoDosOpcionesCorrectas(){
+    public void testCreoPreguntaMultipleChoicePenalidadSinMultiplicadorYRespondoDosOpcionesCorrectas02(){
 
         Jugador jugador = new Jugador("Pedro");
 
@@ -87,7 +85,7 @@ public class TestPreguntaMultipleChoicePenalidad {
     }
 
     @Test
-    public void CreoPreguntaMultipleChoicePenalidadSinMultiplicadorYRespondoDosOpcionesCorrectasYUnaIncorrecta(){
+    public void testCreoPreguntaMultipleChoicePenalidadSinMultiplicadorYRespondoDosOpcionesCorrectasYUnaIncorrecta03(){
 
         Jugador jugador = new Jugador("Pedro");
 
@@ -122,7 +120,7 @@ public class TestPreguntaMultipleChoicePenalidad {
     }
 
     @Test
-    public void CreoPreguntaMultipleChoicePenalidadSinMultiplicadorYRespondoDosOpcionesIncorrectas(){
+    public void testCreoPreguntaMultipleChoicePenalidadSinMultiplicadorYRespondoDosOpcionesIncorrectas04(){
 
         Jugador jugador = new Jugador("Pedro");
 
@@ -156,7 +154,7 @@ public class TestPreguntaMultipleChoicePenalidad {
     }
 
     @Test
-    public void CreoPreguntaMultipleChoicePenalidadConMultiplicadorPorDosYRespondoDosOpcionesCorrectas(){
+    public void testCreoPreguntaMultipleChoicePenalidadConMultiplicadorPorDosYRespondoDosOpcionesCorrectas05(){
 
         Jugador jugador = new Jugador("Pedro");
         Multiplicador multiplicador = new MultiplicadorPorDos();
@@ -191,7 +189,7 @@ public class TestPreguntaMultipleChoicePenalidad {
     }
 
     @Test
-    public void CreoPreguntaMultipleChoicePenalidadConMultiplicadorPorDosYRespondoDosOpcionesCorrectasYUnaIncorrecta(){
+    public void testCreoPreguntaMultipleChoicePenalidadConMultiplicadorPorDosYRespondoDosOpcionesCorrectasYUnaIncorrecta06(){
 
         Jugador jugador = new Jugador("Pedro");
         Multiplicador multiplicador = new MultiplicadorPorDos();
@@ -227,7 +225,7 @@ public class TestPreguntaMultipleChoicePenalidad {
     }
 
     @Test
-    public void CreoPreguntaMultipleChoicePenalidadConMultiplicadorPorDosYRespondoDosOpcionesIncorrectas(){
+    public void testCreoPreguntaMultipleChoicePenalidadConMultiplicadorPorDosYRespondoDosOpcionesIncorrectas07(){
 
         Jugador jugador = new Jugador("Pedro");
         Multiplicador multiplicador = new MultiplicadorPorDos();
@@ -262,7 +260,7 @@ public class TestPreguntaMultipleChoicePenalidad {
     }
 
     @Test
-    public void CreoPreguntaMultipleChoicePenalidadConMultiplicadorPorTresYRespondoDosOpcionesIncorrectas(){
+    public void testCreoPreguntaMultipleChoicePenalidadConMultiplicadorPorTresYRespondoDosOpcionesIncorrectas08(){
 
         Jugador jugador = new Jugador("Pedro");
         Multiplicador multiplicador = new MultiplicadorPorTres();
@@ -297,7 +295,7 @@ public class TestPreguntaMultipleChoicePenalidad {
     }
 
     @Test
-    public void CreoPreguntaMultipleChoicePenalidadConMultiplicadorPorTresYRespondoDosOpcionesIncorrectasYUnaCorrecta(){
+    public void testCreoPreguntaMultipleChoicePenalidadConMultiplicadorPorTresYRespondoDosOpcionesIncorrectasYUnaCorrecta09(){
 
         Jugador jugador = new Jugador("Pedro");
         Multiplicador multiplicador = new MultiplicadorPorTres();
@@ -331,5 +329,4 @@ public class TestPreguntaMultipleChoicePenalidad {
 
         assertEquals(jugador.getPuntos().getCantidad(),-3);
     }
-
 }

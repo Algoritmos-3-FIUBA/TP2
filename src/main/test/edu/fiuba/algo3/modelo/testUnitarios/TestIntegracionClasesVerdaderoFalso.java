@@ -7,14 +7,14 @@ import edu.fiuba.algo3.modelo.pregunta.PreguntaVerdaderoFalsoPenalidad;
 import edu.fiuba.algo3.modelo.respuesta.Respuesta;
 import edu.fiuba.algo3.modelo.respuesta.RespuestaUnica;
 import org.junit.Test;
-import org.junit.jupiter.api.Assertions;
-
 import java.util.LinkedList;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class TestIntegracionClasesVerdaderoFalso {
 
     @Test
-    public void JugadorRespondeDiferentesTiposDePreguntasDeFormaCorrecta(){
+    public void testJugadorRespondeDiferentesTiposDePreguntasDeFormaCorrecta01(){
         // Creacion de Jugador
         Jugador juan = new Jugador("Juan");
         // Creacion de primer pregunta estilo VoF Clasica.
@@ -39,11 +39,11 @@ public class TestIntegracionClasesVerdaderoFalso {
 
         Puntos puntosJuan = juan.getPuntos();
 
-        Assertions.assertEquals(puntosJuan.getCantidad(),2);
+        assertEquals(puntosJuan.getCantidad(),2);
 
     }
     @Test
-    public void JugadorRespondeDeFormaCorrectaPreguntaVoFClasicaEIncorrectaPreguntaVoFPenalidad(){
+    public void testJugadorRespondeDeFormaCorrectaPreguntaVoFClasicaEIncorrectaPreguntaVoFPenalidad02(){
         // Creacion de Jugador
         Jugador juan = new Jugador("Juan");
         // Creacion de primer pregunta estilo VoF Clasica.
@@ -68,11 +68,11 @@ public class TestIntegracionClasesVerdaderoFalso {
 
         Puntos puntosJuan = juan.getPuntos();
 
-        Assertions.assertEquals(puntosJuan.getCantidad(),0);
+        assertEquals(puntosJuan.getCantidad(),0);
     }
 
     @Test
-    public void JugadorRespondeDeFormaIncorrectaPreguntaVoFClasicaECorrectaPreguntaVoFPenalidad(){
+    public void testJugadorRespondeDeFormaIncorrectaPreguntaVoFClasicaECorrectaPreguntaVoFPenalidad03(){
         // Creacion de Jugador
         Jugador juan = new Jugador("Juan");
         // Creacion de primer pregunta estilo VoF Clasica.
@@ -97,7 +97,6 @@ public class TestIntegracionClasesVerdaderoFalso {
 
         Puntos puntosJuan = juan.getPuntos();
 
-        Assertions.assertEquals(puntosJuan.getCantidad(),1);
-
+        assertEquals(puntosJuan.getCantidad(),1);
     }
 }

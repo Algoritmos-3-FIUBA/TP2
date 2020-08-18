@@ -10,15 +10,13 @@ import edu.fiuba.algo3.modelo.pregunta.PreguntaOrderedChoice;
 import edu.fiuba.algo3.modelo.respuesta.Respuesta;
 import edu.fiuba.algo3.modelo.respuesta.RespuestaMultiple;
 import org.junit.jupiter.api.Test;
-
 import java.util.LinkedList;
-
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class TestPreguntaOrderedChoice {
 
     @Test
-    public void CreoPreguntaOrderedChoiceYJugadorOrdenaIncorrectamente(){
+    public void testCreoPreguntaOrderedChoiceYJugadorOrdenaIncorrectamente01(){
 
         Jugador Juan = new Jugador("Juan");
 
@@ -54,7 +52,7 @@ public class TestPreguntaOrderedChoice {
     }
 
     @Test
-    public void CreoPreguntaOrderedChoiceYJugadorOrdenaCorrectamente(){
+    public void testCreoPreguntaOrderedChoiceYJugadorOrdenaCorrectamente02(){
 
         Jugador Juan = new Jugador("Juan");
 
@@ -90,7 +88,7 @@ public class TestPreguntaOrderedChoice {
     }
 
     @Test
-    public void CreoPreguntaOrderedChoiceYJugadorOrdenaCorrectamentePeroSinInsertarTodasLasOpciones(){
+    public void testCreoPreguntaOrderedChoiceYJugadorOrdenaCorrectamentePeroSinInsertarTodasLasOpciones03(){
 
         Jugador Juan = new Jugador("Juan");
 
@@ -125,7 +123,7 @@ public class TestPreguntaOrderedChoice {
     }
 
     @Test
-    public void CreoPreguntaOrderedChoiceYJugadorOrdenaCorrectamenteConExclusividad(){
+    public void testCreoPreguntaOrderedChoiceYJugadorOrdenaCorrectamenteConExclusividad04(){
 
         Jugador Juan = new Jugador("Juan");
 
@@ -161,7 +159,7 @@ public class TestPreguntaOrderedChoice {
     }
 
     @Test
-    public void CreoPreguntaOrderedChoiceYDosJugadorOrdenanCorrectamenteConUnaExclusividad(){
+    public void testCreoPreguntaOrderedChoiceYDosJugadorOrdenanCorrectamenteConUnaExclusividad05(){
 
         Jugador Juan = new Jugador("Juan");
         Jugador Mati = new Jugador("Mati");
@@ -207,7 +205,7 @@ public class TestPreguntaOrderedChoice {
     }
 
     @Test
-    public void CreoPreguntaOrderedChoiceYDosJugadorOrdenanCorrectamenteConDosExclusividades(){
+    public void testCreoPreguntaOrderedChoiceYDosJugadorOrdenanCorrectamenteConDosExclusividades06(){
 
         Jugador Juan = new Jugador("Juan");
         Jugador Mati = new Jugador("Mati");
@@ -253,7 +251,7 @@ public class TestPreguntaOrderedChoice {
     }
 
     @Test
-    public void CreoPreguntaOrderedChoiceYUnJugadorOrdenanCorrectamenteConDosExclusividades(){
+    public void testCreoPreguntaOrderedChoiceYUnJugadorOrdenanCorrectamenteConDosExclusividades07(){
 
         Jugador Juan = new Jugador("Juan");
         Jugador Mati = new Jugador("Mati");
@@ -297,7 +295,7 @@ public class TestPreguntaOrderedChoice {
     }
 
     @Test
-    public void CreoPreguntaOrderedChoiceYDosJugadoresOrdenanIncorrectamenteConDosExclusividades() {
+    public void testCreoPreguntaOrderedChoiceYDosJugadoresOrdenanIncorrectamenteConDosExclusividades08() {
 
         Jugador Juan = new Jugador("Juan");
         Jugador Mati = new Jugador("Mati");
@@ -342,7 +340,7 @@ public class TestPreguntaOrderedChoice {
     }
 
     @Test
-    public void CreoPreguntaOrderedChoiceYDosJugadoresOrdenanCorrectamente() {
+    public void testCreoPreguntaOrderedChoiceYDosJugadoresOrdenanCorrectamente09() {
 
         Jugador Juan = new Jugador("Juan");
         Jugador Mati = new Jugador("Mati");
@@ -388,7 +386,7 @@ public class TestPreguntaOrderedChoice {
     }
 
     @Test
-    public void CreoPreguntaOrderedChoiceConOpcionesCorrectasEIncorrectasYJugadorOrdenaCorrectamente(){
+    public void testCreoPreguntaOrderedChoiceConOpcionesCorrectasEIncorrectasYJugadorOrdenaCorrectamente10(){
 
         Jugador Juan = new Jugador("Juan");
 
@@ -423,7 +421,7 @@ public class TestPreguntaOrderedChoice {
     }
 
     @Test
-    public void CreoPreguntaOrderedChoiceConOpcionesCorrectasEIncorrectasYJugadorOrdenaCorrectamentePeroSeleccionaLaIncorrectaYNoTienePuntaje(){
+    public void testCreoPreguntaOrderedChoiceConOpcionesCorrectasEIncorrectasYJugadorOrdenaCorrectamentePeroSeleccionaLaIncorrectaYNoTienePuntaje11(){
 
         Jugador Juan = new Jugador("Juan");
 
@@ -459,7 +457,7 @@ public class TestPreguntaOrderedChoice {
     }
 
     @Test
-    public void CreoPreguntaOrderedChoiceConOpcionesCorrectasEIncorrectasYJugadorNoOrdenaCorrectamenteYSeleccionaLaIncorrectaYNoTienePuntaje(){
+    public void testCreoPreguntaOrderedChoiceConOpcionesCorrectasEIncorrectasYJugadorNoOrdenaCorrectamenteYSeleccionaLaIncorrectaYNoTienePuntaje12(){
 
         Jugador Juan = new Jugador("Juan");
 

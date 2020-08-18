@@ -5,21 +5,19 @@ import edu.fiuba.algo3.modelo.opcion.Opcion;
 import edu.fiuba.algo3.modelo.opcion.OpcionCorrecta;
 import edu.fiuba.algo3.modelo.opcion.OpcionIncorrecta;
 import org.junit.jupiter.api.Test;
-
 import java.util.LinkedList;
-
 import static org.junit.jupiter.api.Assertions.*;
 
 public class TestColeccionOpciones {
 
-    OpcionCorrecta primeraOpcion = new OpcionCorrecta("Juan", 0);
-    OpcionCorrecta segundaOpcion = new OpcionCorrecta("Mati", 0);
-    OpcionCorrecta terceraOpcion = new OpcionCorrecta("Fer", 0);
-    OpcionIncorrecta cuartaOpcion = new OpcionIncorrecta("Guido", 0);
-    OpcionIncorrecta quintaOpcion = new OpcionIncorrecta("Lucas", 0);
+    private final OpcionCorrecta primeraOpcion = new OpcionCorrecta("Juan", 0);
+    private final OpcionCorrecta segundaOpcion = new OpcionCorrecta("Mati", 0);
+    private final OpcionCorrecta terceraOpcion = new OpcionCorrecta("Fer", 0);
+    private final OpcionIncorrecta cuartaOpcion = new OpcionIncorrecta("Guido", 0);
+    private final OpcionIncorrecta quintaOpcion = new OpcionIncorrecta("Lucas", 0);
 
     @Test
-    public void CreoGrupoConUnaListaDeOpcionesYAlPedirlasLasDevuelveCorrectamente() {
+    public void testCreoGrupoConUnaListaDeOpcionesYAlPedirlasLasDevuelveCorrectamente01() {
         LinkedList<Opcion> opciones = new LinkedList<>();
 
         opciones.add(primeraOpcion);
@@ -34,7 +32,7 @@ public class TestColeccionOpciones {
     }
 
     @Test
-    public void CreoGrupoConOtraListaDeOpcionesYAlPedirlasLasDevuelveCorrectamente() {
+    public void testCreoGrupoConOtraListaDeOpcionesYAlPedirlasLasDevuelveCorrectamente02() {
         LinkedList<Opcion> opciones = new LinkedList<>();
 
         opciones.add(primeraOpcion);
@@ -48,7 +46,7 @@ public class TestColeccionOpciones {
     }
 
     @Test
-    public void CreoGrupoAgregarndoUnaOpcionPorUnaYAlPedirlasLasDevuelveCorrectamente() {
+    public void testCreoGrupoAgregarndoUnaOpcionPorUnaYAlPedirlasLasDevuelveCorrectamente03() {
         LinkedList<Opcion> opciones = new LinkedList<>();
 
         opciones.add(primeraOpcion);
@@ -69,7 +67,7 @@ public class TestColeccionOpciones {
     }
 
     @Test
-    public void CreoDosGruposConLasMismasOpcionesEnElMismoOrdenYTienenLosMismosElementos() {
+    public void testCreoDosGruposConLasMismasOpcionesEnElMismoOrdenYTienenLosMismosElementos04() {
         ColeccionOpciones grupo = new ColeccionOpciones();
 
         grupo.agregarOpcion(primeraOpcion);
@@ -86,11 +84,11 @@ public class TestColeccionOpciones {
         otroGrupo.agregarOpcion(cuartaOpcion);
         otroGrupo.agregarOpcion(quintaOpcion);
 
-        assert(grupo.tieneMismosElementos(otroGrupo));
+        assertTrue(grupo.tieneMismosElementos(otroGrupo));
     }
 
     @Test
-    public void CreoDosGruposConLasMismasOpcionesEnDistintoOrdenYTienenLosMismosElementos() {
+    public void testCreoDosGruposConLasMismasOpcionesEnDistintoOrdenYTienenLosMismosElementos05() {
         ColeccionOpciones grupo = new ColeccionOpciones();
 
         grupo.agregarOpcion(primeraOpcion);
@@ -107,11 +105,11 @@ public class TestColeccionOpciones {
         otroGrupo.agregarOpcion(segundaOpcion);
         otroGrupo.agregarOpcion(primeraOpcion);
 
-        assert(grupo.tieneMismosElementos(otroGrupo));
+        assertTrue(grupo.tieneMismosElementos(otroGrupo));
     }
 
     @Test
-    public void CreoDosGruposDiferentesYNoTienenLosMismosElementos() {
+    public void testCreoDosGruposDiferentesYNoTienenLosMismosElementos06() {
         ColeccionOpciones grupo = new ColeccionOpciones();
 
         grupo.agregarOpcion(primeraOpcion);
@@ -127,7 +125,7 @@ public class TestColeccionOpciones {
     }
 
     @Test
-    public void CreoDosGruposConLasMismasOpcionesEnElMismoOrdenYSonIguales() {
+    public void testCreoDosGruposConLasMismasOpcionesEnElMismoOrdenYSonIguales07() {
         ColeccionOpciones grupo = new ColeccionOpciones();
 
         grupo.agregarOpcion(primeraOpcion);
@@ -142,11 +140,11 @@ public class TestColeccionOpciones {
         otroGrupo.agregarOpcion(cuartaOpcion);
         otroGrupo.agregarOpcion(quintaOpcion);
 
-        assert(grupo.esIgual(otroGrupo));
+        assertTrue(grupo.esIgual(otroGrupo));
     }
 
     @Test
-    public void CreoDosGruposConLasMismasOpcionesEnDistintoOrdenYNoSonIguales() {
+    public void testCreoDosGruposConLasMismasOpcionesEnDistintoOrdenYNoSonIguales08() {
         ColeccionOpciones grupo = new ColeccionOpciones();
 
         grupo.agregarOpcion(primeraOpcion);
@@ -165,7 +163,7 @@ public class TestColeccionOpciones {
     }
 
     @Test
-    public void CreoDosGruposDiferentesYNoSonIguales() {
+    public void testCreoDosGruposDiferentesYNoSonIguales09() {
         ColeccionOpciones grupo = new ColeccionOpciones();
 
         grupo.agregarOpcion(primeraOpcion);
@@ -183,7 +181,7 @@ public class TestColeccionOpciones {
     }
 
     @Test
-    public void GrupoSeparaCorrectamenteEnLosDosGruposCorrectos() {
+    public void testGrupoSeparaCorrectamenteEnLosDosGruposCorrectos10() {
         ColeccionOpciones grupo = new ColeccionOpciones();
 
         grupo.agregarOpcion(primeraOpcion);
@@ -206,12 +204,12 @@ public class TestColeccionOpciones {
         grupoEsperadoIncorrecto.agregarOpcion(cuartaOpcion);
         grupoEsperadoIncorrecto.agregarOpcion(quintaOpcion);
 
-        assert(grupoCorrecto.esIgual(grupoEsperadoCorrecto));
-        assert(grupoIncorrecto.esIgual(grupoEsperadoIncorrecto));
+        assertTrue(grupoCorrecto.esIgual(grupoEsperadoCorrecto));
+        assertTrue(grupoIncorrecto.esIgual(grupoEsperadoIncorrecto));
     }
 
     @Test
-    public void DosGruposQueCompartenOpcionesTienenOpcionesEnComun() {
+    public void testDosGruposQueCompartenOpcionesTienenOpcionesEnComun11() {
         ColeccionOpciones grupo = new ColeccionOpciones();
 
         grupo.agregarOpcion(primeraOpcion);
@@ -224,11 +222,11 @@ public class TestColeccionOpciones {
         otroGrupo.agregarOpcion(quintaOpcion);
         otroGrupo.agregarOpcion(primeraOpcion);
 
-        assert(grupo.tieneElementos(otroGrupo));
+        assertTrue(grupo.tieneElementos(otroGrupo));
     }
 
     @Test
-    public void DosGruposDiferentesNoTienenOpcionesEnComun() {
+    public void testDosGruposDiferentesNoTienenOpcionesEnComun12() {
         ColeccionOpciones grupo = new ColeccionOpciones();
 
         grupo.agregarOpcion(primeraOpcion);
@@ -242,90 +240,4 @@ public class TestColeccionOpciones {
 
         assertFalse(grupo.tieneElementos(otroGrupo));
     }
-
-    //Version Anterior
-    /*
-    OpcionCorrecta primeraOpcion = new OpcionCorrecta("Opcion1", 0);
-    OpcionCorrecta segundaOpcion = new OpcionCorrecta("Opcion2", 0);
-    OpcionCorrecta terceraOpcion = new OpcionCorrecta("Opcion3", 0);
-    OpcionCorrecta cuartaOpcion = new OpcionCorrecta("Opcion4", 0);
-
-    @Test
-    public void CreoGrupoYPidoSusOpciones() {
-        Grupo grupo = new Grupo("Grupo");
-
-        HashSet<Opcion> opciones = new HashSet<Opcion>();
-        //LinkedList< Opcion > list1 = new LinkedList < Opcion > ();
-
-       // list1.add(primeraOpcion);
-        //list1.add(segundaOpcion);
-        //list1.add(terceraOpcion);
-        //list1.add(cuartaOpcion);
-
-        opciones.add(primeraOpcion);
-        opciones.add(segundaOpcion);
-        opciones.add(terceraOpcion);
-        opciones.add(cuartaOpcion);
-        System.out.println(opciones);
-
-        //LinkedList< Opcion > list = new LinkedList < Opcion > ( opciones );
-
-        //System.out.println(list);
-        grupo.agregarOpcion(primeraOpcion);
-        grupo.agregarOpcion(segundaOpcion);
-        grupo.agregarOpcion(terceraOpcion);
-        grupo.agregarOpcion(cuartaOpcion);
-
-        //assertEquals(list1, list);
-        assertEquals((grupo.getOpcionesDelGrupo()), opciones);
-    }
-
-    @Test
-    public void CreoGrupoYVerificoSusOpcionesDeberianSerCorrectasYOtorgarPunto() {
-        Grupo grupo = new Grupo("Grupo");
-
-        Puntos puntosAsignar = new Puntos(1);
-
-        Puntos puntosDevueltos;
-
-        HashSet<OpcionCorrecta> opciones = new HashSet<OpcionCorrecta>();
-
-        opciones.add(primeraOpcion);
-        opciones.add(segundaOpcion);
-        opciones.add(terceraOpcion);
-        opciones.add(cuartaOpcion);
-
-        grupo.agregarOpcion(cuartaOpcion);
-        grupo.agregarOpcion(terceraOpcion);
-        grupo.agregarOpcion(segundaOpcion);
-        grupo.agregarOpcion(primeraOpcion);
-
-        puntosDevueltos = grupo.evaluarGrupo(opciones,puntosAsignar);
-
-        assertEquals(puntosAsignar, puntosDevueltos);
-    }
-
-    @Test
-    public void CreoGrupoYVerificoSusOpcionesDeberianSerIncorrectasYNoOtorgarPunto() {
-        Grupo grupo = new Grupo("Grupo");
-
-        Puntos puntosAsignar = new Puntos(1);
-
-        Puntos puntosDevueltos;
-
-        HashSet<OpcionCorrecta> opciones = new HashSet<OpcionCorrecta>();
-
-        opciones.add(primeraOpcion);
-        opciones.add(segundaOpcion);
-        opciones.add(terceraOpcion);
-        opciones.add(cuartaOpcion);
-
-        grupo.agregarOpcion(cuartaOpcion);
-        grupo.agregarOpcion(terceraOpcion);
-        grupo.agregarOpcion(segundaOpcion);
-
-        puntosDevueltos = grupo.evaluarGrupo(opciones,puntosAsignar);
-
-        assertNotEquals(puntosAsignar,puntosDevueltos);
-    }*/
 }

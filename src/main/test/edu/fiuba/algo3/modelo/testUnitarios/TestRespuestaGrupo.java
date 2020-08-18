@@ -7,20 +7,19 @@ import edu.fiuba.algo3.modelo.opcion.Opcion;
 import edu.fiuba.algo3.modelo.opcion.OpcionCorrecta;
 import edu.fiuba.algo3.modelo.respuesta.RespuestaGrupos;
 import org.junit.jupiter.api.Test;
-
 import java.util.HashSet;
 import java.util.LinkedList;
-
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class TestRespuestaGrupo {
 
-    OpcionCorrecta primeraOpcion = new OpcionCorrecta("Opcion1");
-    OpcionCorrecta segundaOpcion = new OpcionCorrecta("Opcion2");
-    OpcionCorrecta terceraOpcion = new OpcionCorrecta("Opcion3");
-    OpcionCorrecta cuartaOpcion = new OpcionCorrecta("Opcion4");
+    private final OpcionCorrecta primeraOpcion = new OpcionCorrecta("Opcion1");
+    private final OpcionCorrecta segundaOpcion = new OpcionCorrecta("Opcion2");
+    private final OpcionCorrecta terceraOpcion = new OpcionCorrecta("Opcion3");
+    private final OpcionCorrecta cuartaOpcion = new OpcionCorrecta("Opcion4");
+
     @Test
-    public void CreoLaRespuestaGroupChoiceDelJugadorYVerificoSiSonLasElegidas() {
+    public void testCreoLaRespuestaGroupChoiceDelJugadorYVerificoSiSonLasElegidas01() {
         Jugador jugador = new Jugador("Guido");
 
         ColeccionOpciones grupo = new ColeccionOpciones();
@@ -47,7 +46,7 @@ public class TestRespuestaGrupo {
     }
 
     @Test
-    public void CreoLaRespuestaGroupChoiceDelJugadorYVerificoSiSonLasElegidasElJugadorNoEligeTodasLasOpciones() {
+    public void testCreoLaRespuestaGroupChoiceDelJugadorYVerificoSiSonLasElegidasElJugadorNoEligeTodasLasOpciones02() {
         Jugador jugador = new Jugador("Guido");
 
         ColeccionOpciones grupo = new ColeccionOpciones();
@@ -72,7 +71,7 @@ public class TestRespuestaGrupo {
     }
 
     @Test
-    public void AsignoPuntajeAlJugador() {
+    public void testAsignoPuntajeAlJugador03() {
         Jugador jugador = new Jugador("Guido");
 
         Puntos puntos = new Puntos(1);

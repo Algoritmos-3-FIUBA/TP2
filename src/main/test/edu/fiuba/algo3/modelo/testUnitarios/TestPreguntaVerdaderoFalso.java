@@ -6,7 +6,6 @@ import edu.fiuba.algo3.modelo.opcion.Opcion;
 import edu.fiuba.algo3.modelo.pregunta.PreguntaVerdaderoFalsoClasico;
 import edu.fiuba.algo3.modelo.respuesta.Respuesta;
 import edu.fiuba.algo3.modelo.respuesta.RespuestaUnica;
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import java.util.LinkedList;
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -14,66 +13,55 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 public class TestPreguntaVerdaderoFalso {
 
     @Test
-    public void CreoPreguntaVerdaderoFalsoClasicoConNombrePregunta1YObtengoNombrePregunta1(){
-
+    public void testCreoPreguntaVerdaderoFalsoClasicoConNombrePregunta1YObtengoNombrePregunta101(){
         PreguntaVerdaderoFalsoClasico preguntaPrueba = new PreguntaVerdaderoFalsoClasico("Pregunta1");
         preguntaPrueba.setVerdaderoOpcionCorrecta();
 
         assertEquals(preguntaPrueba.getNombrePregunta(), "Pregunta1");
-
     }
 
     @Test
-    public void CreoPreguntaVerdaderoFalsoClasicoConVerdaderoCorrectaYVerdaderoSumaUnPunto(){
-
+    public void testCreoPreguntaVerdaderoFalsoClasicoConVerdaderoCorrectaYVerdaderoSumaUnPunto02(){
         PreguntaVerdaderoFalsoClasico preguntaPrueba = new PreguntaVerdaderoFalsoClasico("Pregunta");
         preguntaPrueba.setVerdaderoOpcionCorrecta();
 
         Opcion opcionVerdaderoCorrecta = preguntaPrueba.getOpcionVerdadera();
 
         assertEquals(opcionVerdaderoCorrecta.puntosObtenidos().getCantidad(), 1);
-
     }
 
     @Test
-    public void CreoPreguntaVerdaderoFalsoClasicoConFalsoCorrectaYFalsoSumaUnPunto(){
-
+    public void testCreoPreguntaVerdaderoFalsoClasicoConFalsoCorrectaYFalsoSumaUnPunto03(){
         PreguntaVerdaderoFalsoClasico preguntaPrueba = new PreguntaVerdaderoFalsoClasico("Pregunta");
         preguntaPrueba.setFalsoOpcionCorrecta();
 
         Opcion opcionFalsoCorrecta = preguntaPrueba.getOpcionFalsa();
 
         assertEquals(opcionFalsoCorrecta.puntosObtenidos().getCantidad(), 1);
-
     }
 
     @Test
-    public void CreoPreguntaVerdaderoFalsoClasicoConFalsoIncorrectoYFalsoSumaCeroPuntos(){
-
+    public void testCreoPreguntaVerdaderoFalsoClasicoConFalsoIncorrectoYFalsoSumaCeroPuntos04(){
         PreguntaVerdaderoFalsoClasico preguntaPrueba = new PreguntaVerdaderoFalsoClasico("Pregunta");
         preguntaPrueba.setVerdaderoOpcionCorrecta();
 
         Opcion opcionVerdaderoCorrecta = preguntaPrueba.getOpcionFalsa();
 
         assertEquals(opcionVerdaderoCorrecta.puntosObtenidos().getCantidad(), 0);
-
     }
 
     @Test
-    public void CreoPreguntaVerdaderoFalsoClasicoConVerdaderoIncorrectoYVerdaderoSumaCeroPuntos(){
-
+    public void testCreoPreguntaVerdaderoFalsoClasicoConVerdaderoIncorrectoYVerdaderoSumaCeroPuntos05(){
         PreguntaVerdaderoFalsoClasico preguntaPrueba = new PreguntaVerdaderoFalsoClasico("Pregunta");
         preguntaPrueba.setFalsoOpcionCorrecta();
 
         Opcion opcionFalsoCorrecta = preguntaPrueba.getOpcionVerdadera();
 
         assertEquals(opcionFalsoCorrecta.puntosObtenidos().getCantidad(), 0);
-
     }
 
     @Test
-    public void CreoPreguntaVerdaderoFalsoYJugadorRespondeMalAsignaPuntosCorrectamente(){
-
+    public void testCreoPreguntaVerdaderoFalsoYJugadorRespondeMalAsignaPuntosCorrectamente06(){
         Jugador Lucas = new Jugador("Lucas");
         PreguntaVerdaderoFalsoClasico pregunta = new PreguntaVerdaderoFalsoClasico("¿1+1 no es 3?");
         pregunta.setVerdaderoOpcionCorrecta();
@@ -88,8 +76,7 @@ public class TestPreguntaVerdaderoFalso {
     }
 
     @Test
-    public void CreoPreguntaVerdaderoFalsoYJugadorRespondeBienAsignaPuntosCorrectamente(){
-
+    public void testCreoPreguntaVerdaderoFalsoYJugadorRespondeBienAsignaPuntosCorrectamente07(){
         Jugador Lucas = new Jugador("Lucas");
         PreguntaVerdaderoFalsoClasico pregunta = new PreguntaVerdaderoFalsoClasico("¿1+1 no es 3?");
         pregunta.setVerdaderoOpcionCorrecta();
@@ -100,12 +87,11 @@ public class TestPreguntaVerdaderoFalso {
 
         pregunta.evaluarRespuestas(respuestasDeJugadores);
 
-        Assertions.assertEquals(Lucas.getPuntos().getCantidad(),1);
+        assertEquals(Lucas.getPuntos().getCantidad(),1);
     }
 
     @Test
-    public void CreoPreguntaVerdaderoFalsoYJugadorRespondeBienConExclusividad(){
-
+    public void testCreoPreguntaVerdaderoFalsoYJugadorRespondeBienConExclusividad08(){
         Jugador Lucas = new Jugador("Lucas");
 
         PreguntaVerdaderoFalsoClasico pregunta = new PreguntaVerdaderoFalsoClasico("¿1+1 no es 3?");
@@ -117,12 +103,11 @@ public class TestPreguntaVerdaderoFalso {
 
         pregunta.evaluarRespuestas(respuestasDeJugadores);
 
-        Assertions.assertEquals(Lucas.getPuntos().getCantidad(),2);
+        assertEquals(Lucas.getPuntos().getCantidad(),2);
     }
 
     @Test
-    public void CreoPreguntaVerdaderoFalsoYDosJugadoresRespondenBienConUnaExclusividad(){
-
+    public void testCreoPreguntaVerdaderoFalsoYDosJugadoresRespondenBienConUnaExclusividad09(){
         Jugador Lucas = new Jugador("Lucas");
         Jugador Juan = new Jugador("Juan");
 
@@ -136,13 +121,12 @@ public class TestPreguntaVerdaderoFalso {
 
         pregunta.evaluarRespuestas(respuestasDeJugadores);
 
-        Assertions.assertEquals(Lucas.getPuntos().getCantidad(),0);
-        Assertions.assertEquals(Juan.getPuntos().getCantidad(),0);
+        assertEquals(Lucas.getPuntos().getCantidad(),0);
+        assertEquals(Juan.getPuntos().getCantidad(),0);
     }
 
     @Test
-    public void CreoPreguntaVerdaderoFalsoYDosJugadoresRespondenMalConUnaExclusividad(){
-
+    public void testCreoPreguntaVerdaderoFalsoYDosJugadoresRespondenMalConUnaExclusividad10(){
         Jugador Lucas = new Jugador("Lucas");
         Jugador Juan = new Jugador("Juan");
 
@@ -156,13 +140,12 @@ public class TestPreguntaVerdaderoFalso {
 
         pregunta.evaluarRespuestas(respuestasDeJugadores);
 
-        Assertions.assertEquals(Lucas.getPuntos().getCantidad(),0);
-        Assertions.assertEquals(Juan.getPuntos().getCantidad(),0);
+        assertEquals(Lucas.getPuntos().getCantidad(),0);
+        assertEquals(Juan.getPuntos().getCantidad(),0);
     }
 
     @Test
-    public void CreoPreguntaVerdaderoFalsoYRespondeBienJugadorSinExclusividad(){
-
+    public void testCreoPreguntaVerdaderoFalsoYRespondeBienJugadorSinExclusividad11(){
         Jugador Lucas = new Jugador("Lucas");
         Jugador Juan = new Jugador("Juan");
 
@@ -176,13 +159,12 @@ public class TestPreguntaVerdaderoFalso {
 
         pregunta.evaluarRespuestas(respuestasDeJugadores);
 
-        Assertions.assertEquals(Lucas.getPuntos().getCantidad(),0);
-        Assertions.assertEquals(Juan.getPuntos().getCantidad(),2);
+        assertEquals(Lucas.getPuntos().getCantidad(),0);
+        assertEquals(Juan.getPuntos().getCantidad(),2);
     }
 
     @Test
-    public void CreoPreguntaVerdaderoFalsoYRespondeBienUnJugadorConDosExclusividades(){
-
+    public void testCreoPreguntaVerdaderoFalsoYRespondeBienUnJugadorConDosExclusividades12(){
         Jugador Lucas = new Jugador("Lucas");
         Jugador Juan = new Jugador("Juan");
 
@@ -196,13 +178,12 @@ public class TestPreguntaVerdaderoFalso {
 
         pregunta.evaluarRespuestas(respuestasDeJugadores);
 
-        Assertions.assertEquals(Lucas.getPuntos().getCantidad(),0);
-        Assertions.assertEquals(Juan.getPuntos().getCantidad(),4);
+        assertEquals(Lucas.getPuntos().getCantidad(),0);
+        assertEquals(Juan.getPuntos().getCantidad(),4);
     }
 
     @Test
-    public void CreoPreguntaVerdaderoFalsoYRespondeBienUnSoloJugadorConUnaExclusividad(){
-
+    public void testCreoPreguntaVerdaderoFalsoYRespondeBienUnSoloJugadorConUnaExclusividad13(){
         Jugador Lucas = new Jugador("Lucas");
         Jugador Juan = new Jugador("Juan");
         Jugador Pedro = new Jugador("Pedro");
@@ -220,15 +201,14 @@ public class TestPreguntaVerdaderoFalso {
 
         pregunta.evaluarRespuestas(respuestasDeJugadores);
 
-        Assertions.assertEquals(Lucas.getPuntos().getCantidad(),0);
-        Assertions.assertEquals(Juan.getPuntos().getCantidad(),0);
-        Assertions.assertEquals(Pedro.getPuntos().getCantidad(),2);
-        Assertions.assertEquals(Ramiro.getPuntos().getCantidad(),0);
+        assertEquals(Lucas.getPuntos().getCantidad(),0);
+        assertEquals(Juan.getPuntos().getCantidad(),0);
+        assertEquals(Pedro.getPuntos().getCantidad(),2);
+        assertEquals(Ramiro.getPuntos().getCantidad(),0);
     }
 
     @Test
-    public void CreoPreguntaVerdaderoFalsoYRespondenBienTresJugadoresConDosExclusividades(){
-
+    public void testCreoPreguntaVerdaderoFalsoYRespondenBienTresJugadoresConDosExclusividades14(){
         Jugador Lucas = new Jugador("Lucas");
         Jugador Juan = new Jugador("Juan");
         Jugador Pedro = new Jugador("Pedro");
@@ -246,9 +226,9 @@ public class TestPreguntaVerdaderoFalso {
 
         pregunta.evaluarRespuestas(respuestasDeJugadores);
 
-        Assertions.assertEquals(Lucas.getPuntos().getCantidad(),0);
-        Assertions.assertEquals(Juan.getPuntos().getCantidad(),0);
-        Assertions.assertEquals(Pedro.getPuntos().getCantidad(),0);
-        Assertions.assertEquals(Ramiro.getPuntos().getCantidad(),0);
+        assertEquals(Lucas.getPuntos().getCantidad(),0);
+        assertEquals(Juan.getPuntos().getCantidad(),0);
+        assertEquals(Pedro.getPuntos().getCantidad(),0);
+        assertEquals(Ramiro.getPuntos().getCantidad(),0);
     }
 }

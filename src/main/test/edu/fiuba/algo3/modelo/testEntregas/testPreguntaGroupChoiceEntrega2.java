@@ -11,10 +11,10 @@ import java.util.LinkedList;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class testPreguntaGroupChoiceEntrega2 {
-    OpcionCorrecta primeraOpcion = new OpcionCorrecta("1 + 1");
-    OpcionCorrecta segundaOpcion = new OpcionCorrecta("3 - 1");
-    OpcionCorrecta terceraOpcion = new OpcionCorrecta("2 + 2");
-    OpcionCorrecta cuartaOpcion = new OpcionCorrecta("2 * 2");
+    private final OpcionCorrecta primeraOpcion = new OpcionCorrecta("1 + 1");
+    private final OpcionCorrecta segundaOpcion = new OpcionCorrecta("3 - 1");
+    private final OpcionCorrecta terceraOpcion = new OpcionCorrecta("2 + 2");
+    private final OpcionCorrecta cuartaOpcion = new OpcionCorrecta("2 * 2");
 
     @Test
     public void testCreoPreguntaGroupChoiceYJugadorRespondeCorrectamente01() {
