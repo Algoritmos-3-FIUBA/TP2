@@ -9,8 +9,8 @@ import java.util.LinkedList;
 
 public class PreguntaMultipleChoicePenalidad extends Pregunta {
 
-    private ColeccionOpciones opcionesCorrectas;
-    private ColeccionOpciones opcionesIncorrectas;
+    private final ColeccionOpciones opcionesCorrectas;
+    private final ColeccionOpciones opcionesIncorrectas;
 
     public PreguntaMultipleChoicePenalidad(String nombre, ColeccionOpciones opciones) {
 
