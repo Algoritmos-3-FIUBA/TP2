@@ -1,4 +1,4 @@
-package edu.fiuba.algo3.modelo.testUnitarios;
+package edu.fiuba.algo3.modelo.testunitarios;
 
 import edu.fiuba.algo3.modelo.Puntos;
 import org.junit.Test;

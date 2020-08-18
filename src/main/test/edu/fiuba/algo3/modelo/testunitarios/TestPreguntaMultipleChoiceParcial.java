@@ -1,4 +1,4 @@
-package edu.fiuba.algo3.modelo.testUnitarios;
+package edu.fiuba.algo3.modelo.testunitarios;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import edu.fiuba.algo3.modelo.ColeccionOpciones;

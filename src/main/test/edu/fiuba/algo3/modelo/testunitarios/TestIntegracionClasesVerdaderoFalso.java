@@ -1,4 +1,4 @@
-package edu.fiuba.algo3.modelo.testUnitarios;
+package edu.fiuba.algo3.modelo.testunitarios;
 
 import edu.fiuba.algo3.modelo.Jugador;
 import edu.fiuba.algo3.modelo.Puntos;
@@ -8,7 +8,6 @@ import edu.fiuba.algo3.modelo.respuesta.Respuesta;
 import edu.fiuba.algo3.modelo.respuesta.RespuestaUnica;
 import org.junit.Test;
 import java.util.LinkedList;
-
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class TestIntegracionClasesVerdaderoFalso {

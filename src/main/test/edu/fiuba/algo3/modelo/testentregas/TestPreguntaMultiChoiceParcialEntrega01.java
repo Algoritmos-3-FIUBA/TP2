@@ -1,4 +1,4 @@
-package edu.fiuba.algo3.modelo.testEntregas;
+package edu.fiuba.algo3.modelo.testentregas;
 
 import edu.fiuba.algo3.modelo.ColeccionOpciones;
 import edu.fiuba.algo3.modelo.Jugador;
@@ -9,9 +9,7 @@ import edu.fiuba.algo3.modelo.pregunta.PreguntaMultipleChoiceParcial;
 import edu.fiuba.algo3.modelo.respuesta.Respuesta;
 import edu.fiuba.algo3.modelo.respuesta.RespuestaMultiple;
 import org.junit.Test;
-
 import java.util.LinkedList;
-
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class TestPreguntaMultiChoiceParcialEntrega01 {
