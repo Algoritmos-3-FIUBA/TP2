@@ -12,7 +12,7 @@ import java.util.LinkedList;
 public class testPreguntaVoFPenalidadEntrega1 {
 
     @Test
-        public void CreoPreguntaVerdaderoFalsoConPenalidadIndicandoRespuestCorrecta(){
+        public void testCreoPreguntaVerdaderoFalsoConPenalidadIndicandoRespuestCorrecta01(){
 
         Jugador jugador = new Jugador("Fernando");
 
@@ -33,7 +33,7 @@ public class testPreguntaVoFPenalidadEntrega1 {
     }
 
     @Test
-    public void PreguntaVerdaderoFalsoConPenalidadAsignaCorrectamenteLosPuntosALosJugadores(){
+    public void testPreguntaVerdaderoFalsoConPenalidadAsignaCorrectamenteLosPuntosALosJugadores02(){
         Jugador jugador1 = new Jugador("Fernando");
         Jugador jugador2 = new Jugador("Lucas");
         Jugador jugador3 = new Jugador("Guido");

@@ -17,7 +17,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 public class testPreguntaMultiChoiceParcialEntrega1 {
 
     @Test
-    public void PreguntaMultipleChoiceParcialSeCreaIndicandoleCualesSonSusOpcionesCorrectas(){
+    public void testPreguntaMultipleChoiceParcialSeCreaIndicandoleCualesSonSusOpcionesCorrectas01(){
 
         Jugador Juan = new Jugador("Juan");
         Jugador Fer = new Jugador("Fer");
@@ -72,7 +72,7 @@ public class testPreguntaMultiChoiceParcialEntrega1 {
 
 
     @Test
-    public void PreguntaMultipleChoiceParcialRecibeListaDeRespuestasYAsignaPuntosCorrectamenteALosJugadores(){
+    public void testPreguntaMultipleChoiceParcialRecibeListaDeRespuestasYAsignaPuntosCorrectamenteALosJugadores02(){
 
 
         Jugador Mati = new Jugador("Mati");

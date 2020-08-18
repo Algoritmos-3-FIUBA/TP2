@@ -30,7 +30,7 @@ public class testPreguntaMultipleChoicePenalidadEntrega2 {
     OpcionCorrecta cuartaOpcionDos = new OpcionCorrecta("2002", 1);
 
     @Test
-    public void CreoPreguntaMultipleChoicePenalidadSinMultiplicadorYJugadorUnoGana(){
+    public void testCreoPreguntaMultipleChoicePenalidadSinMultiplicadorYJugadorUnoGana01(){
 
         Jugador jugadorUno = new Jugador("Pedro");
         Jugador jugadorDos = new Jugador("Carlos");
@@ -66,7 +66,7 @@ public class testPreguntaMultipleChoicePenalidadEntrega2 {
     }
 
     @Test
-    public void CreoPreguntaMultipleChoicePenalidadYJugadorUnoUsaMultiplicadorPorDos(){
+    public void testCreoPreguntaMultipleChoicePenalidadYJugadorUnoUsaMultiplicadorPorDos02(){
 
         Jugador jugadorUno = new Jugador("Pedro");
         Jugador jugadorDos = new Jugador("Carlos");
@@ -103,7 +103,7 @@ public class testPreguntaMultipleChoicePenalidadEntrega2 {
     }
 
     @Test
-    public void CreoPreguntaMultipleChoicePenalidadYJugadorDosUsaMultiplicadorPorTres(){
+    public void testCreoPreguntaMultipleChoicePenalidadYJugadorDosUsaMultiplicadorPorTres03(){
 
         Jugador jugadorUno = new Jugador("Pedro");
         Jugador jugadorDos = new Jugador("Carlos");
@@ -140,7 +140,7 @@ public class testPreguntaMultipleChoicePenalidadEntrega2 {
     }
 
     @Test
-    public void CreoDosPreguntaMultipleChoicePenalidadYJugadorUnoNoPuedeUasrMultiplicadorPorDosEnLasDosPreguntas(){
+    public void testCreoDosPreguntaMultipleChoicePenalidadYJugadorUnoNoPuedeUasrMultiplicadorPorDosEnLasDosPreguntas04(){
 
         Jugador jugadorUno = new Jugador("Pedro");
         Jugador jugadorDos = new Jugador("Carlos");
@@ -203,5 +203,4 @@ public class testPreguntaMultipleChoicePenalidadEntrega2 {
         assertEquals(jugadorDos.getPuntos().getCantidad(),-2);
 
     }
-
 }

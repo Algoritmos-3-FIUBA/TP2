@@ -19,7 +19,7 @@ public class testPreguntaOrderedChoiceEntrega2 {
     OpcionCorrecta cuartaOpcion = new OpcionCorrecta("2 * 2");
 
     @Test
-    public void CreoPreguntaOrderedChoiceConDosRespuestasCorrectasYJugadorRespondeCorrectamente() {
+    public void testCreoPreguntaOrderedChoiceConDosRespuestasCorrectasYJugadorRespondeCorrectamente01() {
 
         Jugador Guido = new Jugador("Guido");
 
@@ -47,7 +47,7 @@ public class testPreguntaOrderedChoiceEntrega2 {
         assertEquals(Guido.getPuntos().getCantidad(), 1);
     }
     @Test
-    public void CreoPreguntaOrderedChoiceConDosRespuestasCorrectasYJugadorRespondeEnOrdenIncorrecto() {
+    public void testCreoPreguntaOrderedChoiceConDosRespuestasCorrectasYJugadorRespondeEnOrdenIncorrecto02() {
 
         Jugador Fernando = new Jugador("Fernando");
 

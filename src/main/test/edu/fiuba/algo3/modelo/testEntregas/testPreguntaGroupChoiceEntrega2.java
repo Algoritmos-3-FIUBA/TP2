@@ -17,7 +17,7 @@ public class testPreguntaGroupChoiceEntrega2 {
     OpcionCorrecta cuartaOpcion = new OpcionCorrecta("2 * 2");
 
     @Test
-    public void CreoPreguntaGroupChoiceYJugadorRespondeCorrectamente() {
+    public void testCreoPreguntaGroupChoiceYJugadorRespondeCorrectamente01() {
     //Pregunta sabe los grupos correctos
         Jugador Guido = new Jugador("Guido");
 
@@ -62,7 +62,7 @@ public class testPreguntaGroupChoiceEntrega2 {
     }
 
     @Test
-    public void CreoPreguntaGroupChoiceConDosJugadoresSoloUnoRespondeCorrectamente() {
+    public void testCreoPreguntaGroupChoiceConDosJugadoresSoloUnoRespondeCorrectamente02() {
         //Pregunta sabe los grupos correctos
         Jugador Guido = new Jugador("Guido");
         Jugador Lucas = new Jugador("Lucas");
@@ -125,7 +125,7 @@ public class testPreguntaGroupChoiceEntrega2 {
         assertEquals(Lucas.getPuntos().getCantidad(), 0);
     }
     @Test
-    public void CreoPreguntaGroupChoiceConDosJugadoresUnoRespondeCorrectamenteYElOtroParcialmente() {
+    public void testCreoPreguntaGroupChoiceConDosJugadoresUnoRespondeCorrectamenteYElOtroParcialmente03() {
         //Pregunta sabe los grupos correctos
         Jugador Guido = new Jugador("Guido");
         Jugador Lucas = new Jugador("Lucas");
