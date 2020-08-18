@@ -8,7 +8,7 @@ import org.json.simple.parser.ParseException;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
-import java.nio.file.Paths;
+
 
 
 public class LecturaDeArchivo {
@@ -16,51 +16,51 @@ public class LecturaDeArchivo {
     private final String ARCHIVO = "src/main/java/edu/fiuba/algo3/vista/cuestionario.json";
 
    public LecturaDeArchivo() {
-        //JSON parser object to parse read file
-        JSONParser jsonParser = new JSONParser();
+       //JSON parser object to parse read file
+       JSONParser jsonParser = new JSONParser();
 
-        try (FileReader reader = new FileReader(Paths.get(ARCHIVO).toUri().toString()))
-        {
-            //Read JSON file
-            Object obj = jsonParser.parse(reader);
-            JSONArray preguntaList = (JSONArray) obj;
-            System.out.println(preguntaList);
+       try (FileReader reader = new FileReader(ARCHIVO))
+       {
+           //Read JSON file
+           Object obj = jsonParser.parse(reader);
 
-            //Iterate over employee array
-            preguntaList.forEach( emp -> parseEmployeeObject( (JSONObject) emp ) );
+           JSONArray employeeList = (JSONArray) obj;
+           System.out.println(employeeList);
 
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
-        } catch (ParseException e) {
-            e.printStackTrace();
-        }
-    }
+           //Iterate over employee array
+           employeeList.forEach( emp -> parseEmployeeObject( (JSONObject) emp ) );
 
-    private void parseEmployeeObject(JSONObject preguntas) {
+       } catch (FileNotFoundException e) {
+           e.printStackTrace();
+       } catch (IOException e) {
+           e.printStackTrace();
+       } catch (ParseException e) {
+           e.printStackTrace();
+       }
+   }
 
-            JSONArray preguntasVerdaderoFalso = (JSONArray) preguntas.get("PreguntasVerdaderoFalso");
+    private static void parseEmployeeObject(JSONObject employee)
+    {
+        //Get employee object within list
+        JSONObject employeeObject = (JSONObject) employee.get("Pregunta");
+       // System.out.println(employeeObject.toString());
 
-            JSONObject pregunta1 = (JSONObject) preguntasVerdaderoFalso.get(0);
+        String first = (String) employeeObject.get("tipo");
+        System.out.println(first);
 
-            String firstName = (String) pregunta1.get("nombre");
-            System.out.println(firstName);
+        //Get employee first name
+        String firstName = (String) employeeObject.get("nombre");
+        System.out.println(firstName);
 
-            /*//Get employee object within list
-            JSONObject employeeObject = (JSONObject) pregunta.get("PreguntaVerdaderoFalso");
+        //Get employee last name
+        String lastName = (String) employeeObject.get("textoOpcion1");
+        System.out.println(lastName);
 
-            //Get employee first name
-            String firstName = (String) employeeObject.get("firstName");
-            System.out.println(firstName);
+        //Get employee website name
+        String website = (String) employeeObject.get("textoOpcion2");
+        System.out.println(website);
 
-            //Get employee last name
-            String lastName = (String) employeeObject.get("lastName");
-            System.out.println(lastName);
-
-            //Get employee website name
-            String website = (String) employeeObject.get("website");
-            System.out.println(website);*/
-
+        String correct = (String) employeeObject.get("opcionCorrecta");
+        System.out.println(correct);
     }
 }
