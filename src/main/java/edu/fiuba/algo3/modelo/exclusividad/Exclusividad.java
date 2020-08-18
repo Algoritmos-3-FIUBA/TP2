@@ -1,7 +1,6 @@
 package edu.fiuba.algo3.modelo.exclusividad;
 
 import edu.fiuba.algo3.modelo.amplificador.Amplificador;
-import edu.fiuba.algo3.modelo.amplificador.FactorExclusividad;
 import edu.fiuba.algo3.modelo.respuesta.Respuesta;
 
 import java.util.LinkedList;
@@ -10,17 +9,18 @@ public class Exclusividad {
 
     protected Amplificador amplificador;
     protected EstadoExclusividad estado;
+    protected EstrategiaAumentoFactor estrategiaAumentoFactor;
 
     public Exclusividad(){
-        this.amplificador = new Amplificador(new FactorExclusividad(2));
+        this.amplificador = new Amplificador(2);
+        this.estrategiaAumentoFactor = new EstrategiaMultiplicativa(amplificador);
         this.estado = new EstadoNoAsigna();
     }
 
     public void actualizarAmplificador(LinkedList<Respuesta> respuestas,Respuesta respuestaActual) {
         LinkedList<Respuesta> respuestasSinLaActual = new LinkedList<>(respuestas);
         respuestasSinLaActual.remove(respuestaActual);
-        for (Respuesta respuesta : respuestasSinLaActual)
-            respuesta.getAmplificadorExclusividad().multiplicarFactor(this.amplificador);
+        estrategiaAumentoFactor.aumentarFactoresDeExclusividades(respuestasSinLaActual);
         for (Respuesta respuesta : respuestas)
             respuesta.setAmplificadorExclusividad();
     }
@@ -35,5 +35,9 @@ public class Exclusividad {
 
     public Amplificador getAmplificador() {
         return amplificador;
+    }
+
+    public void aumentarAmplificador(int factor) {
+        estrategiaAumentoFactor.aumentarFactor(factor,amplificador);
     }
 }

@@ -1,6 +1,5 @@
 package edu.fiuba.algo3.modelo.respuesta;
 
-import edu.fiuba.algo3.modelo.amplificador.FactorDefault;
 import edu.fiuba.algo3.modelo.exclusividad.Exclusividad;
 import edu.fiuba.algo3.modelo.exclusividad.ExclusividadDefault;
 import edu.fiuba.algo3.modelo.Jugador;
@@ -24,7 +23,7 @@ public abstract class Respuesta {
         this.estado = new EstadoIncorrecto();
         this.multiplicador = new MultiplicadorDefault();
         this.exclusividad = new ExclusividadDefault();
-        this.amplificador = new Amplificador(new FactorDefault(1));
+        this.amplificador = new Amplificador(1);
     }
 
     public Respuesta(Jugador jugador, Multiplicador multiplicador){
@@ -40,7 +39,7 @@ public abstract class Respuesta {
         this.estado = new EstadoIncorrecto();
         this.exclusividad = exclusividad;
         this.multiplicador = new MultiplicadorDefault();
-        this.amplificador = new Amplificador(new FactorDefault(1));
+        this.amplificador = new Amplificador(1);
     }
     //Test
     public void setAmplificador(Amplificador amplificador) {
@@ -80,5 +79,9 @@ public abstract class Respuesta {
 
     public void setAmplificadorExclusividad() {
         this.amplificador = this.exclusividad.getAmplificador();
+    }
+
+    public void actualizarFactorAmplificacion(int factor) {
+        exclusividad.aumentarAmplificador(factor);
     }
 }

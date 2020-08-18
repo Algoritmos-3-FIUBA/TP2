@@ -4,26 +4,26 @@ import edu.fiuba.algo3.modelo.Puntos;
 
 public class Amplificador {
 
-    private Factor factor;
+    private int factor;
 
-    public Amplificador(Factor factor){
+    public Amplificador(int factor){
         this.factor = factor;
     }
 
     public void amplificarPuntos(Puntos puntos){
-        puntos.multiplicar(this.factor.getFactor());
+        puntos.multiplicar(this.factor);
     }
 
-    public Factor getFactor(){
+    public int getFactor(){
         return this.factor;
     }
 
-    public void setFactor(Factor factor) {
+    public void setFactor(int factor) {
         this.factor = factor;
     }
 
-    private void multiplicarFactor(Factor factor) {
-        this.factor.multiplicar(factor);
+    public void multiplicarFactor(int factor) {
+        this.factor *= factor;
     }
 
     public void multiplicarFactor(Amplificador amplificador) {
