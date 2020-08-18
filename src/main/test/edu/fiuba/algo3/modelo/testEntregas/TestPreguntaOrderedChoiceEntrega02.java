@@ -12,7 +12,7 @@ import org.junit.Test;
 import java.util.LinkedList;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class testPreguntaOrderedChoiceEntrega2 {
+public class TestPreguntaOrderedChoiceEntrega02 {
     private final OpcionIncorrecta primeraOpcion = new OpcionIncorrecta("1 + 1");
     private final OpcionIncorrecta segundaOpcion = new OpcionIncorrecta("3 - 1");
     private final OpcionCorrecta terceraOpcion = new OpcionCorrecta("2 + 2");

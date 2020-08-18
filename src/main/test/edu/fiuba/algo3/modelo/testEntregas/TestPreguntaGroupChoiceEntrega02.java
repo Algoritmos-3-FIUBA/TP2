@@ -10,7 +10,7 @@ import org.junit.jupiter.api.Test;
 import java.util.LinkedList;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class testPreguntaGroupChoiceEntrega2 {
+public class TestPreguntaGroupChoiceEntrega02 {
     private final OpcionCorrecta primeraOpcion = new OpcionCorrecta("1 + 1");
     private final OpcionCorrecta segundaOpcion = new OpcionCorrecta("3 - 1");
     private final OpcionCorrecta terceraOpcion = new OpcionCorrecta("2 + 2");

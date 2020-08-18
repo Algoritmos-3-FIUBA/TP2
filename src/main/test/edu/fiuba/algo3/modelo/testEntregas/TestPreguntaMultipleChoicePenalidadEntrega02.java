@@ -15,7 +15,7 @@ import org.junit.jupiter.api.Test;
 import java.util.LinkedList;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class testPreguntaMultipleChoicePenalidadEntrega2 {
+public class TestPreguntaMultipleChoicePenalidadEntrega02 {
 
     private final OpcionCorrecta primeraOpcion = new OpcionCorrecta("1896", 1);
     private final OpcionCorrecta segundaOpcion = new OpcionCorrecta("1936", 1);

@@ -8,7 +8,7 @@ import org.junit.Test;
 import java.util.LinkedList;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class TestPreguntaVoFClasicoEntrega0 {
+public class TestPreguntaVoFClasicoEntrega00 {
 
     @Test
     public void testCreoPreguntaVoFClasicoIndicoRespuestaCorrecta01(){

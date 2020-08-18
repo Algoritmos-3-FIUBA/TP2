@@ -14,7 +14,7 @@ import java.util.LinkedList;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class testPreguntaMultiChoiceParcialEntrega1 {
+public class TestPreguntaMultiChoiceParcialEntrega01 {
 
     @Test
     public void testPreguntaMultipleChoiceParcialSeCreaIndicandoleCualesSonSusOpcionesCorrectas01(){
