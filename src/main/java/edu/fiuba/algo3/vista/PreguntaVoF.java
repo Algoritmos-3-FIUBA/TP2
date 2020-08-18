@@ -3,7 +3,6 @@ package edu.fiuba.algo3.vista;
 import edu.fiuba.algo3.controlador.BotonResponderFalso;
 import edu.fiuba.algo3.controlador.BotonResponderVerdadero;
 import edu.fiuba.algo3.modelo.pregunta.PreguntaVerdaderoFalso;
-import javafx.geometry.HPos;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;

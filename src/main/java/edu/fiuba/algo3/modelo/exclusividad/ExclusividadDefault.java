@@ -1,7 +1,6 @@
 package edu.fiuba.algo3.modelo.exclusividad;
 
 import edu.fiuba.algo3.modelo.amplificador.Amplificador;
-import edu.fiuba.algo3.modelo.amplificador.FactorDefault;
 import edu.fiuba.algo3.modelo.amplificador.FactorExclusividad;
 import edu.fiuba.algo3.modelo.respuesta.Respuesta;
 
