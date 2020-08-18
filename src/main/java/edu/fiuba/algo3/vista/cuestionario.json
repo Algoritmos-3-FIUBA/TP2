@@ -1,26 +1,29 @@
 [
   {
-    "Pregunta": {
-      "tipo" : "VerdaderoFalso",
-      "nombre": "¿207 es un número primo?",
-      "textoOpcion1": "Verdadero",
-      "opcion1": false,
-      "textoOpcion2": "Falso",
-      "opcion2": true,
-      "opcionCorrecta": "Falso"
+  "Pregunta":
+    {
+    "tipo": "VerdaderoFalsoClasico",
+    "nombre": "¿207 es un número primo?",
+    "opcionCorrecta": false
     }
-  },
-  {
-    "Pregunta": {
-      "tipo" : "VerdaderoFalso",
+  },{
+    "Pregunta":
+    {
+      "tipo" : "VerdaderoFalsoPenalidad",
       "nombre":"¿507 es un número primo?",
-      "textoOpcion1": "Verdadero",
-      "opcion1": true,
-      "textoOpcion2": "Falso",
-      "opcion2": false,
-      "opcionCorrecta": "Falso"
+      "opcionCorrecta": false
     }
+  },{
+  "Pregunta":
+  {
+    "tipo" : "MultipleChoiseClasico",
+    "nombre":"¿Capital de Alemania?",
+    "correctas": [
+      "Berlin" ],
+    "incorrectas": [
+      "Paris",
+      "Roma"]
   }
-
+}
 ]
 
