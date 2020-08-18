@@ -7,7 +7,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 public class MessageTest {
     @Test
     public void messageGreeting() {
-        LecturaDeArchivo lectura = new LecturaDeArchivo();
+//        LecturaDeArchivo lectura = new LecturaDeArchivo();
 
         Message message = new Message("Hello world!");
 
