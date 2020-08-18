@@ -14,7 +14,7 @@ import java.util.LinkedList;
 public class TestRespuestaMultiple {
 
     //Actualizar a la nueva version en la que pregunta evalua la respuesta
-    /*
+
     private Opcion primeraOpcion = new OpcionCorrecta("Euler",0);
     private Opcion segundaOpcion = new OpcionCorrecta("Gauss",0);
     private Opcion terceraOpcion  = new OpcionCorrecta("Faraday",0);
@@ -30,6 +30,7 @@ public class TestRespuestaMultiple {
         opcionesElegidas.add(primeraOpcion);
 
         RespuestaMultiple respuestaJugador = new RespuestaMultiple(opcionesElegidas, jugador);
+        respuestaJugador.setCorrecta();
 
         respuestaJugador.otorgarPuntos(new Puntos(1));
 
@@ -47,6 +48,7 @@ public class TestRespuestaMultiple {
         opcionesElegidas.add(primeraOpcion);
 
         RespuestaMultiple respuestaJugador = new RespuestaMultiple(opcionesElegidas, jugador);
+        respuestaJugador.setCorrecta();
 
         respuestaJugador.otorgarPuntos(new Puntos(1));
 
@@ -65,6 +67,7 @@ public class TestRespuestaMultiple {
         opcionesElegidas.add(segundaOpcion);
 
         RespuestaMultiple respuestaJugador = new RespuestaMultiple(opcionesElegidas, jugador);
+        respuestaJugador.setCorrecta();
 
         respuestaJugador.otorgarPuntos(new Puntos(1));
 
@@ -84,6 +87,7 @@ public class TestRespuestaMultiple {
         opcionesElegidas.add(segundaOpcion);
 
         RespuestaMultiple respuestaJugador = new RespuestaMultiple(opcionesElegidas, jugador);
+        respuestaJugador.setCorrecta();
 
         respuestaJugador.otorgarPuntos(new Puntos(1));
 
@@ -104,6 +108,7 @@ public class TestRespuestaMultiple {
         opcionesElegidas.add(segundaOpcion);
 
         RespuestaMultiple respuestaJugador = new RespuestaMultiple(opcionesElegidas, jugador);
+        respuestaJugador.setCorrecta();
 
         respuestaJugador.otorgarPuntos(new Puntos(1));
 
@@ -172,5 +177,5 @@ public class TestRespuestaMultiple {
         respuestaJugador.otorgarPuntos(new Puntos(1));
 
         Assertions.assertEquals(jugador.getPuntos().getCantidad(),0);
-    }*/
+    }
 }

@@ -22,10 +22,10 @@ public class TestPreguntaMultipleChoice {
 
         ColeccionOpciones opciones = new ColeccionOpciones();
 
-        opciones.agregarOpcion(new OpcionIncorrecta("1 + 1", 0));
-        opciones.agregarOpcion(new OpcionIncorrecta("3 - 1", 0));
-        opciones.agregarOpcion(new OpcionCorrecta("2 + 2", 1));
-        opciones.agregarOpcion(new OpcionCorrecta("2 * 2", 1));
+        opciones.agregarOpcion(new OpcionIncorrecta("1 + 1"));
+        opciones.agregarOpcion(new OpcionIncorrecta("3 - 1"));
+        opciones.agregarOpcion(new OpcionCorrecta("2 + 2"));
+        opciones.agregarOpcion(new OpcionCorrecta("2 * 2"));
 
         PreguntaMultipleChoice pregunta = new PreguntaMultipleChoice("¿Cuales de las siguientes cuentas tiene resultado 4?", 1, opciones);
 
@@ -37,10 +37,10 @@ public class TestPreguntaMultipleChoice {
 
         ColeccionOpciones opciones = new ColeccionOpciones();
 
-        opciones.agregarOpcion(new OpcionIncorrecta("1 + 1", 0));
-        opciones.agregarOpcion(new OpcionIncorrecta("3 - 1", 0));
-        opciones.agregarOpcion(new OpcionCorrecta("2 + 2", 1));
-        opciones.agregarOpcion(new OpcionCorrecta("2 * 2", 1));
+        opciones.agregarOpcion(new OpcionIncorrecta("1 + 1"));
+        opciones.agregarOpcion(new OpcionIncorrecta("3 - 1"));
+        opciones.agregarOpcion(new OpcionCorrecta("2 + 2"));
+        opciones.agregarOpcion(new OpcionCorrecta("2 * 2"));
 
         PreguntaMultipleChoice pregunta = new PreguntaMultipleChoice("¿Cuales de las siguientes cuentas tiene resultado 4?", 1, opciones);
 
@@ -54,10 +54,10 @@ public class TestPreguntaMultipleChoice {
 
             ColeccionOpciones opciones = new ColeccionOpciones();
 
-            OpcionIncorrecta primeraOpcion = new OpcionIncorrecta("1 + 1", 0);
-            OpcionIncorrecta segundaOpcion = new OpcionIncorrecta("3 - 1", 0);
-            OpcionCorrecta terceraOpcion = new OpcionCorrecta("2 + 2", 1);
-            OpcionCorrecta cuartaOpcion = new OpcionCorrecta("2 * 2", 1);
+            OpcionIncorrecta primeraOpcion = new OpcionIncorrecta("1 + 1");
+            OpcionIncorrecta segundaOpcion = new OpcionIncorrecta("3 - 1");
+            OpcionCorrecta terceraOpcion = new OpcionCorrecta("2 + 2");
+            OpcionCorrecta cuartaOpcion = new OpcionCorrecta("2 * 2");
 
             opciones.agregarOpcion(primeraOpcion);
             opciones.agregarOpcion(segundaOpcion);
@@ -88,10 +88,10 @@ public class TestPreguntaMultipleChoice {
 
         ColeccionOpciones opciones = new ColeccionOpciones();
 
-        OpcionIncorrecta primeraOpcion = new OpcionIncorrecta("1 + 1", 0);
-        OpcionIncorrecta segundaOpcion = new OpcionIncorrecta("3 - 1", 0);
-        OpcionCorrecta terceraOpcion = new OpcionCorrecta("2 + 2", 1);
-        OpcionCorrecta cuartaOpcion = new OpcionCorrecta("2 * 2", 1);
+        OpcionIncorrecta primeraOpcion = new OpcionIncorrecta("1 + 1");
+        OpcionIncorrecta segundaOpcion = new OpcionIncorrecta("3 - 1");
+        OpcionCorrecta terceraOpcion = new OpcionCorrecta("2 + 2");
+        OpcionCorrecta cuartaOpcion = new OpcionCorrecta("2 * 2");
 
         opciones.agregarOpcion(primeraOpcion);
         opciones.agregarOpcion(segundaOpcion);
@@ -121,10 +121,10 @@ public class TestPreguntaMultipleChoice {
 
         ColeccionOpciones opciones = new ColeccionOpciones();
 
-        OpcionIncorrecta primeraOpcion = new OpcionIncorrecta("1 + 1", 0);
-        OpcionIncorrecta segundaOpcion = new OpcionIncorrecta("3 - 1", 0);
-        OpcionCorrecta terceraOpcion = new OpcionCorrecta("2 + 2", 1);
-        OpcionCorrecta cuartaOpcion = new OpcionCorrecta("2 * 2", 1);
+        OpcionIncorrecta primeraOpcion = new OpcionIncorrecta("1 + 1");
+        OpcionIncorrecta segundaOpcion = new OpcionIncorrecta("3 - 1");
+        OpcionCorrecta terceraOpcion = new OpcionCorrecta("2 + 2");
+        OpcionCorrecta cuartaOpcion = new OpcionCorrecta("2 * 2");
 
         opciones.agregarOpcion(primeraOpcion);
         opciones.agregarOpcion(segundaOpcion);
@@ -156,10 +156,10 @@ public class TestPreguntaMultipleChoice {
 
         ColeccionOpciones opciones = new ColeccionOpciones();
 
-        OpcionIncorrecta primeraOpcion = new OpcionIncorrecta("1 + 1", 0);
-        OpcionIncorrecta segundaOpcion = new OpcionIncorrecta("3 - 1", 0);
-        OpcionCorrecta terceraOpcion = new OpcionCorrecta("2 + 2", 1);
-        OpcionCorrecta cuartaOpcion = new OpcionCorrecta("2 * 2", 1);
+        OpcionIncorrecta primeraOpcion = new OpcionIncorrecta("1 + 1");
+        OpcionIncorrecta segundaOpcion = new OpcionIncorrecta("3 - 1");
+        OpcionCorrecta terceraOpcion = new OpcionCorrecta("2 + 2");
+        OpcionCorrecta cuartaOpcion = new OpcionCorrecta("2 * 2");
 
         opciones.agregarOpcion(primeraOpcion);
         opciones.agregarOpcion(segundaOpcion);
@@ -192,10 +192,10 @@ public class TestPreguntaMultipleChoice {
 
         ColeccionOpciones opciones = new ColeccionOpciones();
 
-        OpcionIncorrecta primeraOpcion = new OpcionIncorrecta("1 + 1", 0);
-        OpcionIncorrecta segundaOpcion = new OpcionIncorrecta("3 - 1", 0);
-        OpcionCorrecta terceraOpcion = new OpcionCorrecta("2 + 2", 1);
-        OpcionCorrecta cuartaOpcion = new OpcionCorrecta("2 * 2", 1);
+        OpcionIncorrecta primeraOpcion = new OpcionIncorrecta("1 + 1");
+        OpcionIncorrecta segundaOpcion = new OpcionIncorrecta("3 - 1");
+        OpcionCorrecta terceraOpcion = new OpcionCorrecta("2 + 2");
+        OpcionCorrecta cuartaOpcion = new OpcionCorrecta("2 * 2");
 
         opciones.agregarOpcion(primeraOpcion);
         opciones.agregarOpcion(segundaOpcion);
@@ -242,10 +242,10 @@ public class TestPreguntaMultipleChoice {
 
         ColeccionOpciones opciones = new ColeccionOpciones();
 
-        OpcionIncorrecta primeraOpcion = new OpcionIncorrecta("1874", 0);
-        OpcionIncorrecta segundaOpcion = new OpcionIncorrecta("2020", 0);
-        OpcionCorrecta terceraOpcion = new OpcionCorrecta("1912", 1);
-        OpcionCorrecta cuartaOpcion = new OpcionCorrecta("1989", 1);
+        OpcionIncorrecta primeraOpcion = new OpcionIncorrecta("1874");
+        OpcionIncorrecta segundaOpcion = new OpcionIncorrecta("2020");
+        OpcionCorrecta terceraOpcion = new OpcionCorrecta("1912");
+        OpcionCorrecta cuartaOpcion = new OpcionCorrecta("1989");
 
         opciones.agregarOpcion(primeraOpcion);
         opciones.agregarOpcion(segundaOpcion);
@@ -292,10 +292,10 @@ public class TestPreguntaMultipleChoice {
 
         ColeccionOpciones opciones = new ColeccionOpciones();
 
-        OpcionIncorrecta primeraOpcion = new OpcionIncorrecta("1874", 0);
-        OpcionIncorrecta segundaOpcion = new OpcionIncorrecta("2020", 0);
-        OpcionCorrecta terceraOpcion = new OpcionCorrecta("1912", 1);
-        OpcionCorrecta cuartaOpcion = new OpcionCorrecta("1989", 1);
+        OpcionIncorrecta primeraOpcion = new OpcionIncorrecta("1874");
+        OpcionIncorrecta segundaOpcion = new OpcionIncorrecta("2020");
+        OpcionCorrecta terceraOpcion = new OpcionCorrecta("1912");
+        OpcionCorrecta cuartaOpcion = new OpcionCorrecta("1989");
 
         opciones.agregarOpcion(primeraOpcion);
         opciones.agregarOpcion(segundaOpcion);
@@ -342,10 +342,10 @@ public class TestPreguntaMultipleChoice {
 
         ColeccionOpciones opciones = new ColeccionOpciones();
 
-        OpcionIncorrecta primeraOpcion = new OpcionIncorrecta("1874", 0);
-        OpcionIncorrecta segundaOpcion = new OpcionIncorrecta("2020", 0);
-        OpcionCorrecta terceraOpcion = new OpcionCorrecta("1912", 1);
-        OpcionCorrecta cuartaOpcion = new OpcionCorrecta("1989", 1);
+        OpcionIncorrecta primeraOpcion = new OpcionIncorrecta("1874");
+        OpcionIncorrecta segundaOpcion = new OpcionIncorrecta("2020");
+        OpcionCorrecta terceraOpcion = new OpcionCorrecta("1912");
+        OpcionCorrecta cuartaOpcion = new OpcionCorrecta("1989");
 
         opciones.agregarOpcion(primeraOpcion);
         opciones.agregarOpcion(segundaOpcion);
@@ -392,10 +392,10 @@ public class TestPreguntaMultipleChoice {
 
         ColeccionOpciones opciones = new ColeccionOpciones();
 
-        OpcionIncorrecta primeraOpcion = new OpcionIncorrecta("1874", 0);
-        OpcionIncorrecta segundaOpcion = new OpcionIncorrecta("2020", 0);
-        OpcionCorrecta terceraOpcion = new OpcionCorrecta("1912", 1);
-        OpcionCorrecta cuartaOpcion = new OpcionCorrecta("1989", 1);
+        OpcionIncorrecta primeraOpcion = new OpcionIncorrecta("1874");
+        OpcionIncorrecta segundaOpcion = new OpcionIncorrecta("2020");
+        OpcionCorrecta terceraOpcion = new OpcionCorrecta("1912");
+        OpcionCorrecta cuartaOpcion = new OpcionCorrecta("1989");
 
         opciones.agregarOpcion(primeraOpcion);
         opciones.agregarOpcion(segundaOpcion);
@@ -444,10 +444,10 @@ public class TestPreguntaMultipleChoice {
 
         ColeccionOpciones opciones = new ColeccionOpciones();
 
-        OpcionIncorrecta primeraOpcion = new OpcionIncorrecta("1874", 0);
-        OpcionIncorrecta segundaOpcion = new OpcionIncorrecta("2020", 0);
-        OpcionCorrecta terceraOpcion = new OpcionCorrecta("1912", 1);
-        OpcionCorrecta cuartaOpcion = new OpcionCorrecta("1989", 1);
+        OpcionIncorrecta primeraOpcion = new OpcionIncorrecta("1874");
+        OpcionIncorrecta segundaOpcion = new OpcionIncorrecta("2020");
+        OpcionCorrecta terceraOpcion = new OpcionCorrecta("1912");
+        OpcionCorrecta cuartaOpcion = new OpcionCorrecta("1989");
 
         opciones.agregarOpcion(primeraOpcion);
         opciones.agregarOpcion(segundaOpcion);
@@ -510,10 +510,10 @@ public class TestPreguntaMultipleChoice {
 
         ColeccionOpciones opciones = new ColeccionOpciones();
 
-        OpcionIncorrecta primeraOpcion = new OpcionIncorrecta("1874", 0);
-        OpcionIncorrecta segundaOpcion = new OpcionIncorrecta("2020", 0);
-        OpcionCorrecta terceraOpcion = new OpcionCorrecta("1912", 1);
-        OpcionCorrecta cuartaOpcion = new OpcionCorrecta("1989", 1);
+        OpcionIncorrecta primeraOpcion = new OpcionIncorrecta("1874");
+        OpcionIncorrecta segundaOpcion = new OpcionIncorrecta("2020");
+        OpcionCorrecta terceraOpcion = new OpcionCorrecta("1912");
+        OpcionCorrecta cuartaOpcion = new OpcionCorrecta("1989");
 
         opciones.agregarOpcion(primeraOpcion);
         opciones.agregarOpcion(segundaOpcion);

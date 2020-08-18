@@ -14,10 +14,10 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class TestPreguntaGroupChoice {
 
-    OpcionCorrecta primeraOpcion = new OpcionCorrecta("Newton", 0);
-    OpcionCorrecta segundaOpcion = new OpcionCorrecta("Faraday", 0);
-    OpcionCorrecta terceraOpcion = new OpcionCorrecta("Gauss", 0);
-    OpcionCorrecta cuartaOpcion = new OpcionCorrecta("Euler", 0);
+    OpcionCorrecta primeraOpcion = new OpcionCorrecta("Newton");
+    OpcionCorrecta segundaOpcion = new OpcionCorrecta("Faraday");
+    OpcionCorrecta terceraOpcion = new OpcionCorrecta("Gauss");
+    OpcionCorrecta cuartaOpcion = new OpcionCorrecta("Euler");
 
     @Test
     public void CreoPreguntaGroupChoiceYJugadorRespondeCorrectamenteVerificoQueLaAsignacionDePuntosSeaCorrecta() {

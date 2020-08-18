@@ -5,6 +5,7 @@ import edu.fiuba.algo3.modelo.exclusividad.Exclusividad;
 import edu.fiuba.algo3.modelo.Jugador;
 import edu.fiuba.algo3.modelo.opcion.Opcion;
 import edu.fiuba.algo3.modelo.opcion.OpcionCorrecta;
+import edu.fiuba.algo3.modelo.opcion.OpcionIncorrecta;
 import edu.fiuba.algo3.modelo.pregunta.PreguntaOrderedChoice;
 import edu.fiuba.algo3.modelo.respuesta.Respuesta;
 import edu.fiuba.algo3.modelo.respuesta.RespuestaMultiple;
@@ -23,10 +24,10 @@ public class TestPreguntaOrderedChoice {
 
         ColeccionOpciones opciones = new ColeccionOpciones();
 
-        OpcionCorrecta primeraOpcion = new OpcionCorrecta("7",0);
-        OpcionCorrecta segundaOpcion = new OpcionCorrecta("4",0);
-        OpcionCorrecta terceraOpcion = new OpcionCorrecta("23",0);
-        OpcionCorrecta cuartaOpcion = new OpcionCorrecta("1",0);
+        OpcionCorrecta primeraOpcion = new OpcionCorrecta("7");
+        OpcionCorrecta segundaOpcion = new OpcionCorrecta("4");
+        OpcionCorrecta terceraOpcion = new OpcionCorrecta("23");
+        OpcionCorrecta cuartaOpcion = new OpcionCorrecta("1");
 
         opciones.agregarOpcion(cuartaOpcion);
         opciones.agregarOpcion(segundaOpcion);
@@ -59,10 +60,10 @@ public class TestPreguntaOrderedChoice {
 
         ColeccionOpciones opciones = new ColeccionOpciones();
 
-        OpcionCorrecta primeraOpcion = new OpcionCorrecta("7",0);
-        OpcionCorrecta segundaOpcion = new OpcionCorrecta("4",0);
-        OpcionCorrecta terceraOpcion = new OpcionCorrecta("23",0);
-        OpcionCorrecta cuartaOpcion = new OpcionCorrecta("1",0);
+        OpcionCorrecta primeraOpcion = new OpcionCorrecta("7");
+        OpcionCorrecta segundaOpcion = new OpcionCorrecta("4");
+        OpcionCorrecta terceraOpcion = new OpcionCorrecta("23");
+        OpcionCorrecta cuartaOpcion = new OpcionCorrecta("1");
 
         opciones.agregarOpcion(cuartaOpcion);
         opciones.agregarOpcion(segundaOpcion);
@@ -95,10 +96,10 @@ public class TestPreguntaOrderedChoice {
 
         ColeccionOpciones opciones = new ColeccionOpciones();
 
-        OpcionCorrecta primeraOpcion = new OpcionCorrecta("7",0);
-        OpcionCorrecta segundaOpcion = new OpcionCorrecta("4",0);
-        OpcionCorrecta terceraOpcion = new OpcionCorrecta("23",0);
-        OpcionCorrecta cuartaOpcion = new OpcionCorrecta("1",0);
+        OpcionCorrecta primeraOpcion = new OpcionCorrecta("7");
+        OpcionCorrecta segundaOpcion = new OpcionCorrecta("4");
+        OpcionCorrecta terceraOpcion = new OpcionCorrecta("23");
+        OpcionCorrecta cuartaOpcion = new OpcionCorrecta("1");
 
         opciones.agregarOpcion(cuartaOpcion);
         opciones.agregarOpcion(segundaOpcion);
@@ -130,10 +131,10 @@ public class TestPreguntaOrderedChoice {
 
         ColeccionOpciones opciones = new ColeccionOpciones();
 
-        OpcionCorrecta primeraOpcion = new OpcionCorrecta("7",0);
-        OpcionCorrecta segundaOpcion = new OpcionCorrecta("4",0);
-        OpcionCorrecta terceraOpcion = new OpcionCorrecta("23",0);
-        OpcionCorrecta cuartaOpcion = new OpcionCorrecta("1",0);
+        OpcionCorrecta primeraOpcion = new OpcionCorrecta("7");
+        OpcionCorrecta segundaOpcion = new OpcionCorrecta("4");
+        OpcionCorrecta terceraOpcion = new OpcionCorrecta("23");
+        OpcionCorrecta cuartaOpcion = new OpcionCorrecta("1");
 
         opciones.agregarOpcion(cuartaOpcion);
         opciones.agregarOpcion(segundaOpcion);
@@ -167,10 +168,10 @@ public class TestPreguntaOrderedChoice {
 
         ColeccionOpciones opciones = new ColeccionOpciones();
 
-        OpcionCorrecta primeraOpcion = new OpcionCorrecta("7",0);
-        OpcionCorrecta segundaOpcion = new OpcionCorrecta("4",0);
-        OpcionCorrecta terceraOpcion = new OpcionCorrecta("23",0);
-        OpcionCorrecta cuartaOpcion = new OpcionCorrecta("1",0);
+        OpcionCorrecta primeraOpcion = new OpcionCorrecta("7");
+        OpcionCorrecta segundaOpcion = new OpcionCorrecta("4");
+        OpcionCorrecta terceraOpcion = new OpcionCorrecta("23");
+        OpcionCorrecta cuartaOpcion = new OpcionCorrecta("1");
 
         opciones.agregarOpcion(cuartaOpcion);
         opciones.agregarOpcion(segundaOpcion);
@@ -213,10 +214,10 @@ public class TestPreguntaOrderedChoice {
 
         ColeccionOpciones opciones = new ColeccionOpciones();
 
-        OpcionCorrecta primeraOpcion = new OpcionCorrecta("7",0);
-        OpcionCorrecta segundaOpcion = new OpcionCorrecta("4",0);
-        OpcionCorrecta terceraOpcion = new OpcionCorrecta("23",0);
-        OpcionCorrecta cuartaOpcion = new OpcionCorrecta("1",0);
+        OpcionCorrecta primeraOpcion = new OpcionCorrecta("7");
+        OpcionCorrecta segundaOpcion = new OpcionCorrecta("4");
+        OpcionCorrecta terceraOpcion = new OpcionCorrecta("23");
+        OpcionCorrecta cuartaOpcion = new OpcionCorrecta("1");
 
         opciones.agregarOpcion(cuartaOpcion);
         opciones.agregarOpcion(segundaOpcion);
@@ -259,10 +260,10 @@ public class TestPreguntaOrderedChoice {
 
         ColeccionOpciones opciones = new ColeccionOpciones();
 
-        OpcionCorrecta primeraOpcion = new OpcionCorrecta("7",0);
-        OpcionCorrecta segundaOpcion = new OpcionCorrecta("4",0);
-        OpcionCorrecta terceraOpcion = new OpcionCorrecta("23",0);
-        OpcionCorrecta cuartaOpcion = new OpcionCorrecta("1",0);
+        OpcionCorrecta primeraOpcion = new OpcionCorrecta("7");
+        OpcionCorrecta segundaOpcion = new OpcionCorrecta("4");
+        OpcionCorrecta terceraOpcion = new OpcionCorrecta("23");
+        OpcionCorrecta cuartaOpcion = new OpcionCorrecta("1");
 
         opciones.agregarOpcion(cuartaOpcion);
         opciones.agregarOpcion(segundaOpcion);
@@ -303,10 +304,10 @@ public class TestPreguntaOrderedChoice {
 
         ColeccionOpciones opciones = new ColeccionOpciones();
 
-        OpcionCorrecta primeraOpcion = new OpcionCorrecta("7", 0);
-        OpcionCorrecta segundaOpcion = new OpcionCorrecta("4", 0);
-        OpcionCorrecta terceraOpcion = new OpcionCorrecta("23", 0);
-        OpcionCorrecta cuartaOpcion = new OpcionCorrecta("1", 0);
+        OpcionCorrecta primeraOpcion = new OpcionCorrecta("7");
+        OpcionCorrecta segundaOpcion = new OpcionCorrecta("4");
+        OpcionCorrecta terceraOpcion = new OpcionCorrecta("23");
+        OpcionCorrecta cuartaOpcion = new OpcionCorrecta("1");
 
         opciones.agregarOpcion(cuartaOpcion);
         opciones.agregarOpcion(segundaOpcion);
@@ -348,10 +349,10 @@ public class TestPreguntaOrderedChoice {
 
         ColeccionOpciones opciones = new ColeccionOpciones();
 
-        OpcionCorrecta primeraOpcion = new OpcionCorrecta("7", 0);
-        OpcionCorrecta segundaOpcion = new OpcionCorrecta("4", 0);
-        OpcionCorrecta terceraOpcion = new OpcionCorrecta("23", 0);
-        OpcionCorrecta cuartaOpcion = new OpcionCorrecta("1", 0);
+        OpcionCorrecta primeraOpcion = new OpcionCorrecta("7");
+        OpcionCorrecta segundaOpcion = new OpcionCorrecta("4");
+        OpcionCorrecta terceraOpcion = new OpcionCorrecta("23");
+        OpcionCorrecta cuartaOpcion = new OpcionCorrecta("1");
 
         opciones.agregarOpcion(cuartaOpcion);
         opciones.agregarOpcion(segundaOpcion);
@@ -386,4 +387,110 @@ public class TestPreguntaOrderedChoice {
         assertEquals(Mati.getPuntos().getCantidad(), 1);
     }
 
+    @Test
+    public void CreoPreguntaOrderedChoiceConOpcionesCorrectasEIncorrectasYJugadorOrdenaCorrectamente(){
+
+        Jugador Juan = new Jugador("Juan");
+
+        ColeccionOpciones opciones = new ColeccionOpciones();
+
+        OpcionCorrecta primeraOpcion = new OpcionCorrecta("7");
+        OpcionCorrecta segundaOpcion = new OpcionCorrecta("4");
+        OpcionIncorrecta terceraOpcion = new OpcionIncorrecta("A");
+        OpcionCorrecta cuartaOpcion = new OpcionCorrecta("1");
+
+        opciones.agregarOpcion(cuartaOpcion);
+        opciones.agregarOpcion(segundaOpcion);
+        opciones.agregarOpcion(primeraOpcion);
+        opciones.agregarOpcion(terceraOpcion);
+
+        PreguntaOrderedChoice pregunta = new PreguntaOrderedChoice("Ordene los numeros de menor a mayor", 1, opciones);
+
+        LinkedList<Respuesta> respuestas = new LinkedList<Respuesta>();
+
+        LinkedList<Opcion> opcionesSeleccionadas = new LinkedList<>();
+        opcionesSeleccionadas.add(cuartaOpcion);
+        opcionesSeleccionadas.add(segundaOpcion);
+        opcionesSeleccionadas.add(primeraOpcion);
+
+        RespuestaMultiple respuesta = new RespuestaMultiple(opcionesSeleccionadas, Juan);
+
+        respuestas.add(respuesta);
+
+        pregunta.evaluarRespuestas(respuestas);
+
+        assertEquals(Juan.getPuntos().getCantidad(),1);
+    }
+
+    @Test
+    public void CreoPreguntaOrderedChoiceConOpcionesCorrectasEIncorrectasYJugadorOrdenaCorrectamentePeroSeleccionaLaIncorrectaYNoTienePuntaje(){
+
+        Jugador Juan = new Jugador("Juan");
+
+        ColeccionOpciones opciones = new ColeccionOpciones();
+
+        OpcionCorrecta primeraOpcion = new OpcionCorrecta("7");
+        OpcionCorrecta segundaOpcion = new OpcionCorrecta("4");
+        OpcionIncorrecta terceraOpcion = new OpcionIncorrecta("A");
+        OpcionCorrecta cuartaOpcion = new OpcionCorrecta("1");
+
+        opciones.agregarOpcion(cuartaOpcion);
+        opciones.agregarOpcion(segundaOpcion);
+        opciones.agregarOpcion(primeraOpcion);
+        opciones.agregarOpcion(terceraOpcion);
+
+        PreguntaOrderedChoice pregunta = new PreguntaOrderedChoice("Ordene los numeros de menor a mayor", 1, opciones);
+
+        LinkedList<Respuesta> respuestas = new LinkedList<Respuesta>();
+
+        LinkedList<Opcion> opcionesSeleccionadas = new LinkedList<>();
+        opcionesSeleccionadas.add(cuartaOpcion);
+        opcionesSeleccionadas.add(segundaOpcion);
+        opcionesSeleccionadas.add(primeraOpcion);
+        opcionesSeleccionadas.add(terceraOpcion);
+
+        RespuestaMultiple respuesta = new RespuestaMultiple(opcionesSeleccionadas, Juan);
+
+        respuestas.add(respuesta);
+
+        pregunta.evaluarRespuestas(respuestas);
+
+        assertEquals(Juan.getPuntos().getCantidad(),0);
+    }
+
+    @Test
+    public void CreoPreguntaOrderedChoiceConOpcionesCorrectasEIncorrectasYJugadorNoOrdenaCorrectamenteYSeleccionaLaIncorrectaYNoTienePuntaje(){
+
+        Jugador Juan = new Jugador("Juan");
+
+        ColeccionOpciones opciones = new ColeccionOpciones();
+
+        OpcionCorrecta primeraOpcion = new OpcionCorrecta("7");
+        OpcionCorrecta segundaOpcion = new OpcionCorrecta("4");
+        OpcionIncorrecta terceraOpcion = new OpcionIncorrecta("A");
+        OpcionCorrecta cuartaOpcion = new OpcionCorrecta("1");
+
+        opciones.agregarOpcion(cuartaOpcion);
+        opciones.agregarOpcion(segundaOpcion);
+        opciones.agregarOpcion(primeraOpcion);
+        opciones.agregarOpcion(terceraOpcion);
+
+        PreguntaOrderedChoice pregunta = new PreguntaOrderedChoice("Ordene los numeros de menor a mayor", 1, opciones);
+
+        LinkedList<Respuesta> respuestas = new LinkedList<Respuesta>();
+
+        LinkedList<Opcion> opcionesSeleccionadas = new LinkedList<>();
+        opcionesSeleccionadas.add(segundaOpcion);
+        opcionesSeleccionadas.add(cuartaOpcion);
+        opcionesSeleccionadas.add(terceraOpcion);
+        opcionesSeleccionadas.add(primeraOpcion);
+
+        RespuestaMultiple respuesta = new RespuestaMultiple(opcionesSeleccionadas, Juan);
+
+        respuestas.add(respuesta);
+
+        pregunta.evaluarRespuestas(respuestas);
+
+        assertEquals(Juan.getPuntos().getCantidad(),0);
+    }
 }
