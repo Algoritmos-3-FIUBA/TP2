@@ -57,13 +57,13 @@ public class TestPreguntaGroupChoiceEntrega02 {
         respuestas.add(respuesta);
 
         pregunta.evaluarRespuestas(respuestas);
-        //Por cada grupo correcto se otorga un punto. Dos grupos correctos son dos puntos. Un grupo correcto es un punto.
+
         assertEquals(Guido.getPuntos().getCantidad(), 2);
     }
 
     @Test
     public void testCreoPreguntaGroupChoiceConDosJugadoresSoloUnoRespondeCorrectamente02() {
-        //Pregunta sabe los grupos correctos
+
         Jugador Guido = new Jugador("Guido");
         Jugador Lucas = new Jugador("Lucas");
 
@@ -82,7 +82,6 @@ public class TestPreguntaGroupChoiceEntrega02 {
 
         PreguntaGroupChoice pregunta = new PreguntaGroupChoice("¿Cuales de las siguientes cuentas tiene resultado 4?", 1, gruposCorrectos);
 
-        //Jugador Guido selecciona coloca las opciones en los grupos
         LinkedList<Respuesta> respuestas = new LinkedList<Respuesta>();
 
         LinkedList<ColeccionOpciones> gruposElegidosGuido = new LinkedList<ColeccionOpciones>();
@@ -100,7 +99,6 @@ public class TestPreguntaGroupChoiceEntrega02 {
 
         RespuestaGrupos respuestaGuido = new RespuestaGrupos(gruposElegidosGuido, Guido);
 
-        //Jugador Lucas selecciona coloca las opciones en los grupos
         LinkedList<ColeccionOpciones> gruposElegidosLucas = new LinkedList<ColeccionOpciones>();
 
         ColeccionOpciones grupo1ElegidosLucas = new ColeccionOpciones();
@@ -120,13 +118,13 @@ public class TestPreguntaGroupChoiceEntrega02 {
         respuestas.add(respuestaLucas);
 
         pregunta.evaluarRespuestas(respuestas);
-        //Por cada grupo correcto se otorga un punto. Dos grupos correctos son dos puntos. Un grupo correcto es un punto.
+
         assertEquals(Guido.getPuntos().getCantidad(), 2);
         assertEquals(Lucas.getPuntos().getCantidad(), 0);
     }
     @Test
     public void testCreoPreguntaGroupChoiceConDosJugadoresUnoRespondeCorrectamenteYElOtroParcialmente03() {
-        //Pregunta sabe los grupos correctos
+
         Jugador Guido = new Jugador("Guido");
         Jugador Lucas = new Jugador("Lucas");
 
@@ -145,7 +143,6 @@ public class TestPreguntaGroupChoiceEntrega02 {
 
         PreguntaGroupChoice pregunta = new PreguntaGroupChoice("¿Cuales de las siguientes cuentas tiene resultado 4?", 1, gruposCorrectos);
 
-        //Jugador Guido selecciona coloca las opciones en los grupos
         LinkedList<Respuesta> respuestas = new LinkedList<Respuesta>();
 
         LinkedList<ColeccionOpciones> gruposElegidosGuido = new LinkedList<ColeccionOpciones>();
@@ -163,7 +160,6 @@ public class TestPreguntaGroupChoiceEntrega02 {
 
         RespuestaGrupos respuestaGuido = new RespuestaGrupos(gruposElegidosGuido, Guido);
 
-        //Jugador Lucas selecciona coloca las opciones en los grupos
         LinkedList<ColeccionOpciones> gruposElegidosLucas = new LinkedList<ColeccionOpciones>();
 
         ColeccionOpciones grupo1ElegidosLucas = new ColeccionOpciones();
@@ -182,7 +178,7 @@ public class TestPreguntaGroupChoiceEntrega02 {
         respuestas.add(respuestaLucas);
 
         pregunta.evaluarRespuestas(respuestas);
-        //Por cada grupo correcto se otorga un punto. Dos grupos correctos son dos puntos. Un grupo correcto es un punto.
+
         assertEquals(Guido.getPuntos().getCantidad(), 2);
         assertEquals(Lucas.getPuntos().getCantidad(), 1);
     }
