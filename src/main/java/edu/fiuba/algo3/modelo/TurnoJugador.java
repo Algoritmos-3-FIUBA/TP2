@@ -31,7 +31,7 @@ public class TurnoJugador extends Turno{
 
     @Override
     public void actualizarPlantilla() throws IOException {
-        this.controlador.actualizarPlantilla(pregunta,actual);
+        this.controlador.actualizarPlantilla(pregunta,actual,this);
     }
     
 }
