@@ -58,7 +58,7 @@ public class ControladorMultipleChoiceClasico {
     public void avanzarSiguiente() throws IOException {
 
 
-        actualizarEscena(escenarioActual,"src/main/java/edu/fiuba/algo3/vista/plantilla/vofinicial.fxml");
+        actualizarEscena("src/main/java/edu/fiuba/algo3/vista/plantilla/vofinicial.fxml");
     }
     public void opcionSeleccionada() throws IOException {
 

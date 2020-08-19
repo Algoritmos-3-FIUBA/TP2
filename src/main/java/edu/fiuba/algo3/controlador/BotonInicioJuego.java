@@ -54,9 +54,8 @@ public class BotonInicioJuego implements EventHandler<ActionEvent>  {
         LinkedList<PreguntaVerdaderoFalso> listaPreguntas = new LinkedList<>();
 //        this.ingresarPreguntas(listaPreguntas);
 
-        juegoKahoot(jugador1.getText(),jugador2.getText());
         try {
-            actualizarEscena(App.obtenerEscenarioActual(),"src/main/java/edu/fiuba/algo3/vista/plantilla/MultipleChoiceClasico.fxml");
+            juegoKahoot(App.escenario,jugador1.getText(),jugador2.getText());
         } catch (IOException e) {
             e.printStackTrace();
         }
