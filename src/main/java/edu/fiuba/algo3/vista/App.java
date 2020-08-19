@@ -50,9 +50,8 @@ public class App extends Application {
 
         escenarioInicial.setTitle(TITULO_JUEGO);
 
-        FormularioInicial formularioInicial = new FormularioInicial() ;
-        formularioInicial.agregarControlesInterfaz(escenarioInicial);
-
+       //FormularioInicial formularioInicial = new FormularioInicial() ;
+        //formularioInicial.agregarControlesInterfaz(escenarioInicial);
         //Scene scene = new Scene(formularioInicial);
 
         Scene scene = new Scene(root);

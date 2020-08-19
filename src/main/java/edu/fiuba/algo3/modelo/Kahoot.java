@@ -9,13 +9,18 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.nio.file.Paths;
+import java.util.Dictionary;
+import java.util.HashMap;
 import java.util.LinkedList;
 
 public class Kahoot {
 
 
     private static LinkedList<Jugador> jugadores = new LinkedList<>();
+
     private static LinkedList<Pregunta> preguntas = new LinkedList<>();;
+
+    private static HashMap<Pregunta,String> plantillasPreguntas = new HashMap<>();
 
     private static Kahoot juego = new Kahoot();
 
@@ -27,7 +32,7 @@ public class Kahoot {
 
         System.out.println(jugador1);
 
-        LecturaDeArchivo leerArchivo = new LecturaDeArchivo(preguntas);
+        LecturaDeArchivo leerArchivo = new LecturaDeArchivo(preguntas,plantillasPreguntas);
     }
 
     public static void actualizarEscena(Stage escenarioActual) throws IOException {
@@ -44,7 +49,9 @@ public class Kahoot {
 
 
     }
+    public static void obtenerOpcionDeMultipleChoise(){
 
+    }
     /*
     public Kahoot(String jugador1, String jugador2){
 

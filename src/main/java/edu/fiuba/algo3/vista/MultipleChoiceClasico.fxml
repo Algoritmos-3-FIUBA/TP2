@@ -55,7 +55,7 @@
       <children>
             <Label fx:id="nombrepregunta" layoutX="265.0" layoutY="54.0" text="NombrePregunta" textFill="WHITE" />
             <Button fx:id="botonsiguiente" onAction="#avanzarSiguiente"  contentDisplay="BOTTOM" layoutX="525.0" layoutY="313.0" mnemonicParsing="false" text="Siguiente" />
-            <CheckBox fx:id="opcion1" layoutX="184.0" layoutY="129.0" mnemonicParsing="false" text="CheckBox" textFill="WHITE" />
+            <CheckBox fx:id="opcion1" onAction="#opcionSeleccionada" layoutX="184.0" layoutY="129.0" mnemonicParsing="false" text="CheckBox" textFill="WHITE" />
             <CheckBox fx:id="opcion2" layoutX="298.0" layoutY="130.0" mnemonicParsing="false" text="CheckBox" textFill="WHITE" />
             <CheckBox fx:id="opcion3" layoutX="415.0" layoutY="128.0" mnemonicParsing="false" text="CheckBox" textFill="WHITE" />
             <CheckBox fx:id="opcion4" layoutX="185.0" layoutY="200.0" mnemonicParsing="false" text="CheckBox" textFill="WHITE" />

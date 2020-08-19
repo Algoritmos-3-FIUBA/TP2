@@ -59,12 +59,12 @@ public class BotonInicioJuego implements EventHandler<ActionEvent>  {
         juegoKahoot(jugador1.getText(),jugador2.getText());
 
 
-        PreguntaVerdaderoFalsoClasico preg1 = new PreguntaVerdaderoFalsoClasico("1 + 1 = 2");
+       /* PreguntaVerdaderoFalsoClasico preg1 = new PreguntaVerdaderoFalsoClasico("1 + 1 = 2");
         preg1.setVerdaderoOpcionCorrecta();
         listaPreguntas.add(preg1);
         PreguntaVerdaderoFalsoClasico preg2 =  new PreguntaVerdaderoFalsoClasico("Existe el Sol");
         preg2.setVerdaderoOpcionCorrecta();
-        listaPreguntas.add(preg2);
+        listaPreguntas.add(preg2);*/
     }
 
     private void showAlert(Alert.AlertType alertType, Window owner, String title, String message) {

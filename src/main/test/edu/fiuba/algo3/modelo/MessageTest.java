@@ -11,8 +11,8 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 public class MessageTest {
     @Test
     public void testmessageGreeting01() {
-        LinkedList<Pregunta> j = new LinkedList<>();
-        LecturaDeArchivo l = new LecturaDeArchivo(j);
+        //LinkedList<Pregunta> j = new LinkedList<>();
+        //LecturaDeArchivo l = new LecturaDeArchivo(j);
         //Message message = new Message("Hello world!");
 
         //assertEquals("Hello world!", message.greet());
