@@ -1,19 +1,15 @@
 package edu.fiuba.algo3.modelo;
 
-import edu.fiuba.algo3.controlador.ControladorMultipleChoiceClasico;
 import edu.fiuba.algo3.modelo.pregunta.Pregunta;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
 
 import java.io.IOException;
-import java.net.MalformedURLException;
-import java.nio.file.Paths;
 import java.util.LinkedList;
 import java.util.Queue;
 
+import static edu.fiuba.algo3.modelo.Kahoot.siguienteTurno;
+
 public class TurnoJugador extends Turno{
-    private final Jugador actual;
+    private Jugador jugadorActual;
     private Queue<Jugador> jugadoresRestantes = new LinkedList();
     private Pregunta pregunta;
 
@@ -26,12 +22,20 @@ public class TurnoJugador extends Turno{
             this.jugadoresRestantes.add(jugador);
         }
 
-        this.actual = jugadoresRestantes.remove();
+        this.jugadorActual = jugadoresRestantes.remove();
     }
 
     @Override
     public void actualizarPlantilla() throws IOException {
-        this.controlador.actualizarPlantilla(pregunta,actual);
+        this.controlador.actualizarPlantilla(pregunta, jugadorActual,this);
     }
-    
+
+    public void siguienteJugador() {
+        if(jugadoresRestantes.isEmpty())
+            siguienteTurno();
+        else{
+            this.jugadorActual = jugadoresRestantes.remove();
+            this.controlador.actualizarPlantilla(pregunta, jugadorActual,this);
+        }
+    }
 }
