@@ -1,6 +1,8 @@
 package edu.fiuba.algo3.modelo.testunitarios;
 
 import edu.fiuba.algo3.modelo.ColeccionOpciones;
+import edu.fiuba.algo3.modelo.excepciones.MasDeCincoOpcionesException;
+import edu.fiuba.algo3.modelo.excepciones.NoHayOpcionesException;
 import edu.fiuba.algo3.modelo.exclusividad.Exclusividad;
 import edu.fiuba.algo3.modelo.Jugador;
 import edu.fiuba.algo3.modelo.opcion.Opcion;
@@ -12,6 +14,7 @@ import edu.fiuba.algo3.modelo.respuesta.RespuestaMultiple;
 import org.junit.Test;
 import java.util.LinkedList;
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 public class TestPreguntaMultipleChoice {
 
@@ -561,5 +564,33 @@ public class TestPreguntaMultipleChoice {
         assertEquals(Juan.getPuntos().getCantidad(), 16);
         assertEquals(Fer.getPuntos().getCantidad(), 0);
         assertEquals(Lucas.getPuntos().getCantidad(), 0);
+    }
+
+    @Test
+    public void testCreoPreguntaMultipleChoiceConSieteOpcionesYDevuelveExcepcion14() {
+
+        ColeccionOpciones opciones = new ColeccionOpciones();
+
+        opciones.agregarOpcion(new OpcionCorrecta("España"));
+        opciones.agregarOpcion(new OpcionIncorrecta("Brasil"));
+        opciones.agregarOpcion(new OpcionIncorrecta("Angola"));
+        opciones.agregarOpcion(new OpcionCorrecta("Reino Unido"));
+        opciones.agregarOpcion(new OpcionCorrecta("Croacia"));
+        opciones.agregarOpcion(new OpcionIncorrecta("China"));
+        opciones.agregarOpcion(new OpcionCorrecta("Grecia"));
+
+        assertThrows(MasDeCincoOpcionesException.class,
+                ()->{
+                    new PreguntaMultipleChoice("¿Cuales de los siguientes paises son europeos?", 5, opciones);
+                });
+    }
+
+    @Test
+    public void testCreoPreguntaMultipleChoiceConNingunaOpcionYDevuelveExcepcion15() {
+
+        assertThrows(NoHayOpcionesException.class,
+                ()->{
+                    new PreguntaMultipleChoice("¿Como se llama la calle donde se ubica la facultad de ingenieria?", 7, new ColeccionOpciones());
+                });
     }
 }

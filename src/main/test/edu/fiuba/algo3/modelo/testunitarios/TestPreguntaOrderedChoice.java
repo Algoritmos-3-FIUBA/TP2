@@ -1,6 +1,8 @@
 package edu.fiuba.algo3.modelo.testunitarios;
 
 import edu.fiuba.algo3.modelo.ColeccionOpciones;
+import edu.fiuba.algo3.modelo.excepciones.MasDeCincoOpcionesException;
+import edu.fiuba.algo3.modelo.excepciones.NoHayOpcionesException;
 import edu.fiuba.algo3.modelo.exclusividad.Exclusividad;
 import edu.fiuba.algo3.modelo.Jugador;
 import edu.fiuba.algo3.modelo.opcion.Opcion;
@@ -12,6 +14,7 @@ import edu.fiuba.algo3.modelo.respuesta.RespuestaMultiple;
 import org.junit.jupiter.api.Test;
 import java.util.LinkedList;
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 public class TestPreguntaOrderedChoice {
 
@@ -490,5 +493,33 @@ public class TestPreguntaOrderedChoice {
         pregunta.evaluarRespuestas(respuestas);
 
         assertEquals(Juan.getPuntos().getCantidad(),0);
+    }
+
+    @Test
+    public void testCreoPreguntaOrderedChoiceConOchoOpcionesYDevuelveExcepcion13() {
+
+        ColeccionOpciones opciones = new ColeccionOpciones();
+
+        opciones.agregarOpcion(new OpcionCorrecta("Llegada de Colon a America"));
+        opciones.agregarOpcion(new OpcionCorrecta("Revolución francesa"));
+        opciones.agregarOpcion(new OpcionCorrecta("Napoleon llega al poder"));
+        opciones.agregarOpcion(new OpcionCorrecta("Independencia argentina"));
+        opciones.agregarOpcion(new OpcionCorrecta("Primera guerra mundial"));
+        opciones.agregarOpcion(new OpcionIncorrecta("Visita extraterrestre"));
+        opciones.agregarOpcion(new OpcionIncorrecta("Llegada a Marte"));
+
+        assertThrows(MasDeCincoOpcionesException.class,
+                ()->{
+                    new PreguntaOrderedChoice("Ordenar los siguientes eventos de más antiguo a mas nuevo",6, opciones);
+                });
+    }
+
+    @Test
+    public void testCreoPreguntaOrderedChoiceConNingunaOpcionYDevuelveExcepcion14() {
+
+        assertThrows(NoHayOpcionesException.class,
+                ()->{
+                    new PreguntaOrderedChoice("Ordenar los siguientes eventos de más antiguo a mas nuevo", 5,  new ColeccionOpciones());
+                });
     }
 }
