@@ -1,19 +1,19 @@
 package edu.fiuba.algo3.modelo;
 
-import edu.fiuba.algo3.controlador.ControladorMultipleChoiceClasico;
+import edu.fiuba.algo3.controlador.Controlador;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 
 import java.io.IOException;
-import java.net.MalformedURLException;
 import java.nio.file.Paths;
 
 import static edu.fiuba.algo3.modelo.Kahoot.actualizarEscena;
 
 public abstract class Turno {
     protected Scene escena;
-    protected ControladorMultipleChoiceClasico controlador;
+    protected Controlador controlador;
+    //protected ControladorMultipleChoiceClasico controlador;
 
     public Turno(String plantilla) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader();

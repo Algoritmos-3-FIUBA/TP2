@@ -13,7 +13,7 @@ import javafx.stage.Stage;
 
 import java.util.LinkedList;
 
-public class ControladorVerdaderoFalsoClasico extends Controladores {
+public class ControladorVerdaderoFalsoClasico extends Controlador {
     private LinkedList<RadioButton> opcionesMostradas = new LinkedList<RadioButton>();
     private Opcion opcionesElegidas;
 
@@ -41,7 +41,7 @@ public class ControladorVerdaderoFalsoClasico extends Controladores {
         //opcion6.setDisable(true);
         //opcion6.setOpacity(0);
     }
-
+    @Override
     public void actualizarPlantilla(Pregunta pregunta, Jugador jugadorActual) {
         nombrepregunta.setText(pregunta.getNombre());
         jugadoractual.setText(jugadorActual.getNombre());

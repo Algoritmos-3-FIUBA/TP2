@@ -1,18 +1,13 @@
 package edu.fiuba.algo3.controlador;
 
 import edu.fiuba.algo3.modelo.Jugador;
-import edu.fiuba.algo3.modelo.opcion.Opcion;
 import edu.fiuba.algo3.modelo.pregunta.Pregunta;
-import edu.fiuba.algo3.vista.App;
-import javafx.fxml.FXML;
-import javafx.scene.control.Button;
-import javafx.scene.control.CheckBox;
-import javafx.scene.control.Label;
-import javafx.stage.Stage;
 
-import java.util.LinkedList;
+public class ControladorVerdaderoFalsoPenalidad extends Controlador {
+    @Override
+    public void actualizarPlantilla(Pregunta pregunta, Jugador actual) {
 
-public class ControladorVerdaderoFalsoPenalidad extends Controladores{
+    }
     /*
         DEJO COMENTADO
         PORQUE NO EXISTE
