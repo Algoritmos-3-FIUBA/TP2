@@ -72,11 +72,6 @@ public class PreguntaGroupChoice extends Pregunta{
                 if (((RespuestaGrupos) respuesta).getGruposElegidos().get(i).tieneMismosElementos(gruposCorrectos.get(i)))
                     respuesta.setCorrecta();
     }
-
-    public String getNombrePregunta() {
-        return nombre;
-    }
-
     //Version anterior
     /*
     public void verificarlosGruposDeLaRespuesta(RespuestaGrupos respuesta){

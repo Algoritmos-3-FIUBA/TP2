@@ -90,7 +90,7 @@ public class LecturaDeArchivo {
         PreguntaGroupChoice pregunta = new PreguntaGroupChoice((String) oPregunta.get("nombre"),1,gruposCorrectos);
         preguntas.add(pregunta);
         plantillaPreguntas.put(pregunta,"src/main/java/edu/fiuba/algo3/vista/plantilla/MultipleChoiceClasico.fxml");
-        System.out.println(pregunta.getNombrePregunta());
+        //System.out.println(pregunta.getNombrePregunta());
    }
 
     private void instanciarPreguntaOrderedChoise(JSONObject oPregunta, LinkedList<Pregunta> preguntas,HashMap<Pregunta,String> plantillaPreguntas) {
@@ -157,7 +157,7 @@ public class LecturaDeArchivo {
        PreguntaMultipleChoice pregunta = new PreguntaMultipleChoice((String) oPregunta.get("nombre"),1,opciones);
         preguntas.add(pregunta);
         plantillaPreguntas.put(pregunta,"src/main/java/edu/fiuba/algo3/vista/plantilla/MultipleChoiceClasico.fxml");
-        System.out.println(pregunta.getNombrePregunta());
+        //System.out.println(pregunta.getNombrePregunta());
     }
 
     private void instanciarPreguntaVoFPenalidad(JSONObject oPregunta, LinkedList<Pregunta> preguntas,HashMap<Pregunta,String> plantillaPreguntas) {

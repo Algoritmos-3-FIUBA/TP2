@@ -10,4 +10,8 @@ public abstract class Pregunta {
 
     public abstract void evaluarRespuestas(LinkedList<Respuesta> listaRespuestas);
 
+    public String getNombre() {
+        return nombre;
+    }
+
 }

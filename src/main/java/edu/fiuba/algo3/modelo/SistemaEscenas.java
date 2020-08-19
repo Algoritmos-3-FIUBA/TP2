@@ -13,10 +13,10 @@ public class SistemaEscenas {
 
     private Queue<Turno> turnos = new LinkedList();
 
-    public SistemaEscenas(LinkedList<Jugador> jugadores, LinkedList<Pregunta> preguntas, HashMap<Pregunta, String> plantillasPreguntas) {
+    public SistemaEscenas(LinkedList<Jugador> jugadores, LinkedList<Pregunta> preguntas, HashMap<Pregunta, String> plantillasPreguntas) throws IOException {
         for(Pregunta pregunta : preguntas){
             turnos.add(new TurnoJugador(jugadores,pregunta,plantillasPreguntas.get(pregunta)));
-            turnos.add(new TurnoPuntuaciones(jugadores,"url"));
+            //turnos.add(new TurnoPuntuaciones(jugadores,"url"));
         }
     }
 
