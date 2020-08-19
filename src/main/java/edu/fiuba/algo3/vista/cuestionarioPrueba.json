@@ -1,0 +1,29 @@
+[
+  {
+    "Pregunta":
+    {
+      "tipo" : "MultipleChoiseClasico",
+      "nombre":"¿Capital de Alemania?",
+      "correctas": [
+        "Berlin" ],
+      "incorrectas": [
+        "Paris",
+        "Munich",
+        "Amsterdam",
+        "Roma"]
+    }
+  }, {
+  "Pregunta":
+  {
+    "tipo" : "MultipleChoiseClasico",
+    "nombre":"¿Cuales de los siguientes son principios solid?",
+    "correctas": [
+      "Single responsibility",
+      "Open-Close"],
+    "incorrectas": [
+      "Encapsulamiento",
+      "Nombres representativos",
+      "Pocos accesos a memoria"]
+  }
+}
+]
