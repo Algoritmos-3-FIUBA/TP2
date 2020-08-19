@@ -142,6 +142,7 @@ public class TestPreguntaMultipleChoicePenalidad {
     public void testCreoPreguntaMultipleChoicePenalidadConMultiplicadorPorDosYRespondoDosOpcionesCorrectas05(){
 
         Jugador jugador = new Jugador("Pedro");
+
         Multiplicador multiplicador = new MultiplicadorPorDos();
 
         ColeccionOpciones opciones = new ColeccionOpciones();
@@ -173,6 +174,8 @@ public class TestPreguntaMultipleChoicePenalidad {
 
         Jugador jugador = new Jugador("Pedro");
 
+        Multiplicador multiplicador = new MultiplicadorPorDos();
+
         ColeccionOpciones opciones = new ColeccionOpciones();
 
         opciones.agregarOpcion(primeraOpcion);
@@ -189,7 +192,7 @@ public class TestPreguntaMultipleChoicePenalidad {
         opcionesSeleccionadas.add(segundaOpcion);
         opcionesSeleccionadas.add(terceraOpcion);
 
-        RespuestaMultiple respuesta = new RespuestaMultiple(opcionesSeleccionadas, jugador, jugador.usarMultiplicadorPorDos());
+        RespuestaMultiple respuesta = new RespuestaMultiple(opcionesSeleccionadas, jugador, multiplicador);
 
         respuestas.add(respuesta);
 
@@ -203,6 +206,8 @@ public class TestPreguntaMultipleChoicePenalidad {
 
         Jugador jugador = new Jugador("Pedro");
 
+        Multiplicador multiplicador = new MultiplicadorPorDos();
+
         ColeccionOpciones opciones = new ColeccionOpciones();
 
         opciones.agregarOpcion(primeraOpcion);
@@ -218,7 +223,7 @@ public class TestPreguntaMultipleChoicePenalidad {
         opcionesSeleccionadas.add(terceraOpcion);
         opcionesSeleccionadas.add(cuartaOpcion);
 
-        RespuestaMultiple respuesta = new RespuestaMultiple(opcionesSeleccionadas, jugador, jugador.usarMultiplicadorPorDos());
+        RespuestaMultiple respuesta = new RespuestaMultiple(opcionesSeleccionadas, jugador, multiplicador);
 
         respuestas.add(respuesta);
 
@@ -232,6 +237,8 @@ public class TestPreguntaMultipleChoicePenalidad {
 
         Jugador jugador = new Jugador("Pedro");
 
+        Multiplicador multiplicador = new MultiplicadorPorTres();
+
         ColeccionOpciones opciones = new ColeccionOpciones();
 
         opciones.agregarOpcion(primeraOpcion);
@@ -247,7 +254,7 @@ public class TestPreguntaMultipleChoicePenalidad {
         opcionesSeleccionadas.add(terceraOpcion);
         opcionesSeleccionadas.add(cuartaOpcion);
 
-        RespuestaMultiple respuesta = new RespuestaMultiple(opcionesSeleccionadas, jugador, jugador.usarMultiplicadorPorTres());
+        RespuestaMultiple respuesta = new RespuestaMultiple(opcionesSeleccionadas, jugador, multiplicador);
 
         respuestas.add(respuesta);
 
@@ -260,6 +267,8 @@ public class TestPreguntaMultipleChoicePenalidad {
     public void testCreoPreguntaMultipleChoicePenalidadConMultiplicadorPorTresYRespondoDosOpcionesIncorrectasYUnaCorrecta09(){
 
         Jugador jugador = new Jugador("Pedro");
+
+        Multiplicador multiplicador = new MultiplicadorPorTres();
 
         ColeccionOpciones opciones = new ColeccionOpciones();
 
@@ -277,7 +286,7 @@ public class TestPreguntaMultipleChoicePenalidad {
         opcionesSeleccionadas.add(terceraOpcion);
         opcionesSeleccionadas.add(cuartaOpcion);
 
-        RespuestaMultiple respuesta = new RespuestaMultiple(opcionesSeleccionadas, jugador, jugador.usarMultiplicadorPorTres());
+        RespuestaMultiple respuesta = new RespuestaMultiple(opcionesSeleccionadas, jugador, multiplicador);
 
         respuestas.add(respuesta);
 

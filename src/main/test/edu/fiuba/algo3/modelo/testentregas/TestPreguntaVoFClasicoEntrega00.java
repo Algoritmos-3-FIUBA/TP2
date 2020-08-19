@@ -21,7 +21,6 @@ public class TestPreguntaVoFClasicoEntrega00 {
 
         LinkedList<Respuesta> respuestasDeJugadores = new LinkedList<Respuesta>();
 
-        //Respuesta de Jugadores -> Lista con los jugadores que han respondido.
         respuestasDeJugadores.add(new RespuestaUnica(pregunta.getOpcionVerdadera(),Lucas));
 
         pregunta.evaluarRespuestas(respuestasDeJugadores);
@@ -41,7 +40,6 @@ public class TestPreguntaVoFClasicoEntrega00 {
 
         LinkedList<Respuesta> respuestasDeJugadores = new LinkedList<Respuesta>();
 
-        //Respuesta de Jugadores -> Lista con los jugadores que han respondido.
         respuestasDeJugadores.add(new RespuestaUnica(pregunta.getOpcionFalsa(),Lucas));
         respuestasDeJugadores.add(new RespuestaUnica(pregunta.getOpcionVerdadera(),Mati));
 

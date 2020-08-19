@@ -3,8 +3,8 @@ package edu.fiuba.algo3.modelo.testentregas;
 import edu.fiuba.algo3.modelo.ColeccionOpciones;
 import edu.fiuba.algo3.modelo.Jugador;
 import edu.fiuba.algo3.modelo.multiplicador.Multiplicador;
-import edu.fiuba.algo3.modelo.multiplicador.MultiplicadorPorTres;
 import edu.fiuba.algo3.modelo.multiplicador.MultiplicadorPorDos;
+import edu.fiuba.algo3.modelo.multiplicador.MultiplicadorPorTres;
 import edu.fiuba.algo3.modelo.opcion.Opcion;
 import edu.fiuba.algo3.modelo.opcion.OpcionCorrecta;
 import edu.fiuba.algo3.modelo.opcion.OpcionIncorrecta;
@@ -69,6 +69,7 @@ public class TestPreguntaMultipleChoicePenalidadEntrega02 {
         Jugador jugadorUno = new Jugador("Pedro");
         Jugador jugadorDos = new Jugador("Carlos");
 
+        Multiplicador multiplicador = new MultiplicadorPorDos();
 
         ColeccionOpciones opciones = new ColeccionOpciones();
 
@@ -87,7 +88,7 @@ public class TestPreguntaMultipleChoicePenalidadEntrega02 {
         LinkedList<Opcion> opcionesSeleccionadasJugadorDos = new LinkedList<>();
         opcionesSeleccionadasJugadorDos.add(primeraOpcion);
 
-        RespuestaMultiple respuestaJugadorUno = new RespuestaMultiple(opcionesSeleccionadasJugadorUno, jugadorUno, jugadorUno.usarMultiplicadorPorDos());
+        RespuestaMultiple respuestaJugadorUno = new RespuestaMultiple(opcionesSeleccionadasJugadorUno, jugadorUno, multiplicador);
         RespuestaMultiple respuestaJugadorDos = new RespuestaMultiple(opcionesSeleccionadasJugadorDos, jugadorDos);
 
         respuestas.add(respuestaJugadorUno);
@@ -104,6 +105,8 @@ public class TestPreguntaMultipleChoicePenalidadEntrega02 {
 
         Jugador jugadorUno = new Jugador("Pedro");
         Jugador jugadorDos = new Jugador("Carlos");
+
+        Multiplicador multiplicador = new MultiplicadorPorTres();
 
         ColeccionOpciones opciones = new ColeccionOpciones();
 
@@ -123,7 +126,7 @@ public class TestPreguntaMultipleChoicePenalidadEntrega02 {
         opcionesSeleccionadasJugadorDos.add(cuartaOpcion);
 
         RespuestaMultiple respuestaJugadorUno = new RespuestaMultiple(opcionesSeleccionadasJugadorUno, jugadorUno);
-        RespuestaMultiple respuestaJugadorDos = new RespuestaMultiple(opcionesSeleccionadasJugadorDos, jugadorDos, jugadorDos.usarMultiplicadorPorTres());
+        RespuestaMultiple respuestaJugadorDos = new RespuestaMultiple(opcionesSeleccionadasJugadorDos, jugadorDos, multiplicador);
 
         respuestas.add(respuestaJugadorUno);
         respuestas.add(respuestaJugadorDos);
@@ -139,6 +142,8 @@ public class TestPreguntaMultipleChoicePenalidadEntrega02 {
 
         Jugador jugadorUno = new Jugador("Pedro");
         Jugador jugadorDos = new Jugador("Carlos");
+
+        Multiplicador multiplicador = new MultiplicadorPorDos();
 
         ColeccionOpciones opcionesPreguntaUno = new ColeccionOpciones();
 
@@ -165,7 +170,7 @@ public class TestPreguntaMultipleChoicePenalidadEntrega02 {
         LinkedList<Opcion> opcionesSeleccionadasJugadorDos = new LinkedList<>();
         opcionesSeleccionadasJugadorDos.add(cuartaOpcion);
 
-        RespuestaMultiple respuestaJugadorUno = new RespuestaMultiple(opcionesSeleccionadasJugadorUno, jugadorUno, jugadorUno.usarMultiplicadorPorDos());
+        RespuestaMultiple respuestaJugadorUno = new RespuestaMultiple(opcionesSeleccionadasJugadorUno, jugadorUno, multiplicador);
         RespuestaMultiple respuestaJugadorDos = new RespuestaMultiple(opcionesSeleccionadasJugadorDos, jugadorDos);
 
         respuestas.add(respuestaJugadorUno);
@@ -184,7 +189,7 @@ public class TestPreguntaMultipleChoicePenalidadEntrega02 {
         LinkedList<Opcion> opcionesSeleccionadasJugadorDosPreguntaDos = new LinkedList<>();
         opcionesSeleccionadasJugadorDosPreguntaDos.add(primeraOpcionDos);
 
-        RespuestaMultiple respuestaJugadorUnoPreguntaDos = new RespuestaMultiple(opcionesSeleccionadasJugadorUnoPreguntaDos, jugadorUno, jugadorUno.usarMultiplicadorPorDos());
+        RespuestaMultiple respuestaJugadorUnoPreguntaDos = new RespuestaMultiple(opcionesSeleccionadasJugadorUnoPreguntaDos, jugadorUno, multiplicador);
         RespuestaMultiple respuestaJugadorDosPreguntaDos = new RespuestaMultiple(opcionesSeleccionadasJugadorDosPreguntaDos, jugadorDos);
 
         respuestasDos.add(respuestaJugadorUnoPreguntaDos);

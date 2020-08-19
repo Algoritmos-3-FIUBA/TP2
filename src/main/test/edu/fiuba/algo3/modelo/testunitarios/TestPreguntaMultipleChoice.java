@@ -268,7 +268,7 @@ public class TestPreguntaMultipleChoice {
 
         RespuestaMultiple respuestaMati = new RespuestaMultiple(opcionesSeleccionadasMati, Mati);
         RespuestaMultiple respuestaGuido = new RespuestaMultiple(opcionesSeleccionadasGuido, Guido);
-        RespuestaMultiple respuestaJuan = new RespuestaMultiple(opcionesSeleccionadasJuan, Juan, Juan.usarExclusividad());
+        RespuestaMultiple respuestaJuan = new RespuestaMultiple(opcionesSeleccionadasJuan, Juan, new Exclusividad());
 
         respuestas.add(respuestaMati);
         respuestas.add(respuestaGuido);
@@ -316,7 +316,7 @@ public class TestPreguntaMultipleChoice {
         opcionesSeleccionadasJuan.add(terceraOpcion);
         opcionesSeleccionadasJuan.add(cuartaOpcion);
 
-        RespuestaMultiple respuestaMati = new RespuestaMultiple(opcionesSeleccionadasMati, Mati, Mati.usarExclusividad());
+        RespuestaMultiple respuestaMati = new RespuestaMultiple(opcionesSeleccionadasMati, Mati, new Exclusividad());
         RespuestaMultiple respuestaGuido = new RespuestaMultiple(opcionesSeleccionadasGuido, Guido);
         RespuestaMultiple respuestaJuan = new RespuestaMultiple(opcionesSeleccionadasJuan, Juan);
 
@@ -366,7 +366,7 @@ public class TestPreguntaMultipleChoice {
         opcionesSeleccionadasJuan.add(terceraOpcion);
         opcionesSeleccionadasJuan.add(cuartaOpcion);
 
-        RespuestaMultiple respuestaMati = new RespuestaMultiple(opcionesSeleccionadasMati, Mati, Mati.usarExclusividad());
+        RespuestaMultiple respuestaMati = new RespuestaMultiple(opcionesSeleccionadasMati, Mati, new Exclusividad());
         RespuestaMultiple respuestaGuido = new RespuestaMultiple(opcionesSeleccionadasGuido, Guido);
         RespuestaMultiple respuestaJuan = new RespuestaMultiple(opcionesSeleccionadasJuan, Juan);
 
@@ -416,8 +416,8 @@ public class TestPreguntaMultipleChoice {
         opcionesSeleccionadasJuan.add(terceraOpcion);
         opcionesSeleccionadasJuan.add(cuartaOpcion);
 
-        RespuestaMultiple respuestaMati = new RespuestaMultiple(opcionesSeleccionadasMati, Mati,Mati.usarExclusividad());
-        RespuestaMultiple respuestaGuido = new RespuestaMultiple(opcionesSeleccionadasGuido, Guido, Guido.usarExclusividad());
+        RespuestaMultiple respuestaMati = new RespuestaMultiple(opcionesSeleccionadasMati, Mati, new Exclusividad());
+        RespuestaMultiple respuestaGuido = new RespuestaMultiple(opcionesSeleccionadasGuido, Guido, new Exclusividad());
         RespuestaMultiple respuestaJuan = new RespuestaMultiple(opcionesSeleccionadasJuan, Juan);
 
         respuestas.add(respuestaMati);
@@ -476,10 +476,10 @@ public class TestPreguntaMultipleChoice {
         opcionesSeleccionadasLucas.add(primeraOpcion);
         opcionesSeleccionadasLucas.add(terceraOpcion);
 
-        RespuestaMultiple respuestaMati = new RespuestaMultiple(opcionesSeleccionadasMati, Mati, Mati.usarExclusividad());
-        RespuestaMultiple respuestaGuido = new RespuestaMultiple(opcionesSeleccionadasGuido, Guido, Guido.usarExclusividad());
+        RespuestaMultiple respuestaMati = new RespuestaMultiple(opcionesSeleccionadasMati, Mati, new Exclusividad());
+        RespuestaMultiple respuestaGuido = new RespuestaMultiple(opcionesSeleccionadasGuido, Guido, new Exclusividad());
         RespuestaMultiple respuestaJuan = new RespuestaMultiple(opcionesSeleccionadasJuan, Juan);
-        RespuestaMultiple respuestaFer = new RespuestaMultiple(opcionesSeleccionadasFer, Fer, Fer.usarExclusividad());
+        RespuestaMultiple respuestaFer = new RespuestaMultiple(opcionesSeleccionadasFer, Fer, new Exclusividad());
         RespuestaMultiple respuestaLucas = new RespuestaMultiple(opcionesSeleccionadasLucas, Lucas);
 
         respuestas.add(respuestaMati);
@@ -542,10 +542,10 @@ public class TestPreguntaMultipleChoice {
         opcionesSeleccionadasLucas.add(primeraOpcion);
         opcionesSeleccionadasLucas.add(terceraOpcion);
 
-        RespuestaMultiple respuestaMati = new RespuestaMultiple(opcionesSeleccionadasMati, Mati, Mati.usarExclusividad());
-        RespuestaMultiple respuestaGuido = new RespuestaMultiple(opcionesSeleccionadasGuido, Guido, Guido.usarExclusividad());
-        RespuestaMultiple respuestaJuan = new RespuestaMultiple(opcionesSeleccionadasJuan, Juan, Juan.usarExclusividad());
-        RespuestaMultiple respuestaFer = new RespuestaMultiple(opcionesSeleccionadasFer, Fer, Fer.usarExclusividad());
+        RespuestaMultiple respuestaMati = new RespuestaMultiple(opcionesSeleccionadasMati, Mati, new Exclusividad());
+        RespuestaMultiple respuestaGuido = new RespuestaMultiple(opcionesSeleccionadasGuido, Guido, new Exclusividad());
+        RespuestaMultiple respuestaJuan = new RespuestaMultiple(opcionesSeleccionadasJuan, Juan, new Exclusividad());
+        RespuestaMultiple respuestaFer = new RespuestaMultiple(opcionesSeleccionadasFer, Fer, new Exclusividad());
         RespuestaMultiple respuestaLucas = new RespuestaMultiple(opcionesSeleccionadasLucas, Lucas);
 
         respuestas.add(respuestaMati);
