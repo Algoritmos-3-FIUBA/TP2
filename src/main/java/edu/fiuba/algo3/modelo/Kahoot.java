@@ -9,7 +9,6 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.nio.file.Paths;
-import java.util.Dictionary;
 import java.util.HashMap;
 import java.util.LinkedList;
 
@@ -18,9 +17,11 @@ public class Kahoot {
 
     private static LinkedList<Jugador> jugadores = new LinkedList<>();
 
-    private static LinkedList<Pregunta> preguntas = new LinkedList<>();;
+    private static LinkedList<Pregunta> preguntas = new LinkedList<>();
 
     private static HashMap<Pregunta,String> plantillasPreguntas = new HashMap<>();
+
+    private static SistemaEscenas sistemaTurnos;
 
     private static Kahoot juego = new Kahoot();
 
@@ -33,10 +34,11 @@ public class Kahoot {
         System.out.println(jugador1);
 
         LecturaDeArchivo leerArchivo = new LecturaDeArchivo(preguntas,plantillasPreguntas);
+
+        sistemaTurnos = new SistemaEscenas(jugadores,preguntas,plantillasPreguntas);
     }
 
     public static void actualizarEscena(Stage escenarioActual) throws IOException {
-
 
         FXMLLoader fxmlLoader = new FXMLLoader();
         fxmlLoader.setLocation(Paths.get("src/main/java/edu/fiuba/algo3/vista/vofinicial.fxml").toUri().toURL());
