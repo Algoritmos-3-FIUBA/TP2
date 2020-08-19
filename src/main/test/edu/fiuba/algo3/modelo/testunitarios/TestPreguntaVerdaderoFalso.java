@@ -99,7 +99,7 @@ public class TestPreguntaVerdaderoFalso {
 
         LinkedList<Respuesta> respuestasDeJugadores = new LinkedList<Respuesta>();
 
-        respuestasDeJugadores.add(new RespuestaUnica(pregunta.getOpcionVerdadera(),Lucas, new Exclusividad()));
+        respuestasDeJugadores.add(new RespuestaUnica(pregunta.getOpcionVerdadera(),Lucas, Lucas.usarExclusividad()));
 
         pregunta.evaluarRespuestas(respuestasDeJugadores);
 
@@ -116,7 +116,7 @@ public class TestPreguntaVerdaderoFalso {
 
         LinkedList<Respuesta> respuestasDeJugadores = new LinkedList<Respuesta>();
 
-        respuestasDeJugadores.add(new RespuestaUnica(pregunta.getOpcionVerdadera(),Lucas, new Exclusividad()));
+        respuestasDeJugadores.add(new RespuestaUnica(pregunta.getOpcionVerdadera(),Lucas, Lucas.usarExclusividad()));
         respuestasDeJugadores.add(new RespuestaUnica(pregunta.getOpcionVerdadera(),Juan));
 
         pregunta.evaluarRespuestas(respuestasDeJugadores);
@@ -135,7 +135,7 @@ public class TestPreguntaVerdaderoFalso {
 
         LinkedList<Respuesta> respuestasDeJugadores = new LinkedList<Respuesta>();
 
-        respuestasDeJugadores.add(new RespuestaUnica(pregunta.getOpcionFalsa(),Lucas, new Exclusividad()));
+        respuestasDeJugadores.add(new RespuestaUnica(pregunta.getOpcionFalsa(),Lucas, Lucas.usarExclusividad()));
         respuestasDeJugadores.add(new RespuestaUnica(pregunta.getOpcionFalsa(),Juan));
 
         pregunta.evaluarRespuestas(respuestasDeJugadores);
@@ -154,7 +154,7 @@ public class TestPreguntaVerdaderoFalso {
 
         LinkedList<Respuesta> respuestasDeJugadores = new LinkedList<Respuesta>();
 
-        respuestasDeJugadores.add(new RespuestaUnica(pregunta.getOpcionFalsa(),Lucas, new Exclusividad()));
+        respuestasDeJugadores.add(new RespuestaUnica(pregunta.getOpcionFalsa(),Lucas, Lucas.usarExclusividad()));
         respuestasDeJugadores.add(new RespuestaUnica(pregunta.getOpcionVerdadera(),Juan));
 
         pregunta.evaluarRespuestas(respuestasDeJugadores);
@@ -173,8 +173,8 @@ public class TestPreguntaVerdaderoFalso {
 
         LinkedList<Respuesta> respuestasDeJugadores = new LinkedList<Respuesta>();
 
-        respuestasDeJugadores.add(new RespuestaUnica(pregunta.getOpcionFalsa(),Lucas, new Exclusividad()));
-        respuestasDeJugadores.add(new RespuestaUnica(pregunta.getOpcionVerdadera(),Juan, new Exclusividad()));
+        respuestasDeJugadores.add(new RespuestaUnica(pregunta.getOpcionFalsa(),Lucas, Lucas.usarExclusividad()));
+        respuestasDeJugadores.add(new RespuestaUnica(pregunta.getOpcionVerdadera(),Juan, Juan.usarExclusividad()));
 
         pregunta.evaluarRespuestas(respuestasDeJugadores);
 
@@ -196,7 +196,7 @@ public class TestPreguntaVerdaderoFalso {
 
         respuestasDeJugadores.add(new RespuestaUnica(pregunta.getOpcionFalsa(),Lucas));
         respuestasDeJugadores.add(new RespuestaUnica(pregunta.getOpcionFalsa(),Juan));
-        respuestasDeJugadores.add(new RespuestaUnica(pregunta.getOpcionVerdadera(),Pedro, new Exclusividad()));
+        respuestasDeJugadores.add(new RespuestaUnica(pregunta.getOpcionVerdadera(),Pedro, Pedro.usarExclusividad()));
         respuestasDeJugadores.add(new RespuestaUnica(pregunta.getOpcionFalsa(),Ramiro));
 
         pregunta.evaluarRespuestas(respuestasDeJugadores);
@@ -220,8 +220,8 @@ public class TestPreguntaVerdaderoFalso {
         LinkedList<Respuesta> respuestasDeJugadores = new LinkedList<Respuesta>();
 
         respuestasDeJugadores.add(new RespuestaUnica(pregunta.getOpcionVerdadera(),Lucas));
-        respuestasDeJugadores.add(new RespuestaUnica(pregunta.getOpcionFalsa(),Juan, new Exclusividad()));
-        respuestasDeJugadores.add(new RespuestaUnica(pregunta.getOpcionVerdadera(),Pedro, new Exclusividad()));
+        respuestasDeJugadores.add(new RespuestaUnica(pregunta.getOpcionFalsa(),Juan, Juan.usarExclusividad()));
+        respuestasDeJugadores.add(new RespuestaUnica(pregunta.getOpcionVerdadera(),Pedro, Pedro.usarExclusividad()));
         respuestasDeJugadores.add(new RespuestaUnica(pregunta.getOpcionVerdadera(),Ramiro));
 
         pregunta.evaluarRespuestas(respuestasDeJugadores);

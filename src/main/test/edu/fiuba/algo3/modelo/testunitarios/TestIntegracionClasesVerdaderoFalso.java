@@ -14,15 +14,15 @@ public class TestIntegracionClasesVerdaderoFalso {
 
     @Test
     public void testJugadorRespondeDiferentesTiposDePreguntasDeFormaCorrecta01(){
-        // Creacion de Jugador
+
         Jugador juan = new Jugador("Juan");
-        // Creacion de primer pregunta estilo VoF Clasica.
+
         PreguntaVerdaderoFalsoClasico preguntaClasica = new PreguntaVerdaderoFalsoClasico("10+10 es 20");
         preguntaClasica.setVerdaderoOpcionCorrecta();
-        // Creacion de segunda pregunta estilo VoF Penalidad
+
         PreguntaVerdaderoFalsoPenalidad preguntaPenalidad = new PreguntaVerdaderoFalsoPenalidad("10+2 no es 20");
         preguntaPenalidad.setVerdaderoOpcionCorrecta();
-        // Jugador Responde.
+
         RespuestaUnica respuestaPrimerPregunta = new RespuestaUnica(preguntaClasica.getOpcionVerdadera(),juan);
         RespuestaUnica respuestaSegundaPregunta = new RespuestaUnica(preguntaClasica.getOpcionVerdadera(),juan);
 
@@ -32,7 +32,6 @@ public class TestIntegracionClasesVerdaderoFalso {
         listaRespuestaPrimerPregunta.add(respuestaPrimerPregunta);
         listaRespuestaSegundaPregunta.add(respuestaSegundaPregunta);
 
-        // Cada pregunta evalua las respuestas.
         preguntaClasica.evaluarRespuestas(listaRespuestaPrimerPregunta);
         preguntaPenalidad.evaluarRespuestas(listaRespuestaSegundaPregunta);
 
@@ -43,15 +42,15 @@ public class TestIntegracionClasesVerdaderoFalso {
     }
     @Test
     public void testJugadorRespondeDeFormaCorrectaPreguntaVoFClasicaEIncorrectaPreguntaVoFPenalidad02(){
-        // Creacion de Jugador
+
         Jugador juan = new Jugador("Juan");
-        // Creacion de primer pregunta estilo VoF Clasica.
+
         PreguntaVerdaderoFalsoClasico preguntaClasica = new PreguntaVerdaderoFalsoClasico("10+10 es 20");
         preguntaClasica.setVerdaderoOpcionCorrecta();
-        // Creacion de segunda pregunta estilo VoF Penalidad
+
         PreguntaVerdaderoFalsoPenalidad preguntaPenalidad = new PreguntaVerdaderoFalsoPenalidad("10+2 no es 20");
         preguntaPenalidad.setVerdaderoOpcionCorrecta();
-        // Jugador Responde.
+
         RespuestaUnica respuestaPrimerPregunta = new RespuestaUnica(preguntaClasica.getOpcionVerdadera(),juan);
         RespuestaUnica respuestaSegundaPregunta = new RespuestaUnica(preguntaPenalidad.getOpcionFalsa(),juan);
 
@@ -61,7 +60,6 @@ public class TestIntegracionClasesVerdaderoFalso {
         listaRespuestaPrimerPregunta.add(respuestaPrimerPregunta);
         listaRespuestaSegundaPregunta.add(respuestaSegundaPregunta);
 
-        // Cada pregunta evalua las respuestas.
         preguntaClasica.evaluarRespuestas(listaRespuestaPrimerPregunta);
         preguntaPenalidad.evaluarRespuestas(listaRespuestaSegundaPregunta);
 
@@ -72,15 +70,15 @@ public class TestIntegracionClasesVerdaderoFalso {
 
     @Test
     public void testJugadorRespondeDeFormaIncorrectaPreguntaVoFClasicaECorrectaPreguntaVoFPenalidad03(){
-        // Creacion de Jugador
+
         Jugador juan = new Jugador("Juan");
-        // Creacion de primer pregunta estilo VoF Clasica.
+
         PreguntaVerdaderoFalsoClasico preguntaClasica = new PreguntaVerdaderoFalsoClasico("10+10 es 20");
         preguntaClasica.setVerdaderoOpcionCorrecta();
-        // Creacion de segunda pregunta estilo VoF Penalidad
+
         PreguntaVerdaderoFalsoPenalidad preguntaPenalidad = new PreguntaVerdaderoFalsoPenalidad("10+2 no es 20");
         preguntaPenalidad.setVerdaderoOpcionCorrecta();
-        // Jugador Responde.
+
         RespuestaUnica respuestaPrimerPregunta = new RespuestaUnica(preguntaClasica.getOpcionFalsa(),juan);
         RespuestaUnica respuestaSegundaPregunta = new RespuestaUnica(preguntaPenalidad.getOpcionVerdadera(),juan);
 
@@ -90,7 +88,6 @@ public class TestIntegracionClasesVerdaderoFalso {
         listaRespuestaPrimerPregunta.add(respuestaPrimerPregunta);
         listaRespuestaSegundaPregunta.add(respuestaSegundaPregunta);
 
-        // Cada pregunta evalua las respuestas.
         preguntaClasica.evaluarRespuestas(listaRespuestaPrimerPregunta);
         preguntaPenalidad.evaluarRespuestas(listaRespuestaSegundaPregunta);
 
