@@ -1,6 +1,7 @@
 package edu.fiuba.algo3.modelo;
 
 import java.io.IOException;
+import java.net.MalformedURLException;
 
 import static edu.fiuba.algo3.modelo.Kahoot.actualizarEscena;
 
@@ -12,5 +13,5 @@ public abstract class Turno {
         actualizarEscena(plantilla);
     }
 
-    protected abstract void actualizarPlantilla();
+    protected abstract void actualizarPlantilla() throws MalformedURLException, IOException;
 }

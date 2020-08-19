@@ -39,7 +39,7 @@ public class Kahoot {
         LecturaDeArchivo leerArchivo = new LecturaDeArchivo(preguntas,plantillasPreguntas);
 
         sistemaTurnos = new SistemaEscenas(jugadores,preguntas,plantillasPreguntas);
-
+        /// CREAR RESPUESTAS ANTES DE ESTA INSTANCIA Y QUE LA PREGUNTA LAS EVALUE ///
         sistemaTurnos.siguienteEscena();
     }
 
