@@ -20,7 +20,7 @@ public class App extends Application {
 
     @Override
     public void start(Stage escenarioInicial) throws Exception {
-        this.escenario=escenarioInicial;
+        this.escenario = escenarioInicial;
 
         escenarioInicial.getIcons().add(new Image(Paths.get(ICONO_JUEGO).toUri().toString()));
 
@@ -53,7 +53,7 @@ public class App extends Application {
         FormularioInicial formularioInicial = new FormularioInicial() ;
         formularioInicial.agregarControlesInterfaz(escenarioInicial);
 
-
+        //Scene scene = new Scene(formularioInicial);
 
         Scene scene = new Scene(root);
 

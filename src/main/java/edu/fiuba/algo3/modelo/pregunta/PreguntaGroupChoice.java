@@ -52,6 +52,10 @@ public class PreguntaGroupChoice extends Pregunta{
                     respuesta.setCorrecta();
     }
 
+    public String getNombrePregunta() {
+        return nombre;
+    }
+
     //Version anterior
     /*
     public void verificarlosGruposDeLaRespuesta(RespuestaGrupos respuesta){

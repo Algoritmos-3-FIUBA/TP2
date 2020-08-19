@@ -59,17 +59,17 @@ public class FormularioInicial extends GridPane {
 
         this.add(jugador2, 1, 2);
 
-        Button submitButton = new Button("Submit");
-        submitButton.setPrefHeight(40);
-        submitButton.setDefaultButton(true);
-        submitButton.setPrefWidth(100);
-        this.add(submitButton, 0, 4, 2, 1);
-        GridPane.setHalignment(submitButton, HPos.CENTER);
-        GridPane.setMargin(submitButton, new Insets(20, 0,20,0));
+        Button iniciarPartida = new Button("Iniciar Partida ");
+        iniciarPartida.setPrefHeight(40);
+        iniciarPartida.setDefaultButton(true);
+        iniciarPartida.setPrefWidth(100);
+        this.add(iniciarPartida, 0, 4, 2, 1);
+        GridPane.setHalignment(iniciarPartida, HPos.CENTER);
+        GridPane.setMargin(iniciarPartida, new Insets(20, 0,20,0));
 
-        BotonInicioJuego botonInicioJuego = new BotonInicioJuego(jugador1,jugador2,this); 
+        BotonInicioJuego botonInicioJuego = new BotonInicioJuego(jugador1,jugador2,this);
 
-        submitButton.setOnAction(botonInicioJuego);//Nuevo
+        iniciarPartida.setOnAction(botonInicioJuego);//Nuevo
     }
     
 }

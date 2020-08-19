@@ -49,4 +49,7 @@ public class PreguntaMultipleChoiceParcial extends Pregunta{
                 cadaRespuesta.setCorrecta();
         }
     }
+
+    public String getNombrePregunta() { return nombre;
+    }
 }

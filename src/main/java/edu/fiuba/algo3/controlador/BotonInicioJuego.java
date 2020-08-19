@@ -1,5 +1,6 @@
 package edu.fiuba.algo3.controlador;
 
+import edu.fiuba.algo3.modelo.Kahoot;
 import edu.fiuba.algo3.modelo.pregunta.PreguntaVerdaderoFalso;
 import edu.fiuba.algo3.modelo.pregunta.PreguntaVerdaderoFalsoClasico;
 import edu.fiuba.algo3.vista.PreguntaVoF;
@@ -53,7 +54,7 @@ public class BotonInicioJuego implements EventHandler<ActionEvent>  {
 
     private void ingresarPreguntas(LinkedList<PreguntaVerdaderoFalso> listaPreguntas) {
 
-       // Kahoot kahoot = new Kahoot(jugador1, jugador2);
+        Kahoot kahoot = new Kahoot(jugador1.getText(),jugador2.getText());
 
         PreguntaVerdaderoFalsoClasico preg1 = new PreguntaVerdaderoFalsoClasico("1 + 1 = 2");
         preg1.setVerdaderoOpcionCorrecta();
