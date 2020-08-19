@@ -2,6 +2,7 @@ package edu.fiuba.algo3.controlador;
 
 import edu.fiuba.algo3.modelo.ColeccionOpciones;
 import edu.fiuba.algo3.modelo.Jugador;
+import edu.fiuba.algo3.modelo.TurnoJugador;
 import edu.fiuba.algo3.modelo.opcion.Opcion;
 import edu.fiuba.algo3.modelo.pregunta.Pregunta;
 import edu.fiuba.algo3.modelo.pregunta.PreguntaMultipleChoice;
@@ -25,6 +26,7 @@ public class ControladorMultipleChoiceClasico extends Controladores{
     private LinkedList<CheckBox> opcionesMostradas = new LinkedList<>();
     private ColeccionOpciones opcionesElegidas = new ColeccionOpciones();
     private Pregunta pregunta; //= new PreguntaMultipleChoice();
+    private TurnoJugador turnoActual;
 
     @FXML
     public Label nombrepregunta;
@@ -62,13 +64,21 @@ public class ControladorMultipleChoiceClasico extends Controladores{
         opcion6.setOpacity(0);
     }
 
-    public void actualizarPlantilla(Pregunta pregunta, Jugador jugadorActual) {
+    public void actualizarPlantilla(Pregunta pregunta, Jugador jugadorActual, TurnoJugador turnoActual) {
+        this.turnoActual = turnoActual;
+
         nombrepregunta.setText(pregunta.getNombre());
         jugadoractual.setText(jugadorActual.getNombre());
         puntosactuales.setText(String.valueOf(jugadorActual.getPuntos().cantidad));
 
-        for (int i = 0; i < pregunta.getOpciones().cantidadElementos(); i++)
+        for (int i = 0; i < pregunta.getOpciones().cantidadElementos(); i++) {
+            opcionesMostradas.get(i).setSelected(false);
             opcionesMostradas.get(i).setText(pregunta.getOpciones().getOpciones().get(i).getNombre());
+        }
+    }
+
+    public void siguienteTurno(){
+        this.turnoActual.siguienteJugador();
     }
 
 }

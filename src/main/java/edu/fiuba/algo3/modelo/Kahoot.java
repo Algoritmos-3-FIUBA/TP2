@@ -47,4 +47,7 @@ public class Kahoot {
         escenario.setScene(escena);
     }
 
+    public static void siguienteTurno(){
+        //sistemaTurnos.siguienteEscena();
+    }
 }
