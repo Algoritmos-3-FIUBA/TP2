@@ -24,10 +24,17 @@ public class App extends Application {
 
         escenarioInicial.getIcons().add(new Image(Paths.get(ICONO_JUEGO).toUri().toString()));
 
+
+        FXMLLoader fxmlLoader = new FXMLLoader();
+        fxmlLoader.setLocation(Paths.get("src/main/java/edu/fiuba/algo3/vista/MultipleChoiceClasico.fxml").toUri().toURL());
+        Parent root = fxmlLoader.load();
+
+
+/*
         FXMLLoader fxmlLoader = new FXMLLoader();
         fxmlLoader.setLocation(Paths.get("src/main/java/edu/fiuba/algo3/vista/vofinicial.fxml").toUri().toURL());
         Parent root = fxmlLoader.load();
-
+*/
 
 /*Con este código la música funciona por pocos segundos, se corta de la nada. Probar en otra PC
         Media media = new Media(Paths.get(SONIDO_JUEGO).toUri().toString());
