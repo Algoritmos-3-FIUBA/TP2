@@ -38,10 +38,10 @@ public class Kahoot {
         sistemaTurnos = new SistemaEscenas(jugadores,preguntas,plantillasPreguntas);
     }
 
-    public static void actualizarEscena(Stage escenarioActual) throws IOException {
+    public static void actualizarEscena(Stage escenarioActual, String direccion) throws IOException {
 
         FXMLLoader fxmlLoader = new FXMLLoader();
-        fxmlLoader.setLocation(Paths.get("src/main/java/edu/fiuba/algo3/vista/vofinicial.fxml").toUri().toURL());
+        fxmlLoader.setLocation(Paths.get(direccion).toUri().toURL());
         Parent root = fxmlLoader.load();
 
 

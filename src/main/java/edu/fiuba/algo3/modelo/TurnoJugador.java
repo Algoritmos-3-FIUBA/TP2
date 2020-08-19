@@ -6,6 +6,8 @@ import java.util.LinkedList;
 
 public class TurnoJugador extends Turno{
     public TurnoJugador(LinkedList<Jugador> jugadores, Pregunta pregunta, String plantilla) {
+        for (Jugador jugador:jugadores){
 
+        }
     }
 }

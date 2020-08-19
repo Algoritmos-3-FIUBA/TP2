@@ -3,6 +3,7 @@ package edu.fiuba.algo3.controlador;
 import edu.fiuba.algo3.modelo.Kahoot;
 import edu.fiuba.algo3.modelo.pregunta.PreguntaVerdaderoFalso;
 import edu.fiuba.algo3.modelo.pregunta.PreguntaVerdaderoFalsoClasico;
+import edu.fiuba.algo3.vista.App;
 import edu.fiuba.algo3.vista.PreguntaVoF;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
@@ -12,9 +13,11 @@ import javafx.scene.layout.GridPane;
 import javafx.scene.media.AudioClip;
 import javafx.stage.Window;
 
+import java.io.IOException;
 import java.nio.file.Paths;
 import java.util.LinkedList;
 
+import static edu.fiuba.algo3.modelo.Kahoot.actualizarEscena;
 import static edu.fiuba.algo3.modelo.Kahoot.juegoKahoot;
 
 public class BotonInicioJuego implements EventHandler<ActionEvent>  {
@@ -49,23 +52,16 @@ public class BotonInicioJuego implements EventHandler<ActionEvent>  {
         audioPreguntas.setVolume(0.85);
 
         LinkedList<PreguntaVerdaderoFalso> listaPreguntas = new LinkedList<>();
-        this.ingresarPreguntas(listaPreguntas);
-        for(int i = 2 ; i > 0 ; i--)
-            new PreguntaVoF(listaPreguntas,i);
-    }
-
-    private void ingresarPreguntas(LinkedList<PreguntaVerdaderoFalso> listaPreguntas) {
+//        this.ingresarPreguntas(listaPreguntas);
 
         juegoKahoot(jugador1.getText(),jugador2.getText());
-
-
-       /* PreguntaVerdaderoFalsoClasico preg1 = new PreguntaVerdaderoFalsoClasico("1 + 1 = 2");
-        preg1.setVerdaderoOpcionCorrecta();
-        listaPreguntas.add(preg1);
-        PreguntaVerdaderoFalsoClasico preg2 =  new PreguntaVerdaderoFalsoClasico("Existe el Sol");
-        preg2.setVerdaderoOpcionCorrecta();
-        listaPreguntas.add(preg2);*/
+        try {
+            actualizarEscena(App.obtenerEscenarioActual(),"src/main/java/edu/fiuba/algo3/vista/plantilla/MultipleChoiceClasico.fxml");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
+
 
     private void showAlert(Alert.AlertType alertType, Window owner, String title, String message) {
         Alert alert = new Alert(alertType);
