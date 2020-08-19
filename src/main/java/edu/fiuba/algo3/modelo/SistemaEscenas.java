@@ -22,6 +22,9 @@ public class SistemaEscenas {
 
     public void siguienteEscena() throws IOException {
         Turno turnoSiguiente = turnos.remove();
+        System.out.println(turnoSiguiente.controlador.getClass());
+        System.out.println("///////////////////////////////////");
+
         turnoSiguiente.mostrarEscena();
     }
 }

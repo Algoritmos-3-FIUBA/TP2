@@ -12,7 +12,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox opacity="0.8" prefHeight="400.0" prefWidth="640.0" style="-fx-background-color: purple;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ControladorMultipleChoiceClasico">
+<VBox opacity="0.8" prefHeight="400.0" prefWidth="640.0" style="-fx-background-color: purple;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.fiuba.algo3.controlador.ControladorOrderedChoice">
   <children>
     <MenuBar opacity="0.74" style="-fx-background-color: black;" VBox.vgrow="NEVER">
       <menus>
@@ -56,7 +56,7 @@
     <AnchorPane maxHeight="-1.0" maxWidth="-1.0" opacity="0.8" prefHeight="-1.0" prefWidth="-1.0" style="-fx-background-color: purple;" VBox.vgrow="ALWAYS">
       <children>
             <Label fx:id="nombrepregunta" layoutX="255.0" layoutY="69.0" text="NombrePregunta" textFill="WHITE" />
-            <Button fx:id="botonsiguiente" contentDisplay="BOTTOM" layoutX="525.0" layoutY="313.0" mnemonicParsing="false" style="-fx-pref-height: 50; -fx-pref-width: 100; -fx-text-fill: white; -fx-background-color: black; -fx-border-color: white;" text="Siguiente" textFill="WHITE">
+            <Button fx:id="botonsiguiente" onAction="#siguienteTurno" contentDisplay="BOTTOM" layoutX="525.0" layoutY="313.0" mnemonicParsing="false" style="-fx-pref-height: 50; -fx-pref-width: 100; -fx-text-fill: white; -fx-background-color: black; -fx-border-color: white;" text="Siguiente" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="14.0" />
                </font></Button>
