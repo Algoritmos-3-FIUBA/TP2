@@ -3,13 +3,17 @@ package edu.fiuba.algo3.modelo.testunitarios;
 import edu.fiuba.algo3.modelo.ColeccionOpciones;
 import edu.fiuba.algo3.modelo.Jugador;
 import edu.fiuba.algo3.modelo.Puntos;
+import edu.fiuba.algo3.modelo.excepciones.MasDeSeisOpcionesException;
+import edu.fiuba.algo3.modelo.excepciones.NoHayOpcionesException;
 import edu.fiuba.algo3.modelo.opcion.Opcion;
 import edu.fiuba.algo3.modelo.opcion.OpcionCorrecta;
 import edu.fiuba.algo3.modelo.respuesta.RespuestaGrupos;
+import edu.fiuba.algo3.modelo.respuesta.RespuestaMultiple;
 import org.junit.jupiter.api.Test;
 import java.util.HashSet;
 import java.util.LinkedList;
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 public class TestRespuestaGrupo {
 
@@ -17,6 +21,9 @@ public class TestRespuestaGrupo {
     private final OpcionCorrecta segundaOpcion = new OpcionCorrecta("Opcion2");
     private final OpcionCorrecta terceraOpcion = new OpcionCorrecta("Opcion3");
     private final OpcionCorrecta cuartaOpcion = new OpcionCorrecta("Opcion4");
+    private final OpcionCorrecta quintaOpcion = new OpcionCorrecta("Opcion5");
+    private final OpcionCorrecta sextaOpcion = new OpcionCorrecta("Opcion6");
+    private final OpcionCorrecta septimaOpcion = new OpcionCorrecta("Opcion7");
 
     @Test
     public void testCreoLaRespuestaGroupChoiceDelJugadorYVerificoSiSonLasElegidas01() {
@@ -100,5 +107,60 @@ public class TestRespuestaGrupo {
         respuesta.otorgarPuntos(puntos);
 
         assertEquals(jugador.getPuntos().getCantidad(), 1);
+    }
+
+    @Test
+    public void testJugadorRealizaUnaRespuestaGrupoSinOpciones04() {
+        Jugador jugador = new Jugador("Guido");
+        assertThrows(NoHayOpcionesException.class,
+                ()->{
+                    new RespuestaGrupos(null,jugador);
+                });
+    }
+
+    @Test
+    public void testJugadorRealizaUnaRespuestaGrupoSinOpciones05() {
+        Jugador jugador = new Jugador("Guido");
+        LinkedList<ColeccionOpciones> gruposElegidos = new LinkedList<ColeccionOpciones>();
+        assertThrows(NoHayOpcionesException.class,
+                ()->{
+                    new RespuestaGrupos(gruposElegidos,jugador);
+                });
+    }
+
+    @Test
+    public void testJugadorRealizaUnaRespuestaGrupoConMasDeSeisOpciones06() {
+        Jugador jugador = new Jugador("Guido");
+        ColeccionOpciones grupo = new ColeccionOpciones();
+        LinkedList<ColeccionOpciones> gruposElegidos = new LinkedList<ColeccionOpciones>();
+
+        grupo.agregarOpcion(primeraOpcion);
+        grupo.agregarOpcion(segundaOpcion);
+        grupo.agregarOpcion(terceraOpcion);
+        grupo.agregarOpcion(cuartaOpcion);
+        grupo.agregarOpcion(quintaOpcion);
+        grupo.agregarOpcion(sextaOpcion);
+        grupo.agregarOpcion(septimaOpcion);
+
+        gruposElegidos.add(grupo);
+
+        assertThrows(MasDeSeisOpcionesException.class,
+                ()->{
+                    new RespuestaGrupos(gruposElegidos,jugador);
+                });
+    }
+
+    @Test
+    public void testJugadorRealizaUnaRespuestaGrupoConMasDeSeisOpciones07() {
+        Jugador jugador = new Jugador("Guido");
+        ColeccionOpciones grupo = new ColeccionOpciones();
+        LinkedList<ColeccionOpciones> gruposElegidos = new LinkedList<ColeccionOpciones>();
+
+        gruposElegidos.add(grupo);
+
+        assertThrows(NoHayOpcionesException.class,
+                ()->{
+                    new RespuestaGrupos(gruposElegidos,jugador);
+                });
     }
 }
