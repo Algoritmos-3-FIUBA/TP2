@@ -8,6 +8,8 @@
         "Berlin" ],
       "incorrectas": [
         "Paris",
+        "Munich",
+        "Amsterdam",
         "Roma"]
     }
   },

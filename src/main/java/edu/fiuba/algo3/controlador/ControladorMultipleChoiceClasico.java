@@ -2,12 +2,11 @@ package edu.fiuba.algo3.controlador;
 
 import edu.fiuba.algo3.modelo.ColeccionOpciones;
 import edu.fiuba.algo3.modelo.Jugador;
-import edu.fiuba.algo3.modelo.Kahoot;
-import edu.fiuba.algo3.modelo.TurnoJugador;
 import edu.fiuba.algo3.modelo.opcion.Opcion;
 import edu.fiuba.algo3.modelo.pregunta.Pregunta;
 import edu.fiuba.algo3.modelo.pregunta.PreguntaMultipleChoice;
 import edu.fiuba.algo3.vista.App;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.CheckBox;
@@ -22,14 +21,17 @@ import java.util.LinkedList;
 
 import static edu.fiuba.algo3.modelo.Kahoot.actualizarEscena;
 
-public class ControladorMultipleChoiceClasico {
+public class ControladorMultipleChoiceClasico extends Controladores{
     private LinkedList<CheckBox> opcionesMostradas = new LinkedList<>();
     private ColeccionOpciones opcionesElegidas = new ColeccionOpciones();
     private Pregunta pregunta; //= new PreguntaMultipleChoice();
-    private TurnoJugador turnoActual;
 
     @FXML
     public Label nombrepregunta;
+    @FXML
+    public Label jugadoractual;
+    @FXML
+    public Label puntosactuales;
     @FXML
     public Button botonsiguiente;
     @FXML
@@ -60,17 +62,13 @@ public class ControladorMultipleChoiceClasico {
         opcion6.setOpacity(0);
     }
 
-    public void actualizarPlantilla(Pregunta pregunta, Jugador jugadorActual,TurnoJugador turnoActual) {
-        this.turnoActual = turnoActual;
-
+    public void actualizarPlantilla(Pregunta pregunta, Jugador jugadorActual) {
         nombrepregunta.setText(pregunta.getNombre());
+        jugadoractual.setText(jugadorActual.getNombre());
+        puntosactuales.setText(String.valueOf(jugadorActual.getPuntos().cantidad));
 
         for (int i = 0; i < pregunta.getOpciones().cantidadElementos(); i++)
             opcionesMostradas.get(i).setText(pregunta.getOpciones().getOpciones().get(i).getNombre());
-    }
-
-    public void siguienteTurno() {
-
     }
 
 }
