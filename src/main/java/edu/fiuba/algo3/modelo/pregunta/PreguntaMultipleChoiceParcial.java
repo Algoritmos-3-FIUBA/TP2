@@ -14,6 +14,7 @@ public class PreguntaMultipleChoiceParcial extends Pregunta{
 
     private final ColeccionOpciones opcionesCorrectas;
     private final ColeccionOpciones opcionesIncorrectas;
+    private ColeccionOpciones opciones;
 
     public PreguntaMultipleChoiceParcial(String nombre, ColeccionOpciones opciones){
 
@@ -26,6 +27,7 @@ public class PreguntaMultipleChoiceParcial extends Pregunta{
         }
 
         this.nombre = nombre;
+        this.opciones = opciones;
 
         opcionesCorrectas = new ColeccionOpciones();
         opcionesIncorrectas = new ColeccionOpciones();
@@ -50,6 +52,11 @@ public class PreguntaMultipleChoiceParcial extends Pregunta{
                 puntosParciales.sumarPuntos(opcion.puntosObtenidos());
             respuesta.otorgarPuntos(puntosParciales);
         }
+    }
+
+    @Override
+    public ColeccionOpciones getOpciones() {
+        return opciones;
     }
 
     public void corregirRespuestas(LinkedList<Respuesta> respuestas) {

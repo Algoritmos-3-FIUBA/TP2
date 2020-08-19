@@ -2,6 +2,7 @@ package edu.fiuba.algo3.controlador;
 
 import edu.fiuba.algo3.modelo.ColeccionOpciones;
 import edu.fiuba.algo3.modelo.Jugador;
+import edu.fiuba.algo3.modelo.opcion.Opcion;
 import edu.fiuba.algo3.modelo.pregunta.Pregunta;
 import edu.fiuba.algo3.modelo.pregunta.PreguntaMultipleChoice;
 import edu.fiuba.algo3.vista.App;
@@ -15,10 +16,12 @@ import static edu.fiuba.algo3.modelo.Kahoot.*;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.LinkedList;
 
 import static edu.fiuba.algo3.modelo.Kahoot.actualizarEscena;
 
 public class ControladorMultipleChoiceClasico {
+    private LinkedList<CheckBox> opcionesMostradas = new LinkedList<>();
     private ColeccionOpciones opcionesElegidas = new ColeccionOpciones();
     private Pregunta pregunta; //= new PreguntaMultipleChoice();
 
@@ -43,18 +46,22 @@ public class ControladorMultipleChoiceClasico {
 
     public void initialize() {
         this.escenarioActual = App.obtenerEscenarioActual();
-        nombrepregunta.setText("Hola");
-        opcion1.setText("Opc 1");
-        opcion2.setText("Opc 2");
-        opcion3.setText("Opc 3");
-        opcion4.setText("Opc 4");
-        opcion5.setText("Opc 5");
+
+        opcionesMostradas.add(opcion1);
+        opcionesMostradas.add(opcion2);
+        opcionesMostradas.add(opcion3);
+        opcionesMostradas.add(opcion4);
+        opcionesMostradas.add(opcion5);
+
         opcion6.setDisable(true);
         opcion6.setOpacity(0);
     }
 
     public void actualizarPlantilla(Pregunta pregunta, Jugador jugadorActual) {
         nombrepregunta.setText(pregunta.getNombre());
+
+        for (int i = 0; i < pregunta.getOpciones().cantidadElementos(); i++)
+            opcionesMostradas.get(i).setText(pregunta.getOpciones().getOpciones().get(i).getNombre());
     }
 
 

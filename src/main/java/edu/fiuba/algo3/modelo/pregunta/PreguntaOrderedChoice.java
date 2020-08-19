@@ -13,6 +13,7 @@ public class PreguntaOrderedChoice extends Pregunta{
     private final Puntos puntosOtorgados;
     private final ColeccionOpciones opcionesCorrectas;
     private final ColeccionOpciones opcionesIncorrectas;
+    private ColeccionOpciones opciones;
 
     public PreguntaOrderedChoice(String nombre, int puntos, ColeccionOpciones opciones) {
 
@@ -25,6 +26,7 @@ public class PreguntaOrderedChoice extends Pregunta{
         }
 
         this.nombre = nombre;
+        this.opciones = opciones;
 
         puntosOtorgados = new Puntos(puntos);
 
@@ -59,5 +61,10 @@ public class PreguntaOrderedChoice extends Pregunta{
 
     public String getNombre() {
         return nombre;
+    }
+
+    @Override
+    public ColeccionOpciones getOpciones() {
+        return opciones;
     }
 }
