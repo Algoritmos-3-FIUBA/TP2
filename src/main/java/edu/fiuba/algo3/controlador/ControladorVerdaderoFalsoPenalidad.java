@@ -1,11 +1,12 @@
 package edu.fiuba.algo3.controlador;
 
 import edu.fiuba.algo3.modelo.Jugador;
+import edu.fiuba.algo3.modelo.TurnoJugador;
 import edu.fiuba.algo3.modelo.pregunta.Pregunta;
 
 public class ControladorVerdaderoFalsoPenalidad extends Controlador {
     @Override
-    public void actualizarPlantilla(Pregunta pregunta, Jugador actual) {
+    public void actualizarPlantilla(Pregunta pregunta, Jugador actual, TurnoJugador turnoActual) {
 
     }
     /*

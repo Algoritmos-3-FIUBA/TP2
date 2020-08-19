@@ -30,7 +30,7 @@ public class TurnoJugador extends Turno{
         this.controlador.actualizarPlantilla(pregunta, jugadorActual,this);
     }
 
-    public void siguienteJugador() {
+    public void siguienteJugador() throws IOException {
         if(jugadoresRestantes.isEmpty())
             siguienteTurno();
         else{

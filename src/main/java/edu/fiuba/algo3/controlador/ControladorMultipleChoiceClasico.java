@@ -22,7 +22,7 @@ import java.util.LinkedList;
 
 import static edu.fiuba.algo3.modelo.Kahoot.actualizarEscena;
 
-public class ControladorMultipleChoiceClasico extends Controladores{
+public class ControladorMultipleChoiceClasico extends Controlador{
     private LinkedList<CheckBox> opcionesMostradas = new LinkedList<>();
     private ColeccionOpciones opcionesElegidas = new ColeccionOpciones();
     private Pregunta pregunta; //= new PreguntaMultipleChoice();
@@ -77,7 +77,7 @@ public class ControladorMultipleChoiceClasico extends Controladores{
         }
     }
 
-    public void siguienteTurno(){
+    public void siguienteTurno() throws IOException {
         this.turnoActual.siguienteJugador();
     }
 

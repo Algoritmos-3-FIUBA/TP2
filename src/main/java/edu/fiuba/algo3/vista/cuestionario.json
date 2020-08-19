@@ -2,6 +2,14 @@
   {
     "Pregunta":
     {
+      "tipo": "VerdaderoFalsoClasico",
+      "nombre": "¿207 es un número primo?",
+      "opcionCorrecta": false
+    }
+  },
+  {
+    "Pregunta":
+    {
       "tipo" : "MultipleChoiseClasico",
       "nombre":"¿Capital de Alemania?",
       "correctas": [
