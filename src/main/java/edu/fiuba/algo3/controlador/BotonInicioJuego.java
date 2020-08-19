@@ -15,6 +15,8 @@ import javafx.stage.Window;
 import java.nio.file.Paths;
 import java.util.LinkedList;
 
+import static edu.fiuba.algo3.modelo.Kahoot.juegoKahoot;
+
 public class BotonInicioJuego implements EventHandler<ActionEvent>  {
     private TextField jugador1;
     private TextField jugador2;
@@ -54,7 +56,8 @@ public class BotonInicioJuego implements EventHandler<ActionEvent>  {
 
     private void ingresarPreguntas(LinkedList<PreguntaVerdaderoFalso> listaPreguntas) {
 
-        Kahoot kahoot = new Kahoot(jugador1.getText(),jugador2.getText());
+        juegoKahoot(jugador1.getText(),jugador2.getText());
+
 
         PreguntaVerdaderoFalsoClasico preg1 = new PreguntaVerdaderoFalsoClasico("1 + 1 = 2");
         preg1.setVerdaderoOpcionCorrecta();
