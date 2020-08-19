@@ -1,5 +1,6 @@
 package edu.fiuba.algo3.modelo.pregunta;
 
+import edu.fiuba.algo3.modelo.ColeccionOpciones;
 import edu.fiuba.algo3.modelo.Puntos;
 import edu.fiuba.algo3.modelo.opcion.Opcion;
 import edu.fiuba.algo3.modelo.respuesta.Respuesta;
@@ -42,5 +43,12 @@ public abstract class PreguntaVerdaderoFalso extends Pregunta {
             ((RespuestaUnica)respuestaDeJugador).corregir();
     }
 
+    @Override
+    public ColeccionOpciones getOpciones(){
+        ColeccionOpciones opciones = new ColeccionOpciones();
+        opciones.agregarOpcion(opcionFalso);
+        opciones.agregarOpcion(opcionVerdadero);
+        return opciones;
+    }
 
 }

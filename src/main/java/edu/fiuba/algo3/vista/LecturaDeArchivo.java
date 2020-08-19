@@ -121,7 +121,7 @@ public class LecturaDeArchivo {
         PreguntaMultipleChoicePenalidad pregunta = new PreguntaMultipleChoicePenalidad((String) oPregunta.get("nombre"),opciones);
         preguntas.add(pregunta);
         plantillaPreguntas.put(pregunta,"src/main/java/edu/fiuba/algo3/vista/plantilla/MultipleChoiceClasico.fxml");
-        System.out.println(pregunta.getNombrePregunta());
+        //System.out.println(pregunta.getNombrePregunta());
     }
 
     private void instanciarPreguntaMultipleChoiseParcial(JSONObject oPregunta, LinkedList<Pregunta> preguntas,HashMap<Pregunta,String> plantillaPreguntas) {

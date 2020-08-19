@@ -14,6 +14,7 @@ public class PreguntaMultipleChoice extends Pregunta {
     private final Puntos puntosOtorgados;
     private final ColeccionOpciones opcionesCorrectas;
     private final ColeccionOpciones opcionesIncorrectas;
+    private ColeccionOpciones opciones;
 
     public PreguntaMultipleChoice(String nombre, int puntos, ColeccionOpciones opciones) {
 
@@ -27,6 +28,7 @@ public class PreguntaMultipleChoice extends Pregunta {
 
         this.nombre = nombre;
         puntosOtorgados = new Puntos(puntos);
+        this.opciones = opciones;
 
         opcionesCorrectas = new ColeccionOpciones();
         opcionesIncorrectas = new ColeccionOpciones();
@@ -48,6 +50,11 @@ public class PreguntaMultipleChoice extends Pregunta {
         for (Respuesta respuesta : respuestas) {
             respuesta.otorgarPuntos(new Puntos(puntosOtorgados.getCantidad()));
         }
+    }
+
+    @Override
+    public ColeccionOpciones getOpciones() {
+        return opciones;
     }
 
     private void corregirRespuestas(LinkedList<Respuesta> respuestas){

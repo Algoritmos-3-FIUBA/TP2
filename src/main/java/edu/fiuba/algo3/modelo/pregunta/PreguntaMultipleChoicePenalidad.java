@@ -13,6 +13,7 @@ public class PreguntaMultipleChoicePenalidad extends Pregunta {
 
     private final ColeccionOpciones opcionesCorrectas;
     private final ColeccionOpciones opcionesIncorrectas;
+    private ColeccionOpciones opciones;
 
     public PreguntaMultipleChoicePenalidad(String nombre, ColeccionOpciones opciones) {
 
@@ -25,6 +26,7 @@ public class PreguntaMultipleChoicePenalidad extends Pregunta {
         }
 
         this.nombre = nombre;
+        this.opciones = opciones;
 
         opcionesCorrectas = new ColeccionOpciones();
         opcionesIncorrectas = new ColeccionOpciones();
@@ -49,14 +51,16 @@ public class PreguntaMultipleChoicePenalidad extends Pregunta {
             respuesta.otorgarPuntos(puntosParciales);        }
     }
 
+    @Override
+    public ColeccionOpciones getOpciones() {
+        return opciones;
+    }
+
     private void corregirRespuestas(LinkedList<Respuesta> respuestas){
         for (Respuesta respuesta : respuestas) {
             if (((RespuestaMultiple)respuesta).getOpciones().tieneElementos(opcionesCorrectas))
                 respuesta.setCorrecta();
         }
-    }
-
-    public String getNombrePregunta() { return nombre;
     }
 
 }
