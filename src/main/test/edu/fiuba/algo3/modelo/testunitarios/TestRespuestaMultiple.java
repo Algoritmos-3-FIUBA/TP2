@@ -2,12 +2,16 @@ package edu.fiuba.algo3.modelo.testunitarios;
 
 import edu.fiuba.algo3.modelo.Jugador;
 import edu.fiuba.algo3.modelo.Puntos;
+import edu.fiuba.algo3.modelo.excepciones.MasDeCincoOpcionesException;
+import edu.fiuba.algo3.modelo.excepciones.NoHayOpcionesException;
 import edu.fiuba.algo3.modelo.opcion.Opcion;
 import edu.fiuba.algo3.modelo.opcion.OpcionCorrecta;
 import edu.fiuba.algo3.modelo.respuesta.RespuestaMultiple;
+import edu.fiuba.algo3.modelo.respuesta.RespuestaUnica;
 import org.junit.Test;
 import java.util.LinkedList;
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 public class TestRespuestaMultiple {
 
@@ -18,6 +22,7 @@ public class TestRespuestaMultiple {
     private final Opcion terceraOpcion  = new OpcionCorrecta("Faraday");
     private final Opcion cuartaOpcion = new OpcionCorrecta("Newton");
     private final Opcion quintaOpcion = new OpcionCorrecta("Einstein");
+    private final Opcion sextaOpcion = new OpcionCorrecta("Curie");
 
     @Test
     public void testJugadorRealizaUnaRespuestaCorrectaEligiendoUnaOpcionYObtienePuntaje01(){
@@ -175,5 +180,40 @@ public class TestRespuestaMultiple {
         respuestaJugador.otorgarPuntos(new Puntos(1));
 
         assertEquals(jugador.getPuntos().getCantidad(),0);
+    }
+
+    @Test
+    public void testJugadorRealizaUnaRespuestaMultipleSinOpciones10() {
+        Jugador jugador = new Jugador("Guido");
+        assertThrows(NoHayOpcionesException.class,
+                ()->{
+                    new RespuestaMultiple(null,jugador);
+                });
+    }
+
+    @Test
+    public void testJugadorRealizaUnaRespuestaMultipleSinOpciones11() {
+        Jugador jugador = new Jugador("Guido");
+        LinkedList<Opcion> opcionesElegidas = new LinkedList<Opcion>();
+        assertThrows(NoHayOpcionesException.class,
+                ()->{
+                    new RespuestaMultiple(opcionesElegidas,jugador);
+                });
+    }
+
+    @Test
+    public void testJugadorRealizaUnaRespuestaMultipleConMasDeCincoOpciones12() {
+        Jugador jugador = new Jugador("Guido");
+        LinkedList<Opcion> opcionesElegidas = new LinkedList<Opcion>();
+        opcionesElegidas.add(primeraOpcion);
+        opcionesElegidas.add(segundaOpcion);
+        opcionesElegidas.add(terceraOpcion);
+        opcionesElegidas.add(cuartaOpcion);
+        opcionesElegidas.add(quintaOpcion);
+        opcionesElegidas.add(sextaOpcion);
+        assertThrows(MasDeCincoOpcionesException.class,
+                ()->{
+                    new RespuestaMultiple(opcionesElegidas,jugador);
+                });
     }
 }

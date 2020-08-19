@@ -1,5 +1,6 @@
 package edu.fiuba.algo3.modelo.respuesta;
 
+import edu.fiuba.algo3.modelo.excepciones.NoHayOpcionesException;
 import edu.fiuba.algo3.modelo.exclusividad.Exclusividad;
 import edu.fiuba.algo3.modelo.Jugador;
 import edu.fiuba.algo3.modelo.multiplicador.Multiplicador;
@@ -12,16 +13,19 @@ public class RespuestaUnica extends Respuesta {
     public RespuestaUnica(Opcion opcion,Jugador jugador) {
         super(jugador);
         this.opcion = opcion;
+        verificarSiSeSeleccionoUnaOpcion(opcion);
     }
 
     public RespuestaUnica(Opcion opcion,Jugador jugador, Multiplicador multiplicador) {
         super(jugador, multiplicador);
         this.opcion = opcion;
+        verificarSiSeSeleccionoUnaOpcion(opcion);
     }
 
     public RespuestaUnica (Opcion opcion, Jugador jugador, Exclusividad exclusividad) {
         super(jugador, exclusividad);
         this.opcion = opcion;
+        verificarSiSeSeleccionoUnaOpcion(opcion);
     }
 
     public Opcion getOpcion() {
@@ -30,5 +34,11 @@ public class RespuestaUnica extends Respuesta {
 
     public void corregir() {
         this.estado = opcion.asignarEstado();
+    }
+
+    private void verificarSiSeSeleccionoUnaOpcion(Opcion opcion){
+        if(opcion == null) {
+            throw new NoHayOpcionesException();
+        }
     }
 }

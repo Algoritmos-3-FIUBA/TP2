@@ -2,7 +2,6 @@ package edu.fiuba.algo3.modelo.testunitarios;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
-
 import edu.fiuba.algo3.modelo.ColeccionOpciones;
 import edu.fiuba.algo3.modelo.Jugador;
 import edu.fiuba.algo3.modelo.excepciones.MasDeCincoOpcionesException;
@@ -290,7 +289,7 @@ public class TestPreguntaMultipleChoiceParcial {
         opcionesSeleccionadasJuan.add(cuartaOpcion);
 
         LinkedList<Opcion> opcionesSeleccionadasMati = new LinkedList<Opcion>();
-        opcionesSeleccionadasJuan.add(cuartaOpcion);
+        opcionesSeleccionadasMati.add(cuartaOpcion);
 
         RespuestaMultiple respuestaJuan = new RespuestaMultiple(opcionesSeleccionadasJuan, Juan, new Exclusividad());
         RespuestaMultiple respuestaMati = new RespuestaMultiple(opcionesSeleccionadasMati, Mati);

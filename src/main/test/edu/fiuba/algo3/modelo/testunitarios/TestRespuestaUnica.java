@@ -1,14 +1,21 @@
 package edu.fiuba.algo3.modelo.testunitarios;
 
+import edu.fiuba.algo3.modelo.ColeccionOpciones;
 import edu.fiuba.algo3.modelo.Jugador;
 import edu.fiuba.algo3.modelo.Puntos;
+import edu.fiuba.algo3.modelo.excepciones.NoHayOpcionesException;
 import edu.fiuba.algo3.modelo.multiplicador.MultiplicadorPorTres;
 import edu.fiuba.algo3.modelo.multiplicador.MultiplicadorPorDos;
 import edu.fiuba.algo3.modelo.opcion.Opcion;
 import edu.fiuba.algo3.modelo.opcion.OpcionCorrecta;
+import edu.fiuba.algo3.modelo.pregunta.PreguntaGroupChoice;
 import edu.fiuba.algo3.modelo.respuesta.RespuestaUnica;
 import org.junit.Test;
+
+import java.util.LinkedList;
+
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 public class TestRespuestaUnica {
 
@@ -108,5 +115,14 @@ public class TestRespuestaUnica {
         respuestaJugador2.otorgarPuntos(new Puntos(1));
 
         assertEquals(jugador.getPuntos().getCantidad(),5);
+    }
+
+    @Test
+    public void testJugadorRealizaUnaRespuestaUnicaSinOpcione07() {
+        Jugador jugador = new Jugador("Guido");
+        assertThrows(NoHayOpcionesException.class,
+                ()->{
+                    new RespuestaUnica(null,jugador);
+                });
     }
 }
