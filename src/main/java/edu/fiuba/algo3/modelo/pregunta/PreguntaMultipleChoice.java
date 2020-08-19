@@ -2,6 +2,8 @@ package edu.fiuba.algo3.modelo.pregunta;
 
 import edu.fiuba.algo3.modelo.ColeccionOpciones;
 import edu.fiuba.algo3.modelo.Puntos;
+import edu.fiuba.algo3.modelo.excepciones.MasDeCincoOpcionesException;
+import edu.fiuba.algo3.modelo.excepciones.NoHayOpcionesException;
 import edu.fiuba.algo3.modelo.respuesta.Respuesta;
 import edu.fiuba.algo3.modelo.respuesta.RespuestaMultiple;
 
@@ -14,6 +16,14 @@ public class PreguntaMultipleChoice extends Pregunta {
     private final ColeccionOpciones opcionesIncorrectas;
 
     public PreguntaMultipleChoice(String nombre, int puntos, ColeccionOpciones opciones) {
+
+        if(opciones.cantidadElementos() == 0) {
+            throw new NoHayOpcionesException();
+        }
+
+        if(opciones.cantidadElementos() > 5) {
+            throw new MasDeCincoOpcionesException();
+        }
 
         this.nombre = nombre;
         puntosOtorgados = new Puntos(puntos);

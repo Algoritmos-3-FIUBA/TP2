@@ -9,4 +9,5 @@ public abstract class Pregunta {
     protected String nombre;
 
     public abstract void evaluarRespuestas(LinkedList<Respuesta> listaRespuestas);
+
 }

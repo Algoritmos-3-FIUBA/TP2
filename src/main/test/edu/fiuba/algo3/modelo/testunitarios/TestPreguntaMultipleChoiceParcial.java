@@ -1,8 +1,12 @@
 package edu.fiuba.algo3.modelo.testunitarios;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
+
 import edu.fiuba.algo3.modelo.ColeccionOpciones;
 import edu.fiuba.algo3.modelo.Jugador;
+import edu.fiuba.algo3.modelo.excepciones.MasDeCincoOpcionesException;
+import edu.fiuba.algo3.modelo.excepciones.NoHayOpcionesException;
 import edu.fiuba.algo3.modelo.exclusividad.Exclusividad;
 import edu.fiuba.algo3.modelo.opcion.Opcion;
 import edu.fiuba.algo3.modelo.opcion.OpcionCorrecta;
@@ -461,5 +465,33 @@ public class TestPreguntaMultipleChoiceParcial {
 
         assertEquals(Juan.getPuntos().getCantidad(), 0);
         assertEquals(Mati.getPuntos().getCantidad(), 8);
+    }
+
+    @Test
+    public void testCreoPreguntaMultipleChoiceParcialConSieteOpcionesYDevuelveExcepcion14() {
+
+        ColeccionOpciones opciones = new ColeccionOpciones();
+
+        opciones.agregarOpcion(new OpcionCorrecta("España",5));
+        opciones.agregarOpcion(new OpcionIncorrecta("Brasil",0));
+        opciones.agregarOpcion(new OpcionIncorrecta("Angola",0));
+        opciones.agregarOpcion(new OpcionCorrecta("Reino Unido",4));
+        opciones.agregarOpcion(new OpcionCorrecta("Croacia",4));
+        opciones.agregarOpcion(new OpcionIncorrecta("China",0));
+        opciones.agregarOpcion(new OpcionCorrecta("Grecia",1));
+
+        assertThrows(MasDeCincoOpcionesException.class,
+                ()->{
+                    new PreguntaMultipleChoiceParcial("¿Cuales de los siguientes paises son europeos?", opciones);
+                });
+    }
+
+    @Test
+    public void testCreoPreguntaMultipleChoiceParcialConNingunaOpcionYDevuelveExcepcion15() {
+
+        assertThrows(NoHayOpcionesException.class,
+                ()->{
+                    new PreguntaMultipleChoiceParcial("¿Como se llama la calle donde se ubica la facultad de ingenieria?",  new ColeccionOpciones());
+                });
     }
 }

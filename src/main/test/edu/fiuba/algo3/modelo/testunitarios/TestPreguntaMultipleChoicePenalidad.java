@@ -2,6 +2,8 @@ package edu.fiuba.algo3.modelo.testunitarios;
 
 import edu.fiuba.algo3.modelo.ColeccionOpciones;
 import edu.fiuba.algo3.modelo.Jugador;
+import edu.fiuba.algo3.modelo.excepciones.MasDeCincoOpcionesException;
+import edu.fiuba.algo3.modelo.excepciones.NoHayOpcionesException;
 import edu.fiuba.algo3.modelo.multiplicador.Multiplicador;
 import edu.fiuba.algo3.modelo.multiplicador.MultiplicadorPorTres;
 import edu.fiuba.algo3.modelo.multiplicador.MultiplicadorPorDos;
@@ -14,6 +16,7 @@ import edu.fiuba.algo3.modelo.respuesta.RespuestaMultiple;
 import org.junit.jupiter.api.Test;
 import java.util.LinkedList;
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 public class TestPreguntaMultipleChoicePenalidad {
 
@@ -293,5 +296,33 @@ public class TestPreguntaMultipleChoicePenalidad {
         pregunta.evaluarRespuestas(respuestas);
 
         assertEquals(jugador.getPuntos().getCantidad(),-3);
+    }
+
+    @Test
+    public void testCreoPreguntaMultipleChoicePenalidadConSieteOpcionesYDevuelveExcepcion10() {
+
+        ColeccionOpciones opciones = new ColeccionOpciones();
+
+        opciones.agregarOpcion(new OpcionCorrecta("España",5));
+        opciones.agregarOpcion(new OpcionIncorrecta("Brasil",-2));
+        opciones.agregarOpcion(new OpcionIncorrecta("Angola",-1));
+        opciones.agregarOpcion(new OpcionCorrecta("Reino Unido",4));
+        opciones.agregarOpcion(new OpcionCorrecta("Croacia",4));
+        opciones.agregarOpcion(new OpcionIncorrecta("China",-7));
+        opciones.agregarOpcion(new OpcionCorrecta("Grecia",1));
+
+        assertThrows(MasDeCincoOpcionesException.class,
+                ()->{
+                    new PreguntaMultipleChoicePenalidad("¿Cuales de los siguientes paises son europeos?", opciones);
+                });
+    }
+
+    @Test
+    public void testCreoPreguntaMultipleChoicePenalidadConNingunaOpcionYDevuelveExcepcion11() {
+
+        assertThrows(NoHayOpcionesException.class,
+                ()->{
+                    new PreguntaMultipleChoicePenalidad("¿Como se llama la calle donde se ubica la facultad de ingenieria?",  new ColeccionOpciones());
+                });
     }
 }
