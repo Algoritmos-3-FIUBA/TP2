@@ -69,8 +69,8 @@ public class ControladorOrderedChoice extends Controlador{
         }
     }
 
-    public void siguienteTurno() throws IOException {
+    /*public void siguienteTurno() throws IOException {
         this.turnoActual.siguienteJugador();
-    }
+    }*/
 
 }

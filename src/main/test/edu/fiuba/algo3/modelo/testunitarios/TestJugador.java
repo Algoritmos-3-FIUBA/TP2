@@ -2,10 +2,14 @@ package edu.fiuba.algo3.modelo.testunitarios;
 
 import edu.fiuba.algo3.modelo.Jugador;
 import edu.fiuba.algo3.modelo.Puntos;
+import edu.fiuba.algo3.modelo.excepciones.NoHayOpcionesException;
 import edu.fiuba.algo3.modelo.excepciones.NoTieneBeneficioException;
 import edu.fiuba.algo3.modelo.multiplicador.Multiplicador;
+import edu.fiuba.algo3.modelo.pregunta.PreguntaGroupChoice;
+import edu.fiuba.algo3.modelo.pregunta.PreguntaVerdaderoFalsoClasico;
 import org.junit.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 public class TestJugador {
 
@@ -92,16 +96,54 @@ public class TestJugador {
         assertEquals(Lucas.getPuntos().getCantidad(), 2);
     }
 
-    /*@Test
+    @Test
     public void testCreoJugadorYNoPuedeUsarMultiplicadorPorDosDosVeces() {
 
         Jugador Lucas = new Jugador("Lucas");
         Puntos puntos = new Puntos(1);
 
-        Multiplicador multiplicadorPorDos = Lucas.usarMultiplicadorPorDos();
+        Lucas.usarMultiplicadorPorDos().utilizarBeneficio(puntos, Lucas);
 
-        multiplicadorPorDos.utilizarBeneficio(puntos, Lucas);
 
-    }*/
+        assertThrows(NoTieneBeneficioException.class,
+                ()->{
+                    Lucas.usarMultiplicadorPorDos().utilizarBeneficio(puntos, Lucas);
+                });
+
+    }
+
+    @Test
+    public void testCreoJugadorYNoPuedeUsarMultiplicadorPorTresDosVeces() {
+
+        Jugador Lucas = new Jugador("Lucas");
+        Puntos puntos = new Puntos(1);
+
+        Lucas.usarMultiplicadorPorTres().utilizarBeneficio(puntos, Lucas);
+
+
+        assertThrows(NoTieneBeneficioException.class,
+                ()->{
+                    Lucas.usarMultiplicadorPorTres().utilizarBeneficio(puntos, Lucas);
+                });
+
+    }
+
+    @Test
+    public void testCreoJugadorYUsaExclusividadDePuntaje() {
+
+        Jugador Lucas = new Jugador("Lucas");
+        Puntos puntos = new Puntos(5);
+
+        Lucas.sumarPuntos(puntos);
+
+        Lucas.usarExclusividad().getAmplificador().amplificarPuntos(Lucas.getPuntos());
+        Lucas.usarExclusividad().getAmplificador().amplificarPuntos(Lucas.getPuntos());
+
+        assertThrows(NoTieneBeneficioException.class,
+                ()->{
+                    Lucas.usarExclusividad().getAmplificador().amplificarPuntos(Lucas.getPuntos());
+                });
+
+    }
 
 }
