@@ -7,8 +7,11 @@
 <?import javafx.scene.control.MenuBar?>
 <?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.effect.Reflection?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
 <VBox opacity="0.8" prefHeight="400.0" prefWidth="640.0" style="-fx-background-color: purple;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.fiuba.algo3.controlador.ControladorMultipleChoiceClasico">
   <children>
@@ -53,14 +56,52 @@
     </MenuBar>
     <AnchorPane maxHeight="-1.0" maxWidth="-1.0" opacity="0.8" prefHeight="-1.0" prefWidth="-1.0" style="-fx-background-color: purple;" VBox.vgrow="ALWAYS">
       <children>
-            <Label fx:id="nombrepregunta" layoutX="265.0" layoutY="54.0" text="NombrePregunta" textFill="WHITE" />
-            <Button fx:id="botonsiguiente" onAction="#avanzarSiguiente"  contentDisplay="BOTTOM" layoutX="525.0" layoutY="313.0" mnemonicParsing="false" text="Siguiente" />
-            <CheckBox fx:id="opcion1" onAction="#opcionSeleccionada" layoutX="184.0" layoutY="129.0" mnemonicParsing="false" text="CheckBox" textFill="WHITE" />
+            <Label fx:id="nombrepregunta" layoutX="255.0" layoutY="69.0" text="NombrePregunta" textFill="WHITE" />
+            <Button fx:id="botonsiguiente" contentDisplay="BOTTOM" layoutX="525.0" layoutY="313.0" mnemonicParsing="false" style="-fx-pref-height: 50; -fx-pref-width: 100; -fx-text-fill: white; -fx-background-color: black; -fx-border-color: white;" text="Siguiente" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font></Button>
+            <CheckBox fx:id="opcion1" layoutX="184.0" layoutY="129.0" mnemonicParsing="false" text="CheckBox" textFill="WHITE" />
             <CheckBox fx:id="opcion2" layoutX="298.0" layoutY="130.0" mnemonicParsing="false" text="CheckBox" textFill="WHITE" />
             <CheckBox fx:id="opcion3" layoutX="415.0" layoutY="128.0" mnemonicParsing="false" text="CheckBox" textFill="WHITE" />
             <CheckBox fx:id="opcion4" layoutX="185.0" layoutY="200.0" mnemonicParsing="false" text="CheckBox" textFill="WHITE" />
             <CheckBox fx:id="opcion5" layoutX="297.0" layoutY="199.0" mnemonicParsing="false" text="CheckBox" textFill="WHITE" />
             <CheckBox fx:id="opcion6" layoutX="415.0" layoutY="198.0" mnemonicParsing="false" text="CheckBox" textFill="WHITE" />
+            <Button fx:id="multiplicadorx2" contentDisplay="BOTTOM" layoutX="14.0" layoutY="213.0" mnemonicParsing="false" prefWidth="209.0" style="-fx-pref-height: 40; -fx-pref-width: 130; -fx-text-fill: white; -fx-background-color: black; -fx-background-radius: 20;" text="Multiplicador X2" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <Button fx:id="multiplicadorx3" contentDisplay="BOTTOM" layoutX="14.0" layoutY="264.0" mnemonicParsing="false" prefWidth="209.0" style="-fx-pref-height: 40; -fx-pref-width: 130; -fx-text-fill: white; -fx-background-color: black; -fx-background-radius: 20;" text="Multiplicador X3" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <Button fx:id="botonsiguiente111" contentDisplay="BOTTOM" layoutX="14.0" layoutY="317.0" mnemonicParsing="false" prefWidth="209.0" style="-fx-pref-height: 40; -fx-pref-width: 130; -fx-text-fill: white; -fx-background-color: black; -fx-background-radius: 20;" text="Exclusividad" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <Label fx:id="nombrepregunta1" layoutX="28.0" layoutY="26.0" text="Jugador:" textFill="WHITE" />
+            <Label fx:id="nombrepregunta11" layoutX="29.0" layoutY="110.0" text="Puntos:" textFill="WHITE" />
+            <Label fx:id="tipopregunta" layoutX="235.0" layoutY="24.0" text="Tipo de Pregunta" textFill="WHITE">
+               <font>
+                  <Font name="Waree Bold" size="13.0" />
+               </font>
+               <effect>
+                  <Glow level="1.0" />
+               </effect>
+            </Label>
+            <Label fx:id="puntosactuales" layoutX="54.0" layoutY="154.0" text="Puntos" textFill="WHITE">
+               <effect>
+                  <Reflection />
+               </effect>
+            </Label>
+            <Label fx:id="jugadoractual" layoutX="54.0" layoutY="66.0" text="Actual" textFill="WHITE">
+               <effect>
+                  <Reflection />
+               </effect>
+            </Label>
       </children>
     </AnchorPane>
   </children>

@@ -9,52 +9,49 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.nio.file.Paths;
+import java.util.HashMap;
 import java.util.LinkedList;
 
 public class Kahoot {
 
 
     private static LinkedList<Jugador> jugadores = new LinkedList<>();
-    private static LinkedList<Pregunta> preguntas = new LinkedList<>();;
+
+    private static LinkedList<Pregunta> preguntas = new LinkedList<>();
+
+    private static HashMap<Pregunta,String> plantillasPreguntas = new HashMap<>();
+
+    private static SistemaEscenas sistemaTurnos;
+    private static Stage escenario;
 
     private static Kahoot juego = new Kahoot();
 
     private Kahoot(){}
 
-    public static void juegoKahoot(String jugador1, String jugador2){
+    public static void juegoKahoot(Stage escenario,String jugador1, String jugador2) throws IOException {
+        Kahoot.escenario = escenario;
+
         jugadores.add(new Jugador(jugador1));
         jugadores.add(new Jugador(jugador2));
 
         System.out.println(jugador1);
 
-        LecturaDeArchivo leerArchivo = new LecturaDeArchivo(preguntas);
+        LecturaDeArchivo leerArchivo = new LecturaDeArchivo(preguntas,plantillasPreguntas);
+
+        sistemaTurnos = new SistemaEscenas(jugadores,preguntas,plantillasPreguntas);
+        /// CREAR RESPUESTAS ANTES DE ESTA INSTANCIA Y QUE LA PREGUNTA LAS EVALUE ///
+        sistemaTurnos.siguienteEscena();
     }
 
-    public static void actualizarEscena(Stage escenarioActual) throws IOException {
-
+    public static void actualizarEscena(String direccion) throws IOException {
 
         FXMLLoader fxmlLoader = new FXMLLoader();
-        fxmlLoader.setLocation(Paths.get("src/main/java/edu/fiuba/algo3/vista/vofinicial.fxml").toUri().toURL());
+        fxmlLoader.setLocation(Paths.get(direccion).toUri().toURL());
         Parent root = fxmlLoader.load();
-
 
         Scene scene = new Scene(root);
 
-        escenarioActual.setScene(scene);
-
-
+        escenario.setScene(scene);
     }
-
-    /*
-    public Kahoot(String jugador1, String jugador2){
-
-        jugadores.add(new Jugador(jugador1));
-        jugadores.add(new Jugador(jugador2));
-
-        System.out.println(jugador1);
-
-        LecturaDeArchivo leerArchivo = new LecturaDeArchivo(preguntas);
-    }*/
-
 
 }

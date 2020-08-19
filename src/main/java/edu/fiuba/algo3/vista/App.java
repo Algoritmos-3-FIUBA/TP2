@@ -24,38 +24,24 @@ public class App extends Application {
 
         escenarioInicial.getIcons().add(new Image(Paths.get(ICONO_JUEGO).toUri().toString()));
 
-
+/*
         FXMLLoader fxmlLoader = new FXMLLoader();
         fxmlLoader.setLocation(Paths.get("src/main/java/edu/fiuba/algo3/vista/MultipleChoiceClasico.fxml").toUri().toURL());
         Parent root = fxmlLoader.load();
-
-
-/*
-        FXMLLoader fxmlLoader = new FXMLLoader();
-        fxmlLoader.setLocation(Paths.get("src/main/java/edu/fiuba/algo3/vista/vofinicial.fxml").toUri().toURL());
-        Parent root = fxmlLoader.load();
 */
 
-/*Con este código la música funciona por pocos segundos, se corta de la nada. Probar en otra PC
-        Media media = new Media(Paths.get(SONIDO_JUEGO).toUri().toString());
-        MediaPlayer musicaDeFondo = new MediaPlayer(media);
-        musicaDeFondo.play();
-        musicaDeFondo.setVolume(0.3);
-*/
-//Funciona con este
+
+
         AudioClip audio = new AudioClip(Paths.get(SONIDO_JUEGO).toUri().toString());
         audio.play();
         audio.setVolume(0.85);
-//---
-
         escenarioInicial.setTitle(TITULO_JUEGO);
 
         FormularioInicial formularioInicial = new FormularioInicial() ;
         formularioInicial.agregarControlesInterfaz(escenarioInicial);
+        Scene scene = new Scene(formularioInicial, ANCHO, ALTO);
 
-        //Scene scene = new Scene(formularioInicial);
-
-        Scene scene = new Scene(root);
+        //Scene scene = new Scene(root);
 
         escenarioInicial.setScene(scene);
 

@@ -1,5 +1,7 @@
 package edu.fiuba.algo3.controlador;
 
+import edu.fiuba.algo3.modelo.ColeccionOpciones;
+import edu.fiuba.algo3.modelo.pregunta.PreguntaMultipleChoice;
 import edu.fiuba.algo3.vista.App;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -7,6 +9,7 @@ import javafx.scene.control.CheckBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.RadioButton;
 import javafx.stage.Stage;
+import static edu.fiuba.algo3.modelo.Kahoot.*;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -14,6 +17,9 @@ import java.util.ArrayList;
 import static edu.fiuba.algo3.modelo.Kahoot.actualizarEscena;
 
 public class ControladorMultipleChoiceClasico {
+    private ColeccionOpciones opcionesElegidas = new ColeccionOpciones();
+    private PreguntaMultipleChoice pregunta; //= new PreguntaMultipleChoice();
+
     @FXML
     public Label nombrepregunta;
     @FXML
@@ -36,7 +42,9 @@ public class ControladorMultipleChoiceClasico {
 
     public void establecerVista() {
         nombrepregunta.setText("Pregunta");
+        //pregunta = new PreguntaMultipleChoice((String) nombrepregunta.getText());
 
+        //opcion1.setOnAction(obtenerOpciondeMultipleChoise());
         opcion1.setText("Opc 1");
         opcion2.setText("Opc 2");
         opcion3.setText("Opc 3");
@@ -48,7 +56,13 @@ public class ControladorMultipleChoiceClasico {
     }
 
     public void avanzarSiguiente() throws IOException {
-       actualizarEscena(escenarioActual);
+
+
+        actualizarEscena("src/main/java/edu/fiuba/algo3/vista/plantilla/vofinicial.fxml");
+    }
+    public void opcionSeleccionada() throws IOException {
+
+
     }
 
 

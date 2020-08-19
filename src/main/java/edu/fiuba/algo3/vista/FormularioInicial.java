@@ -59,7 +59,7 @@ public class FormularioInicial extends GridPane {
 
         this.add(jugador2, 1, 2);
 
-        Button iniciarPartida = new Button("Iniciar Partida ");
+        Button iniciarPartida = new Button("Iniciar");
         iniciarPartida.setPrefHeight(40);
         iniciarPartida.setDefaultButton(true);
         iniciarPartida.setPrefWidth(100);
