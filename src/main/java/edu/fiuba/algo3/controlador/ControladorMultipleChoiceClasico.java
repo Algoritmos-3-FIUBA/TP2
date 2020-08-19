@@ -5,28 +5,24 @@ import edu.fiuba.algo3.modelo.Jugador;
 import edu.fiuba.algo3.modelo.TurnoJugador;
 import edu.fiuba.algo3.modelo.opcion.Opcion;
 import edu.fiuba.algo3.modelo.pregunta.Pregunta;
-import edu.fiuba.algo3.modelo.pregunta.PreguntaMultipleChoice;
+import edu.fiuba.algo3.modelo.respuesta.Respuesta;
+import edu.fiuba.algo3.modelo.respuesta.RespuestaMultiple;
 import edu.fiuba.algo3.vista.App;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.CheckBox;
 import javafx.scene.control.Label;
-import javafx.scene.control.RadioButton;
 import javafx.stage.Stage;
-import static edu.fiuba.algo3.modelo.Kahoot.*;
 
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.LinkedList;
 
-import static edu.fiuba.algo3.modelo.Kahoot.actualizarEscena;
-
 public class ControladorMultipleChoiceClasico extends Controlador{
-    private LinkedList<CheckBox> opcionesMostradas = new LinkedList<>();
-    private ColeccionOpciones opcionesElegidas = new ColeccionOpciones();
+    private LinkedList<CheckBox> cajasOpcionesMostradas = new LinkedList<>();
+    private ColeccionOpciones opcionesMostradas = new ColeccionOpciones();
     private Pregunta pregunta; //= new PreguntaMultipleChoice();
     private TurnoJugador turnoActual;
+    private Jugador jugador;
 
     @FXML
     public Label nombrepregunta;
@@ -54,11 +50,11 @@ public class ControladorMultipleChoiceClasico extends Controlador{
     public void initialize() {
         this.escenarioActual = App.obtenerEscenarioActual();
 
-        opcionesMostradas.add(opcion1);
-        opcionesMostradas.add(opcion2);
-        opcionesMostradas.add(opcion3);
-        opcionesMostradas.add(opcion4);
-        opcionesMostradas.add(opcion5);
+        cajasOpcionesMostradas.add(opcion1);
+        cajasOpcionesMostradas.add(opcion2);
+        cajasOpcionesMostradas.add(opcion3);
+        cajasOpcionesMostradas.add(opcion4);
+        cajasOpcionesMostradas.add(opcion5);
 
         opcion6.setDisable(true);
         opcion6.setOpacity(0);
@@ -66,19 +62,26 @@ public class ControladorMultipleChoiceClasico extends Controlador{
 
     public void actualizarPlantilla(Pregunta pregunta, Jugador jugadorActual, TurnoJugador turnoActual) {
         this.turnoActual = turnoActual;
+        this.jugador = jugadorActual;
 
         nombrepregunta.setText(pregunta.getNombre());
         jugadoractual.setText(jugadorActual.getNombre());
         puntosactuales.setText(String.valueOf(jugadorActual.getPuntos().cantidad));
 
         for (int i = 0; i < pregunta.getOpciones().cantidadElementos(); i++) {
-            opcionesMostradas.get(i).setSelected(false);
-            opcionesMostradas.get(i).setText(pregunta.getOpciones().getOpciones().get(i).getNombre());
+            cajasOpcionesMostradas.get(i).setSelected(false);
+            cajasOpcionesMostradas.get(i).setText(pregunta.getOpciones().getOpciones().get(i).getNombre());
+            opcionesMostradas.agregarOpcion(pregunta.getOpciones().getOpciones().get(i));
         }
     }
 
     public void siguienteTurno() throws IOException {
-        this.turnoActual.siguienteJugador();
+        LinkedList<Opcion> opciones = new LinkedList<>();
+        for(int i = 0; i < cajasOpcionesMostradas.size(); i++){
+            if(cajasOpcionesMostradas.get(i).isSelected())
+                opciones.add(opcionesMostradas.getOpciones().get(i));
+        }
+        this.turnoActual.siguienteJugador(new RespuestaMultiple(opciones,jugador));
     }
 
 }

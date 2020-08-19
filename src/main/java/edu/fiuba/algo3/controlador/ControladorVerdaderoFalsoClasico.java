@@ -58,6 +58,6 @@ public class ControladorVerdaderoFalsoClasico extends Controlador {
         }
     }
     public void siguienteTurno() throws IOException {
-        this.turnoActual.siguienteJugador();
+        //this.turnoActual.siguienteJugador();
     }
 }
