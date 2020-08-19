@@ -55,4 +55,8 @@ public class PreguntaMultipleChoicePenalidad extends Pregunta {
                 respuesta.setCorrecta();
         }
     }
+
+    public String getNombrePregunta() { return nombre;
+    }
+
 }

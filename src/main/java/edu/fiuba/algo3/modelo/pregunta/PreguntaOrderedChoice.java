@@ -56,4 +56,8 @@ public class PreguntaOrderedChoice extends Pregunta{
             if(((RespuestaMultiple) respuesta).getOpciones().esIgual(opcionesCorrectas))
                 respuesta.setCorrecta();
     }
+
+    public String getNombre() {
+        return nombre;
+    }
 }

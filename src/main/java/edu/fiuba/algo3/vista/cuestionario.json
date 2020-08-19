@@ -6,24 +6,74 @@
     "nombre": "¿207 es un número primo?",
     "opcionCorrecta": false
     }
-  },{
+  },
+  {
     "Pregunta":
     {
       "tipo" : "VerdaderoFalsoPenalidad",
       "nombre":"¿507 es un número primo?",
       "opcionCorrecta": false
     }
-  },{
-  "Pregunta":
+  },
   {
-    "tipo" : "MultipleChoiseClasico",
-    "nombre":"¿Capital de Alemania?",
-    "correctas": [
-      "Berlin" ],
-    "incorrectas": [
-      "Paris",
-      "Roma"]
+    "Pregunta":
+    {
+      "tipo" : "MultipleChoiseClasico",
+      "nombre":"¿Capital de Alemania?",
+      "correctas": [
+        "Berlin" ],
+      "incorrectas": [
+        "Paris",
+        "Roma"]
+    }
+  },
+  {
+    "Pregunta": {
+      "tipo": "MultipleChoiseParcial",
+      "nombre": "Lagos Argentinos ",
+      "correctas": [
+        "Nahuel Huapi",
+        "Viedma"
+      ],
+      "incorrectas": [
+        "Gualeguay",
+        "Esteros de Libera"
+      ]
+    }
+  },{
+    "Pregunta": {
+      "tipo": "MultipleChoisePenalidad",
+      "nombre": "Lagos Argentinos ",
+      "correctas": [
+        "Nahuel Huapi",
+        "Viedma"
+      ],
+      "incorrectas": [
+        "Gualeguay",
+        "Esteros de Libera"
+      ]
+    }
+    },{
+    "Pregunta": {
+      "tipo": "OrderedChoise",
+      "nombre": "Ordenar de Mayor a Menor",
+      "correctas": [
+        "20",
+        "14",
+        "12",
+        "3"
+      ]
+    }
+    },{
+    "Pregunta": {
+      "tipo": "GrupoChoice",
+      "nombre": "Diferenciar entre ciudades de Europa y de Asia",
+      "grupo1": [
+        "Berlin" ],
+      "grupo2": [
+        "Paris",
+        "Roma"]
+    }
   }
-}
 ]
 
