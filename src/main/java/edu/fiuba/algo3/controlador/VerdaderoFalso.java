@@ -11,7 +11,7 @@ public class VerdaderoFalso {
 
     public void setUpView() {
         idverdadero.setText("Lucas Puto verdadero");
-        idfalso.setText("Lucas puto falso");
+        idfalso.setText("Lucas puto verdadero");
     }
 
 }

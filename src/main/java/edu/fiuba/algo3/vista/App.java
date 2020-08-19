@@ -1,6 +1,8 @@
 package edu.fiuba.algo3.vista;
 
 import javafx.application.Application;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.scene.media.AudioClip;
@@ -22,6 +24,10 @@ public class App extends Application {
 
         escenarioInicial.getIcons().add(new Image(Paths.get(ICONO_JUEGO).toUri().toString()));
 
+        FXMLLoader fxmlLoader = new FXMLLoader();
+        fxmlLoader.setLocation(Paths.get("src/main/java/edu/fiuba/algo3/vista/vofinicial.fxml").toUri().toURL());
+        Parent root = fxmlLoader.load();
+
 
 /*Con este código la música funciona por pocos segundos, se corta de la nada. Probar en otra PC
         Media media = new Media(Paths.get(SONIDO_JUEGO).toUri().toString());
@@ -40,7 +46,9 @@ public class App extends Application {
         FormularioInicial formularioInicial = new FormularioInicial() ;
         formularioInicial.agregarControlesInterfaz(escenarioInicial);
 
-        Scene scene = new Scene(formularioInicial, ANCHO, ALTO);
+
+
+        Scene scene = new Scene(root);
 
         escenarioInicial.setScene(scene);
 
