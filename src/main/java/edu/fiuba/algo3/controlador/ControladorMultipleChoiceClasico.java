@@ -77,7 +77,7 @@ public class ControladorMultipleChoiceClasico extends Controladores{
         }
     }
 
-    public void siguienteTurno(){
+    public void siguienteTurno() throws IOException {
         this.turnoActual.siguienteJugador();
     }
 
