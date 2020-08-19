@@ -1,6 +1,8 @@
 package edu.fiuba.algo3.controlador;
 
 import edu.fiuba.algo3.modelo.ColeccionOpciones;
+import edu.fiuba.algo3.modelo.Jugador;
+import edu.fiuba.algo3.modelo.pregunta.Pregunta;
 import edu.fiuba.algo3.modelo.pregunta.PreguntaMultipleChoice;
 import edu.fiuba.algo3.vista.App;
 import javafx.fxml.FXML;
@@ -58,7 +60,7 @@ public class ControladorMultipleChoiceClasico {
     public void avanzarSiguiente() throws IOException {
 
 
-        actualizarEscena("src/main/java/edu/fiuba/algo3/vista/plantilla/vofinicial.fxml");
+        actualizarEscena("src/main/java/edu/fiuba/algo3/vista/plantilla/VerdaderoFalsoClasico.fxml");
     }
     public void opcionSeleccionada() throws IOException {
 
@@ -76,6 +78,15 @@ public class ControladorMultipleChoiceClasico {
 
 
         establecerVista();
+    }
+
+    public void actualizarPlantilla(Pregunta pregunta, Jugador jugadorActual) {
+
+        //System.out.println(((PreguntaMultipleChoice)pregunta).getNombrePregunta());
+
+        nombrepregunta.setText(((PreguntaMultipleChoice)pregunta).getNombrePregunta());
+
+
     }
 
 

@@ -9,8 +9,8 @@ public abstract class Turno {
     protected String plantilla;
     
     public void mostrarEscena() throws IOException {
-        this.actualizarPlantilla();
         actualizarEscena(plantilla);
+        this.actualizarPlantilla();
     }
 
     protected abstract void actualizarPlantilla() throws MalformedURLException, IOException;
