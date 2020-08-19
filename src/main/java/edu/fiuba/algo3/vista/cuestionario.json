@@ -1,5 +1,17 @@
 [
   {
+    "Pregunta":
+    {
+      "tipo" : "MultipleChoiseClasico",
+      "nombre":"¿Capital de Alemania?",
+      "correctas": [
+        "Berlin" ],
+      "incorrectas": [
+        "Paris",
+        "Roma"]
+    }
+  },
+  {
   "Pregunta":
     {
     "tipo": "VerdaderoFalsoClasico",

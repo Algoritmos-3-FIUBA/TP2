@@ -63,8 +63,4 @@ public class PreguntaMultipleChoice extends Pregunta {
     public ColeccionOpciones getOpcionesIncorrectas(){
         return opcionesIncorrectas;
     }
-
-    public String getNombrePregunta() {
-        return nombre;
-    }
 }

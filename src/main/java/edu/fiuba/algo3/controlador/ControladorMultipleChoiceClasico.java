@@ -1,6 +1,8 @@
 package edu.fiuba.algo3.controlador;
 
 import edu.fiuba.algo3.modelo.ColeccionOpciones;
+import edu.fiuba.algo3.modelo.Jugador;
+import edu.fiuba.algo3.modelo.pregunta.Pregunta;
 import edu.fiuba.algo3.modelo.pregunta.PreguntaMultipleChoice;
 import edu.fiuba.algo3.vista.App;
 import javafx.fxml.FXML;
@@ -18,7 +20,7 @@ import static edu.fiuba.algo3.modelo.Kahoot.actualizarEscena;
 
 public class ControladorMultipleChoiceClasico {
     private ColeccionOpciones opcionesElegidas = new ColeccionOpciones();
-    private PreguntaMultipleChoice pregunta; //= new PreguntaMultipleChoice();
+    private Pregunta pregunta; //= new PreguntaMultipleChoice();
 
     @FXML
     public Label nombrepregunta;
@@ -39,12 +41,9 @@ public class ControladorMultipleChoiceClasico {
 
     Stage escenarioActual;
 
-
-    public void establecerVista() {
-        nombrepregunta.setText("Pregunta");
-        //pregunta = new PreguntaMultipleChoice((String) nombrepregunta.getText());
-
-        //opcion1.setOnAction(obtenerOpciondeMultipleChoise());
+    public void initialize() {
+        this.escenarioActual = App.obtenerEscenarioActual();
+        nombrepregunta.setText("Hola");
         opcion1.setText("Opc 1");
         opcion2.setText("Opc 2");
         opcion3.setText("Opc 3");
@@ -52,30 +51,10 @@ public class ControladorMultipleChoiceClasico {
         opcion5.setText("Opc 5");
         opcion6.setDisable(true);
         opcion6.setOpacity(0);
-
     }
 
-    public void avanzarSiguiente() throws IOException {
-
-
-        actualizarEscena("src/main/java/edu/fiuba/algo3/vista/plantilla/vofinicial.fxml");
-    }
-    public void opcionSeleccionada() throws IOException {
-
-
-    }
-
-
-    public void initialize() {
-   /*
-        listaRespuestas = new ArrayList<>();
-        this.juegocontrolador = controlador;
-        juegocontrolador.botonsiguiente.setDisable(true);
-*/
-        this.escenarioActual = App.obtenerEscenarioActual();
-
-
-        establecerVista();
+    public void actualizarPlantilla(Pregunta pregunta, Jugador jugadorActual) {
+        nombrepregunta.setText(pregunta.getNombre());
     }
 
 

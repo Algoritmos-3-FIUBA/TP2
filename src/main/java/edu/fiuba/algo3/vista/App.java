@@ -26,7 +26,7 @@ public class App extends Application {
 
 /*
         FXMLLoader fxmlLoader = new FXMLLoader();
-        fxmlLoader.setLocation(Paths.get("src/main/java/edu/fiuba/algo3/vista/MultipleChoiceClasico.fxml").toUri().toURL());
+        fxmlLoader.setLocation(Paths.get("src/main/java/edu/fiuba/algo3/vista/plantilla/MultipleChoiceClasico.fxml").toUri().toURL());
         Parent root = fxmlLoader.load();
 */
 

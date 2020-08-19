@@ -43,15 +43,8 @@ public class Kahoot {
         sistemaTurnos.siguienteEscena();
     }
 
-    public static void actualizarEscena(String direccion) throws IOException {
-
-        FXMLLoader fxmlLoader = new FXMLLoader();
-        fxmlLoader.setLocation(Paths.get(direccion).toUri().toURL());
-        Parent root = fxmlLoader.load();
-
-        Scene scene = new Scene(root);
-
-        escenario.setScene(scene);
+    public static void actualizarEscena(Scene escena) throws IOException{
+        escenario.setScene(escena);
     }
 
 }
