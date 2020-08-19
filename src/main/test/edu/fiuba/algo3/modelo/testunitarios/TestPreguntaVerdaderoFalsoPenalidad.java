@@ -1,6 +1,7 @@
 package edu.fiuba.algo3.modelo.testunitarios;
 
 import edu.fiuba.algo3.modelo.Jugador;
+import edu.fiuba.algo3.modelo.multiplicador.Multiplicador;
 import edu.fiuba.algo3.modelo.multiplicador.MultiplicadorPorTres;
 import edu.fiuba.algo3.modelo.multiplicador.MultiplicadorPorDos;
 import edu.fiuba.algo3.modelo.pregunta.PreguntaVerdaderoFalsoPenalidad;
@@ -42,11 +43,13 @@ public class TestPreguntaVerdaderoFalsoPenalidad {
     public void testPreguntaRecibeRespuestaCorrectaYAsignaLosPuntajesCorrespondientes03(){
         Jugador jugador = new Jugador("Pedro");
 
+        Multiplicador multiplicador = new MultiplicadorPorDos();
+
         PreguntaVerdaderoFalsoPenalidad pregunta = new PreguntaVerdaderoFalsoPenalidad("1+1 es 2");
 
         pregunta.setVerdaderoOpcionCorrecta();
 
-        RespuestaUnica respuesta = new RespuestaUnica(pregunta.getOpcionVerdadera(),jugador, jugador.usarMultiplicadorPorDos());
+        RespuestaUnica respuesta = new RespuestaUnica(pregunta.getOpcionVerdadera(),jugador, multiplicador);
 
         LinkedList <Respuesta> listaRespuetas= new LinkedList<Respuesta>();
 
@@ -61,14 +64,16 @@ public class TestPreguntaVerdaderoFalsoPenalidad {
     public void testPreguntaRecibeRespuestaCorrectaYAsignaLosPuntajesCorrespondientes204(){
         Jugador jugador = new Jugador("Pedro");
 
+        Multiplicador multiplicador = new MultiplicadorPorTres();
+
         PreguntaVerdaderoFalsoPenalidad pregunta = new PreguntaVerdaderoFalsoPenalidad("1+1 es 2");
         PreguntaVerdaderoFalsoPenalidad pregunta2 = new PreguntaVerdaderoFalsoPenalidad("1+1 es 2");
 
         pregunta.setVerdaderoOpcionCorrecta();
         pregunta2.setVerdaderoOpcionCorrecta();
 
-        RespuestaUnica respuesta = new RespuestaUnica(pregunta.getOpcionVerdadera(),jugador, jugador.usarMultiplicadorPorTres());
-        RespuestaUnica respuesta2 = new RespuestaUnica(pregunta2.getOpcionVerdadera(),jugador, jugador.usarMultiplicadorPorTres());
+        RespuestaUnica respuesta = new RespuestaUnica(pregunta.getOpcionVerdadera(),jugador, multiplicador);
+        RespuestaUnica respuesta2 = new RespuestaUnica(pregunta2.getOpcionVerdadera(),jugador, multiplicador);
 
         LinkedList <Respuesta> listaRespuetas= new LinkedList<Respuesta>();
 
