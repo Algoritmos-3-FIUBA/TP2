@@ -40,6 +40,7 @@ public class TurnoJugador extends Turno{
             siguienteTurno();
         }
         else{
+            System.out.println(jugadorActual.getPuntos().getCantidad());
             this.jugadorActual = jugadoresRestantes.remove();
             this.controlador.actualizarPlantilla(pregunta, jugadorActual,this);
         }

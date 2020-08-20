@@ -120,7 +120,7 @@ public class LecturaDeArchivo {
         }
         PreguntaMultipleChoicePenalidad pregunta = new PreguntaMultipleChoicePenalidad((String) oPregunta.get("nombre"),opciones);
         preguntas.add(pregunta);
-        plantillaPreguntas.put(pregunta,"src/main/java/edu/fiuba/algo3/vista/plantilla/MultipleChoiceClasico.fxml");
+        plantillaPreguntas.put(pregunta,"src/main/java/edu/fiuba/algo3/vista/plantilla/MultipleChoicePenalidad.fxml");
         //System.out.println(pregunta.getNombrePregunta());
     }
 
@@ -138,7 +138,7 @@ public class LecturaDeArchivo {
         }
         PreguntaMultipleChoiceParcial pregunta = new PreguntaMultipleChoiceParcial((String) oPregunta.get("nombre"),opciones);
         preguntas.add(pregunta);
-        plantillaPreguntas.put(pregunta,"src/main/java/edu/fiuba/algo3/vista/plantilla/MultipleChoiceClasico.fxml");
+        plantillaPreguntas.put(pregunta,"src/main/java/edu/fiuba/algo3/vista/plantilla/MultipleChoiceParcial.fxml");
         System.out.println(pregunta.getNombrePregunta());
     }
 
@@ -165,7 +165,7 @@ public class LecturaDeArchivo {
         if((Boolean) oPregunta.get("opcionCorrecta")) pregunta.setVerdaderoOpcionCorrecta();
         else pregunta.setFalsoOpcionCorrecta();
         preguntas.add(pregunta);
-        plantillaPreguntas.put(pregunta,"src/main/java/edu/fiuba/algo3/vista/plantilla/VerdaderoFalsoClasico.fxml");
+        plantillaPreguntas.put(pregunta,"src/main/java/edu/fiuba/algo3/vista/plantilla/VerdaderoFalsoPenalidad.fxml");
         System.out.println(pregunta.getNombrePregunta());
         }
 
@@ -175,7 +175,7 @@ public class LecturaDeArchivo {
         if((Boolean) oPregunta.get("opcionCorrecta")) pregunta.setVerdaderoOpcionCorrecta();
         else pregunta.setFalsoOpcionCorrecta();
         preguntas.add(pregunta);
-        plantillaPreguntas.put(pregunta,"src/main/java/edu/fiuba/algo3/vista/plantilla/VerdaderoFalsoClasico.fxml");
+        plantillaPreguntas.put(pregunta,"src/main/java/edu/fiuba/algo3/vista/plantilla/VerdaderoFalso.fxml");
         System.out.println(pregunta.getNombrePregunta());
         }
 
