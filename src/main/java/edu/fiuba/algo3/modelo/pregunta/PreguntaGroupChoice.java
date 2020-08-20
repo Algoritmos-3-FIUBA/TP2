@@ -42,7 +42,7 @@ public class PreguntaGroupChoice extends Pregunta{
 
     }
 
-    public void evaluarRespuestas(LinkedList<Respuesta> respuestas) {
+    /*public void evaluarRespuestas(LinkedList<Respuesta> respuestas) {
         corregirRespuestas(respuestas);
 
         for (Respuesta respuesta : respuestas) {
@@ -56,12 +56,28 @@ public class PreguntaGroupChoice extends Pregunta{
         for (Respuesta respuesta : respuestas) {
             respuesta.otorgarPuntos(puntosAOtorgar(respuesta));
         }
-    }
+    }*/
 
     @Override
     public ColeccionOpciones getOpciones() {
         return null;
     }
+
+    @Override
+    public void sumarPuntosJugadores(LinkedList<Respuesta> respuestas) {
+        for (Respuesta respuesta : respuestas) {
+            respuesta.otorgarPuntos(puntosAOtorgar(respuesta));
+        }
+    }
+
+    @Override
+    public void corregirRespuestas(LinkedList<Respuesta> respuestas){
+        for (Respuesta respuesta : respuestas)
+            for (int i = 0; i < gruposCorrectos.size(); i++)
+                if (((RespuestaGrupos) respuesta).getGruposElegidos().get(i).tieneMismosElementos(gruposCorrectos.get(i)))
+                    respuesta.setCorrecta();
+    }
+
 
     private Puntos puntosAOtorgar(Respuesta respuesta){
         Puntos puntosParciales = new Puntos(0);
@@ -71,26 +87,4 @@ public class PreguntaGroupChoice extends Pregunta{
         return puntosParciales;
     }
 
-    private void corregirRespuestas(LinkedList<Respuesta> respuestas){
-        for (Respuesta respuesta : respuestas)
-            for (int i = 0; i < gruposCorrectos.size(); i++)
-                if (((RespuestaGrupos) respuesta).getGruposElegidos().get(i).tieneMismosElementos(gruposCorrectos.get(i)))
-                    respuesta.setCorrecta();
-    }
-    //Version anterior
-    /*
-    public void verificarlosGruposDeLaRespuesta(RespuestaGrupos respuesta){
-        Puntos puntosAsignar;
-        LinkedList<Grupo> gruposElegidos;
-        gruposElegidos = respuesta.getGruposElegidos();
-        for (int i=0; i<gruposCorrectos.size(); i++){
-            //Pregunta le delega a cada grupo correcto que se evalue, antes esa delegación la hacia Respuesta
-
-
-            //puntosAsignar = gruposCorrectos.get(i).evaluarGrupo(gruposElegidos.get(i).getOpcionesDelGrupo(), PuntosOtorgados);
-
-            // puntosAsignar = gruposElegidos.get(i).evaluarGrupo(gruposCorrectos.get(i).getOpcionesDelGrupo(), PuntosOtorgados);
-            //respuesta.otorgarPuntos(puntosAsignar);
-        }
-    }*/
 }
