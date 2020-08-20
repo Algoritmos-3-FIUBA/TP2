@@ -3,7 +3,6 @@ package edu.fiuba.algo3.modelo.respuesta;
 import edu.fiuba.algo3.modelo.opcion.ColeccionOpciones;
 import edu.fiuba.algo3.modelo.Jugador;
 import edu.fiuba.algo3.modelo.excepciones.MasDeSeisOpcionesException;
-import edu.fiuba.algo3.modelo.excepciones.NoHayOpcionesException;
 
 import java.util.LinkedList;
 
@@ -22,10 +21,6 @@ public class RespuestaGrupos extends Respuesta{
     }
 
     private void verificarGrupo(LinkedList<ColeccionOpciones> gruposElegidos){
-        if(gruposElegidos == null) {
-            throw new NoHayOpcionesException();
-        }
-
         for (ColeccionOpciones opcionesGrupo: gruposElegidos){
             if(opcionesGrupo.cantidadElementos() > 6) {
                 throw new MasDeSeisOpcionesException();

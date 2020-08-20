@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.geometry.Insets?>
+<?import javafx.scene.Group?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
@@ -49,9 +50,9 @@
     </MenuBar>
     <AnchorPane maxHeight="-1.0" maxWidth="-1.0" opacity="0.8" prefWidth="729.0" style="-fx-background-color: #9E0A9E;" VBox.vgrow="ALWAYS">
       <children>
-            <GridPane layoutX="276.0" layoutY="74.0" prefHeight="364.0" prefWidth="337.0" AnchorPane.bottomAnchor="111.0" AnchorPane.leftAnchor="276.0" AnchorPane.rightAnchor="177.0" AnchorPane.topAnchor="147.0">
+            <GridPane alignment="BASELINE_LEFT" layoutX="213.0" layoutY="144.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="291.0" prefWidth="574.0" AnchorPane.bottomAnchor="114.0" AnchorPane.leftAnchor="213.0" AnchorPane.rightAnchor="3.0" AnchorPane.topAnchor="144.0">
                <columnConstraints>
-                  <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" minWidth="10.0" />
+                  <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" />
                </columnConstraints>
                <rowConstraints>
                   <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
@@ -62,7 +63,7 @@
                   <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
                </rowConstraints>
                <children>
-                  <Label fx:id="nombrepregunta" alignment="BASELINE_CENTER" contentDisplay="CENTER" prefHeight="42.0" prefWidth="287.0" style="-fx-alignment: center; -fx-text-alignment: center;" text="NombrePregunta" textAlignment="CENTER" textFill="WHITE" GridPane.halignment="CENTER">
+                  <Label fx:id="nombrepregunta" alignment="BASELINE_CENTER" contentDisplay="CENTER" prefHeight="42.0" prefWidth="775.0" style="-fx-alignment: center; -fx-text-alignment: center;" text="NombrePregunta                                 " textFill="WHITE" GridPane.halignment="CENTER">
                      <font>
                         <Font name="Arial Black" size="28.0" />
                      </font>
@@ -70,7 +71,7 @@
                         <Insets />
                      </opaqueInsets>
                   </Label>
-                  <Button fx:id="opcion1" contentDisplay="BOTTOM" mnemonicParsing="false" prefHeight="36.0" prefWidth="358.0" style="-fx-text-fill: white; -fx-background-color: #9E0A9E;" text="Opcion                                                                          " textFill="WHITE" GridPane.rowIndex="1">
+                  <Button fx:id="opcion1" contentDisplay="BOTTOM" mnemonicParsing="false" prefHeight="36.0" prefWidth="256.0" style="-fx-text-fill: white; -fx-background-color: #9E0A9E;" text="Opcion" textFill="WHITE" GridPane.halignment="LEFT" GridPane.rowIndex="1">
                      <font>
                         <Font name="Arial Bold" size="19.0" />
                      </font>
@@ -79,7 +80,7 @@
                      </opaqueInsets>
                   </Button>
                   <ComboBox fx:id="comboopcion1" prefHeight="26.0" prefWidth="169.0" GridPane.rowIndex="1" />
-                  <Button fx:id="opcion2" contentDisplay="BOTTOM" mnemonicParsing="false" prefHeight="36.0" prefWidth="342.0" style="-fx-text-fill: white; -fx-background-color: #9E0A9E;" text="Opcion                                                    " textFill="WHITE" GridPane.rowIndex="2">
+                  <Button fx:id="opcion2" contentDisplay="BOTTOM" mnemonicParsing="false" prefHeight="36.0" prefWidth="255.0" style="-fx-text-fill: white; -fx-background-color: #9E0A9E;" text="Opcion" textFill="WHITE" GridPane.halignment="LEFT" GridPane.rowIndex="2">
                      <font>
                         <Font name="Arial Bold" size="19.0" />
                      </font>
@@ -88,7 +89,7 @@
                      </opaqueInsets>
                   </Button>
                   <ComboBox fx:id="comboopcion2" prefHeight="26.0" prefWidth="169.0" GridPane.rowIndex="2" />
-                  <Button fx:id="opcion5" contentDisplay="BOTTOM" mnemonicParsing="false" prefHeight="36.0" prefWidth="424.0" style="-fx-text-fill: white; -fx-background-color: #9E0A9E;" text="Opcion                                               " textFill="WHITE" GridPane.rowIndex="5">
+                  <Button fx:id="opcion5" contentDisplay="BOTTOM" mnemonicParsing="false" prefHeight="36.0" prefWidth="256.0" style="-fx-text-fill: white; -fx-background-color: #9E0A9E;" text="Opcion" textFill="WHITE" GridPane.halignment="LEFT" GridPane.rowIndex="5">
                      <font>
                         <Font name="Arial Bold" size="19.0" />
                      </font>
@@ -96,7 +97,7 @@
                         <Insets />
                      </opaqueInsets>
                   </Button>
-                  <Button fx:id="opcion4" contentDisplay="BOTTOM" mnemonicParsing="false" prefHeight="36.0" prefWidth="433.0" style="-fx-text-fill: white; -fx-background-color: #9E0A9E;" text="Opcion                                                  " textFill="WHITE" GridPane.rowIndex="4">
+                  <Button fx:id="opcion4" contentDisplay="BOTTOM" mnemonicParsing="false" prefHeight="36.0" prefWidth="257.0" style="-fx-text-fill: white; -fx-background-color: #9E0A9E;" text="Opcion" textFill="WHITE" GridPane.halignment="LEFT" GridPane.rowIndex="4">
                      <font>
                         <Font name="Arial Bold" size="19.0" />
                      </font>
@@ -104,7 +105,7 @@
                         <Insets />
                      </opaqueInsets>
                   </Button>
-                  <Button fx:id="opcion3" contentDisplay="BOTTOM" mnemonicParsing="false" prefHeight="36.0" prefWidth="367.0" style="-fx-text-fill: white; -fx-background-color: #9E0A9E;" text="Opcion                                                  " textFill="WHITE" GridPane.rowIndex="3">
+                  <Button fx:id="opcion3" contentDisplay="BOTTOM" mnemonicParsing="false" prefHeight="36.0" prefWidth="255.0" style="-fx-text-fill: white; -fx-background-color: #9E0A9E;" text="Opcion" textFill="WHITE" GridPane.halignment="LEFT" GridPane.rowIndex="3">
                      <font>
                         <Font name="Arial Bold" size="19.0" />
                      </font>
@@ -148,14 +149,23 @@
                <font>
                   <Font name="Arial Bold" size="16.0" />
                </font></Label>
-            <Label fx:id="tipopregunta" layoutX="613.0" layoutY="23.0" text="Tipo de Pregunta" textFill="WHITE" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="23.0">
-               <font>
-                  <Font name="Waree Bold" size="13.0" />
-               </font>
-               <effect>
-                  <Glow level="1.0" />
-               </effect>
-            </Label>
+            <Group layoutX="574.0" layoutY="17.0" AnchorPane.rightAnchor="50.70703125" AnchorPane.topAnchor="17.0">
+               <children>
+                  <Label fx:id="tipopregunta" layoutX="39.0" layoutY="6.0" text="Tipo de Pregunta" textFill="WHITE">
+                     <font>
+                        <Font name="Waree Bold" size="13.0" />
+                     </font>
+                     <effect>
+                        <Glow level="1.0" />
+                     </effect>
+                  </Label>
+                  <ImageView fitHeight="37.0" fitWidth="35.0">
+                     <image>
+                         <Image url="@../imagenes/categoria.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Group>
             <Label fx:id="puntosactuales" layoutX="107.0" layoutY="212.0" text="Puntos" textFill="WHITE" AnchorPane.leftAnchor="107.0" AnchorPane.topAnchor="212.0">
                <effect>
                   <Reflection />
@@ -205,11 +215,6 @@
             <ImageView fitHeight="40.0" fitWidth="41.0" layoutX="63.0" layoutY="113.0">
                <image>
                    <Image url="@../imagenes/jugador.png" />
-               </image>
-            </ImageView>
-            <ImageView fitHeight="37.0" fitWidth="35.0" layoutX="574.0" layoutY="17.0" AnchorPane.rightAnchor="181.0">
-               <image>
-                   <Image url="@../imagenes/categoria.png" />
                </image>
             </ImageView>
       </children>

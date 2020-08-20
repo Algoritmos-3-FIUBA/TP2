@@ -3,9 +3,11 @@
   "Pregunta": {
     "tipo": "GrupoChoice",
     "nombre": "Diferenciar entre ciudades de Europa y de Asia",
+    "nombregrupo1": "Asia",
     "grupo1": [
       "Beijing",
       "Tokyo"],
+    "nombregrupo2": "Europa",
     "grupo2": [
       "Paris",
       "Roma",

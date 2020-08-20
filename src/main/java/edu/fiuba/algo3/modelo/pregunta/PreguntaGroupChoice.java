@@ -68,6 +68,13 @@ public class PreguntaGroupChoice extends Pregunta{
         return opciones;
     }
 
+    public LinkedList<String> getNombresGrupos() {
+        LinkedList<String> nombres = new LinkedList<>();
+        for(ColeccionOpciones grupo : gruposCorrectos)
+            nombres.add(grupo.getNombre());
+        return nombres;
+    }
+
     @Override
     public void sumarPuntosJugadores(LinkedList<Respuesta> respuestas) {
         for (Respuesta respuesta : respuestas) {

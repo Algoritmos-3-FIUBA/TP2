@@ -11,16 +11,17 @@ public abstract class Pregunta {
 
     public void evaluarRespuestas(LinkedList<Respuesta> listaRespuestas){
         corregirRespuestas(listaRespuestas);
+        prepararAmplificadorExclusividad(listaRespuestas);
+        sumarPuntosJugadores(listaRespuestas);
+    }
 
+    private void prepararAmplificadorExclusividad(LinkedList<Respuesta> listaRespuestas){
         for (Respuesta respuesta : listaRespuestas) {
             respuesta.actualizarCondicionDeUsoExclusividad(listaRespuestas);
             respuesta.calcularAmplificacionExclusividad(listaRespuestas);
         }
-
         for (Respuesta respuesta : listaRespuestas)
             respuesta.establecerAmplificadorAdecuado();
-
-        sumarPuntosJugadores(listaRespuestas);
     }
 
     public abstract void corregirRespuestas(LinkedList<Respuesta> listaRespuestas);
