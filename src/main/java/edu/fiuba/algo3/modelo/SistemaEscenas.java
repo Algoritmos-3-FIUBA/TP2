@@ -39,6 +39,9 @@ public class SistemaEscenas {
 
 
         Turno turnoSiguiente = turnos.remove();
+        System.out.println(turnoSiguiente.controlador.getClass());
+        System.out.println("///////////////////////////////////");
+
         turnoSiguiente.mostrarEscena();
     }
 }

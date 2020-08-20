@@ -9,7 +9,23 @@ public abstract class Pregunta {
 
     protected String nombre;
 
-    public abstract void evaluarRespuestas(LinkedList<Respuesta> listaRespuestas);
+    public void evaluarRespuestas(LinkedList<Respuesta> listaRespuestas){
+        corregirRespuestas(listaRespuestas);
+
+        for (Respuesta respuesta : listaRespuestas) {
+            respuesta.actualizarCondicionDeUsoExclusividad(listaRespuestas);
+            respuesta.calcularAmplificacionExclusividad(listaRespuestas);
+        }
+
+        for (Respuesta respuesta : listaRespuestas)
+            respuesta.establecerAmplificadorAdecuado();
+
+        sumarPuntosJugadores(listaRespuestas);
+    }
+
+    public abstract void corregirRespuestas(LinkedList<Respuesta> listaRespuestas);
+
+    public abstract void sumarPuntosJugadores(LinkedList<Respuesta> listaRespuestas);
 
     public String getNombre() {
         return nombre;

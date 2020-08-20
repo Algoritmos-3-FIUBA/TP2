@@ -60,7 +60,7 @@ public class TestPreguntaVerdaderoFalsoPenalidad {
         assertEquals(jugador.getPuntos().getCantidad(),2);
     }
 
-    /*@Test
+    @Test
     public void testPreguntaRecibeRespuestaCorrectaYAsignaLosPuntajesCorrespondientes204(){
         Jugador jugador = new Jugador("Pedro");
 
@@ -88,5 +88,5 @@ public class TestPreguntaVerdaderoFalsoPenalidad {
         pregunta.evaluarRespuestas(listaRespuetas2);
 
         assertEquals(jugador.getPuntos().getCantidad(),4);
-    }*/
+    }
 }

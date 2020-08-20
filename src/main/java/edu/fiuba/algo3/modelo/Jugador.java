@@ -1,5 +1,6 @@
 package edu.fiuba.algo3.modelo;
 
+import edu.fiuba.algo3.modelo.excepciones.NoTieneBeneficioException;
 import edu.fiuba.algo3.modelo.exclusividad.Exclusividad;
 import edu.fiuba.algo3.modelo.multiplicador.Multiplicador;
 import edu.fiuba.algo3.modelo.multiplicador.MultiplicadorPorDos;
@@ -42,17 +43,20 @@ public class Jugador {
     }
 
     public Multiplicador usarMultiplicadorPorDos(){
-        //if(multiplicadoresPorDos.isEmpty())
+        if(multiplicadoresPorDos.isEmpty())
+            throw new NoTieneBeneficioException();
         return multiplicadoresPorDos.removeLast();
     }
 
     public Multiplicador usarMultiplicadorPorTres(){
-        //if(multiplicadoresPorTres.isEmpty())
+        if(multiplicadoresPorTres.isEmpty())
+            throw new NoTieneBeneficioException();
         return multiplicadoresPorTres.removeLast();
     }
 
     public Exclusividad usarExclusividad(){
-        //if(exclusividades.isEmpty())
+        if(exclusividades.isEmpty())
+            throw new NoTieneBeneficioException();
         return exclusividades.removeLast();
     }
 }

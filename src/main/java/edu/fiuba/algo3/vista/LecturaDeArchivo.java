@@ -102,7 +102,7 @@ public class LecturaDeArchivo {
         }
         PreguntaOrderedChoice pregunta = new PreguntaOrderedChoice((String) oPregunta.get("nombre"),1,opciones);
         preguntas.add(pregunta);
-        plantillaPreguntas.put(pregunta,"src/main/java/edu/fiuba/algo3/vista/plantilla/MultipleChoiceClasico.fxml");
+        plantillaPreguntas.put(pregunta,"src/main/java/edu/fiuba/algo3/vista/plantilla/OrderedChoice.fxml");
         System.out.println(pregunta.getNombre());
     }
 
@@ -165,7 +165,7 @@ public class LecturaDeArchivo {
         if((Boolean) oPregunta.get("opcionCorrecta")) pregunta.setVerdaderoOpcionCorrecta();
         else pregunta.setFalsoOpcionCorrecta();
         preguntas.add(pregunta);
-        plantillaPreguntas.put(pregunta,"src/main/java/edu/fiuba/algo3/vista/plantilla/MultipleChoiceClasico.fxml");
+        plantillaPreguntas.put(pregunta,"src/main/java/edu/fiuba/algo3/vista/plantilla/VerdaderoFalsoClasico.fxml");
         System.out.println(pregunta.getNombrePregunta());
         }
 
@@ -175,7 +175,7 @@ public class LecturaDeArchivo {
         if((Boolean) oPregunta.get("opcionCorrecta")) pregunta.setVerdaderoOpcionCorrecta();
         else pregunta.setFalsoOpcionCorrecta();
         preguntas.add(pregunta);
-        plantillaPreguntas.put(pregunta,"src/main/java/edu/fiuba/algo3/vista/plantilla/MultipleChoiceClasico.fxml");
+        plantillaPreguntas.put(pregunta,"src/main/java/edu/fiuba/algo3/vista/plantilla/VerdaderoFalsoClasico.fxml");
         System.out.println(pregunta.getNombrePregunta());
         }
 

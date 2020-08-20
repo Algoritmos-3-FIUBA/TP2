@@ -137,7 +137,7 @@ public class TestPreguntaMultipleChoicePenalidadEntrega02 {
         assertEquals(jugadorDos.getPuntos().getCantidad(),-3);
     }
 
-    /*@Test
+    @Test
     public void testCreoDosPreguntaMultipleChoicePenalidadYJugadorUnoNoPuedeUasrMultiplicadorPorDosEnLasDosPreguntas04(){
 
         Jugador jugadorUno = new Jugador("Pedro");
@@ -200,5 +200,5 @@ public class TestPreguntaMultipleChoicePenalidadEntrega02 {
         assertEquals(jugadorUno.getPuntos().getCantidad(),3);
         assertEquals(jugadorDos.getPuntos().getCantidad(),-2);
 
-    }*/
+    }
 }

@@ -9,7 +9,7 @@ import edu.fiuba.algo3.modelo.respuesta.Respuesta;
 import edu.fiuba.algo3.modelo.respuesta.RespuestaMultiple;
 import java.util.LinkedList;
 
-public class PreguntaMultipleChoicePenalidad extends Pregunta {
+public class PreguntaMultipleChoicePenalidad extends Pregunta{
 
     private final ColeccionOpciones opcionesCorrectas;
     private final ColeccionOpciones opcionesIncorrectas;
@@ -33,14 +33,8 @@ public class PreguntaMultipleChoicePenalidad extends Pregunta {
 
         opciones.separarEnGruposCorrespondientes(opcionesCorrectas, opcionesIncorrectas);
     }
-
+    /*
     public void evaluarRespuestas(LinkedList<Respuesta> respuestas) {
-/*        for (Respuesta respuesta : respuestas) {
-            Puntos puntosParciales = new Puntos(0);
-            for (Opcion opcion : ((RespuestaMultiple) respuesta).getOpciones().getOpciones())
-                puntosParciales.sumarPuntos(opcion.puntosObtenidos());
-            respuesta.otorgarPuntos(puntosParciales);
-        }*/
 
         corregirRespuestas(respuestas);
 
@@ -48,15 +42,27 @@ public class PreguntaMultipleChoicePenalidad extends Pregunta {
             Puntos puntosParciales = new Puntos(0);
             for (Opcion opcion : ((RespuestaMultiple) respuesta).getOpciones().getOpciones())
                 puntosParciales.sumarPuntos(opcion.puntosObtenidos());
-            respuesta.otorgarPuntos(puntosParciales);        }
-    }
+            respuesta.otorgarPuntos(puntosParciales);
+        }
+    }*/
 
     @Override
     public ColeccionOpciones getOpciones() {
         return opciones;
     }
 
-    private void corregirRespuestas(LinkedList<Respuesta> respuestas){
+    @Override
+    public void sumarPuntosJugadores(LinkedList<Respuesta> respuestas) {
+        for (Respuesta respuesta : respuestas) {
+            Puntos puntosParciales = new Puntos(0);
+            for (Opcion opcion : ((RespuestaMultiple) respuesta).getOpciones().getOpciones())
+                puntosParciales.sumarPuntos(opcion.puntosObtenidos());
+            respuesta.otorgarPuntos(puntosParciales);
+        }
+    }
+
+    @Override
+    public void corregirRespuestas(LinkedList<Respuesta> respuestas){
         for (Respuesta respuesta : respuestas) {
             if (((RespuestaMultiple)respuesta).getOpciones().tieneElementos(opcionesCorrectas))
                 respuesta.setCorrecta();

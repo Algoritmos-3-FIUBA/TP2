@@ -1,5 +1,16 @@
 [
   {
+    "Pregunta": {
+      "tipo": "OrderedChoise",
+      "nombre": "Ordenar de Mayor a Menor",
+      "correctas": [
+        "20",
+        "14",
+        "12",
+        "3"
+      ]
+    }
+  },{
     "Pregunta":
     {
       "tipo": "VerdaderoFalsoClasico",

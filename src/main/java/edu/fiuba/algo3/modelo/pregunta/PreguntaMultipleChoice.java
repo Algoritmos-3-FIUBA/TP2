@@ -36,7 +36,7 @@ public class PreguntaMultipleChoice extends Pregunta {
         opciones.separarEnGruposCorrespondientes(opcionesCorrectas,opcionesIncorrectas);
     }
 
-    public void evaluarRespuestas(LinkedList<Respuesta> respuestas) {
+    /*public void evaluarRespuestas(LinkedList<Respuesta> respuestas) {
         corregirRespuestas(respuestas);
 
         for (Respuesta respuesta : respuestas) {
@@ -50,14 +50,21 @@ public class PreguntaMultipleChoice extends Pregunta {
         for (Respuesta respuesta : respuestas) {
             respuesta.otorgarPuntos(new Puntos(puntosOtorgados.getCantidad()));
         }
-    }
+    }*/
 
     @Override
     public ColeccionOpciones getOpciones() {
         return opciones;
     }
 
-    private void corregirRespuestas(LinkedList<Respuesta> respuestas){
+    @Override
+    public void sumarPuntosJugadores(LinkedList<Respuesta> respuestas) {
+        for (Respuesta respuesta : respuestas)
+            respuesta.otorgarPuntos(new Puntos(puntosOtorgados.getCantidad()));
+    }
+
+    @Override
+    public void corregirRespuestas(LinkedList<Respuesta> respuestas){
         for (Respuesta respuesta : respuestas)
             if(((RespuestaMultiple) respuesta).getOpciones().tieneMismosElementos(opcionesCorrectas))
                 respuesta.setCorrecta();

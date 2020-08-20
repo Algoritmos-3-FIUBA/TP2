@@ -35,7 +35,7 @@ public class PreguntaMultipleChoiceParcial extends Pregunta{
         opciones.separarEnGruposCorrespondientes(opcionesCorrectas,opcionesIncorrectas);
     }
 
-    public void evaluarRespuestas(LinkedList<Respuesta> respuestas){
+    /*public void evaluarRespuestas(LinkedList<Respuesta> respuestas){
         corregirRespuestas(respuestas);
 
         for (Respuesta respuesta : respuestas) {
@@ -52,13 +52,24 @@ public class PreguntaMultipleChoiceParcial extends Pregunta{
                 puntosParciales.sumarPuntos(opcion.puntosObtenidos());
             respuesta.otorgarPuntos(puntosParciales);
         }
-    }
+    }*/
 
     @Override
     public ColeccionOpciones getOpciones() {
         return opciones;
     }
 
+    @Override
+    public void sumarPuntosJugadores(LinkedList<Respuesta> respuestas) {
+        for (Respuesta respuesta : respuestas) {
+            Puntos puntosParciales = new Puntos(0);
+            for (Opcion opcion : (((RespuestaMultiple) respuesta).getOpciones().getOpciones()))
+                puntosParciales.sumarPuntos(opcion.puntosObtenidos());
+            respuesta.otorgarPuntos(puntosParciales);
+        }
+    }
+
+    @Override
     public void corregirRespuestas(LinkedList<Respuesta> respuestas) {
         for (Respuesta respuesta : respuestas) {
             RespuestaMultiple cadaRespuesta = (RespuestaMultiple) respuesta;

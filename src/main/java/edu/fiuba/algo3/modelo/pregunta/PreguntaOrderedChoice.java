@@ -4,6 +4,7 @@ import edu.fiuba.algo3.modelo.ColeccionOpciones;
 import edu.fiuba.algo3.modelo.Puntos;
 import edu.fiuba.algo3.modelo.excepciones.MasDeCincoOpcionesException;
 import edu.fiuba.algo3.modelo.excepciones.NoHayOpcionesException;
+import edu.fiuba.algo3.modelo.opcion.Opcion;
 import edu.fiuba.algo3.modelo.respuesta.Respuesta;
 import edu.fiuba.algo3.modelo.respuesta.RespuestaMultiple;
 import java.util.LinkedList;
@@ -36,7 +37,7 @@ public class PreguntaOrderedChoice extends Pregunta{
         opciones.separarEnGruposCorrespondientes(opcionesCorrectas,opcionesIncorrectas);
     }
 
-    public void evaluarRespuestas(LinkedList<Respuesta> respuestas) {
+    /*public void evaluarRespuestas(LinkedList<Respuesta> respuestas) {
         corregirRespuestas(respuestas);
 
         for (Respuesta respuesta : respuestas) {
@@ -51,8 +52,15 @@ public class PreguntaOrderedChoice extends Pregunta{
             respuesta.otorgarPuntos(new Puntos(puntosOtorgados.getCantidad()));
         }
 
+    }*/
+
+    @Override
+    public void sumarPuntosJugadores(LinkedList<Respuesta> respuestas) {
+        for (Respuesta respuesta : respuestas)
+            respuesta.otorgarPuntos(new Puntos(puntosOtorgados.getCantidad()));
     }
 
+    @Override
     public void corregirRespuestas(LinkedList<Respuesta> respuestas) {
         for (Respuesta respuesta : respuestas)
             if(((RespuestaMultiple) respuesta).getOpciones().esIgual(opcionesCorrectas))

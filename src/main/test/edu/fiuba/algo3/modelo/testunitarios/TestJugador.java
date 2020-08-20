@@ -2,11 +2,17 @@ package edu.fiuba.algo3.modelo.testunitarios;
 
 import edu.fiuba.algo3.modelo.Jugador;
 import edu.fiuba.algo3.modelo.Puntos;
+import edu.fiuba.algo3.modelo.excepciones.NoHayOpcionesException;
+import edu.fiuba.algo3.modelo.excepciones.NoTieneBeneficioException;
 import edu.fiuba.algo3.modelo.multiplicador.Multiplicador;
+import edu.fiuba.algo3.modelo.pregunta.PreguntaGroupChoice;
+import edu.fiuba.algo3.modelo.pregunta.PreguntaVerdaderoFalsoClasico;
 import org.junit.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 public class TestJugador {
+
 
     @Test
     public void testCreoJugadorLlamadoJuanObtengoNombreJuan01(){
@@ -45,7 +51,7 @@ public class TestJugador {
     }
 
     @Test
-    public void testCreoJugadorYTieneDosMultiplicadorPorDos() {
+    public void testCreoJugadorYTieneMultiplicadorPorDos() {
 
         Jugador Lucas = new Jugador("Lucas");
 
@@ -55,13 +61,89 @@ public class TestJugador {
     }
 
     @Test
-    public void testCreoJugadorYTieneDosMultiplicadorPorTres() {
+    public void testCreoJugadorYTieneMultiplicadorPorTres() {
 
         Jugador Lucas = new Jugador("Lucas");
 
         Multiplicador multiplicadorPorTres = Lucas.usarMultiplicadorPorTres();
 
         assertEquals(multiplicadorPorTres.getFactor(), 3);
+    }
+
+    @Test
+    public void testCreoJugadorYPuedeUsarMultiplicadorPorTres() {
+
+        Jugador Lucas = new Jugador("Lucas");
+        Puntos puntos = new Puntos(2);
+
+        Multiplicador multiplicadorPorTres = Lucas.usarMultiplicadorPorTres();
+
+        multiplicadorPorTres.utilizarBeneficio( puntos, Lucas);
+
+        assertEquals(Lucas.getPuntos().getCantidad(), 6);
+    }
+
+    @Test
+    public void testCreoJugadorYPuedeUsarMultiplicadorPorDos() {
+
+        Jugador Lucas = new Jugador("Lucas");
+        Puntos puntos = new Puntos(1);
+
+        Multiplicador multiplicadorPorDos = Lucas.usarMultiplicadorPorDos();
+
+        multiplicadorPorDos.utilizarBeneficio( puntos, Lucas);
+
+        assertEquals(Lucas.getPuntos().getCantidad(), 2);
+    }
+
+    @Test
+    public void testCreoJugadorYNoPuedeUsarMultiplicadorPorDosDosVeces() {
+
+        Jugador Lucas = new Jugador("Lucas");
+        Puntos puntos = new Puntos(1);
+
+        Lucas.usarMultiplicadorPorDos().utilizarBeneficio(puntos, Lucas);
+
+
+        assertThrows(NoTieneBeneficioException.class,
+                ()->{
+                    Lucas.usarMultiplicadorPorDos().utilizarBeneficio(puntos, Lucas);
+                });
+
+    }
+
+    @Test
+    public void testCreoJugadorYNoPuedeUsarMultiplicadorPorTresDosVeces() {
+
+        Jugador Lucas = new Jugador("Lucas");
+        Puntos puntos = new Puntos(1);
+
+        Lucas.usarMultiplicadorPorTres().utilizarBeneficio(puntos, Lucas);
+
+
+        assertThrows(NoTieneBeneficioException.class,
+                ()->{
+                    Lucas.usarMultiplicadorPorTres().utilizarBeneficio(puntos, Lucas);
+                });
+
+    }
+
+    @Test
+    public void testCreoJugadorYUsaExclusividadDePuntaje() {
+
+        Jugador Lucas = new Jugador("Lucas");
+        Puntos puntos = new Puntos(5);
+
+        Lucas.sumarPuntos(puntos);
+
+        Lucas.usarExclusividad().getAmplificador().amplificarPuntos(Lucas.getPuntos());
+        Lucas.usarExclusividad().getAmplificador().amplificarPuntos(Lucas.getPuntos());
+
+        assertThrows(NoTieneBeneficioException.class,
+                ()->{
+                    Lucas.usarExclusividad().getAmplificador().amplificarPuntos(Lucas.getPuntos());
+                });
+
     }
 
 }
