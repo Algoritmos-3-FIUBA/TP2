@@ -28,7 +28,7 @@ public class FormularioInicial extends GridPane {
 
         this.getColumnConstraints().addAll(columnOneConstraints, columnTwoConstrains);
 
-        BackgroundFill fondo = new BackgroundFill(Color.BLUEVIOLET, new CornerRadii(1),  null);
+        BackgroundFill fondo = new BackgroundFill(Color.rgb(158,10,158,0.8), new CornerRadii(1), null);
         this.setBackground(new Background(fondo));
     }
 

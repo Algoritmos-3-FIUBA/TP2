@@ -15,8 +15,8 @@ public class App extends Application {
     private static final String TITULO_JUEGO = "Kahoot!";
     private static final String ICONO_JUEGO = "src/main/java/edu/fiuba/algo3/vista/imagenes/favicon.png";
     private static final String SONIDO_JUEGO = "src/main/java/edu/fiuba/algo3/vista/sonidos/kahoot-lobby-music.mp3"; //PROXIMAMENTE
-    private static final int ANCHO = 800;
-    private static final int ALTO = 500;
+    private static final int ANCHO = 790;
+    private static final int ALTO = 549;
 
     @Override
     public void start(Stage escenarioInicial) throws Exception {
@@ -29,12 +29,9 @@ public class App extends Application {
         fxmlLoader.setLocation(Paths.get("src/main/java/edu/fiuba/algo3/vista/plantilla/MultipleChoiceClasico.fxml").toUri().toURL());
         Parent root = fxmlLoader.load();
 */
-
-
-
         AudioClip audio = new AudioClip(Paths.get(SONIDO_JUEGO).toUri().toString());
         audio.play();
-        audio.setVolume(0.85);
+        audio.setVolume(0.75);
         escenarioInicial.setTitle(TITULO_JUEGO);
 
         FormularioInicial formularioInicial = new FormularioInicial() ;
