@@ -69,51 +69,51 @@
                         <Insets />
                      </opaqueInsets>
                   </Label>
-                  <Label fx:id="opcion1" text="Opcion" textFill="WHITE" GridPane.rowIndex="1">
+                  <Button fx:id="opcion1" contentDisplay="BOTTOM" mnemonicParsing="false" prefHeight="36.0" prefWidth="108.0" style="-fx-text-fill: white; -fx-background-color: #9E0A9E;" text="Opcion" textFill="WHITE" GridPane.rowIndex="1">
                      <font>
                         <Font name="Arial Bold" size="19.0" />
                      </font>
-                  </Label>
-                  <Label fx:id="opcion2" text="Opcion" textFill="WHITE" GridPane.rowIndex="2">
-                     <font>
-                        <Font name="Arial Bold" size="19.0" />
-                     </font>
-                  </Label>
-                  <Label fx:id="opcion3" text="Opcion" textFill="WHITE" GridPane.rowIndex="3">
-                     <font>
-                        <Font name="Arial Bold" size="19.0" />
-                     </font>
-                  </Label>
-                  <Label fx:id="opcion4" text="Opcion" textFill="WHITE" GridPane.rowIndex="4">
-                     <font>
-                        <Font name="Arial Bold" size="19.0" />
-                     </font>
-                  </Label>
-                  <Label fx:id="opcion5" text="Opcion" textFill="WHITE" GridPane.rowIndex="5">
-                     <font>
-                        <Font name="Arial Bold" size="19.0" />
-                     </font>
-                  </Label>
+                  </Button>
                   <Label fx:id="opcion1num" prefHeight="22.0" prefWidth="182.0" text="n°" textFill="WHITE" GridPane.rowIndex="1">
                      <font>
                         <Font name="Arial Bold" size="19.0" />
                      </font>
                   </Label>
+                  <Button fx:id="opcion2" contentDisplay="BOTTOM" mnemonicParsing="false" prefHeight="36.0" prefWidth="108.0" style="-fx-text-fill: white; -fx-background-color: #9E0A9E;" text="Opcion" textFill="WHITE" GridPane.rowIndex="2">
+                     <font>
+                        <Font name="Arial Bold" size="19.0" />
+                     </font>
+                  </Button>
                   <Label fx:id="opcion2num" prefHeight="22.0" prefWidth="182.0" text="n°" textFill="WHITE" GridPane.rowIndex="2">
                      <font>
                         <Font name="Arial Bold" size="19.0" />
                      </font>
                   </Label>
+                  <Button fx:id="opcion3" contentDisplay="BOTTOM" mnemonicParsing="false" prefHeight="36.0" prefWidth="108.0" style="-fx-text-fill: white; -fx-background-color: #9E0A9E;" text="Opcion" textFill="WHITE" GridPane.rowIndex="3">
+                     <font>
+                        <Font name="Arial Bold" size="19.0" />
+                     </font>
+                  </Button>
                   <Label fx:id="opcion3num" prefHeight="22.0" prefWidth="182.0" text="n°" textFill="WHITE" GridPane.rowIndex="3">
                      <font>
                         <Font name="Arial Bold" size="19.0" />
                      </font>
                   </Label>
+                  <Button fx:id="opcion4" contentDisplay="BOTTOM" mnemonicParsing="false" prefHeight="36.0" prefWidth="108.0" style="-fx-text-fill: white; -fx-background-color: #9E0A9E;" text="Opcion" textFill="WHITE" GridPane.rowIndex="4">
+                     <font>
+                        <Font name="Arial Bold" size="19.0" />
+                     </font>
+                  </Button>
                   <Label fx:id="opcion4num" prefHeight="22.0" prefWidth="182.0" text="n°" textFill="WHITE" GridPane.rowIndex="4">
                      <font>
                         <Font name="Arial Bold" size="19.0" />
                      </font>
                   </Label>
+                  <Button fx:id="opcion5" contentDisplay="BOTTOM" mnemonicParsing="false" prefHeight="36.0" prefWidth="108.0" style="-fx-text-fill: white; -fx-background-color: #9E0A9E;" text="Opcion" textFill="WHITE" GridPane.rowIndex="5">
+                     <font>
+                        <Font name="Arial Bold" size="19.0" />
+                     </font>
+                  </Button>
                   <Label fx:id="opcion5num" prefHeight="22.0" prefWidth="182.0" text="n°" textFill="WHITE" GridPane.rowIndex="5">
                      <font>
                         <Font name="Arial Bold" size="19.0" />
@@ -176,11 +176,11 @@
                   <Font name="Arial Bold" size="16.0" />
                </font>
             </Label>
-            <ImageView layoutX="17.0" layoutY="8.0">
-               <image>
-                   <Image url="@../imagenes/favicon.png" />
-               </image>
-            </ImageView>
+          <ImageView layoutX="17.0" layoutY="8.0">
+              <image>
+                  <Image url="@../imagenes/favicon.png" />
+              </image>
+          </ImageView>
           <ImageView layoutX="638.0" layoutY="475.0" AnchorPane.bottomAnchor="26.0" AnchorPane.rightAnchor="104.0">
               <image>
                   <Image url="@../imagenes/siguiente.png" />
