@@ -42,6 +42,9 @@ public class ControladorVerdaderoFalsoPenalidad  extends Controlador{
     public Button multiplicadorx2;
     @FXML
     public Button multiplicadorx3;
+    @FXML
+    public Button botonexclusivdad;
+
     Stage escenarioActual;
 
 
@@ -68,6 +71,8 @@ public class ControladorVerdaderoFalsoPenalidad  extends Controlador{
 
         for(Button multiplicador : cajasMultiplicadores)
            multiplicador.setDisable(false);
+
+        botonexclusivdad.setDisable(true);
 
         if(jugador.cantidadMultiplicadoresPor2() == 0) multiplicadorx2.setDisable(true);
         if(jugador.cantidadMultiplicadoresPor3() == 0) multiplicadorx3.setDisable(true);
