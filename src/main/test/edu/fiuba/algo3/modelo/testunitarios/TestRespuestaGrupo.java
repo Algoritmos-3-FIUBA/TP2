@@ -109,16 +109,7 @@ public class TestRespuestaGrupo {
     }
 
     @Test
-    public void testJugadorRealizaUnaRespuestaGrupoSinOpciones04() {
-        Jugador jugador = new Jugador("Guido");
-        assertThrows(NoHayOpcionesException.class,
-                ()->{
-                    new RespuestaGrupos(null,jugador);
-                });
-    }
-
-    @Test
-    public void testJugadorRealizaUnaRespuestaGrupoConMasDeSeisOpciones05() {
+    public void testJugadorRealizaUnaRespuestaGrupoConMasDeSeisOpciones04() {
         Jugador jugador = new Jugador("Guido");
         ColeccionOpciones grupo = new ColeccionOpciones();
         LinkedList<ColeccionOpciones> gruposElegidos = new LinkedList<ColeccionOpciones>();
