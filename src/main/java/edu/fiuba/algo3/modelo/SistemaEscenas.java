@@ -22,7 +22,10 @@ public class SistemaEscenas {
     public SistemaEscenas(LinkedList<Jugador> jugadores, LinkedList<Pregunta> preguntas, HashMap<Pregunta, String> plantillasPreguntas) throws IOException {
         this.jugadores = jugadores;
         for(Pregunta pregunta : preguntas){
+            //System.out.println("jugador1");
             turnos.add(new TurnoJugador(jugadores,pregunta,plantillasPreguntas.get(pregunta)));
+            System.out.println("INGRESA TODOS LOS TURNOS DE LAS PREGUNTAS");
+
             //turnos.add(new TurnoPuntuaciones(jugadores,"url"));
         }
     }
@@ -42,7 +45,7 @@ public class SistemaEscenas {
         App.escenario.setResizable(true);
 
 
-        PauseTransition pause = new PauseTransition(Duration.seconds(4));
+        PauseTransition pause = new PauseTransition(Duration.seconds(2));
         pause.setOnFinished(event ->
         {
             try {

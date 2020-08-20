@@ -31,7 +31,7 @@ public class Kahoot {
         jugadores.add(new Jugador(jugador1));
         jugadores.add(new Jugador(jugador2));
 
-        System.out.println(jugador1);
+        //System.out.println(jugador1);
 
         LecturaDeArchivo leerArchivo = new LecturaDeArchivo(preguntas,plantillasPreguntas);
 

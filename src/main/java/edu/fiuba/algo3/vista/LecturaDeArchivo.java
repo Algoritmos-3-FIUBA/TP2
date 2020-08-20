@@ -17,7 +17,7 @@ import java.util.LinkedList;
 
 
 public class LecturaDeArchivo {
-    private final String ARCHIVO = "src/main/java/edu/fiuba/algo3/vista/cuestionarioPrueba.json";
+    private final String ARCHIVO = "src/main/java/edu/fiuba/algo3/vista/cuestionario.json";
 
    public LecturaDeArchivo(LinkedList<Pregunta> preguntas, HashMap<Pregunta,String> plantillaPreguntas) {
        JSONParser jsonParser = new JSONParser();

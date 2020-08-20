@@ -24,8 +24,11 @@ public abstract class Turno {
     }
 
     public void mostrarEscena() throws IOException {
+        System.out.println("MOSTRAR ESCENA FALLA ANTES DE ACTUALIZAR ");
         this.actualizarPlantilla();
+        System.out.println("MOSTRAR ESCENA FALLA DURANTE DE ACTUALIZAR ");
         actualizarEscena(escena);
+        System.out.println("MOSTRAR ESCENA FALLA DESPUES DE ACTUALIZAR ");
     }
 
     protected abstract void actualizarPlantilla() throws IOException;

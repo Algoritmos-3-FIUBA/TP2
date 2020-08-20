@@ -43,8 +43,6 @@ public class ControladorVerdaderoFalsoClasico extends Controlador {
     public RadioButton botonfalso;
 
     Stage escenarioActual;
-   // private TurnoJugador turnoActual;
-   // private Jugador jugador;
 
     public void initialize() {
         this.escenarioActual = App.obtenerEscenarioActual();
@@ -52,8 +50,6 @@ public class ControladorVerdaderoFalsoClasico extends Controlador {
         cajasOpcionesMostradas.add(botonverdadero);
         cajasOpcionesMostradas.add(botonfalso);
 
-        //opcion6.setDisable(true);
-        //opcion6.setOpacity(0);
     }
     @Override
     public void actualizarPlantilla(Pregunta pregunta, Jugador jugadorActual,TurnoJugador turnoActual) {
