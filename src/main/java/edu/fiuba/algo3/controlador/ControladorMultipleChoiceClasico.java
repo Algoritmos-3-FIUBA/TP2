@@ -62,7 +62,7 @@ public class ControladorMultipleChoiceClasico extends Controlador{
         this.jugador = jugadorActual;
 
         nombrepregunta.setText(pregunta.getNombre());
-        tipopregunta.setText(pregunta.getClass().getSimpleName());
+        tipopregunta.setText(pregunta.getClass().getSimpleName().replaceAll("(.)([A-Z])", "$1 $2"));
         jugadoractual.setText(jugadorActual.getNombre());
         puntosactuales.setText(String.valueOf(jugadorActual.getPuntos().cantidad));
 
