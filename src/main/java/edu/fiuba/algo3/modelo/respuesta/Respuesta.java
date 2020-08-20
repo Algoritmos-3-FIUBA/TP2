@@ -84,4 +84,12 @@ public abstract class Respuesta {
     public void actualizarFactorAmplificacion(int factor) {
         exclusividad.aumentarAmplificador(factor);
     }
+
+    public void esCorrecta(){
+        estado = new EstadoCorrecto();
+    }
+
+    public void esIncorrecta(){
+        estado = new EstadoIncorrecto();
+    }
 }
