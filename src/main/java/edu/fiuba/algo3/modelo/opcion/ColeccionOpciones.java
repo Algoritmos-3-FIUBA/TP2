@@ -6,6 +6,7 @@ import java.util.LinkedList;
 public class ColeccionOpciones {
 
     private final LinkedList<Opcion> opciones;
+    private String nombre;
 
     public ColeccionOpciones() {
         this.opciones = new LinkedList<>();
@@ -13,6 +14,11 @@ public class ColeccionOpciones {
 
     public ColeccionOpciones(LinkedList<Opcion> opciones) {
         this.opciones = opciones;
+    }
+
+    public ColeccionOpciones(LinkedList<Opcion> opciones,String nombre) {
+        this.opciones = opciones;
+        this.nombre = nombre;
     }
 
     public void agregarOpcion(Opcion opcion) {
@@ -61,29 +67,4 @@ public class ColeccionOpciones {
     public int cantidadElementos(){
         return opciones.size();
     }
-
-    //VersionAnterior
-    /*
-    private String Nombre;
-    HashSet<OpcionCorrecta> opcionesDelGrupo = new HashSet<OpcionCorrecta>();
-
-    public Grupo(String nombre) {
-        Nombre = nombre;
-    }
-
-    public void agregarOpcion(OpcionCorrecta opcionesDelGrupo) {
-        this.opcionesDelGrupo.add(opcionesDelGrupo);
-    }
-
-    public Puntos evaluarGrupo(HashSet<OpcionCorrecta> opcionesElegidasDelGrupo, Puntos cantidadDePuntos) {
-        Puntos puntosAsignar = new Puntos(0);
-        if (opcionesElegidasDelGrupo.equals(opcionesDelGrupo)){
-            puntosAsignar = cantidadDePuntos;
-        }
-        return(puntosAsignar);
-    }
-
-    public HashSet<OpcionCorrecta> getOpcionesDelGrupo(){
-        return opcionesDelGrupo;
-    } */
 }
