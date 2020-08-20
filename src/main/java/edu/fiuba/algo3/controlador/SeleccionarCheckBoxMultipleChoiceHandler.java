@@ -19,7 +19,6 @@ public class SeleccionarCheckBoxMultipleChoiceHandler implements EventHandler<Ac
 
     @Override
     public void handle(ActionEvent actionEvent) {
-        System.out.print("Click");
         if(opcionesSeleccionadas.contains(opcionVinculada))
             opcionesSeleccionadas.remove(opcionVinculada);
         else

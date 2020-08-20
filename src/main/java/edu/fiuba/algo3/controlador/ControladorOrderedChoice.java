@@ -1,6 +1,5 @@
 package edu.fiuba.algo3.controlador;
 
-import edu.fiuba.algo3.modelo.ColeccionOpciones;
 import edu.fiuba.algo3.modelo.Jugador;
 import edu.fiuba.algo3.modelo.TurnoJugador;
 import edu.fiuba.algo3.modelo.opcion.Opcion;
@@ -9,7 +8,6 @@ import edu.fiuba.algo3.modelo.respuesta.RespuestaMultiple;
 import edu.fiuba.algo3.vista.App;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
-import javafx.scene.control.CheckBox;
 import javafx.scene.control.Label;
 import javafx.stage.Stage;
 
@@ -17,7 +15,7 @@ import java.io.IOException;
 import java.util.LinkedList;
 
 public class ControladorOrderedChoice extends Controlador{
-    private LinkedList<Label> opcionesMostradas = new LinkedList<>();
+    private LinkedList<Button> opcionesMostradas = new LinkedList<>();
     private LinkedList<Opcion> opcionesElegidas = new LinkedList<>();
     private Pregunta pregunta; //= new PreguntaMultipleChoice();
     private TurnoJugador turnoActual;
@@ -31,17 +29,15 @@ public class ControladorOrderedChoice extends Controlador{
     @FXML
     public Button botonsiguiente;
     @FXML
-    public Label ordenopcion1;
+    public Button opcion1;
     @FXML
-    public Label ordenopcion2;
+    public Button opcion2;
     @FXML
-    public Label ordenopcion3;
+    public Button opcion3;
     @FXML
-    public Label ordenopcion4;
+    public Button opcion4;
     @FXML
-    public Label ordenopcion5;
-    //@FXML
-    //public CheckBox ordenopcion6;
+    public Button opcion5;
 
     Stage escenarioActual;
     private Jugador jugador;
@@ -49,14 +45,12 @@ public class ControladorOrderedChoice extends Controlador{
     public void initialize() {
         this.escenarioActual = App.obtenerEscenarioActual();
 
-        opcionesMostradas.add(ordenopcion1);
-        opcionesMostradas.add(ordenopcion2);
-        opcionesMostradas.add(ordenopcion3);
-        opcionesMostradas.add(ordenopcion4);
-        opcionesMostradas.add(ordenopcion5);
+        opcionesMostradas.add(opcion1);
+        opcionesMostradas.add(opcion2);
+        opcionesMostradas.add(opcion3);
+        opcionesMostradas.add(opcion4);
+        opcionesMostradas.add(opcion5);
 
-        //opcion6.setDisable(true);
-        //opcion6.setOpacity(0);
     }
 
     public void actualizarPlantilla(Pregunta pregunta, Jugador jugadorActual, TurnoJugador turnoActual) {
@@ -67,12 +61,13 @@ public class ControladorOrderedChoice extends Controlador{
         jugadoractual.setText(jugadorActual.getNombre());
         puntosactuales.setText(String.valueOf(jugadorActual.getPuntos().cantidad));
 
-        for (int i = 0; i < pregunta.getOpciones().cantidadElementos(); i++)
-            opcionesMostradas.get(i).setOnMouseClicked(new SeleccionarCheckBoxOrderedChoiceHandler(pregunta.getOpciones().getOpciones().get(i),opcionesElegidas));
+        for (int i = 0; i < pregunta.getOpciones().cantidadElementos(); i++) {
+            opcionesMostradas.get(i).setText(pregunta.getOpciones().getOpciones().get(i).getNombre());
+            opcionesMostradas.get(i).setOnAction(new SeleccionarCheckBoxOrderedChoiceHandler(pregunta.getOpciones().getOpciones().get(1), opcionesElegidas));
+        }
     }
 
     public void siguienteTurno() throws IOException {
         this.turnoActual.siguienteJugador(new RespuestaMultiple(opcionesElegidas,jugador));
     }
-
 }

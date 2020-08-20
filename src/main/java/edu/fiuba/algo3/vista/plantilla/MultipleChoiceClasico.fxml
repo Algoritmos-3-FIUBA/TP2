@@ -97,7 +97,7 @@
                   </CheckBox>
                </children>
             </GridPane>
-            <Button fx:id="botonsiguiente" contentDisplay="BOTTOM" layoutX="669.0" layoutY="474.0" mnemonicParsing="false" style="-fx-pref-height: 50; -fx-pref-width: 100; -fx-text-fill: white; -fx-background-color: #FF69FF;" text="Siguiente" textFill="WHITE" AnchorPane.bottomAnchor="25.0" AnchorPane.rightAnchor="21.0">
+            <Button fx:id="botonsiguiente" onAction="#siguienteTurno" contentDisplay="BOTTOM" layoutX="669.0" layoutY="474.0" mnemonicParsing="false" style="-fx-pref-height: 50; -fx-pref-width: 100; -fx-text-fill: white; -fx-background-color: #FF69FF;" text="Siguiente" textFill="WHITE" AnchorPane.bottomAnchor="25.0" AnchorPane.rightAnchor="21.0">
                <font>
                   <Font name="Arial Bold" size="14.0" />
                </font>

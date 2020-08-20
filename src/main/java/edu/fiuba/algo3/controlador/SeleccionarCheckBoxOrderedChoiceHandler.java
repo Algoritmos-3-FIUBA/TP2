@@ -8,7 +8,7 @@ import javafx.scene.input.MouseEvent;
 
 import java.util.LinkedList;
 
-public class SeleccionarCheckBoxOrderedChoiceHandler implements EventHandler<MouseEvent> {
+public class SeleccionarCheckBoxOrderedChoiceHandler implements EventHandler<ActionEvent>{
 
     private LinkedList<Opcion> opcionesOrdenadas;
     private Opcion opcionVinculada;
@@ -19,8 +19,8 @@ public class SeleccionarCheckBoxOrderedChoiceHandler implements EventHandler<Mou
     }
 
     @Override
-    public void handle(MouseEvent mouseEvent) {
-        System.out.print("Entro");
+    public void handle(ActionEvent actionEvent) {
+        System.out.print("Click");
         if(opcionesOrdenadas.contains(opcionVinculada))
             opcionesOrdenadas.remove(opcionVinculada);
         else
