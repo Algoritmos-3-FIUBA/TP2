@@ -70,33 +70,48 @@
                         <Insets />
                      </opaqueInsets>
                   </Label>
-                  <Label fx:id="opcion1" prefHeight="22.0" prefWidth="284.0" text="Opcion                                                   " textFill="WHITE" GridPane.rowIndex="1">
+                  <Button fx:id="opcion1" contentDisplay="BOTTOM" mnemonicParsing="false" prefHeight="36.0" prefWidth="323.0" style="-fx-text-fill: white; -fx-background-color: #9E0A9E;" text="Opcion                                       " textFill="WHITE" GridPane.rowIndex="1">
                      <font>
                         <Font name="Arial Bold" size="19.0" />
                      </font>
-                  </Label>
-                  <Label fx:id="opcion2" prefHeight="22.0" prefWidth="284.0" text="Opcion" textFill="WHITE" GridPane.rowIndex="2">
-                     <font>
-                        <Font name="Arial Bold" size="19.0" />
-                     </font>
-                  </Label>
-                  <Label fx:id="opcion3" prefHeight="22.0" prefWidth="284.0" text="Opcion" textFill="WHITE" GridPane.rowIndex="3">
-                     <font>
-                        <Font name="Arial Bold" size="19.0" />
-                     </font>
-                  </Label>
-                  <Label fx:id="opcion4" prefHeight="22.0" prefWidth="284.0" text="Opcion" textFill="WHITE" GridPane.rowIndex="4">
-                     <font>
-                        <Font name="Arial Bold" size="19.0" />
-                     </font>
-                  </Label>
-                  <Label fx:id="opcion5" prefHeight="22.0" prefWidth="284.0" text="Opcion" textFill="WHITE" GridPane.rowIndex="5">
-                     <font>
-                        <Font name="Arial Bold" size="19.0" />
-                     </font>
-                  </Label>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                  </Button>
                   <ComboBox fx:id="comboopcion1" prefHeight="26.0" prefWidth="169.0" GridPane.rowIndex="1" />
+                  <Button fx:id="opcion2" contentDisplay="BOTTOM" mnemonicParsing="false" prefHeight="36.0" prefWidth="323.0" style="-fx-text-fill: white; -fx-background-color: #9E0A9E;" text="Opcion                                      " textFill="WHITE" GridPane.rowIndex="2">
+                     <font>
+                        <Font name="Arial Bold" size="19.0" />
+                     </font>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                  </Button>
                   <ComboBox fx:id="comboopcion2" prefHeight="26.0" prefWidth="169.0" GridPane.rowIndex="2" />
+                  <Button fx:id="opcion5" contentDisplay="BOTTOM" mnemonicParsing="false" prefHeight="36.0" prefWidth="323.0" style="-fx-text-fill: white; -fx-background-color: #9E0A9E;" text="Opcion                                      " textFill="WHITE" GridPane.rowIndex="5">
+                     <font>
+                        <Font name="Arial Bold" size="19.0" />
+                     </font>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                  </Button>
+                  <Button fx:id="opcion4" contentDisplay="BOTTOM" mnemonicParsing="false" prefHeight="36.0" prefWidth="323.0" style="-fx-text-fill: white; -fx-background-color: #9E0A9E;" text="Opcion                                      " textFill="WHITE" GridPane.rowIndex="4">
+                     <font>
+                        <Font name="Arial Bold" size="19.0" />
+                     </font>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                  </Button>
+                  <Button fx:id="opcion3" contentDisplay="BOTTOM" mnemonicParsing="false" prefHeight="36.0" prefWidth="323.0" style="-fx-text-fill: white; -fx-background-color: #9E0A9E;" text="Opcion                                      " textFill="WHITE" GridPane.rowIndex="3">
+                     <font>
+                        <Font name="Arial Bold" size="19.0" />
+                     </font>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                  </Button>
                   <ComboBox fx:id="comboopcion3" prefHeight="26.0" prefWidth="169.0" GridPane.rowIndex="3" />
                   <ComboBox fx:id="comboopcion4" prefHeight="26.0" prefWidth="169.0" GridPane.rowIndex="4" />
                   <ComboBox fx:id="comboopcion5" prefHeight="26.0" prefWidth="169.0" GridPane.rowIndex="5" />
