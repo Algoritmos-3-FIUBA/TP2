@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.geometry.Insets?>
+<?import javafx.scene.Group?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.CheckBox?>
 <?import javafx.scene.control.Label?>
@@ -128,14 +129,23 @@
                <font>
                   <Font name="Arial Bold" size="16.0" />
                </font></Label>
-            <Label fx:id="tipopregunta" layoutX="613.0" layoutY="23.0" text="Tipo de Pregunta" textFill="WHITE" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="23.0">
-               <font>
-                  <Font name="Waree Bold" size="13.0" />
-               </font>
-               <effect>
-                  <Glow level="1.0" />
-               </effect>
-            </Label>
+            <Group layoutX="574.0" layoutY="17.0" AnchorPane.rightAnchor="50.70703125" AnchorPane.topAnchor="17.0">
+               <children>
+                  <Label fx:id="tipopregunta" layoutX="39.0" layoutY="6.0" text="Tipo de Pregunta" textFill="WHITE">
+                     <font>
+                        <Font name="Waree Bold" size="13.0" />
+                     </font>
+                     <effect>
+                        <Glow level="1.0" />
+                     </effect>
+                  </Label>
+                <ImageView fitHeight="37.0" fitWidth="35.0">
+                    <image>
+                        <Image url="@../imagenes/categoria.png" />
+                    </image>
+                </ImageView>
+               </children>
+            </Group>
             <Label fx:id="puntosactuales" layoutX="107.0" layoutY="212.0" text="Puntos" textFill="WHITE" AnchorPane.leftAnchor="107.0" AnchorPane.topAnchor="212.0">
                <effect>
                   <Reflection />
@@ -185,11 +195,6 @@
           <ImageView fitHeight="40.0" fitWidth="41.0" layoutX="63.0" layoutY="113.0">
               <image>
                   <Image url="@../imagenes/jugador.png" />
-              </image>
-          </ImageView>
-          <ImageView fitHeight="37.0" fitWidth="35.0" layoutX="574.0" layoutY="17.0" AnchorPane.rightAnchor="181.0">
-              <image>
-                  <Image url="@../imagenes/categoria.png" />
               </image>
           </ImageView>
       </children>
