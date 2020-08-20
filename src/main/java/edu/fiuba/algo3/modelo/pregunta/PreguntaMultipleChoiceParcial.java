@@ -12,9 +12,8 @@ import java.util.LinkedList;
 
 public class PreguntaMultipleChoiceParcial extends Pregunta{
 
-    private final ColeccionOpciones opcionesCorrectas;
     private final ColeccionOpciones opcionesIncorrectas;
-    private ColeccionOpciones opciones;
+    private final ColeccionOpciones opciones;
 
     public PreguntaMultipleChoiceParcial(String nombre, ColeccionOpciones opciones){
 
@@ -27,7 +26,7 @@ public class PreguntaMultipleChoiceParcial extends Pregunta{
         this.nombre = nombre;
         this.opciones = opciones;
 
-        opcionesCorrectas = new ColeccionOpciones();
+        ColeccionOpciones opcionesCorrectas = new ColeccionOpciones();
         opcionesIncorrectas = new ColeccionOpciones();
 
         opciones.separarEnGruposCorrespondientes(opcionesCorrectas,opcionesIncorrectas);

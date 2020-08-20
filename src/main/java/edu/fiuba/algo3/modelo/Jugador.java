@@ -59,4 +59,14 @@ public class Jugador {
             throw new NoTieneBeneficioException();
         return exclusividades.removeLast();
     }
+    public int cantidadMultiplicadoresPor2(){
+
+           return (this.multiplicadoresPorDos.size());
+
+    }
+
+    public int cantidadMultiplicadoresPor3() {
+
+        return (this.multiplicadoresPorTres.size());
+    }
 }

@@ -70,7 +70,10 @@ public class ControladorVerdaderoFalsoPenalidad  extends Controlador{
             opcion.setSelected(false);
 
         for(Button multiplicador : cajasMultiplicadores)
-            multiplicador.setDisable(false);
+           multiplicador.setDisable(false);
+
+        if(jugador.cantidadMultiplicadoresPor2() == 0) multiplicadorx2.setDisable(true);
+        if(jugador.cantidadMultiplicadoresPor3() == 0) multiplicadorx3.setDisable(true);
 
         opcionesSeleccionadas = new LinkedList<>();
 
@@ -85,12 +88,12 @@ public class ControladorVerdaderoFalsoPenalidad  extends Controlador{
 
     public void asignarMultiplicadorx2() {
 
-        multiplicador = jugador.usarMultiplicadorPorDos();
+        if(jugador.cantidadMultiplicadoresPor2() != 0) multiplicador = jugador.usarMultiplicadorPorDos();
         multiplicadorx2.setDisable(true);
         multiplicadorx3.setDisable(true);
     }
     public void asignarMultiplicadorx3() {
-        multiplicador = jugador.usarMultiplicadorPorTres();
+        if(jugador.cantidadMultiplicadoresPor3() != 0) multiplicador = jugador.usarMultiplicadorPorTres();
         multiplicadorx3.setDisable(true);
         multiplicadorx2.setDisable(true);
     }

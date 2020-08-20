@@ -1,4 +1,39 @@
-[
+[ {
+  "Pregunta":
+  {
+    "tipo": "VerdaderoFalsoPenalidad",
+    "nombre": "¿207 es un número primo?",
+    "opcionCorrecta": false
+  }
+},{
+  "Pregunta":
+  {
+    "tipo" : "MultipleChoisePenalidad",
+    "nombre":"¿Capital de Alemania?",
+    "correctas": [
+      "Berlin" ],
+    "incorrectas": [
+      "Paris",
+      "Munich",
+      "Amsterdam",
+      "Roma"]
+  }
+},
+  {
+  "Pregunta": {
+    "tipo": "GrupoChoice",
+    "nombre": "Diferenciar ciudades: ",
+    "nombregrupo1" : "Europeas",
+    "nombregrupo2" : "Asiaticas",
+    "grupo1": [
+      "Berlin" ,
+      "Paris",
+      "Roma"],
+    "grupo2": [
+      "Tokyo",
+      "Hiroshima"]
+  }
+},
   {
     "Pregunta":
     {
@@ -68,16 +103,6 @@
         "3"
       ]
     }
-    },{
-    "Pregunta": {
-      "tipo": "GrupoChoice",
-      "nombre": "Diferenciar entre ciudades de Europa y de Asia",
-      "grupo1": [
-        "Berlin" ],
-      "grupo2": [
-        "Paris",
-        "Roma"]
     }
-  }
 ]
 

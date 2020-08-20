@@ -19,8 +19,8 @@ import java.util.LinkedList;
 import static java.lang.String.valueOf;
 
 public class ControladorGroupChoice extends Controlador{
-    private LinkedList<Button> opcionesMostradas = new LinkedList<>();
-    private LinkedList<ComboBox> gruposMostrados = new LinkedList<>();
+    private final LinkedList<Button> opcionesMostradas = new LinkedList<>();
+    private final LinkedList<ComboBox> gruposMostrados = new LinkedList<>();
     private LinkedList<ColeccionOpciones> gruposElegidos = new LinkedList<>();
     private Pregunta pregunta;
     private TurnoJugador turnoActual;
@@ -56,12 +56,9 @@ public class ControladorGroupChoice extends Controlador{
     public ComboBox comboopcion4;
     @FXML
     public ComboBox comboopcion5;
-    private Stage escenarioActual;
-    private ColeccionOpciones primerGrupo;
-    private ColeccionOpciones segundoGrupo;
 
     public void initialize() {
-        this.escenarioActual = App.obtenerEscenarioActual();
+        Stage escenarioActual = App.obtenerEscenarioActual();
 
         opcionesMostradas.add(opcion1);
         opcionesMostradas.add(opcion2);
@@ -90,8 +87,8 @@ public class ControladorGroupChoice extends Controlador{
 
         gruposElegidos = new LinkedList<>();
 
-        primerGrupo = new ColeccionOpciones(((PreguntaGroupChoice)pregunta).getNombresGrupos().get(0));
-        segundoGrupo = new ColeccionOpciones(((PreguntaGroupChoice)pregunta).getNombresGrupos().get(1));
+        ColeccionOpciones primerGrupo = new ColeccionOpciones(((PreguntaGroupChoice) pregunta).getNombresGrupos().get(0));
+        ColeccionOpciones segundoGrupo = new ColeccionOpciones(((PreguntaGroupChoice) pregunta).getNombresGrupos().get(1));
 
         gruposElegidos.add(primerGrupo);
         gruposElegidos.add(segundoGrupo);
