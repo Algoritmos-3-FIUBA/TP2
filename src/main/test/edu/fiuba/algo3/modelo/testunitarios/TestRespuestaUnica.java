@@ -112,13 +112,4 @@ public class TestRespuestaUnica {
 
         assertEquals(jugador.getPuntos().getCantidad(),5);
     }
-
-    @Test
-    public void testJugadorRealizaUnaRespuestaUnicaSinOpcione07() {
-        Jugador jugador = new Jugador("Guido");
-        assertThrows(NoHayOpcionesException.class,
-                ()->{
-                    new RespuestaUnica(null,jugador);
-                });
-    }
 }

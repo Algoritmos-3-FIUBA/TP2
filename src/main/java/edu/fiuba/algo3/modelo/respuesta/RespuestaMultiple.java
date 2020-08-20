@@ -2,7 +2,6 @@ package edu.fiuba.algo3.modelo.respuesta;
 
 import edu.fiuba.algo3.modelo.opcion.ColeccionOpciones;
 import edu.fiuba.algo3.modelo.excepciones.MasDeCincoOpcionesException;
-import edu.fiuba.algo3.modelo.excepciones.NoHayOpcionesException;
 import edu.fiuba.algo3.modelo.exclusividad.Exclusividad;
 import edu.fiuba.algo3.modelo.Jugador;
 import edu.fiuba.algo3.modelo.multiplicador.Multiplicador;
@@ -36,10 +35,6 @@ public class RespuestaMultiple extends Respuesta {
     }
 
     private void verificarNumeroDeOpciones(LinkedList<Opcion> opciones){
-        if(opciones == null) {
-            throw new NoHayOpcionesException();
-        }
-
         if(opciones.size() > 5) {
             throw new MasDeCincoOpcionesException();
         }
