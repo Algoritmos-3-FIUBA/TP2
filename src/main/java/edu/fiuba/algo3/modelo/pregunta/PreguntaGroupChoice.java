@@ -4,6 +4,7 @@ import edu.fiuba.algo3.modelo.ColeccionOpciones;
 import edu.fiuba.algo3.modelo.Puntos;
 import edu.fiuba.algo3.modelo.excepciones.MasDeSeisOpcionesException;
 import edu.fiuba.algo3.modelo.excepciones.NoHayOpcionesException;
+import edu.fiuba.algo3.modelo.opcion.Opcion;
 import edu.fiuba.algo3.modelo.respuesta.Respuesta;
 import edu.fiuba.algo3.modelo.respuesta.RespuestaGrupos;
 
@@ -60,7 +61,11 @@ public class PreguntaGroupChoice extends Pregunta{
 
     @Override
     public ColeccionOpciones getOpciones() {
-        return null;
+        ColeccionOpciones opciones = new ColeccionOpciones();
+        for(ColeccionOpciones coleccion : gruposCorrectos)
+            for(Opcion opcion : coleccion.getOpciones())
+                opciones.agregarOpcion(opcion);
+        return opciones;
     }
 
     @Override
