@@ -34,17 +34,17 @@ public class ControladorVerdaderoFalsoClasico extends Controlador {
     @FXML
     public Label puntosactuales;
     @FXML
-    public RadioButton botonverdadero;
+    public RadioButton opcionverdadero;
     @FXML
-    public RadioButton botonfalso;
+    public RadioButton opcionfalso;
 
     Stage escenarioActual;
 
     public void initialize() {
         this.escenarioActual = App.obtenerEscenarioActual();
 
-        cajasOpcionesMostradas.add(botonverdadero);
-        cajasOpcionesMostradas.add(botonfalso);
+        cajasOpcionesMostradas.add(opcionverdadero);
+        cajasOpcionesMostradas.add(opcionfalso);
 
     }
     @Override

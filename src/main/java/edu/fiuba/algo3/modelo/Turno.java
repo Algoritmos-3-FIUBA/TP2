@@ -13,7 +13,6 @@ import static edu.fiuba.algo3.modelo.Kahoot.actualizarEscena;
 public abstract class Turno {
     protected Scene escena;
     protected Controlador controlador;
-    //protected ControladorMultipleChoiceClasico controlador;
 
     public Turno(String plantilla) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader();
@@ -24,11 +23,8 @@ public abstract class Turno {
     }
 
     public void mostrarEscena() throws IOException {
-        System.out.println("MOSTRAR ESCENA FALLA ANTES DE ACTUALIZAR ");
         this.actualizarPlantilla();
-        System.out.println("MOSTRAR ESCENA FALLA DURANTE DE ACTUALIZAR ");
         actualizarEscena(escena);
-        System.out.println("MOSTRAR ESCENA FALLA DESPUES DE ACTUALIZAR ");
     }
 
     protected abstract void actualizarPlantilla() throws IOException;

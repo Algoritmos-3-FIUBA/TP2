@@ -22,41 +22,12 @@ public class SistemaEscenas {
     public SistemaEscenas(LinkedList<Jugador> jugadores, LinkedList<Pregunta> preguntas, HashMap<Pregunta, String> plantillasPreguntas) throws IOException {
         this.jugadores = jugadores;
         for(Pregunta pregunta : preguntas){
-            //System.out.println("jugador1");
             turnos.add(new TurnoJugador(jugadores,pregunta,plantillasPreguntas.get(pregunta)));
-            System.out.println("INGRESA TODOS LOS TURNOS DE LAS PREGUNTAS");
-
-            //turnos.add(new TurnoPuntuaciones(jugadores,"url"));
+            turnos.add(new TurnoPuntuaciones(jugadores,"src/main/java/edu/fiuba/algo3/vista/plantilla/Puntuacion.fxml"));
         }
     }
 
     public void siguienteEscena() throws IOException {
-
-        new ControladorPuntuacion(jugadores);
-
-        FXMLLoader fxmlLoader = new FXMLLoader();
-        fxmlLoader.setLocation(Paths.get("src/main/java/edu/fiuba/algo3/vista/plantilla/Puntuacion.fxml").toUri().toURL());
-        Parent root = fxmlLoader.load();
-
-        Scene scene = new Scene(root);
-        App.escenario.setScene(scene);
-        App.escenario.setResizable(false);
-        App.escenario.show();
-        App.escenario.setResizable(true);
-
-
-        PauseTransition pause = new PauseTransition(Duration.seconds(2));
-        pause.setOnFinished(event ->
-        {
-            try {
-                turnos.remove().mostrarEscena();
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-        });
-
-        pause.play();
-
-
+        turnos.remove().mostrarEscena();
     }
 }
