@@ -18,39 +18,36 @@ public abstract class Respuesta {
     protected Amplificador amplificador;
     protected EstadoRespuesta estado;
 
-    public Respuesta(Jugador jugador) {
+    private void inicializacionComun(Jugador jugador){
         this.jugador = jugador;
         this.estado = new EstadoIncorrecto();
+    }
+
+    public Respuesta(Jugador jugador) {
+        inicializacionComun(jugador);
         this.multiplicador = new MultiplicadorDefault();
         this.exclusividad = new ExclusividadDefault();
         this.amplificador = new Amplificador(1);
     }
 
     public Respuesta(Jugador jugador, Multiplicador multiplicador){
-        this.jugador = jugador;
-        this.estado = new EstadoIncorrecto();
+        inicializacionComun(jugador);
         this.multiplicador = multiplicador;
         this.exclusividad = new ExclusividadDefault();
         this.amplificador = multiplicador.getAmplificador();
     }
 
     public Respuesta(Jugador jugador, Exclusividad exclusividad){
-        this.jugador = jugador;
-        this.estado = new EstadoIncorrecto();
+        inicializacionComun(jugador);
         this.exclusividad = exclusividad;
         this.multiplicador = new MultiplicadorDefault();
         this.amplificador = new Amplificador(1);
     }
-    //Test
+
     public void setAmplificador(Amplificador amplificador) {
         this.amplificador = amplificador;
     }
 
-    //Test
-    public void setCorrecta(){
-        this.estado = new EstadoCorrecto();
-    }
-    //Test
     public void calcularAmplificacionExclusividad(LinkedList<Respuesta> respuestas){
         exclusividad.actualizarAmplificador(respuestas,this);
     }

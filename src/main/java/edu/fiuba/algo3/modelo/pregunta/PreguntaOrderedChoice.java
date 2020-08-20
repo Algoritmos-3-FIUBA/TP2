@@ -44,7 +44,7 @@ public class PreguntaOrderedChoice extends Pregunta{
     public void corregirRespuestas(LinkedList<Respuesta> respuestas) {
         for (Respuesta respuesta : respuestas)
             if(((RespuestaMultiple) respuesta).getOpciones().esIgual(opcionesCorrectas))
-                respuesta.setCorrecta();
+                respuesta.esCorrecta();
     }
 
     public String getNombre() {

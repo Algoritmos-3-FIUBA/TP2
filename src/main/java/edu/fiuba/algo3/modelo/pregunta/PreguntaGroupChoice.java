@@ -43,22 +43,6 @@ public class PreguntaGroupChoice extends Pregunta{
 
     }
 
-    /*public void evaluarRespuestas(LinkedList<Respuesta> respuestas) {
-        corregirRespuestas(respuestas);
-
-        for (Respuesta respuesta : respuestas) {
-            respuesta.actualizarCondicionDeUsoExclusividad(respuestas);
-            respuesta.calcularAmplificacionExclusividad(respuestas);
-        }
-
-        for (Respuesta respuesta : respuestas)
-            respuesta.establecerAmplificadorAdecuado();
-
-        for (Respuesta respuesta : respuestas) {
-            respuesta.otorgarPuntos(puntosAOtorgar(respuesta));
-        }
-    }*/
-
     @Override
     public ColeccionOpciones getOpciones() {
         ColeccionOpciones opciones = new ColeccionOpciones();
@@ -87,7 +71,7 @@ public class PreguntaGroupChoice extends Pregunta{
         for (Respuesta respuesta : respuestas)
             for (int i = 0; i < gruposCorrectos.size(); i++)
                 if (((RespuestaGrupos) respuesta).getGruposElegidos().get(i).tieneMismosElementos(gruposCorrectos.get(i)))
-                    respuesta.setCorrecta();
+                    respuesta.esCorrecta();
     }
 
 

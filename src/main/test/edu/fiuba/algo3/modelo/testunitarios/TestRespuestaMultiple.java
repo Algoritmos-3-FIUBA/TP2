@@ -33,7 +33,7 @@ public class TestRespuestaMultiple {
         opcionesElegidas.add(primeraOpcion);
 
         RespuestaMultiple respuestaJugador = new RespuestaMultiple(opcionesElegidas, jugador);
-        respuestaJugador.setCorrecta();
+        respuestaJugador.esCorrecta();
 
         respuestaJugador.otorgarPuntos(new Puntos(1));
 
@@ -51,7 +51,7 @@ public class TestRespuestaMultiple {
         opcionesElegidas.add(primeraOpcion);
 
         RespuestaMultiple respuestaJugador = new RespuestaMultiple(opcionesElegidas, jugador);
-        respuestaJugador.setCorrecta();
+        respuestaJugador.esCorrecta();
 
         respuestaJugador.otorgarPuntos(new Puntos(1));
 
@@ -70,7 +70,7 @@ public class TestRespuestaMultiple {
         opcionesElegidas.add(segundaOpcion);
 
         RespuestaMultiple respuestaJugador = new RespuestaMultiple(opcionesElegidas, jugador);
-        respuestaJugador.setCorrecta();
+        respuestaJugador.esCorrecta();
 
         respuestaJugador.otorgarPuntos(new Puntos(1));
 
@@ -90,7 +90,7 @@ public class TestRespuestaMultiple {
         opcionesElegidas.add(segundaOpcion);
 
         RespuestaMultiple respuestaJugador = new RespuestaMultiple(opcionesElegidas, jugador);
-        respuestaJugador.setCorrecta();
+        respuestaJugador.esCorrecta();
 
         respuestaJugador.otorgarPuntos(new Puntos(1));
 
@@ -111,7 +111,7 @@ public class TestRespuestaMultiple {
         opcionesElegidas.add(segundaOpcion);
 
         RespuestaMultiple respuestaJugador = new RespuestaMultiple(opcionesElegidas, jugador);
-        respuestaJugador.setCorrecta();
+        respuestaJugador.esCorrecta();
 
         respuestaJugador.otorgarPuntos(new Puntos(1));
 

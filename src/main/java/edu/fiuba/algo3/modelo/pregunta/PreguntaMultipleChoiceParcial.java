@@ -18,13 +18,11 @@ public class PreguntaMultipleChoiceParcial extends Pregunta{
 
     public PreguntaMultipleChoiceParcial(String nombre, ColeccionOpciones opciones){
 
-        if(opciones.cantidadElementos() == 0) {
+        if(opciones.cantidadElementos() == 0)
             throw new NoHayOpcionesException();
-        }
 
-        if(opciones.cantidadElementos() > 5) {
+        if(opciones.cantidadElementos() > 5)
             throw new MasDeCincoOpcionesException();
-        }
 
         this.nombre = nombre;
         this.opciones = opciones;
@@ -34,25 +32,6 @@ public class PreguntaMultipleChoiceParcial extends Pregunta{
 
         opciones.separarEnGruposCorrespondientes(opcionesCorrectas,opcionesIncorrectas);
     }
-
-    /*public void evaluarRespuestas(LinkedList<Respuesta> respuestas){
-        corregirRespuestas(respuestas);
-
-        for (Respuesta respuesta : respuestas) {
-            respuesta.actualizarCondicionDeUsoExclusividad(respuestas);
-            respuesta.calcularAmplificacionExclusividad(respuestas);
-        }
-
-        for (Respuesta respuesta : respuestas)
-            respuesta.establecerAmplificadorAdecuado();
-
-        for (Respuesta respuesta : respuestas) {
-            Puntos puntosParciales = new Puntos(0);
-            for (Opcion opcion: (((RespuestaMultiple) respuesta).getOpciones().getOpciones()))
-                puntosParciales.sumarPuntos(opcion.puntosObtenidos());
-            respuesta.otorgarPuntos(puntosParciales);
-        }
-    }*/
 
     @Override
     public ColeccionOpciones getOpciones() {
@@ -74,10 +53,8 @@ public class PreguntaMultipleChoiceParcial extends Pregunta{
         for (Respuesta respuesta : respuestas) {
             RespuestaMultiple cadaRespuesta = (RespuestaMultiple) respuesta;
             if (!cadaRespuesta.getOpciones().tieneElementos(opcionesIncorrectas))
-                cadaRespuesta.setCorrecta();
+                cadaRespuesta.esCorrecta();
         }
     }
 
-    public String getNombrePregunta() { return nombre;
-    }
 }
