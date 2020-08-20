@@ -6,8 +6,25 @@ import edu.fiuba.algo3.modelo.pregunta.PreguntaVerdaderoFalso;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 
-public class SeleccionarRadioButtonHandler implements EventHandler<ActionEvent> {
+import java.util.LinkedList;
 
+public class SeleccionarRadioButtonHandler implements EventHandler<ActionEvent> {
+    Opcion opcionVinculada;
+    LinkedList<Opcion> opcionesSeleccionadas;
+
+    public SeleccionarRadioButtonHandler(Opcion opcion, LinkedList<Opcion> opcionesSeleccionadas) {
+        this.opcionVinculada = opcion;
+        this.opcionesSeleccionadas = opcionesSeleccionadas;
+    }
+
+    @Override
+    public void handle(ActionEvent actionEvent) {
+        if(opcionesSeleccionadas.contains(opcionVinculada))
+            opcionesSeleccionadas.remove(opcionVinculada);
+        else
+            opcionesSeleccionadas.add(opcionVinculada);
+    }
+    /*
     String nombreOpcion;
     Opcion opcionVinculada;
     ColeccionOpciones opcionesPregunta;
@@ -20,9 +37,16 @@ public class SeleccionarRadioButtonHandler implements EventHandler<ActionEvent> 
 
     @Override
     public void handle(ActionEvent actionEvent) {
-        if(nombreOpcion == opcionesPregunta.getOpciones().getFirst().getNombre())
+        opcionVinculada = opcionesPregunta.getOpciones().getFirst();
+
+        /* if(nombreOpcion == opcionesPregunta.getOpciones().getFirst().getNombre()){
+            System.out.println("OPCION VERDADERO FALSO 1");
             opcionVinculada = opcionesPregunta.getOpciones().getFirst();
-        else
+            System.out.println(opcionVinculada.getNombre() );
+        }
+        else{
+            System.out.println("OPCION VERDADERO FALSO 2");
             opcionVinculada = opcionesPregunta.getOpciones().getLast();
-    }
+            System.out.println(opcionVinculada.getNombre() );
+    }*/
 }

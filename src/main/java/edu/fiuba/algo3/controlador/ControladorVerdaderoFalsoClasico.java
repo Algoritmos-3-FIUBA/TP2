@@ -20,6 +20,7 @@ import java.util.LinkedList;
 public class ControladorVerdaderoFalsoClasico extends Controlador {
     //private LinkedList<RadioButton> opcionesMostradas = new LinkedList<RadioButton>();
     private LinkedList<RadioButton> cajasOpcionesMostradas = new LinkedList<RadioButton>();
+    private LinkedList<Opcion> opcionesSeleccionadas = new LinkedList<>();
     private Opcion opcionSeleccionada;// = new Opcion();
     //private Pregunta pregunta; //= new PreguntaMultipleChoice();
     private TurnoJugador turnoActual;
@@ -43,8 +44,8 @@ public class ControladorVerdaderoFalsoClasico extends Controlador {
     public void initialize() {
         this.escenarioActual = App.obtenerEscenarioActual();
 
-        cajasOpcionesMostradas.add(opcionverdadero);
         cajasOpcionesMostradas.add(opcionfalso);
+        cajasOpcionesMostradas.add(opcionverdadero);
 
     }
     @Override
@@ -59,12 +60,14 @@ public class ControladorVerdaderoFalsoClasico extends Controlador {
         for(RadioButton opcion : cajasOpcionesMostradas)
             opcion.setSelected(false);
 
+        opcionesSeleccionadas = new LinkedList<>();
+
         for (int i = 0; i < pregunta.getOpciones().cantidadElementos(); i++) {
-            cajasOpcionesMostradas.get(i).setOnAction(new SeleccionarRadioButtonHandler((PreguntaVerdaderoFalsoClasico) pregunta,opcionSeleccionada,cajasOpcionesMostradas.get(i).getText()));
-            //cajasOpcionesMostradas.get(i).setText(pregunta.getOpciones().getOpciones().get(i).getNombre());
+            //cajasOpcionesMostradas.get(i).setOnAction(new SeleccionarRadioButtonHandler((PreguntaVerdaderoFalsoClasico) pregunta,opcionSeleccionada,cajasOpcionesMostradas.get(i).getText()));
+            cajasOpcionesMostradas.get(i).setOnAction(new SeleccionarRadioButtonHandler(pregunta.getOpciones().getOpciones().get(i), opcionesSeleccionadas));
         }
     }
     public void siguienteTurno() throws IOException {
-        this.turnoActual.siguienteJugador(new RespuestaUnica(opcionSeleccionada,jugador));
+        this.turnoActual.siguienteJugador(new RespuestaUnica(opcionesSeleccionadas.removeFirst(),jugador));
     }
 }
