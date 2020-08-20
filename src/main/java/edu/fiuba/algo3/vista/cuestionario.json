@@ -2,23 +2,7 @@
   {
     "Pregunta":
     {
-      "tipo": "VerdaderoFalsoClasico",
-      "nombre": "¿207 es un número primo?",
-      "opcionCorrecta": false
-    }
-  },
-  {
-    "Pregunta":
-    {
-      "tipo": "VerdaderoFalsoPenalidad",
-      "nombre": "¿Blanco es un color?",
-      "opcionCorrecta": false
-    }
-  },
-  {
-    "Pregunta":
-    {
-      "tipo" : "MultipleChoiseParcial",
+      "tipo" : "MultipleChoisePenalidad",
       "nombre":"¿Capital de Alemania?",
       "correctas": [
         "Berlin" ],
@@ -32,7 +16,7 @@
   {
     "Pregunta":
     {
-      "tipo" : "MultipleChoiseParcial",
+      "tipo" : "MultipleChoiseClasico",
       "nombre":"¿Cap de Francia?",
       "correctas": [
         "Paris" ],
@@ -56,6 +40,22 @@
         "Esteros de Libera",
         "Uruguay"
       ]
+    }
+  },
+  {
+    "Pregunta":
+    {
+      "tipo": "VerdaderoFalsoPenalidad",
+      "nombre": "¿207 es un número primo?",
+      "opcionCorrecta": false
+    }
+  },
+  {
+    "Pregunta":
+    {
+      "tipo": "VerdaderoFalsoPenalidad",
+      "nombre": "¿Blanco es un color?",
+      "opcionCorrecta": false
     }
   },{
     "Pregunta": {

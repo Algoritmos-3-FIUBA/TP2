@@ -20,7 +20,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox maxHeight="600.0" maxWidth="800.0" prefHeight="580.0" prefWidth="790.0" style="-fx-background-color: purple;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.fiuba.algo3.controlador.ControladorMultipleChoiceClasico">
+<VBox maxHeight="600.0" maxWidth="800.0" prefHeight="580.0" prefWidth="790.0" style="-fx-background-color: purple;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.fiuba.algo3.controlador.ControladorMultipleChoicePenalidad">
     <children>
         <MenuBar style="-fx-background-color: #700770; -fx-border-color: #9E0A9E;" visible="false" VBox.vgrow="NEVER">
             <menus>
@@ -105,12 +105,12 @@
                         <DropShadow color="#cf0ccf" />
                     </effect>
                 </Button>
-                <Button fx:id="multiplicadorx2" contentDisplay="BOTTOM" layoutX="56.0" layoutY="312.0" mnemonicParsing="false" prefWidth="209.0" style="-fx-pref-height: 40; -fx-pref-width: 151; -fx-text-fill: white; -fx-background-color: #FF69FF; -fx-background-radius: 20;" text="     Multiplicador X2" textFill="WHITE" AnchorPane.bottomAnchor="197.0" AnchorPane.leftAnchor="56.0">
+                <Button fx:id="multiplicadorx2" onAction="#asignarMultiplicadorx2" contentDisplay="BOTTOM" layoutX="56.0" layoutY="312.0" mnemonicParsing="false" prefWidth="209.0" style="-fx-pref-height: 40; -fx-pref-width: 151; -fx-text-fill: white; -fx-background-color: #FF69FF; -fx-background-radius: 20;" text="     Multiplicador X2" textFill="WHITE" AnchorPane.bottomAnchor="197.0" AnchorPane.leftAnchor="56.0">
                     <font>
                         <Font name="Arial Bold" size="14.0" />
                     </font>
                 </Button>
-                <Button fx:id="multiplicadorx3" contentDisplay="BOTTOM" layoutX="56.0" layoutY="393.0" mnemonicParsing="false" prefWidth="209.0" style="-fx-pref-height: 40; -fx-pref-width: 151; -fx-text-fill: white; -fx-background-color: #FF69FF; -fx-background-radius: 20;" text="     Multiplicador X3" textFill="WHITE" AnchorPane.bottomAnchor="116.0" AnchorPane.leftAnchor="56.0">
+                <Button fx:id="multiplicadorx3" onAction="#asignarMultiplicadorx3" contentDisplay="BOTTOM" layoutX="56.0" layoutY="393.0" mnemonicParsing="false" prefWidth="209.0" style="-fx-pref-height: 40; -fx-pref-width: 151; -fx-text-fill: white; -fx-background-color: #FF69FF; -fx-background-radius: 20;" text="     Multiplicador X3" textFill="WHITE" AnchorPane.bottomAnchor="116.0" AnchorPane.leftAnchor="56.0">
                     <font>
                         <Font name="Arial Bold" size="14.0" />
                     </font>
