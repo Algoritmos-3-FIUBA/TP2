@@ -4,7 +4,9 @@ import edu.fiuba.algo3.modelo.Jugador;
 import edu.fiuba.algo3.modelo.TurnoJugador;
 import edu.fiuba.algo3.modelo.opcion.Opcion;
 import edu.fiuba.algo3.modelo.pregunta.Pregunta;
+import edu.fiuba.algo3.modelo.respuesta.Respuesta;
 import edu.fiuba.algo3.modelo.respuesta.RespuestaMultiple;
+import edu.fiuba.algo3.modelo.respuesta.RespuestaUnica;
 import edu.fiuba.algo3.vista.App;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -22,6 +24,8 @@ public class ControladorOrderedChoice extends Controlador{
     private LinkedList<Opcion> opcionesElegidas = new LinkedList<>();
     private Pregunta pregunta; //= new PreguntaMultipleChoice();
     private TurnoJugador turnoActual;
+    private int cantidadExclusividades = 2;
+    private Respuesta respuesta;
 
     @FXML
     public Label nombrepregunta;
@@ -53,6 +57,8 @@ public class ControladorOrderedChoice extends Controlador{
     public Label opcion4num;
     @FXML
     public Label opcion5num;
+    @FXML
+    public Label botonexclusividad;
 
     Stage escenarioActual;
     private Jugador jugador;
@@ -89,6 +95,11 @@ public class ControladorOrderedChoice extends Controlador{
         for(Label orden : ordenMostrado)
             orden.setText("");
 
+        if(cantidadExclusividades == 0)
+            botonexclusividad.setDisable(true);
+        else
+            botonexclusividad.setDisable(false);
+
         for (int i = 0; i < pregunta.getOpciones().cantidadElementos(); i++) {
             opcionesMostradas.get(i).setText(pregunta.getOpciones().getOpciones().get(i).getNombre());
             opcionesMostradas.get(i).setOnAction(new SeleccionarCheckBoxOrderedChoiceHandler(pregunta.getOpciones().getOpciones().get(i), opcionesElegidas,this));
@@ -96,7 +107,18 @@ public class ControladorOrderedChoice extends Controlador{
     }
 
     public void siguienteTurno() throws IOException {
-        this.turnoActual.siguienteJugador(new RespuestaMultiple(opcionesElegidas,jugador));
+
+        if(jugador.getExclusividades().size() == cantidadExclusividades)
+            this.turnoActual.siguienteJugador(new RespuestaMultiple(opcionesElegidas,jugador));
+        else
+            this.turnoActual.siguienteJugador(respuesta);
+    }
+
+    public void asignarExclusividad() throws IOException {
+
+        cantidadExclusividades = jugador.getExclusividades().size();
+        respuesta = new  RespuestaMultiple(opcionesElegidas,jugador, jugador.usarExclusividad());
+        botonexclusividad.setDisable(true);
     }
 
     public void actualizarOrden() {

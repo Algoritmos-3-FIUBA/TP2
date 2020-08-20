@@ -4,6 +4,7 @@ import edu.fiuba.algo3.modelo.Jugador;
 import edu.fiuba.algo3.modelo.TurnoJugador;
 import edu.fiuba.algo3.modelo.opcion.Opcion;
 import edu.fiuba.algo3.modelo.pregunta.Pregunta;
+import edu.fiuba.algo3.modelo.respuesta.Respuesta;
 import edu.fiuba.algo3.modelo.respuesta.RespuestaMultiple;
 import edu.fiuba.algo3.vista.App;
 import javafx.fxml.FXML;
@@ -21,6 +22,8 @@ public class ControladorMultipleChoiceClasico extends Controlador{
     private Pregunta pregunta; //= new PreguntaMultipleChoice();
     private TurnoJugador turnoActual;
     private Jugador jugador;
+    private Respuesta respuesta;
+    private int cantidadExclusividades = 2;
 
     @FXML
     public Label nombrepregunta;
@@ -46,6 +49,9 @@ public class ControladorMultipleChoiceClasico extends Controlador{
     public Button multiplicadorx2;
     @FXML
     public Button multiplicadorx3;
+    @FXML
+    public Button botonexclusivdad;
+
     Stage escenarioActual;
 
     public void initialize() {
@@ -73,6 +79,11 @@ public class ControladorMultipleChoiceClasico extends Controlador{
         for(CheckBox opcion : cajasOpcionesMostradas)
             opcion.setSelected(false);
 
+        if(cantidadExclusividades == 0)
+            botonexclusivdad.setDisable(true);
+        else
+            botonexclusivdad.setDisable(false);
+
         opcionesSeleccionadas = new LinkedList<>();
 
         for (int i = 0; i < pregunta.getOpciones().cantidadElementos(); i++) {
@@ -82,7 +93,18 @@ public class ControladorMultipleChoiceClasico extends Controlador{
     }
 
     public void siguienteTurno() throws IOException {
-        this.turnoActual.siguienteJugador(new RespuestaMultiple(opcionesSeleccionadas,jugador));
+
+        if(jugador.getExclusividades().size() == cantidadExclusividades)
+            this.turnoActual.siguienteJugador(new RespuestaMultiple(opcionesSeleccionadas,jugador));
+        else
+            this.turnoActual.siguienteJugador(respuesta);
+    }
+
+    public void asignarExclusividad() throws IOException {
+
+        cantidadExclusividades = jugador.getExclusividades().size();
+        respuesta = new RespuestaMultiple(opcionesSeleccionadas,jugador, jugador.usarExclusividad());
+        botonexclusivdad.setDisable(true);
     }
 
 }

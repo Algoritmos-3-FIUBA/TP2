@@ -140,7 +140,7 @@
                   <Font name="Arial Bold" size="14.0" />
                </font>
             </Button>
-            <Button fx:id="botonexclusivdad" contentDisplay="BOTTOM" layoutX="56.0" layoutY="468.0" mnemonicParsing="false" prefWidth="209.0" style="-fx-pref-height: 40; -fx-pref-width: 151; -fx-text-fill: white; -fx-background-color: #FF69FF; -fx-background-radius: 20;" text="    Exclusividad" textFill="WHITE" AnchorPane.bottomAnchor="41.0" AnchorPane.leftAnchor="56.0">
+            <Button fx:id="botonexclusivdad" onAction="#asignarExclusividad" contentDisplay="BOTTOM" layoutX="56.0" layoutY="468.0" mnemonicParsing="false" prefWidth="209.0" style="-fx-pref-height: 40; -fx-pref-width: 151; -fx-text-fill: white; -fx-background-color: #FF69FF; -fx-background-radius: 20;" text="    Exclusividad" textFill="WHITE" AnchorPane.bottomAnchor="41.0" AnchorPane.leftAnchor="56.0">
                <font>
                   <Font name="Arial Bold" size="14.0" />
                </font>

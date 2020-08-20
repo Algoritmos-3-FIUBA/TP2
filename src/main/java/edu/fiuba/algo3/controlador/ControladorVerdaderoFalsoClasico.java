@@ -76,6 +76,11 @@ public class ControladorVerdaderoFalsoClasico extends Controlador {
         for(RadioButton opcion : cajasOpcionesMostradas)
             opcion.setSelected(false);
 
+        if(cantidadExclusividades == 0)
+            botonexclusivdad.setDisable(true);
+        else
+            botonexclusivdad.setDisable(false);
+
         opcionesSeleccionadas = new LinkedList<>();
 
         for (int i = 0; i < pregunta.getOpciones().cantidadElementos(); i++) {
