@@ -78,6 +78,9 @@ public class ControladorMultipleChoiceClasico extends Controlador{
         for(CheckBox opcion : cajasOpcionesMostradas)
             opcion.setSelected(false);
 
+        multiplicadorx2.setDisable(true);
+        multiplicadorx3.setDisable(true);
+
         if(cantidadExclusividades == 0)
             botonexclusivdad.setDisable(true);
         else

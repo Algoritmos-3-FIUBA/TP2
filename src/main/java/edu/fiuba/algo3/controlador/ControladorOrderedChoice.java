@@ -57,7 +57,11 @@ public class ControladorOrderedChoice extends Controlador{
     @FXML
     public Label opcion5num;
     @FXML
-    public Label botonexclusividad;
+    public Button botonexclusividad;
+    @FXML
+    public Button multiplicadorx2;
+    @FXML
+    public Button multiplicadorx3;
 
     Stage escenarioActual;
     private Jugador jugador;
@@ -93,6 +97,9 @@ public class ControladorOrderedChoice extends Controlador{
 
         for(Label orden : ordenMostrado)
             orden.setText("");
+
+        multiplicadorx2.setDisable(true);
+        multiplicadorx3.setDisable(true);
 
         if(cantidadExclusividades == 0)
             botonexclusividad.setDisable(true);

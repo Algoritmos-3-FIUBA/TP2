@@ -61,6 +61,10 @@ public class ControladorGroupChoice extends Controlador{
     public ComboBox comboopcion5;
     @FXML
     public Button botonexclusivdad;
+    @FXML
+    public Button multiplicadorx2;
+    @FXML
+    public Button multiplicadorx3;
 
     public void initialize() {
 
@@ -83,6 +87,9 @@ public class ControladorGroupChoice extends Controlador{
         this.turnoActual = turnoActual;
         this.jugador = jugadorActual;
         this.pregunta = pregunta;
+
+        multiplicadorx2.setDisable(true);
+        multiplicadorx3.setDisable(true);
 
         nombrepregunta.setText(pregunta.getNombre());
         tipopregunta.setText(pregunta.getClass().getSimpleName().replaceAll("(.)([A-Z])", "$1 $2"));
