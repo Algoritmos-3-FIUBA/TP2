@@ -50,7 +50,7 @@
     </MenuBar>
     <AnchorPane maxHeight="-1.0" maxWidth="-1.0" opacity="0.8" prefWidth="729.0" style="-fx-background-color: #9E0A9E;" VBox.vgrow="ALWAYS">
       <children>
-            <GridPane layoutX="276.0" layoutY="147.0" prefHeight="291.0" prefWidth="346.0" AnchorPane.bottomAnchor="111.0" AnchorPane.leftAnchor="276.0" AnchorPane.rightAnchor="168.0" AnchorPane.topAnchor="147.0">
+            <GridPane layoutX="200.0" layoutY="147.0" prefHeight="291.0" prefWidth="559.0" AnchorPane.bottomAnchor="111.0" AnchorPane.leftAnchor="200.0" AnchorPane.rightAnchor="31.0" AnchorPane.topAnchor="147.0">
                <columnConstraints>
                   <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" />
                </columnConstraints>
@@ -63,7 +63,7 @@
                   <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
                </rowConstraints>
                <children>
-                  <Label fx:id="nombrepregunta" alignment="BASELINE_CENTER" contentDisplay="CENTER" prefHeight="42.0" prefWidth="287.0" style="-fx-alignment: center; -fx-text-alignment: center;" text="NombrePregunta" textAlignment="CENTER" textFill="WHITE" GridPane.halignment="CENTER">
+                  <Label fx:id="nombrepregunta" alignment="BASELINE_CENTER" contentDisplay="CENTER" prefHeight="35.0" prefWidth="587.0" style="-fx-alignment: center; -fx-text-alignment: center;" text="NombrePregunta" textAlignment="CENTER" textFill="WHITE" GridPane.halignment="CENTER">
                      <font>
                         <Font name="Arial Black" size="28.0" />
                      </font>
@@ -86,7 +86,7 @@
                   </RadioButton>
                </children>
             </GridPane>
-            <Button fx:id="botonsiguiente" onAction="#siguienteTurno" contentDisplay="BOTTOM" layoutX="669.0" layoutY="474.0" mnemonicParsing="false" style="-fx-pref-height: 50; -fx-pref-width: 100; -fx-text-fill: white; -fx-background-color: #FF69FF;" text="Siguiente" textFill="WHITE" AnchorPane.bottomAnchor="25.0" AnchorPane.rightAnchor="21.0">
+            <Button fx:id="botonsiguiente" contentDisplay="BOTTOM" layoutX="669.0" layoutY="474.0" mnemonicParsing="false" onAction="#siguienteTurno" style="-fx-pref-height: 50; -fx-pref-width: 100; -fx-text-fill: white; -fx-background-color: #FF69FF;" text="Siguiente" textFill="WHITE" AnchorPane.bottomAnchor="25.0" AnchorPane.rightAnchor="21.0">
                <font>
                   <Font name="Arial Bold" size="14.0" />
                </font>
