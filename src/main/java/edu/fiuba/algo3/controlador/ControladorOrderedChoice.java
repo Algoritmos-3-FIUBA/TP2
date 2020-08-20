@@ -6,7 +6,6 @@ import edu.fiuba.algo3.modelo.opcion.Opcion;
 import edu.fiuba.algo3.modelo.pregunta.Pregunta;
 import edu.fiuba.algo3.modelo.respuesta.Respuesta;
 import edu.fiuba.algo3.modelo.respuesta.RespuestaMultiple;
-import edu.fiuba.algo3.modelo.respuesta.RespuestaUnica;
 import edu.fiuba.algo3.vista.App;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -22,7 +21,7 @@ public class ControladorOrderedChoice extends Controlador{
     private LinkedList<Button> opcionesMostradas = new LinkedList<>();
     private LinkedList<Label> ordenMostrado = new LinkedList<>();
     private LinkedList<Opcion> opcionesElegidas = new LinkedList<>();
-    private Pregunta pregunta; //= new PreguntaMultipleChoice();
+    private Pregunta pregunta;
     private TurnoJugador turnoActual;
     private int cantidadExclusividades = 2;
     private Respuesta respuesta;

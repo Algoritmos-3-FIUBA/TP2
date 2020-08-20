@@ -44,7 +44,6 @@ public class LecturaDeArchivo {
     {
         JSONObject pregunta = (JSONObject) oPregunta.get("Pregunta");
         String tipo = (String) pregunta.get("tipo");
-        System.out.println(tipo);
 
         switch(tipo) {
             case "VerdaderoFalsoClasico":
@@ -102,7 +101,6 @@ public class LecturaDeArchivo {
         PreguntaOrderedChoice pregunta = new PreguntaOrderedChoice((String) oPregunta.get("nombre"),1,opciones);
         preguntas.add(pregunta);
         plantillaPreguntas.put(pregunta,"src/main/java/edu/fiuba/algo3/vista/plantilla/OrderedChoice.fxml");
-        System.out.println(pregunta.getNombre());
     }
 
     private void instanciarPreguntaMultipleChoisePenalidad(JSONObject oPregunta, LinkedList<Pregunta> preguntas,HashMap<Pregunta,String> plantillaPreguntas) {
@@ -120,7 +118,6 @@ public class LecturaDeArchivo {
         PreguntaMultipleChoicePenalidad pregunta = new PreguntaMultipleChoicePenalidad((String) oPregunta.get("nombre"),opciones);
         preguntas.add(pregunta);
         plantillaPreguntas.put(pregunta,"src/main/java/edu/fiuba/algo3/vista/plantilla/MultipleChoicePenalidad.fxml");
-        //System.out.println(pregunta.getNombrePregunta());
     }
 
     private void instanciarPreguntaMultipleChoiseParcial(JSONObject oPregunta, LinkedList<Pregunta> preguntas,HashMap<Pregunta,String> plantillaPreguntas) {
@@ -141,21 +138,20 @@ public class LecturaDeArchivo {
     }
 
     private void instanciarPreguntaMultipleChoiseClasica(JSONObject oPregunta, LinkedList<Pregunta> preguntas,HashMap<Pregunta,String> plantillaPreguntas) {
-        ColeccionOpciones opciones = new ColeccionOpciones();
-        JSONArray correctas = (JSONArray) oPregunta.get("correctas");
-        for (Object o : correctas) {
-            String opcion = (String) o ;
-            opciones.agregarOpcion(new OpcionCorrecta(opcion));
-        }
-        JSONArray incorrectas = (JSONArray) oPregunta.get("incorrectas");
-        for (Object o : incorrectas) {
-            String opcion = (String) o ;
-            opciones.agregarOpcion(new OpcionIncorrecta(opcion));
-        }
+       ColeccionOpciones opciones = new ColeccionOpciones();
+       JSONArray correctas = (JSONArray) oPregunta.get("correctas");
+       for (Object o : correctas) {
+           String opcion = (String) o ;
+           opciones.agregarOpcion(new OpcionCorrecta(opcion));
+       }
+       JSONArray incorrectas = (JSONArray) oPregunta.get("incorrectas");
+       for (Object o : incorrectas) {
+           String opcion = (String) o ;
+           opciones.agregarOpcion(new OpcionIncorrecta(opcion));
+       }
        PreguntaMultipleChoice pregunta = new PreguntaMultipleChoice((String) oPregunta.get("nombre"),1,opciones);
-        preguntas.add(pregunta);
-        plantillaPreguntas.put(pregunta,"src/main/java/edu/fiuba/algo3/vista/plantilla/MultipleChoiceClasico.fxml");
-        //System.out.println(pregunta.getNombrePregunta());
+       preguntas.add(pregunta);
+       plantillaPreguntas.put(pregunta,"src/main/java/edu/fiuba/algo3/vista/plantilla/MultipleChoiceClasico.fxml");
     }
 
     private void instanciarPreguntaVoFPenalidad(JSONObject oPregunta, LinkedList<Pregunta> preguntas,HashMap<Pregunta,String> plantillaPreguntas) {
@@ -164,9 +160,7 @@ public class LecturaDeArchivo {
         else pregunta.setFalsoOpcionCorrecta();
         preguntas.add(pregunta);
         plantillaPreguntas.put(pregunta,"src/main/java/edu/fiuba/algo3/vista/plantilla/VerdaderoFalsoPenalidad.fxml");
-        System.out.println(pregunta.getNombrePregunta());
-        }
-
+    }
 
     private void instanciarPreguntaVoFClasica(JSONObject oPregunta, LinkedList<Pregunta> preguntas,HashMap<Pregunta,String> plantillaPreguntas) {
         PreguntaVerdaderoFalsoClasico pregunta = new PreguntaVerdaderoFalsoClasico((String) oPregunta.get("nombre"));
@@ -174,8 +168,6 @@ public class LecturaDeArchivo {
         else pregunta.setFalsoOpcionCorrecta();
         preguntas.add(pregunta);
         plantillaPreguntas.put(pregunta,"src/main/java/edu/fiuba/algo3/vista/plantilla/VerdaderoFalso.fxml");
-        System.out.println(pregunta.getNombrePregunta());
-        }
-
+    }
 
 }

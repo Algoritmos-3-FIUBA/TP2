@@ -14,10 +14,6 @@ public class SeleccionarMultiplicadorX2ButtonHandler implements EventHandler<Act
 
     @Override
     public void handle(ActionEvent actionEvent) {
-       // return(new MultiplicadorPorDos());
-        System.out.println("ComienzoHandle");
         multiplicador = new MultiplicadorPorDos();
-        System.out.println(multiplicador.getFactor());
-        System.out.println("FinalHandle");
     }
 }

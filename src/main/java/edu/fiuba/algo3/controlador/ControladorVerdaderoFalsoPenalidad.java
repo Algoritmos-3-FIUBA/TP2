@@ -2,7 +2,6 @@ package edu.fiuba.algo3.controlador;
 
 import edu.fiuba.algo3.modelo.Jugador;
 import edu.fiuba.algo3.modelo.TurnoJugador;
-import edu.fiuba.algo3.modelo.excepciones.NoTieneBeneficioException;
 import edu.fiuba.algo3.modelo.multiplicador.Multiplicador;
 import edu.fiuba.algo3.modelo.multiplicador.MultiplicadorDefault;
 import edu.fiuba.algo3.modelo.opcion.Opcion;
@@ -19,12 +18,10 @@ import java.io.IOException;
 import java.util.LinkedList;
 
 public class ControladorVerdaderoFalsoPenalidad  extends Controlador{
-    //private LinkedList<RadioButton> opcionesMostradas = new LinkedList<RadioButton>();
+
     private LinkedList<RadioButton> cajasOpcionesMostradas = new LinkedList<RadioButton>();
     private LinkedList<Opcion> opcionesSeleccionadas = new LinkedList<>();
     private LinkedList<Button> cajasMultiplicadores = new LinkedList<>();
-    private Opcion opcionSeleccionada;// = new Opcion();
-    //private Pregunta pregunta; //= new PreguntaMultipleChoice();
     private TurnoJugador turnoActual;
     private Jugador jugador;
     private Multiplicador multiplicador = new MultiplicadorDefault();

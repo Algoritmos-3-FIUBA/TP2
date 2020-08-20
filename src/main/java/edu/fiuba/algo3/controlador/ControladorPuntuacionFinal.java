@@ -29,7 +29,7 @@ public class ControladorPuntuacionFinal extends Controlador {
     }
 
     public void actualizarPlantilla(LinkedList<Jugador> jugadores) {
-        /*posible refactor a futuro para hacerlo para n jugadores, podríamos reimplementar el máx de la colección*/
+
         if (jugadores.get(0).getPuntos().cantidad>jugadores.get(1).getPuntos().cantidad){
             jugadorGanador = jugadores.get(0);
             segundoJugador = jugadores.get(1);

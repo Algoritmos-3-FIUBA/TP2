@@ -31,12 +31,9 @@ public class Kahoot {
         jugadores.add(new Jugador(jugador1));
         jugadores.add(new Jugador(jugador2));
 
-        //System.out.println(jugador1);
-
-        LecturaDeArchivo leerArchivo = new LecturaDeArchivo(preguntas,plantillasPreguntas);
+        new LecturaDeArchivo(preguntas,plantillasPreguntas);
 
         sistemaTurnos = new SistemaEscenas(jugadores,preguntas,plantillasPreguntas);
-        /// CREAR RESPUESTAS ANTES DE ESTA INSTANCIA Y QUE LA PREGUNTA LAS EVALUE ///
         sistemaTurnos.siguienteEscena();
     }
 

@@ -1,8 +1,6 @@
 package edu.fiuba.algo3.vista;
 
 import javafx.application.Application;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.scene.media.AudioClip;
@@ -24,11 +22,6 @@ public class App extends Application {
 
         escenarioInicial.getIcons().add(new Image(Paths.get(ICONO_JUEGO).toUri().toString()));
 
-/*
-        FXMLLoader fxmlLoader = new FXMLLoader();
-        fxmlLoader.setLocation(Paths.get("src/main/java/edu/fiuba/algo3/vista/plantilla/MultipleChoiceClasico.fxml").toUri().toURL());
-        Parent root = fxmlLoader.load();
-*/
         AudioClip audio = new AudioClip(Paths.get(SONIDO_JUEGO).toUri().toString());
         audio.play();
         audio.setVolume(0.75);
@@ -37,8 +30,6 @@ public class App extends Application {
         FormularioInicial formularioInicial = new FormularioInicial() ;
         formularioInicial.agregarControlesInterfaz(escenarioInicial);
         Scene scene = new Scene(formularioInicial, ANCHO, ALTO);
-
-        //Scene scene = new Scene(root);
 
         escenarioInicial.setScene(scene);
 

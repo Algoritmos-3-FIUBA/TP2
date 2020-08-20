@@ -69,7 +69,7 @@ public class FormularioInicial extends GridPane {
 
         BotonInicioJuego botonInicioJuego = new BotonInicioJuego(jugador1,jugador2,this);
 
-        iniciarPartida.setOnAction(botonInicioJuego);//Nuevo
+        iniciarPartida.setOnAction(botonInicioJuego);
     }
     
 }

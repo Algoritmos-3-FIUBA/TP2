@@ -10,13 +10,11 @@ public class BotonResponderVerdadero implements EventHandler<ActionEvent> {
 
 
     public BotonResponderVerdadero(Stage stage) {
-        // Assume success always!
         this.stage = stage;
-
     }
 
     @Override
     public void handle(ActionEvent actionEvent) {
-        stage.close(); // return to main window
+        stage.close();
     }
 }

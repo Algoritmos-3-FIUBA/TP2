@@ -7,7 +7,6 @@ import edu.fiuba.algo3.modelo.pregunta.Pregunta;
 import edu.fiuba.algo3.modelo.pregunta.PreguntaGroupChoice;
 import edu.fiuba.algo3.modelo.respuesta.Respuesta;
 import edu.fiuba.algo3.modelo.respuesta.RespuestaGrupos;
-import edu.fiuba.algo3.modelo.respuesta.RespuestaMultiple;
 import edu.fiuba.algo3.vista.App;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -64,7 +63,6 @@ public class ControladorGroupChoice extends Controlador{
     public Button botonexclusivdad;
 
     public void initialize() {
-        Stage escenarioActual = App.obtenerEscenarioActual();
 
         opcionesMostradas.add(opcion1);
         opcionesMostradas.add(opcion2);

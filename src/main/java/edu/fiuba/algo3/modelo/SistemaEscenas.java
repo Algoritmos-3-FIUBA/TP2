@@ -1,16 +1,7 @@
 package edu.fiuba.algo3.modelo;
 
-import edu.fiuba.algo3.controlador.ControladorPuntuacion;
 import edu.fiuba.algo3.modelo.pregunta.Pregunta;
-import edu.fiuba.algo3.vista.App;
-import javafx.animation.PauseTransition;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
-import javafx.util.Duration;
-
 import java.io.IOException;
-import java.nio.file.Paths;
 import java.util.*;
 
 

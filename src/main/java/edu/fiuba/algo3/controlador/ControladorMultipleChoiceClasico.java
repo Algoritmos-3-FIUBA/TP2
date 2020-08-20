@@ -19,7 +19,6 @@ import java.util.LinkedList;
 public class ControladorMultipleChoiceClasico extends Controlador{
     private LinkedList<CheckBox> cajasOpcionesMostradas = new LinkedList<>();
     private LinkedList<Opcion> opcionesSeleccionadas = new LinkedList<>();
-    private Pregunta pregunta; //= new PreguntaMultipleChoice();
     private TurnoJugador turnoActual;
     private Jugador jugador;
     private Respuesta respuesta;

@@ -2,7 +2,6 @@ package edu.fiuba.algo3.modelo;
 
 import edu.fiuba.algo3.modelo.pregunta.Pregunta;
 import edu.fiuba.algo3.modelo.respuesta.Respuesta;
-import edu.fiuba.algo3.modelo.respuesta.RespuestaUnica;
 
 import java.io.IOException;
 import java.util.LinkedList;
@@ -40,7 +39,6 @@ public class TurnoJugador extends Turno{
             siguienteTurno();
         }
         else{
-            System.out.println(jugadorActual.getPuntos().getCantidad());
             this.jugadorActual = jugadoresRestantes.remove();
             this.controlador.actualizarPlantilla(pregunta, jugadorActual,this);
         }

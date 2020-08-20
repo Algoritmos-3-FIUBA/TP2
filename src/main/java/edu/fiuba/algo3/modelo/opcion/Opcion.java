@@ -1,7 +1,6 @@
 package edu.fiuba.algo3.modelo.opcion;
 
 import edu.fiuba.algo3.modelo.Puntos;
-import edu.fiuba.algo3.modelo.respuesta.EstadoRespuesta;
 import edu.fiuba.algo3.modelo.respuesta.RespuestaUnica;
 
 public abstract class Opcion {

@@ -1,10 +1,6 @@
 package edu.fiuba.algo3.controlador;
 
-import edu.fiuba.algo3.modelo.Kahoot;
-import edu.fiuba.algo3.modelo.pregunta.PreguntaVerdaderoFalso;
-import edu.fiuba.algo3.modelo.pregunta.PreguntaVerdaderoFalsoClasico;
 import edu.fiuba.algo3.vista.App;
-import edu.fiuba.algo3.vista.PreguntaVoF;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.scene.control.Alert;
@@ -15,9 +11,7 @@ import javafx.stage.Window;
 
 import java.io.IOException;
 import java.nio.file.Paths;
-import java.util.LinkedList;
 
-import static edu.fiuba.algo3.modelo.Kahoot.actualizarEscena;
 import static edu.fiuba.algo3.modelo.Kahoot.juegoKahoot;
 
 public class BotonInicioJuego implements EventHandler<ActionEvent>  {
@@ -50,9 +44,6 @@ public class BotonInicioJuego implements EventHandler<ActionEvent>  {
         AudioClip audioPreguntas = new AudioClip(Paths.get(SONIDO_JUEGO_PREGUNTAS).toUri().toString());
         audioPreguntas.play();
         audioPreguntas.setVolume(0.85);
-
-        LinkedList<PreguntaVerdaderoFalso> listaPreguntas = new LinkedList<>();
-//        this.ingresarPreguntas(listaPreguntas);
 
         try {
             juegoKahoot(App.escenario,jugador1.getText(),jugador2.getText());

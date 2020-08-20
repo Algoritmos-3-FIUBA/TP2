@@ -66,10 +66,6 @@ public abstract class Respuesta {
         exclusividad.hayRespuestaCorrecta();
     }
 
-    public Amplificador getAmplificadorExclusividad() {
-        return exclusividad.getAmplificador();
-    }
-
     public void establecerAmplificadorAdecuado() {
         this.exclusividad.establecerAmplificadorRequerido();
     }

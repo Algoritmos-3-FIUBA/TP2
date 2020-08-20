@@ -18,7 +18,7 @@ public class TestPreguntaGroupChoiceEntrega02 {
 
     @Test
     public void testCreoPreguntaGroupChoiceYJugadorRespondeCorrectamente01() {
-    //Pregunta sabe los grupos correctos
+
         Jugador Guido = new Jugador("Guido");
 
         LinkedList<ColeccionOpciones> gruposCorrectos = new LinkedList<ColeccionOpciones>();

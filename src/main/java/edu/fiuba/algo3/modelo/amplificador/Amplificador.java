@@ -26,7 +26,4 @@ public class Amplificador {
         this.factor *= factor;
     }
 
-    public void multiplicarFactor(Amplificador amplificador) {
-        this.multiplicarFactor(amplificador.getFactor());
-    }
 }

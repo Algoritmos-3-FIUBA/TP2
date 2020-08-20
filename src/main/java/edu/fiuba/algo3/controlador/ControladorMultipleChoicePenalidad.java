@@ -21,7 +21,6 @@ public class ControladorMultipleChoicePenalidad  extends Controlador{
     private LinkedList<CheckBox> cajasOpcionesMostradas = new LinkedList<>();
     private LinkedList<Opcion> opcionesSeleccionadas = new LinkedList<>();
     private LinkedList<Button> cajasMultiplicadores = new LinkedList<>();
-    private Pregunta pregunta; //= new PreguntaMultipleChoice();
     private TurnoJugador turnoActual;
     private Jugador jugador;
     private Multiplicador multiplicador = new MultiplicadorDefault();

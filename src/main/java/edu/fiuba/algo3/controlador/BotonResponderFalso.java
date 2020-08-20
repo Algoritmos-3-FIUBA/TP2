@@ -15,6 +15,6 @@ public class BotonResponderFalso implements EventHandler<ActionEvent> {
 
     @Override
     public void handle(ActionEvent actionEvent) {
-        stage.close(); // return to main window
+        stage.close();
     }
 }

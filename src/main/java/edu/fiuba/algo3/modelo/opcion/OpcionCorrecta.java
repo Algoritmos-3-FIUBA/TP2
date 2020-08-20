@@ -1,7 +1,5 @@
 package edu.fiuba.algo3.modelo.opcion;
 
-import edu.fiuba.algo3.modelo.respuesta.EstadoCorrecto;
-import edu.fiuba.algo3.modelo.respuesta.EstadoRespuesta;
 import edu.fiuba.algo3.modelo.respuesta.RespuestaUnica;
 
 public class OpcionCorrecta extends Opcion {
