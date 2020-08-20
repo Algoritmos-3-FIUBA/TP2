@@ -15,6 +15,7 @@ public abstract class Turno {
     protected Controlador controlador;
 
     public Turno(String plantilla) throws IOException {
+        System.out.println("aaaaaaaaaaaa");
         FXMLLoader fxmlLoader = new FXMLLoader();
         fxmlLoader.setLocation(Paths.get(plantilla).toUri().toURL());
         Parent root = fxmlLoader.load();

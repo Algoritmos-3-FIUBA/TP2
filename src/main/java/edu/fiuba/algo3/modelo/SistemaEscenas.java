@@ -23,11 +23,19 @@ public class SistemaEscenas {
         this.jugadores = jugadores;
         for(Pregunta pregunta : preguntas){
             turnos.add(new TurnoJugador(jugadores,pregunta,plantillasPreguntas.get(pregunta)));
-            turnos.add(new TurnoPuntuaciones(jugadores,"src/main/java/edu/fiuba/algo3/vista/plantilla/Puntuacion.fxml"));
+            if (preguntas.indexOf(pregunta) != (preguntas.size() -1)){
+                turnos.add(new TurnoPuntuaciones(jugadores,"src/main/java/edu/fiuba/algo3/vista/plantilla/Puntuacion.fxml"));
+            }
+
         }
     }
 
     public void siguienteEscena() throws IOException {
-        turnos.remove().mostrarEscena();
+        try{
+            turnos.remove().mostrarEscena();
+        }catch(Exception e) {
+            turnos.add(new TurnoPuntuacionesFinales(jugadores,"src/main/java/edu/fiuba/algo3/vista/plantilla/PuntuacionFinal.fxml"));
+            turnos.remove().mostrarEscena();
+        }
     }
 }
