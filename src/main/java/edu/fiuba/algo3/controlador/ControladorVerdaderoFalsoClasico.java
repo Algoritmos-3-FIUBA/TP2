@@ -29,6 +29,8 @@ public class ControladorVerdaderoFalsoClasico extends Controlador {
     @FXML
     public Label nombrepregunta;
     @FXML
+    public Label tipopregunta;
+    @FXML
     public Button botonsiguiente;
     @FXML
     public Label jugadoractual;
@@ -54,6 +56,7 @@ public class ControladorVerdaderoFalsoClasico extends Controlador {
         this.jugador = jugadorActual;
 
         nombrepregunta.setText(pregunta.getNombre());
+        tipopregunta.setText(pregunta.getClass().getSimpleName());
         jugadoractual.setText(jugadorActual.getNombre());
         puntosactuales.setText(String.valueOf(jugadorActual.getPuntos().cantidad));
 
