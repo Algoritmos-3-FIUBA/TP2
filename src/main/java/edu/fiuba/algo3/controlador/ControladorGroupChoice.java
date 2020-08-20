@@ -5,7 +5,9 @@ import edu.fiuba.algo3.modelo.Jugador;
 import edu.fiuba.algo3.modelo.TurnoJugador;
 import edu.fiuba.algo3.modelo.pregunta.Pregunta;
 import edu.fiuba.algo3.modelo.pregunta.PreguntaGroupChoice;
+import edu.fiuba.algo3.modelo.respuesta.Respuesta;
 import edu.fiuba.algo3.modelo.respuesta.RespuestaGrupos;
+import edu.fiuba.algo3.modelo.respuesta.RespuestaMultiple;
 import edu.fiuba.algo3.vista.App;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -25,6 +27,8 @@ public class ControladorGroupChoice extends Controlador{
     private Pregunta pregunta;
     private TurnoJugador turnoActual;
     private Jugador jugador;
+    private int cantidadExclusividades = 2;
+    private Respuesta respuesta;
 
     @FXML
     public Label nombrepregunta;
@@ -56,6 +60,8 @@ public class ControladorGroupChoice extends Controlador{
     public ComboBox comboopcion4;
     @FXML
     public ComboBox comboopcion5;
+    @FXML
+    public Button botonexclusivdad;
 
     public void initialize() {
         Stage escenarioActual = App.obtenerEscenarioActual();
@@ -103,13 +109,30 @@ public class ControladorGroupChoice extends Controlador{
             caja.getItems().add(segundoGrupo.getNombre());
         }
 
+        if(cantidadExclusividades == 0)
+            botonexclusivdad.setDisable(true);
+        else
+            botonexclusivdad.setDisable(false);
+
         for (int i = 0; i < pregunta.getOpciones().cantidadElementos(); i++)
             opcionesMostradas.get(i).setText(pregunta.getOpciones().getOpciones().get(i).getNombre());
     }
 
+
     public void siguienteTurno() throws IOException {
+
         this.armarGrupos();
-        this.turnoActual.siguienteJugador(new RespuestaGrupos(gruposElegidos,jugador));
+        if(jugador.getExclusividades().size() == cantidadExclusividades)
+            this.turnoActual.siguienteJugador(new RespuestaGrupos(gruposElegidos,jugador));
+        else
+            this.turnoActual.siguienteJugador(respuesta);
+    }
+
+    public void asignarExclusividad() throws IOException {
+
+        cantidadExclusividades = jugador.getExclusividades().size();
+        respuesta = new RespuestaGrupos(gruposElegidos,jugador, jugador.usarExclusividad());
+        botonexclusivdad.setDisable(true);
     }
 
     private void armarGrupos() {

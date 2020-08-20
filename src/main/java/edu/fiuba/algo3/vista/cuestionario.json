@@ -1,4 +1,20 @@
-[ {
+[
+  {
+    "Pregunta": {
+      "tipo": "GrupoChoice",
+      "nombre": "Diferenciar ciudades: ",
+      "nombregrupo1" : "Europeas",
+      "nombregrupo2" : "Asiaticas",
+      "grupo1": [
+        "Berlin" ,
+        "Paris",
+        "Roma"],
+      "grupo2": [
+        "Tokyo",
+        "Hiroshima"]
+    }
+  },
+  {
   "Pregunta":
   {
     "tipo": "VerdaderoFalsoClasico",
@@ -17,21 +33,6 @@
       "Munich",
       "Amsterdam",
       "Roma"]
-  }
-},
-  {
-  "Pregunta": {
-    "tipo": "GrupoChoice",
-    "nombre": "Diferenciar ciudades: ",
-    "nombregrupo1" : "Europeas",
-    "nombregrupo2" : "Asiaticas",
-    "grupo1": [
-      "Berlin" ,
-      "Paris",
-      "Roma"],
-    "grupo2": [
-      "Tokyo",
-      "Hiroshima"]
   }
 },
   {
