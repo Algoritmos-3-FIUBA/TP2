@@ -1,10 +1,9 @@
 package edu.fiuba.algo3.modelo.respuesta;
 
-import edu.fiuba.algo3.modelo.ColeccionOpciones;
+import edu.fiuba.algo3.modelo.opcion.ColeccionOpciones;
 import edu.fiuba.algo3.modelo.Jugador;
 import edu.fiuba.algo3.modelo.excepciones.MasDeSeisOpcionesException;
 import edu.fiuba.algo3.modelo.excepciones.NoHayOpcionesException;
-import edu.fiuba.algo3.modelo.opcion.Opcion;
 
 import java.util.LinkedList;
 

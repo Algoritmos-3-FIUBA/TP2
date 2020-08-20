@@ -2,7 +2,7 @@ package edu.fiuba.algo3.modelo.testunitarios;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
-import edu.fiuba.algo3.modelo.ColeccionOpciones;
+import edu.fiuba.algo3.modelo.opcion.ColeccionOpciones;
 import edu.fiuba.algo3.modelo.Jugador;
 import edu.fiuba.algo3.modelo.excepciones.MasDeCincoOpcionesException;
 import edu.fiuba.algo3.modelo.excepciones.NoHayOpcionesException;
