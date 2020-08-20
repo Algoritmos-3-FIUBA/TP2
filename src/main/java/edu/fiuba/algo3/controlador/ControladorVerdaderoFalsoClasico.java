@@ -27,6 +27,7 @@ public class ControladorVerdaderoFalsoClasico extends Controlador {
     private Jugador jugador;
     private Exclusividad exclusividad = new Exclusividad();
     private Respuesta respuesta;
+    private int cantidadExclusividades = 2;
 
     @FXML
     public Label nombrepregunta;
@@ -85,7 +86,7 @@ public class ControladorVerdaderoFalsoClasico extends Controlador {
 
     public void siguienteTurno() throws IOException {
 
-        if(jugador.getExclusividades().size() == 2 || jugador.getExclusividades().size() == 1)
+        if(jugador.getExclusividades().size() == cantidadExclusividades)
             this.turnoActual.siguienteJugador(new RespuestaUnica(opcionesSeleccionadas.removeFirst(), jugador));
         else
             this.turnoActual.siguienteJugador(respuesta);
@@ -93,6 +94,8 @@ public class ControladorVerdaderoFalsoClasico extends Controlador {
 
     public void asignarExclusividad() throws IOException {
 
-            respuesta = new RespuestaUnica(opcionesSeleccionadas.removeFirst(), jugador, jugador.usarExclusividad());
+        cantidadExclusividades = jugador.getExclusividades().size();
+        respuesta = new RespuestaUnica(opcionesSeleccionadas.removeFirst(), jugador, jugador.usarExclusividad());
+        botonexclusivdad.setDisable(true);
     }
 }

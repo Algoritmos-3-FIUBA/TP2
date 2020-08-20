@@ -42,10 +42,6 @@ public class Jugador {
         return exclusividades;
     }
 
-    public int getCantidadExclusividades() {
-        return exclusividades.size();
-    }
-
     public void sumarPuntos(Puntos puntosASumar) {
         puntos.sumarPuntos(puntosASumar);
     }
