@@ -25,6 +25,7 @@ public abstract class Multiplicador {
     public Amplificador getAmplificador(){
         return amplificador;
     }
+
 }
 
 

@@ -1,7 +1,7 @@
 [ {
   "Pregunta":
   {
-    "tipo": "VerdaderoFalsoPenalidad",
+    "tipo": "VerdaderoFalsoClasico",
     "nombre": "¿207 es un número primo?",
     "opcionCorrecta": false
   }

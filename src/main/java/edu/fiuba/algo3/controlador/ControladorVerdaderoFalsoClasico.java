@@ -3,10 +3,11 @@ package edu.fiuba.algo3.controlador;
 
 import edu.fiuba.algo3.modelo.Jugador;
 import edu.fiuba.algo3.modelo.TurnoJugador;
-import edu.fiuba.algo3.modelo.multiplicador.Multiplicador;
-import edu.fiuba.algo3.modelo.multiplicador.MultiplicadorDefault;
+import edu.fiuba.algo3.modelo.exclusividad.Exclusividad;
+import edu.fiuba.algo3.modelo.exclusividad.ExclusividadDefault;
 import edu.fiuba.algo3.modelo.opcion.Opcion;
 import edu.fiuba.algo3.modelo.pregunta.Pregunta;
+import edu.fiuba.algo3.modelo.respuesta.Respuesta;
 import edu.fiuba.algo3.modelo.respuesta.RespuestaUnica;
 import edu.fiuba.algo3.vista.App;
 import javafx.fxml.FXML;
@@ -24,7 +25,8 @@ public class ControladorVerdaderoFalsoClasico extends Controlador {
     private LinkedList<Button> cajasMultiplicadores = new LinkedList<>();
     private TurnoJugador turnoActual;
     private Jugador jugador;
-    private Multiplicador multiplicador = new MultiplicadorDefault(); ;
+    private Exclusividad exclusividad = new Exclusividad();
+    private Respuesta respuesta;
 
     @FXML
     public Label nombrepregunta;
@@ -44,6 +46,10 @@ public class ControladorVerdaderoFalsoClasico extends Controlador {
     public Button multiplicadorx2;
     @FXML
     public Button multiplicadorx3;
+    @FXML
+    public Button botonexclusivdad;
+
+
     Stage escenarioActual;
 
 
@@ -74,9 +80,19 @@ public class ControladorVerdaderoFalsoClasico extends Controlador {
         for (int i = 0; i < pregunta.getOpciones().cantidadElementos(); i++) {
             cajasOpcionesMostradas.get(i).setOnAction(new SeleccionarRadioButtonHandler(pregunta.getOpciones().getOpciones().get(i), opcionesSeleccionadas));
         }
+
     }
 
     public void siguienteTurno() throws IOException {
-        this.turnoActual.siguienteJugador(new RespuestaUnica(opcionesSeleccionadas.removeFirst(),jugador,multiplicador));
+
+        if(jugador.getExclusividades().size() == 2 || jugador.getExclusividades().size() == 1)
+            this.turnoActual.siguienteJugador(new RespuestaUnica(opcionesSeleccionadas.removeFirst(), jugador));
+        else
+            this.turnoActual.siguienteJugador(respuesta);
+    }
+
+    public void asignarExclusividad() throws IOException {
+
+            respuesta = new RespuestaUnica(opcionesSeleccionadas.removeFirst(), jugador, jugador.usarExclusividad());
     }
 }

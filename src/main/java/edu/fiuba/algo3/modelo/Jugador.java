@@ -38,6 +38,14 @@ public class Jugador {
         return puntos;
     }
 
+    public LinkedList<Exclusividad> getExclusividades() {
+        return exclusividades;
+    }
+
+    public int getCantidadExclusividades() {
+        return exclusividades.size();
+    }
+
     public void sumarPuntos(Puntos puntosASumar) {
         puntos.sumarPuntos(puntosASumar);
     }
