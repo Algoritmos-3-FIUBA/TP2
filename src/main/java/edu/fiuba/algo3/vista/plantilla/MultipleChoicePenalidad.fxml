@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.geometry.Insets?>
+<?import javafx.scene.Group?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.CheckBox?>
 <?import javafx.scene.control.Label?>
@@ -105,12 +106,12 @@
                         <DropShadow color="#cf0ccf" />
                     </effect>
                 </Button>
-                <Button fx:id="multiplicadorx2" onAction="#asignarMultiplicadorx2" contentDisplay="BOTTOM" layoutX="56.0" layoutY="312.0" mnemonicParsing="false" prefWidth="209.0" style="-fx-pref-height: 40; -fx-pref-width: 151; -fx-text-fill: white; -fx-background-color: #FF69FF; -fx-background-radius: 20;" text="     Multiplicador X2" textFill="WHITE" AnchorPane.bottomAnchor="197.0" AnchorPane.leftAnchor="56.0">
+                <Button fx:id="multiplicadorx2" contentDisplay="BOTTOM" layoutX="56.0" layoutY="312.0" mnemonicParsing="false" onAction="#asignarMultiplicadorx2" prefWidth="209.0" style="-fx-pref-height: 40; -fx-pref-width: 151; -fx-text-fill: white; -fx-background-color: #FF69FF; -fx-background-radius: 20;" text="     Multiplicador X2" textFill="WHITE" AnchorPane.bottomAnchor="197.0" AnchorPane.leftAnchor="56.0">
                     <font>
                         <Font name="Arial Bold" size="14.0" />
                     </font>
                 </Button>
-                <Button fx:id="multiplicadorx3" onAction="#asignarMultiplicadorx3" contentDisplay="BOTTOM" layoutX="56.0" layoutY="393.0" mnemonicParsing="false" prefWidth="209.0" style="-fx-pref-height: 40; -fx-pref-width: 151; -fx-text-fill: white; -fx-background-color: #FF69FF; -fx-background-radius: 20;" text="     Multiplicador X3" textFill="WHITE" AnchorPane.bottomAnchor="116.0" AnchorPane.leftAnchor="56.0">
+                <Button fx:id="multiplicadorx3" contentDisplay="BOTTOM" layoutX="56.0" layoutY="393.0" mnemonicParsing="false" onAction="#asignarMultiplicadorx3" prefWidth="209.0" style="-fx-pref-height: 40; -fx-pref-width: 151; -fx-text-fill: white; -fx-background-color: #FF69FF; -fx-background-radius: 20;" text="     Multiplicador X3" textFill="WHITE" AnchorPane.bottomAnchor="116.0" AnchorPane.leftAnchor="56.0">
                     <font>
                         <Font name="Arial Bold" size="14.0" />
                     </font>
@@ -128,14 +129,23 @@
                     <font>
                         <Font name="Arial Bold" size="16.0" />
                     </font></Label>
-                <Label fx:id="tipopregunta" layoutX="613.0" layoutY="23.0" text="Tipo de Pregunta" textFill="WHITE" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="23.0">
-                    <font>
-                        <Font name="Waree Bold" size="13.0" />
-                    </font>
-                    <effect>
-                        <Glow level="1.0" />
-                    </effect>
-                </Label>
+            <Group layoutX="574.0" layoutY="17.0" AnchorPane.rightAnchor="50.70703125" AnchorPane.topAnchor="17.0">
+               <children>
+                      <Label fx:id="tipopregunta" layoutX="39.0" layoutY="6.0" text="Tipo de Pregunta" textFill="WHITE">
+                          <font>
+                              <Font name="Waree Bold" size="13.0" />
+                          </font>
+                          <effect>
+                              <Glow level="1.0" />
+                          </effect>
+                      </Label>
+                      <ImageView fitHeight="37.0" fitWidth="35.0">
+                          <image>
+                              <Image url="@../imagenes/categoria.png" />
+                          </image>
+                      </ImageView>
+               </children>
+            </Group>
                 <Label fx:id="puntosactuales" layoutX="107.0" layoutY="212.0" text="Puntos" textFill="WHITE" AnchorPane.leftAnchor="107.0" AnchorPane.topAnchor="212.0">
                     <effect>
                         <Reflection />
@@ -185,11 +195,6 @@
                 <ImageView fitHeight="40.0" fitWidth="41.0" layoutX="63.0" layoutY="113.0">
                     <image>
                         <Image url="@../imagenes/jugador.png" />
-                    </image>
-                </ImageView>
-                <ImageView fitHeight="37.0" fitWidth="35.0" layoutX="574.0" layoutY="17.0" AnchorPane.rightAnchor="181.0">
-                    <image>
-                        <Image url="@../imagenes/categoria.png" />
                     </image>
                 </ImageView>
             </children>
