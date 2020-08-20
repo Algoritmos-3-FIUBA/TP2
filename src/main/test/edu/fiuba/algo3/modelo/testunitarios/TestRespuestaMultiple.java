@@ -192,17 +192,7 @@ public class TestRespuestaMultiple {
     }
 
     @Test
-    public void testJugadorRealizaUnaRespuestaMultipleSinOpciones11() {
-        Jugador jugador = new Jugador("Guido");
-        LinkedList<Opcion> opcionesElegidas = new LinkedList<Opcion>();
-        assertThrows(NoHayOpcionesException.class,
-                ()->{
-                    new RespuestaMultiple(opcionesElegidas,jugador);
-                });
-    }
-
-    @Test
-    public void testJugadorRealizaUnaRespuestaMultipleConMasDeCincoOpciones12() {
+    public void testJugadorRealizaUnaRespuestaMultipleConMasDeCincoOpciones11() {
         Jugador jugador = new Jugador("Guido");
         LinkedList<Opcion> opcionesElegidas = new LinkedList<Opcion>();
         opcionesElegidas.add(primeraOpcion);

@@ -19,7 +19,7 @@ import java.util.LinkedList;
 
 public class ControladorMultipleChoiceClasico extends Controlador{
     private LinkedList<CheckBox> cajasOpcionesMostradas = new LinkedList<>();
-    private ColeccionOpciones opcionesMostradas = new ColeccionOpciones();
+    private LinkedList<Opcion> opcionesSeleccionadas = new LinkedList<>();
     private Pregunta pregunta; //= new PreguntaMultipleChoice();
     private TurnoJugador turnoActual;
     private Jugador jugador;
@@ -68,20 +68,19 @@ public class ControladorMultipleChoiceClasico extends Controlador{
         jugadoractual.setText(jugadorActual.getNombre());
         puntosactuales.setText(String.valueOf(jugadorActual.getPuntos().cantidad));
 
+        for(CheckBox opcion : cajasOpcionesMostradas)
+            opcion.setSelected(false);
+
+        opcionesSeleccionadas = new LinkedList<>();
+
         for (int i = 0; i < pregunta.getOpciones().cantidadElementos(); i++) {
-            cajasOpcionesMostradas.get(i).setSelected(false);
+            cajasOpcionesMostradas.get(i).setOnAction(new SeleccionarCheckBoxMultipleChoiceHandler(pregunta.getOpciones().getOpciones().get(i), opcionesSeleccionadas));
             cajasOpcionesMostradas.get(i).setText(pregunta.getOpciones().getOpciones().get(i).getNombre());
-            opcionesMostradas.agregarOpcion(pregunta.getOpciones().getOpciones().get(i));
         }
     }
 
     public void siguienteTurno() throws IOException {
-        LinkedList<Opcion> opciones = new LinkedList<>();
-        for(int i = 0; i < cajasOpcionesMostradas.size(); i++){
-            if(cajasOpcionesMostradas.get(i).isSelected())
-                opciones.add(opcionesMostradas.getOpciones().get(i));
-        }
-        this.turnoActual.siguienteJugador(new RespuestaMultiple(opciones,jugador));
+        this.turnoActual.siguienteJugador(new RespuestaMultiple(opcionesSeleccionadas,jugador));
     }
 
 }

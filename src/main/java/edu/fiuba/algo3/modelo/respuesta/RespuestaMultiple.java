@@ -37,7 +37,7 @@ public class RespuestaMultiple extends Respuesta {
     }
 
     private void verificarNumeroDeOpciones(LinkedList<Opcion> opciones){
-        if(opciones == null || opciones.size() == 0) {
+        if(opciones == null) {
             throw new NoHayOpcionesException();
         }
 

@@ -119,17 +119,7 @@ public class TestRespuestaGrupo {
     }
 
     @Test
-    public void testJugadorRealizaUnaRespuestaGrupoSinOpciones05() {
-        Jugador jugador = new Jugador("Guido");
-        LinkedList<ColeccionOpciones> gruposElegidos = new LinkedList<ColeccionOpciones>();
-        assertThrows(NoHayOpcionesException.class,
-                ()->{
-                    new RespuestaGrupos(gruposElegidos,jugador);
-                });
-    }
-
-    @Test
-    public void testJugadorRealizaUnaRespuestaGrupoConMasDeSeisOpciones06() {
+    public void testJugadorRealizaUnaRespuestaGrupoConMasDeSeisOpciones05() {
         Jugador jugador = new Jugador("Guido");
         ColeccionOpciones grupo = new ColeccionOpciones();
         LinkedList<ColeccionOpciones> gruposElegidos = new LinkedList<ColeccionOpciones>();
@@ -150,17 +140,4 @@ public class TestRespuestaGrupo {
                 });
     }
 
-    @Test
-    public void testJugadorRealizaUnaRespuestaGrupoConMasDeSeisOpciones07() {
-        Jugador jugador = new Jugador("Guido");
-        ColeccionOpciones grupo = new ColeccionOpciones();
-        LinkedList<ColeccionOpciones> gruposElegidos = new LinkedList<ColeccionOpciones>();
-
-        gruposElegidos.add(grupo);
-
-        assertThrows(NoHayOpcionesException.class,
-                ()->{
-                    new RespuestaGrupos(gruposElegidos,jugador);
-                });
-    }
 }

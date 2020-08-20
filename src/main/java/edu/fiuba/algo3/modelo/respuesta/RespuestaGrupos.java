@@ -23,15 +23,11 @@ public class RespuestaGrupos extends Respuesta{
     }
 
     private void verificarGrupo(LinkedList<ColeccionOpciones> gruposElegidos){
-        if(gruposElegidos == null || gruposElegidos.size() == 0) {
+        if(gruposElegidos == null) {
             throw new NoHayOpcionesException();
         }
 
         for (ColeccionOpciones opcionesGrupo: gruposElegidos){
-            if(opcionesGrupo.cantidadElementos() == 0) {
-                throw new NoHayOpcionesException();
-            }
-
             if(opcionesGrupo.cantidadElementos() > 6) {
                 throw new MasDeSeisOpcionesException();
             }
