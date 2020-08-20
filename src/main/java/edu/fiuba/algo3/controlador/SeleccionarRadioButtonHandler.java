@@ -1,12 +1,10 @@
 package edu.fiuba.algo3.controlador;
 
-import edu.fiuba.algo3.modelo.ColeccionOpciones;
+import edu.fiuba.algo3.modelo.opcion.ColeccionOpciones;
 import edu.fiuba.algo3.modelo.opcion.Opcion;
 import edu.fiuba.algo3.modelo.pregunta.PreguntaVerdaderoFalso;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
-
-import java.util.LinkedList;
 
 public class SeleccionarRadioButtonHandler implements EventHandler<ActionEvent> {
 

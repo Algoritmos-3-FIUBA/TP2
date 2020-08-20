@@ -1,6 +1,4 @@
-package edu.fiuba.algo3.modelo;
-
-import edu.fiuba.algo3.modelo.opcion.Opcion;
+package edu.fiuba.algo3.modelo.opcion;
 
 import java.util.HashSet;
 import java.util.LinkedList;

@@ -1,6 +1,5 @@
 package edu.fiuba.algo3.modelo.opcion;
 
-import edu.fiuba.algo3.modelo.ColeccionOpciones;
 import edu.fiuba.algo3.modelo.respuesta.EstadoIncorrecto;
 import edu.fiuba.algo3.modelo.respuesta.EstadoRespuesta;
 
