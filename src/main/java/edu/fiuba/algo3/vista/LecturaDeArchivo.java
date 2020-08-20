@@ -17,7 +17,7 @@ import java.util.LinkedList;
 
 
 public class LecturaDeArchivo {
-    private final String ARCHIVO = "src/main/java/edu/fiuba/algo3/vista/cuestionario.json";
+    private final String ARCHIVO = "src/main/java/edu/fiuba/algo3/vista/cuestionarioPrueba.json";
 
    public LecturaDeArchivo(LinkedList<Pregunta> preguntas, HashMap<Pregunta,String> plantillaPreguntas) {
        JSONParser jsonParser = new JSONParser();
@@ -73,14 +73,14 @@ public class LecturaDeArchivo {
 
     private void instanciarPreguntaGrupoChoise(JSONObject oPregunta, LinkedList<Pregunta> preguntas, HashMap<Pregunta,String> plantillaPreguntas) {
         LinkedList<ColeccionOpciones> gruposCorrectos = new LinkedList<ColeccionOpciones>();
-        ColeccionOpciones grupo1correcto = new ColeccionOpciones();
+        ColeccionOpciones grupo1correcto = new ColeccionOpciones((String) oPregunta.get("nombregrupo1"));
         JSONArray grupo1 = (JSONArray) oPregunta.get("grupo1");
         for (Object o : grupo1) {
             String opcion = (String) o ;
             grupo1correcto.agregarOpcion(new OpcionCorrecta(opcion));
         }
         JSONArray grupo2 = (JSONArray) oPregunta.get("grupo2");
-        ColeccionOpciones grupo2correcto = new ColeccionOpciones();
+        ColeccionOpciones grupo2correcto = new ColeccionOpciones((String) oPregunta.get("nombregrupo2"));
         for (Object o : grupo2) {
             String opcion = (String) o ;
             grupo2correcto.agregarOpcion(new OpcionCorrecta(opcion));

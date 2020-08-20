@@ -16,6 +16,11 @@ public class ColeccionOpciones {
         this.opciones = opciones;
     }
 
+    public ColeccionOpciones(String nombre) {
+        this.opciones = new LinkedList<>();
+        this.nombre = nombre;
+    }
+
     public ColeccionOpciones(LinkedList<Opcion> opciones,String nombre) {
         this.opciones = opciones;
         this.nombre = nombre;
@@ -66,5 +71,11 @@ public class ColeccionOpciones {
 
     public int cantidadElementos(){
         return opciones.size();
+    }
+
+    public String getNombre() {
+        if(nombre == null)
+            return null;
+        return nombre;
     }
 }

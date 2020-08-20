@@ -4,6 +4,7 @@ import edu.fiuba.algo3.modelo.opcion.ColeccionOpciones;
 import edu.fiuba.algo3.modelo.Jugador;
 import edu.fiuba.algo3.modelo.TurnoJugador;
 import edu.fiuba.algo3.modelo.pregunta.Pregunta;
+import edu.fiuba.algo3.modelo.pregunta.PreguntaGroupChoice;
 import edu.fiuba.algo3.modelo.respuesta.RespuestaGrupos;
 import edu.fiuba.algo3.vista.App;
 import javafx.fxml.FXML;
@@ -86,19 +87,20 @@ public class ControladorGroupChoice extends Controlador{
 
         gruposElegidos = new LinkedList<>();
 
-        primerGrupo = new ColeccionOpciones();
-        segundoGrupo = new ColeccionOpciones();
+        primerGrupo = new ColeccionOpciones(((PreguntaGroupChoice)pregunta).getNombresGrupos().get(0));
+        segundoGrupo = new ColeccionOpciones(((PreguntaGroupChoice)pregunta).getNombresGrupos().get(1));
 
         gruposElegidos.add(primerGrupo);
         gruposElegidos.add(segundoGrupo);
 
         for(ComboBox caja : gruposMostrados){
             caja.setValue(null);
+            caja.getItems().clear();
         }
 
         for(ComboBox caja : gruposMostrados){
-            caja.getItems().add("Grupo1");
-            caja.getItems().add("Grupo2");
+            caja.getItems().add(primerGrupo.getNombre());
+            caja.getItems().add(segundoGrupo.getNombre());
         }
 
         for (int i = 0; i < pregunta.getOpciones().cantidadElementos(); i++)
@@ -106,12 +108,14 @@ public class ControladorGroupChoice extends Controlador{
     }
 
     public void siguienteTurno() throws IOException {
-        for(int i = 0; i < gruposMostrados.size(); i++) {
-            if(gruposMostrados.get(i).getValue() == "Grupo1")
-                primerGrupo.agregarOpcion(pregunta.getOpciones().getOpciones().get(i));
-            else
-                segundoGrupo.agregarOpcion(pregunta.getOpciones().getOpciones().get(i));
-        }
+        this.armarGrupos();
         this.turnoActual.siguienteJugador(new RespuestaGrupos(gruposElegidos,jugador));
+    }
+
+    private void armarGrupos() {
+        for(ComboBox caja : gruposMostrados)
+            for(ColeccionOpciones grupos: gruposElegidos)
+                if(caja.getValue() == grupos.getNombre())
+                    grupos.agregarOpcion(pregunta.getOpciones().getOpciones().get(gruposMostrados.indexOf(caja)));
     }
 }
