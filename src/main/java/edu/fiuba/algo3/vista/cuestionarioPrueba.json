@@ -1,18 +1,5 @@
 [
-  {
-    "Pregunta":
-    {
-      "tipo" : "MultipleChoiseClasico",
-      "nombre":"¿Capital de Alemania?",
-      "correctas": [
-        "Berlin" ],
-      "incorrectas": [
-        "Paris",
-        "Munich",
-        "Amsterdam",
-        "Roma"]
-    }
-  },{
+{
   "Pregunta": {
     "tipo": "GrupoChoice",
     "nombre": "Diferenciar entre ciudades de Europa y de Asia",

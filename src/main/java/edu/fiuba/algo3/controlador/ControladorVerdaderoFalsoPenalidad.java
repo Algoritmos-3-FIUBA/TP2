@@ -1,6 +1,5 @@
 package edu.fiuba.algo3.controlador;
 
-
 import edu.fiuba.algo3.modelo.Jugador;
 import edu.fiuba.algo3.modelo.TurnoJugador;
 import edu.fiuba.algo3.modelo.multiplicador.Multiplicador;
@@ -18,10 +17,13 @@ import javafx.stage.Stage;
 import java.io.IOException;
 import java.util.LinkedList;
 
-public class ControladorVerdaderoFalsoClasico extends Controlador {
+public class ControladorVerdaderoFalsoPenalidad  extends Controlador{
+    //private LinkedList<RadioButton> opcionesMostradas = new LinkedList<RadioButton>();
     private LinkedList<RadioButton> cajasOpcionesMostradas = new LinkedList<RadioButton>();
     private LinkedList<Opcion> opcionesSeleccionadas = new LinkedList<>();
     private LinkedList<Button> cajasMultiplicadores = new LinkedList<>();
+    private Opcion opcionSeleccionada;// = new Opcion();
+    //private Pregunta pregunta; //= new PreguntaMultipleChoice();
     private TurnoJugador turnoActual;
     private Jugador jugador;
     private Multiplicador multiplicador = new MultiplicadorDefault(); ;
@@ -50,8 +52,8 @@ public class ControladorVerdaderoFalsoClasico extends Controlador {
 
         cajasOpcionesMostradas.add(opcionfalso);
         cajasOpcionesMostradas.add(opcionverdadero);
-        multiplicadorx2.setDisable(true);
-        multiplicadorx3.setDisable(true);
+        cajasMultiplicadores.add(multiplicadorx2);
+        cajasMultiplicadores.add(multiplicadorx3);
 
     }
     @Override
@@ -66,6 +68,9 @@ public class ControladorVerdaderoFalsoClasico extends Controlador {
         for(RadioButton opcion : cajasOpcionesMostradas)
             opcion.setSelected(false);
 
+        for(Button multiplicador : cajasMultiplicadores)
+            multiplicador.setDisable(false);
+
         opcionesSeleccionadas = new LinkedList<>();
 
         for (int i = 0; i < pregunta.getOpciones().cantidadElementos(); i++) {
@@ -75,5 +80,14 @@ public class ControladorVerdaderoFalsoClasico extends Controlador {
 
     public void siguienteTurno() throws IOException {
         this.turnoActual.siguienteJugador(new RespuestaUnica(opcionesSeleccionadas.removeFirst(),jugador,multiplicador));
+    }
+
+    public void asignarMultiplicadorx2() {
+        multiplicador = jugador.usarMultiplicadorPorDos();
+        multiplicadorx2.setDisable(true);
+    }
+    public void asignarMultiplicadorx3() {
+        multiplicador = jugador.usarMultiplicadorPorTres();
+        multiplicadorx3.setDisable(true);
     }
 }

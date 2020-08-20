@@ -53,6 +53,7 @@ public class ControladorMultipleChoiceClasico extends Controlador{
         cajasOpcionesMostradas.add(opcion3);
         cajasOpcionesMostradas.add(opcion4);
         cajasOpcionesMostradas.add(opcion5);
+
     }
 
     public void actualizarPlantilla(Pregunta pregunta, Jugador jugadorActual, TurnoJugador turnoActual) {

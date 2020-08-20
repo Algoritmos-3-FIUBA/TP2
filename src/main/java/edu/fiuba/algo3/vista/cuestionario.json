@@ -10,7 +10,15 @@
   {
     "Pregunta":
     {
-      "tipo" : "MultipleChoiseClasico",
+      "tipo": "VerdaderoFalsoPenalidad",
+      "nombre": "¿Blanco es un color?",
+      "opcionCorrecta": false
+    }
+  },
+  {
+    "Pregunta":
+    {
+      "tipo" : "MultipleChoiseParcial",
       "nombre":"¿Capital de Alemania?",
       "correctas": [
         "Berlin" ],
@@ -22,30 +30,16 @@
     }
   },
   {
-  "Pregunta":
-    {
-    "tipo": "VerdaderoFalsoClasico",
-    "nombre": "¿207 es un número primo?",
-    "opcionCorrecta": false
-    }
-  },
-  {
     "Pregunta":
     {
-      "tipo" : "VerdaderoFalsoPenalidad",
-      "nombre":"¿507 es un número primo?",
-      "opcionCorrecta": false
-    }
-  },
-  {
-    "Pregunta":
-    {
-      "tipo" : "MultipleChoiseClasico",
-      "nombre":"¿Capital de Alemania?",
+      "tipo" : "MultipleChoiseParcial",
+      "nombre":"¿Cap de Francia?",
       "correctas": [
-        "Berlin" ],
+        "Paris" ],
       "incorrectas": [
-        "Paris",
+        "Berlin",
+        "Barcelona",
+        "Madrid",
         "Roma"]
     }
   },
@@ -59,23 +53,11 @@
       ],
       "incorrectas": [
         "Gualeguay",
-        "Esteros de Libera"
+        "Esteros de Libera",
+        "Uruguay"
       ]
     }
   },{
-    "Pregunta": {
-      "tipo": "MultipleChoisePenalidad",
-      "nombre": "Lagos Argentinos ",
-      "correctas": [
-        "Nahuel Huapi",
-        "Viedma"
-      ],
-      "incorrectas": [
-        "Gualeguay",
-        "Esteros de Libera"
-      ]
-    }
-    },{
     "Pregunta": {
       "tipo": "OrderedChoise",
       "nombre": "Ordenar de Mayor a Menor",
