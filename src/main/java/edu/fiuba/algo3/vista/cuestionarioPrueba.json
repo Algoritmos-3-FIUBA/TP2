@@ -14,6 +14,18 @@
     }
   },{
   "Pregunta": {
+    "tipo": "GrupoChoice",
+    "nombre": "Diferenciar entre ciudades de Europa y de Asia",
+    "grupo1": [
+      "Beijing",
+      "Tokyo"],
+    "grupo2": [
+      "Paris",
+      "Roma",
+      "Berlin"]
+  }
+},{
+  "Pregunta": {
     "tipo": "OrderedChoise",
     "nombre": "Ordenar de Mayor a Menor",
     "correctas": [

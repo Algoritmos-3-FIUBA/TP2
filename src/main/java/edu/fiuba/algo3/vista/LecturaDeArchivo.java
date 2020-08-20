@@ -83,13 +83,13 @@ public class LecturaDeArchivo {
         ColeccionOpciones grupo2correcto = new ColeccionOpciones();
         for (Object o : grupo2) {
             String opcion = (String) o ;
-            grupo2correcto.agregarOpcion(new OpcionIncorrecta(opcion));
+            grupo2correcto.agregarOpcion(new OpcionCorrecta(opcion));
         }
         gruposCorrectos.add(grupo1correcto);
         gruposCorrectos.add(grupo2correcto);
         PreguntaGroupChoice pregunta = new PreguntaGroupChoice((String) oPregunta.get("nombre"),1,gruposCorrectos);
         preguntas.add(pregunta);
-        plantillaPreguntas.put(pregunta,"src/main/java/edu/fiuba/algo3/vista/plantilla/MultipleChoiceClasico.fxml");
+        plantillaPreguntas.put(pregunta,"src/main/java/edu/fiuba/algo3/vista/plantilla/GroupChoice.fxml");
         //System.out.println(pregunta.getNombrePregunta());
    }
 
