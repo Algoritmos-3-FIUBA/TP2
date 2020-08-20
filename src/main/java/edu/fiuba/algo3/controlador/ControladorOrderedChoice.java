@@ -3,7 +3,9 @@ package edu.fiuba.algo3.controlador;
 import edu.fiuba.algo3.modelo.ColeccionOpciones;
 import edu.fiuba.algo3.modelo.Jugador;
 import edu.fiuba.algo3.modelo.TurnoJugador;
+import edu.fiuba.algo3.modelo.opcion.Opcion;
 import edu.fiuba.algo3.modelo.pregunta.Pregunta;
+import edu.fiuba.algo3.modelo.respuesta.RespuestaMultiple;
 import edu.fiuba.algo3.vista.App;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -16,7 +18,7 @@ import java.util.LinkedList;
 
 public class ControladorOrderedChoice extends Controlador{
     private LinkedList<Label> opcionesMostradas = new LinkedList<>();
-    private ColeccionOpciones opcionesElegidas = new ColeccionOpciones();
+    private LinkedList<Opcion> opcionesElegidas = new LinkedList<>();
     private Pregunta pregunta; //= new PreguntaMultipleChoice();
     private TurnoJugador turnoActual;
 
@@ -42,6 +44,7 @@ public class ControladorOrderedChoice extends Controlador{
     //public CheckBox ordenopcion6;
 
     Stage escenarioActual;
+    private Jugador jugador;
 
     public void initialize() {
         this.escenarioActual = App.obtenerEscenarioActual();
@@ -58,19 +61,18 @@ public class ControladorOrderedChoice extends Controlador{
 
     public void actualizarPlantilla(Pregunta pregunta, Jugador jugadorActual, TurnoJugador turnoActual) {
         this.turnoActual = turnoActual;
+        this.jugador = jugadorActual;
 
         nombrepregunta.setText(pregunta.getNombre());
         jugadoractual.setText(jugadorActual.getNombre());
         puntosactuales.setText(String.valueOf(jugadorActual.getPuntos().cantidad));
 
-        for (int i = 0; i < pregunta.getOpciones().cantidadElementos(); i++) {
-            //opcionesMostradas.get(i).setSelected(false);
-            opcionesMostradas.get(i).setText(pregunta.getOpciones().getOpciones().get(i).getNombre());
-        }
+        for (int i = 0; i < pregunta.getOpciones().cantidadElementos(); i++)
+            opcionesMostradas.get(i).setOnMouseClicked(new SeleccionarCheckBoxOrderedChoiceHandler(pregunta.getOpciones().getOpciones().get(i),opcionesElegidas));
     }
 
-    /*public void siguienteTurno() throws IOException {
-        this.turnoActual.siguienteJugador();
-    }*/
+    public void siguienteTurno() throws IOException {
+        this.turnoActual.siguienteJugador(new RespuestaMultiple(opcionesElegidas,jugador));
+    }
 
 }
