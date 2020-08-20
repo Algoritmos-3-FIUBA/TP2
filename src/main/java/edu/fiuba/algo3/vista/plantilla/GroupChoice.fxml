@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
@@ -7,17 +8,23 @@
 <?import javafx.scene.control.MenuBar?>
 <?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.effect.DropShadow?>
 <?import javafx.scene.effect.Glow?>
 <?import javafx.scene.effect.Reflection?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox opacity="0.8" prefHeight="400.0" prefWidth="640.0" style="-fx-background-color: purple;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ControladorMultipleChoiceClasico">
+<VBox maxHeight="600.0" maxWidth="800.0" prefHeight="580.0" prefWidth="790.0" style="-fx-background-color: purple;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.fiuba.algo3.controlador.ControladorGroupChoice">
   <children>
-    <MenuBar opacity="0.74" style="-fx-background-color: black;" VBox.vgrow="NEVER">
+    <MenuBar style="-fx-background-color: #700770; -fx-border-color: #9E0A9E;" visible="false" VBox.vgrow="NEVER">
       <menus>
-        <Menu mnemonicParsing="false" text="File">
+        <Menu mnemonicParsing="false" style="-fx-text-fill: white;" text="Archivo">
           <items>
             <MenuItem mnemonicParsing="false" text="New" />
             <MenuItem mnemonicParsing="false" text="Open…" />
@@ -33,52 +40,100 @@
             <MenuItem mnemonicParsing="false" text="Quit" />
           </items>
         </Menu>
-        <Menu mnemonicParsing="false" text="Edit">
-          <items>
-            <MenuItem mnemonicParsing="false" text="Undo" />
-            <MenuItem mnemonicParsing="false" text="Redo" />
-            <SeparatorMenuItem mnemonicParsing="false" />
-            <MenuItem mnemonicParsing="false" text="Cut" />
-            <MenuItem mnemonicParsing="false" text="Copy" />
-            <MenuItem mnemonicParsing="false" text="Paste" />
-            <MenuItem mnemonicParsing="false" text="Delete" />
-            <SeparatorMenuItem mnemonicParsing="false" />
-            <MenuItem mnemonicParsing="false" text="Select All" />
-            <MenuItem mnemonicParsing="false" text="Unselect All" />
-          </items>
-        </Menu>
-        <Menu mnemonicParsing="false" text="Help">
+        <Menu mnemonicParsing="false" style="-fx-text-fill: white;" text="Ayuda">
           <items>
             <MenuItem mnemonicParsing="false" text="About MyHelloApp" />
           </items>
         </Menu>
       </menus>
     </MenuBar>
-    <AnchorPane maxHeight="-1.0" maxWidth="-1.0" opacity="0.8" prefHeight="-1.0" prefWidth="-1.0" style="-fx-background-color: purple;" VBox.vgrow="ALWAYS">
+    <AnchorPane maxHeight="-1.0" maxWidth="-1.0" opacity="0.8" prefWidth="729.0" style="-fx-background-color: #9E0A9E;" VBox.vgrow="ALWAYS">
       <children>
-            <Label fx:id="nombrepregunta" layoutX="255.0" layoutY="69.0" text="NombrePregunta" textFill="WHITE" />
-            <Button fx:id="botonsiguiente" contentDisplay="BOTTOM" layoutX="525.0" layoutY="313.0" mnemonicParsing="false" style="-fx-pref-height: 50; -fx-pref-width: 100; -fx-text-fill: white; -fx-background-color: black; -fx-border-color: white;" text="Siguiente" textFill="WHITE">
+            <GridPane layoutX="276.0" layoutY="147.0" prefHeight="291.0" prefWidth="301.0" AnchorPane.bottomAnchor="111.0" AnchorPane.leftAnchor="276.0" AnchorPane.rightAnchor="168.0" AnchorPane.topAnchor="147.0">
+               <columnConstraints>
+                  <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" minWidth="10.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <Label fx:id="nombrepregunta" alignment="BASELINE_CENTER" contentDisplay="CENTER" prefHeight="42.0" prefWidth="287.0" style="-fx-alignment: center; -fx-text-alignment: center;" text="NombrePregunta" textAlignment="CENTER" textFill="WHITE" GridPane.halignment="CENTER">
+                     <font>
+                        <Font name="Arial Black" size="28.0" />
+                     </font>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                  </Label>
+                  <Label fx:id="opcion1" prefHeight="22.0" prefWidth="284.0" text="Opcion                                                   " textFill="WHITE" GridPane.rowIndex="1">
+                     <font>
+                        <Font name="Arial Bold" size="19.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="opcion2" prefHeight="22.0" prefWidth="284.0" text="Opcion" textFill="WHITE" GridPane.rowIndex="2">
+                     <font>
+                        <Font name="Arial Bold" size="19.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="opcion3" prefHeight="22.0" prefWidth="284.0" text="Opcion" textFill="WHITE" GridPane.rowIndex="3">
+                     <font>
+                        <Font name="Arial Bold" size="19.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="opcion4" prefHeight="22.0" prefWidth="284.0" text="Opcion" textFill="WHITE" GridPane.rowIndex="4">
+                     <font>
+                        <Font name="Arial Bold" size="19.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="opcion5" prefHeight="22.0" prefWidth="284.0" text="Opcion" textFill="WHITE" GridPane.rowIndex="5">
+                     <font>
+                        <Font name="Arial Bold" size="19.0" />
+                     </font>
+                  </Label>
+                  <ComboBox fx:id="comboopcion1" prefHeight="26.0" prefWidth="169.0" GridPane.rowIndex="1" />
+                  <ComboBox fx:id="comboopcion2" prefHeight="26.0" prefWidth="169.0" GridPane.rowIndex="2" />
+                  <ComboBox fx:id="comboopcion3" prefHeight="26.0" prefWidth="169.0" GridPane.rowIndex="3" />
+                  <ComboBox fx:id="comboopcion4" prefHeight="26.0" prefWidth="169.0" GridPane.rowIndex="4" />
+                  <ComboBox fx:id="comboopcion5" prefHeight="26.0" prefWidth="169.0" GridPane.rowIndex="5" />
+               </children>
+            </GridPane>
+            <Button fx:id="botonsiguiente" contentDisplay="BOTTOM" layoutX="669.0" layoutY="474.0" mnemonicParsing="false" style="-fx-pref-height: 50; -fx-pref-width: 100; -fx-text-fill: white; -fx-background-color: #FF69FF;" text="Siguiente" textFill="WHITE" AnchorPane.bottomAnchor="25.0" AnchorPane.rightAnchor="21.0">
                <font>
-                  <Font name="System Bold" size="14.0" />
-               </font></Button>
-            <Button fx:id="multiplicadorx2" contentDisplay="BOTTOM" layoutX="14.0" layoutY="213.0" mnemonicParsing="false" prefWidth="209.0" style="-fx-pref-height: 40; -fx-pref-width: 130; -fx-text-fill: white; -fx-background-color: black; -fx-background-radius: 20;" text="Multiplicador X2" textFill="WHITE">
+                  <Font name="Arial Bold" size="14.0" />
+               </font>
+               <effect>
+                  <DropShadow color="#cf0ccf" />
+               </effect>
+            </Button>
+            <Button fx:id="multiplicadorx2" contentDisplay="BOTTOM" layoutX="56.0" layoutY="312.0" mnemonicParsing="false" prefWidth="209.0" style="-fx-pref-height: 40; -fx-pref-width: 151; -fx-text-fill: white; -fx-background-color: #FF69FF; -fx-background-radius: 20;" text="     Multiplicador X2" textFill="WHITE" AnchorPane.bottomAnchor="197.0" AnchorPane.leftAnchor="56.0">
                <font>
-                  <Font name="System Bold" size="12.0" />
+                  <Font name="Arial Bold" size="14.0" />
                </font>
             </Button>
-            <Button fx:id="multiplicadorx3" contentDisplay="BOTTOM" layoutX="14.0" layoutY="264.0" mnemonicParsing="false" prefWidth="209.0" style="-fx-pref-height: 40; -fx-pref-width: 130; -fx-text-fill: white; -fx-background-color: black; -fx-background-radius: 20;" text="Multiplicador X3" textFill="WHITE">
+            <Button fx:id="multiplicadorx3" contentDisplay="BOTTOM" layoutX="56.0" layoutY="393.0" mnemonicParsing="false" prefWidth="209.0" style="-fx-pref-height: 40; -fx-pref-width: 151; -fx-text-fill: white; -fx-background-color: #FF69FF; -fx-background-radius: 20;" text="     Multiplicador X3" textFill="WHITE" AnchorPane.bottomAnchor="116.0" AnchorPane.leftAnchor="56.0">
                <font>
-                  <Font name="System Bold" size="12.0" />
+                  <Font name="Arial Bold" size="14.0" />
                </font>
             </Button>
-            <Button fx:id="botonsiguiente111" contentDisplay="BOTTOM" layoutX="14.0" layoutY="317.0" mnemonicParsing="false" prefWidth="209.0" style="-fx-pref-height: 40; -fx-pref-width: 130; -fx-text-fill: white; -fx-background-color: black; -fx-background-radius: 20;" text="Exclusividad" textFill="WHITE">
+            <Button fx:id="botonexclusivdad" contentDisplay="BOTTOM" layoutX="56.0" layoutY="468.0" mnemonicParsing="false" prefWidth="209.0" style="-fx-pref-height: 40; -fx-pref-width: 151; -fx-text-fill: white; -fx-background-color: #FF69FF; -fx-background-radius: 20;" text="    Exclusividad" textFill="WHITE" AnchorPane.bottomAnchor="41.0" AnchorPane.leftAnchor="56.0">
                <font>
-                  <Font name="System Bold" size="12.0" />
+                  <Font name="Arial Bold" size="14.0" />
                </font>
             </Button>
-            <Label fx:id="nombrepregunta1" layoutX="28.0" layoutY="26.0" text="Jugador:" textFill="WHITE" />
-            <Label fx:id="nombrepregunta11" layoutX="29.0" layoutY="110.0" text="Puntos:" textFill="WHITE" />
-            <Label fx:id="tipopregunta" layoutX="235.0" layoutY="24.0" text="Tipo de Pregunta" textFill="WHITE">
+            <Label layoutX="75.0" layoutY="84.0" text="Jugador:" textFill="WHITE" underline="true" AnchorPane.leftAnchor="76.0">
+               <font>
+                  <Font name="Arial Bold" size="16.0" />
+               </font></Label>
+            <Label layoutX="76.0" layoutY="168.0" text="Puntos:" textFill="WHITE" underline="true" AnchorPane.leftAnchor="76.0">
+               <font>
+                  <Font name="Arial Bold" size="16.0" />
+               </font></Label>
+            <Label fx:id="tipopregunta" layoutX="613.0" layoutY="23.0" text="Tipo de Pregunta" textFill="WHITE" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="23.0">
                <font>
                   <Font name="Waree Bold" size="13.0" />
                </font>
@@ -86,26 +141,62 @@
                   <Glow level="1.0" />
                </effect>
             </Label>
-            <Label fx:id="puntosactuales" layoutX="54.0" layoutY="154.0" text="Puntos" textFill="WHITE">
+            <Label fx:id="puntosactuales" layoutX="107.0" layoutY="212.0" text="Puntos" textFill="WHITE" AnchorPane.leftAnchor="107.0" AnchorPane.topAnchor="212.0">
                <effect>
                   <Reflection />
                </effect>
+               <font>
+                  <Font name="Arial Bold" size="16.0" />
+               </font>
             </Label>
-            <Label fx:id="jugadoractual" layoutX="54.0" layoutY="66.0" text="Actual" textFill="WHITE">
+            <Label fx:id="jugadoractual" layoutX="101.0" layoutY="124.0" text="Actual" textFill="WHITE" AnchorPane.leftAnchor="101.0" AnchorPane.topAnchor="124.0">
                <effect>
                   <Reflection />
                </effect>
+               <font>
+                  <Font name="Arial Bold" size="16.0" />
+               </font>
             </Label>
-            <Label fx:id="opcion1" layoutX="247.0" layoutY="138.0" text="Opcion1" textFill="WHITE" />
-            <Label fx:id="opcion2" layoutX="247.0" layoutY="177.0" text="Opcion2" textFill="WHITE" />
-            <Label fx:id="opcion3" layoutX="247.0" layoutY="214.0" text="Opcion3" textFill="WHITE" />
-            <Label fx:id="opcion4" layoutX="247.0" layoutY="255.0" text="Opcion4" textFill="WHITE" />
-            <Label fx:id="opcion5" layoutX="248.0" layoutY="296.0" text="Opcion5" textFill="WHITE" />
-            <ComboBox fx:id="combo1" layoutX="338.0" layoutY="133.0" prefWidth="150.0" />
-            <ComboBox fx:id="combo2" layoutX="338.0" layoutY="172.0" prefWidth="150.0" />
-            <ComboBox fx:id="combo3" layoutX="338.0" layoutY="210.0" prefWidth="150.0" />
-            <ComboBox fx:id="combo4" layoutX="338.0" layoutY="249.0" prefWidth="150.0" />
-            <ComboBox fx:id="combo5" layoutX="338.0" layoutY="289.0" prefWidth="150.0" />
+            <ImageView layoutX="17.0" layoutY="8.0">
+               <image>
+                   <Image url="@../imagenes/favicon.png" />
+               </image>
+            </ImageView>
+            <ImageView layoutX="638.0" layoutY="475.0" AnchorPane.bottomAnchor="26.0" AnchorPane.rightAnchor="104.0">
+               <image>
+                  <Image url="@../imagenes/siguiente.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="31.0" fitWidth="29.0" layoutX="59.0" layoutY="473.0" AnchorPane.bottomAnchor="45.0" AnchorPane.leftAnchor="59.0">
+               <image>
+                  <Image url="@../imagenes/exclusividad.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="31.0" fitWidth="29.0" layoutX="59.0" layoutY="316.0" AnchorPane.bottomAnchor="202.0" AnchorPane.leftAnchor="59.0">
+               <image>
+                  <Image url="@../imagenes/dos.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="31.0" fitWidth="29.0" layoutX="60.0" layoutY="396.0" AnchorPane.bottomAnchor="122.0" AnchorPane.leftAnchor="59.0">
+               <image>
+                   <Image url="@../imagenes/tres.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="40.0" fitWidth="41.0" layoutX="57.0" layoutY="196.0">
+               <image>
+                   <Image url="@../imagenes/puntos.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="40.0" fitWidth="41.0" layoutX="63.0" layoutY="113.0">
+               <image>
+                   <Image url="@../imagenes/jugador.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="37.0" fitWidth="35.0" layoutX="574.0" layoutY="17.0" AnchorPane.rightAnchor="181.0">
+               <image>
+                   <Image url="@../imagenes/categoria.png" />
+               </image>
+            </ImageView>
       </children>
     </AnchorPane>
   </children>
