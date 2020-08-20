@@ -3,8 +3,10 @@ package edu.fiuba.algo3.modelo;
 import edu.fiuba.algo3.modelo.pregunta.Pregunta;
 import edu.fiuba.algo3.vista.FormularioInicial;
 import edu.fiuba.algo3.vista.PanelJugadorGeneral;
+import javafx.animation.PauseTransition;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import javafx.util.Duration;
 
 import java.io.IOException;
 import java.util.*;
@@ -29,19 +31,32 @@ public class SistemaEscenas {
 
     public void siguienteEscena() throws IOException {
 
-  /*      PanelJugadorGeneral panelJugadorGeneral = new PanelJugadorGeneral() ;
+        PanelJugadorGeneral panelJugadorGeneral = new PanelJugadorGeneral() ;
         Scene scene = new Scene(panelJugadorGeneral, 500, 500);
         Stage escenarioPanel = new Stage();
         panelJugadorGeneral.puntosJugadores(escenarioPanel, jugadores);
         escenarioPanel.setScene(scene);
+        escenarioPanel.show();
 
-*/
+        PauseTransition pause = new PauseTransition(Duration.seconds(5));
+        pause.setOnFinished(event ->
+        {
+            try {
+                escenarioPanel.close();
+                turnos.remove().mostrarEscena();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        });
 
+        pause.play();
 
+/*
         Turno turnoSiguiente = turnos.remove();
         System.out.println(turnoSiguiente.controlador.getClass());
         System.out.println("///////////////////////////////////");
-
         turnoSiguiente.mostrarEscena();
+*/
+
     }
 }
