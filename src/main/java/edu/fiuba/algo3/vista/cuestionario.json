@@ -38,22 +38,8 @@
   {
     "Pregunta":
     {
-      "tipo" : "MultipleChoisePenalidad",
-      "nombre":"¿Capital de Alemania?",
-      "correctas": [
-        "Berlin" ],
-      "incorrectas": [
-        "Paris",
-        "Munich",
-        "Amsterdam",
-        "Roma"]
-    }
-  },
-  {
-    "Pregunta":
-    {
       "tipo" : "MultipleChoiseClasico",
-      "nombre":"¿Cap de Francia?",
+      "nombre":"¿Capital de Francia?",
       "correctas": [
         "Paris" ],
       "incorrectas": [
@@ -76,14 +62,6 @@
         "Esteros de Libera",
         "Uruguay"
       ]
-    }
-  },
-  {
-    "Pregunta":
-    {
-      "tipo": "VerdaderoFalsoPenalidad",
-      "nombre": "¿207 es un número primo?",
-      "opcionCorrecta": false
     }
   },
   {
