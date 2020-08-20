@@ -43,8 +43,9 @@ public class ControladorMultipleChoiceClasico extends Controlador{
     @FXML
     public CheckBox opcion5;
     @FXML
-    public CheckBox opcion6;
-
+    public Button multiplicadorx2;
+    @FXML
+    public Button multiplicadorx3;
     Stage escenarioActual;
 
     public void initialize() {
@@ -55,6 +56,8 @@ public class ControladorMultipleChoiceClasico extends Controlador{
         cajasOpcionesMostradas.add(opcion3);
         cajasOpcionesMostradas.add(opcion4);
         cajasOpcionesMostradas.add(opcion5);
+        multiplicadorx2.setDisable(true);
+        multiplicadorx3.setDisable(true);
 
     }
 

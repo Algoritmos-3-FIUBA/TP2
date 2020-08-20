@@ -2,6 +2,7 @@ package edu.fiuba.algo3.modelo.opcion;
 
 import edu.fiuba.algo3.modelo.respuesta.EstadoCorrecto;
 import edu.fiuba.algo3.modelo.respuesta.EstadoRespuesta;
+import edu.fiuba.algo3.modelo.respuesta.RespuestaUnica;
 
 public class OpcionCorrecta extends Opcion {
 
@@ -18,7 +19,7 @@ public class OpcionCorrecta extends Opcion {
     }
 
     @Override
-    public EstadoRespuesta asignarEstado() {
-        return new EstadoCorrecto();
+    public void corregirRespuesta(RespuestaUnica respuestaUnica) {
+        respuestaUnica.esCorrecta();
     }
 }

@@ -22,22 +22,6 @@ public abstract class PreguntaVerdaderoFalso extends Pregunta {
     public Opcion getOpcionVerdadera() { return opcionVerdadero; }
     public Opcion getOpcionFalsa() { return opcionFalso; }
 
-    /*public void evaluarRespuestas(LinkedList<Respuesta> respuestas) {
-        corregirRespuestas(respuestas);
-
-        for (Respuesta respuesta : respuestas) {
-            respuesta.actualizarCondicionDeUsoExclusividad(respuestas);
-            respuesta.calcularAmplificacionExclusividad(respuestas);
-        }
-
-        for (Respuesta respuesta : respuestas)
-            respuesta.establecerAmplificadorAdecuado();
-
-        for (Respuesta respuesta : respuestas) {
-            respuesta.otorgarPuntos(new Puntos(((RespuestaUnica)respuesta).getOpcion().getPuntos().getCantidad()));
-        }
-    }*/
-
     @Override
     public void sumarPuntosJugadores(LinkedList<Respuesta> respuestas) {
         for (Respuesta respuesta : respuestas)

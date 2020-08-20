@@ -102,7 +102,7 @@ public class TestRespuestaGrupo {
 
         RespuestaGrupos respuesta = new RespuestaGrupos(gruposElegidos, jugador);
 
-        respuesta.setCorrecta();
+        respuesta.esCorrecta();
         respuesta.otorgarPuntos(puntos);
 
         assertEquals(jugador.getPuntos().getCantidad(), 1);

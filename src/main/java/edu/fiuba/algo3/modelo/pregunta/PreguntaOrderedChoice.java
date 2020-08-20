@@ -17,13 +17,11 @@ public class PreguntaOrderedChoice extends Pregunta{
 
     public PreguntaOrderedChoice(String nombre, int puntos, ColeccionOpciones opciones) {
 
-        if(opciones.cantidadElementos() == 0) {
+        if(opciones.cantidadElementos() == 0)
             throw new NoHayOpcionesException();
-        }
 
-        if(opciones.cantidadElementos() > 5) {
+        if(opciones.cantidadElementos() > 5)
             throw new MasDeCincoOpcionesException();
-        }
 
         this.nombre = nombre;
         this.opciones = opciones;
@@ -36,23 +34,6 @@ public class PreguntaOrderedChoice extends Pregunta{
         opciones.separarEnGruposCorrespondientes(opcionesCorrectas,opcionesIncorrectas);
     }
 
-    /*public void evaluarRespuestas(LinkedList<Respuesta> respuestas) {
-        corregirRespuestas(respuestas);
-
-        for (Respuesta respuesta : respuestas) {
-            respuesta.actualizarCondicionDeUsoExclusividad(respuestas);
-            respuesta.calcularAmplificacionExclusividad(respuestas);
-        }
-
-        for (Respuesta respuesta : respuestas)
-            respuesta.establecerAmplificadorAdecuado();
-
-        for (Respuesta respuesta : respuestas) {
-            respuesta.otorgarPuntos(new Puntos(puntosOtorgados.getCantidad()));
-        }
-
-    }*/
-
     @Override
     public void sumarPuntosJugadores(LinkedList<Respuesta> respuestas) {
         for (Respuesta respuesta : respuestas)
@@ -63,7 +44,7 @@ public class PreguntaOrderedChoice extends Pregunta{
     public void corregirRespuestas(LinkedList<Respuesta> respuestas) {
         for (Respuesta respuesta : respuestas)
             if(((RespuestaMultiple) respuesta).getOpciones().esIgual(opcionesCorrectas))
-                respuesta.setCorrecta();
+                respuesta.esCorrecta();
     }
 
     public String getNombre() {
