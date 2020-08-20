@@ -25,6 +25,8 @@ public class ControladorMultipleChoiceClasico extends Controlador{
     @FXML
     public Label nombrepregunta;
     @FXML
+    public Label tipopregunta;
+    @FXML
     public Label jugadoractual;
     @FXML
     public Label puntosactuales;
@@ -60,6 +62,7 @@ public class ControladorMultipleChoiceClasico extends Controlador{
         this.jugador = jugadorActual;
 
         nombrepregunta.setText(pregunta.getNombre());
+        tipopregunta.setText(pregunta.getClass().getSimpleName());
         jugadoractual.setText(jugadorActual.getNombre());
         puntosactuales.setText(String.valueOf(jugadorActual.getPuntos().cantidad));
 
