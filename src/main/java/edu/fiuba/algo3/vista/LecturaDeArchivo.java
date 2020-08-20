@@ -17,7 +17,7 @@ import java.util.LinkedList;
 
 
 public class LecturaDeArchivo {
-    private final String ARCHIVO = "src/main/java/edu/fiuba/algo3/vista/cuestionarioPrueba.json";
+    private final String ARCHIVO = "src/main/java/edu/fiuba/algo3/vista/cuestionario.json";
 
    public LecturaDeArchivo(LinkedList<Pregunta> preguntas, HashMap<Pregunta,String> plantillaPreguntas) {
        JSONParser jsonParser = new JSONParser();
@@ -90,7 +90,6 @@ public class LecturaDeArchivo {
         PreguntaGroupChoice pregunta = new PreguntaGroupChoice((String) oPregunta.get("nombre"),1,gruposCorrectos);
         preguntas.add(pregunta);
         plantillaPreguntas.put(pregunta,"src/main/java/edu/fiuba/algo3/vista/plantilla/GroupChoice.fxml");
-        //System.out.println(pregunta.getNombrePregunta());
    }
 
     private void instanciarPreguntaOrderedChoise(JSONObject oPregunta, LinkedList<Pregunta> preguntas,HashMap<Pregunta,String> plantillaPreguntas) {
@@ -111,12 +110,12 @@ public class LecturaDeArchivo {
         JSONArray correctas = (JSONArray) oPregunta.get("correctas");
         for (Object o : correctas) {
             String opcion = (String) o ;
-            opciones.agregarOpcion(new OpcionCorrecta(opcion));
+            opciones.agregarOpcion(new OpcionCorrecta(opcion,1));
         }
         JSONArray incorrectas = (JSONArray) oPregunta.get("incorrectas");
         for (Object o : incorrectas) {
             String opcion = (String) o ;
-            opciones.agregarOpcion(new OpcionIncorrecta(opcion));
+            opciones.agregarOpcion(new OpcionIncorrecta(opcion,-1));
         }
         PreguntaMultipleChoicePenalidad pregunta = new PreguntaMultipleChoicePenalidad((String) oPregunta.get("nombre"),opciones);
         preguntas.add(pregunta);
@@ -129,12 +128,12 @@ public class LecturaDeArchivo {
         JSONArray correctas = (JSONArray) oPregunta.get("correctas");
         for (Object o : correctas) {
             String opcion = (String) o ;
-            opciones.agregarOpcion(new OpcionCorrecta(opcion));
+            opciones.agregarOpcion(new OpcionCorrecta(opcion,1));
         }
         JSONArray incorrectas = (JSONArray) oPregunta.get("incorrectas");
         for (Object o : incorrectas) {
             String opcion = (String) o ;
-            opciones.agregarOpcion(new OpcionIncorrecta(opcion));
+            opciones.agregarOpcion(new OpcionIncorrecta(opcion,-1));
         }
         PreguntaMultipleChoiceParcial pregunta = new PreguntaMultipleChoiceParcial((String) oPregunta.get("nombre"),opciones);
         preguntas.add(pregunta);
