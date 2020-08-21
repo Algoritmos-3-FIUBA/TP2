@@ -1,22 +1,22 @@
 package edu.fiuba.algo3.modelo.testunitarios;
 
+import edu.fiuba.algo3.modelo.excepciones.ColeccionDeOpcionesNoTieneNombreException;
 import edu.fiuba.algo3.modelo.opcion.ColeccionOpciones;
 import edu.fiuba.algo3.modelo.opcion.Opcion;
 import edu.fiuba.algo3.modelo.opcion.OpcionCorrecta;
 import edu.fiuba.algo3.modelo.opcion.OpcionIncorrecta;
 import org.junit.jupiter.api.Test;
 import java.util.LinkedList;
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertTrue;
-import static org.junit.jupiter.api.Assertions.assertFalse;
+
+import static org.junit.jupiter.api.Assertions.*;
 
 public class TestColeccionOpciones {
 
-    private final OpcionCorrecta primeraOpcion = new OpcionCorrecta("Juan", 0);
-    private final OpcionCorrecta segundaOpcion = new OpcionCorrecta("Mati", 0);
-    private final OpcionCorrecta terceraOpcion = new OpcionCorrecta("Fer", 0);
-    private final OpcionIncorrecta cuartaOpcion = new OpcionIncorrecta("Guido", 0);
-    private final OpcionIncorrecta quintaOpcion = new OpcionIncorrecta("Lucas", 0);
+    private OpcionCorrecta primeraOpcion = new OpcionCorrecta("Juan", 0);
+    private OpcionCorrecta segundaOpcion = new OpcionCorrecta("Mati", 0);
+    private OpcionCorrecta terceraOpcion = new OpcionCorrecta("Fer", 0);
+    private OpcionIncorrecta cuartaOpcion = new OpcionIncorrecta("Guido", 0);
+    private OpcionIncorrecta quintaOpcion = new OpcionIncorrecta("Lucas", 0);
 
     @Test
     public void testCreoGrupoConUnaListaDeOpcionesYAlPedirlasLasDevuelveCorrectamente01() {
@@ -241,5 +241,27 @@ public class TestColeccionOpciones {
         otroGrupo.agregarOpcion(cuartaOpcion);
 
         assertFalse(grupo.tieneElementos(otroGrupo));
+    }
+
+    @Test
+    public void testCreoColeccionConNombreYEsCorrecto13() {
+        ColeccionOpciones grupo = new ColeccionOpciones("Unas Opciones");
+
+        grupo.agregarOpcion(primeraOpcion);
+        grupo.agregarOpcion(segundaOpcion);
+        grupo.agregarOpcion(terceraOpcion);
+
+        assertEquals(grupo.getNombre(),"Unas Opciones");
+    }
+
+    @Test
+    public void testPidoNombreDeCleccionSinNombre14() {
+        ColeccionOpciones grupo = new ColeccionOpciones();
+
+        assertThrows(ColeccionDeOpcionesNoTieneNombreException.class,
+                ()->{
+                    grupo.getNombre();
+                });
+
     }
 }

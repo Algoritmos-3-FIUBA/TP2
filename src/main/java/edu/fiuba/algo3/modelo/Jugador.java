@@ -66,6 +66,7 @@ public class Jugador {
 
         return exclusividades.removeLast();
     }
+
     public int cantidadMultiplicadoresPor2(){
        return (this.multiplicadoresPorDos.size());
     }

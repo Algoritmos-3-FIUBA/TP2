@@ -1,5 +1,7 @@
 package edu.fiuba.algo3.modelo.opcion;
 
+import edu.fiuba.algo3.modelo.excepciones.ColeccionDeOpcionesNoTieneNombreException;
+
 import java.util.Collections;
 import java.util.HashSet;
 import java.util.LinkedList;
@@ -76,7 +78,7 @@ public class ColeccionOpciones {
 
     public String getNombre() {
         if(nombre == null)
-            return null;
+            throw new ColeccionDeOpcionesNoTieneNombreException();
 
         return nombre;
     }

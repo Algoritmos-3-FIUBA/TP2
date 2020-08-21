@@ -54,4 +54,16 @@ public class TestOpcion {
         assertEquals(opcionesCorrectas.cantidadElementos(),0);
         assertEquals(opcionesIncorrectas.cantidadElementos(),1);
     }
+
+    @Test
+    public void testOpcionDevuelveNombreEsperado06(){
+        OpcionCorrecta opcionCorrecta = new OpcionCorrecta("Cristobal Colón",1);
+        assertEquals(opcionCorrecta.getNombre(),"Cristobal Colón");
+    }
+
+    @Test
+    public void testOtraOpcionDevuelveNombreEsperado07(){
+        OpcionIncorrecta opcionIncorrecta = new OpcionIncorrecta("Cristobal Colón",1);
+        assertEquals(opcionIncorrecta.getNombre(),"Cristobal Colón");
+    }
 }
