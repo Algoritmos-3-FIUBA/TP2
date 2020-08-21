@@ -2,14 +2,9 @@ package edu.fiuba.algo3.modelo.testunitarios;
 
 import edu.fiuba.algo3.modelo.Jugador;
 import edu.fiuba.algo3.modelo.Puntos;
-import edu.fiuba.algo3.modelo.excepciones.NoHayOpcionesException;
-import edu.fiuba.algo3.modelo.excepciones.NoTieneBeneficioException;
 import edu.fiuba.algo3.modelo.multiplicador.Multiplicador;
-import edu.fiuba.algo3.modelo.pregunta.PreguntaGroupChoice;
-import edu.fiuba.algo3.modelo.pregunta.PreguntaVerdaderoFalsoClasico;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertThrows;
 
 public class TestJugador {
 
