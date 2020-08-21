@@ -245,11 +245,15 @@ public class TestColeccionOpciones {
 
     @Test
     public void testCreoColeccionConNombreYEsCorrecto13() {
-        ColeccionOpciones grupo = new ColeccionOpciones("Unas Opciones");
+        OpcionCorrecta unaOpcion = new OpcionCorrecta("1989");
+        OpcionIncorrecta otraOpcion = new OpcionIncorrecta("1990");
 
-        grupo.agregarOpcion(primeraOpcion);
-        grupo.agregarOpcion(segundaOpcion);
-        grupo.agregarOpcion(terceraOpcion);
+        LinkedList<Opcion> opciones = new LinkedList<>();
+
+        opciones.add(unaOpcion);
+        opciones.add(otraOpcion);
+
+        ColeccionOpciones grupo = new ColeccionOpciones(opciones,"Unas Opciones");
 
         assertEquals(grupo.getNombre(),"Unas Opciones");
     }
