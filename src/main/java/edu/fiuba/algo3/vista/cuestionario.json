@@ -1,4 +1,11 @@
-[
+[ {
+  "Pregunta":
+  {
+    "tipo": "VerdaderoFalsoClasico",
+    "nombre": "¿207 es un número primo?",
+    "opcionCorrecta": false
+  }
+},
   {
     "Pregunta": {
       "tipo": "GrupoChoice",
@@ -13,15 +20,7 @@
         "Tokyo",
         "Hiroshima"]
     }
-  },
-  {
-  "Pregunta":
-  {
-    "tipo": "VerdaderoFalsoClasico",
-    "nombre": "¿207 es un número primo?",
-    "opcionCorrecta": false
-  }
-},{
+  },{
   "Pregunta":
   {
     "tipo" : "MultipleChoisePenalidad",

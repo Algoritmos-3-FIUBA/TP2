@@ -1,5 +1,7 @@
 package edu.fiuba.algo3.controlador;
 
+import edu.fiuba.algo3.modelo.exclusividad.Exclusividad;
+import edu.fiuba.algo3.modelo.exclusividad.ExclusividadDefault;
 import edu.fiuba.algo3.modelo.opcion.ColeccionOpciones;
 import edu.fiuba.algo3.modelo.Jugador;
 import edu.fiuba.algo3.modelo.pregunta.Pregunta;
@@ -23,8 +25,8 @@ public class ControladorGroupChoice extends Controlador{
     private Pregunta pregunta;
     private EscenaJugador turnoActual;
     private Jugador jugador;
-    private int cantidadExclusividades = 2;
-    private Respuesta respuesta;
+   /* private int cantidadExclusividades = 2;
+    private Respuesta respuesta;*/
 
     @FXML
     public Label nombrepregunta;
@@ -62,6 +64,7 @@ public class ControladorGroupChoice extends Controlador{
     public Button multiplicadorx2;
     @FXML
     public Button multiplicadorx3;
+    private Exclusividad exclusividad = new ExclusividadDefault();
 
     public void initialize() {
 
@@ -124,16 +127,18 @@ public class ControladorGroupChoice extends Controlador{
     public void siguienteTurno() throws IOException {
 
         this.armarGrupos();
-        if(jugador.getExclusividades().size() == cantidadExclusividades || jugador.getExclusividades().size() == 0)
+        turnoActual.siguienteJugador(new RespuestaGrupos(gruposElegidos,jugador,exclusividad));
+        /*if(jugador.getExclusividades().size() == cantidadExclusividades || jugador.getExclusividades().size() == 0)
             this.turnoActual.siguienteJugador(new RespuestaGrupos(gruposElegidos,jugador));
         else
-            this.turnoActual.siguienteJugador(respuesta);
+            this.turnoActual.siguienteJugador(respuesta);*/
     }
 
     public void asignarExclusividad() throws IOException {
 
-        cantidadExclusividades = jugador.getExclusividades().size();
-        respuesta = new RespuestaGrupos(gruposElegidos,jugador, jugador.usarExclusividad());
+        /*cantidadExclusividades = jugador.getExclusividades().size();
+        respuesta = new RespuestaGrupos(gruposElegidos,jugador, jugador.usarExclusividad());*/
+        this.exclusividad = jugador.usarExclusividad();
         botonexclusivdad.setDisable(true);
     }
 

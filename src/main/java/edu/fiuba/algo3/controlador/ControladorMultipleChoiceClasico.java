@@ -1,6 +1,9 @@
 package edu.fiuba.algo3.controlador;
 
 import edu.fiuba.algo3.modelo.Jugador;
+import edu.fiuba.algo3.modelo.TurnoJugador;
+import edu.fiuba.algo3.modelo.exclusividad.Exclusividad;
+import edu.fiuba.algo3.modelo.exclusividad.ExclusividadDefault;
 import edu.fiuba.algo3.modelo.opcion.Opcion;
 import edu.fiuba.algo3.modelo.pregunta.Pregunta;
 import edu.fiuba.algo3.modelo.respuesta.Respuesta;
@@ -18,10 +21,10 @@ import java.util.LinkedList;
 public class ControladorMultipleChoiceClasico extends Controlador{
     private LinkedList<CheckBox> cajasOpcionesMostradas = new LinkedList<>();
     private LinkedList<Opcion> opcionesSeleccionadas = new LinkedList<>();
-    private EscenaJugador turnoActual;
+    private TurnoJugador turnoActual;
     private Jugador jugador;
-    private Respuesta respuesta;
-    private int cantidadExclusividades = 2;
+   /* private Respuesta respuesta;
+    private int cantidadExclusividades = 2;*/
 
     @FXML
     public Label nombrepregunta;
@@ -51,6 +54,7 @@ public class ControladorMultipleChoiceClasico extends Controlador{
     public Button botonexclusivdad;
 
     Stage escenarioActual;
+    private Exclusividad exclusividad = new ExclusividadDefault();
 
     public void initialize() {
         this.escenarioActual = App.obtenerEscenarioActual();
@@ -65,7 +69,7 @@ public class ControladorMultipleChoiceClasico extends Controlador{
 
     }
 
-    public void actualizarPlantilla(Pregunta pregunta, Jugador jugadorActual, EscenaJugador turnoActual) {
+    public void actualizarPlantilla(Pregunta pregunta, Jugador jugadorActual, TurnoJugador turnoActual) {
         this.turnoActual = turnoActual;
         this.jugador = jugadorActual;
 
@@ -95,17 +99,26 @@ public class ControladorMultipleChoiceClasico extends Controlador{
 
     public void siguienteTurno() throws IOException {
 
+        this.turnoActual.siguienteJugador(new RespuestaMultiple(opcionesSeleccionadas,jugador, exclusividad));
+        /*
         if(jugador.getExclusividades().size() == cantidadExclusividades || jugador.getExclusividades().size() == 0)
             this.turnoActual.siguienteJugador(new RespuestaMultiple(opcionesSeleccionadas,jugador));
         else
-            this.turnoActual.siguienteJugador(respuesta);
+            this.turnoActual.siguienteJugador(respuesta);*/
     }
 
     public void asignarExclusividad() throws IOException {
 
-        cantidadExclusividades = jugador.getExclusividades().size();
-        respuesta = new RespuestaMultiple(opcionesSeleccionadas,jugador, jugador.usarExclusividad());
+        this.exclusividad = jugador.usarExclusividad();
         botonexclusivdad.setDisable(true);
+
+        /*   VIEJO
+        respuesta = new RespuestaUnica(opcionesSeleccionadas.getFirst(), jugador, jugador.usarExclusividad());
+        */
+
+        /*cantidadExclusividades = jugador.getExclusividades().size();
+        respuesta = new RespuestaMultiple(opcionesSeleccionadas,jugador, jugador.usarExclusividad());
+        botonexclusivdad.setDisable(true);*/
     }
 
 }
