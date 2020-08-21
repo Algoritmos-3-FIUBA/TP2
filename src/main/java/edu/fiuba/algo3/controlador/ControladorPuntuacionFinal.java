@@ -26,6 +26,7 @@ public class ControladorPuntuacionFinal extends Controlador {
     public ControladorPuntuacionFinal()  { }
 
     public void initialize(){
+        App.escenario.setResizable(false);
     }
 
     public void actualizarPlantilla(LinkedList<Jugador> jugadores) {

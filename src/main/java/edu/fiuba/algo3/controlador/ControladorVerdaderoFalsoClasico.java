@@ -9,6 +9,7 @@ import edu.fiuba.algo3.modelo.respuesta.Respuesta;
 import edu.fiuba.algo3.modelo.respuesta.RespuestaUnica;
 import edu.fiuba.algo3.vista.App;
 import javafx.fxml.FXML;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.RadioButton;
@@ -93,7 +94,16 @@ public class ControladorVerdaderoFalsoClasico extends Controlador {
     public void siguienteTurno() throws IOException {
 
         if(jugador.getExclusividades().size() == cantidadExclusividades || jugador.getExclusividades().size() == 0)
-            this.turnoActual.siguienteJugador(new RespuestaUnica(opcionesSeleccionadas.removeFirst(), jugador));
+
+            try{
+                this.turnoActual.siguienteJugador(new RespuestaUnica(opcionesSeleccionadas.removeFirst(), jugador));
+            }catch(Exception e){
+                Alert alert = new Alert(Alert.AlertType.ERROR);
+                alert.setTitle("Error!!");
+                alert.setHeaderText("No has elegido ninguna respuesta");
+                alert.setContentText("Por favor, elegí una y volvé a intentar.");
+                alert.showAndWait();
+            }
         else
             this.turnoActual.siguienteJugador(respuesta);
     }

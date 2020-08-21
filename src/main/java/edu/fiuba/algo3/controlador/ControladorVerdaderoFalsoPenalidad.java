@@ -9,6 +9,7 @@ import edu.fiuba.algo3.modelo.pregunta.Pregunta;
 import edu.fiuba.algo3.modelo.respuesta.RespuestaUnica;
 import edu.fiuba.algo3.vista.App;
 import javafx.fxml.FXML;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.RadioButton;
@@ -85,7 +86,17 @@ public class ControladorVerdaderoFalsoPenalidad  extends Controlador{
     }
 
     public void siguienteTurno() throws IOException {
-        this.turnoActual.siguienteJugador(new RespuestaUnica(opcionesSeleccionadas.removeFirst(),jugador,multiplicador));
+
+        try{
+            this.turnoActual.siguienteJugador(new RespuestaUnica(opcionesSeleccionadas.removeFirst(),jugador,multiplicador));
+        }catch(Exception e){
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("Error!!");
+            alert.setHeaderText("No has elegido ninguna respuesta");
+            alert.setContentText("Por favor, elegí una y volvé a intentar.");
+            alert.showAndWait();
+        }
+
     }
 
     public void asignarMultiplicadorx2() {
