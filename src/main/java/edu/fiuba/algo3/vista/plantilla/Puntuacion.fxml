@@ -59,7 +59,7 @@
                   <Insets />
                </opaqueInsets>
             </Label>
-            <Label fx:id="jugador1" layoutX="447.0" layoutY="176.0" text="Jugador" textFill="WHITE">
+            <Label fx:id="jugador1" layoutX="451.0" layoutY="176.0" text="Jugador" textFill="WHITE">
                <font>
                   <Font name="Arial Bold" size="24.0" />
                </font>
@@ -79,7 +79,7 @@
                   <Font name="Arial Bold" size="24.0" />
                </font>
             </Label>
-            <Label layoutX="282.0" layoutY="253.0" text="         Puntos:" textFill="WHITE">
+            <Label layoutX="297.0" layoutY="253.0" text="         Puntos:" textFill="WHITE">
                <font>
                   <Font name="Arial Bold" size="22.0" />
                </font>
@@ -89,7 +89,7 @@
                   <Image url="@../imagenes/puntos.png" />
                </image>
             </ImageView>
-            <Label fx:id="jugador2" layoutX="453.0" layoutY="328.0" prefHeight="42.0" prefWidth="103.0" text="Jugador" textFill="WHITE">
+            <Label fx:id="jugador2" layoutX="454.0" layoutY="327.0" prefHeight="42.0" prefWidth="103.0" text="Jugador" textFill="WHITE">
                <font>
                   <Font name="Arial Bold" size="24.0" />
                </font>
@@ -109,7 +109,7 @@
                   <Font name="Arial Bold" size="24.0" />
                </font>
             </Label>
-            <Label layoutX="338.0" layoutY="418.0" text="Puntos:" textFill="WHITE">
+            <Label layoutX="348.0" layoutY="418.0" text="Puntos:" textFill="WHITE">
                <font>
                   <Font name="Arial Bold" size="22.0" />
                </font>
