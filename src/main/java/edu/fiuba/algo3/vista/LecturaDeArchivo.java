@@ -52,25 +52,25 @@ public class LecturaDeArchivo {
             case "VerdaderoFalsoPenalidad":
                 this.instanciarPreguntaVoFPenalidad(pregunta, preguntas, plantillaPreguntas);
                 break;
-            case "MultipleChoiseClasico":
-                this.instanciarPreguntaMultipleChoiseClasica(pregunta, preguntas, plantillaPreguntas);
+            case "MultipleChoiceClasico":
+                this.instanciarPreguntaMultipleChoiceClasica(pregunta, preguntas, plantillaPreguntas);
                 break;
-            case "MultipleChoiseParcial":
-                this.instanciarPreguntaMultipleChoiseParcial(pregunta, preguntas, plantillaPreguntas);
+            case "MultipleChoiceParcial":
+                this.instanciarPreguntaMultipleChoiceParcial(pregunta, preguntas, plantillaPreguntas);
                 break;
-            case "MultipleChoisePenalidad":
-                this.instanciarPreguntaMultipleChoisePenalidad(pregunta, preguntas, plantillaPreguntas);
+            case "MultipleChoicePenalidad":
+                this.instanciarPreguntaMultipleChoicePenalidad(pregunta, preguntas, plantillaPreguntas);
                 break;
-            case "OrderedChoise":
-                this.instanciarPreguntaOrderedChoise(pregunta,preguntas, plantillaPreguntas);
+            case "OrderedChoice":
+                this.instanciarPreguntaOrderedChoice(pregunta,preguntas, plantillaPreguntas);
                 break;
             case "GrupoChoice":
-                this.instanciarPreguntaGrupoChoise(pregunta,preguntas, plantillaPreguntas);
+                this.instanciarPreguntaGrupoChoice(pregunta,preguntas, plantillaPreguntas);
                 break;
         }
     }
 
-    private void instanciarPreguntaGrupoChoise(JSONObject oPregunta, LinkedList<Pregunta> preguntas, HashMap<Pregunta,String> plantillaPreguntas) {
+    private void instanciarPreguntaGrupoChoice(JSONObject oPregunta, LinkedList<Pregunta> preguntas, HashMap<Pregunta,String> plantillaPreguntas) {
         LinkedList<ColeccionOpciones> gruposCorrectos = new LinkedList<ColeccionOpciones>();
         ColeccionOpciones grupo1correcto = new ColeccionOpciones((String) oPregunta.get("nombregrupo1"));
         JSONArray grupo1 = (JSONArray) oPregunta.get("grupo1");
@@ -91,7 +91,7 @@ public class LecturaDeArchivo {
         plantillaPreguntas.put(pregunta,"src/main/java/edu/fiuba/algo3/vista/plantilla/GroupChoice.fxml");
    }
 
-    private void instanciarPreguntaOrderedChoise(JSONObject oPregunta, LinkedList<Pregunta> preguntas,HashMap<Pregunta,String> plantillaPreguntas) {
+    private void instanciarPreguntaOrderedChoice(JSONObject oPregunta, LinkedList<Pregunta> preguntas,HashMap<Pregunta,String> plantillaPreguntas) {
        ColeccionOpciones opciones = new ColeccionOpciones();
         JSONArray correctas = (JSONArray) oPregunta.get("correctas");
         for (Object o : correctas) {
@@ -103,7 +103,7 @@ public class LecturaDeArchivo {
         plantillaPreguntas.put(pregunta,"src/main/java/edu/fiuba/algo3/vista/plantilla/OrderedChoice.fxml");
     }
 
-    private void instanciarPreguntaMultipleChoisePenalidad(JSONObject oPregunta, LinkedList<Pregunta> preguntas,HashMap<Pregunta,String> plantillaPreguntas) {
+    private void instanciarPreguntaMultipleChoicePenalidad(JSONObject oPregunta, LinkedList<Pregunta> preguntas,HashMap<Pregunta,String> plantillaPreguntas) {
         ColeccionOpciones opciones = new ColeccionOpciones();
         JSONArray correctas = (JSONArray) oPregunta.get("correctas");
         for (Object o : correctas) {
@@ -120,7 +120,7 @@ public class LecturaDeArchivo {
         plantillaPreguntas.put(pregunta,"src/main/java/edu/fiuba/algo3/vista/plantilla/MultipleChoicePenalidad.fxml");
     }
 
-    private void instanciarPreguntaMultipleChoiseParcial(JSONObject oPregunta, LinkedList<Pregunta> preguntas,HashMap<Pregunta,String> plantillaPreguntas) {
+    private void instanciarPreguntaMultipleChoiceParcial(JSONObject oPregunta, LinkedList<Pregunta> preguntas,HashMap<Pregunta,String> plantillaPreguntas) {
         ColeccionOpciones opciones = new ColeccionOpciones();
         JSONArray correctas = (JSONArray) oPregunta.get("correctas");
         for (Object o : correctas) {
@@ -137,7 +137,7 @@ public class LecturaDeArchivo {
         plantillaPreguntas.put(pregunta,"src/main/java/edu/fiuba/algo3/vista/plantilla/MultipleChoiceParcial.fxml");
     }
 
-    private void instanciarPreguntaMultipleChoiseClasica(JSONObject oPregunta, LinkedList<Pregunta> preguntas,HashMap<Pregunta,String> plantillaPreguntas) {
+    private void instanciarPreguntaMultipleChoiceClasica(JSONObject oPregunta, LinkedList<Pregunta> preguntas,HashMap<Pregunta,String> plantillaPreguntas) {
        ColeccionOpciones opciones = new ColeccionOpciones();
        JSONArray correctas = (JSONArray) oPregunta.get("correctas");
        for (Object o : correctas) {

@@ -33,7 +33,7 @@
   {
   "Pregunta":
   {
-    "tipo" : "MultipleChoisePenalidad",
+    "tipo" : "MultipleChoicePenalidad",
     "nombre":"¿Capital de Alemania?",
     "correctas": [
       "Berlin" ],
@@ -47,7 +47,7 @@
   {
     "Pregunta":
     {
-      "tipo" : "MultipleChoiseClasico",
+      "tipo" : "MultipleChoiceClasico",
       "nombre":"¿Capital de Francia?",
       "correctas": [
         "Paris" ],
@@ -60,7 +60,7 @@
   },
   {
     "Pregunta": {
-      "tipo": "MultipleChoiseParcial",
+      "tipo": "MultipleChoiceParcial",
       "nombre": "Lagos Argentinos ",
       "correctas": [
         "Nahuel Huapi",
@@ -75,7 +75,7 @@
   },
 {
     "Pregunta": {
-      "tipo": "OrderedChoise",
+      "tipo": "OrderedChoice",
       "nombre": "Ordenar de Mayor a Menor",
       "correctas": [
         "20",

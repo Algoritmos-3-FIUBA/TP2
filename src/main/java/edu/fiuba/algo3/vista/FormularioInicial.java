@@ -1,6 +1,6 @@
 package edu.fiuba.algo3.vista;
 
-import edu.fiuba.algo3.controlador.BotonInicioJuego;
+import edu.fiuba.algo3.controlador.Choice;
 import javafx.geometry.HPos;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
@@ -67,7 +67,7 @@ public class FormularioInicial extends GridPane {
         GridPane.setHalignment(iniciarPartida, HPos.CENTER);
         GridPane.setMargin(iniciarPartida, new Insets(20, 0,20,0));
 
-        BotonInicioJuego botonInicioJuego = new BotonInicioJuego(jugador1,jugador2,this);
+        Choice botonInicioJuego = new Choice(jugador1,jugador2,this);
 
         iniciarPartida.setOnAction(botonInicioJuego);
     }

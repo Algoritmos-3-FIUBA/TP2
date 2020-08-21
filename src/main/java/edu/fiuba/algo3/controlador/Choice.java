@@ -14,14 +14,14 @@ import java.nio.file.Paths;
 
 import static edu.fiuba.algo3.controlador.Kahoot.juegoKahoot;
 
-public class BotonInicioJuego implements EventHandler<ActionEvent>  {
+public class Choice implements EventHandler<ActionEvent>  {
     private TextField jugador1;
     private TextField jugador2;
     private GridPane gridPane;
     private static final String SONIDO_JUEGO = "src/main/java/edu/fiuba/algo3/vista/sonidos/kahoot-lobby-music.mp3";
     private static final String SONIDO_JUEGO_PREGUNTAS = "src/main/java/edu/fiuba/algo3/vista/sonidos/musica-preguntas.mp3";
 
-    public BotonInicioJuego(TextField jugador1, TextField jugador2, GridPane gridPane) {
+    public Choice(TextField jugador1, TextField jugador2, GridPane gridPane) {
         this.jugador1 = jugador1;
         this.jugador2 = jugador2;
         this.gridPane = gridPane;
