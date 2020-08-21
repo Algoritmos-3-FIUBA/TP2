@@ -77,7 +77,7 @@ public class ControladorVerdaderoFalsoClasico extends Controlador {
         multiplicadorx2.setDisable(true);
         multiplicadorx3.setDisable(true);
 
-        if(cantidadExclusividades == 0)
+        if(jugador.getExclusividades().size() == 0)
             botonexclusivdad.setDisable(true);
         else
             botonexclusivdad.setDisable(false);
@@ -92,7 +92,7 @@ public class ControladorVerdaderoFalsoClasico extends Controlador {
 
     public void siguienteTurno() throws IOException {
 
-        if(jugador.getExclusividades().size() == cantidadExclusividades)
+        if(jugador.getExclusividades().size() == cantidadExclusividades || jugador.getExclusividades().size() == 0)
             this.turnoActual.siguienteJugador(new RespuestaUnica(opcionesSeleccionadas.removeFirst(), jugador));
         else
             this.turnoActual.siguienteJugador(respuesta);
@@ -101,7 +101,7 @@ public class ControladorVerdaderoFalsoClasico extends Controlador {
     public void asignarExclusividad() throws IOException {
 
         cantidadExclusividades = jugador.getExclusividades().size();
-        respuesta = new RespuestaUnica(opcionesSeleccionadas.removeFirst(), jugador, jugador.usarExclusividad());
+        respuesta = new RespuestaUnica(opcionesSeleccionadas.getFirst(), jugador, jugador.usarExclusividad());
         botonexclusivdad.setDisable(true);
     }
 }

@@ -81,7 +81,7 @@ public class ControladorMultipleChoiceClasico extends Controlador{
         multiplicadorx2.setDisable(true);
         multiplicadorx3.setDisable(true);
 
-        if(cantidadExclusividades == 0)
+        if(jugador.getExclusividades().size() == 0)
             botonexclusivdad.setDisable(true);
         else
             botonexclusivdad.setDisable(false);
@@ -96,7 +96,7 @@ public class ControladorMultipleChoiceClasico extends Controlador{
 
     public void siguienteTurno() throws IOException {
 
-        if(jugador.getExclusividades().size() == cantidadExclusividades)
+        if(jugador.getExclusividades().size() == cantidadExclusividades || jugador.getExclusividades().size() == 0)
             this.turnoActual.siguienteJugador(new RespuestaMultiple(opcionesSeleccionadas,jugador));
         else
             this.turnoActual.siguienteJugador(respuesta);

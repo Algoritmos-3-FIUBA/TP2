@@ -114,7 +114,7 @@ public class ControladorGroupChoice extends Controlador{
             caja.getItems().add(segundoGrupo.getNombre());
         }
 
-        if(cantidadExclusividades == 0)
+        if(jugador.getExclusividades().size() == 0)
             botonexclusivdad.setDisable(true);
         else
             botonexclusivdad.setDisable(false);
@@ -127,7 +127,7 @@ public class ControladorGroupChoice extends Controlador{
     public void siguienteTurno() throws IOException {
 
         this.armarGrupos();
-        if(jugador.getExclusividades().size() == cantidadExclusividades)
+        if(jugador.getExclusividades().size() == cantidadExclusividades || jugador.getExclusividades().size() == 0)
             this.turnoActual.siguienteJugador(new RespuestaGrupos(gruposElegidos,jugador));
         else
             this.turnoActual.siguienteJugador(respuesta);

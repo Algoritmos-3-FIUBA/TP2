@@ -101,7 +101,7 @@ public class ControladorOrderedChoice extends Controlador{
         multiplicadorx2.setDisable(true);
         multiplicadorx3.setDisable(true);
 
-        if(cantidadExclusividades == 0)
+        if(jugador.getExclusividades().size() == 0)
             botonexclusividad.setDisable(true);
         else
             botonexclusividad.setDisable(false);
@@ -114,7 +114,7 @@ public class ControladorOrderedChoice extends Controlador{
 
     public void siguienteTurno() throws IOException {
 
-        if(jugador.getExclusividades().size() == cantidadExclusividades)
+        if(jugador.getExclusividades().size() == cantidadExclusividades || jugador.getExclusividades().size() == 0)
             this.turnoActual.siguienteJugador(new RespuestaMultiple(opcionesElegidas,jugador));
         else
             this.turnoActual.siguienteJugador(respuesta);
