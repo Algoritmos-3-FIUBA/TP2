@@ -79,8 +79,8 @@ public class ControladorVerdaderoFalsoPenalidad  extends Controlador{
 
         opcionesSeleccionadas = new LinkedList<>();
 
-        for (int i = 0; i < pregunta.getOpciones().cantidadElementos(); i++) {
-            cajasOpcionesMostradas.get(i).setOnAction(new SeleccionarRadioButtonHandler(pregunta.getOpciones().getOpciones().get(i), opcionesSeleccionadas));
+        for (int i = 0; i < pregunta.getColeccionDeOpciones().cantidadElementos(); i++) {
+            cajasOpcionesMostradas.get(i).setOnAction(new SeleccionarRadioButtonHandler(pregunta.getColeccionDeOpciones().getOpciones().get(i), opcionesSeleccionadas));
         }
     }
 

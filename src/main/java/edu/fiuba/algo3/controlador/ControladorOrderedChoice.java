@@ -5,7 +5,6 @@ import edu.fiuba.algo3.modelo.exclusividad.Exclusividad;
 import edu.fiuba.algo3.modelo.exclusividad.ExclusividadDefault;
 import edu.fiuba.algo3.modelo.opcion.Opcion;
 import edu.fiuba.algo3.modelo.pregunta.Pregunta;
-import edu.fiuba.algo3.modelo.respuesta.Respuesta;
 import edu.fiuba.algo3.modelo.respuesta.RespuestaMultiple;
 import edu.fiuba.algo3.vista.App;
 import javafx.fxml.FXML;
@@ -108,9 +107,9 @@ public class ControladorOrderedChoice extends Controlador{
         else
             botonexclusividad.setDisable(false);
 
-        for (int i = 0; i < pregunta.getOpciones().cantidadElementos(); i++) {
-            opcionesMostradas.get(i).setText(pregunta.getOpciones().getOpciones().get(i).getNombre());
-            opcionesMostradas.get(i).setOnAction(new SeleccionarCheckBoxOrderedChoiceHandler(pregunta.getOpciones().getOpciones().get(i), opcionesElegidas,this));
+        for (int i = 0; i < pregunta.getColeccionDeOpciones().cantidadElementos(); i++) {
+            opcionesMostradas.get(i).setText(pregunta.getColeccionDeOpciones().getOpciones().get(i).getNombre());
+            opcionesMostradas.get(i).setOnAction(new SeleccionarCheckBoxOrderedChoiceHandler(pregunta.getColeccionDeOpciones().getOpciones().get(i), opcionesElegidas,this));
         }
     }
 
@@ -137,7 +136,7 @@ public class ControladorOrderedChoice extends Controlador{
             orden.setText("");
 
         for(int i = 0; i < opcionesElegidas.size(); i++){
-            int j = pregunta.getOpciones().getOpciones().indexOf(opcionesElegidas.get(i));
+            int j = pregunta.getColeccionDeOpciones().getOpciones().indexOf(opcionesElegidas.get(i));
             ordenMostrado.get(j).setText(Integer.toString(i+1));
         }
     }

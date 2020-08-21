@@ -31,7 +31,7 @@ public class PreguntaMultipleChoicePenalidad extends Pregunta{
     }
 
     @Override
-    public ColeccionOpciones getOpciones() {
+    public ColeccionOpciones getColeccionDeOpciones() {
         return opciones;
     }
 

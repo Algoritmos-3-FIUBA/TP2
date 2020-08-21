@@ -5,7 +5,6 @@ import edu.fiuba.algo3.modelo.exclusividad.Exclusividad;
 import edu.fiuba.algo3.modelo.exclusividad.ExclusividadDefault;
 import edu.fiuba.algo3.modelo.opcion.Opcion;
 import edu.fiuba.algo3.modelo.pregunta.Pregunta;
-import edu.fiuba.algo3.modelo.respuesta.Respuesta;
 import edu.fiuba.algo3.modelo.respuesta.RespuestaMultiple;
 import edu.fiuba.algo3.vista.App;
 import javafx.fxml.FXML;
@@ -90,9 +89,9 @@ public class ControladorMultipleChoiceClasico extends Controlador{
 
         opcionesSeleccionadas = new LinkedList<>();
 
-        for (int i = 0; i < pregunta.getOpciones().cantidadElementos(); i++) {
-            cajasOpcionesMostradas.get(i).setOnAction(new SeleccionarCheckBoxMultipleChoiceHandler(pregunta.getOpciones().getOpciones().get(i), opcionesSeleccionadas));
-            cajasOpcionesMostradas.get(i).setText(pregunta.getOpciones().getOpciones().get(i).getNombre());
+        for (int i = 0; i < pregunta.getColeccionDeOpciones().cantidadElementos(); i++) {
+            cajasOpcionesMostradas.get(i).setOnAction(new SeleccionarCheckBoxMultipleChoiceHandler(pregunta.getColeccionDeOpciones().getOpciones().get(i), opcionesSeleccionadas));
+            cajasOpcionesMostradas.get(i).setText(pregunta.getColeccionDeOpciones().getOpciones().get(i).getNombre());
         }
     }
 

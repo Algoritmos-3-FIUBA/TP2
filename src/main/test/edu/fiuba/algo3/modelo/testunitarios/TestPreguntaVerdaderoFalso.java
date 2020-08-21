@@ -91,7 +91,32 @@ public class TestPreguntaVerdaderoFalso {
     }
 
     @Test
-    public void testCreoPreguntaVerdaderoFalsoYJugadorRespondeBienConExclusividad08(){
+    public void testCreoPreguntaVerdaderoFalsoYVariosJugadoresRespondeEntoncesAsignaPuntos08(){
+        Jugador Lucas = new Jugador("Lucas");
+        Jugador Juan = new Jugador("Juan");
+        Jugador Mati = new Jugador("Mati");
+        Jugador Pablo = new Jugador("Pablo");
+
+        PreguntaVerdaderoFalsoClasico pregunta = new PreguntaVerdaderoFalsoClasico("Todas las semanas tienen siete dias");
+        pregunta.setVerdaderoOpcionCorrecta();
+
+        LinkedList<Respuesta> respuestasDeJugadores = new LinkedList<Respuesta>();
+
+        respuestasDeJugadores.add(new RespuestaUnica(pregunta.getOpcionVerdadera(),Lucas));
+        respuestasDeJugadores.add(new RespuestaUnica(pregunta.getOpcionFalsa(),Mati));
+        respuestasDeJugadores.add(new RespuestaUnica(pregunta.getOpcionVerdadera(),Pablo));
+        respuestasDeJugadores.add(new RespuestaUnica(pregunta.getOpcionFalsa(),Juan));
+
+        pregunta.evaluarRespuestas(respuestasDeJugadores);
+
+        assertEquals(Lucas.getPuntos().getCantidad(),1);
+        assertEquals(Juan.getPuntos().getCantidad(),0);
+        assertEquals(Mati.getPuntos().getCantidad(),0);
+        assertEquals(Pablo.getPuntos().getCantidad(),1);
+    }
+
+    @Test
+    public void testCreoPreguntaVerdaderoFalsoYJugadorRespondeBienConExclusividad09(){
         Jugador Lucas = new Jugador("Lucas");
 
         PreguntaVerdaderoFalsoClasico pregunta = new PreguntaVerdaderoFalsoClasico("¿1+1 no es 3?");
@@ -107,7 +132,7 @@ public class TestPreguntaVerdaderoFalso {
     }
 
     @Test
-    public void testCreoPreguntaVerdaderoFalsoYDosJugadoresRespondenBienConUnaExclusividad09(){
+    public void testCreoPreguntaVerdaderoFalsoYDosJugadoresRespondenBienConUnaExclusividad10(){
         Jugador Lucas = new Jugador("Lucas");
         Jugador Juan = new Jugador("Juan");
 
@@ -126,7 +151,7 @@ public class TestPreguntaVerdaderoFalso {
     }
 
     @Test
-    public void testCreoPreguntaVerdaderoFalsoYDosJugadoresRespondenMalConUnaExclusividad10(){
+    public void testCreoPreguntaVerdaderoFalsoYDosJugadoresRespondenMalConUnaExclusividad11(){
         Jugador Lucas = new Jugador("Lucas");
         Jugador Juan = new Jugador("Juan");
 
@@ -145,7 +170,7 @@ public class TestPreguntaVerdaderoFalso {
     }
 
     @Test
-    public void testCreoPreguntaVerdaderoFalsoYRespondeBienJugadorSinExclusividad11(){
+    public void testCreoPreguntaVerdaderoFalsoYRespondeBienElJugadorQueNoRespondioConExclusividad12(){
         Jugador Lucas = new Jugador("Lucas");
         Jugador Juan = new Jugador("Juan");
 
@@ -164,7 +189,7 @@ public class TestPreguntaVerdaderoFalso {
     }
 
     @Test
-    public void testCreoPreguntaVerdaderoFalsoYRespondeBienUnJugadorConDosExclusividades12(){
+    public void testCreoPreguntaVerdaderoFalsoYRespondeBienUnJugadorConDosExclusividades13(){
         Jugador Lucas = new Jugador("Lucas");
         Jugador Juan = new Jugador("Juan");
 
@@ -183,7 +208,7 @@ public class TestPreguntaVerdaderoFalso {
     }
 
     @Test
-    public void testCreoPreguntaVerdaderoFalsoYRespondeBienUnSoloJugadorConUnaExclusividad13(){
+    public void testCreoPreguntaVerdaderoFalsoYRespondeBienUnSoloJugadorConUnaExclusividad14(){
         Jugador Lucas = new Jugador("Lucas");
         Jugador Juan = new Jugador("Juan");
         Jugador Pedro = new Jugador("Pedro");
@@ -208,7 +233,7 @@ public class TestPreguntaVerdaderoFalso {
     }
 
     @Test
-    public void testCreoPreguntaVerdaderoFalsoYRespondenBienTresJugadoresConDosExclusividades14(){
+    public void testCreoPreguntaVerdaderoFalsoYRespondenBienTresJugadoresConDosExclusividades15(){
         Jugador Lucas = new Jugador("Lucas");
         Jugador Juan = new Jugador("Juan");
         Jugador Pedro = new Jugador("Pedro");

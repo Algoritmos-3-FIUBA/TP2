@@ -88,9 +88,9 @@ public class ControladorMultipleChoicePenalidad  extends Controlador{
 
         opcionesSeleccionadas = new LinkedList<>();
 
-        for (int i = 0; i < pregunta.getOpciones().cantidadElementos(); i++) {
-            cajasOpcionesMostradas.get(i).setOnAction(new SeleccionarCheckBoxMultipleChoiceHandler(pregunta.getOpciones().getOpciones().get(i), opcionesSeleccionadas));
-            cajasOpcionesMostradas.get(i).setText(pregunta.getOpciones().getOpciones().get(i).getNombre());
+        for (int i = 0; i < pregunta.getColeccionDeOpciones().cantidadElementos(); i++) {
+            cajasOpcionesMostradas.get(i).setOnAction(new SeleccionarCheckBoxMultipleChoiceHandler(pregunta.getColeccionDeOpciones().getOpciones().get(i), opcionesSeleccionadas));
+            cajasOpcionesMostradas.get(i).setText(pregunta.getColeccionDeOpciones().getOpciones().get(i).getNombre());
         }
     }
 

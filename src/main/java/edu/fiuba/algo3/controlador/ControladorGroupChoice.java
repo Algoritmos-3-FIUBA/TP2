@@ -6,7 +6,6 @@ import edu.fiuba.algo3.modelo.opcion.ColeccionOpciones;
 import edu.fiuba.algo3.modelo.Jugador;
 import edu.fiuba.algo3.modelo.pregunta.Pregunta;
 import edu.fiuba.algo3.modelo.pregunta.PreguntaGroupChoice;
-import edu.fiuba.algo3.modelo.respuesta.Respuesta;
 import edu.fiuba.algo3.modelo.respuesta.RespuestaGrupos;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -119,8 +118,8 @@ public class ControladorGroupChoice extends Controlador{
         else
             botonexclusivdad.setDisable(false);
 
-        for (int i = 0; i < pregunta.getOpciones().cantidadElementos(); i++)
-            opcionesMostradas.get(i).setText(pregunta.getOpciones().getOpciones().get(i).getNombre());
+        for (int i = 0; i < pregunta.getColeccionDeOpciones().cantidadElementos(); i++)
+            opcionesMostradas.get(i).setText(pregunta.getColeccionDeOpciones().getOpciones().get(i).getNombre());
     }
 
 
@@ -146,6 +145,6 @@ public class ControladorGroupChoice extends Controlador{
         for(ComboBox caja : gruposMostrados)
             for(ColeccionOpciones grupos: gruposElegidos)
                 if(caja.getValue() == grupos.getNombre())
-                    grupos.agregarOpcion(pregunta.getOpciones().getOpciones().get(gruposMostrados.indexOf(caja)));
+                    grupos.agregarOpcion(pregunta.getColeccionDeOpciones().getOpciones().get(gruposMostrados.indexOf(caja)));
     }
 }

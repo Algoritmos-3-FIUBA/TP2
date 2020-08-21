@@ -1,7 +1,6 @@
 package edu.fiuba.algo3.controlador;
 
 import edu.fiuba.algo3.modelo.Jugador;
-import edu.fiuba.algo3.controlador.EscenaJugador;
 import edu.fiuba.algo3.modelo.exclusividad.Exclusividad;
 import edu.fiuba.algo3.modelo.opcion.Opcion;
 import edu.fiuba.algo3.modelo.pregunta.Pregunta;
@@ -85,8 +84,8 @@ public class ControladorVerdaderoFalsoClasico extends Controlador {
 
         opcionesSeleccionadas = new LinkedList<>();
 
-        for (int i = 0; i < pregunta.getOpciones().cantidadElementos(); i++) {
-            cajasOpcionesMostradas.get(i).setOnAction(new SeleccionarRadioButtonHandler(pregunta.getOpciones().getOpciones().get(i), opcionesSeleccionadas));
+        for (int i = 0; i < pregunta.getColeccionDeOpciones().cantidadElementos(); i++) {
+            cajasOpcionesMostradas.get(i).setOnAction(new SeleccionarRadioButtonHandler(pregunta.getColeccionDeOpciones().getOpciones().get(i), opcionesSeleccionadas));
         }
 
     }
