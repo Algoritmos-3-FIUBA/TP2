@@ -574,9 +574,107 @@ public class TestPreguntaGroupChoice {
         assertEquals(Juan.getPuntos().getCantidad(), 0);
     }
 
+    @Test
+    public void testCreoPreguntaGroupChoiceYJugadorRespondeBienPeroAgregarOpcionesIncorrectasEnUnGrupo14() {
+
+        Jugador Guido = new Jugador("Guido");
+
+        OpcionIncorrecta quintaOpcion = new OpcionIncorrecta("Messi");
+
+        LinkedList<ColeccionOpciones> gruposCorrectos = new LinkedList<ColeccionOpciones>();
+
+        ColeccionOpciones grupo1Correcto = new ColeccionOpciones("Físicos");
+        grupo1Correcto.agregarOpcion(primeraOpcion);
+        grupo1Correcto.agregarOpcion(segundaOpcion);
+
+        ColeccionOpciones grupo2Correcto = new ColeccionOpciones("Matemáticos");
+        grupo2Correcto.agregarOpcion(terceraOpcion);
+        grupo2Correcto.agregarOpcion(cuartaOpcion);
+
+        gruposCorrectos.add(grupo1Correcto);
+        gruposCorrectos.add(grupo2Correcto);
+
+        PreguntaGroupChoice pregunta = new PreguntaGroupChoice("Colocar en cada grupo según corresponda", 1, gruposCorrectos);
+
+
+        LinkedList<Respuesta> respuestas = new LinkedList<Respuesta>();
+
+        LinkedList<ColeccionOpciones> gruposElegidos = new LinkedList<ColeccionOpciones>();
+
+        ColeccionOpciones grupo1Elegidos = new ColeccionOpciones();
+        grupo1Elegidos.agregarOpcion(primeraOpcion);
+        grupo1Elegidos.agregarOpcion(segundaOpcion);
+        grupo1Elegidos.agregarOpcion(quintaOpcion);
+
+        ColeccionOpciones grupo2Elegidos = new ColeccionOpciones();
+        grupo2Elegidos.agregarOpcion(terceraOpcion);
+        grupo2Elegidos.agregarOpcion(cuartaOpcion);
+
+        gruposElegidos.add(grupo1Elegidos);
+        gruposElegidos.add(grupo2Elegidos);
+
+        RespuestaGrupos respuesta = new RespuestaGrupos(gruposElegidos, Guido);
+
+        respuestas.add(respuesta);
+
+        pregunta.evaluarRespuestas(respuestas);
+
+        assertEquals(Guido.getPuntos().getCantidad(), 1);
+    }
+
+    @Test
+    public void testCreoPreguntaGroupChoiceYJugadorRespondeBienPeroAgregarOpcionesIncorrectasEnTodosLosGrupos15() {
+
+        Jugador Guido = new Jugador("Guido");
+
+        OpcionIncorrecta quintaOpcion = new OpcionIncorrecta("Messi");
+        OpcionIncorrecta sextaOpcion = new OpcionIncorrecta("Aguero");
+
+        LinkedList<ColeccionOpciones> gruposCorrectos = new LinkedList<ColeccionOpciones>();
+
+        ColeccionOpciones grupo1Correcto = new ColeccionOpciones("Físicos");
+        grupo1Correcto.agregarOpcion(primeraOpcion);
+        grupo1Correcto.agregarOpcion(segundaOpcion);
+
+        ColeccionOpciones grupo2Correcto = new ColeccionOpciones("Matemáticos");
+        grupo2Correcto.agregarOpcion(terceraOpcion);
+        grupo2Correcto.agregarOpcion(cuartaOpcion);
+
+        gruposCorrectos.add(grupo1Correcto);
+        gruposCorrectos.add(grupo2Correcto);
+
+        PreguntaGroupChoice pregunta = new PreguntaGroupChoice("Colocar en cada grupo según corresponda", 1, gruposCorrectos);
+
+
+        LinkedList<Respuesta> respuestas = new LinkedList<Respuesta>();
+
+        LinkedList<ColeccionOpciones> gruposElegidos = new LinkedList<ColeccionOpciones>();
+
+        ColeccionOpciones grupo1Elegidos = new ColeccionOpciones();
+        grupo1Elegidos.agregarOpcion(primeraOpcion);
+        grupo1Elegidos.agregarOpcion(segundaOpcion);
+        grupo1Elegidos.agregarOpcion(quintaOpcion);
+
+        ColeccionOpciones grupo2Elegidos = new ColeccionOpciones();
+        grupo2Elegidos.agregarOpcion(terceraOpcion);
+        grupo2Elegidos.agregarOpcion(cuartaOpcion);
+        grupo2Elegidos.agregarOpcion(sextaOpcion);
+
+        gruposElegidos.add(grupo1Elegidos);
+        gruposElegidos.add(grupo2Elegidos);
+
+        RespuestaGrupos respuesta = new RespuestaGrupos(gruposElegidos, Guido);
+
+        respuestas.add(respuesta);
+
+        pregunta.evaluarRespuestas(respuestas);
+
+        assertEquals(Guido.getPuntos().getCantidad(), 0);
+    }
+
     //Agrego este test (aunque sea un getter) para aumentar cobertura
     @Test
-    public void testCreoPreguntaGroupChoiceYTieneNombreEsperado15(){
+    public void testCreoPreguntaGroupChoiceYTieneNombreEsperado16(){
 
         LinkedList<ColeccionOpciones> gruposCorrectos = new LinkedList<ColeccionOpciones>();
 
@@ -598,7 +696,7 @@ public class TestPreguntaGroupChoice {
 
     //Agrego este test (aunque sea un getter) para aumentar cobertura
     @Test
-    public void testCreoPreguntaOrderedChoiceLePidoLasOpcionesYSonDevueltas16() {
+    public void testCreoPreguntaOrderedChoiceLePidoLasOpcionesYSonDevueltas17() {
 
         LinkedList<ColeccionOpciones> gruposCorrectos = new LinkedList<ColeccionOpciones>();
 
@@ -622,5 +720,31 @@ public class TestPreguntaGroupChoice {
         coleccionEsperada.agregarOpcion(cuartaOpcion);
 
         assert(pregunta.getColeccionDeOpciones().tieneMismosElementos(coleccionEsperada));
+    }
+
+    //Agrego este test (aunque sea un getter) para aumentar cobertura
+    @Test
+    public void testCreoPreguntaOrderedChoiceLePidoLosNombreDelasOpcionesOpcionesYSonDevueltas18() {
+
+        LinkedList<ColeccionOpciones> gruposCorrectos = new LinkedList<ColeccionOpciones>();
+
+        ColeccionOpciones grupo1Correcto = new ColeccionOpciones("Físicos");
+        grupo1Correcto.agregarOpcion(primeraOpcion);
+        grupo1Correcto.agregarOpcion(segundaOpcion);
+
+        ColeccionOpciones grupo2Correcto = new ColeccionOpciones("Matemáticos");
+        grupo2Correcto.agregarOpcion(terceraOpcion);
+        grupo2Correcto.agregarOpcion(cuartaOpcion);
+
+        gruposCorrectos.add(grupo1Correcto);
+        gruposCorrectos.add(grupo2Correcto);
+
+        PreguntaGroupChoice pregunta = new PreguntaGroupChoice("Colocar en cada grupo según corresponda", 1, gruposCorrectos);
+
+        LinkedList<String> nombresEsperados = new LinkedList<>();
+        nombresEsperados.add("Físicos");
+        nombresEsperados.add("Matemáticos");
+
+        assertEquals(pregunta.getNombresGrupos(),nombresEsperados);
     }
 }
