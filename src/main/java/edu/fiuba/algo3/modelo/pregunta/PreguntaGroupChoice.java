@@ -12,27 +12,34 @@ import java.util.LinkedList;
 
 public class PreguntaGroupChoice extends Pregunta{
 
-    private final Puntos PuntosOtorgados;
-    private final LinkedList<ColeccionOpciones> gruposCorrectos;
+    private Puntos PuntosOtorgados;
+    private LinkedList<ColeccionOpciones> gruposCorrectos;
+    private ColeccionOpciones opciones;
 
     public PreguntaGroupChoice(String nombre, int puntos, LinkedList<ColeccionOpciones> gruposCorrectos) {
 
-        this.chequearQueHayaOpciones(gruposCorrectos);
-        this.chequearQueNoHayaMasDeSeisOpciones(gruposCorrectos);
+        this.chequearQueHayaGrupos(gruposCorrectos);
+        this.chequearQueHayaCantidadDeOpcionesAdecuadas(gruposCorrectos);
 
         this.nombre = nombre;
 
         PuntosOtorgados = new Puntos(puntos);
 
         this.gruposCorrectos = gruposCorrectos;
+
+        this.opciones = new ColeccionOpciones();
+        for(ColeccionOpciones coleccion : gruposCorrectos)
+            for(Opcion opcion : coleccion.getOpciones())
+                this.opciones.agregarOpcion(opcion);
+        this.opciones.mezclar();
     }
 
-    private void chequearQueHayaOpciones(LinkedList<ColeccionOpciones> gruposCorrectos) {
+    private void chequearQueHayaGrupos(LinkedList<ColeccionOpciones> gruposCorrectos) {
         if(gruposCorrectos.size() == 0)
             throw new NoHayOpcionesException();
     }
 
-    private void chequearQueNoHayaMasDeSeisOpciones(LinkedList<ColeccionOpciones> gruposCorrectos) {
+    private void chequearQueHayaCantidadDeOpcionesAdecuadas(LinkedList<ColeccionOpciones> gruposCorrectos) {
         int cantidadOpcionesTotales = 0;
         for(ColeccionOpciones grupo : gruposCorrectos)
             cantidadOpcionesTotales += grupo.cantidadElementos();
@@ -40,15 +47,10 @@ public class PreguntaGroupChoice extends Pregunta{
             throw new MasDeSeisOpcionesException();
         if(cantidadOpcionesTotales == 0)
             throw new NoHayOpcionesException();
-
     }
 
     @Override
     public ColeccionOpciones getOpciones() {
-        ColeccionOpciones opciones = new ColeccionOpciones();
-        for(ColeccionOpciones coleccion : gruposCorrectos)
-            for(Opcion opcion : coleccion.getOpciones())
-                opciones.agregarOpcion(opcion);
         return opciones;
     }
 
@@ -73,7 +75,6 @@ public class PreguntaGroupChoice extends Pregunta{
                 if (((RespuestaGrupos) respuesta).getGruposElegidos().get(i).tieneMismosElementos(gruposCorrectos.get(i)))
                     respuesta.esCorrecta();
     }
-
 
     private Puntos puntosAOtorgar(Respuesta respuesta){
         Puntos puntosParciales = new Puntos(0);

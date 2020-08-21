@@ -1,14 +1,14 @@
-package edu.fiuba.algo3.modelo;
+package edu.fiuba.algo3.controlador;
 
-import edu.fiuba.algo3.controlador.ControladorPuntuacion;
+import edu.fiuba.algo3.modelo.Jugador;
 
 import java.io.IOException;
 import java.util.LinkedList;
 
-public class TurnoPuntuaciones extends Turno{
+public class EscenaPuntuaciones extends Escena {
     private final LinkedList<Jugador> jugadores;
 
-    public TurnoPuntuaciones(LinkedList<Jugador> jugadores, String url) throws IOException {
+    public EscenaPuntuaciones(LinkedList<Jugador> jugadores, String url) throws IOException {
         super(url);
         this.jugadores = jugadores;
     }

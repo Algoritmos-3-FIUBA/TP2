@@ -1,5 +1,6 @@
-package edu.fiuba.algo3.modelo;
+package edu.fiuba.algo3.controlador;
 
+import edu.fiuba.algo3.modelo.Jugador;
 import edu.fiuba.algo3.modelo.pregunta.Pregunta;
 import edu.fiuba.algo3.vista.LecturaDeArchivo;
 import javafx.scene.Scene;
@@ -18,7 +19,7 @@ public class Kahoot {
 
     private static HashMap<Pregunta,String> plantillasPreguntas = new HashMap<>();
 
-    private static SistemaEscenas sistemaTurnos;
+    private static SistemaTurnos sistemaTurnos;
     private static Stage escenario;
 
     private static Kahoot juego = new Kahoot();
@@ -33,7 +34,7 @@ public class Kahoot {
 
         new LecturaDeArchivo(preguntas,plantillasPreguntas);
 
-        sistemaTurnos = new SistemaEscenas(jugadores,preguntas,plantillasPreguntas);
+        sistemaTurnos = new SistemaTurnos(jugadores,preguntas,plantillasPreguntas);
         sistemaTurnos.siguienteEscena();
     }
 

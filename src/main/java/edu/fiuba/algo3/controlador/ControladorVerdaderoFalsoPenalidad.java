@@ -1,7 +1,6 @@
 package edu.fiuba.algo3.controlador;
 
 import edu.fiuba.algo3.modelo.Jugador;
-import edu.fiuba.algo3.modelo.TurnoJugador;
 import edu.fiuba.algo3.modelo.multiplicador.Multiplicador;
 import edu.fiuba.algo3.modelo.multiplicador.MultiplicadorDefault;
 import edu.fiuba.algo3.modelo.opcion.Opcion;
@@ -23,7 +22,7 @@ public class ControladorVerdaderoFalsoPenalidad  extends Controlador{
     private LinkedList<RadioButton> cajasOpcionesMostradas = new LinkedList<RadioButton>();
     private LinkedList<Opcion> opcionesSeleccionadas = new LinkedList<>();
     private LinkedList<Button> cajasMultiplicadores = new LinkedList<>();
-    private TurnoJugador turnoActual;
+    private EscenaJugador turnoActual;
     private Jugador jugador;
     private Multiplicador multiplicador = new MultiplicadorDefault();
 
@@ -59,7 +58,7 @@ public class ControladorVerdaderoFalsoPenalidad  extends Controlador{
 
     }
     @Override
-    public void actualizarPlantilla(Pregunta pregunta, Jugador jugadorActual,TurnoJugador turnoActual) {
+    public void actualizarPlantilla(Pregunta pregunta, Jugador jugadorActual, EscenaJugador turnoActual) {
         this.turnoActual = turnoActual;
         this.jugador = jugadorActual;
 
