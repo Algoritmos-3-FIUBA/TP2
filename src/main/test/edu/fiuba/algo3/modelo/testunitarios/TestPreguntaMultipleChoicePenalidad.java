@@ -325,4 +325,21 @@ public class TestPreguntaMultipleChoicePenalidad {
                     new PreguntaMultipleChoicePenalidad("¿Como se llama la calle donde se ubica la facultad de ingenieria?",  new ColeccionOpciones());
                 });
     }
+
+    //Agrego este test (aunque sea un getter) para aumentar cobertura
+    @Test
+    public void testCreoPreguntaMultipleChoicePenalidadYTieneNombreCorrecto12(){
+
+        ColeccionOpciones opciones = new ColeccionOpciones();
+
+        OpcionCorrecta primeraOpcion = new OpcionCorrecta("1969",5);
+        OpcionIncorrecta segundaOpcion = new OpcionIncorrecta("1974",-5);
+
+        opciones.agregarOpcion(primeraOpcion);
+        opciones.agregarOpcion(segundaOpcion);
+
+        PreguntaMultipleChoicePenalidad pregunta = new PreguntaMultipleChoicePenalidad("¿En que año llego el hombre a la luna?",opciones);
+
+        assertEquals(pregunta.getNombre(),"¿En que año llego el hombre a la luna?");
+    }
 }

@@ -83,7 +83,7 @@ public class TestPreguntaMultipleChoice {
         }
 
     @Test
-    public void testCreoPreguntaMultipleChoiceConDosRespuestasCorrectasYJugadorRespondeUnaCorrecta04() {
+    public void testCreoPreguntaMultipleChoiceConDosOpcionesCorrectasYJugadorRespondeUnaCorrecta04() {
 
         Jugador Mati = new Jugador("Mati");
 
@@ -116,7 +116,7 @@ public class TestPreguntaMultipleChoice {
     }
 
     @Test
-    public void testCreoPreguntaMultipleChoiceConDosRespuestasCorrectasYJugadorRespondeDosCorrectasYUnaIncorrecta05() {
+    public void testCreoPreguntaMultipleChoiceConDosOpcionesCorrectasYJugadorRespondeDosCorrectasYUnaIncorrecta05() {
 
         Jugador Mati = new Jugador("Mati");
 
@@ -185,7 +185,7 @@ public class TestPreguntaMultipleChoice {
     }
 
     @Test
-    public void testCreoPreguntaMultipleChoiceConDosRespuestasCorrectasYEvaluaVariasRespuestas07() {
+    public void testCreoPreguntaMultipleChoiceConDosOpcionesCorrectasYEvaluaVariasRespuestas07() {
 
         Jugador Mati = new Jugador("Mati");
         Jugador Juan = new Jugador("Juan");
@@ -592,5 +592,22 @@ public class TestPreguntaMultipleChoice {
                 ()->{
                     new PreguntaMultipleChoice("¿Como se llama la calle donde se ubica la facultad de ingenieria?", 7, new ColeccionOpciones());
                 });
+    }
+
+    //Agrego este test (aunque sea un getter) para aumentar cobertura
+    @Test
+    public void testCreoPreguntaMultipleChoiceYTieneNombreCorrecto16(){
+
+        ColeccionOpciones opciones = new ColeccionOpciones();
+
+        OpcionCorrecta primeraOpcion = new OpcionCorrecta("1969");
+        OpcionIncorrecta segundaOpcion = new OpcionIncorrecta("1974");
+
+        opciones.agregarOpcion(primeraOpcion);
+        opciones.agregarOpcion(segundaOpcion);
+
+        PreguntaMultipleChoice pregunta = new PreguntaMultipleChoice("¿En que año llego el hombre a la luna?",1,opciones);
+
+        assertEquals(pregunta.getNombre(),"¿En que año llego el hombre a la luna?");
     }
 }

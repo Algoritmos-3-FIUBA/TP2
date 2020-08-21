@@ -56,7 +56,8 @@ public class PreguntaGroupChoice extends Pregunta{
     public LinkedList<String> getNombresGrupos() {
         LinkedList<String> nombres = new LinkedList<>();
         for(ColeccionOpciones grupo : gruposCorrectos)
-            nombres.add(grupo.getNombre());
+            if(grupo.getNombre() != null)
+                nombres.add(grupo.getNombre());
         return nombres;
     }
 

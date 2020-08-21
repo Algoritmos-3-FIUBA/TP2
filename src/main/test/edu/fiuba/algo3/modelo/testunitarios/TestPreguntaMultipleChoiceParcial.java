@@ -584,4 +584,21 @@ public class TestPreguntaMultipleChoiceParcial {
 
         assert(opcionesEsperadas.esIgual(pregunta.getColeccionDeOpciones()));
     }
+
+    //Agrego este test (aunque sea un getter) para aumentar cobertura
+    @Test
+    public void testCreoPreguntaMultipleChoiceParcialYTieneNombreCorrecto18(){
+
+        ColeccionOpciones opciones = new ColeccionOpciones();
+
+        OpcionCorrecta primeraOpcion = new OpcionCorrecta("1969",5);
+        OpcionIncorrecta segundaOpcion = new OpcionIncorrecta("1974",0);
+
+        opciones.agregarOpcion(primeraOpcion);
+        opciones.agregarOpcion(segundaOpcion);
+
+        PreguntaMultipleChoiceParcial pregunta = new PreguntaMultipleChoiceParcial("¿En que año llego el hombre a la luna?",opciones);
+
+        assertEquals(pregunta.getNombre(),"¿En que año llego el hombre a la luna?");
+    }
 }
