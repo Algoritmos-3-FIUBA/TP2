@@ -1,22 +1,13 @@
 package edu.fiuba.algo3.controlador;
-
-import edu.fiuba.algo3.modelo.exclusividad.Exclusividad;
-import edu.fiuba.algo3.modelo.exclusividad.ExclusividadDefault;
 import edu.fiuba.algo3.modelo.opcion.ColeccionOpciones;
 import edu.fiuba.algo3.modelo.Jugador;
 import edu.fiuba.algo3.modelo.pregunta.Pregunta;
-import edu.fiuba.algo3.modelo.pregunta.PreguntaGroupChoice;
-import edu.fiuba.algo3.modelo.respuesta.Respuesta;
-import edu.fiuba.algo3.modelo.respuesta.RespuestaGrupos;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
-
 import java.io.IOException;
 import java.util.LinkedList;
-
-import static java.lang.String.valueOf;
 
 public class ControladorGroupChoice extends Controlador{
     private final LinkedList<Button> opcionesMostradas = new LinkedList<>();
@@ -59,7 +50,6 @@ public class ControladorGroupChoice extends Controlador{
     public Button multiplicadorx2;
     @FXML
     public Button multiplicadorx3;
-    private Exclusividad exclusividad = new ExclusividadDefault();
 
     public void initialize() {
 

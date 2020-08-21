@@ -12,8 +12,7 @@ public class PreguntaOrderedChoice extends Pregunta{
 
     private final Puntos puntosOtorgados;
     private final ColeccionOpciones opcionesCorrectas;
-    private final ColeccionOpciones opcionesIncorrectas;
-    private ColeccionOpciones opciones;
+    private final ColeccionOpciones opciones;
 
     public PreguntaOrderedChoice(String nombre, int puntos, ColeccionOpciones opciones) {
 
@@ -29,9 +28,9 @@ public class PreguntaOrderedChoice extends Pregunta{
         puntosOtorgados = new Puntos(puntos);
 
         opcionesCorrectas = new ColeccionOpciones();
-        opcionesIncorrectas = new ColeccionOpciones();
+        ColeccionOpciones opcionesIncorrectas = new ColeccionOpciones();
 
-        opciones.separarEnGruposCorrespondientes(opcionesCorrectas,opcionesIncorrectas);
+        opciones.separarEnGruposCorrespondientes(opcionesCorrectas, opcionesIncorrectas);
     }
 
     @Override

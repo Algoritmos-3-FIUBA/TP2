@@ -11,6 +11,6 @@ public class EstadoAsigna extends EstadoExclusividad {
 
     @Override
     public void establecerAmplificadorRequerido(Amplificador amplificador) {
-        return;
+
     }
 }

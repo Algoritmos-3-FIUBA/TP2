@@ -71,27 +71,27 @@
                                 <Insets />
                             </opaqueInsets>
                         </Label>
-                        <CheckBox fx:id="opcion1" mnemonicParsing="false" prefHeight="29.0" prefWidth="389.0" text="CheckBox" textFill="WHITE" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+                        <CheckBox fx:id="opcion1" mnemonicParsing="false" prefHeight="29.0" prefWidth="300.0" text="CheckBox" textFill="WHITE" GridPane.halignment="CENTER" GridPane.rowIndex="1">
                             <font>
                                 <Font name="Arial Bold" size="19.0" />
                             </font>
                         </CheckBox>
-                        <CheckBox fx:id="opcion2" mnemonicParsing="false" prefHeight="29.0" prefWidth="389.0" text="CheckBox" textFill="WHITE" GridPane.halignment="CENTER" GridPane.rowIndex="2">
+                        <CheckBox fx:id="opcion2" mnemonicParsing="false" prefHeight="29.0" prefWidth="300.0" text="CheckBox" textFill="WHITE" GridPane.halignment="CENTER" GridPane.rowIndex="2">
                             <font>
                                 <Font name="Arial Bold" size="19.0" />
                             </font>
                         </CheckBox>
-                        <CheckBox fx:id="opcion3" mnemonicParsing="false" prefHeight="29.0" prefWidth="389.0" text="CheckBox" textFill="WHITE" GridPane.halignment="CENTER" GridPane.rowIndex="3">
+                        <CheckBox fx:id="opcion3" mnemonicParsing="false" prefHeight="29.0" prefWidth="300.0" text="CheckBox" textFill="WHITE" GridPane.halignment="CENTER" GridPane.rowIndex="3">
                             <font>
                                 <Font name="Arial Bold" size="19.0" />
                             </font>
                         </CheckBox>
-                        <CheckBox fx:id="opcion4" mnemonicParsing="false" prefHeight="29.0" prefWidth="389.0" text="CheckBox" textFill="WHITE" GridPane.halignment="CENTER" GridPane.rowIndex="4">
+                        <CheckBox fx:id="opcion4" mnemonicParsing="false" prefHeight="29.0" prefWidth="300.0" text="CheckBox" textFill="WHITE" GridPane.halignment="CENTER" GridPane.rowIndex="4">
                             <font>
                                 <Font name="Arial Bold" size="19.0" />
                             </font>
                         </CheckBox>
-                        <CheckBox fx:id="opcion5" mnemonicParsing="false" prefHeight="29.0" prefWidth="389.0" text="CheckBox" textFill="WHITE" GridPane.halignment="CENTER" GridPane.rowIndex="5">
+                        <CheckBox fx:id="opcion5" mnemonicParsing="false" prefHeight="29.0" prefWidth="300.0" text="CheckBox" textFill="WHITE" GridPane.halignment="CENTER" GridPane.rowIndex="5">
                             <font>
                                 <Font name="Arial Bold" size="19.0" />
                             </font>

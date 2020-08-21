@@ -12,7 +12,6 @@ import static edu.fiuba.algo3.controlador.Kahoot.siguienteTurno;
 
 public class EscenaJugador extends Escena {
     private Jugador jugadorActual;
-    private Respuesta respuestaActual;
     private Queue<Jugador> jugadoresRestantes = new LinkedList();
     private Pregunta pregunta;
     private LinkedList<Respuesta> respuestas = new LinkedList<>();

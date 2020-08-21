@@ -10,9 +10,7 @@ import java.io.IOException;
 import java.util.HashMap;
 import java.util.LinkedList;
 
-public class Kahoot {
-
-
+public class Kahoot{
     private static LinkedList<Jugador> jugadores = new LinkedList<>();
 
     private static LinkedList<Pregunta> preguntas = new LinkedList<>();
@@ -21,8 +19,6 @@ public class Kahoot {
 
     private static SistemaTurnos sistemaTurnos;
     private static Stage escenario;
-
-    private static Kahoot juego = new Kahoot();
 
     private Kahoot(){}
 

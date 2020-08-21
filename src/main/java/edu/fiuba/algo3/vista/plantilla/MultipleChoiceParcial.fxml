@@ -50,55 +50,7 @@
     </MenuBar>
     <AnchorPane maxHeight="-1.0" maxWidth="-1.0" opacity="0.8" prefWidth="729.0" style="-fx-background-color: #9E0A9E;" VBox.vgrow="ALWAYS">
       <children>
-            <GridPane layoutX="276.0" layoutY="147.0" prefHeight="291.0" prefWidth="346.0" AnchorPane.bottomAnchor="111.0" AnchorPane.leftAnchor="276.0" AnchorPane.rightAnchor="168.0" AnchorPane.topAnchor="147.0">
-               <columnConstraints>
-                  <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" />
-               </columnConstraints>
-               <rowConstraints>
-                  <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
-                  <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
-                  <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
-                  <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
-                  <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
-                  <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
-               </rowConstraints>
-               <children>
-                  <Label fx:id="nombrepregunta" alignment="BASELINE_CENTER" contentDisplay="CENTER" prefHeight="42.0" prefWidth="287.0" style="-fx-alignment: center; -fx-text-alignment: center;" text="NombrePregunta" textAlignment="CENTER" textFill="WHITE" GridPane.halignment="CENTER">
-                     <font>
-                        <Font name="Arial Black" size="28.0" />
-                     </font>
-                     <opaqueInsets>
-                        <Insets />
-                     </opaqueInsets>
-                  </Label>
-                  <CheckBox fx:id="opcion1" mnemonicParsing="false" text="CheckBox" textFill="WHITE" GridPane.halignment="CENTER" GridPane.rowIndex="1">
-                     <font>
-                        <Font name="Arial Bold" size="19.0" />
-                     </font>
-                  </CheckBox>
-                  <CheckBox fx:id="opcion2" mnemonicParsing="false" text="CheckBox" textFill="WHITE" GridPane.halignment="CENTER" GridPane.rowIndex="2">
-                     <font>
-                        <Font name="Arial Bold" size="19.0" />
-                     </font>
-                  </CheckBox>
-                  <CheckBox fx:id="opcion3" mnemonicParsing="false" text="CheckBox" textFill="WHITE" GridPane.halignment="CENTER" GridPane.rowIndex="3">
-                     <font>
-                        <Font name="Arial Bold" size="19.0" />
-                     </font>
-                  </CheckBox>
-                  <CheckBox fx:id="opcion4" mnemonicParsing="false" text="CheckBox" textFill="WHITE" GridPane.halignment="CENTER" GridPane.rowIndex="4">
-                     <font>
-                        <Font name="Arial Bold" size="19.0" />
-                     </font>
-                  </CheckBox>
-                  <CheckBox fx:id="opcion5" mnemonicParsing="false" prefHeight="26.0" prefWidth="127.0" text="CheckBox" textFill="WHITE" GridPane.halignment="CENTER" GridPane.rowIndex="5">
-                     <font>
-                        <Font name="Arial Bold" size="19.0" />
-                     </font>
-                  </CheckBox>
-               </children>
-            </GridPane>
-            <Button fx:id="botonsiguiente" onAction="#siguienteTurno" contentDisplay="BOTTOM" layoutX="669.0" layoutY="474.0" mnemonicParsing="false" style="-fx-pref-height: 50; -fx-pref-width: 100; -fx-text-fill: white; -fx-background-color: #FF69FF;" text="Siguiente" textFill="WHITE" AnchorPane.bottomAnchor="25.0" AnchorPane.rightAnchor="21.0">
+            <Button fx:id="botonsiguiente" contentDisplay="BOTTOM" layoutX="669.0" layoutY="474.0" mnemonicParsing="false" onAction="#siguienteTurno" style="-fx-pref-height: 50; -fx-pref-width: 100; -fx-text-fill: white; -fx-background-color: #FF69FF;" text="Siguiente" textFill="WHITE" AnchorPane.bottomAnchor="25.0" AnchorPane.rightAnchor="21.0">
                <font>
                   <Font name="Arial Bold" size="14.0" />
                </font>
@@ -116,7 +68,7 @@
                   <Font name="Arial Bold" size="14.0" />
                </font>
             </Button>
-            <Button fx:id="botonexclusivdad" onAction="#asignarExclusividad" contentDisplay="BOTTOM" layoutX="56.0" layoutY="468.0" mnemonicParsing="false" prefWidth="209.0" style="-fx-pref-height: 40; -fx-pref-width: 151; -fx-text-fill: white; -fx-background-color: #FF69FF; -fx-background-radius: 20;" text="    Exclusividad" textFill="WHITE" AnchorPane.bottomAnchor="41.0" AnchorPane.leftAnchor="56.0">
+            <Button fx:id="botonexclusivdad" contentDisplay="BOTTOM" layoutX="56.0" layoutY="468.0" mnemonicParsing="false" onAction="#asignarExclusividad" prefWidth="209.0" style="-fx-pref-height: 40; -fx-pref-width: 151; -fx-text-fill: white; -fx-background-color: #FF69FF; -fx-background-radius: 20;" text="    Exclusividad" textFill="WHITE" AnchorPane.bottomAnchor="41.0" AnchorPane.leftAnchor="56.0">
                <font>
                   <Font name="Arial Bold" size="14.0" />
                </font>
@@ -197,6 +149,54 @@
                   <Image url="@../imagenes/jugador.png" />
               </image>
           </ImageView>
+            <GridPane layoutX="204.0" layoutY="24.0" prefHeight="301.0" prefWidth="529.0" AnchorPane.bottomAnchor="124.0" AnchorPane.leftAnchor="203.0" AnchorPane.rightAnchor="58.0" AnchorPane.topAnchor="124.0">
+               <columnConstraints>
+                  <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <Label fx:id="nombrepregunta" alignment="BASELINE_CENTER" contentDisplay="CENTER" prefHeight="35.0" prefWidth="521.0" style="-fx-alignment: center; -fx-text-alignment: center;" text="NombrePregunta" textAlignment="CENTER" textFill="WHITE" GridPane.halignment="CENTER">
+                     <font>
+                        <Font name="Arial Black" size="28.0" />
+                     </font>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                  </Label>
+                  <CheckBox fx:id="opcion1" mnemonicParsing="false" prefHeight="29.0" prefWidth="300.0" text="CheckBox" textFill="WHITE" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+                     <font>
+                        <Font name="Arial Bold" size="19.0" />
+                     </font>
+                  </CheckBox>
+                  <CheckBox fx:id="opcion2" mnemonicParsing="false" prefHeight="29.0" prefWidth="300.0" text="CheckBox" textFill="WHITE" GridPane.halignment="CENTER" GridPane.rowIndex="2">
+                     <font>
+                        <Font name="Arial Bold" size="19.0" />
+                     </font>
+                  </CheckBox>
+                  <CheckBox fx:id="opcion3" mnemonicParsing="false" prefHeight="29.0" prefWidth="300.0" text="CheckBox" textFill="WHITE" GridPane.halignment="CENTER" GridPane.rowIndex="3">
+                     <font>
+                        <Font name="Arial Bold" size="19.0" />
+                     </font>
+                  </CheckBox>
+                  <CheckBox fx:id="opcion4" mnemonicParsing="false" prefHeight="29.0" prefWidth="300.0" text="CheckBox" textFill="WHITE" GridPane.halignment="CENTER" GridPane.rowIndex="4">
+                     <font>
+                        <Font name="Arial Bold" size="19.0" />
+                     </font>
+                  </CheckBox>
+                  <CheckBox fx:id="opcion5" mnemonicParsing="false" prefHeight="29.0" prefWidth="300.0" text="CheckBox" textFill="WHITE" GridPane.halignment="CENTER" GridPane.rowIndex="5">
+                     <font>
+                        <Font name="Arial Bold" size="19.0" />
+                     </font>
+                  </CheckBox>
+               </children>
+            </GridPane>
       </children>
     </AnchorPane>
   </children>

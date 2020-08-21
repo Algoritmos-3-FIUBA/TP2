@@ -2,7 +2,6 @@ package edu.fiuba.algo3.modelo.testunitarios;
 
 import edu.fiuba.algo3.modelo.Jugador;
 import edu.fiuba.algo3.modelo.Puntos;
-import edu.fiuba.algo3.modelo.excepciones.NoHayOpcionesException;
 import edu.fiuba.algo3.modelo.multiplicador.MultiplicadorPorTres;
 import edu.fiuba.algo3.modelo.multiplicador.MultiplicadorPorDos;
 import edu.fiuba.algo3.modelo.opcion.Opcion;
@@ -11,7 +10,6 @@ import edu.fiuba.algo3.modelo.respuesta.RespuestaUnica;
 import org.junit.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertThrows;
 
 public class TestRespuestaUnica {
 

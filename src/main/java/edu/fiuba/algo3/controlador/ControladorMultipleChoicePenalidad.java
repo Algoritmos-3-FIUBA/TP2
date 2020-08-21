@@ -1,11 +1,7 @@
 package edu.fiuba.algo3.controlador;
 
 import edu.fiuba.algo3.modelo.Jugador;
-import edu.fiuba.algo3.modelo.multiplicador.Multiplicador;
-import edu.fiuba.algo3.modelo.multiplicador.MultiplicadorDefault;
-import edu.fiuba.algo3.modelo.opcion.Opcion;
 import edu.fiuba.algo3.modelo.pregunta.Pregunta;
-import edu.fiuba.algo3.modelo.respuesta.RespuestaMultiple;
 import edu.fiuba.algo3.vista.App;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -48,10 +44,7 @@ public class ControladorMultipleChoicePenalidad  extends Controlador{
     @FXML
     public Button botonexclusivdad;
 
-    Stage escenarioActual;
-
     public void initialize() {
-        this.escenarioActual = App.obtenerEscenarioActual();
 
         cajasOpcionesMostradas.add(opcion1);
         cajasOpcionesMostradas.add(opcion2);

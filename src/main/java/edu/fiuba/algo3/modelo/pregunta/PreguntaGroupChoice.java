@@ -11,9 +11,9 @@ import java.util.LinkedList;
 
 public class PreguntaGroupChoice extends Pregunta{
 
-    private Puntos PuntosOtorgados;
-    private LinkedList<ColeccionOpciones> gruposCorrectos;
-    private ColeccionOpciones opciones;
+    private final Puntos PuntosOtorgados;
+    private final LinkedList<ColeccionOpciones> gruposCorrectos;
+    private final ColeccionOpciones opciones;
 
     public PreguntaGroupChoice(String nombre, int puntos, LinkedList<ColeccionOpciones> gruposCorrectos) {
 
