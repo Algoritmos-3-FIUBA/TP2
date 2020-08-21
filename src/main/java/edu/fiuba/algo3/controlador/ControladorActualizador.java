@@ -46,7 +46,7 @@ public class ControladorActualizador {
             opcion.setSelected(false);
 
         if(jugador.getExclusividades().size() == 0) botonexclusivdad.setDisable(true);
-        botonexclusivdad.setDisable(false);
+        else botonexclusivdad.setDisable(false);
 
         opcionesSeleccionadas = new LinkedList<>();
 
@@ -75,7 +75,7 @@ public class ControladorActualizador {
             opcion.setSelected(false);
 
         if(jugador.getExclusividades().size() == 0) botonexclusivdad.setDisable(true);
-        botonexclusivdad.setDisable(false);
+        else botonexclusivdad.setDisable(false);
 
         opcionesSeleccionadas = new LinkedList<>();
 
@@ -89,7 +89,7 @@ public class ControladorActualizador {
         // opcionesElegidas = new LinkedList<>();
 
         if(jugador.getExclusividades().size() == 0) botonexclusividad.setDisable(true);
-        botonexclusividad.setDisable(false);
+        else botonexclusividad.setDisable(false);
 
         for (int i = 0; i < pregunta.getColeccionDeOpciones().cantidadElementos(); i++) {
             opcionesMostradas.get(i).setText(pregunta.getColeccionDeOpciones().getOpciones().get(i).getNombre());
@@ -196,7 +196,7 @@ public class ControladorActualizador {
         });
 
         if(jugador.getExclusividades().size() == 0) botonexclusivdad.setDisable(true);
-        botonexclusivdad.setDisable(false);
+        else botonexclusivdad.setDisable(false);
 
         for (int i = 0; i < pregunta.getColeccionDeOpciones().cantidadElementos(); i++)
             opcionesMostradas.get(i).setText(pregunta.getColeccionDeOpciones().getOpciones().get(i).getNombre());
