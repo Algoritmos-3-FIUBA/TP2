@@ -9,14 +9,14 @@ import static org.junit.jupiter.api.Assertions.*;
 public class TestAmplificador {
 
     @Test
-    public void CreoUnAmplificadorConUnFactorYElFactorDevueltoEsElEsperado(){
+    public void CreoUnAmplificadorConUnFactorYElFactorDevueltoEsElEsperado01(){
         Amplificador amplificador = new Amplificador(5);
 
         assertEquals(5,amplificador.getFactor());
     }
 
     @Test
-    public void CreoUnAmplificadorConUnFactorSeLoCambioYElFactorDevueltoEsElEsperado(){
+    public void CreoUnAmplificadorConUnFactorSeLoCambioYElFactorDevueltoEsElEsperado02(){
         Amplificador amplificador = new Amplificador(5);
 
         amplificador.setFactor(2);
@@ -25,7 +25,7 @@ public class TestAmplificador {
     }
 
     @Test
-    public void UsoAmplificadorParaAmplificarPuntosYLoHaceCorrectamente(){
+    public void UsoAmplificadorParaAmplificarPuntosYLoHaceCorrectamente03(){
         Amplificador amplificador = new Amplificador(3);
         Puntos puntos = new Puntos(10);
 
@@ -35,7 +35,7 @@ public class TestAmplificador {
     }
 
     @Test
-    public void UsoOtroAmplificadorParaAmplificarOtrosPuntosYLoHaceCorrectamente(){
+    public void UsoOtroAmplificadorParaAmplificarOtrosPuntosYLoHaceCorrectamente04(){
         Amplificador amplificador = new Amplificador(5);
         Puntos puntos = new Puntos(7);
 
@@ -45,7 +45,7 @@ public class TestAmplificador {
     }
 
     @Test
-    public void LeMultiplicoElFactorAUnAmplificadorYLoHaceCorrectamente(){
+    public void LeMultiplicoElFactorAUnAmplificadorYLoHaceCorrectamente05(){
         Amplificador amplificador = new Amplificador(5);
 
         amplificador.multiplicarFactor(2);

@@ -3,6 +3,8 @@ package edu.fiuba.algo3.modelo.testunitarios;
 import edu.fiuba.algo3.modelo.Jugador;
 import edu.fiuba.algo3.modelo.Puntos;
 import edu.fiuba.algo3.modelo.excepciones.MasDeCincoOpcionesException;
+import edu.fiuba.algo3.modelo.multiplicador.MultiplicadorPorDos;
+import edu.fiuba.algo3.modelo.multiplicador.MultiplicadorPorTres;
 import edu.fiuba.algo3.modelo.opcion.Opcion;
 import edu.fiuba.algo3.modelo.opcion.OpcionCorrecta;
 import edu.fiuba.algo3.modelo.respuesta.RespuestaMultiple;
@@ -188,9 +190,46 @@ public class TestRespuestaMultiple {
         opcionesElegidas.add(cuartaOpcion);
         opcionesElegidas.add(quintaOpcion);
         opcionesElegidas.add(sextaOpcion);
+
         assertThrows(MasDeCincoOpcionesException.class,
                 ()->{
                     new RespuestaMultiple(opcionesElegidas,jugador);
                 });
+    }
+
+    @Test
+    public void testJugadorRealizaUnaRespuestaConMultiplicadorYAsignaLosPuntosCorrectos11(){
+        Jugador jugador = new Jugador("Guido");
+
+        //Opciones que son eligidas
+        LinkedList<Opcion> opcionesElegidas = new LinkedList<Opcion>();
+        opcionesElegidas.add(cuartaOpcion);
+        opcionesElegidas.add(terceraOpcion);
+        opcionesElegidas.add(quintaOpcion);
+
+        RespuestaMultiple respuestaJugador = new RespuestaMultiple(opcionesElegidas, jugador, new MultiplicadorPorDos());
+
+        respuestaJugador.esCorrecta();
+        respuestaJugador.otorgarPuntos(new Puntos(1));
+
+        assertEquals(jugador.getPuntos().getCantidad(),2);
+    }
+
+
+    @Test
+    public void testJugadorRealizaUnaRespuestaIncorrectaConMultiplicadorYLosPuntosSonLosEsperados12(){
+        Jugador jugador = new Jugador("Guido");
+
+        //Opciones que son eligidas
+        LinkedList<Opcion> opcionesElegidas = new LinkedList<Opcion>();
+        opcionesElegidas.add(cuartaOpcion);
+        opcionesElegidas.add(terceraOpcion);
+        opcionesElegidas.add(quintaOpcion);
+
+        RespuestaMultiple respuestaJugador = new RespuestaMultiple(opcionesElegidas, jugador, new MultiplicadorPorTres());
+
+        respuestaJugador.otorgarPuntos(new Puntos(-2));
+
+        assertEquals(jugador.getPuntos().getCantidad(),-6);
     }
 }

@@ -1,5 +1,6 @@
 package edu.fiuba.algo3.modelo.testunitarios;
 
+import edu.fiuba.algo3.modelo.multiplicador.MultiplicadorPorDos;
 import edu.fiuba.algo3.modelo.opcion.ColeccionOpciones;
 import edu.fiuba.algo3.modelo.Jugador;
 import edu.fiuba.algo3.modelo.Puntos;
@@ -31,13 +32,6 @@ public class TestRespuestaGrupo {
 
         LinkedList<ColeccionOpciones> gruposElegidos = new LinkedList<ColeccionOpciones>();
 
-        HashSet<Opcion> opciones = new HashSet<Opcion>();
-
-        opciones.add(primeraOpcion);
-        opciones.add(segundaOpcion);
-        opciones.add(terceraOpcion);
-        opciones.add(cuartaOpcion);
-
         grupo.agregarOpcion(primeraOpcion);
         grupo.agregarOpcion(segundaOpcion);
         grupo.agregarOpcion(terceraOpcion);
@@ -58,13 +52,6 @@ public class TestRespuestaGrupo {
 
         LinkedList<ColeccionOpciones> gruposElegidos = new LinkedList<ColeccionOpciones>();
 
-        HashSet<Opcion> opciones = new HashSet<Opcion>();
-
-        opciones.add(primeraOpcion);
-        opciones.add(segundaOpcion);
-        opciones.add(terceraOpcion);
-        opciones.add(cuartaOpcion);
-
         grupo.agregarOpcion(primeraOpcion);
         grupo.agregarOpcion(segundaOpcion);
 
@@ -84,13 +71,6 @@ public class TestRespuestaGrupo {
         ColeccionOpciones grupo = new ColeccionOpciones();
 
         LinkedList<ColeccionOpciones> gruposElegidos = new LinkedList<ColeccionOpciones>();
-
-        HashSet<Opcion> opciones = new HashSet<Opcion>();
-
-        opciones.add(primeraOpcion);
-        opciones.add(segundaOpcion);
-        opciones.add(terceraOpcion);
-        opciones.add(cuartaOpcion);
 
         grupo.agregarOpcion(primeraOpcion);
         grupo.agregarOpcion(segundaOpcion);
@@ -128,5 +108,4 @@ public class TestRespuestaGrupo {
                     new RespuestaGrupos(gruposElegidos,jugador);
                 });
     }
-
 }
