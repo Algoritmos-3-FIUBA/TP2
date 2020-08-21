@@ -28,7 +28,7 @@ $ sudo apt update
 $ sudo apt install default-jdk maven git
 ```
 
-Verificamos que se hayan instalado correctamente:
+Verificamos hayan sido instaladas correctamente:
 
 ```console
 $ javac -version
