@@ -20,14 +20,7 @@ import java.io.IOException;
 import java.util.LinkedList;
 
 public class ControladorVerdaderoFalsoClasico extends Controlador {
-    private LinkedList<RadioButton> cajasOpcionesMostradas = new LinkedList<RadioButton>();
-    private LinkedList<Opcion> opcionesSeleccionadas = new LinkedList<>();
-    private LinkedList<Button> cajasMultiplicadores = new LinkedList<>();
-    private EscenaJugador escenaActual;
-    private Jugador jugador;
-    private Exclusividad exclusividad = new ExclusividadDefault();
-    private Respuesta respuesta;
-    private int cantidadExclusividades = 2;
+    private final LinkedList<RadioButton> cajasOpcionesMostradas = new LinkedList<RadioButton>();
 
     @FXML
     public Label nombrepregunta;
@@ -65,46 +58,17 @@ public class ControladorVerdaderoFalsoClasico extends Controlador {
     }
     @Override
     public void actualizarPlantilla(Pregunta pregunta, Jugador jugadorActual,EscenaJugador escenaActual) {
-        this.escenaActual = escenaActual;
-        this.jugador = jugadorActual;
 
-        nombrepregunta.setText(pregunta.getNombre());
-        tipopregunta.setText(pregunta.getClass().getSimpleName().replaceAll("(.)([A-Z])", "$1 $2"));
-        jugadoractual.setText(jugadorActual.getNombre());
-        puntosactuales.setText(String.valueOf(jugadorActual.getPuntos().cantidad));
-
-        for(RadioButton opcion : cajasOpcionesMostradas)
-            opcion.setSelected(false);
-
-        if(jugador.getExclusividades().size() == 0)
-            botonexclusivdad.setDisable(true);
-        else
-            botonexclusivdad.setDisable(false);
-
-        opcionesSeleccionadas = new LinkedList<>();
-
-        for (int i = 0; i < pregunta.getOpciones().cantidadElementos(); i++) {
-            cajasOpcionesMostradas.get(i).setOnAction(new SeleccionarRadioButtonHandler(pregunta.getOpciones().getOpciones().get(i), opcionesSeleccionadas));
-        }
-
+        this.actualizador = new ControladorActualizador(pregunta,jugadorActual,escenaActual);
+        this.actualizador.actualizarTextosEtiquetas(nombrepregunta,tipopregunta,jugadoractual,puntosactuales);
+        this.actualizador.actualizarPlantillaVerdaderoFalsoClasico(cajasOpcionesMostradas,botonexclusivdad);
     }
 
     public void siguienteTurno() throws IOException {
-
-            try{
-                this.escenaActual.siguienteJugador(new RespuestaUnica(opcionesSeleccionadas.removeFirst(), jugador, exclusividad));
-            }catch(Exception e){
-                Alert alert = new Alert(Alert.AlertType.ERROR);
-                alert.setTitle("Error!!");
-                alert.setHeaderText("No has elegido ninguna respuesta");
-                alert.setContentText("Por favor, elegí una y volvé a intentar.");
-                alert.showAndWait();
-            }
+        this.actualizador.siguenteTurnoVoF();
     }
 
     public void asignarExclusividad() throws IOException {
-
-        this.exclusividad = jugador.usarExclusividad();
-        botonexclusivdad.setDisable(true);
+        this.actualizador.asignarExclusividad(botonexclusivdad);
     }
 }

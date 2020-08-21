@@ -19,13 +19,8 @@ import java.util.LinkedList;
 import static java.lang.String.valueOf;
 
 public class ControladorOrderedChoice extends Controlador{
-    private LinkedList<Button> opcionesMostradas = new LinkedList<>();
-    private LinkedList<Label> ordenMostrado = new LinkedList<>();
-    private LinkedList<Opcion> opcionesElegidas = new LinkedList<>();
-    private Pregunta pregunta;
-    private EscenaJugador turnoActual;
-    /*private int cantidadExclusividades = 2;
-    private Respuesta respuesta;*/
+    private final LinkedList<Button> opcionesMostradas = new LinkedList<>();
+    private final LinkedList<Label> ordenMostrado = new LinkedList<>();
 
     @FXML
     public Label nombrepregunta;
@@ -83,62 +78,32 @@ public class ControladorOrderedChoice extends Controlador{
         ordenMostrado.add(opcion4num);
         ordenMostrado.add(opcion5num);
 
+        multiplicadorx2.setDisable(true);
+        multiplicadorx3.setDisable(true);
+
     }
 
-    public void actualizarPlantilla(Pregunta pregunta, Jugador jugadorActual, EscenaJugador turnoActual) {
-        this.turnoActual = turnoActual;
-        this.jugador = jugadorActual;
-        this.pregunta = pregunta;
-
-        nombrepregunta.setText(pregunta.getNombre());
-        tipopregunta.setText(pregunta.getClass().getSimpleName().replaceAll("(.)([A-Z])", "$1 $2"));
-        jugadoractual.setText(jugadorActual.getNombre());
-        puntosactuales.setText(valueOf(jugadorActual.getPuntos().cantidad));
-
-        opcionesElegidas = new LinkedList<>();
+    public void actualizarPlantilla(Pregunta pregunta, Jugador jugadorActual, EscenaJugador escenaActual) {
+        this.actualizador = new ControladorActualizador(pregunta,jugadorActual,escenaActual);
+        this.actualizador.actualizarTextosEtiquetas(nombrepregunta,tipopregunta,jugadoractual,puntosactuales);
 
         for(Label orden : ordenMostrado)
             orden.setText("");
 
-        multiplicadorx2.setDisable(true);
-        multiplicadorx3.setDisable(true);
-
-        if(jugador.getExclusividades().size() == 0)
-            botonexclusividad.setDisable(true);
-        else
-            botonexclusividad.setDisable(false);
-
-        for (int i = 0; i < pregunta.getOpciones().cantidadElementos(); i++) {
-            opcionesMostradas.get(i).setText(pregunta.getOpciones().getOpciones().get(i).getNombre());
-            opcionesMostradas.get(i).setOnAction(new SeleccionarCheckBoxOrderedChoiceHandler(pregunta.getOpciones().getOpciones().get(i), opcionesElegidas,this));
-        }
+        this.actualizador.actualizarPlantillaOrderedChoice(opcionesMostradas,botonexclusividad,this);
     }
 
     public void siguienteTurno() throws IOException {
-
-        this.turnoActual.siguienteJugador(new RespuestaMultiple(opcionesElegidas,jugador, exclusividad));
-
-       /* if(jugador.getExclusividades().size() == cantidadExclusividades || jugador.getExclusividades().size() == 0)
-            this.turnoActual.siguienteJugador(new RespuestaMultiple(opcionesElegidas,jugador));
-        else
-            this.turnoActual.siguienteJugador(respuesta);*/
+        this.actualizador.siguenteTurnoOrderedChoice();
     }
 
     public void asignarExclusividad() throws IOException {
-
-        /*cantidadExclusividades = jugador.getExclusividades().size();
-        respuesta = new  RespuestaMultiple(opcionesElegidas,jugador, jugador.usarExclusividad());*/
-        this.exclusividad = jugador.usarExclusividad();
-        botonexclusividad.setDisable(true);
+        this.actualizador.asignarExclusividad(botonexclusividad);
     }
 
     public void actualizarOrden() {
         for(Label orden : ordenMostrado)
             orden.setText("");
-
-        for(int i = 0; i < opcionesElegidas.size(); i++){
-            int j = pregunta.getOpciones().getOpciones().indexOf(opcionesElegidas.get(i));
-            ordenMostrado.get(j).setText(Integer.toString(i+1));
-        }
+        this.actualizador.actualizarOrden(ordenMostrado);
     }
 }

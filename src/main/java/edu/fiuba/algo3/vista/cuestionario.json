@@ -1,34 +1,20 @@
-[ {
+[
+  {
   "Pregunta":
   {
     "tipo": "VerdaderoFalsoClasico",
     "nombre": "¿207 es un número primo?",
     "opcionCorrecta": false
   }
+},  {
+  "Pregunta":
+  {
+    "tipo": "VerdaderoFalsoPenalidad",
+    "nombre": "¿Blanco es un color?",
+    "opcionCorrecta": false
+  }
 },
   {
-    "Pregunta":
-    {
-      "tipo": "VerdaderoFalsoClasico",
-      "nombre": "¿207 es un número primo?",
-      "opcionCorrecta": false
-    }
-  },
-  {
-    "Pregunta": {
-      "tipo": "GrupoChoice",
-      "nombre": "Diferenciar ciudades: ",
-      "nombregrupo1" : "Europeas",
-      "nombregrupo2" : "Asiaticas",
-      "grupo1": [
-        "Berlin" ,
-        "Paris",
-        "Roma"],
-      "grupo2": [
-        "Tokyo",
-        "Hiroshima"]
-    }
-  },{
   "Pregunta":
   {
     "tipo" : "MultipleChoisePenalidad",
@@ -71,14 +57,7 @@
       ]
     }
   },
-  {
-    "Pregunta":
-    {
-      "tipo": "VerdaderoFalsoPenalidad",
-      "nombre": "¿Blanco es un color?",
-      "opcionCorrecta": false
-    }
-  },{
+{
     "Pregunta": {
       "tipo": "OrderedChoise",
       "nombre": "Ordenar de Mayor a Menor",
@@ -89,6 +68,20 @@
         "3"
       ]
     }
-    }
+    },{
+  "Pregunta": {
+    "tipo": "GrupoChoice",
+    "nombre": "Diferenciar ciudades: ",
+    "nombregrupo1" : "Europeas",
+    "nombregrupo2" : "Asiaticas",
+    "grupo1": [
+      "Berlin" ,
+      "Paris",
+      "Roma"],
+    "grupo2": [
+      "Tokyo",
+      "Hiroshima"]
+  }
+}
 ]
 

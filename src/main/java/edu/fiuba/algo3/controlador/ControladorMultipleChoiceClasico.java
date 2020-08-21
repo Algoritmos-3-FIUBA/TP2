@@ -18,12 +18,7 @@ import java.io.IOException;
 import java.util.LinkedList;
 
 public class ControladorMultipleChoiceClasico extends Controlador{
-    private LinkedList<CheckBox> cajasOpcionesMostradas = new LinkedList<>();
-    private LinkedList<Opcion> opcionesSeleccionadas = new LinkedList<>();
-    private EscenaJugador turnoActual;
-    private Jugador jugador;
-   /* private Respuesta respuesta;
-    private int cantidadExclusividades = 2;*/
+    private final LinkedList<CheckBox> cajasOpcionesMostradas = new LinkedList<>();
 
     @FXML
     public Label nombrepregunta;
@@ -72,60 +67,18 @@ public class ControladorMultipleChoiceClasico extends Controlador{
 
         this.actualizador = new ControladorActualizador(pregunta,jugadorActual,turnoActual);
         this.actualizador.actualizarTextosEtiquetas(nombrepregunta,tipopregunta,jugadoractual,puntosactuales);
-        this.actualizador.actualizarPlantilla(cajasOpcionesMostradas,botonexclusivdad);
-        /*
-        this.turnoActual = turnoActual;
-        this.jugador = jugadorActual;
-
-        nombrepregunta.setText(pregunta.getNombre());
-        tipopregunta.setText(pregunta.getClass().getSimpleName().replaceAll("(.)([A-Z])", "$1 $2"));
-        jugadoractual.setText(jugadorActual.getNombre());
-        puntosactuales.setText(String.valueOf(jugadorActual.getPuntos().cantidad));
-
-        for(CheckBox opcion : cajasOpcionesMostradas)
-            opcion.setSelected(false);
-
-        multiplicadorx2.setDisable(true);
-        multiplicadorx3.setDisable(true);
-
-        if(jugador.getExclusividades().size() == 0)
-            botonexclusivdad.setDisable(true);
-        else
-            botonexclusivdad.setDisable(false);
-
-        opcionesSeleccionadas = new LinkedList<>();
-
-        for (int i = 0; i < pregunta.getOpciones().cantidadElementos(); i++) {
-            cajasOpcionesMostradas.get(i).setOnAction(new SeleccionarCheckBoxMultipleChoiceHandler(pregunta.getOpciones().getOpciones().get(i), opcionesSeleccionadas));
-            cajasOpcionesMostradas.get(i).setText(pregunta.getOpciones().getOpciones().get(i).getNombre());
-        }*/
-    }
+        this.actualizador.actualizarPlantillaMultipleChoiceClasico(botonexclusivdad,cajasOpcionesMostradas);
+      }
 
     public void siguienteTurno() throws IOException {
 
         this.actualizador.siguenteTurnoMultipleChoice();
-        //this.turnoActual.siguienteJugador(new RespuestaMultiple(opcionesSeleccionadas,jugador, exclusividad));
-        /*
-        if(jugador.getExclusividades().size() == cantidadExclusividades || jugador.getExclusividades().size() == 0)
-            this.turnoActual.siguienteJugador(new RespuestaMultiple(opcionesSeleccionadas,jugador));
-        else
-            this.turnoActual.siguienteJugador(respuesta);*/
-    }
+      }
 
     public void asignarExclusividad() throws IOException {
 
         this.actualizador.asignarExclusividad(botonexclusivdad);
-        /*this.exclusividad = jugador.usarExclusividad();
-        botonexclusivdad.setDisable(true);
-
-           VIEJO
-        respuesta = new RespuestaUnica(opcionesSeleccionadas.getFirst(), jugador, jugador.usarExclusividad());
-        */
-
-        /*cantidadExclusividades = jugador.getExclusividades().size();
-        respuesta = new RespuestaMultiple(opcionesSeleccionadas,jugador, jugador.usarExclusividad());
-        botonexclusivdad.setDisable(true);*/
-    }
+      }
 
 }
 
