@@ -1,7 +1,6 @@
 package edu.fiuba.algo3.controlador;
 
 import edu.fiuba.algo3.modelo.Jugador;
-import edu.fiuba.algo3.modelo.TurnoJugador;
 import edu.fiuba.algo3.modelo.exclusividad.Exclusividad;
 import edu.fiuba.algo3.modelo.exclusividad.ExclusividadDefault;
 import edu.fiuba.algo3.modelo.opcion.Opcion;
@@ -24,7 +23,7 @@ public class ControladorOrderedChoice extends Controlador{
     private LinkedList<Label> ordenMostrado = new LinkedList<>();
     private LinkedList<Opcion> opcionesElegidas = new LinkedList<>();
     private Pregunta pregunta;
-    private TurnoJugador turnoActual;
+    private EscenaJugador turnoActual;
     /*private int cantidadExclusividades = 2;
     private Respuesta respuesta;*/
 
@@ -86,7 +85,7 @@ public class ControladorOrderedChoice extends Controlador{
 
     }
 
-    public void actualizarPlantilla(Pregunta pregunta, Jugador jugadorActual, TurnoJugador turnoActual) {
+    public void actualizarPlantilla(Pregunta pregunta, Jugador jugadorActual, EscenaJugador turnoActual) {
         this.turnoActual = turnoActual;
         this.jugador = jugadorActual;
         this.pregunta = pregunta;

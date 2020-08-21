@@ -1,7 +1,6 @@
 package edu.fiuba.algo3.controlador;
 
 import edu.fiuba.algo3.modelo.Jugador;
-import edu.fiuba.algo3.modelo.TurnoJugador;
 import edu.fiuba.algo3.modelo.exclusividad.Exclusividad;
 import edu.fiuba.algo3.modelo.exclusividad.ExclusividadDefault;
 import edu.fiuba.algo3.modelo.opcion.Opcion;
@@ -21,7 +20,7 @@ import java.util.LinkedList;
 public class ControladorMultipleChoiceClasico extends Controlador{
     private LinkedList<CheckBox> cajasOpcionesMostradas = new LinkedList<>();
     private LinkedList<Opcion> opcionesSeleccionadas = new LinkedList<>();
-    private TurnoJugador turnoActual;
+    private EscenaJugador turnoActual;
     private Jugador jugador;
    /* private Respuesta respuesta;
     private int cantidadExclusividades = 2;*/
@@ -69,7 +68,7 @@ public class ControladorMultipleChoiceClasico extends Controlador{
 
     }
 
-    public void actualizarPlantilla(Pregunta pregunta, Jugador jugadorActual, TurnoJugador turnoActual) {
+    public void actualizarPlantilla(Pregunta pregunta, Jugador jugadorActual, EscenaJugador turnoActual) {
         this.turnoActual = turnoActual;
         this.jugador = jugadorActual;
 

@@ -76,7 +76,6 @@ public class PreguntaGroupChoice extends Pregunta{
                     respuesta.esCorrecta();
     }
 
-
     private Puntos puntosAOtorgar(Respuesta respuesta){
         Puntos puntosParciales = new Puntos(0);
         for (int i = 0; i < gruposCorrectos.size(); i++)
