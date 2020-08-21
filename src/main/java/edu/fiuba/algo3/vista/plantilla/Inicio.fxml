@@ -63,7 +63,7 @@
                   <Image url="@../imagenes/java.png" />
                </image>
             </ImageView>
-            <ImageView layoutX="41.0" layoutY="12.0">
+            <ImageView layoutX="41.0" layoutY="12.0" AnchorPane.leftAnchor="41.0" AnchorPane.topAnchor="12.0">
                <image>
                   <Image url="@../imagenes/favicon.png" />
                </image>
@@ -99,12 +99,12 @@
                   </Button>
                </children>
             </HBox>
-            <Label alignment="BOTTOM_LEFT" layoutX="9.0" layoutY="530.0" prefHeight="31.0" prefWidth="263.0" text="ALGORITMOS III FIUBA" textFill="WHITE">
+            <Label alignment="BOTTOM_LEFT" layoutX="9.0" layoutY="530.0" prefHeight="31.0" prefWidth="263.0" text="ALGORITMOS III FIUBA" textFill="WHITE" AnchorPane.bottomAnchor="7.0" AnchorPane.leftAnchor="9.0">
                <font>
                   <Font name="Arial Bold" size="23.0" />
                </font>
             </Label>
-            <Label alignment="BOTTOM_RIGHT" layoutX="702.0" layoutY="528.0" prefHeight="31.0" prefWidth="140.0" text="1°C 2020 G4" textFill="WHITE">
+            <Label alignment="BOTTOM_RIGHT" layoutX="698.0" layoutY="528.0" prefHeight="31.0" prefWidth="140.0" text="1°C 2020 G4" textFill="WHITE" AnchorPane.bottomAnchor="9.0" AnchorPane.rightAnchor="14.0">
                <font>
                   <Font name="Arial Bold" size="23.0" />
                </font>
