@@ -1,6 +1,5 @@
-package edu.fiuba.algo3.modelo;
+package edu.fiuba.algo3.controlador;
 
-import edu.fiuba.algo3.controlador.Controlador;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -8,13 +7,13 @@ import javafx.scene.Scene;
 import java.io.IOException;
 import java.nio.file.Paths;
 
-import static edu.fiuba.algo3.modelo.Kahoot.actualizarEscena;
+import static edu.fiuba.algo3.controlador.Kahoot.actualizarEscena;
 
-public abstract class Turno {
+public abstract class Escena {
     protected Scene escena;
     protected Controlador controlador;
 
-    public Turno(String plantilla) throws IOException {
+    public Escena(String plantilla) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader();
         fxmlLoader.setLocation(Paths.get(plantilla).toUri().toURL());
         Parent root = fxmlLoader.load();

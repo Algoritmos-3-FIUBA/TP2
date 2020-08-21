@@ -2,17 +2,14 @@ package edu.fiuba.algo3.controlador;
 
 import edu.fiuba.algo3.modelo.opcion.ColeccionOpciones;
 import edu.fiuba.algo3.modelo.Jugador;
-import edu.fiuba.algo3.modelo.TurnoJugador;
 import edu.fiuba.algo3.modelo.pregunta.Pregunta;
 import edu.fiuba.algo3.modelo.pregunta.PreguntaGroupChoice;
 import edu.fiuba.algo3.modelo.respuesta.Respuesta;
 import edu.fiuba.algo3.modelo.respuesta.RespuestaGrupos;
-import edu.fiuba.algo3.vista.App;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
-import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.util.LinkedList;
@@ -24,7 +21,7 @@ public class ControladorGroupChoice extends Controlador{
     private final LinkedList<ComboBox> gruposMostrados = new LinkedList<>();
     private LinkedList<ColeccionOpciones> gruposElegidos = new LinkedList<>();
     private Pregunta pregunta;
-    private TurnoJugador turnoActual;
+    private EscenaJugador turnoActual;
     private Jugador jugador;
     private int cantidadExclusividades = 2;
     private Respuesta respuesta;
@@ -83,7 +80,7 @@ public class ControladorGroupChoice extends Controlador{
     }
 
     @Override
-    public void actualizarPlantilla(Pregunta pregunta, Jugador jugadorActual, TurnoJugador turnoActual) {
+    public void actualizarPlantilla(Pregunta pregunta, Jugador jugadorActual, EscenaJugador turnoActual) {
         this.turnoActual = turnoActual;
         this.jugador = jugadorActual;
         this.pregunta = pregunta;

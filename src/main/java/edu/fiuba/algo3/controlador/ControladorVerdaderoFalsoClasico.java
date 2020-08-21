@@ -1,7 +1,6 @@
 package edu.fiuba.algo3.controlador;
 
 import edu.fiuba.algo3.modelo.Jugador;
-import edu.fiuba.algo3.modelo.TurnoJugador;
 import edu.fiuba.algo3.modelo.exclusividad.Exclusividad;
 import edu.fiuba.algo3.modelo.opcion.Opcion;
 import edu.fiuba.algo3.modelo.pregunta.Pregunta;
@@ -21,7 +20,7 @@ public class ControladorVerdaderoFalsoClasico extends Controlador {
     private LinkedList<RadioButton> cajasOpcionesMostradas = new LinkedList<RadioButton>();
     private LinkedList<Opcion> opcionesSeleccionadas = new LinkedList<>();
     private LinkedList<Button> cajasMultiplicadores = new LinkedList<>();
-    private TurnoJugador turnoActual;
+    private EscenaJugador turnoActual;
     private Jugador jugador;
     private Exclusividad exclusividad = new Exclusividad();
     private Respuesta respuesta;
@@ -62,7 +61,7 @@ public class ControladorVerdaderoFalsoClasico extends Controlador {
 
     }
     @Override
-    public void actualizarPlantilla(Pregunta pregunta, Jugador jugadorActual,TurnoJugador turnoActual) {
+    public void actualizarPlantilla(Pregunta pregunta, Jugador jugadorActual, EscenaJugador turnoActual) {
         this.turnoActual = turnoActual;
         this.jugador = jugadorActual;
 

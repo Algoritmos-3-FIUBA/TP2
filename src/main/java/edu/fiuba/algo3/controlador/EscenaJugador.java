@@ -1,5 +1,6 @@
-package edu.fiuba.algo3.modelo;
+package edu.fiuba.algo3.controlador;
 
+import edu.fiuba.algo3.modelo.Jugador;
 import edu.fiuba.algo3.modelo.pregunta.Pregunta;
 import edu.fiuba.algo3.modelo.respuesta.Respuesta;
 
@@ -7,16 +8,16 @@ import java.io.IOException;
 import java.util.LinkedList;
 import java.util.Queue;
 
-import static edu.fiuba.algo3.modelo.Kahoot.siguienteTurno;
+import static edu.fiuba.algo3.controlador.Kahoot.siguienteTurno;
 
-public class TurnoJugador extends Turno{
+public class EscenaJugador extends Escena {
     private Jugador jugadorActual;
     private Respuesta respuestaActual;
     private Queue<Jugador> jugadoresRestantes = new LinkedList();
     private Pregunta pregunta;
     private LinkedList<Respuesta> respuestas = new LinkedList<>();
 
-    public TurnoJugador(LinkedList<Jugador> jugadores, Pregunta pregunta, String plantilla) throws IOException {
+    public EscenaJugador(LinkedList<Jugador> jugadores, Pregunta pregunta, String plantilla) throws IOException {
         super(plantilla);
         this.pregunta = pregunta;
 

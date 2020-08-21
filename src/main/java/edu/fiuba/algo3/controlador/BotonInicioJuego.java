@@ -12,7 +12,7 @@ import javafx.stage.Window;
 import java.io.IOException;
 import java.nio.file.Paths;
 
-import static edu.fiuba.algo3.modelo.Kahoot.juegoKahoot;
+import static edu.fiuba.algo3.controlador.Kahoot.juegoKahoot;
 
 public class BotonInicioJuego implements EventHandler<ActionEvent>  {
     private TextField jugador1;

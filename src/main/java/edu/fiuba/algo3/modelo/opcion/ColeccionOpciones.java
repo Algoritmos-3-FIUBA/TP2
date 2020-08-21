@@ -1,5 +1,7 @@
 package edu.fiuba.algo3.modelo.opcion;
 
+import java.util.Collection;
+import java.util.Collections;
 import java.util.HashSet;
 import java.util.LinkedList;
 
@@ -77,5 +79,9 @@ public class ColeccionOpciones {
         if(nombre == null)
             return null;
         return nombre;
+    }
+
+    public void mezclar() {
+        Collections.shuffle(opciones);
     }
 }
