@@ -35,7 +35,7 @@ public abstract class Pregunta {
         return nombre;
     }
 
-    public abstract ColeccionOpciones getOpciones();
+    public abstract ColeccionOpciones getColeccionDeOpciones();
 
     //Para evitar codigo repetido
     protected void sumarPuntosMultiplceChoiceConCadaOpcion(LinkedList<Respuesta> respuestas){

@@ -52,7 +52,7 @@ public class PreguntaOrderedChoice extends Pregunta{
     }
 
     @Override
-    public ColeccionOpciones getOpciones() {
+    public ColeccionOpciones getColeccionDeOpciones() {
         return opciones;
     }
 }

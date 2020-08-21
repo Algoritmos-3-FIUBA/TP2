@@ -1,7 +1,10 @@
 [![Build Status](https://travis-ci.org/Algoritmos-3-FIUBA/TP2.svg?branch=master)](https://travis-ci.org/Algoritmos-3-FIUBA/TP2)
 [![codecov](https://codecov.io/gh/Algoritmos-3-FIUBA/TP2/branch/master/graph/badge.svg?branch=master&kill_cache=1)](https://codecov.io/gh/Algoritmos-3-FIUBA/TP2)
 [![Codacy Badge](https://app.codacy.com/project/badge/Grade/0f95ad8f2e54402db8b523fe16ab3922)](https://www.codacy.com/gh/Algoritmos-3-FIUBA/TP2?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=Algoritmos-3-FIUBA/TP2&amp;utm_campaign=Badge_Grade)
+![Contributors](https://img.shields.io/github/contributors/Algoritmos-3-FIUBA/TP2)
+![Activity](https://img.shields.io/github/commit-activity/w/Algoritmos-3-FIUBA/TP2)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 
 ### * [Acceder al Informe](https://docs.google.com/document/u/1/d/1vwDAWfFClYHC6-SmNUmvnaS4XqbZ7ijkwhYjou7g-Kw) *
 
@@ -28,7 +31,7 @@ $ sudo apt update
 $ sudo apt install default-jdk maven git
 ```
 
-Verificamos que se hayan instalado correctamente:
+Verificamos hayan sido instaladas correctamente:
 
 ```console
 $ javac -version

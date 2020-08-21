@@ -4,6 +4,7 @@ import edu.fiuba.algo3.modelo.Jugador;
 import edu.fiuba.algo3.modelo.multiplicador.Multiplicador;
 import edu.fiuba.algo3.modelo.multiplicador.MultiplicadorPorTres;
 import edu.fiuba.algo3.modelo.multiplicador.MultiplicadorPorDos;
+import edu.fiuba.algo3.modelo.pregunta.PreguntaVerdaderoFalsoClasico;
 import edu.fiuba.algo3.modelo.pregunta.PreguntaVerdaderoFalsoPenalidad;
 import edu.fiuba.algo3.modelo.respuesta.Respuesta;
 import edu.fiuba.algo3.modelo.respuesta.RespuestaUnica;
@@ -28,11 +29,9 @@ public class TestPreguntaVerdaderoFalsoPenalidad {
 
         pregunta.setFalsoOpcionCorrecta();
 
-        RespuestaUnica respuesta = new RespuestaUnica(pregunta.getOpcionVerdadera(),jugador);
-
         LinkedList<Respuesta> listaRespuetas= new LinkedList<Respuesta>();
 
-        listaRespuetas.add(respuesta);
+        listaRespuetas.add(new RespuestaUnica(pregunta.getOpcionVerdadera(),jugador));
 
         pregunta.evaluarRespuestas(listaRespuetas);
 
@@ -49,11 +48,9 @@ public class TestPreguntaVerdaderoFalsoPenalidad {
 
         pregunta.setVerdaderoOpcionCorrecta();
 
-        RespuestaUnica respuesta = new RespuestaUnica(pregunta.getOpcionVerdadera(),jugador, multiplicador);
-
         LinkedList <Respuesta> listaRespuetas= new LinkedList<Respuesta>();
 
-        listaRespuetas.add(respuesta);
+        listaRespuetas.add(new RespuestaUnica(pregunta.getOpcionVerdadera(),jugador, multiplicador));
 
         pregunta.evaluarRespuestas(listaRespuetas);
 
@@ -84,9 +81,33 @@ public class TestPreguntaVerdaderoFalsoPenalidad {
         listaRespuetas.add(respuesta2);
 
         pregunta.evaluarRespuestas(listaRespuetas);
-
         pregunta.evaluarRespuestas(listaRespuetas2);
 
         assertEquals(jugador.getPuntos().getCantidad(),4);
+    }
+
+    @Test
+    public void testCreoPreguntaVerdaderoFalsoPenalidadYVariosJugadoresRespondeEntoncesAsignaPuntos05(){
+        Jugador Lucas = new Jugador("Lucas");
+        Jugador Juan = new Jugador("Juan");
+        Jugador Mati = new Jugador("Mati");
+        Jugador Pablo = new Jugador("Pablo");
+
+        PreguntaVerdaderoFalsoPenalidad pregunta = new PreguntaVerdaderoFalsoPenalidad("Todas las semanas tienen siete dias");
+        pregunta.setVerdaderoOpcionCorrecta();
+
+        LinkedList<Respuesta> respuestasDeJugadores = new LinkedList<Respuesta>();
+
+        respuestasDeJugadores.add(new RespuestaUnica(pregunta.getOpcionVerdadera(),Lucas));
+        respuestasDeJugadores.add(new RespuestaUnica(pregunta.getOpcionFalsa(),Mati));
+        respuestasDeJugadores.add(new RespuestaUnica(pregunta.getOpcionVerdadera(),Pablo));
+        respuestasDeJugadores.add(new RespuestaUnica(pregunta.getOpcionFalsa(),Juan));
+
+        pregunta.evaluarRespuestas(respuestasDeJugadores);
+
+        assertEquals(Lucas.getPuntos().getCantidad(),1);
+        assertEquals(Juan.getPuntos().getCantidad(),-1);
+        assertEquals(Mati.getPuntos().getCantidad(),-1);
+        assertEquals(Pablo.getPuntos().getCantidad(),1);
     }
 }

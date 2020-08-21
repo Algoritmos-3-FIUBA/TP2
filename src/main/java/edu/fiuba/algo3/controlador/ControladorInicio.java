@@ -15,7 +15,6 @@ public class ControladorInicio {
     private static final int ALTO = 549;
 
     public void comenzar(ActionEvent actionEvent) {
-        System.out.println("juancho");
         FormularioInicial formularioInicial = new FormularioInicial() ;
         formularioInicial.agregarControlesInterfaz(App.escenario);
         Scene scene = new Scene(formularioInicial, ANCHO, ALTO);

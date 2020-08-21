@@ -35,7 +35,7 @@ public abstract class PreguntaVerdaderoFalso extends Pregunta {
     }
 
     @Override
-    public ColeccionOpciones getOpciones(){
+    public ColeccionOpciones getColeccionDeOpciones(){
         ColeccionOpciones opciones = new ColeccionOpciones();
         opciones.agregarOpcion(opcionVerdadero);
         opciones.agregarOpcion(opcionFalso);
