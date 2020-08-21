@@ -1,5 +1,5 @@
 [![Build Status](https://travis-ci.org/Algoritmos-3-FIUBA/TP2.svg?branch=master)](https://travis-ci.org/Algoritmos-3-FIUBA/TP2)
-[![codecov](https://codecov.io/gh/Algoritmos-3-FIUBA/TP2/branch/master/graph/badge.svg)](https://codecov.io/gh/Algoritmos-3-FIUBA/TP2)
+[![codecov](https://codecov.io/gh/Algoritmos-3-FIUBA/TP2/branch/master/graph/badge.svg?branch=master&kill_cache=1)](https://codecov.io/gh/Algoritmos-3-FIUBA/TP2)
 [![Codacy Badge](https://app.codacy.com/project/badge/Grade/0f95ad8f2e54402db8b523fe16ab3922)](https://www.codacy.com/gh/Algoritmos-3-FIUBA/TP2?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=Algoritmos-3-FIUBA/TP2&amp;utm_campaign=Badge_Grade)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
