@@ -13,7 +13,7 @@ public class App extends Application {
 
     public static Stage escenario;
     private static final String TITULO_JUEGO = "Kahoot!";
-    private static final String ICONO_JUEGO = "src/main/java/edu/fiuba/algo3/vista/imagenes/favicon.png";
+    private static final String ICONO_JUEGO = "src/main/java/edu/fiuba/algo3/vista/imagenes/icono.png";
     private static final String SONIDO_JUEGO = "src/main/java/edu/fiuba/algo3/vista/sonidos/kahoot-lobby-music.mp3";
     private static final int ANCHO = 790;
     private static final int ALTO = 549;

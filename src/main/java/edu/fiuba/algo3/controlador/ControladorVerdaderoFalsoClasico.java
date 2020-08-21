@@ -1,7 +1,7 @@
 package edu.fiuba.algo3.controlador;
 
 import edu.fiuba.algo3.modelo.Jugador;
-import edu.fiuba.algo3.modelo.TurnoJugador;
+import edu.fiuba.algo3.controlador.EscenaJugador;
 import edu.fiuba.algo3.modelo.exclusividad.Exclusividad;
 import edu.fiuba.algo3.modelo.opcion.Opcion;
 import edu.fiuba.algo3.modelo.pregunta.Pregunta;
@@ -22,7 +22,7 @@ public class ControladorVerdaderoFalsoClasico extends Controlador {
     private LinkedList<RadioButton> cajasOpcionesMostradas = new LinkedList<RadioButton>();
     private LinkedList<Opcion> opcionesSeleccionadas = new LinkedList<>();
     private LinkedList<Button> cajasMultiplicadores = new LinkedList<>();
-    private TurnoJugador turnoActual;
+    private EscenaJugador escenaActual;
     private Jugador jugador;
     private Exclusividad exclusividad = new Exclusividad();
     private Respuesta respuesta;
@@ -63,8 +63,8 @@ public class ControladorVerdaderoFalsoClasico extends Controlador {
 
     }
     @Override
-    public void actualizarPlantilla(Pregunta pregunta, Jugador jugadorActual,TurnoJugador turnoActual) {
-        this.turnoActual = turnoActual;
+    public void actualizarPlantilla(Pregunta pregunta, Jugador jugadorActual,EscenaJugador escenaActual) {
+        this.escenaActual = escenaActual;
         this.jugador = jugadorActual;
 
         nombrepregunta.setText(pregunta.getNombre());
@@ -96,7 +96,7 @@ public class ControladorVerdaderoFalsoClasico extends Controlador {
         if(jugador.getExclusividades().size() == cantidadExclusividades || jugador.getExclusividades().size() == 0)
 
             try{
-                this.turnoActual.siguienteJugador(new RespuestaUnica(opcionesSeleccionadas.removeFirst(), jugador));
+                this.escenaActual.siguienteJugador(new RespuestaUnica(opcionesSeleccionadas.removeFirst(), jugador));
             }catch(Exception e){
                 Alert alert = new Alert(Alert.AlertType.ERROR);
                 alert.setTitle("Error!!");
@@ -105,7 +105,7 @@ public class ControladorVerdaderoFalsoClasico extends Controlador {
                 alert.showAndWait();
             }
         else
-            this.turnoActual.siguienteJugador(respuesta);
+            this.escenaActual.siguienteJugador(respuesta);
     }
 
     public void asignarExclusividad() throws IOException {
