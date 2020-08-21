@@ -64,6 +64,8 @@ public class ControladorMultipleChoicePenalidad  extends Controlador{
         cajasMultiplicadores.add(multiplicadorx2);
         cajasMultiplicadores.add(multiplicadorx3);
 
+        botonexclusivdad.setDisable(true);
+
     }
 
     public void actualizarPlantilla(Pregunta pregunta, Jugador jugadorActual, EscenaJugador turnoActual) {
@@ -80,8 +82,6 @@ public class ControladorMultipleChoicePenalidad  extends Controlador{
 
         for(Button multiplicador : cajasMultiplicadores)
             multiplicador.setDisable(false);
-
-        botonexclusivdad.setDisable(true);
 
         if(jugador.cantidadMultiplicadoresPor2() == 0) multiplicadorx2.setDisable(true);
         if(jugador.cantidadMultiplicadoresPor3() == 0) multiplicadorx3.setDisable(true);

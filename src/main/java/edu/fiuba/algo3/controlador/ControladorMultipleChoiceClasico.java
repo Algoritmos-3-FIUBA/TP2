@@ -69,6 +69,11 @@ public class ControladorMultipleChoiceClasico extends Controlador{
     }
 
     public void actualizarPlantilla(Pregunta pregunta, Jugador jugadorActual, EscenaJugador turnoActual) {
+
+        this.actualizador = new ControladorActualizador(pregunta,jugadorActual,turnoActual);
+        this.actualizador.actualizarTextosEtiquetas(nombrepregunta,tipopregunta,jugadoractual,puntosactuales);
+        this.actualizador.actualizarPlantilla(cajasOpcionesMostradas,botonexclusivdad);
+        /*
         this.turnoActual = turnoActual;
         this.jugador = jugadorActual;
 
@@ -93,12 +98,13 @@ public class ControladorMultipleChoiceClasico extends Controlador{
         for (int i = 0; i < pregunta.getOpciones().cantidadElementos(); i++) {
             cajasOpcionesMostradas.get(i).setOnAction(new SeleccionarCheckBoxMultipleChoiceHandler(pregunta.getOpciones().getOpciones().get(i), opcionesSeleccionadas));
             cajasOpcionesMostradas.get(i).setText(pregunta.getOpciones().getOpciones().get(i).getNombre());
-        }
+        }*/
     }
 
     public void siguienteTurno() throws IOException {
 
-        this.turnoActual.siguienteJugador(new RespuestaMultiple(opcionesSeleccionadas,jugador, exclusividad));
+        this.actualizador.siguenteTurnoMultipleChoice();
+        //this.turnoActual.siguienteJugador(new RespuestaMultiple(opcionesSeleccionadas,jugador, exclusividad));
         /*
         if(jugador.getExclusividades().size() == cantidadExclusividades || jugador.getExclusividades().size() == 0)
             this.turnoActual.siguienteJugador(new RespuestaMultiple(opcionesSeleccionadas,jugador));
@@ -108,10 +114,11 @@ public class ControladorMultipleChoiceClasico extends Controlador{
 
     public void asignarExclusividad() throws IOException {
 
-        this.exclusividad = jugador.usarExclusividad();
+        this.actualizador.asignarExclusividad(botonexclusivdad);
+        /*this.exclusividad = jugador.usarExclusividad();
         botonexclusivdad.setDisable(true);
 
-        /*   VIEJO
+           VIEJO
         respuesta = new RespuestaUnica(opcionesSeleccionadas.getFirst(), jugador, jugador.usarExclusividad());
         */
 

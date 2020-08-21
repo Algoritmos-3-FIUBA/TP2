@@ -3,6 +3,7 @@ package edu.fiuba.algo3.controlador;
 import edu.fiuba.algo3.modelo.Jugador;
 import edu.fiuba.algo3.controlador.EscenaJugador;
 import edu.fiuba.algo3.modelo.exclusividad.Exclusividad;
+import edu.fiuba.algo3.modelo.exclusividad.ExclusividadDefault;
 import edu.fiuba.algo3.modelo.opcion.Opcion;
 import edu.fiuba.algo3.modelo.pregunta.Pregunta;
 import edu.fiuba.algo3.modelo.respuesta.Respuesta;
@@ -24,7 +25,7 @@ public class ControladorVerdaderoFalsoClasico extends Controlador {
     private LinkedList<Button> cajasMultiplicadores = new LinkedList<>();
     private EscenaJugador escenaActual;
     private Jugador jugador;
-    private Exclusividad exclusividad = new Exclusividad();
+    private Exclusividad exclusividad = new ExclusividadDefault();
     private Respuesta respuesta;
     private int cantidadExclusividades = 2;
 
@@ -75,9 +76,6 @@ public class ControladorVerdaderoFalsoClasico extends Controlador {
         for(RadioButton opcion : cajasOpcionesMostradas)
             opcion.setSelected(false);
 
-        multiplicadorx2.setDisable(true);
-        multiplicadorx3.setDisable(true);
-
         if(jugador.getExclusividades().size() == 0)
             botonexclusivdad.setDisable(true);
         else
@@ -93,10 +91,8 @@ public class ControladorVerdaderoFalsoClasico extends Controlador {
 
     public void siguienteTurno() throws IOException {
 
-        if(jugador.getExclusividades().size() == cantidadExclusividades || jugador.getExclusividades().size() == 0)
-
             try{
-                this.escenaActual.siguienteJugador(new RespuestaUnica(opcionesSeleccionadas.removeFirst(), jugador));
+                this.escenaActual.siguienteJugador(new RespuestaUnica(opcionesSeleccionadas.removeFirst(), jugador, exclusividad));
             }catch(Exception e){
                 Alert alert = new Alert(Alert.AlertType.ERROR);
                 alert.setTitle("Error!!");
@@ -104,14 +100,11 @@ public class ControladorVerdaderoFalsoClasico extends Controlador {
                 alert.setContentText("Por favor, elegí una y volvé a intentar.");
                 alert.showAndWait();
             }
-        else
-            this.escenaActual.siguienteJugador(respuesta);
     }
 
     public void asignarExclusividad() throws IOException {
 
-        cantidadExclusividades = jugador.getExclusividades().size();
-        respuesta = new RespuestaUnica(opcionesSeleccionadas.getFirst(), jugador, jugador.usarExclusividad());
+        this.exclusividad = jugador.usarExclusividad();
         botonexclusivdad.setDisable(true);
     }
 }
