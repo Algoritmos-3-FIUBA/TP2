@@ -21,8 +21,6 @@ public class ControladorMultipleChoiceClasico extends Controlador{
     private LinkedList<Opcion> opcionesSeleccionadas = new LinkedList<>();
     private EscenaJugador turnoActual;
     private Jugador jugador;
-   /* private Respuesta respuesta;
-    private int cantidadExclusividades = 2;*/
 
     @FXML
     public Label nombrepregunta;
