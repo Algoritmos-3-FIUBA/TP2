@@ -1,0 +1,22 @@
+[{
+  "Pregunta":
+  {
+    "tipo": "VerdaderoFalsoPenalidad",
+    "nombre": "¿Blanco es un color?",
+    "opcionCorrecta": false
+  }
+},{
+  "Pregunta":
+  {
+    "tipo": "VerdaderoFalsoPenalidad",
+    "nombre": "¿Blanco es un color?",
+    "opcionCorrecta": false
+  }
+},{
+  "Pregunta":
+  {
+    "tipo": "VerdaderoFalsoPenalidad",
+    "nombre": "¿Blanco es un color?",
+    "opcionCorrecta": false
+  }
+}]

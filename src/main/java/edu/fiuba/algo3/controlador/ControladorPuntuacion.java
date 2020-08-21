@@ -31,7 +31,7 @@ public class ControladorPuntuacion extends Controlador{
 
     public void initialize(){
 
-        pause = new PauseTransition(Duration.seconds(4));
+        pause = new PauseTransition(Duration.seconds(2));
         pause.setOnFinished(event ->
         {
             try {

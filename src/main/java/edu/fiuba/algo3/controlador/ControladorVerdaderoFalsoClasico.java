@@ -3,6 +3,7 @@ package edu.fiuba.algo3.controlador;
 import edu.fiuba.algo3.modelo.Jugador;
 import edu.fiuba.algo3.modelo.TurnoJugador;
 import edu.fiuba.algo3.modelo.exclusividad.Exclusividad;
+import edu.fiuba.algo3.modelo.exclusividad.ExclusividadDefault;
 import edu.fiuba.algo3.modelo.opcion.Opcion;
 import edu.fiuba.algo3.modelo.pregunta.Pregunta;
 import edu.fiuba.algo3.modelo.respuesta.Respuesta;
@@ -23,9 +24,9 @@ public class ControladorVerdaderoFalsoClasico extends Controlador {
     private LinkedList<Button> cajasMultiplicadores = new LinkedList<>();
     private TurnoJugador turnoActual;
     private Jugador jugador;
-    private Exclusividad exclusividad = new Exclusividad();
-    private Respuesta respuesta;
-    private int cantidadExclusividades = 2;
+    private Exclusividad exclusividad = new ExclusividadDefault();
+    /*private Respuesta respuesta;
+    private int cantidadExclusividades = 2;*/
 
     @FXML
     public Label nombrepregunta;
@@ -92,16 +93,23 @@ public class ControladorVerdaderoFalsoClasico extends Controlador {
 
     public void siguienteTurno() throws IOException {
 
-        if(jugador.getExclusividades().size() == cantidadExclusividades || jugador.getExclusividades().size() == 0)
+        this.turnoActual.siguienteJugador(new RespuestaUnica(opcionesSeleccionadas.removeFirst(), jugador, exclusividad));
+
+        /*if(jugador.getExclusividades().size() == cantidadExclusividades || jugador.getExclusividades().size() == 0)
             this.turnoActual.siguienteJugador(new RespuestaUnica(opcionesSeleccionadas.removeFirst(), jugador));
         else
-            this.turnoActual.siguienteJugador(respuesta);
+            this.turnoActual.siguienteJugador(new RespuestaUnica(opcionesSeleccionadas.getFirst(), jugador, exclusividadPrueba));*/
     }
 
     public void asignarExclusividad() throws IOException {
 
-        cantidadExclusividades = jugador.getExclusividades().size();
-        respuesta = new RespuestaUnica(opcionesSeleccionadas.getFirst(), jugador, jugador.usarExclusividad());
+       //cantidadExclusividades = jugador.getExclusividades().size();
+        // NUEVO
+       this.exclusividad = jugador.usarExclusividad();
         botonexclusivdad.setDisable(true);
+       /*   VIEJO
+        respuesta = new RespuestaUnica(opcionesSeleccionadas.getFirst(), jugador, jugador.usarExclusividad());
+        */
+
     }
 }
