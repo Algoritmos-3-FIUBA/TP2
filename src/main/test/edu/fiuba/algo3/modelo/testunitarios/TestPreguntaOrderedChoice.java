@@ -522,4 +522,53 @@ public class TestPreguntaOrderedChoice {
                     new PreguntaOrderedChoice("Ordenar los siguientes eventos de más antiguo a mas nuevo", 5,  new ColeccionOpciones());
                 });
     }
+
+    //Agrego este test (aunque sea un getter) para aumentar cobertura
+    @Test
+    public void testCreoPreguntaOrderedChoiceYTieneNombreEsperado15(){
+
+        ColeccionOpciones opciones = new ColeccionOpciones();
+
+        OpcionCorrecta primeraOpcion = new OpcionCorrecta("A");
+        OpcionCorrecta segundaOpcion = new OpcionCorrecta("C");
+        OpcionIncorrecta terceraOpcion = new OpcionIncorrecta("G");
+        OpcionCorrecta cuartaOpcion = new OpcionCorrecta("Z");
+
+        opciones.agregarOpcion(primeraOpcion);
+        opciones.agregarOpcion(segundaOpcion);
+        opciones.agregarOpcion(terceraOpcion);
+        opciones.agregarOpcion(cuartaOpcion);
+
+        PreguntaOrderedChoice pregunta = new PreguntaOrderedChoice("Ordene las letras de primera a última segun el abecedario", 1, opciones);
+
+        assertEquals(pregunta.getNombre(),"Ordene las letras de primera a última segun el abecedario");
+    }
+
+    //Agrego este test (aunque sea un getter) para aumentar cobertura
+    @Test
+    public void testCreoPreguntaOrderedChoiceLePidoLasOpcionesYSonDevueltas16(){
+
+        ColeccionOpciones opciones = new ColeccionOpciones();
+
+        OpcionCorrecta primeraOpcion = new OpcionCorrecta("A");
+        OpcionCorrecta segundaOpcion = new OpcionCorrecta("C");
+        OpcionIncorrecta terceraOpcion = new OpcionIncorrecta("G");
+        OpcionCorrecta cuartaOpcion = new OpcionCorrecta("Z");
+
+        opciones.agregarOpcion(primeraOpcion);
+        opciones.agregarOpcion(segundaOpcion);
+        opciones.agregarOpcion(terceraOpcion);
+        opciones.agregarOpcion(cuartaOpcion);
+
+        PreguntaOrderedChoice pregunta = new PreguntaOrderedChoice("Ordene las letras de primera a última segun el abecedario", 1, opciones);
+
+        ColeccionOpciones opcionesEsperadas = new ColeccionOpciones();
+
+        opcionesEsperadas.agregarOpcion(primeraOpcion);
+        opcionesEsperadas.agregarOpcion(segundaOpcion);
+        opcionesEsperadas.agregarOpcion(terceraOpcion);
+        opcionesEsperadas.agregarOpcion(cuartaOpcion);
+
+        assert(pregunta.getColeccionDeOpciones().tieneMismosElementos(opcionesEsperadas));
+    }
 }
