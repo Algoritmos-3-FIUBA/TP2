@@ -4,7 +4,6 @@ import edu.fiuba.algo3.modelo.opcion.ColeccionOpciones;
 import edu.fiuba.algo3.modelo.Jugador;
 import edu.fiuba.algo3.modelo.Puntos;
 import edu.fiuba.algo3.modelo.excepciones.MasDeSeisOpcionesException;
-import edu.fiuba.algo3.modelo.excepciones.NoHayOpcionesException;
 import edu.fiuba.algo3.modelo.opcion.Opcion;
 import edu.fiuba.algo3.modelo.opcion.OpcionCorrecta;
 import edu.fiuba.algo3.modelo.respuesta.RespuestaGrupos;

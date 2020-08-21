@@ -1,7 +1,6 @@
 package edu.fiuba.algo3.controlador;
 
 import edu.fiuba.algo3.modelo.Jugador;
-import edu.fiuba.algo3.controlador.EscenaJugador;
 import edu.fiuba.algo3.modelo.pregunta.Pregunta;
 import edu.fiuba.algo3.vista.App;
 import javafx.animation.PauseTransition;
@@ -27,8 +26,6 @@ public class ControladorPuntuacion extends Controlador{
     public static Jugador primerJugador;
     public static Jugador segundoJugador;
     private PauseTransition pause;
-
-    public ControladorPuntuacion() { }
 
     public void initialize(){
         App.escenario.setResizable(false);

@@ -1,7 +1,5 @@
 package edu.fiuba.algo3.modelo.testunitarios;
 
-import edu.fiuba.algo3.modelo.Jugador;
-import edu.fiuba.algo3.modelo.Puntos;
 import edu.fiuba.algo3.modelo.multiplicador.MultiplicadorDefault;
 import edu.fiuba.algo3.modelo.multiplicador.MultiplicadorPorDos;
 import edu.fiuba.algo3.modelo.multiplicador.MultiplicadorPorTres;

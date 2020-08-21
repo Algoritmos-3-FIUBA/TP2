@@ -9,9 +9,8 @@ import java.util.LinkedList;
 
 public class PreguntaMultipleChoicePenalidad extends Pregunta{
 
-    private ColeccionOpciones opcionesCorrectas;
-    private ColeccionOpciones opcionesIncorrectas;
-    private ColeccionOpciones opciones;
+    private final ColeccionOpciones opcionesCorrectas;
+    private final ColeccionOpciones opciones;
 
     public PreguntaMultipleChoicePenalidad(String nombre, ColeccionOpciones opciones) {
 
@@ -25,7 +24,7 @@ public class PreguntaMultipleChoicePenalidad extends Pregunta{
         this.opciones = opciones;
 
         opcionesCorrectas = new ColeccionOpciones();
-        opcionesIncorrectas = new ColeccionOpciones();
+        ColeccionOpciones opcionesIncorrectas = new ColeccionOpciones();
 
         opciones.separarEnGruposCorrespondientes(opcionesCorrectas, opcionesIncorrectas);
     }

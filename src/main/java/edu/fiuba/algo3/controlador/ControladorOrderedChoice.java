@@ -3,10 +3,7 @@ package edu.fiuba.algo3.controlador;
 import edu.fiuba.algo3.modelo.Jugador;
 import edu.fiuba.algo3.modelo.exclusividad.Exclusividad;
 import edu.fiuba.algo3.modelo.exclusividad.ExclusividadDefault;
-import edu.fiuba.algo3.modelo.opcion.Opcion;
 import edu.fiuba.algo3.modelo.pregunta.Pregunta;
-import edu.fiuba.algo3.modelo.respuesta.Respuesta;
-import edu.fiuba.algo3.modelo.respuesta.RespuestaMultiple;
 import edu.fiuba.algo3.vista.App;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -15,8 +12,6 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.util.LinkedList;
-
-import static java.lang.String.valueOf;
 
 public class ControladorOrderedChoice extends Controlador{
     private final LinkedList<Button> opcionesMostradas = new LinkedList<>();
@@ -60,8 +55,6 @@ public class ControladorOrderedChoice extends Controlador{
     public Button multiplicadorx3;
 
     Stage escenarioActual;
-    private Jugador jugador;
-    private Exclusividad exclusividad = new ExclusividadDefault();
 
     public void initialize() {
         this.escenarioActual = App.obtenerEscenarioActual();

@@ -71,27 +71,27 @@
                         <Insets />
                      </opaqueInsets>
                   </Label>
-                  <CheckBox fx:id="opcion1" mnemonicParsing="false" prefHeight="29.0" prefWidth="389.0" text="CheckBox" textFill="WHITE" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+                  <CheckBox fx:id="opcion1" mnemonicParsing="false" prefHeight="29.0" prefWidth="300.0" text="CheckBox" textFill="WHITE" GridPane.halignment="CENTER" GridPane.rowIndex="1">
                      <font>
                         <Font name="Arial Bold" size="19.0" />
                      </font>
                   </CheckBox>
-                  <CheckBox fx:id="opcion2" mnemonicParsing="false" prefHeight="29.0" prefWidth="389.0" text="CheckBox" textFill="WHITE" GridPane.halignment="CENTER" GridPane.rowIndex="2">
+                  <CheckBox fx:id="opcion2" mnemonicParsing="false" prefHeight="29.0" prefWidth="300.0" text="CheckBox" textFill="WHITE" GridPane.halignment="CENTER" GridPane.rowIndex="2">
                      <font>
                         <Font name="Arial Bold" size="19.0" />
                      </font>
                   </CheckBox>
-                  <CheckBox fx:id="opcion3" mnemonicParsing="false" prefHeight="29.0" prefWidth="389.0" text="CheckBox" textFill="WHITE" GridPane.halignment="CENTER" GridPane.rowIndex="3">
+                  <CheckBox fx:id="opcion3" mnemonicParsing="false" prefHeight="29.0" prefWidth="300.0" text="CheckBox" textFill="WHITE" GridPane.halignment="CENTER" GridPane.rowIndex="3">
                      <font>
                         <Font name="Arial Bold" size="19.0" />
                      </font>
                   </CheckBox>
-                  <CheckBox fx:id="opcion4" mnemonicParsing="false" prefHeight="29.0" prefWidth="389.0" text="CheckBox" textFill="WHITE" GridPane.halignment="CENTER" GridPane.rowIndex="4">
+                  <CheckBox fx:id="opcion4" mnemonicParsing="false" prefHeight="29.0" prefWidth="300.0" text="CheckBox" textFill="WHITE" GridPane.halignment="CENTER" GridPane.rowIndex="4">
                      <font>
                         <Font name="Arial Bold" size="19.0" />
                      </font>
                   </CheckBox>
-                  <CheckBox fx:id="opcion5" mnemonicParsing="false" prefHeight="29.0" prefWidth="389.0" text="CheckBox" textFill="WHITE" GridPane.halignment="CENTER" GridPane.rowIndex="5">
+                  <CheckBox fx:id="opcion5" mnemonicParsing="false" prefHeight="29.0" prefWidth="300.0" text="CheckBox" textFill="WHITE" GridPane.halignment="CENTER" GridPane.rowIndex="5">
                      <font>
                         <Font name="Arial Bold" size="19.0" />
                      </font>
@@ -116,7 +116,7 @@
                   <Font name="Arial Bold" size="14.0" />
                </font>
             </Button>
-            <Button fx:id="botonexclusivdad" onAction="#asignarExclusividad" contentDisplay="BOTTOM" layoutX="56.0" layoutY="468.0" mnemonicParsing="false" prefWidth="209.0" style="-fx-pref-height: 40; -fx-pref-width: 151; -fx-text-fill: white; -fx-background-color: #FF69FF; -fx-background-radius: 20;" text="    Exclusividad" textFill="WHITE" AnchorPane.bottomAnchor="41.0" AnchorPane.leftAnchor="56.0">
+            <Button fx:id="botonexclusivdad" contentDisplay="BOTTOM" layoutX="56.0" layoutY="468.0" mnemonicParsing="false" onAction="#asignarExclusividad" prefWidth="209.0" style="-fx-pref-height: 40; -fx-pref-width: 151; -fx-text-fill: white; -fx-background-color: #FF69FF; -fx-background-radius: 20;" text="    Exclusividad" textFill="WHITE" AnchorPane.bottomAnchor="41.0" AnchorPane.leftAnchor="56.0">
                <font>
                   <Font name="Arial Bold" size="14.0" />
                </font>

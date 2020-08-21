@@ -22,8 +22,6 @@ public class ControladorPuntuacionFinal extends Controlador {
     public static Jugador jugadorGanador;
     public static Jugador segundoJugador;
 
-    public ControladorPuntuacionFinal()  { }
-
     public void initialize(){
         App.escenario.setResizable(false);
     }

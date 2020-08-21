@@ -3,19 +3,15 @@ package edu.fiuba.algo3.modelo.testunitarios;
 import edu.fiuba.algo3.modelo.Jugador;
 import edu.fiuba.algo3.modelo.Puntos;
 import edu.fiuba.algo3.modelo.excepciones.MasDeCincoOpcionesException;
-import edu.fiuba.algo3.modelo.excepciones.NoHayOpcionesException;
 import edu.fiuba.algo3.modelo.opcion.Opcion;
 import edu.fiuba.algo3.modelo.opcion.OpcionCorrecta;
 import edu.fiuba.algo3.modelo.respuesta.RespuestaMultiple;
-import edu.fiuba.algo3.modelo.respuesta.RespuestaUnica;
 import org.junit.Test;
 import java.util.LinkedList;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
 public class TestRespuestaMultiple {
-
-    //Actualizar a la nueva version en la que pregunta evalua la respuesta
 
     private final Opcion primeraOpcion = new OpcionCorrecta("Euler");
     private final Opcion segundaOpcion = new OpcionCorrecta("Gauss");

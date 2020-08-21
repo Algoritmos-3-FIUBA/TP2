@@ -1,14 +1,9 @@
 package edu.fiuba.algo3.controlador;
 
 import edu.fiuba.algo3.modelo.Jugador;
-import edu.fiuba.algo3.modelo.multiplicador.Multiplicador;
-import edu.fiuba.algo3.modelo.multiplicador.MultiplicadorDefault;
-import edu.fiuba.algo3.modelo.opcion.Opcion;
 import edu.fiuba.algo3.modelo.pregunta.Pregunta;
-import edu.fiuba.algo3.modelo.respuesta.RespuestaUnica;
 import edu.fiuba.algo3.vista.App;
 import javafx.fxml.FXML;
-import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.RadioButton;
@@ -43,7 +38,7 @@ public class ControladorVerdaderoFalsoPenalidad  extends Controlador{
     @FXML
     public Button botonexclusivdad;
 
-    Stage escenarioActual;
+    private Stage escenarioActual;
 
 
     public void initialize() {
