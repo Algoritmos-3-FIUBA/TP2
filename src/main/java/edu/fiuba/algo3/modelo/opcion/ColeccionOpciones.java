@@ -1,6 +1,5 @@
 package edu.fiuba.algo3.modelo.opcion;
 
-import java.util.Collection;
 import java.util.Collections;
 import java.util.HashSet;
 import java.util.LinkedList;
@@ -41,11 +40,11 @@ public class ColeccionOpciones {
     }
 
     public boolean tieneMismosElementos(ColeccionOpciones otraColeccionOpciones) {
-        return(otraColeccionOpciones.esIgual(new HashSet<Opcion>(opciones)));
+        return(otraColeccionOpciones.esIgual(new HashSet<>(opciones)));
     }
 
     private boolean esIgual(HashSet<Opcion> opciones){
-        return new HashSet<Opcion>(this.opciones).equals(opciones);
+        return new HashSet<>(this.opciones).equals(opciones);
     }
 
     public boolean tieneElementos(ColeccionOpciones otraColeccionOpciones){
@@ -78,6 +77,7 @@ public class ColeccionOpciones {
     public String getNombre() {
         if(nombre == null)
             return null;
+
         return nombre;
     }
 

@@ -13,7 +13,7 @@ public class EstadoIncorrecto extends EstadoRespuesta{
 
     @Override
     public void otorgarPuntos(Puntos puntosOtorgados, Jugador jugador) {
-        if(puntosOtorgados.getCantidad() < 0)
+        if(puntosOtorgados.sonNegativos()) //Cuando la respuesta incorrecta penaliza
             jugador.sumarPuntos(puntosOtorgados);
     }
 }

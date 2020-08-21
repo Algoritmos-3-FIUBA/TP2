@@ -41,19 +41,7 @@ public abstract class Respuesta {
         inicializacionComun(jugador);
         this.exclusividad = exclusividad;
         this.multiplicador = new MultiplicadorDefault();
-        this.amplificador = new Amplificador(1);
-    }
-
-    public void setAmplificador(Amplificador amplificador) {
-        this.amplificador = amplificador;
-    }
-
-    public void calcularAmplificacionExclusividad(LinkedList<Respuesta> respuestas){
-        exclusividad.actualizarAmplificador(respuestas,this);
-    }
-
-    public void actualizarCondicionDeUsoExclusividad(LinkedList<Respuesta> respuestas){
-        estado.actualizarCondicionDeUsoExclusividad(respuestas);
+        this.amplificador = new Amplificador(1); //Porque no sabemos si se va a usar el de exclusividad
     }
 
     public void otorgarPuntos(Puntos puntos){
@@ -62,11 +50,23 @@ public abstract class Respuesta {
         estado.otorgarPuntos(puntos,jugador);
     }
 
+    public void setAmplificador(Amplificador amplificador) {
+        this.amplificador = amplificador;
+    }
+
+    public void actualizarAmplificacionExclusividad(LinkedList<Respuesta> respuestas){
+        exclusividad.actualizarAmplificador(respuestas,this);
+    }
+
+    public void actualizarCondicionDeUsoExclusividad(LinkedList<Respuesta> respuestas){
+        estado.actualizarCondicionDeUsoExclusividad(respuestas);
+    }
+
     public void notificarExclusividadQueHayRespuestaCorrecta() {
         exclusividad.hayRespuestaCorrecta();
     }
 
-    public void establecerAmplificadorAdecuado() {
+    public void establecerUsoDeExclusividadSiEsNecesario() {
         this.exclusividad.establecerAmplificadorRequerido();
     }
 

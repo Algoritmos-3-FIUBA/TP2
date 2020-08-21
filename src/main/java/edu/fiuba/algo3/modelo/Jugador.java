@@ -12,17 +12,17 @@ public class Jugador {
 
     private final String nombre;
     private Puntos puntos;
-    private LinkedList<Multiplicador> multiplicadoresPorDos;
-    private LinkedList<Multiplicador> multiplicadoresPorTres;
+    private LinkedList<MultiplicadorPorDos> multiplicadoresPorDos;
+    private LinkedList<MultiplicadorPorTres> multiplicadoresPorTres;
     private LinkedList<Exclusividad> exclusividades;
 
     public Jugador(String name) {
         this.nombre = name;
         puntos = new Puntos(0);
 
-        multiplicadoresPorDos = new LinkedList<Multiplicador>();
-        multiplicadoresPorTres = new LinkedList<Multiplicador>();
-        exclusividades = new LinkedList<Exclusividad>();
+        multiplicadoresPorDos = new LinkedList<>();
+        multiplicadoresPorTres = new LinkedList<>();
+        exclusividades = new LinkedList<>();
 
         multiplicadoresPorDos.add(new MultiplicadorPorDos());
         multiplicadoresPorTres.add(new MultiplicadorPorTres());
@@ -49,28 +49,28 @@ public class Jugador {
     public Multiplicador usarMultiplicadorPorDos(){
         if(multiplicadoresPorDos.isEmpty())
             throw new NoTieneBeneficioException();
+
         return multiplicadoresPorDos.removeLast();
     }
 
     public Multiplicador usarMultiplicadorPorTres(){
         if(multiplicadoresPorTres.isEmpty())
             throw new NoTieneBeneficioException();
+
         return multiplicadoresPorTres.removeLast();
     }
 
     public Exclusividad usarExclusividad(){
         if(exclusividades.isEmpty())
             throw new NoTieneBeneficioException();
+
         return exclusividades.removeLast();
     }
     public int cantidadMultiplicadoresPor2(){
-
-           return (this.multiplicadoresPorDos.size());
-
+       return (this.multiplicadoresPorDos.size());
     }
 
     public int cantidadMultiplicadoresPor3() {
-
-        return (this.multiplicadoresPorTres.size());
+         return (this.multiplicadoresPorTres.size());
     }
 }

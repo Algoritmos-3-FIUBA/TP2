@@ -7,7 +7,6 @@ import edu.fiuba.algo3.modelo.excepciones.NoHayOpcionesException;
 import edu.fiuba.algo3.modelo.opcion.Opcion;
 import edu.fiuba.algo3.modelo.respuesta.Respuesta;
 import edu.fiuba.algo3.modelo.respuesta.RespuestaGrupos;
-
 import java.util.LinkedList;
 
 public class PreguntaGroupChoice extends Pregunta{
@@ -63,9 +62,8 @@ public class PreguntaGroupChoice extends Pregunta{
 
     @Override
     public void sumarPuntosJugadores(LinkedList<Respuesta> respuestas) {
-        for (Respuesta respuesta : respuestas) {
+        for (Respuesta respuesta : respuestas)
             respuesta.otorgarPuntos(puntosAOtorgar(respuesta));
-        }
     }
 
     @Override

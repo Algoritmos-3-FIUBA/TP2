@@ -11,9 +11,9 @@ import java.util.LinkedList;
 
 public class PreguntaMultipleChoice extends Pregunta {
 
-    private final Puntos puntosOtorgados;
-    private final ColeccionOpciones opcionesCorrectas;
-    private final ColeccionOpciones opcionesIncorrectas;
+    private Puntos puntosOtorgados;
+    private ColeccionOpciones opcionesCorrectas;
+    private ColeccionOpciones opcionesIncorrectas;
     private ColeccionOpciones opciones;
 
     public PreguntaMultipleChoice(String nombre, int puntos, ColeccionOpciones opciones) {
@@ -42,13 +42,13 @@ public class PreguntaMultipleChoice extends Pregunta {
     @Override
     public void sumarPuntosJugadores(LinkedList<Respuesta> respuestas) {
         for (Respuesta respuesta : respuestas)
-            respuesta.otorgarPuntos(new Puntos(puntosOtorgados.getCantidad()));
+            respuesta.otorgarPuntos(new Puntos(puntosOtorgados));
     }
 
     @Override
     public void corregirRespuestas(LinkedList<Respuesta> respuestas){
         for (Respuesta respuesta : respuestas)
-            if(((RespuestaMultiple) respuesta).getOpciones().tieneMismosElementos(opcionesCorrectas))
+            if(((RespuestaMultiple) respuesta).getColeccionDeOpciones().tieneMismosElementos(opcionesCorrectas))
                 respuesta.esCorrecta();
     }
 

@@ -1,10 +1,8 @@
 package edu.fiuba.algo3.modelo.pregunta;
 
 import edu.fiuba.algo3.modelo.opcion.ColeccionOpciones;
-import edu.fiuba.algo3.modelo.Puntos;
 import edu.fiuba.algo3.modelo.excepciones.MasDeCincoOpcionesException;
 import edu.fiuba.algo3.modelo.excepciones.NoHayOpcionesException;
-import edu.fiuba.algo3.modelo.opcion.Opcion;
 import edu.fiuba.algo3.modelo.respuesta.Respuesta;
 import edu.fiuba.algo3.modelo.respuesta.RespuestaMultiple;
 
@@ -12,8 +10,8 @@ import java.util.LinkedList;
 
 public class PreguntaMultipleChoiceParcial extends Pregunta{
 
-    private final ColeccionOpciones opcionesIncorrectas;
-    private final ColeccionOpciones opciones;
+    private ColeccionOpciones opcionesIncorrectas;
+    private ColeccionOpciones opciones;
 
     public PreguntaMultipleChoiceParcial(String nombre, ColeccionOpciones opciones){
 
@@ -39,19 +37,14 @@ public class PreguntaMultipleChoiceParcial extends Pregunta{
 
     @Override
     public void sumarPuntosJugadores(LinkedList<Respuesta> respuestas) {
-        for (Respuesta respuesta : respuestas) {
-            Puntos puntosParciales = new Puntos(0);
-            for (Opcion opcion : (((RespuestaMultiple) respuesta).getOpciones().getOpciones()))
-                puntosParciales.sumarPuntos(opcion.puntosObtenidos());
-            respuesta.otorgarPuntos(puntosParciales);
-        }
+        sumarPuntosMultiplceChoiceConCadaOpcion(respuestas);
     }
 
     @Override
     public void corregirRespuestas(LinkedList<Respuesta> respuestas) {
         for (Respuesta respuesta : respuestas) {
             RespuestaMultiple cadaRespuesta = (RespuestaMultiple) respuesta;
-            if (!cadaRespuesta.getOpciones().tieneElementos(opcionesIncorrectas))
+            if (!cadaRespuesta.getColeccionDeOpciones().tieneElementos(opcionesIncorrectas))
                 cadaRespuesta.esCorrecta();
         }
     }

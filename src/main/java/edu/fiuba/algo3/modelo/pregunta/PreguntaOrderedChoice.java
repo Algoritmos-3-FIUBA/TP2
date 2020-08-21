@@ -43,7 +43,7 @@ public class PreguntaOrderedChoice extends Pregunta{
     @Override
     public void corregirRespuestas(LinkedList<Respuesta> respuestas) {
         for (Respuesta respuesta : respuestas)
-            if(((RespuestaMultiple) respuesta).getOpciones().esIgual(opcionesCorrectas))
+            if(((RespuestaMultiple) respuesta).getColeccionDeOpciones().esIgual(opcionesCorrectas))
                 respuesta.esCorrecta();
     }
 

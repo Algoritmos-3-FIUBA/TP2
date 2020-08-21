@@ -8,6 +8,10 @@ public class Puntos {
         cantidad = cantidadPuntos;
     }
 
+    public Puntos(Puntos puntos) {
+        this.cantidad = puntos.getCantidad();
+    }
+
     public int getCantidad(){
         return cantidad;
     }
@@ -22,5 +26,9 @@ public class Puntos {
 
     public void multiplicar(int multiplicando){
         cantidad *= multiplicando;
+    }
+
+    public boolean sonNegativos() {
+        return (this.getCantidad() < 0);
     }
 }

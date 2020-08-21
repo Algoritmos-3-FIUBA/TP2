@@ -28,55 +28,5 @@ public class TestMultiplicador {
         assertEquals(multiplicador.getFactor(),3);
     }
 
-    @Test
-    public void testCreoMultiplicadorPorDosConEstadoMultiplicableYDevuelveLosPuntosMultiplicados04() {
-        MultiplicadorPorDos multiplicador = new MultiplicadorPorDos();
 
-        Jugador jugador = new Jugador("Carlos");
-        Puntos puntosAux = new Puntos(5);
-
-        multiplicador.utilizarBeneficio(puntosAux, jugador);
-
-        assertEquals((jugador.getPuntos()).getCantidad(), 10);
-    }
-
-    @Test
-    public void testCreoMultiplicadorPorTresConEstadoMultiplicableYDevuelveLosPuntosMultiplicados05() {
-        MultiplicadorPorTres multiplicador = new MultiplicadorPorTres();
-
-        Jugador jugador = new Jugador("Carlos");
-        Puntos puntosAux = new Puntos(5);
-
-        multiplicador.utilizarBeneficio(puntosAux, jugador);
-
-        assertEquals((jugador.getPuntos()).getCantidad(), 15);
-    }
-
-    @Test
-    public void testCreoMultiplicadorPorDefaultYDevuelveLosPuntosDelJugador06() {
-        MultiplicadorDefault multiplicador = new MultiplicadorDefault();
-
-        Jugador jugador = new Jugador("Carlos");
-        Puntos puntosAux = new Puntos(5);
-
-        multiplicador.utilizarBeneficio(puntosAux, jugador);
-
-        assertEquals((jugador.getPuntos()).getCantidad(), 5);
-    }
-
-    @Test
-    public void testCreoMultiplicadorPorDosYLoPuedoUtilizarUnaSolaVez07() {
-        MultiplicadorPorDos multiplicador = new MultiplicadorPorDos();
-
-        Jugador jugador = new Jugador("Carlos");
-        Puntos puntosAux = new Puntos(5);
-
-        multiplicador.utilizarBeneficio(puntosAux, jugador);
-
-        assertEquals((jugador.getPuntos()).getCantidad(), 10);
-
-        multiplicador.utilizarBeneficio(puntosAux, jugador);
-
-        assertEquals((jugador.getPuntos()).getCantidad(), 20);
-    }
 }

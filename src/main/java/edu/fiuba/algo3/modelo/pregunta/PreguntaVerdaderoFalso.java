@@ -25,7 +25,7 @@ public abstract class PreguntaVerdaderoFalso extends Pregunta {
     @Override
     public void sumarPuntosJugadores(LinkedList<Respuesta> respuestas) {
         for (Respuesta respuesta : respuestas)
-            respuesta.otorgarPuntos(new Puntos(((RespuestaUnica)respuesta).getOpcion().getPuntos().getCantidad()));
+            respuesta.otorgarPuntos(new Puntos(((RespuestaUnica)respuesta).getOpcion().getPuntos()));
     }
 
     @Override
@@ -37,8 +37,8 @@ public abstract class PreguntaVerdaderoFalso extends Pregunta {
     @Override
     public ColeccionOpciones getOpciones(){
         ColeccionOpciones opciones = new ColeccionOpciones();
-        opciones.agregarOpcion(opcionFalso);
         opciones.agregarOpcion(opcionVerdadero);
+        opciones.agregarOpcion(opcionFalso);
         return opciones;
     }
 

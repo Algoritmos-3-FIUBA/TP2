@@ -12,12 +12,6 @@ public abstract class Multiplicador {
         amplificador.setFactor(1);
     }
 
-    public void utilizarBeneficio(Puntos puntos, Jugador jugador) {
-        amplificador.amplificarPuntos(puntos);
-        jugador.sumarPuntos(puntos);
-        this.inutilizarMultiplicador();
-    }
-
     public int getFactor() {
         return amplificador.getFactor();
     }

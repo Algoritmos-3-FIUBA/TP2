@@ -18,9 +18,11 @@ public class Exclusividad {
     }
 
     public void actualizarAmplificador(LinkedList<Respuesta> respuestas,Respuesta respuestaActual) {
-        LinkedList<Respuesta> respuestasSinLaActual = new LinkedList<>(respuestas);
-        respuestasSinLaActual.remove(respuestaActual);
-        estrategiaAumentoFactor.aumentarFactoresDeExclusividades(respuestasSinLaActual);
+        estrategiaAumentoFactor.aumentarFactoresDeExclusividades(respuestas,respuestaActual);
+        notificarUsoDeExclusividad(respuestas);
+    }
+
+    private void notificarUsoDeExclusividad(LinkedList<Respuesta> respuestas){
         for (Respuesta respuesta : respuestas)
             respuesta.setAmplificadorExclusividad();
     }

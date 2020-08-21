@@ -30,7 +30,7 @@ public class RespuestaMultiple extends Respuesta {
         verificarNumeroDeOpciones(opciones);
     }
 
-    public ColeccionOpciones getOpciones() {
+    public ColeccionOpciones getColeccionDeOpciones() {
         return opcionesElegidas;
     }
 

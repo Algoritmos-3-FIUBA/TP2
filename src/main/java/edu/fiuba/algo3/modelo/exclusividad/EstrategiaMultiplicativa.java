@@ -14,8 +14,10 @@ public class EstrategiaMultiplicativa extends EstrategiaAumentoFactor{
     }
 
     @Override
-    public void aumentarFactoresDeExclusividades(LinkedList<Respuesta> respuestas) {
-        for (Respuesta respuesta : respuestas)
+    public void aumentarFactoresDeExclusividades(LinkedList<Respuesta> respuestas, Respuesta respuestaActual) {
+        LinkedList<Respuesta> respuestasSinLaActual = new LinkedList<>(respuestas);
+        respuestasSinLaActual.remove(respuestaActual);
+        for (Respuesta respuesta : respuestasSinLaActual)
             respuesta.actualizarFactorAmplificacion(factorBase);
     }
 
