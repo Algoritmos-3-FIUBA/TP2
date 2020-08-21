@@ -5,6 +5,7 @@ import edu.fiuba.algo3.modelo.exclusividad.Exclusividad;
 import edu.fiuba.algo3.modelo.exclusividad.ExclusividadDefault;
 import edu.fiuba.algo3.modelo.opcion.Opcion;
 import edu.fiuba.algo3.modelo.pregunta.Pregunta;
+import edu.fiuba.algo3.modelo.respuesta.Respuesta;
 import edu.fiuba.algo3.modelo.respuesta.RespuestaMultiple;
 import edu.fiuba.algo3.vista.App;
 import javafx.fxml.FXML;
@@ -17,10 +18,7 @@ import java.io.IOException;
 import java.util.LinkedList;
 
 public class ControladorMultipleChoiceClasico extends Controlador{
-    private LinkedList<CheckBox> cajasOpcionesMostradas = new LinkedList<>();
-    private LinkedList<Opcion> opcionesSeleccionadas = new LinkedList<>();
-    private EscenaJugador turnoActual;
-    private Jugador jugador;
+    private final LinkedList<CheckBox> cajasOpcionesMostradas = new LinkedList<>();
 
     @FXML
     public Label nombrepregunta;
@@ -66,56 +64,21 @@ public class ControladorMultipleChoiceClasico extends Controlador{
     }
 
     public void actualizarPlantilla(Pregunta pregunta, Jugador jugadorActual, EscenaJugador turnoActual) {
-        this.turnoActual = turnoActual;
-        this.jugador = jugadorActual;
 
-        nombrepregunta.setText(pregunta.getNombre());
-        tipopregunta.setText(pregunta.getClass().getSimpleName().replaceAll("(.)([A-Z])", "$1 $2"));
-        jugadoractual.setText(jugadorActual.getNombre());
-        puntosactuales.setText(String.valueOf(jugadorActual.getPuntos().cantidad));
-
-        for(CheckBox opcion : cajasOpcionesMostradas)
-            opcion.setSelected(false);
-
-        multiplicadorx2.setDisable(true);
-        multiplicadorx3.setDisable(true);
-
-        if(jugador.getExclusividades().size() == 0)
-            botonexclusivdad.setDisable(true);
-        else
-            botonexclusivdad.setDisable(false);
-
-        opcionesSeleccionadas = new LinkedList<>();
-
-        for (int i = 0; i < pregunta.getColeccionDeOpciones().cantidadElementos(); i++) {
-            cajasOpcionesMostradas.get(i).setOnAction(new SeleccionarCheckBoxMultipleChoiceHandler(pregunta.getColeccionDeOpciones().getOpciones().get(i), opcionesSeleccionadas));
-            cajasOpcionesMostradas.get(i).setText(pregunta.getColeccionDeOpciones().getOpciones().get(i).getNombre());
-        }
-    }
+        this.actualizador = new ControladorActualizador(pregunta,jugadorActual,turnoActual);
+        this.actualizador.actualizarTextosEtiquetas(nombrepregunta,tipopregunta,jugadoractual,puntosactuales);
+        this.actualizador.actualizarPlantillaMultipleChoiceClasico(botonexclusivdad,cajasOpcionesMostradas);
+      }
 
     public void siguienteTurno() throws IOException {
 
-        this.turnoActual.siguienteJugador(new RespuestaMultiple(opcionesSeleccionadas,jugador, exclusividad));
-        /*
-        if(jugador.getExclusividades().size() == cantidadExclusividades || jugador.getExclusividades().size() == 0)
-            this.turnoActual.siguienteJugador(new RespuestaMultiple(opcionesSeleccionadas,jugador));
-        else
-            this.turnoActual.siguienteJugador(respuesta);*/
-    }
+        this.actualizador.siguenteTurnoMultipleChoice();
+      }
 
     public void asignarExclusividad() throws IOException {
 
-        this.exclusividad = jugador.usarExclusividad();
-        botonexclusivdad.setDisable(true);
-
-        /*   VIEJO
-        respuesta = new RespuestaUnica(opcionesSeleccionadas.getFirst(), jugador, jugador.usarExclusividad());
-        */
-
-        /*cantidadExclusividades = jugador.getExclusividades().size();
-        respuesta = new RespuestaMultiple(opcionesSeleccionadas,jugador, jugador.usarExclusividad());
-        botonexclusivdad.setDisable(true);*/
-    }
+        this.actualizador.asignarExclusividad(botonexclusivdad);
+      }
 
 }
 

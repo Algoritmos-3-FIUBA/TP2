@@ -17,12 +17,9 @@ import java.io.IOException;
 import java.util.LinkedList;
 
 public class ControladorMultipleChoicePenalidad  extends Controlador{
-    private LinkedList<CheckBox> cajasOpcionesMostradas = new LinkedList<>();
-    private LinkedList<Opcion> opcionesSeleccionadas = new LinkedList<>();
-    private LinkedList<Button> cajasMultiplicadores = new LinkedList<>();
-    private EscenaJugador turnoActual;
-    private Jugador jugador;
-    private Multiplicador multiplicador = new MultiplicadorDefault();
+    private final LinkedList<CheckBox> cajasOpcionesMostradas = new LinkedList<>();
+    private final LinkedList<Button> cajasMultiplicadores = new LinkedList<>();
+
 
     @FXML
     public Label nombrepregunta;
@@ -64,48 +61,24 @@ public class ControladorMultipleChoicePenalidad  extends Controlador{
         cajasMultiplicadores.add(multiplicadorx2);
         cajasMultiplicadores.add(multiplicadorx3);
 
+        botonexclusivdad.setDisable(true);
+
     }
 
     public void actualizarPlantilla(Pregunta pregunta, Jugador jugadorActual, EscenaJugador turnoActual) {
-        this.turnoActual = turnoActual;
-        this.jugador = jugadorActual;
-
-        nombrepregunta.setText(pregunta.getNombre());
-        tipopregunta.setText(pregunta.getClass().getSimpleName().replaceAll("(.)([A-Z])", "$1 $2"));
-        jugadoractual.setText(jugadorActual.getNombre());
-        puntosactuales.setText(String.valueOf(jugadorActual.getPuntos().cantidad));
-
-        for(CheckBox opcion : cajasOpcionesMostradas)
-            opcion.setSelected(false);
-
-        for(Button multiplicador : cajasMultiplicadores)
-            multiplicador.setDisable(false);
-
-        botonexclusivdad.setDisable(true);
-
-        if(jugador.cantidadMultiplicadoresPor2() == 0) multiplicadorx2.setDisable(true);
-        if(jugador.cantidadMultiplicadoresPor3() == 0) multiplicadorx3.setDisable(true);
-
-        opcionesSeleccionadas = new LinkedList<>();
-
-        for (int i = 0; i < pregunta.getColeccionDeOpciones().cantidadElementos(); i++) {
-            cajasOpcionesMostradas.get(i).setOnAction(new SeleccionarCheckBoxMultipleChoiceHandler(pregunta.getColeccionDeOpciones().getOpciones().get(i), opcionesSeleccionadas));
-            cajasOpcionesMostradas.get(i).setText(pregunta.getColeccionDeOpciones().getOpciones().get(i).getNombre());
-        }
-    }
+        this.actualizador = new ControladorActualizador(pregunta,jugadorActual,turnoActual);
+        this.actualizador.actualizarTextosEtiquetas(nombrepregunta,tipopregunta,jugadoractual,puntosactuales);
+        this.actualizador.actualizarPlantillaMultipleChoicePenalidad(cajasMultiplicadores,cajasOpcionesMostradas);
+      }
 
     public void siguienteTurno() throws IOException {
-        this.turnoActual.siguienteJugador(new RespuestaMultiple(opcionesSeleccionadas,jugador,multiplicador));
+        this.actualizador.siguenteTurnoMultipleChoicePenalidad();
     }
     public void asignarMultiplicadorx2() {
-
-        if(jugador.cantidadMultiplicadoresPor2() != 0) multiplicador = jugador.usarMultiplicadorPorDos();
-        multiplicadorx2.setDisable(true);
-        multiplicadorx3.setDisable(true);
+        this.actualizador.asignarMultiplicadoex2(multiplicadorx2,multiplicadorx3);
     }
     public void asignarMultiplicadorx3() {
-        if(jugador.cantidadMultiplicadoresPor3() != 0) multiplicador = jugador.usarMultiplicadorPorTres();
-        multiplicadorx3.setDisable(true);
-        multiplicadorx2.setDisable(true);
-    }
+
+        this.actualizador.asignarMultiplicadoex3(multiplicadorx2,multiplicadorx3); }
+
 }

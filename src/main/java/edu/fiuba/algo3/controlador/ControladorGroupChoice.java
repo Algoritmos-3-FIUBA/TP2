@@ -6,6 +6,7 @@ import edu.fiuba.algo3.modelo.opcion.ColeccionOpciones;
 import edu.fiuba.algo3.modelo.Jugador;
 import edu.fiuba.algo3.modelo.pregunta.Pregunta;
 import edu.fiuba.algo3.modelo.pregunta.PreguntaGroupChoice;
+import edu.fiuba.algo3.modelo.respuesta.Respuesta;
 import edu.fiuba.algo3.modelo.respuesta.RespuestaGrupos;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -20,12 +21,7 @@ import static java.lang.String.valueOf;
 public class ControladorGroupChoice extends Controlador{
     private final LinkedList<Button> opcionesMostradas = new LinkedList<>();
     private final LinkedList<ComboBox> gruposMostrados = new LinkedList<>();
-    private LinkedList<ColeccionOpciones> gruposElegidos = new LinkedList<>();
-    private Pregunta pregunta;
-    private EscenaJugador turnoActual;
-    private Jugador jugador;
-   /* private int cantidadExclusividades = 2;
-    private Respuesta respuesta;*/
+    private final LinkedList<ColeccionOpciones> gruposElegidos = new LinkedList<>();
 
     @FXML
     public Label nombrepregunta;
@@ -79,72 +75,31 @@ public class ControladorGroupChoice extends Controlador{
         gruposMostrados.add(comboopcion4);
         gruposMostrados.add(comboopcion5);
 
-    }
-
-    @Override
-    public void actualizarPlantilla(Pregunta pregunta, Jugador jugadorActual, EscenaJugador turnoActual) {
-        this.turnoActual = turnoActual;
-        this.jugador = jugadorActual;
-        this.pregunta = pregunta;
-
         multiplicadorx2.setDisable(true);
         multiplicadorx3.setDisable(true);
 
-        nombrepregunta.setText(pregunta.getNombre());
-        tipopregunta.setText(pregunta.getClass().getSimpleName().replaceAll("(.)([A-Z])", "$1 $2"));
-        jugadoractual.setText(jugadorActual.getNombre());
-        puntosactuales.setText(valueOf(jugadorActual.getPuntos().cantidad));
-
-        gruposElegidos = new LinkedList<>();
-
-        ColeccionOpciones primerGrupo = new ColeccionOpciones(((PreguntaGroupChoice) pregunta).getNombresGrupos().get(0));
-        ColeccionOpciones segundoGrupo = new ColeccionOpciones(((PreguntaGroupChoice) pregunta).getNombresGrupos().get(1));
-
-        gruposElegidos.add(primerGrupo);
-        gruposElegidos.add(segundoGrupo);
-
-        for(ComboBox caja : gruposMostrados){
-            caja.setValue(null);
-            caja.getItems().clear();
-        }
-
-        for(ComboBox caja : gruposMostrados){
-            caja.getItems().add(primerGrupo.getNombre());
-            caja.getItems().add(segundoGrupo.getNombre());
-        }
-
-        if(jugador.getExclusividades().size() == 0)
-            botonexclusivdad.setDisable(true);
-        else
-            botonexclusivdad.setDisable(false);
-
-        for (int i = 0; i < pregunta.getColeccionDeOpciones().cantidadElementos(); i++)
-            opcionesMostradas.get(i).setText(pregunta.getColeccionDeOpciones().getOpciones().get(i).getNombre());
     }
+
+    @Override
+    public void actualizarPlantilla(Pregunta pregunta, Jugador jugadorActual, EscenaJugador escenaActual) {
+        this.actualizador = new ControladorActualizador(pregunta,jugadorActual,escenaActual);
+        this.actualizador.actualizarTextosEtiquetas(nombrepregunta,tipopregunta,jugadoractual,puntosactuales);
+        this.actualizador.actualizarPlantillaGroupChoice(opcionesMostradas,gruposMostrados,botonexclusivdad);
+        }
 
 
     public void siguienteTurno() throws IOException {
 
         this.armarGrupos();
-        turnoActual.siguienteJugador(new RespuestaGrupos(gruposElegidos,jugador,exclusividad));
-        /*if(jugador.getExclusividades().size() == cantidadExclusividades || jugador.getExclusividades().size() == 0)
-            this.turnoActual.siguienteJugador(new RespuestaGrupos(gruposElegidos,jugador));
-        else
-            this.turnoActual.siguienteJugador(respuesta);*/
+        this.actualizador.siguenteTurnoGroupChoice();
     }
 
     public void asignarExclusividad() throws IOException {
 
-        /*cantidadExclusividades = jugador.getExclusividades().size();
-        respuesta = new RespuestaGrupos(gruposElegidos,jugador, jugador.usarExclusividad());*/
-        this.exclusividad = jugador.usarExclusividad();
-        botonexclusivdad.setDisable(true);
+        this.actualizador.asignarExclusividad(botonexclusivdad);
     }
 
     private void armarGrupos() {
-        for(ComboBox caja : gruposMostrados)
-            for(ColeccionOpciones grupos: gruposElegidos)
-                if(caja.getValue() == grupos.getNombre())
-                    grupos.agregarOpcion(pregunta.getColeccionDeOpciones().getOpciones().get(gruposMostrados.indexOf(caja)));
-    }
+        this.actualizador.armarGrupos(gruposMostrados,gruposElegidos);
+        }
 }

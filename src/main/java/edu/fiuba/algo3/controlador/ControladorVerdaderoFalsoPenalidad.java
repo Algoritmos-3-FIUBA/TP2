@@ -19,15 +19,13 @@ import java.util.LinkedList;
 
 public class ControladorVerdaderoFalsoPenalidad  extends Controlador{
 
-    private LinkedList<RadioButton> cajasOpcionesMostradas = new LinkedList<RadioButton>();
-    private LinkedList<Opcion> opcionesSeleccionadas = new LinkedList<>();
-    private LinkedList<Button> cajasMultiplicadores = new LinkedList<>();
-    private EscenaJugador turnoActual;
-    private Jugador jugador;
-    private Multiplicador multiplicador = new MultiplicadorDefault();
+    private final LinkedList<RadioButton> cajasOpcionesMostradas = new LinkedList<RadioButton>();
+    private final LinkedList<Button> cajasMultiplicadores = new LinkedList<>();
 
     @FXML
     public Label nombrepregunta;
+    @FXML
+    public Label tipopregunta;
     @FXML
     public Button botonsiguiente;
     @FXML
@@ -56,57 +54,26 @@ public class ControladorVerdaderoFalsoPenalidad  extends Controlador{
         cajasMultiplicadores.add(multiplicadorx2);
         cajasMultiplicadores.add(multiplicadorx3);
 
-    }
-    @Override
-    public void actualizarPlantilla(Pregunta pregunta, Jugador jugadorActual, EscenaJugador turnoActual) {
-        this.turnoActual = turnoActual;
-        this.jugador = jugadorActual;
-
-        nombrepregunta.setText(pregunta.getNombre());
-        jugadoractual.setText(jugadorActual.getNombre());
-        puntosactuales.setText(String.valueOf(jugadorActual.getPuntos().cantidad));
-
-        for(RadioButton opcion : cajasOpcionesMostradas)
-            opcion.setSelected(false);
-
-        for(Button multiplicador : cajasMultiplicadores)
-           multiplicador.setDisable(false);
-
         botonexclusivdad.setDisable(true);
 
-        if(jugador.cantidadMultiplicadoresPor2() == 0) multiplicadorx2.setDisable(true);
-        if(jugador.cantidadMultiplicadoresPor3() == 0) multiplicadorx3.setDisable(true);
+    }
+    @Override
+    public void actualizarPlantilla(Pregunta pregunta, Jugador jugadorActual, EscenaJugador escenaActual) {
 
-        opcionesSeleccionadas = new LinkedList<>();
-
-        for (int i = 0; i < pregunta.getColeccionDeOpciones().cantidadElementos(); i++) {
-            cajasOpcionesMostradas.get(i).setOnAction(new SeleccionarRadioButtonHandler(pregunta.getColeccionDeOpciones().getOpciones().get(i), opcionesSeleccionadas));
-        }
+        this.actualizador = new ControladorActualizador(pregunta,jugadorActual,escenaActual);
+        this.actualizador.actualizarTextosEtiquetas(nombrepregunta,tipopregunta,jugadoractual,puntosactuales);
+        this.actualizador.actualizarPlantillaVerdaderoFalsoPenalidad(cajasOpcionesMostradas,cajasMultiplicadores);
     }
 
     public void siguienteTurno() throws IOException {
 
-        try{
-            this.turnoActual.siguienteJugador(new RespuestaUnica(opcionesSeleccionadas.removeFirst(),jugador,multiplicador));
-        }catch(Exception e){
-            Alert alert = new Alert(Alert.AlertType.ERROR);
-            alert.setTitle("Error!!");
-            alert.setHeaderText("No has elegido ninguna respuesta");
-            alert.setContentText("Por favor, elegí una y volvé a intentar.");
-            alert.showAndWait();
-        }
-
+        this.actualizador.siguenteTurnoVoFPenalidad();
     }
 
     public void asignarMultiplicadorx2() {
-
-        if(jugador.cantidadMultiplicadoresPor2() != 0) multiplicador = jugador.usarMultiplicadorPorDos();
-        multiplicadorx2.setDisable(true);
-        multiplicadorx3.setDisable(true);
+        this.actualizador.asignarMultiplicadoex2(multiplicadorx2,multiplicadorx3);
     }
     public void asignarMultiplicadorx3() {
-        if(jugador.cantidadMultiplicadoresPor3() != 0) multiplicador = jugador.usarMultiplicadorPorTres();
-        multiplicadorx3.setDisable(true);
-        multiplicadorx2.setDisable(true);
+        this.actualizador.asignarMultiplicadoex3(multiplicadorx2,multiplicadorx3);
     }
 }

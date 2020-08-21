@@ -1,7 +1,9 @@
 package edu.fiuba.algo3.controlador;
 
 import edu.fiuba.algo3.modelo.Jugador;
+import edu.fiuba.algo3.controlador.EscenaJugador;
 import edu.fiuba.algo3.modelo.exclusividad.Exclusividad;
+import edu.fiuba.algo3.modelo.exclusividad.ExclusividadDefault;
 import edu.fiuba.algo3.modelo.opcion.Opcion;
 import edu.fiuba.algo3.modelo.pregunta.Pregunta;
 import edu.fiuba.algo3.modelo.respuesta.Respuesta;
@@ -18,14 +20,7 @@ import java.io.IOException;
 import java.util.LinkedList;
 
 public class ControladorVerdaderoFalsoClasico extends Controlador {
-    private LinkedList<RadioButton> cajasOpcionesMostradas = new LinkedList<RadioButton>();
-    private LinkedList<Opcion> opcionesSeleccionadas = new LinkedList<>();
-    private LinkedList<Button> cajasMultiplicadores = new LinkedList<>();
-    private EscenaJugador escenaActual;
-    private Jugador jugador;
-    private Exclusividad exclusividad = new Exclusividad();
-    private Respuesta respuesta;
-    private int cantidadExclusividades = 2;
+    private final LinkedList<RadioButton> cajasOpcionesMostradas = new LinkedList<RadioButton>();
 
     @FXML
     public Label nombrepregunta;
@@ -63,54 +58,17 @@ public class ControladorVerdaderoFalsoClasico extends Controlador {
     }
     @Override
     public void actualizarPlantilla(Pregunta pregunta, Jugador jugadorActual,EscenaJugador escenaActual) {
-        this.escenaActual = escenaActual;
-        this.jugador = jugadorActual;
 
-        nombrepregunta.setText(pregunta.getNombre());
-        tipopregunta.setText(pregunta.getClass().getSimpleName().replaceAll("(.)([A-Z])", "$1 $2"));
-        jugadoractual.setText(jugadorActual.getNombre());
-        puntosactuales.setText(String.valueOf(jugadorActual.getPuntos().cantidad));
-
-        for(RadioButton opcion : cajasOpcionesMostradas)
-            opcion.setSelected(false);
-
-        multiplicadorx2.setDisable(true);
-        multiplicadorx3.setDisable(true);
-
-        if(jugador.getExclusividades().size() == 0)
-            botonexclusivdad.setDisable(true);
-        else
-            botonexclusivdad.setDisable(false);
-
-        opcionesSeleccionadas = new LinkedList<>();
-
-        for (int i = 0; i < pregunta.getColeccionDeOpciones().cantidadElementos(); i++) {
-            cajasOpcionesMostradas.get(i).setOnAction(new SeleccionarRadioButtonHandler(pregunta.getColeccionDeOpciones().getOpciones().get(i), opcionesSeleccionadas));
-        }
-
+        this.actualizador = new ControladorActualizador(pregunta,jugadorActual,escenaActual);
+        this.actualizador.actualizarTextosEtiquetas(nombrepregunta,tipopregunta,jugadoractual,puntosactuales);
+        this.actualizador.actualizarPlantillaVerdaderoFalsoClasico(cajasOpcionesMostradas,botonexclusivdad);
     }
 
     public void siguienteTurno() throws IOException {
-
-        if(jugador.getExclusividades().size() == cantidadExclusividades || jugador.getExclusividades().size() == 0)
-
-            try{
-                this.escenaActual.siguienteJugador(new RespuestaUnica(opcionesSeleccionadas.removeFirst(), jugador));
-            }catch(Exception e){
-                Alert alert = new Alert(Alert.AlertType.ERROR);
-                alert.setTitle("Error!!");
-                alert.setHeaderText("No has elegido ninguna respuesta");
-                alert.setContentText("Por favor, elegí una y volvé a intentar.");
-                alert.showAndWait();
-            }
-        else
-            this.escenaActual.siguienteJugador(respuesta);
+        this.actualizador.siguenteTurnoVoF();
     }
 
     public void asignarExclusividad() throws IOException {
-
-        cantidadExclusividades = jugador.getExclusividades().size();
-        respuesta = new RespuestaUnica(opcionesSeleccionadas.getFirst(), jugador, jugador.usarExclusividad());
-        botonexclusivdad.setDisable(true);
+        this.actualizador.asignarExclusividad(botonexclusivdad);
     }
 }
