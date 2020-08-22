@@ -12,7 +12,7 @@ import java.util.LinkedList;
 public class ControladorGroupChoice extends Controlador{
     private final LinkedList<Button> opcionesMostradas = new LinkedList<>();
     private final LinkedList<ComboBox> gruposMostrados = new LinkedList<>();
-    private final LinkedList<ColeccionOpciones> gruposElegidos = new LinkedList<>();
+    private LinkedList<ColeccionOpciones> gruposElegidos = new LinkedList<>();
 
     @FXML
     public Label nombrepregunta;
@@ -72,16 +72,18 @@ public class ControladorGroupChoice extends Controlador{
 
     @Override
     public void actualizarPlantilla(Pregunta pregunta, Jugador jugadorActual, EscenaJugador escenaActual) {
+        gruposElegidos = new LinkedList<>();
+
         this.actualizador = new ControladorActualizador(pregunta,jugadorActual,escenaActual);
         this.actualizador.actualizarTextosEtiquetas(nombrepregunta,tipopregunta,jugadoractual,puntosactuales);
-        this.actualizador.actualizarPlantillaGroupChoice(opcionesMostradas,gruposMostrados,botonexclusivdad);
+        this.actualizador.actualizarPlantillaGroupChoice(opcionesMostradas,gruposMostrados,botonexclusivdad,gruposElegidos);
         }
 
 
     public void siguienteTurno() throws IOException {
 
         this.armarGrupos();
-        this.actualizador.siguenteTurnoGroupChoice();
+        this.actualizador.siguenteTurnoGroupChoice(gruposElegidos);
     }
 
     public void asignarExclusividad() throws IOException {

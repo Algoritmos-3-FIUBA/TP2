@@ -24,7 +24,6 @@ public class ControladorActualizador {
     private LinkedList<Opcion> opcionesSeleccionadas = new LinkedList<>();
     private Exclusividad exclusividad = new ExclusividadDefault();
     private Multiplicador multiplicador = new MultiplicadorDefault();
-    private LinkedList<ColeccionOpciones> gruposElegidos;
 
     public ControladorActualizador(Pregunta pregunta, Jugador jugadorActual, EscenaJugador escenaActual) {
         this.pregunta = pregunta;
@@ -179,9 +178,7 @@ public class ControladorActualizador {
         }
     }
 
-    public void actualizarPlantillaGroupChoice(LinkedList<Button> opcionesMostradas, LinkedList<ComboBox> gruposMostrados, Button botonexclusivdad) {
-        gruposElegidos = new LinkedList<>();
-
+    public void actualizarPlantillaGroupChoice(LinkedList<Button> opcionesMostradas, LinkedList<ComboBox> gruposMostrados, Button botonexclusivdad,LinkedList<ColeccionOpciones> gruposElegidos) {
         ColeccionOpciones primerGrupo = new ColeccionOpciones(((PreguntaGroupChoice) pregunta).getNombresGrupos().get(0));
         ColeccionOpciones segundoGrupo = new ColeccionOpciones(((PreguntaGroupChoice) pregunta).getNombresGrupos().get(1));
 
@@ -206,15 +203,13 @@ public class ControladorActualizador {
     }
 
     public void armarGrupos(LinkedList<ComboBox> gruposMostrados, LinkedList<ColeccionOpciones> gruposElegidos) {
-        for(ComboBox caja : gruposMostrados)
-            for(ColeccionOpciones grupos: gruposElegidos)
-                if(caja.getValue() == grupos.getNombre())
+        for (ComboBox caja : gruposMostrados)
+            for (ColeccionOpciones grupos : gruposElegidos)
+                if (caja.getValue() == grupos.getNombre())
                     grupos.agregarOpcion(pregunta.getColeccionDeOpciones().getOpciones().get(gruposMostrados.indexOf(caja)));
-
     }
 
-    public void siguenteTurnoGroupChoice() throws IOException {
+    public void siguenteTurnoGroupChoice(LinkedList<ColeccionOpciones> gruposElegidos) throws IOException {
         escenaActual.siguienteJugador(new RespuestaGrupos(gruposElegidos,jugador,exclusividad));
-
     }
 }
