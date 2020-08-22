@@ -91,10 +91,11 @@
       "tipo": "OrderedChoice",
       "nombre": "Ordenar de Mayor a Menor",
       "correctas": [
-        "20",
-        "14",
-        "12",
-        "3"
+        "30",
+        "24",
+        "22",
+        "3",
+        "1"
       ]
     }
     },{
