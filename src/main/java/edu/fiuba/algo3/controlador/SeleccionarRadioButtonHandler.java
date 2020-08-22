@@ -17,10 +17,8 @@ public class SeleccionarRadioButtonHandler implements EventHandler<ActionEvent> 
 
     @Override
     public void handle(ActionEvent actionEvent) {
-        if(opcionesSeleccionadas.contains(opcionVinculada))
-            opcionesSeleccionadas.remove(opcionVinculada);
-        else
-            opcionesSeleccionadas.add(opcionVinculada);
+        opcionesSeleccionadas.clear();
+        opcionesSeleccionadas.add(opcionVinculada);
     }
 
 }
