@@ -17,7 +17,7 @@
   {
     "tipo": "VerdaderoFalsoClasico",
     "nombre": "¿11 es un número primo?",
-    "opcionCorrecta": false
+    "opcionCorrecta": true
   }
 },
   {
@@ -25,7 +25,7 @@
     {
       "tipo": "VerdaderoFalsoClasico",
       "nombre": "¿207 es un número primo?",
-      "opcionCorrecta": false
+      "opcionCorrecta": true
     }
   },
   {
@@ -33,7 +33,7 @@
     {
       "tipo": "VerdaderoFalsoClasico",
       "nombre": "¿88 es un número primo?",
-      "opcionCorrecta": true
+      "opcionCorrecta": false
     }
   },{
   "Pregunta":

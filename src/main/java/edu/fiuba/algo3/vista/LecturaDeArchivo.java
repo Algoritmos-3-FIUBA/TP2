@@ -156,16 +156,16 @@ public class LecturaDeArchivo {
 
     private void instanciarPreguntaVoFPenalidad(JSONObject oPregunta, LinkedList<Pregunta> preguntas,HashMap<Pregunta,String> plantillaPreguntas) {
         PreguntaVerdaderoFalsoPenalidad pregunta = new PreguntaVerdaderoFalsoPenalidad((String) oPregunta.get("nombre"));
-        if((Boolean) oPregunta.get("opcionCorrecta")) pregunta.setVerdaderoOpcionCorrecta();
-        else pregunta.setFalsoOpcionCorrecta();
+        if((Boolean) oPregunta.get("opcionCorrecta")) pregunta.setFalsoOpcionCorrecta();
+        else pregunta.setVerdaderoOpcionCorrecta();
         preguntas.add(pregunta);
         plantillaPreguntas.put(pregunta,"src/main/java/edu/fiuba/algo3/vista/plantilla/VerdaderoFalsoPenalidad.fxml");
     }
 
     private void instanciarPreguntaVoFClasica(JSONObject oPregunta, LinkedList<Pregunta> preguntas,HashMap<Pregunta,String> plantillaPreguntas) {
         PreguntaVerdaderoFalsoClasico pregunta = new PreguntaVerdaderoFalsoClasico((String) oPregunta.get("nombre"));
-        if((Boolean) oPregunta.get("opcionCorrecta")) pregunta.setVerdaderoOpcionCorrecta();
-        else pregunta.setFalsoOpcionCorrecta();
+        if((Boolean) oPregunta.get("opcionCorrecta")) pregunta.setFalsoOpcionCorrecta();
+        else pregunta.setVerdaderoOpcionCorrecta();
         preguntas.add(pregunta);
         plantillaPreguntas.put(pregunta,"src/main/java/edu/fiuba/algo3/vista/plantilla/VerdaderoFalso.fxml");
     }
