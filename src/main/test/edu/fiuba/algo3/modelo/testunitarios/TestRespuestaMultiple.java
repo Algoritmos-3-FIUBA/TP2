@@ -5,8 +5,10 @@ import edu.fiuba.algo3.modelo.Puntos;
 import edu.fiuba.algo3.modelo.excepciones.MasDeCincoOpcionesException;
 import edu.fiuba.algo3.modelo.multiplicador.MultiplicadorPorDos;
 import edu.fiuba.algo3.modelo.multiplicador.MultiplicadorPorTres;
+import edu.fiuba.algo3.modelo.opcion.ColeccionOpciones;
 import edu.fiuba.algo3.modelo.opcion.Opcion;
 import edu.fiuba.algo3.modelo.opcion.OpcionCorrecta;
+import edu.fiuba.algo3.modelo.respuesta.RespuestaGrupos;
 import edu.fiuba.algo3.modelo.respuesta.RespuestaMultiple;
 import org.junit.Test;
 import java.util.LinkedList;
@@ -235,16 +237,18 @@ public class TestRespuestaMultiple {
         opcionesElegidas.add(terceraOpcion);
         opcionesElegidas.add(cuartaOpcion);
         opcionesElegidas.add(quintaOpcion);
-        opcionesElegidas.add(sextaOpcion);
+
+        RespuestaMultiple respuesta = new RespuestaMultiple(opcionesElegidas, jugador);
 
         assertThrows(MasDeCincoOpcionesException.class,
                 ()->{
-                    RespuestaMultiple respuesta = new RespuestaMultiple(opcionesElegidas, jugador);
+                    respuesta.getColeccionDeOpciones().getOpciones().add(sextaOpcion);
+                    respuesta.verificarNumeroDeOpciones(opcionesElegidas);
                 });
     }
 
     @Test
-    public void testCreoRespuestaMultipleConMenosDe5Opciones() {
+    public void testCreoLaRespuestaMultipleYSuAmplificadorTieneElFactorEsperado() {
         Jugador jugador = new Jugador("Guido");
 
         LinkedList<Opcion> opcionesElegidas = new LinkedList<Opcion>();
@@ -253,13 +257,30 @@ public class TestRespuestaMultiple {
         opcionesElegidas.add(segundaOpcion);
         opcionesElegidas.add(terceraOpcion);
         opcionesElegidas.add(cuartaOpcion);
+        opcionesElegidas.add(quintaOpcion);
 
         RespuestaMultiple respuesta = new RespuestaMultiple(opcionesElegidas, jugador);
 
-        respuesta.verificarNumeroDeOpciones(opcionesElegidas);
-
-        assertEquals(opcionesElegidas.size(), respuesta.getColeccionDeOpciones().getOpciones().size());
+        assertEquals(respuesta.getAmplificador().getFactor(), 1);
     }
 
+    @Test
+    public void testCreoLaRespuestaGroupChoiceYModificoSuAmplificadorYTieneElFactorNuevoEsperado() {
+        Jugador jugador = new Jugador("Guido");
+
+        LinkedList<Opcion> opcionesElegidas = new LinkedList<Opcion>();
+
+        opcionesElegidas.add(primeraOpcion);
+        opcionesElegidas.add(segundaOpcion);
+        opcionesElegidas.add(terceraOpcion);
+        opcionesElegidas.add(cuartaOpcion);
+        opcionesElegidas.add(quintaOpcion);
+
+        RespuestaMultiple respuesta = new RespuestaMultiple(opcionesElegidas, jugador);
+
+        respuesta.getAmplificador().setFactor(2);
+
+        assertEquals(respuesta.getAmplificador().getFactor(), 2);
+    }
 
 }

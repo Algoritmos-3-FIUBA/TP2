@@ -45,6 +45,48 @@ public class TestRespuestaGrupo {
     }
 
     @Test
+    public void testCreoLaRespuestaGroupChoiceYSuAmplificadorTieneElFactorEsperado() {
+        Jugador jugador = new Jugador("Guido");
+
+        ColeccionOpciones grupo = new ColeccionOpciones();
+
+        LinkedList<ColeccionOpciones> gruposElegidos = new LinkedList<ColeccionOpciones>();
+
+        grupo.agregarOpcion(primeraOpcion);
+        grupo.agregarOpcion(segundaOpcion);
+        grupo.agregarOpcion(terceraOpcion);
+        grupo.agregarOpcion(cuartaOpcion);
+
+        gruposElegidos.add(grupo);
+
+        RespuestaGrupos respuesta = new RespuestaGrupos(gruposElegidos, jugador);
+
+        assertEquals(respuesta.getAmplificador().getFactor(), 1);
+    }
+
+    @Test
+    public void testCreoLaRespuestaGroupChoiceYModificoSuAmplificadorYTieneElFactorNuevoEsperado() {
+        Jugador jugador = new Jugador("Guido");
+
+        ColeccionOpciones grupo = new ColeccionOpciones();
+
+        LinkedList<ColeccionOpciones> gruposElegidos = new LinkedList<ColeccionOpciones>();
+
+        grupo.agregarOpcion(primeraOpcion);
+        grupo.agregarOpcion(segundaOpcion);
+        grupo.agregarOpcion(terceraOpcion);
+        grupo.agregarOpcion(cuartaOpcion);
+
+        gruposElegidos.add(grupo);
+
+        RespuestaGrupos respuesta = new RespuestaGrupos(gruposElegidos, jugador);
+
+        respuesta.getAmplificador().setFactor(2);
+
+        assertEquals(respuesta.getAmplificador().getFactor(), 2);
+    }
+
+    @Test
     public void testCreoLaRespuestaGroupChoiceDelJugadorYVerificoSiSonLasElegidasElJugadorNoEligeTodasLasOpciones02() {
         Jugador jugador = new Jugador("Guido");
 

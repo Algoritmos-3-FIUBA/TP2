@@ -7,8 +7,11 @@ import edu.fiuba.algo3.modelo.multiplicador.MultiplicadorPorTres;
 import edu.fiuba.algo3.modelo.multiplicador.MultiplicadorPorDos;
 import edu.fiuba.algo3.modelo.opcion.Opcion;
 import edu.fiuba.algo3.modelo.opcion.OpcionCorrecta;
+import edu.fiuba.algo3.modelo.respuesta.RespuestaMultiple;
 import edu.fiuba.algo3.modelo.respuesta.RespuestaUnica;
 import org.junit.Test;
+
+import java.util.LinkedList;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
@@ -93,18 +96,27 @@ public class TestRespuestaUnica {
     }
 
     @Test
-    public void testCreoUnaRespuestaModificandoSuAmplificadorYSuAmplificadorEsElEsperado(){
-
-        Opcion opcionVerdadero = new OpcionCorrecta("Euler");
-
+    public void testCreoLaRespuestaMultipleYSuAmplificadorTieneElFactorEsperado() {
         Jugador jugador = new Jugador("Guido");
-        RespuestaUnica respuestaJugador = new RespuestaUnica(opcionVerdadero, jugador);
 
-        Amplificador amplificador = new Amplificador(2);
+        Opcion opcionFalso = new OpcionCorrecta("Gauss");
 
-        respuestaJugador.setAmplificador(amplificador);
+        RespuestaUnica respuestaJugador = new RespuestaUnica(opcionFalso, jugador);
 
-        assertEquals(respuestaJugador.getAmplificador(), amplificador);
+        assertEquals(respuestaJugador.getAmplificador().getFactor(), 1);
+    }
+
+    @Test
+    public void testCreoLaRespuestaGroupChoiceYModificoSuAmplificadorYTieneElFactorNuevoEsperado() {
+        Jugador jugador = new Jugador("Guido");
+
+        Opcion opcionFalso = new OpcionCorrecta("Gauss");
+
+        RespuestaUnica respuestaJugador = new RespuestaUnica(opcionFalso, jugador);
+
+        respuestaJugador.getAmplificador().setFactor(2);
+
+        assertEquals(respuestaJugador.getAmplificador().getFactor(), 2);
     }
 
     @Test
