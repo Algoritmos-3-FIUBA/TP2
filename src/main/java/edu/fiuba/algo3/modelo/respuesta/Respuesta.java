@@ -41,7 +41,7 @@ public abstract class Respuesta {
         inicializacionComun(jugador);
         this.exclusividad = exclusividad;
         this.multiplicador = new MultiplicadorDefault();
-        this.amplificador = new Amplificador(1); //Porque no sabemos si se va a usar el de exclusividad
+        this.amplificador = new Amplificador(1);
     }
 
     public void otorgarPuntos(Puntos puntos){

@@ -10,8 +10,8 @@ import edu.fiuba.algo3.modelo.opcion.OpcionCorrecta;
 import edu.fiuba.algo3.modelo.respuesta.RespuestaMultiple;
 import org.junit.Test;
 import java.util.LinkedList;
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertThrows;
+
+import static org.junit.jupiter.api.Assertions.*;
 
 public class TestRespuestaMultiple {
 
@@ -241,6 +241,24 @@ public class TestRespuestaMultiple {
                 ()->{
                     RespuestaMultiple respuesta = new RespuestaMultiple(opcionesElegidas, jugador);
                 });
+    }
+
+    @Test
+    public void testCreoRespuestaMultipleConMenosDe5Opciones() {
+        Jugador jugador = new Jugador("Guido");
+
+        LinkedList<Opcion> opcionesElegidas = new LinkedList<Opcion>();
+
+        opcionesElegidas.add(primeraOpcion);
+        opcionesElegidas.add(segundaOpcion);
+        opcionesElegidas.add(terceraOpcion);
+        opcionesElegidas.add(cuartaOpcion);
+
+        RespuestaMultiple respuesta = new RespuestaMultiple(opcionesElegidas, jugador);
+
+        respuesta.verificarNumeroDeOpciones(opcionesElegidas);
+
+        assertEquals(opcionesElegidas.size(), respuesta.getColeccionDeOpciones().getOpciones().size());
     }
 
 

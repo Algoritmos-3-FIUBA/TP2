@@ -104,7 +104,7 @@ public class TestRespuestaUnica {
 
         respuestaJugador.setAmplificador(amplificador);
 
-        assertEquals(respuestaJugador.getAmplificador(),amplificador);
+        assertEquals(respuestaJugador.getAmplificador(), amplificador);
     }
 
     @Test

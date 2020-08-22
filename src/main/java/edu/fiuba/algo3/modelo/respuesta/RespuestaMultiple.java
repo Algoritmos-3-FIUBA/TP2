@@ -34,7 +34,7 @@ public class RespuestaMultiple extends Respuesta {
         return opcionesElegidas;
     }
 
-    private void verificarNumeroDeOpciones(LinkedList<Opcion> opciones){
+    public void verificarNumeroDeOpciones(LinkedList<Opcion> opciones){
         if(opciones.size() > 5) {
             throw new MasDeCincoOpcionesException();
         }
