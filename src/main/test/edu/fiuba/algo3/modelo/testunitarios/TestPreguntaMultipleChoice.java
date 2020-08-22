@@ -116,6 +116,28 @@ public class TestPreguntaMultipleChoice {
     }
 
     @Test
+    public void testCreoPreguntaMultipleChoiceYLasOpcionesCargadasSonLasEsperadas() {
+
+        ColeccionOpciones opciones = new ColeccionOpciones();
+
+        OpcionIncorrecta primeraOpcion = new OpcionIncorrecta("1 + 1");
+        OpcionIncorrecta segundaOpcion = new OpcionIncorrecta("3 - 1");
+        OpcionCorrecta terceraOpcion = new OpcionCorrecta("2 + 2");
+        OpcionCorrecta cuartaOpcion = new OpcionCorrecta("2 * 2");
+
+        opciones.agregarOpcion(primeraOpcion);
+        opciones.agregarOpcion(segundaOpcion);
+        opciones.agregarOpcion(terceraOpcion);
+        opciones.agregarOpcion(cuartaOpcion);
+
+        PreguntaMultipleChoice pregunta = new PreguntaMultipleChoice("¿Cuales de las siguientes cuentas tiene resultado 4?", 1, opciones);
+
+        ColeccionOpciones coleccionDeOpciones = pregunta.getColeccionDeOpciones();
+
+        assertEquals(coleccionDeOpciones, opciones);
+    }
+
+    @Test
     public void testCreoPreguntaMultipleChoiceConDosOpcionesCorrectasYJugadorRespondeDosCorrectasYUnaIncorrecta05() {
 
         Jugador Mati = new Jugador("Mati");

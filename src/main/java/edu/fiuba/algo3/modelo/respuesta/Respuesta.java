@@ -54,6 +54,10 @@ public abstract class Respuesta {
         this.amplificador = amplificador;
     }
 
+    public Amplificador getAmplificador() {
+        return this.amplificador;
+    }
+
     public void actualizarAmplificacionExclusividad(LinkedList<Respuesta> respuestas){
         exclusividad.actualizarAmplificador(respuestas,this);
     }

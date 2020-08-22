@@ -2,7 +2,10 @@ package edu.fiuba.algo3.modelo.testunitarios;
 
 import edu.fiuba.algo3.modelo.exclusividad.Exclusividad;
 import edu.fiuba.algo3.modelo.Jugador;
+import edu.fiuba.algo3.modelo.opcion.ColeccionOpciones;
 import edu.fiuba.algo3.modelo.opcion.Opcion;
+import edu.fiuba.algo3.modelo.opcion.OpcionCorrecta;
+import edu.fiuba.algo3.modelo.opcion.OpcionIncorrecta;
 import edu.fiuba.algo3.modelo.pregunta.PreguntaVerdaderoFalsoClasico;
 import edu.fiuba.algo3.modelo.respuesta.Respuesta;
 import edu.fiuba.algo3.modelo.respuesta.RespuestaUnica;
@@ -73,6 +76,28 @@ public class TestPreguntaVerdaderoFalso {
         pregunta.evaluarRespuestas(respuestasDeJugadores);
 
         assertEquals(Lucas.getPuntos().getCantidad(),0);
+    }
+
+    @Test
+    public void testCreoPreguntaVerdaderoFalsoYLaPrimerOpcionEsLaVerdadera(){
+
+        PreguntaVerdaderoFalsoClasico pregunta = new PreguntaVerdaderoFalsoClasico("¿1+1 no es 3?");
+        pregunta.setVerdaderoOpcionCorrecta();
+
+        ColeccionOpciones coleccionDeOpciones = pregunta.getColeccionDeOpciones();
+
+        assertEquals(coleccionDeOpciones.getOpciones().getFirst(), pregunta.getOpcionVerdadera());
+    }
+
+    @Test
+    public void testCreoPreguntaVerdaderoFalsoYLaPrimeraOpcionEsLaFalsa(){
+
+        PreguntaVerdaderoFalsoClasico pregunta = new PreguntaVerdaderoFalsoClasico("¿1+1 es 3?");
+        pregunta.setFalsoOpcionCorrecta();
+
+        ColeccionOpciones coleccionDeOpciones = pregunta.getColeccionDeOpciones();
+
+        assertEquals(coleccionDeOpciones.getOpciones().getLast(), pregunta.getOpcionFalsa());
     }
 
     @Test

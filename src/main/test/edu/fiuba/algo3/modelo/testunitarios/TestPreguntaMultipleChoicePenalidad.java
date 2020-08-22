@@ -10,6 +10,7 @@ import edu.fiuba.algo3.modelo.multiplicador.MultiplicadorPorDos;
 import edu.fiuba.algo3.modelo.opcion.Opcion;
 import edu.fiuba.algo3.modelo.opcion.OpcionCorrecta;
 import edu.fiuba.algo3.modelo.opcion.OpcionIncorrecta;
+import edu.fiuba.algo3.modelo.pregunta.PreguntaMultipleChoice;
 import edu.fiuba.algo3.modelo.pregunta.PreguntaMultipleChoicePenalidad;
 import edu.fiuba.algo3.modelo.respuesta.Respuesta;
 import edu.fiuba.algo3.modelo.respuesta.RespuestaMultiple;
@@ -80,6 +81,28 @@ public class TestPreguntaMultipleChoicePenalidad {
         pregunta.evaluarRespuestas(respuestas);
 
         assertEquals(jugador.getPuntos().getCantidad(),2);
+    }
+
+    @Test
+    public void testCreoPreguntaMultipleChoiceYLasOpcionesCargadasSonLasEsperadas() {
+
+        ColeccionOpciones opciones = new ColeccionOpciones();
+
+        OpcionIncorrecta primeraOpcion = new OpcionIncorrecta("1 + 1");
+        OpcionIncorrecta segundaOpcion = new OpcionIncorrecta("3 - 1");
+        OpcionCorrecta terceraOpcion = new OpcionCorrecta("2 + 2");
+        OpcionCorrecta cuartaOpcion = new OpcionCorrecta("2 * 2");
+
+        opciones.agregarOpcion(primeraOpcion);
+        opciones.agregarOpcion(segundaOpcion);
+        opciones.agregarOpcion(terceraOpcion);
+        opciones.agregarOpcion(cuartaOpcion);
+
+        PreguntaMultipleChoicePenalidad pregunta = new PreguntaMultipleChoicePenalidad("¿Cuales de las siguientes cuentas tiene resultado 4?", opciones);
+
+        ColeccionOpciones coleccionDeOpciones = pregunta.getColeccionDeOpciones();
+
+        assertEquals(coleccionDeOpciones, opciones);
     }
 
     @Test

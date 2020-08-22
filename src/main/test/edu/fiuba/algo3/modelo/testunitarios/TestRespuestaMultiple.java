@@ -26,7 +26,6 @@ public class TestRespuestaMultiple {
     public void testJugadorRealizaUnaRespuestaCorrectaEligiendoUnaOpcionYObtienePuntaje01(){
         Jugador jugador = new Jugador("Guido");
 
-        //Opciones que son eligidas
         LinkedList<Opcion> opcionesElegidas = new LinkedList<>();
         opcionesElegidas.add(primeraOpcion);
 
@@ -42,7 +41,6 @@ public class TestRespuestaMultiple {
     public void testJugadorRealizaUnaRespuestaCorrectaEligiendoDosOpcionesYObtienePuntaje02(){
         Jugador jugador = new Jugador("Guido");
 
-        //Opciones que son eligidas
         LinkedList<Opcion> opcionesElegidas = new LinkedList<Opcion>();
 
         opcionesElegidas.add(segundaOpcion);
@@ -60,7 +58,6 @@ public class TestRespuestaMultiple {
     public void testJugadorRealizaUnaRespuestaCorrectaEligiendoTresOpcionesYObtienePuntaje03(){
         Jugador jugador = new Jugador("Guido");
 
-        //Opciones que son eligidas
         LinkedList<Opcion> opcionesElegidas = new LinkedList<Opcion>();
 
         opcionesElegidas.add(terceraOpcion);
@@ -79,9 +76,8 @@ public class TestRespuestaMultiple {
     public void testJugadorRealizaUnaRespuestaCorrectaEligiendoCuatroOpcionesYObtienePuntaje04(){
         Jugador jugador = new Jugador("Guido");
 
-        //Opciones que son eligidas
         LinkedList<Opcion> opcionesElegidas = new LinkedList<Opcion>();
-        //No importa el orden de opciones elegidas, siempre que sean correctas se asignará el puntaje
+
         opcionesElegidas.add(terceraOpcion);
         opcionesElegidas.add(primeraOpcion);
         opcionesElegidas.add(cuartaOpcion);
@@ -99,7 +95,6 @@ public class TestRespuestaMultiple {
     public void testJugadorRealizaUnaRespuestaCorrectaEligiendoCincoOpcionesYObtienePuntaje05(){
         Jugador jugador = new Jugador("Guido");
 
-        //Opciones que son eligidas
         LinkedList<Opcion> opcionesElegidas = new LinkedList<Opcion>();
 
         opcionesElegidas.add(terceraOpcion);
@@ -120,7 +115,6 @@ public class TestRespuestaMultiple {
     public void testJugadorRealizaUnaRespuestaIncorrectaEligiendoUnaOpcionYNoObtienePuntaje06(){
         Jugador jugador = new Jugador("Guido");
 
-        //Opciones que son eligidas
         LinkedList<Opcion> opcionesElegidas = new LinkedList<Opcion>();
         opcionesElegidas.add(primeraOpcion);
 
@@ -135,7 +129,6 @@ public class TestRespuestaMultiple {
     public void testJugadorRealizaUnaRespuestaIncorrectaEligiendoOpcionesDeMenosYNoObtienePuntaje07(){
         Jugador jugador = new Jugador("Guido");
 
-        //Opciones que son eligidas
         LinkedList<Opcion> opcionesElegidas = new LinkedList<Opcion>();
         opcionesElegidas.add(segundaOpcion);
 
@@ -150,7 +143,6 @@ public class TestRespuestaMultiple {
     public void testJugadorRealizaUnaRespuestaIncorrectaEligiendoOpcionesDeMasYNoObtienePuntaje08(){
         Jugador jugador = new Jugador("Guido");
 
-        //Opciones que son eligidas
         LinkedList<Opcion> opcionesElegidas = new LinkedList<Opcion>();
         opcionesElegidas.add(segundaOpcion);
         opcionesElegidas.add(primeraOpcion);
@@ -167,7 +159,6 @@ public class TestRespuestaMultiple {
     public void testJugadorRealizaUnaRespuestaIncorrectaEligiendoTodasLasOpcionesIncorrectasYNoObtienePuntaje09(){
         Jugador jugador = new Jugador("Guido");
 
-        //Opciones que son eligidas
         LinkedList<Opcion> opcionesElegidas = new LinkedList<Opcion>();
         opcionesElegidas.add(cuartaOpcion);
         opcionesElegidas.add(terceraOpcion);
@@ -183,7 +174,9 @@ public class TestRespuestaMultiple {
     @Test
     public void testJugadorRealizaUnaRespuestaMultipleConMasDeCincoOpciones10() {
         Jugador jugador = new Jugador("Guido");
+
         LinkedList<Opcion> opcionesElegidas = new LinkedList<Opcion>();
+
         opcionesElegidas.add(primeraOpcion);
         opcionesElegidas.add(segundaOpcion);
         opcionesElegidas.add(terceraOpcion);
@@ -201,7 +194,6 @@ public class TestRespuestaMultiple {
     public void testJugadorRealizaUnaRespuestaConMultiplicadorYAsignaLosPuntosCorrectos11(){
         Jugador jugador = new Jugador("Guido");
 
-        //Opciones que son eligidas
         LinkedList<Opcion> opcionesElegidas = new LinkedList<Opcion>();
         opcionesElegidas.add(cuartaOpcion);
         opcionesElegidas.add(terceraOpcion);
@@ -220,7 +212,6 @@ public class TestRespuestaMultiple {
     public void testJugadorRealizaUnaRespuestaIncorrectaConMultiplicadorYLosPuntosSonLosEsperados12(){
         Jugador jugador = new Jugador("Guido");
 
-        //Opciones que son eligidas
         LinkedList<Opcion> opcionesElegidas = new LinkedList<Opcion>();
         opcionesElegidas.add(cuartaOpcion);
         opcionesElegidas.add(terceraOpcion);
@@ -232,4 +223,25 @@ public class TestRespuestaMultiple {
 
         assertEquals(jugador.getPuntos().getCantidad(),-6);
     }
+
+    @Test
+    public void testCreoRespuestaMultipleConMasDe5OpcionesYVerifico() {
+        Jugador jugador = new Jugador("Guido");
+
+        LinkedList<Opcion> opcionesElegidas = new LinkedList<Opcion>();
+
+        opcionesElegidas.add(primeraOpcion);
+        opcionesElegidas.add(segundaOpcion);
+        opcionesElegidas.add(terceraOpcion);
+        opcionesElegidas.add(cuartaOpcion);
+        opcionesElegidas.add(quintaOpcion);
+        opcionesElegidas.add(sextaOpcion);
+
+        assertThrows(MasDeCincoOpcionesException.class,
+                ()->{
+                    RespuestaMultiple respuesta = new RespuestaMultiple(opcionesElegidas, jugador);
+                });
+    }
+
+
 }

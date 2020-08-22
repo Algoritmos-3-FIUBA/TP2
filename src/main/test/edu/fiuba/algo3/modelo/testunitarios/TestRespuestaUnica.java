@@ -2,6 +2,7 @@ package edu.fiuba.algo3.modelo.testunitarios;
 
 import edu.fiuba.algo3.modelo.Jugador;
 import edu.fiuba.algo3.modelo.Puntos;
+import edu.fiuba.algo3.modelo.amplificador.Amplificador;
 import edu.fiuba.algo3.modelo.multiplicador.MultiplicadorPorTres;
 import edu.fiuba.algo3.modelo.multiplicador.MultiplicadorPorDos;
 import edu.fiuba.algo3.modelo.opcion.Opcion;
@@ -89,6 +90,21 @@ public class TestRespuestaUnica {
         respuestaJugador2.otorgarPuntos(new Puntos(-1));
 
         assertEquals(jugador.getPuntos().getCantidad(),1);
+    }
+
+    @Test
+    public void testCreoUnaRespuestaModificandoSuAmplificadorYSuAmplificadorEsElEsperado(){
+
+        Opcion opcionVerdadero = new OpcionCorrecta("Euler");
+
+        Jugador jugador = new Jugador("Guido");
+        RespuestaUnica respuestaJugador = new RespuestaUnica(opcionVerdadero, jugador);
+
+        Amplificador amplificador = new Amplificador(2);
+
+        respuestaJugador.setAmplificador(amplificador);
+
+        assertEquals(respuestaJugador.getAmplificador(),amplificador);
     }
 
     @Test

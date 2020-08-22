@@ -37,7 +37,6 @@ public abstract class Pregunta {
 
     public abstract ColeccionOpciones getColeccionDeOpciones();
 
-    //Para evitar codigo repetido
     protected void sumarPuntosMultiplceChoiceConCadaOpcion(LinkedList<Respuesta> respuestas){
         for (Respuesta respuesta : respuestas) {
             Puntos puntosParciales = new Puntos(0);
