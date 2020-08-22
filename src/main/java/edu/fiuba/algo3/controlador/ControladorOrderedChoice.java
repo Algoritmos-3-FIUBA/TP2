@@ -48,7 +48,7 @@ public class ControladorOrderedChoice extends Controlador{
     @FXML
     public Label opcion5num;
     @FXML
-    public Button botonexclusividad;
+    public Button botonexclusivdad;
     @FXML
     public Button multiplicadorx2;
     @FXML
@@ -83,7 +83,8 @@ public class ControladorOrderedChoice extends Controlador{
         for(Label orden : ordenMostrado)
             orden.setText("");
 
-        this.actualizador.actualizarPlantillaOrderedChoice(opcionesMostradas,botonexclusividad,this);
+        this.actualizador.actualizarPlantillaOrderedChoice(opcionesMostradas,botonexclusivdad,ordenMostrado);
+
     }
 
     public void siguienteTurno() throws IOException {
@@ -91,12 +92,8 @@ public class ControladorOrderedChoice extends Controlador{
     }
 
     public void asignarExclusividad() throws IOException {
-        this.actualizador.asignarExclusividad(botonexclusividad);
+        this.actualizador.asignarExclusividad(botonexclusivdad);
     }
 
-    public void actualizarOrden() {
-        for(Label orden : ordenMostrado)
-            orden.setText("");
-        this.actualizador.actualizarOrden(ordenMostrado);
-    }
+
 }

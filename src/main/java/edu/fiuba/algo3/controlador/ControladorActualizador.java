@@ -85,15 +85,17 @@ public class ControladorActualizador {
         }
     }
 
-    public void actualizarPlantillaOrderedChoice(LinkedList<Button> opcionesMostradas, Button botonexclusividad, ControladorOrderedChoice controladorOrderedChoice) {
-        // opcionesElegidas = new LinkedList<>();
+    public void actualizarPlantillaOrderedChoice(LinkedList<Button> opcionesMostradas, Button botonexclusividad, LinkedList<Label> ordenMostrado) {
+        System.out.println("Hola jeje");
 
-        if(jugador.getExclusividades().size() == 0) botonexclusividad.setDisable(true);
-        else botonexclusividad.setDisable(false);
+        opcionesSeleccionadas = new LinkedList<>();
+
+        botonexclusividad.setDisable(jugador.getExclusividades().size() == 0);
+
 
         for (int i = 0; i < pregunta.getColeccionDeOpciones().cantidadElementos(); i++) {
             opcionesMostradas.get(i).setText(pregunta.getColeccionDeOpciones().getOpciones().get(i).getNombre());
-            opcionesMostradas.get(i).setOnAction(new SeleccionarCheckBoxOrderedChoiceHandler(pregunta.getColeccionDeOpciones().getOpciones().get(i), opcionesSeleccionadas,controladorOrderedChoice));
+            opcionesMostradas.get(i).setOnAction(new SeleccionarCheckBoxOrderedChoiceHandler(pregunta.getColeccionDeOpciones().getOpciones().get(i), opcionesSeleccionadas,this,ordenMostrado));
         }
     }
 
@@ -170,6 +172,8 @@ public class ControladorActualizador {
     }
 
     public void actualizarOrden(LinkedList<Label> ordenMostrado) {
+        for(Label orden : ordenMostrado)
+            orden.setText("");
         for(int i = 0; i < opcionesSeleccionadas.size(); i++){
             int j = pregunta.getColeccionDeOpciones().getOpciones().indexOf(opcionesSeleccionadas.get(i));
             ordenMostrado.get(j).setText(Integer.toString(i+1));
