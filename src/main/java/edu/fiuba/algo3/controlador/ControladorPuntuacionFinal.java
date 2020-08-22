@@ -51,5 +51,11 @@ public class ControladorPuntuacionFinal extends Controlador {
     public void finalizar(ActionEvent actionEvent) {
         App.escenario.close();
     }
+
+    public void reintentar(ActionEvent actionEvent) throws Exception {
+        App.escenario.close();
+        App nuevaEjecucion = new App();
+        nuevaEjecucion.start(App.escenario);
+    }
 }
 

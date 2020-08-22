@@ -42,7 +42,7 @@
         </Menu>
       </menus>
     </MenuBar>
-      <AnchorPane maxHeight="-1.0" maxWidth="-1.0" opacity="0.8" prefWidth="729.0" style="-fx-background-color: #9E0A9E;" VBox.vgrow="ALWAYS">
+      <AnchorPane maxHeight="-1.0" maxWidth="-1.0" opacity="0.8" prefWidth="729.0" style="-fx-background-color: #9E0A9E;" AnchorPane.leftAnchor="253.0" VBox.vgrow="ALWAYS">
           <children>
               <ImageView layoutX="17.0" layoutY="8.0">
                   <image>
@@ -144,7 +144,15 @@
                       <Image url="@../imagenes/anilloplata.png" />
                   </image>
               </ImageView>
-            <Button fx:id="botonsiguiente" contentDisplay="BOTTOM" layoutX="350.0" layoutY="474.0" mnemonicParsing="false" onAction="#finalizar" style="-fx-pref-height: 50; -fx-pref-width: 100; -fx-text-fill: white; -fx-background-color: #FF69FF;" text="Finalizar" textFill="WHITE">
+            <Button fx:id="botonfinalizar" contentDisplay="BOTTOM" layoutX="225.0" layoutY="474.0" mnemonicParsing="false" onAction="#finalizar" style="-fx-pref-height: 50; -fx-pref-width: 130; -fx-text-fill: white; -fx-background-color: #FF69FF;" text="Finalizar" textFill="WHITE">
+               <font>
+                  <Font name="Arial Bold" size="14.0" />
+               </font>
+               <effect>
+                  <DropShadow color="#cf0ccf" />
+               </effect>
+            </Button>
+            <Button fx:id="botonvolverajugar" contentDisplay="BOTTOM" layoutX="448.0" layoutY="474.0" mnemonicParsing="false" onAction="#reintentar" prefWidth="133.0" style="-fx-pref-height: 50; -fx-pref-width: 130; -fx-text-fill: white; -fx-background-color: #FF69FF;" text="Jugar de nuevo" textFill="WHITE">
                <font>
                   <Font name="Arial Bold" size="14.0" />
                </font>
