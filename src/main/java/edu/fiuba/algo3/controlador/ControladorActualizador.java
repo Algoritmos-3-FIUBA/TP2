@@ -86,7 +86,6 @@ public class ControladorActualizador {
     }
 
     public void actualizarPlantillaOrderedChoice(LinkedList<Button> opcionesMostradas, Button botonexclusividad, LinkedList<Label> ordenMostrado) {
-        System.out.println("Hola jeje");
 
         opcionesSeleccionadas = new LinkedList<>();
 
